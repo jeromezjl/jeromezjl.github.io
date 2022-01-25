@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-01-25T04:12:00.558Z</updated>
+    <updated>2022-01-25T04:13:20.213Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
-    <entry>
-        <title type="html"><![CDATA[Wechat]]></title>
-        <id>https://jeromezjl.github.io/post/wechat/</id>
-        <link href="https://jeromezjl.github.io/post/wechat/">
-        </link>
-        <updated>2022-01-25T03:09:34.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1643080190353.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[The First Article]]></title>
         <id>https://jeromezjl.github.io/post/the-first-article/</id>
