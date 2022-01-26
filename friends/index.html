@@ -9,7 +9,7 @@
 <meta name="description" content=".......">
 <meta name="theme-color" content="#343a40">
 <title>Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1643171596316">
+<link rel="shortcut icon" href="/favicon.ico?v=1643188253377">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -185,7 +185,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-count">2</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -558,6 +558,51 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/"" data-c="
+          &lt;p&gt;资源限制&lt;br&gt;
+时间限制：1.0s 内存限制：256.0MB&lt;br&gt;
+　　最小距离&lt;br&gt;
+　　&lt;br&gt;
+问题描述&lt;br&gt;
+　　数轴上有n个数字，求最近的两个数，即min(abs(x-y))&lt;br&gt;
+　　&lt;br&gt;
+输入格式&lt;br&gt;
+　　第一行包含一个整数n。&lt;br&gt;
+　　接下来一行，表示n整数。&lt;br&gt;
+　　&lt;br&gt;
+输出格式&lt;br&gt;
+　　一个整数表示最小距离&lt;br&gt;
+　　&lt;br&gt;
+样例输入&lt;br&gt;
+6&lt;br&gt;
+7 3 4 11 9 17&lt;/p&gt;
+&lt;p&gt;样例输出&lt;br&gt;
+1&lt;/p&gt;
+&lt;p&gt;样例说明&lt;br&gt;
+　　取3和4&lt;br&gt;
+　　&lt;br&gt;
+数据规模和约定&lt;br&gt;
+　　n&amp;lt;=100000&lt;br&gt;
+　　所有整数&amp;lt;=10^7&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本题要点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入格式：a = list(map(int, input().split())) 空格分隔&lt;/li&gt;
+&lt;li&gt;两次for循环复杂度过大，不能通过，采取先排序，再算min的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;代码：&lt;/strong&gt;&lt;br&gt;
+n = int(input())&lt;br&gt;
+numlist = list(map(int, input().split()))&lt;br&gt;
+numlist.sort()&lt;br&gt;
+min = float(&#39;inf&#39;)  # min初始值设为正无穷&lt;br&gt;
+for i in range(1, n):&lt;br&gt;
+ value = numlist[i] - numlist[i-1]&lt;br&gt;
+ if value &amp;lt; min:&lt;br&gt;
+  min = value&lt;br&gt;
+print(min)&lt;/p&gt;
+">【蓝桥杯】最小距离 - Python</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/wechat/"" data-c="

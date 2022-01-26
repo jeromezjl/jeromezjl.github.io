@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-01-26T04:33:19.860Z</updated>
+    <updated>2022-01-26T09:11:20.422Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,54 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【蓝桥杯】最小距离 - Python]]></title>
+        <id>https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/</id>
+        <link href="https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/">
+        </link>
+        <updated>2022-01-26T08:58:03.000Z</updated>
+        <content type="html"><![CDATA[<p>资源限制<br>
+时间限制：1.0s 内存限制：256.0MB<br>
+　　最小距离<br>
+　　<br>
+问题描述<br>
+　　数轴上有n个数字，求最近的两个数，即min(abs(x-y))<br>
+　　<br>
+输入格式<br>
+　　第一行包含一个整数n。<br>
+　　接下来一行，表示n整数。<br>
+　　<br>
+输出格式<br>
+　　一个整数表示最小距离<br>
+　　<br>
+样例输入<br>
+6<br>
+7 3 4 11 9 17</p>
+<p>样例输出<br>
+1</p>
+<p>样例说明<br>
+　　取3和4<br>
+　　<br>
+数据规模和约定<br>
+　　n&lt;=100000<br>
+　　所有整数&lt;=10^7</p>
+<p><strong>本题要点：</strong></p>
+<ol>
+<li>输入格式：a = list(map(int, input().split())) 空格分隔</li>
+<li>两次for循环复杂度过大，不能通过，采取先排序，再算min的方法</li>
+</ol>
+<p><strong>代码：</strong><br>
+n = int(input())<br>
+numlist = list(map(int, input().split()))<br>
+numlist.sort()<br>
+min = float('inf')  # min初始值设为正无穷<br>
+for i in range(1, n):<br>
+ value = numlist[i] - numlist[i-1]<br>
+ if value &lt; min:<br>
+  min = value<br>
+print(min)</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The First Article]]></title>
         <id>https://jeromezjl.github.io/post/the-first-article/</id>
