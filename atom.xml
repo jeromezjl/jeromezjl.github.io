@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-02-25T13:52:36.275Z</updated>
+    <updated>2022-02-25T14:47:31.997Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -59,15 +59,27 @@
 num 每一位上的数字都是 6 或者 9 。</p>
 <h1 id="my-solution">My Solution：</h1>
 <pre><code class="language-python">class Solution(object):
-def maximum69Number (self, num):
-        list1 = []
-        stnum = list(str(num))
-        for i in range(len(stnum)):
+    def maximum69Number (self, num):
+            list1 = []
             stnum = list(str(num))
-            stnum[i] = '9'
-            list1.append(''.join(stnum))
-        return max(list1)
+            for i in range(len(stnum)):
+                stnum = list(str(num))
+                stnum[i] = '9'
+                list1.append(''.join(stnum))
+            return int(max(list1))
 </code></pre>
+<h1 id="python的简单方法">Python的简单方法：</h1>
+<pre><code class="language-python">def func(num):
+    return int(str(num).replace('6','9',1))
+print(func(9669))
+</code></pre>
+<p>利用replace函数，替换第一个6。根据贪心思想，把最前面的一个6替换为9即可得到最大值</p>
+<h1 id="本题总结">本题总结：</h1>
+<ol>
+<li>int 为不可迭代对象，str可</li>
+<li>join函数的用法</li>
+<li>贪心思想</li>
+</ol>
 ]]></content>
     </entry>
     <entry>

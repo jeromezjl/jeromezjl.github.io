@@ -9,7 +9,7 @@
 <meta name="description" content=".......">
 <meta name="theme-color" content="#343a40">
 <title>【leetcode】1323. 6 和 9 组成的最大数字 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1645797154530">
+<link rel="shortcut icon" href="/favicon.ico?v=1645800448350">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -250,6 +250,8 @@
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
 <li><a href="#my-solution">My Solution：</a></li>
+<li><a href="#python%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%B9%E6%B3%95">Python的简单方法：</a></li>
+<li><a href="#%E6%9C%AC%E9%A2%98%E6%80%BB%E7%BB%93">本题总结：</a></li>
 </ul>
 
   </div>
@@ -540,7 +542,7 @@
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >1<span class="language" data-lan="minute"
+        >2<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -549,7 +551,7 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >236<span class="pc-show language" data-lan="words"
+        >316<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
@@ -584,15 +586,27 @@
 num 每一位上的数字都是 6 或者 9 。</p>
 <h1 id="my-solution">My Solution：</h1>
 <pre><code class="language-python">class Solution(object):
-def maximum69Number (self, num):
-        list1 = []
-        stnum = list(str(num))
-        for i in range(len(stnum)):
+    def maximum69Number (self, num):
+            list1 = []
             stnum = list(str(num))
-            stnum[i] = '9'
-            list1.append(''.join(stnum))
-        return max(list1)
+            for i in range(len(stnum)):
+                stnum = list(str(num))
+                stnum[i] = '9'
+                list1.append(''.join(stnum))
+            return int(max(list1))
 </code></pre>
+<h1 id="python的简单方法">Python的简单方法：</h1>
+<pre><code class="language-python">def func(num):
+    return int(str(num).replace('6','9',1))
+print(func(9669))
+</code></pre>
+<p>利用replace函数，替换第一个6。根据贪心思想，把最前面的一个6替换为9即可得到最大值</p>
+<h1 id="本题总结">本题总结：</h1>
+<ol>
+<li>int 为不可迭代对象，str可</li>
+<li>join函数的用法</li>
+<li>贪心思想</li>
+</ol>
 
             </div>
             
@@ -684,13 +698,6 @@ def maximum69Number (self, num):
             
         </div>
         
-          
-            
-              <div class="bg-img">
-                <img src="/media/images/snow.png" />
-              </div>
-              
-                
                   
                         
 </div>
@@ -1164,15 +1171,27 @@ def maximum69Number (self, num):
 num 每一位上的数字都是 6 或者 9 。&lt;/p&gt;
 &lt;h1 id=&#34;my-solution&#34;&gt;My Solution：&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Solution(object):
-def maximum69Number (self, num):
-        list1 = []
-        stnum = list(str(num))
-        for i in range(len(stnum)):
+    def maximum69Number (self, num):
+            list1 = []
             stnum = list(str(num))
-            stnum[i] = &#39;9&#39;
-            list1.append(&#39;&#39;.join(stnum))
-        return max(list1)
+            for i in range(len(stnum)):
+                stnum = list(str(num))
+                stnum[i] = &#39;9&#39;
+                list1.append(&#39;&#39;.join(stnum))
+            return int(max(list1))
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;python的简单方法&#34;&gt;Python的简单方法：&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def func(num):
+    return int(str(num).replace(&#39;6&#39;,&#39;9&#39;,1))
+print(func(9669))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;利用replace函数，替换第一个6。根据贪心思想，把最前面的一个6替换为9即可得到最大值&lt;/p&gt;
+&lt;h1 id=&#34;本题总结&#34;&gt;本题总结：&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;int 为不可迭代对象，str可&lt;/li&gt;
+&lt;li&gt;join函数的用法&lt;/li&gt;
+&lt;li&gt;贪心思想&lt;/li&gt;
+&lt;/ol&gt;
 ">【leetcode】1323. 6 和 9 组成的最大数字</a>
       </div>
       
@@ -1539,8 +1558,5 @@ print(min)
 
 
 
-
-  <div class="snow-container"></div>
-  <script src="/media/js/bg/snow.js"></script>
 
 </html>
