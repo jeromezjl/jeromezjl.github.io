@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-03-02T00:38:46.414Z</updated>
+    <updated>2022-03-15T13:49:34.357Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[Pykeyboard 和 pymouse的使用]]></title>
+        <id>https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/</id>
+        <link href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/">
+        </link>
+        <updated>2022-03-15T13:19:17.000Z</updated>
+        <content type="html"><![CDATA[<p>三篇参考文章：<br>
+https://blog.csdn.net/weixin_51802807/article/details/121179861<br>
+https://www.cnblogs.com/zjutlitao/p/10188434.html<br>
+https://zhuanlan.zhihu.com/p/137133751</p>
+<p>另外注意：<br>
+1）pykeyboard  组合键使用时，需要用小写字母<br>
+例如：<br>
+模拟 alt+z<br>
+<strong>代码：</strong></p>
+<pre><code class="language-python">k.press_key(k.alt_key)  # 按住Alt键
+k.tap_key('z')  # 点击z键
+k.release_key(k.alt_key)  # 松开Alt键
+</code></pre>
+<p>2）用 m.position() 获取当前鼠标位置坐标<br>
+3）需要引入time模块，调整触发时间</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【爬虫】curl转为python爬虫代码]]></title>
         <id>https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/</id>
