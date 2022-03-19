@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-03-15T14:09:37.899Z</updated>
+    <updated>2022-03-19T04:51:40.936Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,20 +11,84 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[Pykeyboard 和 pymouse的使用]]></title>
+        <title type="html"><![CDATA[cmd 中 curl 命令的使用]]></title>
+        <id>https://jeromezjl.github.io/post/cmd-zhong-curl-ming-ling-de-shi-yong/</id>
+        <link href="https://jeromezjl.github.io/post/cmd-zhong-curl-ming-ling-de-shi-yong/">
+        </link>
+        <updated>2022-03-17T08:36:24.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[计组思维导图]]></title>
+        <id>https://jeromezjl.github.io/post/ji-zu-si-wei-dao-tu/</id>
+        <link href="https://jeromezjl.github.io/post/ji-zu-si-wei-dao-tu/">
+        </link>
+        <updated>2022-03-17T03:08:29.000Z</updated>
+        <content type="html"><![CDATA[<p>https://zhuanlan.zhihu.com/p/98226508<br>
+https://blog.csdn.net/weixin_47423314/article/details/114875087<br>
+https://www.bilibili.com/read/cv5340324/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pykeyboard 和 Pymouse 自动化操作]]></title>
         <id>https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/</id>
         <link href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/">
         </link>
         <updated>2022-03-15T13:19:17.000Z</updated>
-        <content type="html"><![CDATA[<p>三篇参考文章：<br>
-https://blog.csdn.net/weixin_51802807/article/details/121179861<br>
+        <content type="html"><![CDATA[<h1 id="三篇参考文章">三篇参考文章：</h1>
+<p>https://blog.csdn.net/weixin_51802807/article/details/121179861<br>
 https://www.cnblogs.com/zjutlitao/p/10188434.html<br>
 https://zhuanlan.zhihu.com/p/137133751</p>
-<p>另外注意：<br>
-1）pykeyboard  组合键使用时，需要用小写字母<br>
-例如：<br>
-模拟 alt+z<br>
-<strong>代码：</strong></p>
+<h1 id="技巧"><strong>技巧：</strong></h1>
+<p>用cmd命令打开网页，这种方法可以省去鼠标操作可能带来的延迟，而且可以运行电脑上任何位置的程序<br>
+https://blog.csdn.net/yekui/article/details/83802667<br>
+start 网站 （用该语法打开网站）<br>
+下面给出代码演示</p>
+<pre><code class="language-python">from pykeyboard import *
+import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
+
+k = PyKeyboard() #建立键盘对象
+
+k.press_key(k.windows_l_key)  # 按住Win键
+k.tap_key('r')  # 点击r键
+k.release_key(k.windows_l_key)  # 松开Win键
+time.sleep(0.2)  # 需等待界面跳转，0.2是极限，0.1就不好用了
+k.tap_key(k.enter_key)
+
+time.sleep(0.2)
+k.type_string('start https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1')
+k.tap_key(k.enter_key)
+</code></pre>
+<p>当然，用cmd更便于打开本地的文件，只需复制文件地址一步打开，下面给出演示</p>
+<pre><code class="language-python">from pymouse import *    # 模拟鼠标所使用的包
+from pykeyboard import *
+import pyperclip
+import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
+
+m = PyMouse()   # 鼠标的实例m
+k = PyKeyboard() #建立键盘对象
+x_dim, y_dim = m.screen_size()
+
+
+k.press_key(k.windows_l_key)  # 按住win键
+k.tap_key('r')  # 点击r键
+k.release_key(k.windows_l_key)  # 松开win 键
+time.sleep(0.5)
+k.tap_key(k.enter_key)
+
+pyperclip.copy(r&quot;C:\Users\ZJL\Desktop\软件\Firefox.lnk&quot;)
+time.sleep(0.5)
+k.press_key(k.control_key)
+k.tap_key('v')
+k.release_key(k.control_key)
+k.tap_key(k.enter_key)
+</code></pre>
+<p>这里要说明的是，pykeyboard不能输入中文，需要用pyperclip对字符串进行copy，然后模拟键盘CTRL cv</p>
+<h1 id="另外注意">另外注意：</h1>
+<p>1）pykeyboard  组合键使用时，需要用小写字母<br>
+<strong>例如：</strong><br>
+模拟 alt+z</p>
 <pre><code class="language-python">k.press_key(k.alt_key)  # 按住Alt键
 k.tap_key('z')  # 点击z键
 k.release_key(k.alt_key)  # 松开Alt键

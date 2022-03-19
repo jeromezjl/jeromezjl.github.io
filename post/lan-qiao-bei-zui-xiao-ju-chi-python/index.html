@@ -9,7 +9,7 @@
 <meta name="description" content=".......">
 <meta name="theme-color" content="#343a40">
 <title>【蓝桥杯】最小距离 - Python | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1647352171830">
+<link rel="shortcut icon" href="/favicon.ico?v=1647665452152">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -202,13 +202,13 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-count">8</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">2</span>
+        <span class="site-item-stat-count">3</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -947,23 +947,81 @@ print(min)
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cmd-zhong-curl-ming-ling-de-shi-yong/"" data-c="
+          &lt;p&gt;https://www.cnblogs.com/zhuzhenwei918/p/6781314.html&lt;/p&gt;
+">cmd 中 curl 命令的使用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-zu-si-wei-dao-tu/"" data-c="
+          &lt;p&gt;https://zhuanlan.zhihu.com/p/98226508&lt;br&gt;
+https://blog.csdn.net/weixin_47423314/article/details/114875087&lt;br&gt;
+https://www.bilibili.com/read/cv5340324/&lt;/p&gt;
+">计组思维导图</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/"" data-c="
-          &lt;p&gt;三篇参考文章：&lt;br&gt;
-https://blog.csdn.net/weixin_51802807/article/details/121179861&lt;br&gt;
+          &lt;h1 id=&#34;三篇参考文章&#34;&gt;三篇参考文章：&lt;/h1&gt;
+&lt;p&gt;https://blog.csdn.net/weixin_51802807/article/details/121179861&lt;br&gt;
 https://www.cnblogs.com/zjutlitao/p/10188434.html&lt;br&gt;
 https://zhuanlan.zhihu.com/p/137133751&lt;/p&gt;
-&lt;p&gt;另外注意：&lt;br&gt;
-1）pykeyboard  组合键使用时，需要用小写字母&lt;br&gt;
-例如：&lt;br&gt;
-模拟 alt+z&lt;br&gt;
-&lt;strong&gt;代码：&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;技巧&#34;&gt;&lt;strong&gt;技巧：&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;用cmd命令打开网页，这种方法可以省去鼠标操作可能带来的延迟，而且可以运行电脑上任何位置的程序&lt;br&gt;
+https://blog.csdn.net/yekui/article/details/83802667&lt;br&gt;
+start 网站 （用该语法打开网站）&lt;br&gt;
+下面给出代码演示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from pykeyboard import *
+import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
+
+k = PyKeyboard() #建立键盘对象
+
+k.press_key(k.windows_l_key)  # 按住Win键
+k.tap_key(&#39;r&#39;)  # 点击r键
+k.release_key(k.windows_l_key)  # 松开Win键
+time.sleep(0.2)  # 需等待界面跳转，0.2是极限，0.1就不好用了
+k.tap_key(k.enter_key)
+
+time.sleep(0.2)
+k.type_string(&#39;start https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1&#39;)
+k.tap_key(k.enter_key)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当然，用cmd更便于打开本地的文件，只需复制文件地址一步打开，下面给出演示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from pymouse import *    # 模拟鼠标所使用的包
+from pykeyboard import *
+import pyperclip
+import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
+
+m = PyMouse()   # 鼠标的实例m
+k = PyKeyboard() #建立键盘对象
+x_dim, y_dim = m.screen_size()
+
+
+k.press_key(k.windows_l_key)  # 按住win键
+k.tap_key(&#39;r&#39;)  # 点击r键
+k.release_key(k.windows_l_key)  # 松开win 键
+time.sleep(0.5)
+k.tap_key(k.enter_key)
+
+pyperclip.copy(r&amp;quot;C:\Users\ZJL\Desktop\软件\Firefox.lnk&amp;quot;)
+time.sleep(0.5)
+k.press_key(k.control_key)
+k.tap_key(&#39;v&#39;)
+k.release_key(k.control_key)
+k.tap_key(k.enter_key)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里要说明的是，pykeyboard不能输入中文，需要用pyperclip对字符串进行copy，然后模拟键盘CTRL cv&lt;/p&gt;
+&lt;h1 id=&#34;另外注意&#34;&gt;另外注意：&lt;/h1&gt;
+&lt;p&gt;1）pykeyboard  组合键使用时，需要用小写字母&lt;br&gt;
+&lt;strong&gt;例如：&lt;/strong&gt;&lt;br&gt;
+模拟 alt+z&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;k.press_key(k.alt_key)  # 按住Alt键
 k.tap_key(&#39;z&#39;)  # 点击z键
 k.release_key(k.alt_key)  # 松开Alt键
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;2）用 m.position() 获取当前鼠标位置坐标&lt;br&gt;
 3）需要引入time模块，调整触发时间&lt;/p&gt;
-">Pykeyboard 和 pymouse的使用</a>
+">Pykeyboard 和 Pymouse 自动化操作</a>
       </div>
       
       <div class="item">
