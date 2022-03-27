@@ -9,7 +9,7 @@
 <meta name="description" content=".......">
 <meta name="theme-color" content="#343a40">
 <title>Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1647941327777">
+<link rel="shortcut icon" href="/favicon.ico?v=1648395924162">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -185,13 +185,13 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">10</span>
+        <span class="site-item-stat-count">12</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">3</span>
+        <span class="site-item-stat-count">4</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -251,6 +251,12 @@
           <small class="language" data-lan="tag">标签</small>
         </h2>
       </div>
+      
+      
+      
+      
+      
+      
       
       
       
@@ -567,12 +573,47 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/jue-ce-shu/"" data-c="
+          &lt;p&gt;b站讲解&lt;br&gt;
+https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&lt;/p&gt;
+&lt;h1 id=&#34;决策树的构建&#34;&gt;决策树的构建&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;C4.5算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;参考文章：&lt;/code&gt;&lt;br&gt;
+https://blog.csdn.net/zjsghww/article/details/51638126&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;算法步骤：&lt;/code&gt;&lt;br&gt;
+1）计算总信息熵 Entropy&lt;br&gt;
+2）分别计算每个属性信息熵&lt;br&gt;
+3）总信息熵 - 属性信息熵 得到信息增益 Gain(A)&lt;br&gt;
+4）计算信息增益率 GainRatio(A) = Gain / Ent&lt;br&gt;
+5）增益率max的为根节点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注意&lt;/code&gt;&lt;br&gt;
+总信息熵用结果的概率进行计算&lt;br&gt;
+属性信息熵：&lt;br&gt;
+∑（ p(属性概率) * ∑ -（  p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））&lt;/p&gt;
+">【ML】决策树</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/opencv-qian-ji/"" data-c="
+          &lt;h1 id=&#34;matplotlib-显示-opencv-图像失真原因&#34;&gt;matplotlib 显示 opencv 图像失真原因&lt;/h1&gt;
+&lt;p&gt;https://blog.csdn.net/Strive_For_Future/article/details/108566534&lt;/p&gt;
+&lt;p&gt;注意：&lt;br&gt;
+opencv 在 anaconda 中文件夹的名称叫 cv2&lt;br&gt;
+可在编译器中输入  cv2.&lt;strong&gt;path&lt;/strong&gt; 来查看 cv2 安装地址，从而找到对应的算法文件&lt;/p&gt;
+">OpenCV 浅记</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/"" data-c="
           &lt;p&gt;下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了&lt;br&gt;
 但是jupyter一直只有一个虚拟环境，于是上网搜索了一下&lt;br&gt;
 jupyter需要手动分配内核，具体参考：&lt;/p&gt;
 &lt;p&gt;https://blog.csdn.net/weixin_44799217/article/details/116056976&lt;br&gt;
 https://zhuanlan.zhihu.com/p/81605893&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;br&gt;
+每次创建虚拟环境的时候，两步配置jupyter内核：&lt;/p&gt;
+&lt;p&gt;pip install ipykernel    #  在该虚拟环境下安装 ipykernel 包&lt;br&gt;
+python -m ipykernel install --name 环境名   # 向 jupyter 中添加虚拟内核&lt;/p&gt;
 ">Jupyter notebook 的 Anaconda 配置</a>
       </div>
       
@@ -668,8 +709,16 @@ k.release_key(k.alt_key)  # 松开Alt键
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/markdown-yu-fa-guan-fang-jiao-cheng/"" data-c="
-          &lt;p&gt;https://markdown.com.cn/basic-syntax/paragraphs.html&lt;/p&gt;
-">Markdown语法官方教程</a>
+          &lt;h1 id=&#34;官方教程&#34;&gt;官方教程：&lt;/h1&gt;
+&lt;p&gt;https://markdown.com.cn/basic-syntax/paragraphs.html&lt;/p&gt;
+&lt;h1 id=&#34;常用&#34;&gt;常用:&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;主标题&lt;/strong&gt;&lt;br&gt;
+‘#’ + 字符&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;&lt;br&gt;
+’** ‘ + 字符+  ’**‘&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;换行&lt;/strong&gt;&lt;br&gt;
+Markdown 换行语法 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行 (&lt;br&gt;)。&lt;/p&gt;
+">Markdown 语法</a>
       </div>
       
       <div class="item">

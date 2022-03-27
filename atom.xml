@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-03-22T09:28:49.064Z</updated>
+    <updated>2022-03-27T15:45:25.370Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【ML】决策树]]></title>
+        <id>https://jeromezjl.github.io/post/jue-ce-shu/</id>
+        <link href="https://jeromezjl.github.io/post/jue-ce-shu/">
+        </link>
+        <updated>2022-03-27T07:47:40.000Z</updated>
+        <content type="html"><![CDATA[<p>b站讲解<br>
+https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0</p>
+<h1 id="决策树的构建">决策树的构建</h1>
+<p><strong>C4.5算法</strong></p>
+<p><code>参考文章：</code><br>
+https://blog.csdn.net/zjsghww/article/details/51638126</p>
+<p><code>算法步骤：</code><br>
+1）计算总信息熵 Entropy<br>
+2）分别计算每个属性信息熵<br>
+3）总信息熵 - 属性信息熵 得到信息增益 Gain(A)<br>
+4）计算信息增益率 GainRatio(A) = Gain / Ent<br>
+5）增益率max的为根节点</p>
+<p><code>注意</code><br>
+总信息熵用结果的概率进行计算<br>
+属性信息熵：<br>
+∑（ p(属性概率) * ∑ -（  p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenCV 浅记]]></title>
+        <id>https://jeromezjl.github.io/post/opencv-qian-ji/</id>
+        <link href="https://jeromezjl.github.io/post/opencv-qian-ji/">
+        </link>
+        <updated>2022-03-22T12:07:21.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="matplotlib-显示-opencv-图像失真原因">matplotlib 显示 opencv 图像失真原因</h1>
+<p>https://blog.csdn.net/Strive_For_Future/article/details/108566534</p>
+<p>注意：<br>
+opencv 在 anaconda 中文件夹的名称叫 cv2<br>
+可在编译器中输入  cv2.<strong>path</strong> 来查看 cv2 安装地址，从而找到对应的算法文件</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Jupyter notebook 的 Anaconda 配置]]></title>
         <id>https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/</id>
@@ -21,6 +58,10 @@
 jupyter需要手动分配内核，具体参考：</p>
 <p>https://blog.csdn.net/weixin_44799217/article/details/116056976<br>
 https://zhuanlan.zhihu.com/p/81605893</p>
+<p><strong>总结</strong><br>
+每次创建虚拟环境的时候，两步配置jupyter内核：</p>
+<p>pip install ipykernel    #  在该虚拟环境下安装 ipykernel 包<br>
+python -m ipykernel install --name 环境名   # 向 jupyter 中添加虚拟内核</p>
 ]]></content>
     </entry>
     <entry>
@@ -129,12 +170,20 @@ k.release_key(k.alt_key)  # 松开Alt键
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Markdown语法官方教程]]></title>
+        <title type="html"><![CDATA[Markdown 语法]]></title>
         <id>https://jeromezjl.github.io/post/markdown-yu-fa-guan-fang-jiao-cheng/</id>
         <link href="https://jeromezjl.github.io/post/markdown-yu-fa-guan-fang-jiao-cheng/">
         </link>
         <updated>2022-02-25T10:12:57.000Z</updated>
-        <content type="html"><![CDATA[<p>https://markdown.com.cn/basic-syntax/paragraphs.html</p>
+        <content type="html"><![CDATA[<h1 id="官方教程">官方教程：</h1>
+<p>https://markdown.com.cn/basic-syntax/paragraphs.html</p>
+<h1 id="常用">常用:</h1>
+<p><strong>主标题</strong><br>
+‘#’ + 字符</p>
+<p><strong>加粗</strong><br>
+’** ‘ + 字符+  ’**‘</p>
+<p><strong>换行</strong><br>
+Markdown 换行语法 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行 (<br>)。</p>
 ]]></content>
     </entry>
     <entry>
@@ -189,66 +238,6 @@ print(func(9669))
 <li>join函数的用法</li>
 <li>贪心思想</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【蓝桥杯】最小距离 - Python]]></title>
-        <id>https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/</id>
-        <link href="https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/">
-        </link>
-        <updated>2022-01-26T08:58:03.000Z</updated>
-        <content type="html"><![CDATA[<p>资源限制<br>
-时间限制：1.0s 内存限制：256.0MB<br>
-　　最小距离<br>
-　　<br>
-问题描述<br>
-　　数轴上有n个数字，求最近的两个数，即min(abs(x-y))<br>
-　　<br>
-输入格式<br>
-　　第一行包含一个整数n。<br>
-　　接下来一行，表示n整数。<br>
-　　<br>
-输出格式<br>
-　　一个整数表示最小距离<br>
-　　<br>
-样例输入<br>
-6<br>
-7 3 4 11 9 17</p>
-<p>样例输出<br>
-1</p>
-<p>样例说明<br>
-　　取3和4<br>
-　　<br>
-数据规模和约定<br>
-　　n&lt;=100000<br>
-　　所有整数&lt;=10^7</p>
-<p><strong>本题要点：</strong></p>
-<ol>
-<li>输入格式：a = list(map(int, input().split())) 空格分隔</li>
-<li>两次for循环复杂度过大，不能通过，采取先排序，再算min的方法</li>
-</ol>
-<p><strong>代码：</strong></p>
-<pre><code class="language-python">n = int(input())
-numlist = list(map(int, input().split()))
-numlist.sort()
-min = float('inf')  # min初始值设为正无穷
-for i in range(1, n):
-    value = numlist[i] - numlist[i-1]
-    if value &lt; min:
-        min = value
-print(min)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[The First Article]]></title>
-        <id>https://jeromezjl.github.io/post/the-first-article/</id>
-        <link href="https://jeromezjl.github.io/post/the-first-article/">
-        </link>
-        <updated>2022-01-24T12:17:18.000Z</updated>
-        <content type="html"><![CDATA[<p>第一篇文章!</p>
-<p>本站于2022/1/25正式成立</p>
-<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1643085740581.png" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
