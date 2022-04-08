@@ -1,22 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jeromezjl.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Jerome</title>
-    <updated>2022-03-28T02:04:16.335Z</updated>
+    <updated>2022-04-04T12:13:43.088Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jeromezjl.github.io"/>
-    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
-    <subtitle>.......</subtitle>
-    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
-    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <subtitle>Jerome&apos;s blog</subtitle>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[【ML】决策树]]></title>
-        <id>https://jeromezjl.github.io/post/jue-ce-shu/</id>
-        <link href="https://jeromezjl.github.io/post/jue-ce-shu/">
+        <title type="html"><![CDATA[【计网】Socket 编程实验]]></title>
+        <id>http://localhost:4000/post/ji-wang-socket-bian-cheng-shi-yan/</id>
+        <link href="http://localhost:4000/post/ji-wang-socket-bian-cheng-shi-yan/">
         </link>
-        <updated>2022-03-27T07:47:40.000Z</updated>
-        <content type="html"><![CDATA[<p>b站讲解<br>
+        <updated>2022-04-01T10:20:56.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>原文档：</strong><br>
+https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z<br>
+<strong>参考文章：</strong><br>
+https://zhuanlan.zhihu.com/p/387279376</p>
+<p><code>服务器端代码：</code></p>
+<pre><code class="language-python">import random
+from socket import *
+# 使用 AF_INET 套接字家族，SOCK_DGRAM 代表面向非连接（UDP）
+serverSocket = socket(AF_INET, SOCK_DGRAM)
+
+# 将 socket 绑定在本机 IP 的 10000 端口
+serverSocket.bind(('127.0.0.1', 10000))
+
+while True:
+    # 生成一个 [1, 10] 的随机数，包含两端
+    rand = random.randint(1, 10)
+    # 将收到的 packet 中的数据存入 message，将地址存入 address（客户端地址）
+    message, address = serverSocket.recvfrom(1024)
+    # 下面是对收到的 message 进行处理
+    # 将 bytes 类型的 message 转换为 string 类型
+    message_str = message.decode('utf-8')
+    # 在 30% 的概率下丢弃收到的 packet
+    if rand &lt; 4:
+        continue
+    # 对收到的 message 做简单处理
+    ret = '{' + message_str + '}'
+    # 做出响应（将处理后的数据通过sendto函数送回客户端），注意还要将 string 编码为 bytes 类型
+    serverSocket.sendto(ret.encode(), address)
+</code></pre>
+<p><code>客户端代码</code></p>
+<pre><code class="language-python">from socket import *
+import time
+
+# SOCK_DGRAM 表示使用UDP协议
+client = socket(AF_INET, SOCK_DGRAM)
+# 设置超时时间为1秒
+client.settimeout(1)
+# 服务端的ip和端口
+server_address = ('152.136.19.235', 10000)
+for i in range(10):
+    # 发送ping命令
+    client.sendto(b&quot;2020212487&quot;, server_address)
+    send_time = time.time()
+    try:
+        message, adr = client.recvfrom(1024)
+        recv_time = time.time()  # 获取
+        print(f&quot;[{i}]\t{message.decode()}\tRTT: {(recv_time - send_time) * 1000:.2f}ms&quot;)
+    except timeout as e:  # 超时就打印LOST
+        print(f&quot;[{i}]\tLOST&quot;)
+
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Git 使用]]></title>
+        <id>http://localhost:4000/post/git-shi-yong/</id>
+        <link href="http://localhost:4000/post/git-shi-yong/">
+        </link>
+        <updated>2022-03-31T13:51:33.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>使用 Git 上传文件夹到 Github</strong><br>
+https://zhuanlan.zhihu.com/p/136355306<br>
+https://blog.csdn.net/weixin_45309916/article/details/108273988</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】决策树]]></title>
+        <id>http://localhost:4000/post/ml-jue-ce-shu/</id>
+        <link href="http://localhost:4000/post/ml-jue-ce-shu/">
+        </link>
+        <updated>2022-03-27T13:27:29.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>b站讲解</strong><br>
 https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0</p>
 <h1 id="决策树的构建">决策树的构建</h1>
 <p><strong>C4.5算法</strong></p>
@@ -31,79 +101,74 @@ https://blog.csdn.net/zjsghww/article/details/51638126</p>
 <p><code>注意</code><br>
 总信息熵用结果的概率进行计算<br>
 属性信息熵：<br>
-∑（ p(属性概率) * ∑ -（  p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））</p>
+∑（ p(属性概率) * ∑ -（ p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））</p>
+<p><code>习题</code><br>
+https://zhuanlan.zhihu.com/p/166393579</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[OpenCV 浅记]]></title>
-        <id>https://jeromezjl.github.io/post/opencv-qian-ji/</id>
-        <link href="https://jeromezjl.github.io/post/opencv-qian-ji/">
+        <id>http://localhost:4000/post/opencv-qian-ji/</id>
+        <link href="http://localhost:4000/post/opencv-qian-ji/">
         </link>
-        <updated>2022-03-22T12:07:21.000Z</updated>
+        <updated>2022-03-22T13:25:29.000Z</updated>
         <content type="html"><![CDATA[<h1 id="matplotlib-显示-opencv-图像失真原因">matplotlib 显示 opencv 图像失真原因</h1>
 <p>https://blog.csdn.net/Strive_For_Future/article/details/108566534</p>
-<p>注意：<br>
+<p><strong>注意：</strong><br>
 opencv 在 anaconda 中文件夹的名称叫 cv2<br>
-可在编译器中输入  cv2.<strong>path</strong> 来查看 cv2 安装地址，从而找到对应的算法文件</p>
+可在编译器中输入 cv2.path 来查看 cv2 安装地址，从而找到对应的算法文件</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Jupyter notebook 的 Anaconda 配置]]></title>
-        <id>https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/</id>
-        <link href="https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/">
+        <id>http://localhost:4000/post/jupyter-notebook-de-anaconda-pei-zhi/</id>
+        <link href="http://localhost:4000/post/jupyter-notebook-de-anaconda-pei-zhi/">
         </link>
-        <updated>2022-03-22T09:25:21.000Z</updated>
+        <updated>2022-03-22T13:24:19.000Z</updated>
         <content type="html"><![CDATA[<p>下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了<br>
 但是jupyter一直只有一个虚拟环境，于是上网搜索了一下<br>
-jupyter需要手动分配内核，具体参考：</p>
+jupyter需要手动分配内核，<strong>具体参考：</strong></p>
 <p>https://blog.csdn.net/weixin_44799217/article/details/116056976<br>
 https://zhuanlan.zhihu.com/p/81605893</p>
-<p><strong>总结</strong><br>
-每次创建虚拟环境的时候，两步配置jupyter内核：</p>
-<p>pip install ipykernel    #  在该虚拟环境下安装 ipykernel 包<br>
-python -m ipykernel install --name 环境名   # 向 jupyter 中添加虚拟内核</p>
+<h1 id="总结">总结</h1>
+<p>每次创建虚拟环境的时候，两步配置jupyter内核：</p>
+<p>pip install ipykernel # 在该虚拟环境下安装 ipykernel 包<br>
+python -m ipykernel install --name 环境名 # 向 jupyter 中添加虚拟内核</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[计组学习笔记]]></title>
-        <id>https://jeromezjl.github.io/post/ji-zu-xue-xi-bi-ji/</id>
-        <link href="https://jeromezjl.github.io/post/ji-zu-xue-xi-bi-ji/">
+        <title type="html"><![CDATA[cmd]]></title>
+        <id>http://localhost:4000/post/cmd/</id>
+        <link href="http://localhost:4000/post/cmd/">
         </link>
-        <updated>2022-03-19T10:22:49.000Z</updated>
-        <content type="html"><![CDATA[<p>开个帖</p>
+        <updated>2022-03-17T13:23:16.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>cmd 中 curl 命令的使用</strong><br>
+https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[cmd 中 curl 命令的使用]]></title>
-        <id>https://jeromezjl.github.io/post/cmd-zhong-curl-ming-ling-de-shi-yong/</id>
-        <link href="https://jeromezjl.github.io/post/cmd-zhong-curl-ming-ling-de-shi-yong/">
+        <title type="html"><![CDATA[计组浅记]]></title>
+        <id>http://localhost:4000/post/ji-zu-qian-ji/</id>
+        <link href="http://localhost:4000/post/ji-zu-qian-ji/">
         </link>
-        <updated>2022-03-17T08:36:24.000Z</updated>
-        <content type="html"><![CDATA[<p>https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计组思维导图]]></title>
-        <id>https://jeromezjl.github.io/post/ji-zu-si-wei-dao-tu/</id>
-        <link href="https://jeromezjl.github.io/post/ji-zu-si-wei-dao-tu/">
-        </link>
-        <updated>2022-03-17T03:08:29.000Z</updated>
-        <content type="html"><![CDATA[<p>https://zhuanlan.zhihu.com/p/98226508<br>
+        <updated>2022-03-17T13:22:05.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="思维导图">思维导图</h1>
+<p>https://zhuanlan.zhihu.com/p/98226508<br>
 https://blog.csdn.net/weixin_47423314/article/details/114875087<br>
 https://www.bilibili.com/read/cv5340324/</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Pykeyboard 和 Pymouse 自动化操作]]></title>
-        <id>https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/</id>
-        <link href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-de-shi-yong/">
+        <id>http://localhost:4000/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/</id>
+        <link href="http://localhost:4000/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/">
         </link>
-        <updated>2022-03-15T13:19:17.000Z</updated>
+        <updated>2022-03-15T13:17:12.000Z</updated>
         <content type="html"><![CDATA[<h1 id="三篇参考文章">三篇参考文章：</h1>
 <p>https://blog.csdn.net/weixin_51802807/article/details/121179861<br>
 https://www.cnblogs.com/zjutlitao/p/10188434.html<br>
 https://zhuanlan.zhihu.com/p/137133751</p>
-<h1 id="技巧"><strong>技巧：</strong></h1>
+<h1 id="技巧">技巧：</h1>
 <p>用cmd命令打开网页，这种方法可以省去鼠标操作可能带来的延迟，而且可以运行电脑上任何位置的程序<br>
 https://blog.csdn.net/yekui/article/details/83802667<br>
 start 网站 （用该语法打开网站）<br>
@@ -149,7 +214,7 @@ k.tap_key(k.enter_key)
 </code></pre>
 <p>这里要说明的是，pykeyboard不能输入中文，需要用pyperclip对字符串进行copy，然后模拟键盘CTRL cv</p>
 <h1 id="另外注意">另外注意：</h1>
-<p>1）pykeyboard  组合键使用时，需要用小写字母<br>
+<p>1）pykeyboard 组合键使用时，需要用小写字母<br>
 <strong>例如：</strong><br>
 模拟 alt+z</p>
 <pre><code class="language-python">k.press_key(k.alt_key)  # 按住Alt键
@@ -162,82 +227,29 @@ k.release_key(k.alt_key)  # 松开Alt键
     </entry>
     <entry>
         <title type="html"><![CDATA[【爬虫】curl转为python爬虫代码]]></title>
-        <id>https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/</id>
-        <link href="https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/">
+        <id>http://localhost:4000/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/</id>
+        <link href="http://localhost:4000/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/">
         </link>
-        <updated>2022-02-25T12:13:36.000Z</updated>
+        <updated>2022-02-25T13:16:31.000Z</updated>
         <content type="html"><![CDATA[<p>http://tool.yuanrenxue.com/curl</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown 语法]]></title>
-        <id>https://jeromezjl.github.io/post/markdown-yu-fa-guan-fang-jiao-cheng/</id>
-        <link href="https://jeromezjl.github.io/post/markdown-yu-fa-guan-fang-jiao-cheng/">
+        <id>http://localhost:4000/post/markdown-yu-fa/</id>
+        <link href="http://localhost:4000/post/markdown-yu-fa/">
         </link>
-        <updated>2022-02-25T10:12:57.000Z</updated>
+        <updated>2022-02-25T13:14:35.000Z</updated>
         <content type="html"><![CDATA[<h1 id="官方教程">官方教程：</h1>
 <p>https://markdown.com.cn/basic-syntax/paragraphs.html</p>
 <h1 id="常用">常用:</h1>
 <p><strong>主标题</strong><br>
 ‘#’ + 字符</p>
 <p><strong>加粗</strong><br>
-’** ‘ + 字符+  ’**‘</p>
+’** ‘ + 字符+ ’**‘</p>
 <p><strong>换行</strong><br>
-Markdown 换行语法 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行 (<br>)。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【leetcode】1323. 6 和 9 组成的最大数字]]></title>
-        <id>https://jeromezjl.github.io/post/leetcode-1323-6-he-9-zu-cheng-de-zui-da-shu-zi/</id>
-        <link href="https://jeromezjl.github.io/post/leetcode-1323-6-he-9-zu-cheng-de-zui-da-shu-zi/">
-        </link>
-        <updated>2022-02-25T10:08:23.000Z</updated>
-        <content type="html"><![CDATA[<p>给你一个仅由数字 6 和 9 组成的正整数 num。</p>
-<p>你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。</p>
-<p>请返回你可以得到的最大数字。</p>
-<p>示例 1：</p>
-<p>输入：num = 9669<br>
-输出：9969<br>
-解释：<br>
-改变第一位数字可以得到 6669 。<br>
-改变第二位数字可以得到 9969 。<br>
-改变第三位数字可以得到 9699 。<br>
-改变第四位数字可以得到 9666 。<br>
-其中最大的数字是 9969 。<br>
-示例 2：</p>
-<p>输入：num = 9996<br>
-输出：9999<br>
-解释：将最后一位从 6 变到 9，其结果 9999 是最大的数。<br>
-示例 3：</p>
-<p>输入：num = 9999<br>
-输出：9999<br>
-解释：无需改变就已经是最大的数字了。</p>
-<p>提示：</p>
-<p>1 &lt;= num &lt;= 10^4<br>
-num 每一位上的数字都是 6 或者 9 。</p>
-<h1 id="my-solution">My Solution：</h1>
-<pre><code class="language-python">class Solution(object):
-    def maximum69Number (self, num):
-            list1 = []
-            stnum = list(str(num))
-            for i in range(len(stnum)):
-                stnum = list(str(num))
-                stnum[i] = '9'
-                list1.append(''.join(stnum))
-            return int(max(list1))
-</code></pre>
-<h1 id="python的简单方法">Python的简单方法：</h1>
-<pre><code class="language-python">def func(num):
-    return int(str(num).replace('6','9',1))
-print(func(9669))
-</code></pre>
-<p>利用replace函数，替换第一个6。根据贪心思想，把最前面的一个6替换为9即可得到最大值</p>
-<h1 id="本题总结">本题总结：</h1>
-<ol>
-<li>int 为不可迭代对象，str可</li>
-<li>join函数的用法</li>
-<li>贪心思想</li>
-</ol>
+Markdown 换行语法 在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行 (<br>
+)。</p>
 ]]></content>
     </entry>
 </feed>

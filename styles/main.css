@@ -2048,17 +2048,15 @@ p > code {
     margin-bottom: 10px;
   }
 }
-.bg-color .bg-color {
-      background: transparent !important;
-    }body {
-      background-color: #ced4da;
+body {
+      background-color: #eee;
     }.header {
-        width: 1100px;
+        width: 1000px;
         margin: 0 auto;
       }
 
       .main-continer {
-        width: 1100px;
+        width: 1000px;
         margin: 0 auto;
       }
     body {
@@ -2071,7 +2069,7 @@ p > code {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eeeeeed8;
+      background: #eeeeeefe;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -2113,15 +2111,15 @@ p > code {
       background-color:  !important;
     }
       .nav-item a {
-        color:  #212529;
+        color:  #555;
       }.nav-item a:hover {
-        color: #868e96;
+        color: #222;
       }.nav-item-active {
-      background: #f9f9f9d8;
+      background: #f9f9f9fe;
     }
 
     .nav-item:hover {
-      background: #f9f9f9d8;
+      background: #f9f9f9fe;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2157,7 +2155,7 @@ p > code {
       color: #fc6423;
       border-bottom-color: #fc6423;
     }.bg-color {
-      background-color: #f8f9fad8;
+      background-color: #fffffffe;
     }
     .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
       border-radius: 15px;
@@ -2166,19 +2164,19 @@ p > code {
       border-radius: 15px;
     }
     .site-meta {
-      background: #343a40 !important;
+      background: #000 !important;
     }
     .head-top-line {
-      background: #343a40;
+      background: #000;
     }
     .brand {
   
     }
     .main-title, .brand {
-      color: #f8f9fa !important;
+      color: #FFF !important;
     }
     .mist .site-title i {
-      background: #f8f9fad8;
+      background: #FFFFFFfe;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
