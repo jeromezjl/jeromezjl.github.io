@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-04-08T13:35:27.652Z</updated>
+    <updated>2022-04-08T15:36:31.252Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,12 +11,41 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[使用 Github Desktop 同步 Gridea 踩坑记录]]></title>
+        <id>https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/</id>
+        <link href="https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/">
+        </link>
+        <updated>2022-04-08T14:08:32.000Z</updated>
+        <content type="html"><![CDATA[<p>先放一篇其他大佬的文章，说的已经很详细了、<br>
+https://sonatta.top/post/Ux6xKOeOx/</p>
+<p><code>踩坑：</code><br>
+写好博客直接把 output push 上去，导致 url 为本地地址，无法打开</p>
+<p><code>这里再总结一下</code><br>
+在 gridea 中写好之后，点击同步，不用管是否同步成功，同步是为了生成正确的 url<br>
+等待大约 15 - 20 s之后，文件已经生成成功。</p>
+<p>这时，找到站点源文件的 output 文件夹，打开文件夹<br>
+复制里面所有内容，粘贴到从 GitHub 上 Pull 下来的文件夹中。<br>
+这时 Github Desktop 中会出现刚才新添加的项目<br>
+然后注意一定要填写 summary 名称，否则不能 Push<br>
+填写之后，就可以 Push 上去了</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Github Desktop 管理本地代码]]></title>
         <id>https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/</id>
         <link href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/">
         </link>
         <updated>2022-04-08T12:22:41.000Z</updated>
         <content type="html"><![CDATA[<p>https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wechat]]></title>
+        <id>https://jeromezjl.github.io/post/wechat/</id>
+        <link href="https://jeromezjl.github.io/post/wechat/">
+        </link>
+        <updated>2022-04-02T13:28:42.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1648906251060.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -165,82 +194,6 @@ https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</p>
 <p>https://zhuanlan.zhihu.com/p/98226508<br>
 https://blog.csdn.net/weixin_47423314/article/details/114875087<br>
 https://www.bilibili.com/read/cv5340324/</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pykeyboard 和 Pymouse 自动化操作]]></title>
-        <id>https://jeromezjl.github.io/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/</id>
-        <link href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/">
-        </link>
-        <updated>2022-03-15T13:17:12.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="三篇参考文章">三篇参考文章：</h1>
-<p>https://blog.csdn.net/weixin_51802807/article/details/121179861<br>
-https://www.cnblogs.com/zjutlitao/p/10188434.html<br>
-https://zhuanlan.zhihu.com/p/137133751</p>
-<h1 id="技巧">技巧：</h1>
-<p>用cmd命令打开网页，这种方法可以省去鼠标操作可能带来的延迟，而且可以运行电脑上任何位置的程序<br>
-https://blog.csdn.net/yekui/article/details/83802667<br>
-start 网站 （用该语法打开网站）<br>
-下面给出代码演示</p>
-<pre><code class="language-python">from pykeyboard import *
-import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
-
-k = PyKeyboard() #建立键盘对象
-
-k.press_key(k.windows_l_key)  # 按住Win键
-k.tap_key('r')  # 点击r键
-k.release_key(k.windows_l_key)  # 松开Win键
-time.sleep(0.2)  # 需等待界面跳转，0.2是极限，0.1就不好用了
-k.tap_key(k.enter_key)
-
-time.sleep(0.2)
-k.type_string('start https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1')
-k.tap_key(k.enter_key)
-</code></pre>
-<p>当然，用cmd更便于打开本地的文件，只需复制文件地址一步打开，下面给出演示</p>
-<pre><code class="language-python">from pymouse import *    # 模拟鼠标所使用的包
-from pykeyboard import *
-import pyperclip
-import time   # 连续进行两个动作可能太快而效果不明显，因此加入暂停时间
-
-m = PyMouse()   # 鼠标的实例m
-k = PyKeyboard() #建立键盘对象
-x_dim, y_dim = m.screen_size()
-
-
-k.press_key(k.windows_l_key)  # 按住win键
-k.tap_key('r')  # 点击r键
-k.release_key(k.windows_l_key)  # 松开win 键
-time.sleep(0.5)
-k.tap_key(k.enter_key)
-
-pyperclip.copy(r&quot;C:\Users\ZJL\Desktop\软件\Firefox.lnk&quot;)
-time.sleep(0.5)
-k.press_key(k.control_key)
-k.tap_key('v')
-k.release_key(k.control_key)
-k.tap_key(k.enter_key)
-</code></pre>
-<p>这里要说明的是，pykeyboard不能输入中文，需要用pyperclip对字符串进行copy，然后模拟键盘CTRL cv</p>
-<h1 id="另外注意">另外注意：</h1>
-<p>1）pykeyboard 组合键使用时，需要用小写字母<br>
-<strong>例如：</strong><br>
-模拟 alt+z</p>
-<pre><code class="language-python">k.press_key(k.alt_key)  # 按住Alt键
-k.tap_key('z')  # 点击z键
-k.release_key(k.alt_key)  # 松开Alt键
-</code></pre>
-<p>2）用 m.position() 获取当前鼠标位置坐标<br>
-3）需要引入time模块，调整触发时间</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【爬虫】curl转为python爬虫代码]]></title>
-        <id>https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/</id>
-        <link href="https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/">
-        </link>
-        <updated>2022-02-25T13:16:31.000Z</updated>
-        <content type="html"><![CDATA[<p>http://tool.yuanrenxue.com/curl</p>
 ]]></content>
     </entry>
 </feed>
