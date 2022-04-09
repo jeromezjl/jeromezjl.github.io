@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-04-08T15:36:31.252Z</updated>
+    <updated>2022-04-09T10:00:51.207Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,12 +11,21 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[【考研】考研资料]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/">
+        </link>
+        <updated>2022-04-09T05:42:47.000Z</updated>
+        <content type="html"><![CDATA[<p>http://qzbltushu.ysepan.com/</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[使用 Github Desktop 同步 Gridea 踩坑记录]]></title>
         <id>https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/</id>
         <link href="https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/">
         </link>
         <updated>2022-04-08T14:08:32.000Z</updated>
-        <content type="html"><![CDATA[<p>先放一篇其他大佬的文章，说的已经很详细了、<br>
+        <content type="html"><![CDATA[<p>先放一篇其他大佬的文章，说的已经很详细了<br>
 https://sonatta.top/post/Ux6xKOeOx/</p>
 <p><code>踩坑：</code><br>
 写好博客直接把 output push 上去，导致 url 为本地地址，无法打开</p>
@@ -37,15 +46,8 @@ https://sonatta.top/post/Ux6xKOeOx/</p>
         </link>
         <updated>2022-04-08T12:22:41.000Z</updated>
         <content type="html"><![CDATA[<p>https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Wechat]]></title>
-        <id>https://jeromezjl.github.io/post/wechat/</id>
-        <link href="https://jeromezjl.github.io/post/wechat/">
-        </link>
-        <updated>2022-04-02T13:28:42.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1648906251060.jpg" alt="" loading="lazy"></figure>
+<p>当需要 push 的文件过大时候报错：<br>
+https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted</p>
 ]]></content>
     </entry>
     <entry>
