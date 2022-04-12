@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#000">
-<title>【计网】Socket 编程实验 | Jerome</title>
+<title>【ML】Hopfield 神经网络 | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1649775387818">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="【计网】Socket 编程实验" />
-  <meta name="keywords" content="计网" />
+  <meta name="description" content="【ML】Hopfield 神经网络" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -339,32 +339,21 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/"> 【计网】Socket 编程实验 </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/"> 【ML】Hopfield 神经网络 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-04-01 18:20:56">2022-04-01</span>
+      <span class="publish-time" data-t="2022-04-11 10:16:51">2022-04-11</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">标签:</span>
-       
-      <a href="https://jeromezjl.github.io/tag/dlUK4JbSL/">
-        <span>计网</span>
-      </a>
-       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >2<span class="language" data-lan="minute"
+        >1<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -373,15 +362,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >325<span class="pc-show language" data-lan="words"
+        >1<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/ji-wang-socket-bian-cheng-shi-yan/"
-      data-flag-title="【计网】Socket 编程实验"
+      id="/post/ml-hopfield-shen-jing-wang-luo/"
+      data-flag-title="【ML】Hopfield 神经网络"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -397,57 +386,7 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <p><strong>原文档：</strong><br>
-<a href="https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z">https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z</a><br>
-<strong>参考文章：</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/387279376">https://zhuanlan.zhihu.com/p/387279376</a></p>
-<p><code>服务器端代码：</code></p>
-<pre><code class="language-python">import random
-from socket import *
-# 使用 AF_INET 套接字家族，SOCK_DGRAM 代表面向非连接（UDP）
-serverSocket = socket(AF_INET, SOCK_DGRAM)
-
-# 将 socket 绑定在本机 IP 的 10000 端口
-serverSocket.bind(('127.0.0.1', 10000))
-
-while True:
-    # 生成一个 [1, 10] 的随机数，包含两端
-    rand = random.randint(1, 10)
-    # 将收到的 packet 中的数据存入 message，将地址存入 address（客户端地址）
-    message, address = serverSocket.recvfrom(1024)
-    # 下面是对收到的 message 进行处理
-    # 将 bytes 类型的 message 转换为 string 类型
-    message_str = message.decode('utf-8')
-    # 在 30% 的概率下丢弃收到的 packet
-    if rand &lt; 4:
-        continue
-    # 对收到的 message 做简单处理
-    ret = '{' + message_str + '}'
-    # 做出响应（将处理后的数据通过sendto函数送回客户端），注意还要将 string 编码为 bytes 类型
-    serverSocket.sendto(ret.encode(), address)
-</code></pre>
-<p><code>客户端代码</code></p>
-<pre><code class="language-python">from socket import *
-import time
-
-# SOCK_DGRAM 表示使用UDP协议
-client = socket(AF_INET, SOCK_DGRAM)
-# 设置超时时间为1秒
-client.settimeout(1)
-# 服务端的ip和端口
-server_address = ('152.136.19.235', 10000)
-for i in range(10):
-    # 发送ping命令
-    client.sendto(b&quot;2020212487&quot;, server_address)
-    send_time = time.time()
-    try:
-        message, adr = client.recvfrom(1024)
-        recv_time = time.time()  # 获取
-        print(f&quot;[{i}]\t{message.decode()}\tRTT: {(recv_time - send_time) * 1000:.2f}ms&quot;)
-    except timeout as e:  # 超时就打印LOST
-        print(f&quot;[{i}]\tLOST&quot;)
-
-</code></pre>
+              <p>1</p>
 
             </div>
             
@@ -460,7 +399,7 @@ for i in range(10):
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/" title="【计网】Socket 编程实验">https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/</a>
+      <a href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/" title="【ML】Hopfield 神经网络">https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -469,21 +408,15 @@ for i in range(10):
   </ul>
   <div class="tags">
     
-      <a href="https://jeromezjl.github.io/tag/dlUK4JbSL/"># 计网</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="Github Desktop 管理本地代码" href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/">Github Desktop 管理本地代码</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="Github Desktop 管理本地代码" href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Git 使用" href="https://jeromezjl.github.io/post/git-shi-yong/">Git 使用</a>
-        <a class="nav-mobile-next" title="Git 使用" href="https://jeromezjl.github.io/post/git-shi-yong/">下一篇</a>
+        <a class="nav-pc-next" title="【考研】考研资料" href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/">【考研】考研资料</a>
+        <a class="nav-mobile-next" title="【考研】考研资料" href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

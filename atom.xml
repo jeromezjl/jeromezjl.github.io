@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-04-09T10:10:27.667Z</updated>
+    <updated>2022-04-12T14:56:30.766Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,12 +11,21 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[【ML】Hopfield 神经网络]]></title>
+        <id>https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/">
+        </link>
+        <updated>2022-04-11T02:16:51.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[【考研】考研资料]]></title>
         <id>https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/</id>
         <link href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/">
         </link>
         <updated>2022-04-09T05:42:47.000Z</updated>
-        <content type="html"><![CDATA[<p>http://qzbltushu.ysepan.com/</p>
+        <content type="html"><![CDATA[<p><a href="http://qzbltushu.ysepan.com/">http://qzbltushu.ysepan.com/</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -26,7 +35,7 @@
         </link>
         <updated>2022-04-08T14:08:32.000Z</updated>
         <content type="html"><![CDATA[<p>先放一篇其他大佬的文章，说的已经很详细了<br>
-https://sonatta.top/post/Ux6xKOeOx/</p>
+<a href="https://sonatta.top/post/Ux6xKOeOx/">https://sonatta.top/post/Ux6xKOeOx/</a></p>
 <p><code>踩坑：</code><br>
 写好博客直接把 output push 上去，导致 url 为本地地址，无法打开</p>
 <p><code>这里再总结一下</code><br>
@@ -45,9 +54,12 @@ https://sonatta.top/post/Ux6xKOeOx/</p>
         <link href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/">
         </link>
         <updated>2022-04-08T12:22:41.000Z</updated>
-        <content type="html"><![CDATA[<p>https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0</p>
-<p>当需要 push 的文件过大时候报错：<br>
-https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted</p>
+        <content type="html"><![CDATA[<p><code>总览</code><br>
+<a href="https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0</a></p>
+<p><code>当需要 push 的文件过大时候报错：</code><br>
+<a href="https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted">https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted</a></p>
+<p><code>GitHub教程 仓库的创建、同步、删除</code><br>
+<a href="https://www.likecs.com/show-204599371.html">https://www.likecs.com/show-204599371.html</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -57,9 +69,9 @@ https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failu
         </link>
         <updated>2022-04-01T10:20:56.000Z</updated>
         <content type="html"><![CDATA[<p><strong>原文档：</strong><br>
-https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z<br>
+<a href="https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z">https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z</a><br>
 <strong>参考文章：</strong><br>
-https://zhuanlan.zhihu.com/p/387279376</p>
+<a href="https://zhuanlan.zhihu.com/p/387279376">https://zhuanlan.zhihu.com/p/387279376</a></p>
 <p><code>服务器端代码：</code></p>
 <pre><code class="language-python">import random
 from socket import *
@@ -116,8 +128,8 @@ for i in range(10):
         </link>
         <updated>2022-03-31T13:51:33.000Z</updated>
         <content type="html"><![CDATA[<p><strong>使用 Git 上传文件夹到 Github</strong><br>
-https://zhuanlan.zhihu.com/p/136355306<br>
-https://blog.csdn.net/weixin_45309916/article/details/108273988</p>
+<a href="https://zhuanlan.zhihu.com/p/136355306">https://zhuanlan.zhihu.com/p/136355306</a><br>
+<a href="https://blog.csdn.net/weixin_45309916/article/details/108273988">https://blog.csdn.net/weixin_45309916/article/details/108273988</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -127,11 +139,11 @@ https://blog.csdn.net/weixin_45309916/article/details/108273988</p>
         </link>
         <updated>2022-03-27T13:27:29.000Z</updated>
         <content type="html"><![CDATA[<p><strong>b站讲解</strong><br>
-https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0</p>
+<a href="https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0</a></p>
 <h1 id="决策树的构建">决策树的构建</h1>
 <p><strong>C4.5算法</strong></p>
 <p><code>参考文章：</code><br>
-https://blog.csdn.net/zjsghww/article/details/51638126</p>
+<a href="https://blog.csdn.net/zjsghww/article/details/51638126">https://blog.csdn.net/zjsghww/article/details/51638126</a></p>
 <p><code>算法步骤：</code><br>
 1）计算总信息熵 Entropy<br>
 2）分别计算每个属性信息熵<br>
@@ -143,7 +155,7 @@ https://blog.csdn.net/zjsghww/article/details/51638126</p>
 属性信息熵：<br>
 ∑（ p(属性概率) * ∑ -（ p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））</p>
 <p><code>习题</code><br>
-https://zhuanlan.zhihu.com/p/166393579</p>
+<a href="https://zhuanlan.zhihu.com/p/166393579">https://zhuanlan.zhihu.com/p/166393579</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -153,7 +165,7 @@ https://zhuanlan.zhihu.com/p/166393579</p>
         </link>
         <updated>2022-03-22T13:25:29.000Z</updated>
         <content type="html"><![CDATA[<h1 id="matplotlib-显示-opencv-图像失真原因">matplotlib 显示 opencv 图像失真原因</h1>
-<p>https://blog.csdn.net/Strive_For_Future/article/details/108566534</p>
+<p><a href="https://blog.csdn.net/Strive_For_Future/article/details/108566534">https://blog.csdn.net/Strive_For_Future/article/details/108566534</a></p>
 <p><strong>注意：</strong><br>
 opencv 在 anaconda 中文件夹的名称叫 cv2<br>
 可在编译器中输入 cv2.path 来查看 cv2 安装地址，从而找到对应的算法文件</p>
@@ -168,8 +180,8 @@ opencv 在 anaconda 中文件夹的名称叫 cv2<br>
         <content type="html"><![CDATA[<p>下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了<br>
 但是jupyter一直只有一个虚拟环境，于是上网搜索了一下<br>
 jupyter需要手动分配内核，<strong>具体参考：</strong></p>
-<p>https://blog.csdn.net/weixin_44799217/article/details/116056976<br>
-https://zhuanlan.zhihu.com/p/81605893</p>
+<p><a href="https://blog.csdn.net/weixin_44799217/article/details/116056976">https://blog.csdn.net/weixin_44799217/article/details/116056976</a><br>
+<a href="https://zhuanlan.zhihu.com/p/81605893">https://zhuanlan.zhihu.com/p/81605893</a></p>
 <h1 id="总结">总结</h1>
 <p>每次创建虚拟环境的时候，两步配置jupyter内核：</p>
 <p>pip install ipykernel # 在该虚拟环境下安装 ipykernel 包<br>
@@ -183,19 +195,7 @@ python -m ipykernel install --name 环境名 # 向 jupyter 中添加虚拟内核
         </link>
         <updated>2022-03-17T13:23:16.000Z</updated>
         <content type="html"><![CDATA[<p><strong>cmd 中 curl 命令的使用</strong><br>
-https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[计组浅记]]></title>
-        <id>https://jeromezjl.github.io/post/ji-zu-qian-ji/</id>
-        <link href="https://jeromezjl.github.io/post/ji-zu-qian-ji/">
-        </link>
-        <updated>2022-03-17T13:22:05.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="思维导图">思维导图</h1>
-<p>https://zhuanlan.zhihu.com/p/98226508<br>
-https://blog.csdn.net/weixin_47423314/article/details/114875087<br>
-https://www.bilibili.com/read/cv5340324/</p>
+<a href="https://www.cnblogs.com/zhuzhenwei918/p/6781314.html">https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</a></p>
 ]]></content>
     </entry>
 </feed>
