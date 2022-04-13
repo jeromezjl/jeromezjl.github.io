@@ -2048,12 +2048,7 @@ p > code {
     margin-bottom: 10px;
   }
 }
-
-    @media (max-width: 767px) {
-      .bg-img img {
-        display: none;
-      }
-    }.bg-color .bg-color {
+.bg-color .bg-color {
       background: transparent !important;
     }body {
       background-color: #eee;
@@ -2122,9 +2117,9 @@ p > code {
       background-color:  !important;
     }
       .nav-item a {
-        color:  #555;
+        color:  #212529;
       }.nav-item a:hover {
-        color: #222;
+        color: #364fc7;
       }.nav-item-active {
       background: #f8f9facc;
     }
@@ -2142,11 +2137,11 @@ p > code {
       transition-duration: 59s;
       transition-timing-function: cubic-bezier(.34,0,.84,1);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #212529;
+      border-bottom-color: #212529;
     }.markdownIt-TOC a:hover {
-      color: #fff;
-      border-bottom-color: #fff;
+      color: #868e96;
+      border-bottom-color: #868e96;
     }.active-current > a {
       color: #fc6423 !important;
       border-bottom-color: #fc6423 !important;
