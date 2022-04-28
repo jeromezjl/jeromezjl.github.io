@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-04-13T02:49:36.927Z</updated>
+    <updated>2022-04-28T16:56:25.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,191 +11,171 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[【ML】Hopfield 神经网络]]></title>
-        <id>https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/</id>
-        <link href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/">
+        <title type="html"><![CDATA[【Pandas】每天一点 Pandas]]></title>
+        <id>https://jeromezjl.github.io/post/pandas-mei-tian-yi-dian-pandas/</id>
+        <link href="https://jeromezjl.github.io/post/pandas-mei-tian-yi-dian-pandas/">
         </link>
-        <updated>2022-04-11T02:16:51.000Z</updated>
-        <content type="html"><![CDATA[<p>开个帖</p>
+        <updated>2022-04-28T08:36:44.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.runoob.com/pandas/pandas-dataframe.html">pandas.DataFrame()：创建数据表格</a><br>
+<a href="https://blog.csdn.net/qq_18351157/article/details/113520345">data.to_csv()：写入/修改 csv 文件</a><br>
+<a href="https://blog.csdn.net/qq_24754061/article/details/103738513">data.describe()：展示数据均值、最大值等</a><br>
+<a href="https://huang-tong-xue.blog.csdn.net/article/details/119222439?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.pc_relevant_default&amp;utm_relevant_index=4">Pandas.set_option()：设置数据集的展示参数</a><br>
+<a href="https://zhuanlan.zhihu.com/p/393930947">Pandas map()：修改数据集中行列值</a><br>
+<a href="https://blog.csdn.net/jhr112/article/details/115631246">pandas 数据清洗：drop() del() 等</a><br>
+<a href="https://blog.csdn.net/walking_visitor/article/details/85128461">相关系数 (correlation coefficient) 函数 corr()</a><br>
+<a href="https://www.jianshu.com/p/9dec47bac5b9">corr() 的三个相关系数：Pearson相关、Spearman相关、Kendall相关</a><a href="https://www.biaodianfu.com/pearson-kendall-spearman.html#Scipy%E7%9A%84pearsonr%E6%96%B9%E6%B3%95">；另一篇</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[【考研】考研资料]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/">
+        <title type="html"><![CDATA[【Python】谁的 Python 学的不扎实？]]></title>
+        <id>https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi/</id>
+        <link href="https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi/">
         </link>
-        <updated>2022-04-09T05:42:47.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="http://qzbltushu.ysepan.com/">http://qzbltushu.ysepan.com/</a></p>
+        <updated>2022-04-28T08:01:32.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39700394/article/details/111418838">浮点数格式化输出</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[使用 Github Desktop 同步 Gridea 踩坑记录]]></title>
-        <id>https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/</id>
-        <link href="https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/">
+        <title type="html"><![CDATA[【Android】]]></title>
+        <id>https://jeromezjl.github.io/post/android/</id>
+        <link href="https://jeromezjl.github.io/post/android/">
         </link>
-        <updated>2022-04-08T14:08:32.000Z</updated>
-        <content type="html"><![CDATA[<p>先放一篇其他大佬的文章，说的已经很详细了<br>
-<a href="https://sonatta.top/post/Ux6xKOeOx/">https://sonatta.top/post/Ux6xKOeOx/</a></p>
-<p><code>踩坑：</code><br>
-写好博客直接把 output push 上去，导致 url 为本地地址，无法打开</p>
-<p><code>这里再总结一下</code><br>
-在 gridea 中写好之后，点击同步，不用管是否同步成功，同步是为了生成正确的 url<br>
-等待大约 15 - 20 s之后，文件已经生成成功。</p>
-<p>这时，找到站点源文件的 output 文件夹，打开文件夹<br>
-复制里面所有内容，粘贴到从 GitHub 上 Pull 下来的文件夹中。<br>
-这时 Github Desktop 中会出现刚才新添加的项目<br>
-然后注意一定要填写 summary 名称，否则不能 Push<br>
-填写之后，就可以 Push 上去了</p>
+        <updated>2022-04-26T02:24:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="root">Root</h1>
+<p>安卓手机最高权限，可以修改系统设置，卸载系统自带软件。有些手机自带 root，有些需要手动获取 root</p>
+<h1 id="adb">ADB</h1>
+<p>安卓调试桥梁，连接电脑时会需要ADB</p>
+<h1 id="安卓神器软件分享">安卓神器软件分享</h1>
+<p>黑域：省电管控<br>
+Tasker：手机自动化<br>
+<a href="https://taskerm.com/?p=218">Tasker良心博客分享</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Github Desktop 管理本地代码]]></title>
-        <id>https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/</id>
-        <link href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/">
+        <title type="html"><![CDATA[【数据结构】课设1：头插法构造链表]]></title>
+        <id>https://jeromezjl.github.io/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/</id>
+        <link href="https://jeromezjl.github.io/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/">
         </link>
-        <updated>2022-04-08T12:22:41.000Z</updated>
-        <content type="html"><![CDATA[<p><code>总览</code><br>
-<a href="https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;seid=9646375911820432461&amp;spm_id_from=333.337.0.0</a></p>
-<p><code>当需要 push 的文件过大时候报错：</code><br>
-<a href="https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted">https://stackoverflow.com/questions/69427700/error-rpc-failed-curl-55-send-failure-connection-was-aborted</a></p>
-<p><code>GitHub教程 仓库的创建、同步、删除</code><br>
-<a href="https://www.likecs.com/show-204599371.html">https://www.likecs.com/show-204599371.html</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【计网】Socket 编程实验]]></title>
-        <id>https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/</id>
-        <link href="https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/">
-        </link>
-        <updated>2022-04-01T10:20:56.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>原文档：</strong><br>
-<a href="https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z">https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z</a><br>
-<strong>参考文章：</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/387279376">https://zhuanlan.zhihu.com/p/387279376</a></p>
-<p><code>服务器端代码：</code></p>
-<pre><code class="language-python">import random
-from socket import *
-# 使用 AF_INET 套接字家族，SOCK_DGRAM 代表面向非连接（UDP）
-serverSocket = socket(AF_INET, SOCK_DGRAM)
+        <updated>2022-04-25T10:13:14.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-python">class Node():  # 定义节点类
+    def __init__(self, item):  # 初始化数据
+        self.item = item  # 把数据存入节点
+        self.next = None  # 默认next节点为None
 
-# 将 socket 绑定在本机 IP 的 10000 端口
-serverSocket.bind(('127.0.0.1', 10000))
+# 注意，传入的数据形式为列表，可一次性插入多个数据
+def creat_head(datalist, linklist):  # 分别传入要插入的数据列表，和非空单链表
+    head_node = Node(datalist[0])  # 定义头节点，把datalist的第一个元素赋给头节点
+    head_node.next = linklist  # 把该节点连接在链表最开头
+    for data in datalist[1:]:  # 遍历剩余数据
+        node = Node(data)  # 创建新节点
+        node.next = head_node  # 把新节点插在头节点的前面
+        head_node = node  # 把新节点命名为头节点，以便重复上述操作
+    return head_node  # 返回改链表的首地址，从而可遍历展示该链表
 
-while True:
-    # 生成一个 [1, 10] 的随机数，包含两端
-    rand = random.randint(1, 10)
-    # 将收到的 packet 中的数据存入 message，将地址存入 address（客户端地址）
-    message, address = serverSocket.recvfrom(1024)
-    # 下面是对收到的 message 进行处理
-    # 将 bytes 类型的 message 转换为 string 类型
-    message_str = message.decode('utf-8')
-    # 在 30% 的概率下丢弃收到的 packet
-    if rand &lt; 4:
-        continue
-    # 对收到的 message 做简单处理
-    ret = '{' + message_str + '}'
-    # 做出响应（将处理后的数据通过sendto函数送回客户端），注意还要将 string 编码为 bytes 类型
-    serverSocket.sendto(ret.encode(), address)
-</code></pre>
-<p><code>客户端代码</code></p>
-<pre><code class="language-python">from socket import *
-import time
+def print_linklist(current_node):  # 打印链表（传入头节点）
+    while current_node:  # 当前节点非空时
+        print(current_node.item, end = ' ')  # 打印链表节点的数据元素
+        current_node = current_node.next  # 移动指针，重复循环
 
-# SOCK_DGRAM 表示使用UDP协议
-client = socket(AF_INET, SOCK_DGRAM)
-# 设置超时时间为1秒
-client.settimeout(1)
-# 服务端的ip和端口
-server_address = ('152.136.19.235', 10000)
-for i in range(10):
-    # 发送ping命令
-    client.sendto(b&quot;2020212487&quot;, server_address)
-    send_time = time.time()
-    try:
-        message, adr = client.recvfrom(1024)
-        recv_time = time.time()  # 获取
-        print(f&quot;[{i}]\t{message.decode()}\tRTT: {(recv_time - send_time) * 1000:.2f}ms&quot;)
-    except timeout as e:  # 超时就打印LOST
-        print(f&quot;[{i}]\tLOST&quot;)
+# 下面用最朴素的方法创建一个非空单链表
+a = Node(1)  # 创建一个独立节点
+a.next = Node(2)  # 在a后连接新节点
+a.next.next = Node(3)  # 连接新节点
+print_linklist(a)  # 展示该链表 （ 1 2 3 ）
 
+print('\n')
+
+linklist1 = creat_head([8,7,6], a)  # 头插法把该列表插入a链表
+print_linklist(linklist1)  # 展示链表
 </code></pre>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Git 使用]]></title>
-        <id>https://jeromezjl.github.io/post/git-shi-yong/</id>
-        <link href="https://jeromezjl.github.io/post/git-shi-yong/">
+        <title type="html"><![CDATA[【Seaborn】数据可视化]]></title>
+        <id>https://jeromezjl.github.io/post/seaborn-shu-ju-ke-shi-hua/</id>
+        <link href="https://jeromezjl.github.io/post/seaborn-shu-ju-ke-shi-hua/">
         </link>
-        <updated>2022-03-31T13:51:33.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>使用 Git 上传文件夹到 Github</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/136355306">https://zhuanlan.zhihu.com/p/136355306</a><br>
-<a href="https://blog.csdn.net/weixin_45309916/article/details/108273988">https://blog.csdn.net/weixin_45309916/article/details/108273988</a></p>
+        <updated>2022-04-23T06:03:03.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/98729226">pairplot()：展示数据集变量之间的关系</a><br>
+<a href="https://www.cnblogs.com/cymx66688/p/10536403.html">sns.countplot()：柱状图显示</a><br>
+<a href="https://zhuanlan.zhihu.com/p/96040773?from_voters_page=true">sns.heatmap()：显示变量之间相关系数矩阵</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[【ML】决策树]]></title>
-        <id>https://jeromezjl.github.io/post/ml-jue-ce-shu/</id>
-        <link href="https://jeromezjl.github.io/post/ml-jue-ce-shu/">
+        <title type="html"><![CDATA[【ML】核函数]]></title>
+        <id>https://jeromezjl.github.io/post/ml-he-han-shu/</id>
+        <link href="https://jeromezjl.github.io/post/ml-he-han-shu/">
         </link>
-        <updated>2022-03-27T13:27:29.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>b站讲解</strong><br>
-<a href="https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0">https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;seid=4602675497552466282&amp;spm_id_from=333.337.0.0</a></p>
-<h1 id="决策树的构建">决策树的构建</h1>
-<p><strong>C4.5算法</strong></p>
-<p><code>参考文章：</code><br>
-<a href="https://blog.csdn.net/zjsghww/article/details/51638126">https://blog.csdn.net/zjsghww/article/details/51638126</a></p>
-<p><code>算法步骤：</code><br>
-1）计算总信息熵 Entropy<br>
-2）分别计算每个属性信息熵<br>
-3）总信息熵 - 属性信息熵 得到信息增益 Gain(A)<br>
-4）计算信息增益率 GainRatio(A) = Gain / Ent<br>
-5）增益率max的为根节点</p>
-<p><code>注意</code><br>
-总信息熵用结果的概率进行计算<br>
-属性信息熵：<br>
-∑（ p(属性概率) * ∑ -（ p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））</p>
-<p><code>习题</code><br>
-<a href="https://zhuanlan.zhihu.com/p/166393579">https://zhuanlan.zhihu.com/p/166393579</a></p>
+        <updated>2022-04-23T05:07:10.000Z</updated>
+        <content type="html"><![CDATA[<p>将低维数据映射到高维，从而对数据进行分类。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[OpenCV 浅记]]></title>
-        <id>https://jeromezjl.github.io/post/opencv-qian-ji/</id>
-        <link href="https://jeromezjl.github.io/post/opencv-qian-ji/">
+        <title type="html"><![CDATA[【sklearn】每天一点 sklearn]]></title>
+        <id>https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn/</id>
+        <link href="https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn/">
         </link>
-        <updated>2022-03-22T13:25:29.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="matplotlib-显示-opencv-图像失真原因">matplotlib 显示 opencv 图像失真原因</h1>
-<p><a href="https://blog.csdn.net/Strive_For_Future/article/details/108566534">https://blog.csdn.net/Strive_For_Future/article/details/108566534</a></p>
-<p><strong>注意：</strong><br>
-opencv 在 anaconda 中文件夹的名称叫 cv2<br>
-可在编译器中输入 cv2.path 来查看 cv2 安装地址，从而找到对应的算法文件</p>
+        <updated>2022-04-21T14:26:40.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://scikit-learn.org.cn/">sklearn中文社区1</a><br>
+<a href="https://sklearn.apachecn.org/#/">sklearn中文社区2</a><br>
+<a href="https://blog.csdn.net/algorithmPro/article/details/103045824">超详细入门</a></p>
+<h1 id="案例">案例</h1>
+<p><a href="https://blog.csdn.net/admin11111111/article/details/116570878">鸢尾花svm</a><br>
+<a href="https://blog.csdn.net/Together_CZ/article/details/78697664?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1.pc_relevant_aa&amp;spm=1001.2101.3001.4242.2&amp;utm_relevant_index=4">鸢尾花2</a><br>
+<a href="https://cxymm.net/article/qianyunzzz/122885761">乳腺癌svm，from UCI</a></p>
+<h1 id="数据集">数据集</h1>
+<p><a href="http://archive.ics.uci.edu/">UCI数据集</a><br>
+<a href="https://blog.csdn.net/weixin_40583722/article/details/121800784">UCI使用教程（注意看文章里面的链接）</a><br>
+数据集页面后缀为 .data .csv 的为数据集，剩余的文件均为数据集信息</p>
+<h1 id="sklearn项目一般步骤">sklearn项目一般步骤：</h1>
+<p><strong>读入数据：</strong><br>
+<a href="https://blog.csdn.net/xizi_ghq/article/details/108660671">datasets 详解</a><br>
+<a href="https://blog.csdn.net/tcy23456/article/details/106388651/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.pc_relevant_default&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">数据集文件读取的几种方式</a><br>
+<a href="https://www.jianshu.com/p/29af03788ff6">数据集文件读取的几种方式2</a><br>
+<a href="https://www.jianshu.com/p/4dfe5ce3bda9">利用urllib直接网络读入</a><br>
+<a href="https://www.cnblogs.com/zyj3955/p/15414382.html">鸢尾花的导入与划分</a></p>
+<p><code>导入的UCI的数据的表头（ names 列表）如何确定？</code></p>
+<pre><code class="language-python">一般都在UCI主页的 Attribute Information 中列出来了，可以直接对应其表头。
+个别数据集，比如乳腺癌数据集，3种癌细胞每个有10个特征，需要自行对三种癌细胞进行命名/编号
+这就需要对数据集的信息进行分析，观察数据特征，分析其含义，给出适合的 names
+</code></pre>
+<p><strong>特征工程</strong><br>
+<a href="https://www.jianshu.com/p/29af03788ff6">sklearn-pandas 示例</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Jupyter notebook 的 Anaconda 配置]]></title>
-        <id>https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/</id>
-        <link href="https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/">
+        <title type="html"><![CDATA[【matplotlib】每天一点 matplotlib 用法]]></title>
+        <id>https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/</id>
+        <link href="https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/">
         </link>
-        <updated>2022-03-22T13:24:19.000Z</updated>
-        <content type="html"><![CDATA[<p>下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了<br>
-但是jupyter一直只有一个虚拟环境，于是上网搜索了一下<br>
-jupyter需要手动分配内核，<strong>具体参考：</strong></p>
-<p><a href="https://blog.csdn.net/weixin_44799217/article/details/116056976">https://blog.csdn.net/weixin_44799217/article/details/116056976</a><br>
-<a href="https://zhuanlan.zhihu.com/p/81605893">https://zhuanlan.zhihu.com/p/81605893</a></p>
-<h1 id="总结">总结</h1>
-<p>每次创建虚拟环境的时候，两步配置jupyter内核：</p>
-<p>pip install ipykernel # 在该虚拟环境下安装 ipykernel 包<br>
-python -m ipykernel install --name 环境名 # 向 jupyter 中添加虚拟内核</p>
+        <updated>2022-04-21T06:42:08.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="http://c.biancheng.net/matplotlib/">详细教程</a><br>
+<a href="https://www.runoob.com/w3cnote/matplotlib-tutorial.html">简易教程</a><br>
+<a href="https://zhuanlan.zhihu.com/p/258106097">plt.plot()</a><br>
+<a href="https://blog.csdn.net/m0_37362454/article/details/81511427">plt.figure()：设置图像参数</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[cmd]]></title>
-        <id>https://jeromezjl.github.io/post/cmd/</id>
-        <link href="https://jeromezjl.github.io/post/cmd/">
+        <title type="html"><![CDATA[【Numpy】每天一点 Numpy 小技巧]]></title>
+        <id>https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/</id>
+        <link href="https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/">
         </link>
-        <updated>2022-03-17T13:23:16.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>cmd 中 curl 命令的使用</strong><br>
-<a href="https://www.cnblogs.com/zhuzhenwei918/p/6781314.html">https://www.cnblogs.com/zhuzhenwei918/p/6781314.html</a></p>
+        <updated>2022-04-21T06:32:18.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.zhihu.com/question/38353562#:~:text=Scipy%EF%BC%9A%20%E4%B8%80%E4%B8%AA%E7%94%A8%E4%BA%8E%E6%95%B0%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E3%80%81%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%84%E7%90%86%E6%8F%92%E5%80%BC%E3%80%81%E7%A7%AF%E5%88%86%E3%80%81%E4%BC%98%E5%8C%96%E3%80%81%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E3%80%81%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%95%B0%E5%80%BC%E8%A7%A3%E7%9A%84%E6%B1%82%E8%A7%A3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%AD%89%E9%97%AE%E9%A2%98%E3%80%82%20Pandas%EF%BC%9A,%E5%9F%BA%E4%BA%8E%20NumPy%20%E7%9A%84%E4%B8%80%E7%A7%8D%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%AF%A5%E5%B7%A5%E5%85%B7%E6%98%AF%E4%B8%BA%E4%BA%86%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1%E8%80%8C%E5%88%9B%E5%BB%BA%E7%9A%84%E3%80%82">numpy，scipy，pandas这些库的区别是什么？</a><br>
+<a href="https://blog.csdn.net/qq_39072607/article/details/89321495">np.zeros：用于生成全 0 的数组</a><br>
+<a href="https://blog.csdn.net/qq_41800366/article/details/86589680">np.arange()：生成序列（等差数列）</a><br>
+<a href="https://www.w3cschool.cn/article/54960412.html">np.linspace()：当要生成浮点数序列时，用该函数代替arange()，来保证精度</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手机自动化操作的一些探索]]></title>
+        <id>https://jeromezjl.github.io/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/</id>
+        <link href="https://jeromezjl.github.io/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/">
+        </link>
+        <updated>2022-04-21T05:58:50.000Z</updated>
+        <content type="html"><![CDATA[<p>tasker<br>
+自动精灵（操作简单，适合简易任务<br>
+Hamibot 需要js</p>
 ]]></content>
     </entry>
 </feed>
