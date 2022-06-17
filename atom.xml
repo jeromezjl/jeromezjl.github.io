@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-04-29T01:59:43.722Z</updated>
+    <updated>2022-06-17T15:47:55.408Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,553 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【计网】期末复习]]></title>
+        <id>https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/</id>
+        <link href="https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/">
+        </link>
+        <updated>2022-06-17T09:35:28.000Z</updated>
+        <content type="html"><![CDATA[<p>本笔记对应教材为《计算机网络自顶向下方法》</p>
+<h1 id="第一章-概述">第一章 概述</h1>
+<p><strong>计算机网络协议分层</strong><br>
+<strong>计算机网络服务模型</strong><br>
+<strong>性能评价 （延迟，丢包，吞吐量）</strong></p>
+<h1 id="第二章-应用层">第二章 应用层</h1>
+<p><strong>HTTP协议工作模式</strong><br>
+<strong>HTTP cookie, cache</strong><br>
+<strong>DNS</strong></p>
+<h1 id="第三章-传输层-运输层">第三章 传输层 / 运输层</h1>
+<p><strong>可靠性 RDT</strong><br>
+<strong>拥塞控制</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655464901846.png" alt="" loading="lazy"><br>
+在恢复部分：Tahoe：还用慢开始算法，从 1 开始；Reno：快恢复算法，从一半开始</p>
+<h1 id="第四章-网络层">第四章 网络层</h1>
+<p><strong>网络层的功能</strong><br>
+路由选择与分组转发、异构网络互联、拥塞控制</p>
+<p><strong>IP 地址 &amp; 子网掩码</strong><br>
+<a href="https://www.cnblogs.com/fzlsss/p/9678954.html">网络号，主机号，主机地址，网络地址，主机地址，子网号，子网地址 概念辨析</a><br>
+<a href="https://www.bilibili.com/video/BV1eV411J7Hv?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">子网掩码B站</a><br>
+IP 地址的主机号全为 0 表示网络号，全为 1 表示广播号<br>
+IP 地址和子网掩码都是一串 32 位的二进制数，二者一一对应。子网掩码为 1 的位对应 IP 地址中的网络号，为 0 的位对应 IP 地址中的主机号。注意，子网掩码肯定是由连续的 1 和连续的 0 组成的，因为网络号和主机号不能交叉。IP 和 子网掩码相与得到该网络的网络号（标识该网络的地址）<br>
+CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数是多少，如 172.16.0.0/16 表示有 16 位网络号，前 16 位称为网络前缀<br>
+<a href="https://zhuanlan.zhihu.com/p/85960091">总结</a></p>
+<p><strong>子网划分</strong><br>
+<a href="https://www.bilibili.com/video/BV1a84y1F72Z/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+假如某网络只需要 100 台主机，而主机号可以表示 200 台主机。我们不想对该 IP 进行浪费，将主机号再次进行划分，使用主机字节的前几位标记划分子网的网络号，其余位数用于表示主机地址。<br>
+<code>例</code><br>
+<img src="https://jeromezjl.github.io/post-images/1655460590774.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655460595483.png" alt="" loading="lazy"><br>
+<code>注</code> 主机号全 0 表示网络号，全为 1 表示广播号，这两个不能算在主机地址中</p>
+<p><strong>网络地址转换-NAT</strong><br>
+将局域网（LAN）址转换为公网（WAN）地址，对外隐藏局域网内部 IP 地址，使得整个局域网只需要一个全球的 IP 即可访问因特网<br>
+<a href="https://www.cnblogs.com/mlgjb/p/8087612.html#:~:text=WLAN%EF%BC%8C%E5%85%A8%E7%A7%B0Wireless%20LAN%2C%20%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E3%80%82%20%E5%92%8CLAN%E4%B8%8D%E5%90%8C%EF%BC%8CWLAN%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E8%BF%87%E7%94%B5%E7%A3%81%E6%B3%A2%E4%BC%A0%E8%BE%93%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%B8%B8%E8%AF%B4%E7%9A%84%E7%A9%BA%E6%B0%94%E4%BC%A0%E8%BE%93%E3%80%82%20WLAN,%E5%88%A9%E7%94%A8%E7%94%B5%E7%A3%81%E6%B3%A2%E5%9C%A8%E7%A9%BA%E6%B0%94%E4%B8%AD%E5%8F%91%E9%80%81%E5%92%8C%E6%8E%A5%E5%8F%97%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%80%8C%E6%97%A0%E9%9C%80%E7%BA%BF%E7%BC%86%E4%BB%8B%E8%B4%A8%E3%80%82%20WLAN%20%E4%BD%BF%E7%94%A8%20ISM%20%28Industrial%E3%80%81Scientific%E3%80%81Medical%29%20%E6%97%A0%E7%BA%BF%E7%94%B5%E5%B9%BF%E6%92%AD%E9%A2%91%E6%AE%B5%E9%80%9A%E4%BF%A1%E3%80%82">词条辨析：LAN、WAN、WLAN、WIFI</a><br>
+<a href="https://zhuanlan.zhihu.com/p/434689354">词条辨析：网关和路由</a></p>
+<p><strong>ARP 协议</strong><br>
+<a href="https://kaoyan.koolearn.com/20211028/1468028.html">同一局域网内，将 IP 地址映射为 MAC 地址</a></p>
+<p><strong>DHCP 协议</strong><br>
+<a href="https://blog.csdn.net/Gherbirthday0916/article/details/125154347">当一台新主机加入网络时，DHCP 给该主机分配 IP 地址</a></p>
+<p><strong>ICMP 协议</strong></p>
+<p><strong>距离向量路由算法 - RIP 协议</strong><br>
+在网络中加入新的路由器时，用于对路由器下一条的更新，更新当前路由表。原则上满足到达下一网络的距离尽量短，距离相同时尽量不改动，同一下一跳改动则必改动的原则。<br>
+<a href="https://www.bilibili.com/video/BV1BJ41157rM/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站原理+题目讲解</a><br>
+<a href="https://www.bilibili.com/video/BV1C4411375y?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站做题步骤讲解</a></p>
+<p><strong>最长前缀路由选择</strong><br>
+<a href="https://www.bilibili.com/video/BV1jk4y127Cu?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">b站讲解</a><br>
+原理：哪条 IP 的匹配度最高选择哪个<br>
+<code>例</code><br>
+<img src="https://jeromezjl.github.io/post-images/1655458936247.png" alt="" loading="lazy"><br>
+<code>步骤</code></p>
+<ol>
+<li>把目的 IP 化为二进制</li>
+<li>求得路由表中每一条 IP 路径的网络号</li>
+<li>逐一与目的 IP 对比，符合度最高的为正确路径</li>
+</ol>
+<p><code>例</code><br>
+<img src="https://jeromezjl.github.io/post-images/1655458832077.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655458838336.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655458843286.png" alt="" loading="lazy"></p>
+<h1 id="第五章-数据链路层">第五章 数据链路层</h1>
+<p><strong>DV算法</strong><br>
+<strong>LS算法</strong></p>
+<h1 id="第六章-无线网络和移动网络">第六章 无线网络和移动网络</h1>
+<p><strong>随机接入协议</strong><br>
+<strong>MAC地址， hop-by-hop</strong></p>
+<h1 id="第七章-多媒体网络">第七章 多媒体网络</h1>
+<p><strong>无线 vs 有线</strong></p>
+<h1 id="第八章-计算机网络中的安全">第八章 计算机网络中的安全</h1>
+<p><strong>对称加密 vs. 非对称加密</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《形式语言与自动机》笔记]]></title>
+        <id>https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/</id>
+        <link href="https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/">
+        </link>
+        <updated>2022-06-15T08:50:53.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="绪论">绪论</h1>
+<p>∑（西格玛）表示字母表，字母表中的元素称为该字母表的一个字母</p>
+<p>ɛ 为空串，长度为 0，就是什么都没有。0 次幂代表空串</p>
+<p>字母表的n次幂，得到的集合，其中的元素为字母表中字母构成的句子<br>
+字母表的闭包（字母表中所有字母的排列组合）<br>
+字母表的正闭包（+）加上字母表的零次幂（空串）为字母表的克林闭包（*）<br>
+注意，字母表的闭包是把字母表的 n 次幂并在一起，是各个次幂运算结果之和</p>
+<p>字母表 ∑ 上 的语言 L，是 ∑* 的一个子集 （语言 L 是集合，满足集合运算）<br>
+L表示字母表 ∑ 上的一个语言（语言 L 就是所有句子的集合，证明语言相等，则证明集合相等），x 表示语言 L 中的一个句子，abcd表示单个字符<br>
+其关系为：a ∈ x ∈ L ⊆ ∑*</p>
+<h1 id="文法">文法</h1>
+<p>V ：变量，可以被其他串替换，用大写 ABC 表示<br>
+T ：终极符，这个语言里边最终的句子，都是由终极符构成的串（必定含有终极符），用小写 abc 表示<br>
+P : 产生式，又叫语法规则、定义式，可以理解为一个语言的语法，字母必须要这么组合，才是该语言。A→B 读作 ：A 可以定义为 / 可以为 B 。 产生式可以是终极符和非终极符构成的串，但是不能仅仅是终极符构成的串<br>
+S ：开始符，即，所有推导要从该符号开始。从该符号推导出来的才是里面的句子。开始符必须是变量之一，因为只有在变量集合中才能作为产生式的左部</p>
+<p>若产生式最终只含终极符，那么推导结束</p>
+<p>推导：利用产生式推出新表达式，归约和其相反</p>
+<p>G 表示文法  L(G) 表示由文法 G 定义的语言，也就是符合文法 G 的句子集合<br>
+G1 G2为两个文法 ，L(G1) = L(G2) 则，G1 G2等价，也就是句子集合相同</p>
+<p>简化文法：只列出该文法的所有产生式，如：S→A|B|AA|BB，A→0，B→1</p>
+<p><strong>乔姆斯基文法体系</strong><br>
+0型文法：最常规的文法<br>
+1型文法（上下文有关文法CSG），只需满足右边比左边长，（左边可以有终极符，可以任意长度）<br>
+2型文法（上下文无关文法CFG）：在1型文法（上下文有关文法）前提下，必须满足左边是一个变量（只能有一个变量，长度为1，不能是终极符）<br>
+3型文法（正则文法RG）在2型文法的基础上，右侧为终极符串 + 一个串（注意只能有一个变量，可为空串）形如：A→w，A→wB</p>
+<p>对应语言分别是 0，1，2，3型语言，缩写分别为：CSL,CFL,RL<br>
+正则语言 RL</p>
+<p><strong>线性文法</strong><br>
+线性文法：在正则文法基础上，增加了新产生式形式：终极符串 + 一个串 + 终极符串 （注意，还是只能有一个变量）形如：A→w，A→wBx</p>
+<p>变量代表的串在哪一侧就是哪种线性文法<br>
+右线性文法就是正则文法<br>
+左线性文法：形如：A→w，A→Bw<br>
+同一个语言用左右线性文法都可以构造，故，左线性文法与右线性文法等价</p>
+<p>注：左线性文法 与 右线性文法 混用不是 正则文法<br>
+空语句不会改变语言类型</p>
+<h1 id="有穷状态自动机">有穷状态自动机</h1>
+<p>有穷状态自动机（finite automata，简称FA）：识别正则语言，FA是正则语言的识别器<br>
+扩展状态转移函数：Q x *∑→ Q ：一个状态读入一个字符串，变成另一个状态，*∑代表字符串</p>
+<p>确定的有穷状态自动机（deterministic finite automata，简称 DFA）一个·输入只有一个结果<br>
+构造 DFA 步骤：</p>
+<ol>
+<li>定义 DFA 状态，每一步都干啥</li>
+<li>定义转移函数，每个状态输入值后到达的新状态</li>
+<li>画图，完成构造</li>
+</ol>
+<p><img src="https://jeromezjl.github.io/post-images/1655293535417.png" alt="" loading="lazy"><br>
+对于上面图片最下面这几行，意思是<br>
+q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对于下面几行都一样，左边通过至少一步变为右边的终止状态，最后一个q是终止状态的符号</p>
+<p>不确定的有穷状态自动机（Nondeterministic finite automata，简称 NFA）<br>
+输入一个字符可以转移到多个状态（多个状态是同时进行的）</p>
+<p><strong>NFA → DFA</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655294134548.png" alt="" loading="lazy"><br>
+<code>注</code> q3 在 NFA 中为终止状态，在新的 DFA 中含有 q3 的状态也为终止状态。同样 q0 还为起始状态。</p>
+<p><strong>ɛ-NFA → NFA</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655380631215.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655294724853.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655380638255.png" alt="" loading="lazy"><br>
+<code>步骤</code></p>
+<ol>
+<li>把 ɛ-NFA 表格列出来，准备构造 NFA 的表格。</li>
+<li>先把 NFA 的 ɛ-闭包 构造好，在此基础上进行状态转移。每一步都要用 ɛ-闭包 考虑。</li>
+<li>用新的状态符号 q0 q1 等表示 {q0，q1，q2}。</li>
+</ol>
+<p><strong>构造与 DFA 等价的正则文法 RG</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655295192637.png" alt="" loading="lazy"><br>
+<code>注</code> 当某一状态 qi 是终止状态时（状态转移图表现为两个套在一起的圆），如 q0 →（0） q1，那么产生式不仅需要 q0 → 0q1，还需要 q0 → 0，因为0可能为该语的最后一位。</p>
+<p><strong>构造与正则文法 RG 等价的 DFA</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655379303621.png" alt="" loading="lazy"><br>
+<code>注</code> 需要单独设置一个终止状态 Z 来接受只含终极符的转移。</p>
+<p><strong>左线性文法 → FA （反过来）</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655295333056.png" alt="" loading="lazy"><br>
+<code>注</code> 和正则文法完全相反，可以先按 RG → DFA 构造一遍，然后箭头全部倒置，S 的位置变为 双圆环，Z 的位置变为单元环。</p>
+<p><strong>FA → 左线性文法</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1655382154334.png" alt="" loading="lazy"><br>
+<code>步骤</code></p>
+<ol>
+<li>根据 FA 先把 RG 构造出来。</li>
+<li>把单独的终极符加上一个终止状态 Z 变成 2Z。</li>
+<li>全体调转，例如 q2 → 2q3 变为  q3 → q2 2</li>
+<li>删除所有起始状态 q0 ，如 q1 → q0 0 变为  q1 → 0</li>
+</ol>
+<p><code>注意：</code></p>
+<ol>
+<li>起始状态前必须加 S→</li>
+<li>若某一状态 qi 只有指入的箭头没有指出的箭头，则盖状态为陷阱状态，可以删除不考虑。</li>
+<li>当自动机以正闭包（+）呈现时必须以空串ɛ开始，以克林闭包（*）呈现时不用。因为一个自动机必须以空串开始，而正闭包中不含空串。</li>
+<li>当由 RG → FA 时，需要自己设置一个终止状态Z，用于接收A→1 | 1C 这样的产生式；相反的，左线性文法构造FA时，需要自己设置一个开始状态Z，同样，产生式箭头也和RG相反，例如，A→1 | C1 , 意思时，由开始状态Z读入1跳转到状态A，由状态C读入一个1跳转到状态A。</li>
+</ol>
+<h1 id="正则表达式">正则表达式</h1>
+<p>正则表达式（regular expression，RE）<br>
+形式定义：<br>
+前三条都是定义基本字符串，Ø 为空集，ɛ 为空字符串，a 为任意字符。<br>
+第四条说的是前三条的元素根据第四条的运算可以形成正则表达式。<br>
+第一种运算 (r+s) 是集合的并集。<br>
+第二种运算 (rs) 是指 r 和 s 串的连接<br>
+第三种是克林闭包，(r*) = ( r0+r1+r2+….. )<br>
+<code>注</code> 正则表达式必须加括号<br>
+正则表达式RE r ，记作L(r)，也是一种语言，是一个集合，也可直接记作r</p>
+<p>注：Ø的零次幂是 ɛ</p>
+<p><strong>RE → FA</strong><br>
+记住下面几个基本元素，拼接即可<br>
+<img src="https://jeromezjl.github.io/post-images/1655391708163.png" alt="" loading="lazy"></p>
+<p><strong>正则语言 RL / DFA → RE</strong></p>
+<ol>
+<li>先增加两个状态，一个起始状态 X 一个终止状态 Y ，为了终止状态唯一</li>
+<li>选取一个状态分析（最好是终止状态前一个状态，因为好分析），找出该状态的出度入度，分析是闭包运算，还是并集运算还是连接运算。然后用正则表达式替换<br>
+<code>注</code> 并弧用加号<br>
+<img src="https://jeromezjl.github.io/post-images/1655393874197.png" alt="" loading="lazy"></li>
+</ol>
+<h1 id="正则语言的性质">正则语言的性质</h1>
+<p>如果一个语言是正则语言，那么一定满足泵引理，反之不成立。<br>
+正则语言的封闭性：经过运算还为正则语言</p>
+<p><strong>DFA 极小化</strong></p>
+<ol>
+<li>构造表格，如果有不可达状态则先删除，左边列是 1~n 下面行是 0~n-1</li>
+</ol>
+<h1 id="上下文无关语言">上下文无关语言</h1>
+<p>上下文无关文法：CFG</p>
+<p><strong>派生树：</strong> 一定是上下文无关文法 CFG 的派生树。<br>
+<img src="https://jeromezjl.github.io/post-images/1655469230531.png" alt="" loading="lazy"></p>
+<p>最左派生：从最左边开始替换，最右、随机同理。<br>
+派生树越靠近叶子节点（越在下面），优先级越高。<br>
+随机派生有多少种方式，就有多少种派生。计算派生时，找到派生树种所有的变量（ABC），计算所有变量的排列数，即为派生数。但是要注意固有顺序不能变。<br>
+<img src="https://jeromezjl.github.io/post-images/1655470345207.png" alt="" loading="lazy"><br>
+根据派生树写出原 CFG 直接看图就行。<br>
+<img src="https://jeromezjl.github.io/post-images/1655470533945.png" alt="" loading="lazy"></p>
+<p><strong>CFG 的化简</strong><br>
+<code>步骤</code></p>
+<ol>
+<li>删除无用符号</li>
+<li>删除 ɛ 产生式</li>
+<li>删除单一产生式（形如 A → B）</li>
+<li>再次出现无用符号时，再次删除无用符号</li>
+</ol>
+<p><code>例</code><br>
+<img src="https://jeromezjl.github.io/post-images/1655470845354.png" alt="" loading="lazy"><br>
+<code>去除 ɛ 产生式的例子</code><br>
+<img src="https://jeromezjl.github.io/post-images/1655471117714.png" alt="" loading="lazy"></p>
+<p><strong>乔姆斯基范式：</strong> CNF，形如 A → BC 、 A → a，在化为 CNF 前需先简化<br>
+<img src="https://jeromezjl.github.io/post-images/1655472152865.png" alt="" loading="lazy"><br>
+<strong>格雷巴赫范式：</strong> GNF，形如 A → a 、 A → aBCDE.... ，在化为 GNF 前需先简化<br>
+需要消除左递归，形如：A → Aβ<br>
+<img src="https://jeromezjl.github.io/post-images/1655476112225.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1655476340663.png" alt="" loading="lazy"></p>
+<p>若有把变量中的终极符用新变量替换<br>
+把多个变量逐步替换化为两个变量</p>
+<p>任何不含空串的CFG都能转化为CNF</p>
+<p>格雷巴赫范式：GNF<br>
+任何不含空串的CFG都能转化为CNF</p>
+<p>下推自动机：PDA 用于识别上下文无关文法</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Keras 浅入浅出]]></title>
+        <id>https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/</id>
+        <link href="https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/">
+        </link>
+        <updated>2022-06-04T04:22:26.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【计网】随记]]></title>
+        <id>https://jeromezjl.github.io/post/ji-wang-sui-ji/</id>
+        <link href="https://jeromezjl.github.io/post/ji-wang-sui-ji/">
+        </link>
+        <updated>2022-05-18T01:31:29.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/75a5822d0eec">traceroute：路由器追踪</a></p>
+<h1 id="网络层">网络层</h1>
+<p><strong>距离向量路由算法</strong><br>
+在网络中加入新的路由器时，用于对路由器下一条的更新，更新当前路由表。原则上满足到达下一网络的距离尽量短，距离相同时尽量不改动，同一下一跳改动则必改动的原则。<br>
+<a href="https://www.bilibili.com/video/BV1BJ41157rM/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站原理+题目讲解</a><br>
+<a href="https://www.bilibili.com/video/BV1C4411375y?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站做题步骤讲解</a></p>
+<p><strong>IP 地址 &amp; 子网掩码</strong><br>
+<a href="https://www.cnblogs.com/fzlsss/p/9678954.html">网络号，主机号，主机地址，网络地址，主机地址，子网号，子网地址 概念辨析</a><br>
+<a href="https://www.bilibili.com/video/BV1eV411J7Hv?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">子网掩码B站</a><br>
+IP 地址的主机号全为 0 表示网络号，全为 1 表示广播号<br>
+IP 地址和子网掩码都是一串 32 位的二进制数，二者一一对应。子网掩码为 1 的位对应 IP 地址中的网络号，为 0 的位对应 IP 地址中的主机号。注意，子网掩码肯定是由连续的 1 和连续的 0 组成的，因为网络号和主机号不能交叉。IP 和 子网掩码相与得到该网络的网络号（标识该网络的地址）<br>
+CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数是多少，如 172.16.0.0/16 表示有 16 位网络号，前 16 位称为网络前缀<br>
+<a href="https://zhuanlan.zhihu.com/p/85960091">总结</a></p>
+<p><strong>子网划分</strong><br>
+<a href="https://www.bilibili.com/video/BV1a84y1F72Z/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+假如某网络只需要 100 台主机，而主机号可以表示 200 台主机。我们不想对该 IP 进行浪费，将主机号再次进行划分，使用主机字节的前几位标记划分子网的网络号，其余位数用于表示主机地址。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【形式语言】python实现 ε-ΝFA -> DFA]]></title>
+        <id>https://jeromezjl.github.io/post/xing-shi-yu-yan-python-shi-xian-e-nfa-greater-dfa/</id>
+        <link href="https://jeromezjl.github.io/post/xing-shi-yu-yan-python-shi-xian-e-nfa-greater-dfa/">
+        </link>
+        <updated>2022-05-16T03:46:03.000Z</updated>
+        <content type="html"><![CDATA[<p><code>参考资料</code><br>
+<a href="http://www.srcmini.com/7313.html">自动机从ε NFA到DFA的转换</a></p>
+<p>Step1<br>
+构建ε闭包</p>
+<p><strong>输入</strong></p>
+<pre><code class="language-python">
+</code></pre>
+<pre><code class="language-python"># ε-ΝFA -&gt; DFA
+import re  # 引入正则表达式模块
+
+# 打开文件
+with open(r'.\ΝFA1.txt', encoding='utf-8') as file:  # 第一例
+# with open(r'.\ΝFA2.txt', encoding='utf-8') as file:  # 第二例
+    lines = file.readlines()  # 按行读取文件
+    # for line in lines:  # 展示文件
+    #     print(line, end='')
+
+# 创建全局字典，为后面函数所用
+e_closure = {}  # 创建空状态转移字典（ε闭包）
+state_closure = {}  # 创建状态转移字典，用于保存原状态转移函数
+
+
+# 创建每一个状态的ε闭包
+def Closure():  # 定义e闭包函数
+    p1 = re.compile(r&quot;[{](.*?)[}]&quot;, re.S)  # 正则表达式匹配大括号中状态
+
+    # ————————————先单独处理第一行，因为带有起始符#————————————
+    linelist0 = lines[1].split()  # 将一行解析为列表形式
+    # 求第一行的状态转移函数，并保存
+    state_closure[linelist0[0][1:3] + '0'] = linelist0[1][1:-1].split()
+    state_closure[linelist0[0][1:3] + '1'] = linelist0[2][1:-1].split()
+
+    trdstate = str(re.findall(p1, linelist0[3]))  # third state 用于保存e转移的所有状态
+    if trdstate == &quot;['']&quot;:  # 如果e转移为空
+        e_closure[linelist0[0][1:3]] = [linelist0[0][1:3]]  # 那么e闭包只包含当前状态
+    else:
+        string1 = [linelist0[0][1:3]]
+        for i in trdstate[2:-2].split(','):
+            string1.append(i)
+        for j in range(2, len(lines)):  # 遍历当前行下面每一行的e转移
+            linelist01 = lines[j].split()
+            trdstate = str(re.findall(p1, linelist01[3]))  # third state 用于保存e转移的所有状态
+            if trdstate == &quot;['']&quot;:  # 如果e转移为空
+                break
+            string1.append(trdstate[2:-2])
+        e_closure[linelist0[0][1:3]] = string1
+
+    # ————————————遍历中间行————————————
+    for i in range(2, len(lines) - 1):
+        linelist = lines[i].split()  # 将一行解析为列表形式
+        # 求状态转移函数
+        state_closure[linelist[0] + '0'] = linelist[1][1:-1].split()
+        state_closure[linelist[0] + '1'] = linelist[2][1:-1].split()
+
+        trdstate = str(re.findall(p1, linelist[3]))  # third state 用于保存e转移的所有状态
+        if trdstate == &quot;['']&quot;:  # 如果e转移为空
+            e_closure[linelist[0]] = [linelist[0]]  # 那么e闭包只包含当前状态
+        else:
+            string1 = [linelist[0], trdstate[2:-2]]
+            for j in range(i + 1, len(lines)):  # 遍历当前行下面每一行的e转移
+                linelist01 = lines[j].split()
+                trdstate = str(re.findall(p1, linelist01[3]))  # third state 用于保存e转移的所有状态
+                if trdstate == &quot;['']&quot;:  # 如果e转移为空
+                    break
+                string1.append(trdstate[2:-2])
+            e_closure[linelist[0]] = string1
+
+    # ————————————单独处理最后一行，因为带有终止符*————————————
+    i = len(lines) - 1
+    linelisti = lines[i].split()  # 将一行解析为列表形式
+    # 求状态转移函数
+    state_closure[linelisti[0][1:3] + '0'] = linelisti[1][1:-1].split()
+    state_closure[linelisti[0][1:3] + '1'] = linelisti[2][1:-1].split()
+
+    trdstate = str(re.findall(p1, linelisti[3]))  # third state 用于保存e转移的所有状态
+    if trdstate == &quot;['']&quot;:  # 如果e转移为空
+        e_closure[linelisti[0][1:3]] = [linelisti[0][1:3]]  # 那么e闭包只包含当前状态
+    else:
+        e_closure[linelisti[0][1:3]] = [linelisti[0][1:3], trdstate[2:-2]]
+
+    return e_closure, state_closure  # 返回元组，0号元素为e闭包，1号元素为状态转移字典
+
+
+# 构造新状态列表
+def New_state_closure():
+    q = []  # 创建新状态列表
+    # ————————————处理第一个状态————————————
+    q.append(e_closure['q0'])  # 第一个状态设置为q0的ε闭包
+
+    l0 = []  # 创建input为0时的状态列表
+    l1 = []  # 创建input为1时的状态列表
+    for state in e_closure['q0']:  # 遍历第一个新状态的子状态
+        for i in state_closure.keys():  # 遍历子状态转移集
+            if i == state + '0' and state_closure[i] != []:  # 如果为当前状态，且input = '0'，并排除空集
+                l0 += state_closure[i]  # 保存状态
+            if i == state + '1' and state_closure[i] != []:
+                l1 += state_closure[i]
+
+    # 将新状态分情况保存在新状态列表
+    if l0 == [] and l1 != []:
+        q.append([])
+        q.append(e_closure[l1[0]])
+    elif l0 != [] and l1 == []:
+        q.append(e_closure[l0[0]])
+        q.append([])
+    elif l0 == [] and l1 == []:
+        q.append([])
+        q.append([])
+    else:
+        q.append(e_closure[l0[0]])  # 保存的为其ε闭包
+        q.append(e_closure[l1[0]])
+
+    # ————————————处理其余状态————————————
+    n = 1  # 从状态列表q中第一个元素开始遍历
+    chongfu = 0  # 重复判定初始为0（不重复）
+    while True:
+        l0 = []  # 创建input为0时的状态列表
+        l1 = []  # 创建input为1时的状态列表
+        if n != 1:
+            for i in range(1, n):  # 判断前面是否有该状态
+                if q[n] == q[i]:
+                    chongfu = 1  # 重复
+                    break
+                else:
+                    chongfu = 0  # 不重复
+        if q[n] == [] or chongfu:  # 如果该状态为空集或重复
+            if len(q) == n + 1:  # 如果列表结束
+                return q  # ~~~~~~~~~~~~函数结束，返回新状态列表~~~~~~~~~~~~
+            else:  # 则跳到下一状态
+                n += 1
+
+        else:  # 继续更新新状态列表
+            for state in q[n]:  # 遍历第n个新状态的子状态
+                for i in state_closure.keys():  # 遍历子状态转移集
+                    if i == state + '0' and state_closure[i] != []:  # 如果为当前状态，且input = '0'，并排除空集
+                        l0 += state_closure[i]  # 保存状态
+                    if i == state + '1' and state_closure[i] != []:
+                        l1 += state_closure[i]
+
+            if l0 == [] and l1 != []:
+                q.append([])
+                q.append(e_closure[l1[0]])
+            elif l0 != [] and l1 == []:
+                q.append(e_closure[l0[0]])
+                q.append([])
+            elif l0 == [] and l1 == []:
+                q.append([])
+                q.append([])
+            else:
+                q.append(e_closure[l0[0]])
+                q.append(e_closure[l1[0]])
+            n += 1
+
+# 格式化输出新状态列表
+def Print_New_state(Q):
+    # 重命名
+    record = []  # 记录列表，用于保存已经重新命名的元素
+    n = 1
+    i = 1
+    while True:
+        if (f'q{n}' not in record) and (Q[i] not in record):
+            now = Q[i]
+            if now == []:
+                Q[i] = ''
+                i += 1
+                if i == len(Q):
+                    break
+            else:
+                for j in range(i, len(Q)):
+                    if Q[j] == now:
+                        Q[j] = f'q{n}'
+                record.append(f'q{n}')
+                n += 1
+                i += 1
+        else:
+            i += 1
+            if i == len(Q):
+                break
+    for i in range(1, len(Q)):  # 加括号
+        Q[i] = '{' + Q[i] + '}'
+
+    # 按格式输出
+    print('0 1 epsilon')
+    for i in range(1, len(Q), 2):
+        if i == 1:
+            print('#q0 %s %s' % (Q[i], Q[i + 1]))
+        elif i == len(Q) - 2:
+            print('*q%s %s %s' % (i - 3, Q[i], Q[i + 1]))
+        else:
+            print('q%s %s %s' % (i - 2, Q[i], Q[i + 1]))
+
+
+if __name__ == '__main__':
+    closures = Closure()
+    # print(Closure())  # 展示e闭包和状态转移字典
+    Q = New_state_closure()
+    # print(Q)  # 展示新状态列表Q
+    Print_New_state(Q)
+
+</code></pre>
+<h1 id="经验总结">经验总结：</h1>
+<p>先把所有要点都明确之后再搞，要不全是bug<br>
+先用伪代码在pycharm里写一遍<br>
+可以用思维导图解释算法流程</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【计网】可靠运输协议编程实验]]></title>
+        <id>https://jeromezjl.github.io/post/ji-wang-bian-cheng-shi-yan/</id>
+        <link href="https://jeromezjl.github.io/post/ji-wang-bian-cheng-shi-yan/">
+        </link>
+        <updated>2022-05-13T02:47:14.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://m653uatd6t.feishu.cn/docs/doccn1134QQsBECAj32x7hzIndf">要求文档</a><br>
+<a href="https://blog.csdn.net/qq_37500516/article/details/120149101">参考博客</a><br>
+<a href="https://blog.csdn.net/qq_33690566/article/details/105415681">可靠传输协议</a></p>
+<h1 id="gbn协议">GBN协议</h1>
+<p><a href="https://www.bilibili.com/video/BV1fU4y1h7Sw?spm_id_from=333.337.search-card.all.click">b站讲解</a><br>
+<a href="https://github.com/fung30678/GBN-Simulator">参考代码</a></p>
+<h1 id="rdt-30比特交替协议alternating-bit-protocol">Rdt 3.0：比特交替协议(alternating-bit protocol)</h1>
+<h1 id="环境配置">环境配置</h1>
+<p>本实验采用c语言实现，用 Visual Studio，我想要在一个项目中用多个源文件来调试不同的子文件（多个 main 函数）遇到的问题：<br>
+1、不能正确创建源文件<br>
+2、不能正确运行源文件<br>
+<strong>解决方案：</strong><br>
+<a href="https://blog.csdn.net/weixin_39886612/article/details/117056754">创建源文件</a><br>
+<a href="https://blog.csdn.net/qq_30815237/article/details/87452311">分别运行各个文件</a><br>
+同时注意，若创建空项目，是不可以直接运行的。而创建控制台文件可以直接运行，也可以后续添加源文件。</p>
+<h1 id="调试">调试</h1>
+<p>使用 vs 调试时不能直接在 shell 中输入参数，需要在运行前设置参数，要在命令参数中设置好各个参数<br>
+<a href="https://blog.csdn.net/u012750702/article/details/51508214#:~:text=%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E5%9C%A8VS%E4%B8%AD%E5%90%91%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%B7%BB%E5%8A%A0%E5%8F%82%E6%95%B0%EF%BC%8C%E5%8D%B3%E5%90%91main%28%29%E5%87%BD%E6%95%B0%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A%E5%8F%B3%E9%94%AE%E5%8D%95%E5%87%BB%E8%A6%81,%E6%B7%BB%E5%8A%A0%E5%8F%82%E6%95%B0%E7%9A%84%E5%B7%A5%E7%A8%8B%E2%80%93%3E%E5%B1%9E%E6%80%A7%E2%80%93%3E%E9%85%8D%E7%BD%AE%E5%B1%9E%E6%80%A7%E2%80%93%3E%E8%B0%83%E8%AF%95%EF%BC%8C%E5%9C%A8%E5%8F%B3%E4%BE%A7%E2%80%9C%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E2%80%9D%E6%A0%8F%E8%BE%93%E5%85%A5%E8%A6%81%E6%B7%BB%E5%8A%A0%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E5%90%84%E5%8F%82%E6%95%B0%E9%97%B4%E7%94%A8%E7%A9%BA%E6%A0%BC%E5%88%86%E7%A6%BB">VS 传参</a></p>
+<h1 id="遇到的c语言问题">遇到的C语言问题</h1>
+<p><a href="https://blog.csdn.net/qq_36020968/article/details/72805661">向函数传入结构体</a><br>
+在函数中定义的变量为局部变量</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】人工神经网络]]></title>
+        <id>https://jeromezjl.github.io/post/ml-bp-shen-jing-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/ml-bp-shen-jing-wang-luo/">
+        </link>
+        <updated>2022-05-04T04:42:14.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39441762/article/details/80446692?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;utm_relevant_index=2">介绍1</a></p>
+<h1 id="sklearn-相关实现sklearnneural_network">sklearn 相关实现——sklearn.neural_network</h1>
+<p><a href="https://www.weixueyuan.net/a/913.html">MLPClassifier分类演示</a><br>
+<a href="https://scikit-learn.org.cn/view/713.html">MLPClassifier参数</a><br>
+<a href="https://scikit-learn.org.cn/view/714.html">MLPRegressor参数</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Surfing]]></title>
+        <id>https://jeromezjl.github.io/post/surfing/</id>
+        <link href="https://jeromezjl.github.io/post/surfing/">
+        </link>
+        <updated>2022-05-01T12:46:13.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://edurank.org/uni/beijing-university-of-posts-and-telecommunications/rankings/">来点鸡血</a></p>
+<p><a href="https://www.zhihu.com/question/20824615">如何优雅地使用 Stack Overflow？</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[说，都可以说]]></title>
+        <id>https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/</id>
+        <link href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/">
+        </link>
+        <updated>2022-05-01T10:56:19.000Z</updated>
+        <content type="html"><![CDATA[<p>https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;tid=178940</p>
+<p>https://bbs.pediy.com/thread-202110.htm</p>
+<p><a href="https://www.zhihu.com/question/345269352">网警是怎么在线下抓住造谣者的？</a></p>
+<p><a href="https://ssrshare.github.io/2019/04/07/tor/">洋葱路由</a><br>
+<a href="https://zhuanlan.zhihu.com/p/71805955">洋葱路由1</a></p>
+<p><a href="https://program-think.blogspot.com/">编程随想</a></p>
+<p><a href="https://pincong.rocks/article/32003">简谈网警是怎么找到海外网站发帖之人的</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Pandas】每天一点 Pandas]]></title>
         <id>https://jeromezjl.github.io/post/pandas-mei-tian-yi-dian-pandas/</id>
@@ -24,158 +571,6 @@
 <a href="https://blog.csdn.net/jhr112/article/details/115631246">pandas 数据清洗：drop() del() 等</a><br>
 <a href="https://blog.csdn.net/walking_visitor/article/details/85128461">相关系数 (correlation coefficient) 函数 corr()</a><br>
 <a href="https://www.jianshu.com/p/9dec47bac5b9">corr() 的三个相关系数：Pearson相关、Spearman相关、Kendall相关</a><a href="https://www.biaodianfu.com/pearson-kendall-spearman.html#Scipy%E7%9A%84pearsonr%E6%96%B9%E6%B3%95">；另一篇</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】谁的 Python 学的不扎实？]]></title>
-        <id>https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi/</id>
-        <link href="https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi/">
-        </link>
-        <updated>2022-04-28T08:01:32.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39700394/article/details/111418838">浮点数格式化输出</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Android】]]></title>
-        <id>https://jeromezjl.github.io/post/android/</id>
-        <link href="https://jeromezjl.github.io/post/android/">
-        </link>
-        <updated>2022-04-26T02:24:09.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="root">Root</h1>
-<p>安卓手机最高权限，可以修改系统设置，卸载系统自带软件。有些手机自带 root，有些需要手动获取 root</p>
-<h1 id="adb">ADB</h1>
-<p>安卓调试桥梁，连接电脑时会需要ADB</p>
-<h1 id="安卓神器软件分享">安卓神器软件分享</h1>
-<p>黑域：省电管控<br>
-Tasker：手机自动化<br>
-<a href="https://taskerm.com/?p=218">Tasker良心博客分享</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【数据结构】课设1：头插法构造链表]]></title>
-        <id>https://jeromezjl.github.io/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/</id>
-        <link href="https://jeromezjl.github.io/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/">
-        </link>
-        <updated>2022-04-25T10:13:14.000Z</updated>
-        <content type="html"><![CDATA[<pre><code class="language-python">class Node():  # 定义节点类
-    def __init__(self, item):  # 初始化数据
-        self.item = item  # 把数据存入节点
-        self.next = None  # 默认next节点为None
-
-# 注意，传入的数据形式为列表，可一次性插入多个数据
-def creat_head(datalist, linklist):  # 分别传入要插入的数据列表，和非空单链表
-    head_node = Node(datalist[0])  # 定义头节点，把datalist的第一个元素赋给头节点
-    head_node.next = linklist  # 把该节点连接在链表最开头
-    for data in datalist[1:]:  # 遍历剩余数据
-        node = Node(data)  # 创建新节点
-        node.next = head_node  # 把新节点插在头节点的前面
-        head_node = node  # 把新节点命名为头节点，以便重复上述操作
-    return head_node  # 返回改链表的首地址，从而可遍历展示该链表
-
-def print_linklist(current_node):  # 打印链表（传入头节点）
-    while current_node:  # 当前节点非空时
-        print(current_node.item, end = ' ')  # 打印链表节点的数据元素
-        current_node = current_node.next  # 移动指针，重复循环
-
-# 下面用最朴素的方法创建一个非空单链表
-a = Node(1)  # 创建一个独立节点
-a.next = Node(2)  # 在a后连接新节点
-a.next.next = Node(3)  # 连接新节点
-print_linklist(a)  # 展示该链表 （ 1 2 3 ）
-
-print('\n')
-
-linklist1 = creat_head([8,7,6], a)  # 头插法把该列表插入a链表
-print_linklist(linklist1)  # 展示链表
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Seaborn】数据可视化]]></title>
-        <id>https://jeromezjl.github.io/post/seaborn-shu-ju-ke-shi-hua/</id>
-        <link href="https://jeromezjl.github.io/post/seaborn-shu-ju-ke-shi-hua/">
-        </link>
-        <updated>2022-04-23T06:03:03.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/98729226">pairplot()：展示数据集变量之间的关系</a><br>
-<a href="https://www.cnblogs.com/cymx66688/p/10536403.html">sns.countplot()：柱状图显示</a><br>
-<a href="https://zhuanlan.zhihu.com/p/96040773?from_voters_page=true">sns.heatmap()：显示变量之间相关系数矩阵</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ML】核函数]]></title>
-        <id>https://jeromezjl.github.io/post/ml-he-han-shu/</id>
-        <link href="https://jeromezjl.github.io/post/ml-he-han-shu/">
-        </link>
-        <updated>2022-04-23T05:07:10.000Z</updated>
-        <content type="html"><![CDATA[<p>将低维数据映射到高维，从而对数据进行分类。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【sklearn】每天一点 sklearn]]></title>
-        <id>https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn/</id>
-        <link href="https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn/">
-        </link>
-        <updated>2022-04-21T14:26:40.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://scikit-learn.org.cn/">sklearn中文社区1</a><br>
-<a href="https://sklearn.apachecn.org/#/">sklearn中文社区2</a><br>
-<a href="https://blog.csdn.net/algorithmPro/article/details/103045824">超详细入门</a></p>
-<h1 id="案例">案例</h1>
-<p><a href="https://blog.csdn.net/admin11111111/article/details/116570878">鸢尾花svm</a><br>
-<a href="https://blog.csdn.net/Together_CZ/article/details/78697664?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-1.pc_relevant_aa&amp;spm=1001.2101.3001.4242.2&amp;utm_relevant_index=4">鸢尾花2</a><br>
-<a href="https://cxymm.net/article/qianyunzzz/122885761">乳腺癌svm，from UCI</a></p>
-<h1 id="数据集">数据集</h1>
-<p><a href="http://archive.ics.uci.edu/">UCI数据集</a><br>
-<a href="https://blog.csdn.net/weixin_40583722/article/details/121800784">UCI使用教程（注意看文章里面的链接）</a><br>
-数据集页面后缀为 .data .csv 的为数据集，剩余的文件均为数据集信息</p>
-<h1 id="sklearn项目一般步骤">sklearn项目一般步骤：</h1>
-<p><strong>读入数据：</strong><br>
-<a href="https://blog.csdn.net/xizi_ghq/article/details/108660671">datasets 详解</a><br>
-<a href="https://blog.csdn.net/tcy23456/article/details/106388651/?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.pc_relevant_default&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">数据集文件读取的几种方式</a><br>
-<a href="https://www.jianshu.com/p/29af03788ff6">数据集文件读取的几种方式2</a><br>
-<a href="https://www.jianshu.com/p/4dfe5ce3bda9">利用urllib直接网络读入</a><br>
-<a href="https://www.cnblogs.com/zyj3955/p/15414382.html">鸢尾花的导入与划分</a></p>
-<p><code>导入的UCI的数据的表头（ names 列表）如何确定？</code></p>
-<pre><code class="language-python">一般都在UCI主页的 Attribute Information 中列出来了，可以直接对应其表头。
-个别数据集，比如乳腺癌数据集，3种癌细胞每个有10个特征，需要自行对三种癌细胞进行命名/编号
-这就需要对数据集的信息进行分析，观察数据特征，分析其含义，给出适合的 names
-</code></pre>
-<p><strong>特征工程</strong><br>
-<a href="https://www.jianshu.com/p/29af03788ff6">sklearn-pandas 示例</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【matplotlib】每天一点 matplotlib 用法]]></title>
-        <id>https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/</id>
-        <link href="https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/">
-        </link>
-        <updated>2022-04-21T06:42:08.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="http://c.biancheng.net/matplotlib/">详细教程</a><br>
-<a href="https://www.runoob.com/w3cnote/matplotlib-tutorial.html">简易教程</a><br>
-<a href="https://zhuanlan.zhihu.com/p/258106097">plt.plot()</a><br>
-<a href="https://blog.csdn.net/m0_37362454/article/details/81511427">plt.figure()：设置图像参数</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Numpy】每天一点 Numpy 小技巧]]></title>
-        <id>https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/</id>
-        <link href="https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/">
-        </link>
-        <updated>2022-04-21T06:32:18.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.zhihu.com/question/38353562#:~:text=Scipy%EF%BC%9A%20%E4%B8%80%E4%B8%AA%E7%94%A8%E4%BA%8E%E6%95%B0%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E3%80%81%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%84%E7%90%86%E6%8F%92%E5%80%BC%E3%80%81%E7%A7%AF%E5%88%86%E3%80%81%E4%BC%98%E5%8C%96%E3%80%81%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E3%80%81%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%95%B0%E5%80%BC%E8%A7%A3%E7%9A%84%E6%B1%82%E8%A7%A3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%AD%89%E9%97%AE%E9%A2%98%E3%80%82%20Pandas%EF%BC%9A,%E5%9F%BA%E4%BA%8E%20NumPy%20%E7%9A%84%E4%B8%80%E7%A7%8D%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%AF%A5%E5%B7%A5%E5%85%B7%E6%98%AF%E4%B8%BA%E4%BA%86%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1%E8%80%8C%E5%88%9B%E5%BB%BA%E7%9A%84%E3%80%82">numpy，scipy，pandas这些库的区别是什么？</a><br>
-<a href="https://blog.csdn.net/qq_39072607/article/details/89321495">np.zeros：用于生成全 0 的数组</a><br>
-<a href="https://blog.csdn.net/qq_41800366/article/details/86589680">np.arange()：生成序列（等差数列）</a><br>
-<a href="https://www.w3cschool.cn/article/54960412.html">np.linspace()：当要生成浮点数序列时，用该函数代替arange()，来保证精度</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[手机自动化操作的一些探索]]></title>
-        <id>https://jeromezjl.github.io/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/</id>
-        <link href="https://jeromezjl.github.io/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/">
-        </link>
-        <updated>2022-04-21T05:58:50.000Z</updated>
-        <content type="html"><![CDATA[<p>tasker<br>
-自动精灵（操作简单，适合简易任务<br>
-Hamibot 需要js</p>
 ]]></content>
     </entry>
 </feed>
