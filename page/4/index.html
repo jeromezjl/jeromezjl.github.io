@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1655480726768">
+<link rel="shortcut icon" href="/favicon.ico?v=1655643948127">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -75,6 +75,8 @@
             </a>  
           
         </div>
+        
+          <p class="subtitle">精于心，简于形</p>
         
       </div>
       <nav class="site-nav" id="site_nav">
@@ -195,7 +197,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">38</span>
+        <span class="site-item-stat-count">37</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -257,94 +259,6 @@
         <div class="section-box gemini">
           <section class="section  posts-expand slide-down-in">
             
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <section class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/ji-zu-qian-ji/"> 计组浅记 </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-03-17 21:22:05">2022-03-17</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">标签:</span>
-       
-      <a href="https://jeromezjl.github.io/tag/1Wj09CS_1/">
-        <span>计组</span>
-      </a>
-       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span
-        >1<span class="language" data-lan="minute"
-          >分钟</span
-        ></span
-      >
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span
-        >198<span class="pc-show language" data-lan="words"
-          >字数</span
-        ></span
-      >
-    </span>
-    
-  </div>
-</section>
-
-      <div class="post-body">
-        
-        
-          
-            <!-- 没有手动摘要切开启了自动摘要,则根据配置筛除摘要内容 -->
-            
-            
-              
-              
-              
-            
-              
-              
-              
-            
-              
-              
-              
-            
-            
-              <p><h1 id="思维导图">思维导图</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/98226508">https://zhuanlan.zhihu.com/p/98226508</a><br>
-<a href="https://blog.csdn.net/weixin_47423314/article/details/114875087">https://blog.csdn.net/weixin_47423314/article/details/114875087</a><br>
-
-                
-              <p>
-            
-          
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://jeromezjl.github.io/post/ji-zu-qian-ji/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
   <article class="post-list-box  post box-shadow-wrapper">
     <div class="article-wrapper bg-color">
       <section class="post-header">
@@ -965,7 +879,7 @@
       }
     </script>
     <div class="poweredby">
-      <a href="https://space.bilibili.com/430199065?spm_id_from=333.1007.0.0" target="_blank">Jerome</a>
+      <a href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/" target="_blank">Jerome</a>
     </div>
   </footer>
   
@@ -1206,11 +1120,59 @@
           &lt;p&gt;本笔记对应教材为《计算机网络自顶向下方法》&lt;/p&gt;
 &lt;h1 id=&#34;第一章-概述&#34;&gt;第一章 概述&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;计算机网络协议分层&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;计算机网络服务模型&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;性能评价 （延迟，丢包，吞吐量）&lt;/strong&gt;&lt;/p&gt;
+OSI 七层模型&lt;br&gt;
+&lt;strong&gt;应用层&lt;/strong&gt;  指网络操作系统和具体的应用程序，对应WWW服务器、FTP服务器等应用软件&lt;br&gt;
+&lt;strong&gt;表示层&lt;/strong&gt;  数据语法的转换、数据的传送等&lt;br&gt;
+&lt;strong&gt;会话层&lt;/strong&gt;  建立起两端之间的会话关系，并负责数据的传送&lt;br&gt;
+&lt;strong&gt;传输层&lt;/strong&gt;  负责错误的检查与修复，以确保传送的质量，是TCP工作的地方。（报文）&lt;br&gt;
+&lt;strong&gt;网络层&lt;/strong&gt;  提供了编址方案,IP协议工作的地方(数据包）&lt;br&gt;
+&lt;strong&gt;数据链路层&lt;/strong&gt;  将由物理层传来的未经处理的位数据包装成数据帧&lt;br&gt;
+&lt;strong&gt;物理层&lt;/strong&gt;  对应网线、网卡、接口等物理设备(位)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算机网络服务模型&lt;/strong&gt;&lt;br&gt;
+TCP/IP 五层模型&lt;br&gt;
+&lt;strong&gt;应用层&lt;/strong&gt;  通过应用进程间交互完成特定的互联网应用，定义应用进程之间通信和交互的规则&lt;br&gt;
+&lt;strong&gt;传输层&lt;/strong&gt;  进程之间通信的通用数据传输服务&lt;br&gt;
+&lt;strong&gt;网络层&lt;/strong&gt;  网络中不同主机提供通信服务&lt;br&gt;
+&lt;strong&gt;数据链路层&lt;/strong&gt;  两个相邻网络结点之间传送数据&lt;br&gt;
+&lt;strong&gt;物理层&lt;/strong&gt;  如何在传输媒介中传输比特流&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分层优缺点：&lt;/strong&gt; 分层提供了 一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易。分层的一个潜在缺点 是一层可能冗余较低层的功能。第二种潜在的缺点是某层的功能可能需要仅在其他某层才出现的 信息（如时间戳值），这违反了层次分离的目标。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电路交换和分组交换的优缺点&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;电路交换&lt;/code&gt;&lt;br&gt;
+优点：数据直接传送 ，时延小；保证数据有序性；稳定带宽、专用信道、一致的数据速率。&lt;br&gt;
+缺点：线路利用率低、不便于进行差错控制；建立物理链路需要时间、资金成本&lt;br&gt;
+&lt;code&gt;分组交换&lt;/code&gt;&lt;br&gt;
+优点：链接中的故障不会停止数据的传递；带宽利用率高；更简单、有效、成本更低&lt;br&gt;
+缺点：通信有延迟；会导致信息丢失；分组需要提供额外信息增加开销&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算机网络性能指标&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.jianshu.com/p/599c11874f24&#34;&gt;公式总结&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;传输时延、发送时延、处理时延：&lt;/strong&gt; 均指在发送端将比特流打包成分组的时间。&lt;br&gt;
+发送时延 = 数据帧长度 / 发送速率（信道带宽）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;传播时延：&lt;/strong&gt; 从发送端到接收端过程中消耗的时间&lt;br&gt;
+传播时延 = 信道长度 / 电磁波传播速度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;利用率：&lt;/strong&gt;  D：网络当前时延 D0：网络空闲的时延 U：信道利用率&lt;br&gt;
+当前信道利用率：D = D0 / （1 - U）  可见，信道利用率越大，时延越大（包多时延大）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时延带宽积：&lt;/strong&gt; 传播时延 x 带宽&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;吞吐量：&lt;/strong&gt; 单位时间内通过某个网络的实际的数据量&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;第二章-应用层&#34;&gt;第二章 应用层&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;HTTP协议工作模式&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;HTTP cookie, cache&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;P2P 和 C/S 模式计算题&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;题目1&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;考虑向N个对等方发F=15Gb的一个文件。该服务器具有us=30Mbps的上载速率，每个对等方具有di=1Mbps的下载速率和上载速率u。对于N=10、100和1000并且u=300kps、700kps和2Mbps，对于N和u的每种组合绘制出确定最小分发时间的图表。需要分别针对客户-服务器分发和P2P分发两种情况制作。&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;在计算C-S分发的最小分发时间时，我们使用以下公式：
+Dcs=max{NF/us,F/di}  服务器分发前需要先将数据上载，取服务器上载和各链路下载速率的最大值
+其中F=15Gb=15*1000Mb
+us=30Mbps，dmin=di=1Mbps
+注意，300 Kbps=300/1000 Mbps
+在计算P2P分发的最小分发时间时，我们使用以下公式：
+Dp2p=max{F/us,F/di,NF/(us+∑ui)}
+其中F=15Gb=15*1000Mb
+us=30Mbps，di=di=1Mbps
+注意，300 Kbps=300/1000 Mbps
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;HTTP&lt;/strong&gt;&lt;br&gt;
+超文本传输协议 HTTP 使用 TCP 连接进行可靠传输，定义了在浏览器和服务器之间的请求和响应的格式与规则。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTTP cookie, cache&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;DNS&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第三章-传输层-运输层&#34;&gt;第三章 传输层 / 运输层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;可靠性 RDT&lt;/strong&gt;&lt;br&gt;
@@ -1264,14 +1226,24 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1655458843286.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第五章-数据链路层&#34;&gt;第五章 数据链路层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;DV算法&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;LS算法&lt;/strong&gt;&lt;/p&gt;
+&lt;code&gt;Dijkstra算法&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;画出表格，左边是已经确定的点，右边每个格包含两个数据，第一个是起始点到该点的距离，第二个是该点前一个点是什么&lt;/li&gt;
+&lt;li&gt;从第一个点 V1 出发，每次找和当前点相邻点的距离，将最短路径保存在各个点中&lt;/li&gt;
+&lt;li&gt;找到该行距离数最小的点，保存在左侧确定点部分&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655617989211.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;strong&gt;LS算法&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;Bellman-Ford算法&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;第六章-无线网络和移动网络&#34;&gt;第六章 无线网络和移动网络&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;随机接入协议&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;MAC地址， hop-by-hop&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第七章-多媒体网络&#34;&gt;第七章 多媒体网络&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;无线 vs 有线&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无线 vs 有线&lt;/strong&gt;&lt;br&gt;
+协议设计&lt;/p&gt;
 &lt;h1 id=&#34;第八章-计算机网络中的安全&#34;&gt;第八章 计算机网络中的安全&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;对称加密 vs. 非对称加密&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对称加密 vs. 非对称加密&lt;/strong&gt;&lt;br&gt;
+了解机制&lt;/p&gt;
 ">【计网】期末复习</a>
       </div>
       
@@ -1389,9 +1361,14 @@ q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对�
 &lt;h1 id=&#34;正则语言的性质&#34;&gt;正则语言的性质&lt;/h1&gt;
 &lt;p&gt;如果一个语言是正则语言，那么一定满足泵引理，反之不成立。&lt;br&gt;
 正则语言的封闭性：经过运算还为正则语言&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DFA 极小化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DFA 极小化&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;构造表格，如果有不可达状态则先删除，左边列是 1~n 下面行是 0~n-1&lt;/li&gt;
+&lt;li&gt;所有终点为一组，行列标上 x&lt;/li&gt;
+&lt;li&gt;任意找两个其他未标注的点，看两个点到终点的路径，分别看输入一个数，输入两个数，输入三个数后，是否相同，只要存在相同的路径，则两个点为不可区分，不用标注；无论怎么都找不到，则为可区分，标上 x。注意，不能走自环，只能走直路。&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655482140507.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655482151183.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;上下文无关语言&#34;&gt;上下文无关语言&lt;/h1&gt;
 &lt;p&gt;上下文无关文法：CFG&lt;/p&gt;
@@ -1414,19 +1391,99 @@ q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对�
 &lt;p&gt;&lt;code&gt;例&lt;/code&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1655470845354.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;去除 ɛ 产生式的例子&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655471117714.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655471117714.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+任何不含空串的CFG都能转化为 CNF / GNF&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;乔姆斯基范式：&lt;/strong&gt; CNF，形如 A → BC 、 A → a，在化为 CNF 前需先简化&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1655472152865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;strong&gt;格雷巴赫范式：&lt;/strong&gt; GNF，形如 A → a 、 A → aBCDE.... ，在化为 GNF 前需先简化&lt;br&gt;
 需要消除左递归，形如：A → Aβ&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1655476112225.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1655476340663.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;若有把变量中的终极符用新变量替换&lt;br&gt;
-把多个变量逐步替换化为两个变量&lt;/p&gt;
-&lt;p&gt;任何不含空串的CFG都能转化为CNF&lt;/p&gt;
-&lt;p&gt;格雷巴赫范式：GNF&lt;br&gt;
-任何不含空串的CFG都能转化为CNF&lt;/p&gt;
-&lt;p&gt;下推自动机：PDA 用于识别上下文无关文法&lt;/p&gt;
+&lt;h1 id=&#34;下推自动机-pda&#34;&gt;下推自动机 PDA&lt;/h1&gt;
+&lt;p&gt;PDA 是 ɛ-NFA 增加了一个栈&lt;br&gt;
+PDA 用于识别一个·句子是否满足上下文无关文法（识别上下文无关语言）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PDA 的构成：&lt;/strong&gt;&lt;br&gt;
+M = （Q ，∑，Γ，δ，q0，Z0，F）&lt;br&gt;
+Q ：状态的集合 {q0 q1 q2}&lt;br&gt;
+∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}&lt;br&gt;
+Γ：栈符号表，对应 CFG 中的变量 {S,A,B,C}&lt;br&gt;
+δ：状态转移函数，有两种格式，在下面给出&lt;br&gt;
+q0：起始状态&lt;br&gt;
+Z0：开始符号，开始时栈底的元素&lt;br&gt;
+F：终止状态集合{q1 q2 q3}，空栈接受时 F 为 Ø&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;状态转移函数 δ 的两种格式&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;常规转移&lt;/code&gt;&lt;br&gt;
+δ(q，a，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}&lt;br&gt;
+表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例1&lt;/strong&gt;&lt;br&gt;
+δ1(q0，1，S)={(q0，SB)}&lt;br&gt;
+在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例2&lt;/strong&gt;&lt;br&gt;
+δ1(q0，0，A)={(q0，ε)}&lt;br&gt;
+在状态 q0 时，读入 0 ，弹出栈顶元素 A ，转移到新状态 q0 ，将 ε 入栈&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ɛ 转移&lt;/code&gt;&lt;br&gt;
+δ(q，ɛ，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}&lt;br&gt;
+表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;br&gt;
+δ2(q0，ε，Z)={(q1，ε)}&lt;br&gt;
+在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;构造 PDA&lt;/strong&gt;&lt;br&gt;
+CFG → PDA&lt;br&gt;
+&lt;code&gt;空栈接受&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;化为 CFG&lt;/li&gt;
+&lt;li&gt;CFG → GNF&lt;/li&gt;
+&lt;li&gt;写出 GNF 的最左派生，注明 PDA 转移函数要做的动作&lt;/li&gt;
+&lt;li&gt;写出 PDA&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655535184644.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655535222307.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655535227819.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;终态接受&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;和空栈接受对比：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;符号的添加：&lt;br&gt;
+添加一个开始符号 Z0、一个栈底符号 Z 、一个终止状态 q1&lt;br&gt;
+从 Z0 开始，弹出 Z0，把 Z 压入栈底，当栈内只剩 Z 时，跳转到 q1 终止状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;转移函数的添加：&lt;br&gt;
+原状态转移函数都不变，找到原栈底元素的转移函数，这里是含有 S 的三个转移函数，把 S 改为新定义的栈底符号 Z0，在右边入栈中加上新的栈底元素 Z 。对于右边是 ε 的转移，只改动 Z0，ε 不变。&lt;br&gt;
+此外，还需在最后添加遇到 Z 转移到 q1 的转移函数。&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655536498042.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;空栈接受的 PDA → 终态接受的 PDA （二者等价）&lt;/p&gt;
+&lt;p&gt;CFG → 空栈接受的 PDA&lt;/p&gt;
+&lt;h1 id=&#34;图灵机-tm&#34;&gt;图灵机 TM&lt;/h1&gt;
+&lt;p&gt;M=(Q, ∑, Γ, δ,q0 , B, F)&lt;br&gt;
+Q ：状态的集合 {q0 q1 q2}&lt;br&gt;
+∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}&lt;br&gt;
+Γ：带符号表，对应 CFG 中的变量 {S,A,B,C}&lt;br&gt;
+δ：状态转移函数，有两种格式，在下面给出&lt;br&gt;
+q0：起始状态&lt;br&gt;
+B：空白符&lt;br&gt;
+F：终止状态集合{q1 q2 q3}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;状态转移函数 δ 的两种格式&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;右移&lt;/code&gt;&lt;br&gt;
+δ(q，X)=(p，Y，R)&lt;br&gt;
+表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头右移一格&lt;br&gt;
+&lt;code&gt;左移&lt;/code&gt;&lt;br&gt;
+δ(q，X)=(p，Y，L)&lt;br&gt;
+表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头左移一格&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;图灵机接受的语言&lt;/strong&gt;&lt;br&gt;
+若可接受：停机+接受&lt;br&gt;
+若不可接受：停机+拒绝 / 永不停机&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655562933815.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655562939698.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655562944073.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;构造图灵机&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;把要识别的句子模拟写在纸带上&lt;/li&gt;
+&lt;li&gt;逐渐向右移动，观察能否用替换（标记）等方式识别走过的路&lt;/li&gt;
+&lt;li&gt;设置好不同的状态，不同的输入，列出表格&lt;/li&gt;
+&lt;/ol&gt;
 ">《形式语言与自动机》笔记</a>
       </div>
       
@@ -1711,7 +1768,8 @@ if __name__ == &#39;__main__&#39;:
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/"" data-c="
-          &lt;p&gt;https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;amp;tid=178940&lt;/p&gt;
+          &lt;h1 id=&#34;欢迎来到博客隐藏部分&#34;&gt;欢迎来到博客隐藏部分&lt;/h1&gt;
+&lt;p&gt;https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;amp;tid=178940&lt;/p&gt;
 &lt;p&gt;https://bbs.pediy.com/thread-202110.htm&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/345269352&#34;&gt;网警是怎么在线下抓住造谣者的？&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://ssrshare.github.io/2019/04/07/tor/&#34;&gt;洋葱路由&lt;/a&gt;&lt;br&gt;
