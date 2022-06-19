@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1655641214383">
+<link rel="shortcut icon" href="/favicon.ico?v=1655480726768">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -75,8 +75,6 @@
             </a>  
           
         </div>
-        
-          <p class="subtitle">精于心，简于形</p>
         
       </div>
       <nav class="site-nav" id="site_nav">
@@ -197,7 +195,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">37</span>
+        <span class="site-item-stat-count">38</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -270,7 +268,7 @@
       
       
       
-      <a href="http://localhost:4000/post/ji-wang-qi-mo-fu-xi/">
+      <a href="https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/">
         <div class="motion-warpper">
           <div class="tag-post-node">
             <h1>
@@ -291,7 +289,7 @@
       
       
       
-      <a href="http://localhost:4000/post/ji-wang-sui-ji/">
+      <a href="https://jeromezjl.github.io/post/ji-wang-sui-ji/">
         <div class="motion-warpper">
           <div class="tag-post-node">
             <h1>
@@ -356,7 +354,7 @@
       
       
       
-      <a href="http://localhost:4000/post/ji-wang-socket-bian-cheng-shi-yan/">
+      <a href="https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/">
         <div class="motion-warpper">
           <div class="tag-post-node">
             <h1>
@@ -444,7 +442,7 @@
       }
     </script>
     <div class="poweredby">
-      <a href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/" target="_blank">Jerome</a>
+      <a href="https://space.bilibili.com/430199065?spm_id_from=333.1007.0.0" target="_blank">Jerome</a>
     </div>
   </footer>
   
@@ -681,67 +679,20 @@
     <div class="result" id="result">
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ji-wang-qi-mo-fu-xi/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/"" data-c="
           &lt;p&gt;本笔记对应教材为《计算机网络自顶向下方法》&lt;/p&gt;
 &lt;h1 id=&#34;第一章-概述&#34;&gt;第一章 概述&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;计算机网络协议分层&lt;/strong&gt;&lt;br&gt;
-OSI 七层模型&lt;br&gt;
-&lt;strong&gt;应用层&lt;/strong&gt;  指网络操作系统和具体的应用程序，对应WWW服务器、FTP服务器等应用软件&lt;br&gt;
-&lt;strong&gt;表示层&lt;/strong&gt;  数据语法的转换、数据的传送等&lt;br&gt;
-&lt;strong&gt;会话层&lt;/strong&gt;  建立起两端之间的会话关系，并负责数据的传送&lt;br&gt;
-&lt;strong&gt;传输层&lt;/strong&gt;  负责错误的检查与修复，以确保传送的质量，是TCP工作的地方。（报文）&lt;br&gt;
-&lt;strong&gt;网络层&lt;/strong&gt;  提供了编址方案,IP协议工作的地方(数据包）&lt;br&gt;
-&lt;strong&gt;数据链路层&lt;/strong&gt;  将由物理层传来的未经处理的位数据包装成数据帧&lt;br&gt;
-&lt;strong&gt;物理层&lt;/strong&gt;  对应网线、网卡、接口等物理设备(位)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;计算机网络服务模型&lt;/strong&gt;&lt;br&gt;
-TCP/IP 五层模型&lt;br&gt;
-&lt;strong&gt;应用层&lt;/strong&gt;  通过应用进程间交互完成特定的互联网应用，定义应用进程之间通信和交互的规则&lt;br&gt;
-&lt;strong&gt;传输层&lt;/strong&gt;  进程之间通信的通用数据传输服务&lt;br&gt;
-&lt;strong&gt;网络层&lt;/strong&gt;  网络中不同主机提供通信服务&lt;br&gt;
-&lt;strong&gt;数据链路层&lt;/strong&gt;  两个相邻网络结点之间传送数据&lt;br&gt;
-&lt;strong&gt;物理层&lt;/strong&gt;  如何在传输媒介中传输比特流&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;分层优缺点：&lt;/strong&gt; 分层提供了 一种结构化方式来讨论系统组件。模块化使更新系统组件更为容易。分层的一个潜在缺点 是一层可能冗余较低层的功能。第二种潜在的缺点是某层的功能可能需要仅在其他某层才出现的 信息（如时间戳值），这违反了层次分离的目标。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;电路交换和分组交换的优缺点&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;电路交换&lt;/code&gt;&lt;br&gt;
-优点：数据直接传送 ，时延小；保证数据有序性；稳定带宽、专用信道、一致的数据速率。&lt;br&gt;
-缺点：线路利用率低、不便于进行差错控制；建立物理链路需要时间、资金成本&lt;br&gt;
-&lt;code&gt;分组交换&lt;/code&gt;&lt;br&gt;
-优点：链接中的故障不会停止数据的传递；带宽利用率高；更简单、有效、成本更低&lt;br&gt;
-缺点：通信有延迟；会导致信息丢失；分组需要提供额外信息增加开销&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;计算机网络性能指标&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.jianshu.com/p/599c11874f24&#34;&gt;公式总结&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;传输时延、发送时延、处理时延：&lt;/strong&gt; 均指在发送端将比特流打包成分组的时间。&lt;br&gt;
-发送时延 = 数据帧长度 / 发送速率（信道带宽）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;传播时延：&lt;/strong&gt; 从发送端到接收端过程中消耗的时间&lt;br&gt;
-传播时延 = 信道长度 / 电磁波传播速度&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;利用率：&lt;/strong&gt;  D：网络当前时延 D0：网络空闲的时延 U：信道利用率&lt;br&gt;
-当前信道利用率：D = D0 / （1 - U）  可见，信道利用率越大，时延越大（包多时延大）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;时延带宽积：&lt;/strong&gt; 传播时延 x 带宽&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;吞吐量：&lt;/strong&gt; 单位时间内通过某个网络的实际的数据量&lt;/li&gt;
-&lt;/ol&gt;
+&lt;strong&gt;计算机网络服务模型&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;性能评价 （延迟，丢包，吞吐量）&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第二章-应用层&#34;&gt;第二章 应用层&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;P2P 和 C/S 模式计算题&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;题目1&lt;/code&gt;&lt;br&gt;
-&lt;em&gt;考虑向N个对等方发F=15Gb的一个文件。该服务器具有us=30Mbps的上载速率，每个对等方具有di=1Mbps的下载速率和上载速率u。对于N=10、100和1000并且u=300kps、700kps和2Mbps，对于N和u的每种组合绘制出确定最小分发时间的图表。需要分别针对客户-服务器分发和P2P分发两种情况制作。&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;在计算C-S分发的最小分发时间时，我们使用以下公式：
-Dcs=max{NF/us,F/di}  服务器分发前需要先将数据上载，取服务器上载和各链路下载速率的最大值
-其中F=15Gb=15*1000Mb
-us=30Mbps，dmin=di=1Mbps
-注意，300 Kbps=300/1000 Mbps
-在计算P2P分发的最小分发时间时，我们使用以下公式：
-Dp2p=max{F/us,F/di,NF/(us+∑ui)}
-其中F=15Gb=15*1000Mb
-us=30Mbps，di=di=1Mbps
-注意，300 Kbps=300/1000 Mbps
-&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;HTTP协议工作模式&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;HTTP cookie, cache&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;DNS&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第三章-传输层-运输层&#34;&gt;第三章 传输层 / 运输层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;可靠性 RDT&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;拥塞控制&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655464901846.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655464901846.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 在恢复部分：Tahoe：还用慢开始算法，从 1 开始；Reno：快恢复算法，从一半开始&lt;/p&gt;
 &lt;h1 id=&#34;第四章-网络层&#34;&gt;第四章 网络层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;网络层的功能&lt;/strong&gt;&lt;br&gt;
@@ -757,8 +708,8 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
 &lt;a href=&#34;https://www.bilibili.com/video/BV1a84y1F72Z/?spm_id_from=333.788.recommend_more_video.-1&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
 假如某网络只需要 100 台主机，而主机号可以表示 200 台主机。我们不想对该 IP 进行浪费，将主机号再次进行划分，使用主机字节的前几位标记划分子网的网络号，其余位数用于表示主机地址。&lt;br&gt;
 &lt;code&gt;例&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655460590774.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655460595483.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655460590774.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655460595483.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; 主机号全 0 表示网络号，全为 1 表示广播号，这两个不能算在主机地址中&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;网络地址转换-NAT&lt;/strong&gt;&lt;br&gt;
 将局域网（LAN）址转换为公网（WAN）地址，对外隐藏局域网内部 IP 地址，使得整个局域网只需要一个全球的 IP 即可访问因特网&lt;br&gt;
@@ -777,7 +728,7 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
 &lt;a href=&#34;https://www.bilibili.com/video/BV1jk4y127Cu?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;b站讲解&lt;/a&gt;&lt;br&gt;
 原理：哪条 IP 的匹配度最高选择哪个&lt;br&gt;
 &lt;code&gt;例&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655458936247.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655458936247.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;把目的 IP 化为二进制&lt;/li&gt;
@@ -785,34 +736,24 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
 &lt;li&gt;逐一与目的 IP 对比，符合度最高的为正确路径&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;例&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655458832077.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655458838336.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655458843286.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655458832077.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655458838336.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655458843286.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第五章-数据链路层&#34;&gt;第五章 数据链路层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;DV算法&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;Dijkstra算法&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;画出表格，左边是已经确定的点，右边每个格包含两个数据，第一个是起始点到该点的距离，第二个是该点前一个点是什么&lt;/li&gt;
-&lt;li&gt;从第一个点 V1 出发，每次找和当前点相邻点的距离，将最短路径保存在各个点中&lt;/li&gt;
-&lt;li&gt;找到该行距离数最小的点，保存在左侧确定点部分&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655617989211.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;strong&gt;LS算法&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;Bellman-Ford算法&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;strong&gt;LS算法&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第六章-无线网络和移动网络&#34;&gt;第六章 无线网络和移动网络&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;随机接入协议&lt;/strong&gt;&lt;br&gt;
 &lt;strong&gt;MAC地址， hop-by-hop&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第七章-多媒体网络&#34;&gt;第七章 多媒体网络&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;无线 vs 有线&lt;/strong&gt;&lt;br&gt;
-协议设计&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无线 vs 有线&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第八章-计算机网络中的安全&#34;&gt;第八章 计算机网络中的安全&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;对称加密 vs. 非对称加密&lt;/strong&gt;&lt;br&gt;
-了解机制&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对称加密 vs. 非对称加密&lt;/strong&gt;&lt;/p&gt;
 ">【计网】期末复习</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/"" data-c="
           &lt;h1 id=&#34;绪论&#34;&gt;绪论&lt;/h1&gt;
 &lt;p&gt;∑（西格玛）表示字母表，字母表中的元素称为该字母表的一个字母&lt;/p&gt;
 &lt;p&gt;ɛ 为空串，长度为 0，就是什么都没有。0 次幂代表空串&lt;/p&gt;
@@ -858,18 +799,18 @@ G1 G2为两个文法 ，L(G1) = L(G2) 则，G1 G2等价，也就是句子集合�
 &lt;li&gt;定义转移函数，每个状态输入值后到达的新状态&lt;/li&gt;
 &lt;li&gt;画图，完成构造&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:4000/post-images/1655293535417.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;p&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655293535417.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 对于上面图片最下面这几行，意思是&lt;br&gt;
 q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对于下面几行都一样，左边通过至少一步变为右边的终止状态，最后一个q是终止状态的符号&lt;/p&gt;
 &lt;p&gt;不确定的有穷状态自动机（Nondeterministic finite automata，简称 NFA）&lt;br&gt;
 输入一个字符可以转移到多个状态（多个状态是同时进行的）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NFA → DFA&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655294134548.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655294134548.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; q3 在 NFA 中为终止状态，在新的 DFA 中含有 q3 的状态也为终止状态。同样 q0 还为起始状态。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ɛ-NFA → NFA&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655380631215.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655294724853.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655380638255.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655380631215.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655294724853.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655380638255.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;把 ɛ-NFA 表格列出来，准备构造 NFA 的表格。&lt;/li&gt;
@@ -877,16 +818,16 @@ q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对�
 &lt;li&gt;用新的状态符号 q0 q1 等表示 {q0，q1，q2}。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;构造与 DFA 等价的正则文法 RG&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655295192637.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655295192637.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; 当某一状态 qi 是终止状态时（状态转移图表现为两个套在一起的圆），如 q0 →（0） q1，那么产生式不仅需要 q0 → 0q1，还需要 q0 → 0，因为0可能为该语的最后一位。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;构造与正则文法 RG 等价的 DFA&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655379303621.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655379303621.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; 需要单独设置一个终止状态 Z 来接受只含终极符的转移。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;左线性文法 → FA （反过来）&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655295333056.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655295333056.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; 和正则文法完全相反，可以先按 RG → DFA 构造一遍，然后箭头全部倒置，S 的位置变为 双圆环，Z 的位置变为单元环。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;FA → 左线性文法&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655382154334.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655382154334.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;根据 FA 先把 RG 构造出来。&lt;/li&gt;
@@ -914,36 +855,31 @@ q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对�
 &lt;p&gt;注：Ø的零次幂是 ɛ&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RE → FA&lt;/strong&gt;&lt;br&gt;
 记住下面几个基本元素，拼接即可&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655391708163.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655391708163.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正则语言 RL / DFA → RE&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;先增加两个状态，一个起始状态 X 一个终止状态 Y ，为了终止状态唯一&lt;/li&gt;
 &lt;li&gt;选取一个状态分析（最好是终止状态前一个状态，因为好分析），找出该状态的出度入度，分析是闭包运算，还是并集运算还是连接运算。然后用正则表达式替换&lt;br&gt;
 &lt;code&gt;注&lt;/code&gt; 并弧用加号&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655393874197.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655393874197.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;正则语言的性质&#34;&gt;正则语言的性质&lt;/h1&gt;
 &lt;p&gt;如果一个语言是正则语言，那么一定满足泵引理，反之不成立。&lt;br&gt;
 正则语言的封闭性：经过运算还为正则语言&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;DFA 极小化&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DFA 极小化&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;构造表格，如果有不可达状态则先删除，左边列是 1~n 下面行是 0~n-1&lt;/li&gt;
-&lt;li&gt;所有终点为一组，行列标上 x&lt;/li&gt;
-&lt;li&gt;任意找两个其他未标注的点，看两个点到终点的路径，分别看输入一个数，输入两个数，输入三个数后，是否相同，只要存在相同的路径，则两个点为不可区分，不用标注；无论怎么都找不到，则为可区分，标上 x。注意，不能走自环，只能走直路。&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655482140507.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655482151183.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;上下文无关语言&#34;&gt;上下文无关语言&lt;/h1&gt;
 &lt;p&gt;上下文无关文法：CFG&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;派生树：&lt;/strong&gt; 一定是上下文无关文法 CFG 的派生树。&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655469230531.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655469230531.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最左派生：从最左边开始替换，最右、随机同理。&lt;br&gt;
 派生树越靠近叶子节点（越在下面），优先级越高。&lt;br&gt;
 随机派生有多少种方式，就有多少种派生。计算派生时，找到派生树种所有的变量（ABC），计算所有变量的排列数，即为派生数。但是要注意固有顺序不能变。&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655470345207.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655470345207.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 根据派生树写出原 CFG 直接看图就行。&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655470533945.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655470533945.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CFG 的化简&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;步骤&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -953,112 +889,32 @@ q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对�
 &lt;li&gt;再次出现无用符号时，再次删除无用符号&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;例&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655470845354.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655470845354.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;code&gt;去除 ɛ 产生式的例子&lt;/code&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655471117714.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-任何不含空串的CFG都能转化为 CNF / GNF&lt;/p&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655471117714.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;乔姆斯基范式：&lt;/strong&gt; CNF，形如 A → BC 、 A → a，在化为 CNF 前需先简化&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655472152865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655472152865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;strong&gt;格雷巴赫范式：&lt;/strong&gt; GNF，形如 A → a 、 A → aBCDE.... ，在化为 GNF 前需先简化&lt;br&gt;
 需要消除左递归，形如：A → Aβ&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655476112225.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655476340663.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;下推自动机-pda&#34;&gt;下推自动机 PDA&lt;/h1&gt;
-&lt;p&gt;PDA 是 ɛ-NFA 增加了一个栈&lt;br&gt;
-PDA 用于识别一个·句子是否满足上下文无关文法（识别上下文无关语言）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;PDA 的构成：&lt;/strong&gt;&lt;br&gt;
-M = （Q ，∑，Γ，δ，q0，Z0，F）&lt;br&gt;
-Q ：状态的集合 {q0 q1 q2}&lt;br&gt;
-∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}&lt;br&gt;
-Γ：栈符号表，对应 CFG 中的变量 {S,A,B,C}&lt;br&gt;
-δ：状态转移函数，有两种格式，在下面给出&lt;br&gt;
-q0：起始状态&lt;br&gt;
-Z0：开始符号，开始时栈底的元素&lt;br&gt;
-F：终止状态集合{q1 q2 q3}，空栈接受时 F 为 Ø&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;状态转移函数 δ 的两种格式&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;常规转移&lt;/code&gt;&lt;br&gt;
-δ(q，a，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}&lt;br&gt;
-表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;例1&lt;/strong&gt;&lt;br&gt;
-δ1(q0，1，S)={(q0，SB)}&lt;br&gt;
-在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;例2&lt;/strong&gt;&lt;br&gt;
-δ1(q0，0，A)={(q0，ε)}&lt;br&gt;
-在状态 q0 时，读入 0 ，弹出栈顶元素 A ，转移到新状态 q0 ，将 ε 入栈&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ɛ 转移&lt;/code&gt;&lt;br&gt;
-δ(q，ɛ，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}&lt;br&gt;
-表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;br&gt;
-δ2(q0，ε，Z)={(q1，ε)}&lt;br&gt;
-在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;构造 PDA&lt;/strong&gt;&lt;br&gt;
-CFG → PDA&lt;br&gt;
-&lt;code&gt;空栈接受&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;化为 CFG&lt;/li&gt;
-&lt;li&gt;CFG → GNF&lt;/li&gt;
-&lt;li&gt;写出 GNF 的最左派生，注明 PDA 转移函数要做的动作&lt;/li&gt;
-&lt;li&gt;写出 PDA&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:4000/post-images/1655535184644.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655535222307.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655535227819.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;终态接受&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;和空栈接受对比：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;符号的添加：&lt;br&gt;
-添加一个开始符号 Z0、一个栈底符号 Z 、一个终止状态 q1&lt;br&gt;
-从 Z0 开始，弹出 Z0，把 Z 压入栈底，当栈内只剩 Z 时，跳转到 q1 终止状态&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;转移函数的添加：&lt;br&gt;
-原状态转移函数都不变，找到原栈底元素的转移函数，这里是含有 S 的三个转移函数，把 S 改为新定义的栈底符号 Z0，在右边入栈中加上新的栈底元素 Z 。对于右边是 ε 的转移，只改动 Z0，ε 不变。&lt;br&gt;
-此外，还需在最后添加遇到 Z 转移到 q1 的转移函数。&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655536498042.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;空栈接受的 PDA → 终态接受的 PDA （二者等价）&lt;/p&gt;
-&lt;p&gt;CFG → 空栈接受的 PDA&lt;/p&gt;
-&lt;h1 id=&#34;图灵机-tm&#34;&gt;图灵机 TM&lt;/h1&gt;
-&lt;p&gt;M=(Q, ∑, Γ, δ,q0 , B, F)&lt;br&gt;
-Q ：状态的集合 {q0 q1 q2}&lt;br&gt;
-∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}&lt;br&gt;
-Γ：带符号表，对应 CFG 中的变量 {S,A,B,C}&lt;br&gt;
-δ：状态转移函数，有两种格式，在下面给出&lt;br&gt;
-q0：起始状态&lt;br&gt;
-B：空白符&lt;br&gt;
-F：终止状态集合{q1 q2 q3}&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;状态转移函数 δ 的两种格式&lt;/strong&gt;&lt;br&gt;
-&lt;code&gt;右移&lt;/code&gt;&lt;br&gt;
-δ(q，X)=(p，Y，R)&lt;br&gt;
-表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头右移一格&lt;br&gt;
-&lt;code&gt;左移&lt;/code&gt;&lt;br&gt;
-δ(q，X)=(p，Y，L)&lt;br&gt;
-表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头左移一格&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;图灵机接受的语言&lt;/strong&gt;&lt;br&gt;
-若可接受：停机+接受&lt;br&gt;
-若不可接受：停机+拒绝 / 永不停机&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655562933815.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655562939698.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-&lt;img src=&#34;http://localhost:4000/post-images/1655562944073.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;构造图灵机&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;把要识别的句子模拟写在纸带上&lt;/li&gt;
-&lt;li&gt;逐渐向右移动，观察能否用替换（标记）等方式识别走过的路&lt;/li&gt;
-&lt;li&gt;设置好不同的状态，不同的输入，列出表格&lt;/li&gt;
-&lt;/ol&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655476112225.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1655476340663.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;若有把变量中的终极符用新变量替换&lt;br&gt;
+把多个变量逐步替换化为两个变量&lt;/p&gt;
+&lt;p&gt;任何不含空串的CFG都能转化为CNF&lt;/p&gt;
+&lt;p&gt;格雷巴赫范式：GNF&lt;br&gt;
+任何不含空串的CFG都能转化为CNF&lt;/p&gt;
+&lt;p&gt;下推自动机：PDA 用于识别上下文无关文法&lt;/p&gt;
 ">《形式语言与自动机》笔记</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/keras-qian-ru-qian-chu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/"" data-c="
           &lt;p&gt;1&lt;/p&gt;
 ">Keras 浅入浅出</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ji-wang-sui-ji/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-wang-sui-ji/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/75a5822d0eec&#34;&gt;traceroute：路由器追踪&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;网络层&#34;&gt;网络层&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;距离向量路由算法&lt;/strong&gt;&lt;br&gt;
@@ -1079,7 +935,7 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/xing-shi-yu-yan-python-shi-xian-e-nfa-greater-dfa/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/xing-shi-yu-yan-python-shi-xian-e-nfa-greater-dfa/"" data-c="
           &lt;p&gt;&lt;code&gt;参考资料&lt;/code&gt;&lt;br&gt;
 &lt;a href=&#34;http://www.srcmini.com/7313.html&#34;&gt;自动机从ε NFA到DFA的转换&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Step1&lt;br&gt;
@@ -1288,7 +1144,7 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ji-wang-bian-cheng-shi-yan/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-wang-bian-cheng-shi-yan/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://m653uatd6t.feishu.cn/docs/doccn1134QQsBECAj32x7hzIndf&#34;&gt;要求文档&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_37500516/article/details/120149101&#34;&gt;参考博客&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_33690566/article/details/105415681&#34;&gt;可靠传输协议&lt;/a&gt;&lt;/p&gt;
@@ -1314,7 +1170,7 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ml-bp-shen-jing-wang-luo/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-bp-shen-jing-wang-luo/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_39441762/article/details/80446692?spm=1001.2101.3001.6650.1&amp;amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;amp;utm_relevant_index=2&#34;&gt;介绍1&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;sklearn-相关实现sklearnneural_network&#34;&gt;sklearn 相关实现——sklearn.neural_network&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.weixueyuan.net/a/913.html&#34;&gt;MLPClassifier分类演示&lt;/a&gt;&lt;br&gt;
@@ -1324,16 +1180,15 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/surfing/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/surfing/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://edurank.org/uni/beijing-university-of-posts-and-telecommunications/rankings/&#34;&gt;来点鸡血&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/20824615&#34;&gt;如何优雅地使用 Stack Overflow？&lt;/a&gt;&lt;/p&gt;
 ">Surfing</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/shuo-du-ke-yi-shuo/"" data-c="
-          &lt;h1 id=&#34;欢迎来到博客隐藏部分&#34;&gt;欢迎来到博客隐藏部分&lt;/h1&gt;
-&lt;p&gt;https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;amp;tid=178940&lt;/p&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/"" data-c="
+          &lt;p&gt;https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;amp;tid=178940&lt;/p&gt;
 &lt;p&gt;https://bbs.pediy.com/thread-202110.htm&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/345269352&#34;&gt;网警是怎么在线下抓住造谣者的？&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://ssrshare.github.io/2019/04/07/tor/&#34;&gt;洋葱路由&lt;/a&gt;&lt;br&gt;
@@ -1344,7 +1199,7 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/pandas-mei-tian-yi-dian-pandas/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/pandas-mei-tian-yi-dian-pandas/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.runoob.com/pandas/pandas-dataframe.html&#34;&gt;pandas.DataFrame()：创建数据表格&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_18351157/article/details/113520345&#34;&gt;data.to_csv()：写入/修改 csv 文件&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_24754061/article/details/103738513&#34;&gt;data.describe()：展示数据均值、最大值等&lt;/a&gt;&lt;br&gt;
@@ -1357,7 +1212,7 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/python-shui-de-python-xue-de-bu-zha-shi/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_39700394/article/details/111418838&#34;&gt;浮点数格式化输出&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.w3school.com.cn/python/ref_string_index.asp&#34;&gt;字符串 index() 方法&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/xiaomifanhxx/article/details/81537506&#34;&gt;多文件调用&lt;/a&gt;&lt;br&gt;
@@ -1370,7 +1225,7 @@ if __name__ == &#39;__main__&#39;:
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/android/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/android/"" data-c="
           &lt;h1 id=&#34;root&#34;&gt;Root&lt;/h1&gt;
 &lt;p&gt;安卓手机最高权限，可以修改系统设置，卸载系统自带软件。有些手机自带 root，有些需要手动获取 root&lt;/p&gt;
 &lt;h1 id=&#34;adb&#34;&gt;ADB&lt;/h1&gt;
@@ -1383,7 +1238,7 @@ Tasker：手机自动化&lt;br&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shu-ju-jie-gou-ke-she-1tou-cha-fa-gou-zao-lian-biao/"" data-c="
           &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Node():  # 定义节点类
     def __init__(self, item):  # 初始化数据
         self.item = item  # 把数据存入节点
@@ -1419,7 +1274,7 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/seaborn-shu-ju-ke-shi-hua/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/seaborn-shu-ju-ke-shi-hua/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/98729226&#34;&gt;pairplot()：展示数据集变量之间的关系&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.cnblogs.com/cymx66688/p/10536403.html&#34;&gt;sns.countplot()：柱状图显示&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/96040773?from_voters_page=true&#34;&gt;sns.heatmap()：显示变量之间相关系数矩阵&lt;/a&gt;&lt;/p&gt;
@@ -1427,13 +1282,13 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ml-he-han-shu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-he-han-shu/"" data-c="
           &lt;p&gt;将低维数据映射到高维，从而对数据进行分类。&lt;/p&gt;
 ">【ML】核函数</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/sklearn-mei-tian-yi-dian-sklearn/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://scikit-learn.org.cn/&#34;&gt;sklearn中文社区1&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://sklearn.apachecn.org/#/&#34;&gt;sklearn中文社区2&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/algorithmPro/article/details/103045824&#34;&gt;超详细入门&lt;/a&gt;&lt;/p&gt;
@@ -1477,7 +1332,7 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/"" data-c="
           &lt;p&gt;&lt;a href=&#34;http://c.biancheng.net/matplotlib/&#34;&gt;详细教程&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.runoob.com/w3cnote/matplotlib-tutorial.html&#34;&gt;简易教程&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/258106097&#34;&gt;plt.plot()&lt;/a&gt;&lt;br&gt;
@@ -1486,7 +1341,7 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/38353562#:~:text=Scipy%EF%BC%9A%20%E4%B8%80%E4%B8%AA%E7%94%A8%E4%BA%8E%E6%95%B0%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E3%80%81%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%84%E7%90%86%E6%8F%92%E5%80%BC%E3%80%81%E7%A7%AF%E5%88%86%E3%80%81%E4%BC%98%E5%8C%96%E3%80%81%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E3%80%81%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%95%B0%E5%80%BC%E8%A7%A3%E7%9A%84%E6%B1%82%E8%A7%A3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%AD%89%E9%97%AE%E9%A2%98%E3%80%82%20Pandas%EF%BC%9A,%E5%9F%BA%E4%BA%8E%20NumPy%20%E7%9A%84%E4%B8%80%E7%A7%8D%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%AF%A5%E5%B7%A5%E5%85%B7%E6%98%AF%E4%B8%BA%E4%BA%86%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1%E8%80%8C%E5%88%9B%E5%BB%BA%E7%9A%84%E3%80%82&#34;&gt;numpy，scipy，pandas这些库的区别是什么？&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_39072607/article/details/89321495&#34;&gt;np.zeros：用于生成全 0 的数组&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_41800366/article/details/86589680&#34;&gt;np.arange()：生成序列（等差数列）&lt;/a&gt;&lt;br&gt;
@@ -1495,7 +1350,7 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shou-ji-zi-dong-hua-cao-zuo-de-yi-xie-tan-suo/"" data-c="
           &lt;p&gt;tasker&lt;br&gt;
 自动精灵（操作简单，适合简易任务&lt;br&gt;
 Hamibot 需要js&lt;/p&gt;
@@ -1503,7 +1358,7 @@ Hamibot 需要js&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ml-zhi-chi-xiang-liang-ji-svm/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-zhi-chi-xiang-liang-ji-svm/"" data-c="
           &lt;p&gt;支持向量机（support vector machines, SVM）&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV16T4y1y7qj?from=search&amp;amp;seid=9938878737703056911&amp;amp;spm_id_from=333.337.0.0&#34;&gt;b站入门讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1UR4y147AT?p=7&#34;&gt;b站详细讲解&lt;/a&gt;&lt;br&gt;
@@ -1514,19 +1369,19 @@ Hamibot 需要js&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ml-hopfield-shen-jing-wang-luo/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/"" data-c="
           &lt;p&gt;开个帖&lt;/p&gt;
 ">【ML】Hopfield 神经网络</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/kao-yan-kao-yan-zi-liao/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-kao-yan-zi-liao/"" data-c="
           &lt;p&gt;&lt;a href=&#34;http://qzbltushu.ysepan.com/&#34;&gt;http://qzbltushu.ysepan.com/&lt;/a&gt;&lt;/p&gt;
 ">【考研】考研资料</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shi-yong-github-desktop-tong-bu-gridea-cai-keng-ji-lu/"" data-c="
           &lt;p&gt;先放一篇其他大佬的文章，说的已经很详细了&lt;br&gt;
 &lt;a href=&#34;https://sonatta.top/post/Ux6xKOeOx/&#34;&gt;https://sonatta.top/post/Ux6xKOeOx/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;踩坑：&lt;/code&gt;&lt;br&gt;
@@ -1543,7 +1398,7 @@ Hamibot 需要js&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/github-desktop-guan-li-ben-di-dai-ma/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma/"" data-c="
           &lt;p&gt;&lt;code&gt;总览&lt;/code&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;amp;seid=9646375911820432461&amp;amp;spm_id_from=333.337.0.0&#34;&gt;https://www.bilibili.com/video/BV13W411U7HY?from=search&amp;amp;seid=9646375911820432461&amp;amp;spm_id_from=333.337.0.0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;当需要 push 的文件过大时候报错：&lt;/code&gt;&lt;br&gt;
@@ -1554,13 +1409,13 @@ Hamibot 需要js&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/wechat/"" data-c="
-          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://localhost:4000/post-images/1648906251060.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/wechat/"" data-c="
+          &lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1648906251060.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 ">Wechat</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ji-wang-socket-bian-cheng-shi-yan/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan/"" data-c="
           &lt;p&gt;&lt;strong&gt;原文档：&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z&#34;&gt;https://m653uatd6t.feishu.cn/docs/doccnBhfhSQ8wZ3krkTnQ3GbDHf#KJ735Z&lt;/a&gt;&lt;br&gt;
 &lt;strong&gt;参考文章：&lt;/strong&gt;&lt;br&gt;
@@ -1616,7 +1471,7 @@ for i in range(10):
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/git-shi-yong/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/git-shi-yong/"" data-c="
           &lt;p&gt;&lt;strong&gt;使用 Git 上传文件夹到 Github&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/136355306&#34;&gt;https://zhuanlan.zhihu.com/p/136355306&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_45309916/article/details/108273988&#34;&gt;https://blog.csdn.net/weixin_45309916/article/details/108273988&lt;/a&gt;&lt;/p&gt;
@@ -1624,7 +1479,7 @@ for i in range(10):
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ml-jue-ce-shu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-jue-ce-shu/"" data-c="
           &lt;p&gt;&lt;strong&gt;b站讲解&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&#34;&gt;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;决策树的构建&#34;&gt;决策树的构建&lt;/h1&gt;
@@ -1647,7 +1502,7 @@ for i in range(10):
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/opencv-qian-ji/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/opencv-qian-ji/"" data-c="
           &lt;h1 id=&#34;matplotlib-显示-opencv-图像失真原因&#34;&gt;matplotlib 显示 opencv 图像失真原因&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Strive_For_Future/article/details/108566534&#34;&gt;https://blog.csdn.net/Strive_For_Future/article/details/108566534&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;br&gt;
@@ -1659,7 +1514,7 @@ opencv 在 anaconda 中文件夹的名称叫 cv2&lt;br&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/jupyter-notebook-de-anaconda-pei-zhi/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/"" data-c="
           &lt;p&gt;下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了&lt;br&gt;
 但是jupyter一直只有一个虚拟环境，于是上网搜索了一下&lt;br&gt;
 jupyter需要手动分配内核，&lt;strong&gt;具体参考：&lt;/strong&gt;&lt;/p&gt;
@@ -1673,14 +1528,14 @@ python -m ipykernel install --name 环境名 # 向 jupyter 中添加虚拟内核
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/cmd/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cmd/"" data-c="
           &lt;p&gt;&lt;strong&gt;cmd 中 curl 命令的使用&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.cnblogs.com/zhuzhenwei918/p/6781314.html&#34;&gt;https://www.cnblogs.com/zhuzhenwei918/p/6781314.html&lt;/a&gt;&lt;/p&gt;
 ">cmd</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/ji-zu-qian-ji/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-zu-qian-ji/"" data-c="
           &lt;h1 id=&#34;思维导图&#34;&gt;思维导图&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/98226508&#34;&gt;https://zhuanlan.zhihu.com/p/98226508&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_47423314/article/details/114875087&#34;&gt;https://blog.csdn.net/weixin_47423314/article/details/114875087&lt;/a&gt;&lt;br&gt;
@@ -1698,7 +1553,7 @@ python -m ipykernel install --name 环境名 # 向 jupyter 中添加虚拟内核
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo/"" data-c="
           &lt;h1 id=&#34;三篇参考文章&#34;&gt;三篇参考文章：&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_51802807/article/details/121179861&#34;&gt;https://blog.csdn.net/weixin_51802807/article/details/121179861&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.cnblogs.com/zjutlitao/p/10188434.html&#34;&gt;https://www.cnblogs.com/zjutlitao/p/10188434.html&lt;/a&gt;&lt;br&gt;
@@ -1762,13 +1617,13 @@ k.release_key(k.alt_key)  # 松开Alt键
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/pa-chong-curl-zhuan-wei-python-pa-chong-dai-ma/"" data-c="
           &lt;p&gt;&lt;a href=&#34;http://tool.yuanrenxue.com/curl&#34;&gt;http://tool.yuanrenxue.com/curl&lt;/a&gt;&lt;/p&gt;
 ">【爬虫】curl转为python爬虫代码</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/markdown-yu-fa/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/markdown-yu-fa/"" data-c="
           &lt;h1 id=&#34;官方教程&#34;&gt;官方教程：&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://markdown.com.cn/basic-syntax/paragraphs.html&#34;&gt;https://markdown.com.cn/basic-syntax/paragraphs.html&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;常用&#34;&gt;常用:&lt;/h1&gt;
@@ -1785,7 +1640,7 @@ Markdown 换行语法 在一行的末尾添加两个或多个空格，然后按�
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/leetcode-1323-6-he-9-zu-cheng-de-zui-da-shu-zi/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/leetcode-1323-6-he-9-zu-cheng-de-zui-da-shu-zi/"" data-c="
           &lt;p&gt;给你一个仅由数字 6 和 9 组成的正整数 num。&lt;/p&gt;
 &lt;p&gt;你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。&lt;/p&gt;
 &lt;p&gt;请返回你可以得到的最大数字。&lt;/p&gt;
@@ -1836,7 +1691,7 @@ print(func(9669))
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/lan-qiao-bei-zui-xiao-ju-chi-python/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/lan-qiao-bei-zui-xiao-ju-chi-python/"" data-c="
           &lt;p&gt;&lt;strong&gt;资源限制&lt;/strong&gt;&lt;br&gt;
 时间限制：1.0s 内存限制：256.0MB&lt;br&gt;
 　　最小距离&lt;br&gt;
@@ -1880,21 +1735,21 @@ print(min)
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/next-zhu-ti-shi-yong-jiao-cheng/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/next-zhu-ti-shi-yong-jiao-cheng/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://yeming.site/post/1JA_OJlig/&#34;&gt;https://yeming.site/post/1JA_OJlig/&lt;/a&gt;&lt;/p&gt;
 ">Next主题使用教程</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/the-first-article/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/the-first-article/"" data-c="
           &lt;p&gt;第一篇文章!&lt;/p&gt;
 &lt;p&gt;本站于2022/1/25正式成立&lt;/p&gt;
-&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://localhost:4000/post-images/1648733500854.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1648733500854.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
 ">The First Article</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="http://localhost:4000/post/about/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/about/"" data-c="
           &lt;p&gt;welcome！&lt;/p&gt;
 &lt;h2 id=&#34;jerome-的个人网站-佛系更新&#34;&gt;🏠 Jerome 的个人网站 | 佛系更新&lt;/h2&gt;
 &lt;h1 id=&#34;悄咪咪夹带私货&#34;&gt;悄咪咪夹带私货&lt;/h1&gt;
