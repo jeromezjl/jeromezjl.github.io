@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
-<title>《形式语言与自动机》笔记 | Jerome</title>
+<title>【Linux】Ubuntu | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1663345192632">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="《形式语言与自动机》笔记" />
-  <meta name="keywords" content="形式语言与自动机" />
+  <meta name="description" content="【Linux】Ubuntu" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -203,8 +203,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -263,198 +262,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper  auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#%E7%BB%AA%E8%AE%BA">绪论</a></li>
-<li><a href="#%E6%96%87%E6%B3%95">文法</a></li>
-<li><a href="#%E6%9C%89%E7%A9%B7%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA">有穷状态自动机</a></li>
-<li><a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">正则表达式</a></li>
-<li><a href="#%E6%AD%A3%E5%88%99%E8%AF%AD%E8%A8%80%E7%9A%84%E6%80%A7%E8%B4%A8">正则语言的性质</a></li>
-<li><a href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E8%AF%AD%E8%A8%80">上下文无关语言</a></li>
-<li><a href="#%E4%B8%8B%E6%8E%A8%E8%87%AA%E5%8A%A8%E6%9C%BA-pda">下推自动机 PDA</a></li>
-<li><a href="#%E5%9B%BE%E7%81%B5%E6%9C%BA-tm">图灵机 TM</a></li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -542,32 +349,21 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/"> 《形式语言与自动机》笔记 </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/linux-ubuntu/"> 【Linux】Ubuntu </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-06-15 16:50:53">2022-06-15</span>
+      <span class="publish-time" data-t="2022-09-13 10:08:10">2022-09-13</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">标签:</span>
-       
-      <a href="https://jeromezjl.github.io/tag/-wa5FBspZ/">
-        <span>形式语言与自动机</span>
-      </a>
-       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >13<span class="language" data-lan="minute"
+        >1<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -576,15 +372,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >3445<span class="pc-show language" data-lan="words"
+        >132<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/"
-      data-flag-title="《形式语言与自动机》笔记"
+      id="/post/linux-ubuntu/"
+      data-flag-title="【Linux】Ubuntu"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -600,249 +396,23 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="绪论">绪论</h1>
-<p>∑（西格玛）表示字母表，字母表中的元素称为该字母表的一个字母</p>
-<p>ɛ 为空串，长度为 0，就是什么都没有。0 次幂代表空串</p>
-<p>字母表的n次幂，得到的集合，其中的元素为字母表中字母构成的句子<br>
-字母表的闭包（字母表中所有字母的排列组合）<br>
-字母表的正闭包（+）加上字母表的零次幂（空串）为字母表的克林闭包（*）<br>
-注意，字母表的闭包是把字母表的 n 次幂并在一起，是各个次幂运算结果之和</p>
-<p>字母表 ∑ 上 的语言 L，是 ∑* 的一个子集 （语言 L 是集合，满足集合运算）<br>
-L表示字母表 ∑ 上的一个语言（语言 L 就是所有句子的集合，证明语言相等，则证明集合相等），x 表示语言 L 中的一个句子，abcd表示单个字符<br>
-其关系为：a ∈ x ∈ L ⊆ ∑*</p>
-<h1 id="文法">文法</h1>
-<p>V ：变量，可以被其他串替换，用大写 ABC 表示<br>
-T ：终极符，这个语言里边最终的句子，都是由终极符构成的串（必定含有终极符），用小写 abc 表示<br>
-P : 产生式，又叫语法规则、定义式，可以理解为一个语言的语法，字母必须要这么组合，才是该语言。A→B 读作 ：A 可以定义为 / 可以为 B 。 产生式可以是终极符和非终极符构成的串，但是不能仅仅是终极符构成的串<br>
-S ：开始符，即，所有推导要从该符号开始。从该符号推导出来的才是里面的句子。开始符必须是变量之一，因为只有在变量集合中才能作为产生式的左部</p>
-<p>若产生式最终只含终极符，那么推导结束</p>
-<p>推导：利用产生式推出新表达式，归约和其相反</p>
-<p>G 表示文法  L(G) 表示由文法 G 定义的语言，也就是符合文法 G 的句子集合<br>
-G1 G2为两个文法 ，L(G1) = L(G2) 则，G1 G2等价，也就是句子集合相同</p>
-<p>简化文法：只列出该文法的所有产生式，如：S→A|B|AA|BB，A→0，B→1</p>
-<p><strong>乔姆斯基文法体系</strong><br>
-0型文法：最常规的文法<br>
-1型文法（上下文有关文法CSG），只需满足右边比左边长，（左边可以有终极符，可以任意长度）<br>
-2型文法（上下文无关文法CFG）：在1型文法（上下文有关文法）前提下，必须满足左边是一个变量（只能有一个变量，长度为1，不能是终极符）<br>
-3型文法（正则文法RG）在2型文法的基础上，右侧为终极符串 + 一个串（注意只能有一个变量，可为空串）形如：A→w，A→wB</p>
-<p>对应语言分别是 0，1，2，3型语言，缩写分别为：CSL,CFL,RL<br>
-正则语言 RL</p>
-<p><strong>线性文法</strong><br>
-线性文法：在正则文法基础上，增加了新产生式形式：终极符串 + 一个串 + 终极符串 （注意，还是只能有一个变量）形如：A→w，A→wBx</p>
-<p>变量代表的串在哪一侧就是哪种线性文法<br>
-右线性文法就是正则文法<br>
-左线性文法：形如：A→w，A→Bw<br>
-同一个语言用左右线性文法都可以构造，故，左线性文法与右线性文法等价</p>
-<p>注：左线性文法 与 右线性文法 混用不是 正则文法<br>
-空语句不会改变语言类型</p>
-<h1 id="有穷状态自动机">有穷状态自动机</h1>
-<p>有穷状态自动机（finite automata，简称 FA）：识别正则语言，FA是正则语言的识别器<br>
-扩展状态转移函数：Q x *∑→ Q ：一个状态读入一个字符串，变成另一个状态，*∑代表字符串</p>
-<p>确定的有穷状态自动机（deterministic finite automata，简称 DFA）一个输入只有一个结果<br>
-构造 DFA 步骤：</p>
-<ol>
-<li>定义 DFA 状态，每一步都干啥</li>
-<li>定义转移函数，每个状态输入值后到达的新状态</li>
-<li>画图，完成构造</li>
-</ol>
-<p><img src="https://jeromezjl.github.io/post-images/1655293535417.png" alt="" loading="lazy"><br>
-对于上面图片最下面这几行，意思是<br>
-q0x1 是即时描述的初始状态，x1q0是即时描述的终止状态，对于下面几行都一样，左边通过至少一步变为右边的终止状态，最后一个q是终止状态的符号</p>
-<p>不确定的有穷状态自动机（Nondeterministic finite automata，简称 NFA）<br>
-输入一个字符可以转移到多个状态（多个状态是同时进行的）</p>
-<p><strong>NFA → DFA</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655294134548.png" alt="" loading="lazy"><br>
-<code>注</code> q3 在 NFA 中为终止状态，在新的 DFA 中含有 q3 的状态也为终止状态。同样 q0 还为起始状态。</p>
-<p><strong>ɛ-NFA → NFA</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655380631215.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655294724853.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655380638255.png" alt="" loading="lazy"><br>
-<code>步骤</code></p>
-<ol>
-<li>把 ɛ-NFA 表格列出来，准备构造 NFA 的表格。</li>
-<li>画图构造 ɛ-闭包</li>
-<li>当输入一个数时，把该闭包中所有能接收该数的状态的 ɛ-闭包 并集</li>
-<li>q0，q1，q2 还是原来的 q0，q1，q2 。</li>
-</ol>
-<p><strong>构造与 DFA 等价的正则文法 RG</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655295192637.png" alt="" loading="lazy"><br>
-<code>注</code> 当某一状态 qi 是终止状态时（状态转移图表现为两个套在一起的圆），如 q0 →（0） q1，那么产生式不仅需要 q0 → 0q1，还需要 q0 → 0，因为0可能为该语的最后一位。</p>
-<p><strong>构造与正则文法 RG 等价的 DFA</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655379303621.png" alt="" loading="lazy"><br>
-<code>注</code> 需要单独设置一个终止状态 Z 来接受只含终极符的转移。</p>
-<p><strong>左线性文法 → FA （反过来）</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655295333056.png" alt="" loading="lazy"><br>
-<code>注</code> 和正则文法完全相反，可以先按 RG → DFA 构造一遍，然后箭头全部倒置，S 的位置变为 双圆环，Z 的位置变为单元环。</p>
-<p><strong>FA → 左线性文法</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1655382154334.png" alt="" loading="lazy"><br>
-<code>步骤</code></p>
-<ol>
-<li>根据 FA 先把 RG 构造出来。</li>
-<li>把单独的终极符加上一个终止状态 Z 变成 2Z。</li>
-<li>全体调转，例如 q2 → 2q3 变为  q3 → q2 2</li>
-<li>删除所有起始状态 q0 ，如 q1 → q0 0 变为  q1 → 0</li>
-</ol>
-<p><code>注意：</code></p>
-<ol>
-<li>起始状态前必须加 S→</li>
-<li>若某一状态 qi 只有指入的箭头没有指出的箭头，则盖状态为陷阱状态，可以删除不考虑。</li>
-<li>当自动机以正闭包（+）呈现时必须以空串ɛ开始，以克林闭包（*）呈现时不用。因为一个自动机必须以空串开始，而正闭包中不含空串。</li>
-<li>当由 RG → FA 时，需要自己设置一个终止状态Z，用于接收A→1 | 1C 这样的产生式；相反的，左线性文法构造FA时，需要自己设置一个开始状态Z，同样，产生式箭头也和RG相反，例如，A→1 | C1 , 意思时，由开始状态Z读入1跳转到状态A，由状态C读入一个1跳转到状态A。</li>
-</ol>
-<h1 id="正则表达式">正则表达式</h1>
-<p>正则表达式（regular expression，RE）<br>
-形式定义：<br>
-前三条都是定义基本字符串，Ø 为空集，ɛ 为空字符串，a 为任意字符。<br>
-第四条说的是前三条的元素根据第四条的运算可以形成正则表达式。<br>
-第一种运算 (r+s) 是集合的并集。<br>
-第二种运算 (rs) 是指 r 和 s 串的连接<br>
-第三种是克林闭包，(r*) = ( r0+r1+r2+….. )<br>
-<code>注</code> 正则表达式必须加括号<br>
-正则表达式RE r ，记作L(r)，也是一种语言，是一个集合，也可直接记作r</p>
-<p>注：Ø的零次幂是 ɛ</p>
-<p><strong>RE → FA</strong><br>
-记住下面几个基本元素，拼接即可<br>
-<img src="https://jeromezjl.github.io/post-images/1655391708163.png" alt="" loading="lazy"></p>
-<p><strong>正则语言 RL / DFA → RE</strong></p>
-<ol>
-<li>先增加两个状态，一个起始状态 X 一个终止状态 Y ，为了终止状态唯一</li>
-<li>选取一个状态分析（最好是终止状态前一个状态，因为好分析），找出该状态的出度入度，分析是闭包运算，还是并集运算还是连接运算。然后用正则表达式替换<br>
-<code>注</code> 并弧用加号<br>
-<img src="https://jeromezjl.github.io/post-images/1655393874197.png" alt="" loading="lazy"></li>
-</ol>
-<h1 id="正则语言的性质">正则语言的性质</h1>
-<p>如果一个语言是正则语言，那么一定满足泵引理，反之不成立。<br>
-正则语言的封闭性：经过运算还为正则语言</p>
-<p><strong>DFA 极小化</strong><br>
-<code>步骤</code></p>
-<ol>
-<li>构造表格，如果有不可达状态则先删除，左边列是 1~n 下面行是 0~n-1</li>
-<li>所有终点为一组，行列标上 x</li>
-<li>任意找两个其他未标注的点，看两个点到终点的路径，分别看输入一个数，输入两个数，输入三个数后，是否相同，只要存在相同的路径，则两个点为不可区分，不用标注；无论怎么都找不到，则为可区分，标上 x。注意，不能走自环，只能走直路。<br>
-<img src="https://jeromezjl.github.io/post-images/1655482140507.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655482151183.png" alt="" loading="lazy"></li>
-</ol>
-<h1 id="上下文无关语言">上下文无关语言</h1>
-<p>上下文无关文法：CFG</p>
-<p><strong>派生树：</strong> 一定是上下文无关文法 CFG 的派生树。<br>
-<img src="https://jeromezjl.github.io/post-images/1655469230531.png" alt="" loading="lazy"></p>
-<p>最左派生：从最左边开始替换，最右、随机同理。<br>
-派生树越靠近叶子节点（越在下面），优先级越高。<br>
-随机派生有多少种方式，就有多少种派生。计算派生时，找到派生树种所有的变量（ABC），计算所有变量的排列数，即为派生数。但是要注意固有顺序不能变。<br>
-<img src="https://jeromezjl.github.io/post-images/1655470345207.png" alt="" loading="lazy"><br>
-根据派生树写出原 CFG 直接看图就行。<br>
-<img src="https://jeromezjl.github.io/post-images/1655470533945.png" alt="" loading="lazy"></p>
-<p><strong>CFG 的化简</strong><br>
-<code>步骤</code></p>
-<ol>
-<li>删除无用符号（注意要把不可达状态的整个表达式都删了，比如 S→AB，B 不存在，则 AB 都删）</li>
-<li>删除 ɛ 产生式</li>
-<li>删除单一产生式（形如 A → B）</li>
-<li>再次出现无用符号时，再次删除无用符号</li>
-</ol>
-<p><code>例</code><br>
-<img src="https://jeromezjl.github.io/post-images/1655470845354.png" alt="" loading="lazy"><br>
-<code>去除 ɛ 产生式的例子</code><br>
-<img src="https://jeromezjl.github.io/post-images/1655471117714.png" alt="" loading="lazy"><br>
-任何不含空串的CFG都能转化为 CNF / GNF</p>
-<p><strong>乔姆斯基范式：</strong> CNF，形如 A → BC 、 A → a，在化为 CNF 前需先简化<br>
-<img src="https://jeromezjl.github.io/post-images/1655472152865.png" alt="" loading="lazy"><br>
-<strong>格雷巴赫范式：</strong> GNF，形如 A → a 、 A → aBCDE.... ，在化为 GNF 前需先简化<br>
-需要消除左递归（把左递归变为右递归），形如：A → Aβ<br>
-<img src="https://jeromezjl.github.io/post-images/1655476112225.png" alt="" loading="lazy"><br>
-<code>简例</code><br>
-A → A0 | 1<br>
-变为：<br>
-A → 1<br>
-A → 1B<br>
-B → 0B<br>
-B → 0<br>
-<img src="https://jeromezjl.github.io/post-images/1655476340663.png" alt="" loading="lazy"></p>
-<h1 id="下推自动机-pda">下推自动机 PDA</h1>
-<p>PDA 是 ɛ-NFA 增加了一个栈<br>
-PDA 用于识别一个·句子是否满足上下文无关文法（识别上下文无关语言）</p>
-<p><strong>PDA 的构成：</strong><br>
-M = （Q ，∑，Γ，δ，q0，Z0，F）<br>
-Q ：状态的集合 {q0 q1 q2}<br>
-∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}<br>
-Γ：栈符号表，对应 CFG 中的变量 {S,A,B,C}<br>
-δ：状态转移函数，有两种格式，在下面给出<br>
-q0：起始状态<br>
-Z0：开始符号，开始时栈底的元素<br>
-F：终止状态集合{q1 q2 q3}，空栈接受时 F 为 Ø</p>
-<p><strong>状态转移函数 δ 的两种格式</strong><br>
-<code>常规转移</code><br>
-δ(q，a，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}<br>
-表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。</p>
-<p><strong>例1</strong><br>
-δ1(q0，1，S)={(q0，SB)}<br>
-在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）</p>
-<p><strong>例2</strong><br>
-δ1(q0，0，A)={(q0，ε)}<br>
-在状态 q0 时，读入 0 ，弹出栈顶元素 A ，转移到新状态 q0 ，将 ε 入栈</p>
-<p><code>ɛ 转移</code><br>
-δ(q，ɛ，Z)={(p1，γ1)0(p2，γ2)，...，(pm，γm)}<br>
-表示状态 q 时，读入句子中的符号 a ，弹出栈顶符号 Z ，转移到新状态 pi ，将 γi 中的符号从右向左压入栈。</p>
-<p><strong>例</strong><br>
-δ2(q0，ε，Z)={(q1，ε)}<br>
-在状态 q0 时，读入 1 ，弹出栈顶元素 S ，转移到新状态 q0 ，将 SB 串以 B、S 的顺序入栈（B 在 S 的下面）</p>
-<p><strong>构造 PDA</strong><br>
-CFG → PDA<br>
-<code>空栈接受</code></p>
-<ol>
-<li>化为 CFG</li>
-<li>CFG → GNF</li>
-<li>写出 GNF 的最左派生，注明 PDA 转移函数要做的动作</li>
-<li>写出 PDA</li>
-</ol>
-<p><img src="https://jeromezjl.github.io/post-images/1655535184644.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655535222307.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655535227819.png" alt="" loading="lazy"></p>
-<p><code>终态接受</code><br>
-<strong>和空栈接受对比：</strong></p>
-<ul>
-<li>
-<p>符号的添加：<br>
-添加一个开始符号 Z0、一个栈底符号 Z 、一个终止状态 q1<br>
-从 Z0 开始，弹出 Z0，把 Z 压入栈底，当栈内只剩 Z 时，跳转到 q1 终止状态</p>
-</li>
-<li>
-<p>转移函数的添加：<br>
-原状态转移函数都不变，找到原栈底元素的转移函数，这里是含有 S 的三个转移函数，把 S 改为新定义的栈底符号 Z0，在右边入栈中加上新的栈底元素 Z 。对于右边是 ε 的转移，只改动 Z0，ε 不变。<br>
-此外，还需在最后添加遇到 Z 转移到 q1 的转移函数。<br>
-<img src="https://jeromezjl.github.io/post-images/1655536498042.png" alt="" loading="lazy"></p>
-</li>
-</ul>
-<p>空栈接受的 PDA → 终态接受的 PDA （二者等价）</p>
-<p>CFG → 空栈接受的 PDA</p>
-<h1 id="图灵机-tm">图灵机 TM</h1>
-<p>M=(Q, ∑, Γ, δ,q0 , B, F)<br>
-Q ：状态的集合 {q0 q1 q2}<br>
-∑：输入字母表，要识别的句子含有的符号，如{a,b,c} {1,2,3}<br>
-Γ：带符号表，对应 CFG 中的变量 {S,A,B,C}<br>
-δ：状态转移函数，有两种格式，在下面给出<br>
-q0：起始状态<br>
-B：空白符<br>
-F：终止状态集合{q1 q2 q3}</p>
-<p><strong>状态转移函数 δ 的两种格式</strong><br>
-<code>右移</code><br>
-δ(q，X)=(p，Y，R)<br>
-表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头右移一格<br>
-<code>左移</code><br>
-δ(q，X)=(p，Y，L)<br>
-表示状态 q 时，读入句子中的符号 X ，弹出栈顶符号 Z ，将状态改为 p ，并在 X 所在的带方格中印刷符号 Y，然后将读头左移一格</p>
-<p><strong>图灵机接受的语言</strong><br>
-若可接受：停机+接受<br>
-若不可接受：停机+拒绝 / 永不停机<br>
-<img src="https://jeromezjl.github.io/post-images/1655562933815.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655562939698.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1655562944073.png" alt="" loading="lazy"></p>
-<p><strong>构造图灵机</strong></p>
-<ol>
-<li>把要识别的句子模拟写在纸带上</li>
-<li>逐渐向右移动，观察能否用替换（标记）等方式识别走过的路</li>
-<li>设置好不同的状态，不同的输入，列出表格</li>
-</ol>
+              <p><a href="https://blog.csdn.net/weixin_44301630/article/details/122390018?app_version=5.7.5&amp;code=app_1562916241&amp;csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22122390018%22%2C%22source%22%3A%22unlogin%22%7D&amp;uLinkId=usr1mkqgl919blen&amp;utm_source=app">WSL2 Ubuntu 安装 /该方法的图形界面安装出错</a><br>
+<a href="https://www.bilibili.com/video/BV1M94y1U7nc/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=0c47757b752e4a1eb04429ea32a157dc">VMware 安装</a><br>
+该版本安装包：<br>
+链接：https://pan.baidu.com/s/14I13g2N6hdeQf6RpL6Y9_g?pwd=xf0c<br>
+提取码：xf0c</p>
+<p><a href="https://blog.csdn.net/top_worker/article/details/45918399">Ubuntu 教程</a><br>
+Tasksel 安装出错<br>
+解决：<a href="https://mlog.club/article/3125331">系统范围的安装都需要 root 权限，使用 sudo</a></p>
+<p><a href="https://blog.csdn.net/Davidietop/article/details/88909622">failed to fetch/配置 DNS 网关</a></p>
+<p>进入 ROOT 模式：root -i</p>
+<p><a href="https://blog.csdn.net/qq_42175986/article/details/82770878">文件操作</a><br>
+<a href="https://blog.csdn.net/weixin_43798960/article/details/106891641">保存文件并退出</a></p>
+<p><a href="https://www.bilibili.com/video/BV1w741147G9?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解1</a><br>
+<a href="https://www.bilibili.com/video/BV1nS4y1o7LG?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解2</a><br>
+<a href="https://www.bilibili.com/video/BV1pZ4y1N7pr?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Linux 环境变量</a><br>
+<a href="https://blog.csdn.net/K_K_yl/article/details/119756206">环境变量的配置</a></p>
+<p><a href="https://blog.csdn.net/sydongjx/article/details/44081265">解决bash:没有那个文件或目录的方法</a></p>
 
             </div>
             
@@ -855,7 +425,7 @@ F：终止状态集合{q1 q2 q3}</p>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/" title="《形式语言与自动机》笔记">https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/</a>
+      <a href="https://jeromezjl.github.io/post/linux-ubuntu/" title="【Linux】Ubuntu">https://jeromezjl.github.io/post/linux-ubuntu/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -864,21 +434,19 @@ F：终止状态集合{q1 q2 q3}</p>
   </ul>
   <div class="tags">
     
-      <a href="https://jeromezjl.github.io/tag/-wa5FBspZ/"># 形式语言与自动机</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【计网】期末复习" href="https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/">【计网】期末复习</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【计网】期末复习" href="https://jeromezjl.github.io/post/ji-wang-qi-mo-fu-xi/">上一篇</a>
+        <a class="nav-pc-next" title="六级" href="https://jeromezjl.github.io/post/liu-ji/">六级</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="六级" href="https://jeromezjl.github.io/post/liu-ji/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Keras 浅入浅出" href="https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/">Keras 浅入浅出</a>
-        <a class="nav-mobile-next" title="Keras 浅入浅出" href="https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/">下一篇</a>
+        <a class="nav-pc-next" title="【Linux】Shell" href="https://jeromezjl.github.io/post/linux-shell/">【Linux】Shell</a>
+        <a class="nav-mobile-next" title="【Linux】Shell" href="https://jeromezjl.github.io/post/linux-shell/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
