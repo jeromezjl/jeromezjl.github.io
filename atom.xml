@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-11-25T08:07:19.179Z</updated>
+    <updated>2022-11-25T08:49:03.524Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[jjj]]></title>
+        <id>https://jeromezjl.github.io/post/jjj/</id>
+        <link href="https://jeromezjl.github.io/post/jjj/">
+        </link>
+        <updated>2022-11-25T08:33:32.000Z</updated>
+        <content type="html"><![CDATA[<p>ddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddffddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddfddfgddfgddfgddfgddfgddf</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SQL 复习]]></title>
         <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
@@ -337,31 +346,6 @@ one should adapt himself to the environment
 先读题干句子，抓关键词<br>
 看首尾句，明确段意<br>
 抓句子关键词，带回段落定位</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Linux】Ubuntu]]></title>
-        <id>https://jeromezjl.github.io/post/linux-ubuntu/</id>
-        <link href="https://jeromezjl.github.io/post/linux-ubuntu/">
-        </link>
-        <updated>2022-09-13T02:08:10.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_44301630/article/details/122390018?app_version=5.7.5&amp;code=app_1562916241&amp;csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22122390018%22%2C%22source%22%3A%22unlogin%22%7D&amp;uLinkId=usr1mkqgl919blen&amp;utm_source=app">WSL2 Ubuntu 安装 /该方法的图形界面安装出错</a><br>
-<a href="https://www.bilibili.com/video/BV1M94y1U7nc/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=0c47757b752e4a1eb04429ea32a157dc">VMware 安装</a><br>
-该版本安装包：<br>
-链接：https://pan.baidu.com/s/14I13g2N6hdeQf6RpL6Y9_g?pwd=xf0c<br>
-提取码：xf0c</p>
-<p><a href="https://blog.csdn.net/top_worker/article/details/45918399">Ubuntu 教程</a><br>
-Tasksel 安装出错<br>
-解决：<a href="https://mlog.club/article/3125331">系统范围的安装都需要 root 权限，使用 sudo</a></p>
-<p><a href="https://blog.csdn.net/Davidietop/article/details/88909622">failed to fetch/配置 DNS 网关</a></p>
-<p>进入 ROOT 模式：root -i</p>
-<p><a href="https://blog.csdn.net/qq_42175986/article/details/82770878">文件操作</a><br>
-<a href="https://blog.csdn.net/weixin_43798960/article/details/106891641">保存文件并退出</a></p>
-<p><a href="https://www.bilibili.com/video/BV1w741147G9?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解1</a><br>
-<a href="https://www.bilibili.com/video/BV1nS4y1o7LG?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解2</a><br>
-<a href="https://www.bilibili.com/video/BV1pZ4y1N7pr?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Linux 环境变量</a><br>
-<a href="https://blog.csdn.net/K_K_yl/article/details/119756206">环境变量的配置</a></p>
-<p><a href="https://blog.csdn.net/sydongjx/article/details/44081265">解决bash:没有那个文件或目录的方法</a></p>
 ]]></content>
     </entry>
 </feed>
