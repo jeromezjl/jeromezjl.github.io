@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
-<title>SQL 复习 | Jerome</title>
+<title>Hello Gridea | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1669363196080">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="SQL 复习" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Hello Gridea" />
+  <meta name="keywords" content="Gridea" />
 </head>
 
 <body>
@@ -269,11 +269,11 @@
   <div class="toc-wrapper  auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-sql">第三章 SQL</a></li>
-<li><a href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0">第四章</a></li>
-<li><a href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E9%AB%98%E7%BA%A7-sql">第五章 高级 SQL</a></li>
-<li><a href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0">第六章 关系代数</a></li>
-<li><a href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-e-r-%E5%9B%BE">第七章 E-R 图</a></li>
+<li>
+<ul>
+<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+</ul>
+</li>
 </ul>
 
   </div>
@@ -539,21 +539,32 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/"> SQL 复习 </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/hello-gridea/"> Hello Gridea </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-10-27 17:14:16">2022-10-27</span>
+      <span class="publish-time" data-t="2018-12-12 00:00:00">2018-12-12</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://jeromezjl.github.io/tag/Xxn8EeT3z/">
+        <span>Gridea</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >4<span class="language" data-lan="minute"
+        >2<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -562,15 +573,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >812<span class="pc-show language" data-lan="words"
+        >298<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/sql-qi-zhong-fu-xi/"
-      data-flag-title="SQL 复习"
+      id="/post/hello-gridea/"
+      data-flag-title="Hello Gridea"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -586,70 +597,27 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="第三章-sql">第三章 SQL</h1>
-<p>熟练编写 sql 语句，创建、删除语句也要看，数据类型</p>
-<h1 id="第四章">第四章</h1>
-<p>◼ Join Expressions（连接表达式）<br>
-◼ Views 视图<br>
-◼ Transactions<br>
-◼ Integrity Constraints<br>
-◼ SQL Data Types and Schemas<br>
-◼ Authorization<br>
-◼ Security in SQL</p>
-<p>Join 参见 sql 的总结，natural join，inner join 等</p>
-<h1 id="第五章-高级-sql">第五章 高级 SQL</h1>
-<p>这章期中没考</p>
-<p>使用程序设计语言访问数据库<br>
-通过两种方式从通用编程语言访问 SQL：<br>
-动态 SQL：通过函数或方法<br>
-嵌入式 SQL：在编译时全部确定</p>
-<p>JDBC 标准定义了 java 和 SQL 的 API</p>
-<h1 id="第六章-关系代数">第六章 关系代数</h1>
-<p>重点是如何将sql语句转化为关系代数</p>
-<p>选择运算 select operation σ<br>
-选择关系instructor中属于物理系的元组：<br>
-σ dept_name=“Physics”(instructor)<br>
-选择关系 instructor 中 salary&gt;90000 的元组：<br>
-σ salary&gt;90000 (instructor)<br>
-⋀ (and), ⋁ (or), (not)</p>
-<p>投影运算 project operation  ∏<br>
-用于选择表中想要的属性<br>
-∏ name, salary (instructor)<br>
-找出物理系中所有教师的名字：<br>
-∏ name (σ dept_name=“Physic’ (instructor))</p>
-<p>并运算 union operation ∪<br>
-找出开设在 2009 年球季或者 2010 年春季学期，或者二者皆开的课程集合<br>
-∏course_id (σ semester=“Fall” Λ year=2009 (section)) ∪<br>
-∏course_id (σ semester=“Spring” Λ year=2010 (section))</p>
-<p>集合差运算 Set Difference Operation -<br>
-找出开设在 2009 年秋季但不开设在 2010 年春季的课程<br>
-∏course_id (σ semester=“Fall”Λ year=2009(section))-<br>
-∏course_id (σ semester=“Spring”Λ year=2010(section))</p>
-<p>笛卡尔积运算 Cartesian-Product Operation x<br>
-∏ name (σ dept_name=“Physic’ (instructor x teaches))</p>
-<p>更名运算 Rename Operation<br>
-选出 instructor 中 salary 最高的：<br>
-σ instructor.salary &lt; d.salary (instructor ╳ ρ d(instructor))</p>
-<p>select T.salary<br>
-from instructor T, instructor S<br>
-where T.salary &gt; S.salary</p>
-<h1 id="第七章-e-r-图">第七章 E-R 图</h1>
-<p>非ER关系中，两个实体关联，每个实体中可能会有对方实体的主码，从而产生冗余<br>
-在ER关系中，如果一个实体的属性是另一个实体的主码，则删除该属性。二者的关联会在联系集里表达。（P183）</p>
-<p>大学实体集及属性（P154 输入183）</p>
-<p>大学 E-R 图（P159 输入188）</p>
-<p>E-R 图图形含义（P172 输入 201）</p>
-<p>练习题（P179 输入208）</p>
-<p>弱实体集：如果保留某些属性，则在和别的集合关联时，会造成属性的冗余。所以我们选择删掉该属性。但删掉后，当前剩余的属性就不能保证唯一标识元素。这样的实体集称为弱实体集。弱实体集必须与强实体集关联才有意义。</p>
-<p>E-R 图中，双线表示有且仅有一个相关的对象<br>
-箭头：A → B 表明 每个 A 至多有一个 B</p>
-<p>构造关系表时，如果有多个候选键，最好选取数值型（int, float）候选键作为关系表主键，便于提高基于主键的查询速度<br>
-—不要选字符串型属性，如varchar、datetime<br>
-—e.g. studentname, instructorName</p>
-<p>双菱形表示弱实体集的标识性联系集</p>
-<p>构建 E-R 图步骤<br>
-从关系集入手，分别判断其关联的两个实体集的对应关系。看是采用双线、箭头，还是单线。<br>
-判断弱实体集：看关联的两个实体集的属性，是否有相同的，如果有，去掉其中一个的属性，将其变为弱实体集，然后将关系变为双菱形。</p>
+              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
 
             </div>
             
@@ -662,7 +630,7 @@ where T.salary &gt; S.salary</p>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/" title="SQL 复习">https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</a>
+      <a href="https://jeromezjl.github.io/post/hello-gridea/" title="Hello Gridea">https://jeromezjl.github.io/post/hello-gridea/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -671,16 +639,18 @@ where T.salary &gt; S.salary</p>
   </ul>
   <div class="tags">
     
+      <a href="https://jeromezjl.github.io/tag/Xxn8EeT3z/"># Gridea</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="The First Article" href="https://jeromezjl.github.io/post/the-first-article/">The First Article</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="The First Article" href="https://jeromezjl.github.io/post/the-first-article/">上一篇</a>
+      
     </div>
     <div class="nav-next">
-      
-        <a class="nav-pc-next" title="ML/DL 中常见的英文" href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">ML/DL 中常见的英文</a>
-        <a class="nav-mobile-next" title="ML/DL 中常见的英文" href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

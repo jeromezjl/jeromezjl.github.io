@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-11-01T01:39:32.579Z</updated>
+    <updated>2022-11-25T08:07:19.179Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,19 +11,31 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[SQL 期中复习]]></title>
+        <title type="html"><![CDATA[SQL 复习]]></title>
         <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
         <link href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/">
         </link>
         <updated>2022-10-27T09:14:16.000Z</updated>
         <content type="html"><![CDATA[<h1 id="第三章-sql">第三章 SQL</h1>
+<p>熟练编写 sql 语句，创建、删除语句也要看，数据类型</p>
+<h1 id="第四章">第四章</h1>
+<p>◼ Join Expressions（连接表达式）<br>
+◼ Views 视图<br>
+◼ Transactions<br>
+◼ Integrity Constraints<br>
+◼ SQL Data Types and Schemas<br>
+◼ Authorization<br>
+◼ Security in SQL</p>
+<p>Join 参见 sql 的总结，natural join，inner join 等</p>
 <h1 id="第五章-高级-sql">第五章 高级 SQL</h1>
+<p>这章期中没考</p>
 <p>使用程序设计语言访问数据库<br>
 通过两种方式从通用编程语言访问 SQL：<br>
 动态 SQL：通过函数或方法<br>
 嵌入式 SQL：在编译时全部确定</p>
 <p>JDBC 标准定义了 java 和 SQL 的 API</p>
 <h1 id="第六章-关系代数">第六章 关系代数</h1>
+<p>重点是如何将sql语句转化为关系代数</p>
 <p>选择运算 select operation σ<br>
 选择关系instructor中属于物理系的元组：<br>
 σ dept_name=“Physics”(instructor)<br>
@@ -51,7 +63,7 @@
 <p>select T.salary<br>
 from instructor T, instructor S<br>
 where T.salary &gt; S.salary</p>
-<h1 id="第七章">第七章</h1>
+<h1 id="第七章-e-r-图">第七章 E-R 图</h1>
 <p>非ER关系中，两个实体关联，每个实体中可能会有对方实体的主码，从而产生冗余<br>
 在ER关系中，如果一个实体的属性是另一个实体的主码，则删除该属性。二者的关联会在联系集里表达。（P183）</p>
 <p>大学实体集及属性（P154 输入183）</p>
@@ -81,7 +93,8 @@ epochs：总训练次数<br>
 learning rate：学习率<br>
 optimize：优化<br>
 regularization：正则化<br>
-normalize：归一化、标准化</p>
+normalize：归一化、标准化<br>
+Regularization： 正则化</p>
 ]]></content>
     </entry>
     <entry>
@@ -134,6 +147,7 @@ normalize：归一化、标准化</p>
 <h1 id="编译过程-2">编译过程</h1>
 <p>直接输入 make，在文件夹内会根据 makefile 中的规则编译所有文件<br>
 再次输入 blitz -g os 运行所有代码</p>
+<p>https://github.com/ayushishri/OS-Blitz-Labs</p>
 ]]></content>
     </entry>
     <entry>
@@ -143,6 +157,7 @@ normalize：归一化、标准化</p>
         </link>
         <updated>2022-10-14T07:23:30.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;utm_relevant_index=2">手把手实战PyTorch手写数据集MNIST识别项目全流程</a></p>
+<p><a href="https://blog.csdn.net/wqy1837154675/article/details/108003698">pytorch读取MNIST数据集并显示</a></p>
 <h1 id="理论">理论</h1>
 <p><a href="https://www.bilibili.com/video/BV1K64y1Q7wu?p=3&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">李沐 Softmax 函数</a></p>
 <p>对 softmax 回归的感性理解：<br>
@@ -199,6 +214,9 @@ testData = torchvision.datasets.MNIST(path,train = False, transform = transform)
         <updated>2022-09-17T16:13:10.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1T54y177W2/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">一键禁用电脑键盘</a></p>
 <p><a href="https://baijiahao.baidu.com/s?id=1634287239598842140">用 Excel 打开 CSV 格式文件乱码</a></p>
+<p>全半角切换：<br>
+电脑设置中启用 shift+空格切换全半角<br>
+使用全角模式，在markdown中输入空格，则会显示空格</p>
 ]]></content>
     </entry>
     <entry>
