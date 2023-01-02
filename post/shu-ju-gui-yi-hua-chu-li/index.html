@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
-<title>说，都可以说 | Jerome</title>
+<title>数据归一化处理 | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1672633389931">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="说，都可以说" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="数据归一化处理" />
+  <meta name="keywords" content="ML" />
 </head>
 
 <body>
@@ -203,8 +203,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -263,191 +262,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper  auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E5%8D%9A%E5%AE%A2%E9%9A%90%E8%97%8F%E9%83%A8%E5%88%86">欢迎来到博客隐藏部分</a></li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -535,21 +349,32 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/"> 说，都可以说 </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/"> 数据归一化处理 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-05-01 18:56:19">2022-05-01</span>
+      <span class="publish-time" data-t="2022-12-25 19:59:16">2022-12-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://jeromezjl.github.io/tag/rxDlpU0zX/">
+        <span>ML</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >1<span class="language" data-lan="minute"
+        >3<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -558,15 +383,15 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >73<span class="pc-show language" data-lan="words"
+        >694<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
     </span>
       
     <span
-      id="/post/shuo-du-ke-yi-shuo/"
-      data-flag-title="说，都可以说"
+      id="/post/shu-ju-gui-yi-hua-chu-li/"
+      data-flag-title="数据归一化处理"
       class="meta-item pc-show leancloud_visitors"
     >
       <span class="post-meta-divider">|</span>
@@ -582,14 +407,36 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="欢迎来到博客隐藏部分">欢迎来到博客隐藏部分</h1>
-<p>https://bbs.boniu123.cc/forum.php?mod=viewthread&amp;tid=178940</p>
-<p>https://bbs.pediy.com/thread-202110.htm</p>
-<p><a href="https://www.zhihu.com/question/345269352">网警是怎么在线下抓住造谣者的？</a></p>
-<p><a href="https://ssrshare.github.io/2019/04/07/tor/">洋葱路由</a><br>
-<a href="https://zhuanlan.zhihu.com/p/71805955">洋葱路由1</a></p>
-<p><a href="https://program-think.blogspot.com/">编程随想</a></p>
-<p><a href="https://pincong.rocks/article/32003">简谈网警是怎么找到海外网站发帖之人的</a></p>
+              <p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
+<p>常见的数据归一化方法有以下几种：</p>
+<p><strong>最值归一化（Min-Max Normalization）</strong><br>
+最值归一化是将数据映射到[0,1]范围内，公式如下：</p>
+<p>X_normalized = (X - Xmin) / (Xmax - Xmin)</p>
+<p>其中，Xmin和Xmax分别是数据集中的最小值和最大值。</p>
+<p><strong>均值方差归一化（Standardization）</strong><br>
+均值方差归一化是将数据转换为均值为0，方差为1的数据，公式如下：</p>
+<p>X_normalized = (X - Xmean) / Xstd</p>
+<p>其中，Xmean和Xstd分别是数据集的均值和标准差。</p>
+<p><strong>小数定标归一化</strong><br>
+小数定标归一化是将数据的小数点移动到某一位置，使得数据范围在一定程度上缩小。例如，将数据的小数点向左移动2位，可以将数据的范围缩小100倍。</p>
+<p><strong>对数归一化</strong><br>
+对数归一化是将数据取对数后进行归一化处理。这种方法通常用于处理数据的取值范围差异很大的情况。</p>
+<p>数据归一化的目的是使得数据的分布更加规律<br>
+归一化处理可以使不同的数据具有相似的分布和取值范围，这在许多机器学习算法中是很有用的。例如，在使用梯度下降算法进行模型训练时，如果数据的范围差异很大，模型可能会在局部最小值附近来回震荡，导致收敛速度减慢。归一化处理可以使梯度下降算法更快地收敛，并且可以使模型的泛化能力更强。</p>
+<p>但是，也要注意，如果数据已经具有相似的分布和取值范围，则不需要进行归一化处理。另外，在使用归一化处理后的数据进行模型训练后，在使用模型进行预测时，还需要将输入数据进行相应的反归一化处理，才能得到正确的预测结果。</p>
+<p><strong>使用pytorch进行归一化操作</strong></p>
+<pre><code class="language-python">normalize = transforms.Normalize((mean,), (std,))
+</code></pre>
+<p>其中 mean 为均值，std为方差，想进行归一化操作需要先计算出数据的均值和方差。</p>
+<p>例如对MNIST数据集的处理：</p>
+<pre><code class="language-python"># 定义图像处理方法
+tranform = transforms.Compose([
+    transforms.ToTensor(),  # 将图片转换成Tensor
+    transforms.Normalize((0.1307,), (0.3081,))  # 进行数据归一化处理
+])
+</code></pre>
+<p>其中 0.1307 和 0.3081 分别是MNIST的均值和方差，可以自己计算，也可以网上查<br>
+等同于 X_normalized = (X - 0.1307) / 0.3081，转化为均值为0，方差为1的数据。</p>
 
             </div>
             
@@ -602,7 +449,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/" title="说，都可以说">https://jeromezjl.github.io/post/shuo-du-ke-yi-shuo/</a>
+      <a href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/" title="数据归一化处理">https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -611,12 +458,22 @@
   </ul>
   <div class="tags">
     
+      <a href="https://jeromezjl.github.io/tag/rxDlpU0zX/"># ML</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="GAN网络" href="https://jeromezjl.github.io/post/gan-wang-luo/">GAN网络</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="GAN网络" href="https://jeromezjl.github.io/post/gan-wang-luo/">上一篇</a>
+      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="【线性代数】矩阵的特征值和特征向量" href="https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">【线性代数】矩阵的特征值和特征向量</a>
+        <a class="nav-mobile-next" title="【线性代数】矩阵的特征值和特征向量" href="https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2022-12-16T11:22:14.139Z</updated>
+    <updated>2023-01-02T05:04:51.781Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://jeromezjl.github.io"/>
+    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
-    <rights>All rights reserved 2022, Jerome</rights>
+    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
+    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[GAN网络]]></title>
+        <id>https://jeromezjl.github.io/post/gan-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/gan-wang-luo/">
+        </link>
+        <updated>2022-12-26T11:37:25.000Z</updated>
+        <content type="html"><![CDATA[<p>训练循环顺序：<br>
+步骤1<br>
+生成器不动，生成器产生一批假图片，再拿取一批真实图片，喂给判别器，训练判别器。<br>
+我们希望判别器对假图片打上标签0，对真图片打上标签1<br>
+步骤2<br>
+判别器不动，训练生成器</p>
+<p><a href="https://blog.csdn.net/weixin_44887621/article/details/120535309">pytorch保存图片 save_image ，读取图片</a></p>
+<p>训练GAN网络训练多少次比较合适？<br>
+最好使用一种称为 &quot;early stopping&quot; 的方法，即在模型在验证集上的表现开始下降时停止训练。这样可以避免模型出现过拟合的情况。</p>
+<p>另外，也可以使用 &quot;learning rate decay&quot; 的方法来防止模型出现过拟合的情况。这种方法的原理是，在训练过程中，会逐渐降低学习率，以便模型能够更加稳定地收敛到最优解。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据归一化处理]]></title>
+        <id>https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</id>
+        <link href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">
+        </link>
+        <updated>2022-12-25T11:59:16.000Z</updated>
+        <content type="html"><![CDATA[<p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
+<p>常见的数据归一化方法有以下几种：</p>
+<p><strong>最值归一化（Min-Max Normalization）</strong><br>
+最值归一化是将数据映射到[0,1]范围内，公式如下：</p>
+<p>X_normalized = (X - Xmin) / (Xmax - Xmin)</p>
+<p>其中，Xmin和Xmax分别是数据集中的最小值和最大值。</p>
+<p><strong>均值方差归一化（Standardization）</strong><br>
+均值方差归一化是将数据转换为均值为0，方差为1的数据，公式如下：</p>
+<p>X_normalized = (X - Xmean) / Xstd</p>
+<p>其中，Xmean和Xstd分别是数据集的均值和标准差。</p>
+<p><strong>小数定标归一化</strong><br>
+小数定标归一化是将数据的小数点移动到某一位置，使得数据范围在一定程度上缩小。例如，将数据的小数点向左移动2位，可以将数据的范围缩小100倍。</p>
+<p><strong>对数归一化</strong><br>
+对数归一化是将数据取对数后进行归一化处理。这种方法通常用于处理数据的取值范围差异很大的情况。</p>
+<p>数据归一化的目的是使得数据的分布更加规律<br>
+归一化处理可以使不同的数据具有相似的分布和取值范围，这在许多机器学习算法中是很有用的。例如，在使用梯度下降算法进行模型训练时，如果数据的范围差异很大，模型可能会在局部最小值附近来回震荡，导致收敛速度减慢。归一化处理可以使梯度下降算法更快地收敛，并且可以使模型的泛化能力更强。</p>
+<p>但是，也要注意，如果数据已经具有相似的分布和取值范围，则不需要进行归一化处理。另外，在使用归一化处理后的数据进行模型训练后，在使用模型进行预测时，还需要将输入数据进行相应的反归一化处理，才能得到正确的预测结果。</p>
+<p><strong>使用pytorch进行归一化操作</strong></p>
+<pre><code class="language-python">normalize = transforms.Normalize((mean,), (std,))
+</code></pre>
+<p>其中 mean 为均值，std为方差，想进行归一化操作需要先计算出数据的均值和方差。</p>
+<p>例如对MNIST数据集的处理：</p>
+<pre><code class="language-python"># 定义图像处理方法
+tranform = transforms.Compose([
+    transforms.ToTensor(),  # 将图片转换成Tensor
+    transforms.Normalize((0.1307,), (0.3081,))  # 进行数据归一化处理
+])
+</code></pre>
+<p>其中 0.1307 和 0.3081 分别是MNIST的均值和方差，可以自己计算，也可以网上查<br>
+等同于 X_normalized = (X - 0.1307) / 0.3081，转化为均值为0，方差为1的数据。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【线性代数】矩阵的特征值和特征向量]]></title>
-        <id>http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
-        <link href="http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
+        <id>https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
+        <link href="https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
         </link>
         <updated>2022-12-05T10:23:51.000Z</updated>
         <content type="html"><![CDATA[<p>所谓凡事见微知著，由简推繁，要理解多维矩阵的特征值和特征向量的意思，我们不如从二维推起。<br>
@@ -26,8 +82,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL 复习]]></title>
-        <id>http://localhost:4000/post/sql-qi-zhong-fu-xi/</id>
-        <link href="http://localhost:4000/post/sql-qi-zhong-fu-xi/">
+        <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
+        <link href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/">
         </link>
         <updated>2022-10-27T09:14:16.000Z</updated>
         <content type="html"><![CDATA[<p>复习策略：<br>
@@ -140,8 +196,8 @@ i.e. file structures<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[ML/DL 中常见的英文]]></title>
-        <id>http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/</id>
-        <link href="http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/">
+        <id>https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/</id>
+        <link href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">
         </link>
         <updated>2022-10-25T14:06:00.000Z</updated>
         <content type="html"><![CDATA[<p>parameters / params：参数<br>
@@ -155,8 +211,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[以梯度下降（Gradient Descent）展开的优化器总结]]></title>
-        <id>http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/</id>
-        <link href="http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/">
+        <id>https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/</id>
+        <link href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">
         </link>
         <updated>2022-10-25T12:57:09.000Z</updated>
         <content type="html"><![CDATA[<p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）</p>
@@ -176,8 +232,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[KPL 语言]]></title>
-        <id>http://localhost:4000/post/kpl-yu-yan/</id>
-        <link href="http://localhost:4000/post/kpl-yu-yan/">
+        <id>https://jeromezjl.github.io/post/kpl-yu-yan/</id>
+        <link href="https://jeromezjl.github.io/post/kpl-yu-yan/">
         </link>
         <updated>2022-10-16T09:38:19.000Z</updated>
         <content type="html"><![CDATA[<h1 id="编译过程">编译过程</h1>
@@ -208,8 +264,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[MNIST 手写数字识别]]></title>
-        <id>http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/</id>
-        <link href="http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/">
+        <id>https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/</id>
+        <link href="https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/">
         </link>
         <updated>2022-10-14T07:23:30.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;utm_relevant_index=2">手把手实战PyTorch手写数据集MNIST识别项目全流程</a></p>
@@ -389,8 +445,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[Novelai 使用]]></title>
-        <id>http://localhost:4000/post/novelai-shi-yong/</id>
-        <link href="http://localhost:4000/post/novelai-shi-yong/">
+        <id>https://jeromezjl.github.io/post/novelai-shi-yong/</id>
+        <link href="https://jeromezjl.github.io/post/novelai-shi-yong/">
         </link>
         <updated>2022-10-13T06:07:39.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1EV4y1L7dX/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">教程</a></p>
@@ -400,8 +456,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[如何用英语思考？]]></title>
-        <id>http://localhost:4000/post/ru-he-yong-ying-yu-si-kao/</id>
-        <link href="http://localhost:4000/post/ru-he-yong-ying-yu-si-kao/">
+        <id>https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/</id>
+        <link href="https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/">
         </link>
         <updated>2022-09-26T07:37:07.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1TD4y1q7u9/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">b站</a></p>
@@ -414,139 +470,6 @@ KFold_and_Train(k_split_value)
 <p><a href="https://www.vocabulary.com/">vocabulary 英文单词查询网站</a></p>
 <p>#Idioms<br>
 在正确的情况下正确使用谚语</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[电脑操作]]></title>
-        <id>http://localhost:4000/post/dian-nao-cao-zuo/</id>
-        <link href="http://localhost:4000/post/dian-nao-cao-zuo/">
-        </link>
-        <updated>2022-09-17T16:13:10.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1T54y177W2/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">一键禁用电脑键盘</a></p>
-<p><a href="https://baijiahao.baidu.com/s?id=1634287239598842140">用 Excel 打开 CSV 格式文件乱码</a></p>
-<p>全半角切换：<br>
-电脑设置中启用 shift+空格切换全半角<br>
-使用全角模式，在markdown中输入空格，则会显示空格</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[六级]]></title>
-        <id>http://localhost:4000/post/liu-ji/</id>
-        <link href="http://localhost:4000/post/liu-ji/">
-        </link>
-        <updated>2022-09-16T07:09:36.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.hjenglish.com/new/p1334552/">分值分布</a><br>
-<a href="https://zhuanlan.zhihu.com/p/373774215">时间安排</a><br>
-<a href="https://zhenti.burningvocabulary.com/login?uid=632280fbaafe55b3c209ddb6">做题的神仙网站（随时更新，能看单词意思）</a></p>
-<p>高级词同义替换；使用复杂句式；灵活使用时态、语态</p>
-<h1 id="六级作文类型">六级作文类型</h1>
-<pre><code class="language-c">第一段
-1~2 句提出问题，3过渡句
-
-第二段
-论点1 论据1
-论点2 论据2
-论点3 论据3
-
-第三段
-重申观点
-提出希望
-</code></pre>
-<p>观点对立 / 分析利弊<br>
-Some people think its bad others think its good</p>
-<p>议论型</p>
-<p><code>作文模板</code><br>
-第一段</p>
-<pre><code class="language-c">In the contemporary world 当今世界
-there is no consensus among colledge students about the choice of career 没有定论
-this proverb reveals that 
-according to a recent survey conducted by
-with the rapid growth of online shopping 
-The popularity of smartphones makes the smartphone addiction increasingly commonplace
-
-引起社会广泛关注
-this phenomenon has become a worldwide social problem
-... has stirred wide social concern
-
- 反应了很多人对于...的看法
-the concept of ... is gaining more popularity and striking deeper roots in people's heart
-it reflects a number of people's concepts about ...
-people come to realize that it is of practical value to stick to the famous saying:
-
-引出谚语
-As the well-known proverb goes
-Though it is the insight summarized by our forefathers, it is correct and applicable in many case today.
-
-解释谚语
-The message it conveys is that
-
-过渡句
-Among countless reasons which support my view, there are three conspicuous aspects as follow
-</code></pre>
-<p>第二段</p>
-<pre><code class="language-c">First and foremost, there is no doubt that ...
-Moreover no one can deny that 
-Last but not least, i firmly believe that
-
-
-</code></pre>
-<p>第三段</p>
-<pre><code class="language-c">in conclusion / To sum up / All in all
-while stressing... we should not neglect...
-
-joint efforts should be made to promote...
-we spare no efforts to do
-if we try our upmost to do
-the more.. the more...
-
-our future will be both hopeful and rosy
-The pursuit of ... should never be ceased 追逐...的步伐从不应该停止
-
-</code></pre>
-<p><code>高级短语</code></p>
-<pre><code class="language-c">as it literally shows
-the reason why
-the overwhelming majority of 绝大多数
-be reluctant to 不情愿
-of practical value to do 有实际意义做
-stick to 
-reflect 反映
-remarkable
-reveal 揭示
-tend to 
-a high population of 56 percent of people
-Thus
-its urgent to do
-as is universally acknowledged 
-be of great significance
-increasingly important
-people believe that
-extend to
-the popularity of 
-exerts multiple adverse impacts 造成多重不利影响
-individual
-all-pervasive 无所不在
-quit a few peoper would deem that ... 少数人会认为
-in contrast
-intriguing 有趣
-modern citizens
-enhance
-its obvious that
-it's a high time that
-joint efforts from relative authorities, teachers and students are required
-Do bear in mind: 一定要记住
-attach importance to
-reinforce
-one should adapt himself to the environment
-</code></pre>
-<h1 id="阅读">阅读</h1>
-<p>找和题干最匹配的句子，句意、同义词替换<br>
-读句子抓主谓宾，副词、形容词实在不知道可以先不卡看<br>
-对比相似选项，看哪个和原文最匹配，防止误选</p>
-<p><strong>段落匹配</strong><br>
-先读题干句子，抓关键词<br>
-看首尾句，明确段意<br>
-抓句子关键词，带回段落定位</p>
 ]]></content>
     </entry>
 </feed>
