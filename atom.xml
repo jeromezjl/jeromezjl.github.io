@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jeromezjl.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Jerome</title>
-    <updated>2022-11-29T15:26:44.480Z</updated>
+    <updated>2022-12-16T11:22:14.139Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jeromezjl.github.io"/>
-    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
-    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2022, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[【线性代数】矩阵的特征值和特征向量]]></title>
+        <id>http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
+        <link href="http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
+        </link>
+        <updated>2022-12-05T10:23:51.000Z</updated>
+        <content type="html"><![CDATA[<p>所谓凡事见微知著，由简推繁，要理解多维矩阵的特征值和特征向量的意思，我们不如从二维推起。<br>
+矩阵，又称为矩阵空间，矩阵包含空间信息。1x2 的矩阵，是二维空间上的矩阵</p>
+<p>若非零向量 x 满足 Ax = λx，则 λ 为特征值，x 为特征向量。<br>
+特征向量在经过矩阵 A 的变换后，不改变，只需要乘上一个常数 λ</p>
+<p>对于矩阵特征值和特征向量公式的理解：一个矩阵点乘一个向量就相当于对该向量进行旋转或者拉伸等一系列线性变换。在我们求解矩阵的特征值和特征向量的时候就是要求解矩阵 A，A能够使得这些特征向量只发生伸缩变换，而变换的效果等价于特征向量与某个常量 λ 相乘。<br>
+在二维空间理解一下这个式子的含义。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[SQL 复习]]></title>
-        <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
-        <link href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/">
+        <id>http://localhost:4000/post/sql-qi-zhong-fu-xi/</id>
+        <link href="http://localhost:4000/post/sql-qi-zhong-fu-xi/">
         </link>
         <updated>2022-10-27T09:14:16.000Z</updated>
         <content type="html"><![CDATA[<p>复习策略：<br>
@@ -38,7 +52,8 @@
 嵌入式 SQL：在编译时全部确定</p>
 <p>JDBC 标准定义了 java 和 SQL 的 API</p>
 <h1 id="第六章-关系代数">第六章 关系代数</h1>
-<p>重点是如何将sql语句转化为关系代数</p>
+<p><a href="https://blog.csdn.net/quinnnorris/article/details/70739094">SQL 形式化语言——关系代数</a><br>
+重点是如何将sql语句转化为关系代数</p>
 <p>选择运算 select operation σ<br>
 选择关系instructor中属于物理系的元组：<br>
 σ dept_name=“Physics”(instructor)<br>
@@ -101,12 +116,32 @@ i.e. file structures<br>
 ◼ Data-dictionary Storage (§10.7)<br>
 ◼ Data Buffer (§10.8)</p>
 <p><strong>10.5 文件组织</strong></p>
+<h1 id="第十一章-索引">第十一章 索引</h1>
+<p>搜索码：用于在文件中查找记录的属性或属性集<br>
+索引<br>
+什么是<br>
+聚集索引，非聚集索引，稠密索引，稀疏索引，</p>
+<p>每个索引对数据增删改查是否有影响，</p>
+<p>索引创建在搜索码（属性）上面，可提高检索速度<br>
+要会说明原因</p>
+<p>在除了查询之外，delete update insert 时如何提高效率，搜索码<br>
+索引也有空间、时间开销，增加/删除，所以不一定能对增加删除修改起到提高效率的作用<br>
+也可能拖慢速度</p>
+<h1 id="第十二章-查询处理">第十二章 查询处理</h1>
+<p>熟悉关系代数的表示<br>
+<a href="https://blog.csdn.net/bianyamei/article/details/89491358">启发式查询树优化实例</a><br>
+<a href="https://www.bilibili.com/video/BV1Fp4y1a7Cs/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解 数据库语法树优化</a></p>
+<p>步骤<br>
+1、写出关系代数表达式<br>
+2、画出查询树<br>
+3、选择关系下移<br>
+4、投影下移，注意投影要在选择关系之上；每个自然连接前面必须有投影</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[ML/DL 中常见的英文]]></title>
-        <id>https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/</id>
-        <link href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">
+        <id>http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/</id>
+        <link href="http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/">
         </link>
         <updated>2022-10-25T14:06:00.000Z</updated>
         <content type="html"><![CDATA[<p>parameters / params：参数<br>
@@ -120,8 +155,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[以梯度下降（Gradient Descent）展开的优化器总结]]></title>
-        <id>https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/</id>
-        <link href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">
+        <id>http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/</id>
+        <link href="http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/">
         </link>
         <updated>2022-10-25T12:57:09.000Z</updated>
         <content type="html"><![CDATA[<p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）</p>
@@ -141,8 +176,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[KPL 语言]]></title>
-        <id>https://jeromezjl.github.io/post/kpl-yu-yan/</id>
-        <link href="https://jeromezjl.github.io/post/kpl-yu-yan/">
+        <id>http://localhost:4000/post/kpl-yu-yan/</id>
+        <link href="http://localhost:4000/post/kpl-yu-yan/">
         </link>
         <updated>2022-10-16T09:38:19.000Z</updated>
         <content type="html"><![CDATA[<h1 id="编译过程">编译过程</h1>
@@ -173,8 +208,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[MNIST 手写数字识别]]></title>
-        <id>https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/</id>
-        <link href="https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/">
+        <id>http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/</id>
+        <link href="http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/">
         </link>
         <updated>2022-10-14T07:23:30.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;utm_relevant_index=2">手把手实战PyTorch手写数据集MNIST识别项目全流程</a></p>
@@ -354,8 +389,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[Novelai 使用]]></title>
-        <id>https://jeromezjl.github.io/post/novelai-shi-yong/</id>
-        <link href="https://jeromezjl.github.io/post/novelai-shi-yong/">
+        <id>http://localhost:4000/post/novelai-shi-yong/</id>
+        <link href="http://localhost:4000/post/novelai-shi-yong/">
         </link>
         <updated>2022-10-13T06:07:39.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1EV4y1L7dX/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">教程</a></p>
@@ -365,8 +400,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[如何用英语思考？]]></title>
-        <id>https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/</id>
-        <link href="https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/">
+        <id>http://localhost:4000/post/ru-he-yong-ying-yu-si-kao/</id>
+        <link href="http://localhost:4000/post/ru-he-yong-ying-yu-si-kao/">
         </link>
         <updated>2022-09-26T07:37:07.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1TD4y1q7u9/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">b站</a></p>
@@ -383,8 +418,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[电脑操作]]></title>
-        <id>https://jeromezjl.github.io/post/dian-nao-cao-zuo/</id>
-        <link href="https://jeromezjl.github.io/post/dian-nao-cao-zuo/">
+        <id>http://localhost:4000/post/dian-nao-cao-zuo/</id>
+        <link href="http://localhost:4000/post/dian-nao-cao-zuo/">
         </link>
         <updated>2022-09-17T16:13:10.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1T54y177W2/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">一键禁用电脑键盘</a></p>
@@ -396,8 +431,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[六级]]></title>
-        <id>https://jeromezjl.github.io/post/liu-ji/</id>
-        <link href="https://jeromezjl.github.io/post/liu-ji/">
+        <id>http://localhost:4000/post/liu-ji/</id>
+        <link href="http://localhost:4000/post/liu-ji/">
         </link>
         <updated>2022-09-16T07:09:36.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.hjenglish.com/new/p1334552/">分值分布</a><br>
@@ -512,31 +547,6 @@ one should adapt himself to the environment
 先读题干句子，抓关键词<br>
 看首尾句，明确段意<br>
 抓句子关键词，带回段落定位</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Linux】Ubuntu]]></title>
-        <id>https://jeromezjl.github.io/post/linux-ubuntu/</id>
-        <link href="https://jeromezjl.github.io/post/linux-ubuntu/">
-        </link>
-        <updated>2022-09-13T02:08:10.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_44301630/article/details/122390018?app_version=5.7.5&amp;code=app_1562916241&amp;csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22122390018%22%2C%22source%22%3A%22unlogin%22%7D&amp;uLinkId=usr1mkqgl919blen&amp;utm_source=app">WSL2 Ubuntu 安装 /该方法的图形界面安装出错</a><br>
-<a href="https://www.bilibili.com/video/BV1M94y1U7nc/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=0c47757b752e4a1eb04429ea32a157dc">VMware 安装</a><br>
-该版本安装包：<br>
-链接：https://pan.baidu.com/s/14I13g2N6hdeQf6RpL6Y9_g?pwd=xf0c<br>
-提取码：xf0c</p>
-<p><a href="https://blog.csdn.net/top_worker/article/details/45918399">Ubuntu 教程</a><br>
-Tasksel 安装出错<br>
-解决：<a href="https://mlog.club/article/3125331">系统范围的安装都需要 root 权限，使用 sudo</a></p>
-<p><a href="https://blog.csdn.net/Davidietop/article/details/88909622">failed to fetch/配置 DNS 网关</a></p>
-<p>进入 ROOT 模式：root -i</p>
-<p><a href="https://blog.csdn.net/qq_42175986/article/details/82770878">文件操作</a><br>
-<a href="https://blog.csdn.net/weixin_43798960/article/details/106891641">保存文件并退出</a></p>
-<p><a href="https://www.bilibili.com/video/BV1w741147G9?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解1</a><br>
-<a href="https://www.bilibili.com/video/BV1nS4y1o7LG?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">环境变量讲解2</a><br>
-<a href="https://www.bilibili.com/video/BV1pZ4y1N7pr?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Linux 环境变量</a><br>
-<a href="https://blog.csdn.net/K_K_yl/article/details/119756206">环境变量的配置</a></p>
-<p><a href="https://blog.csdn.net/sydongjx/article/details/44081265">解决bash:没有那个文件或目录的方法</a></p>
 ]]></content>
     </entry>
 </feed>
