@@ -1,19 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jeromezjl.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Jerome</title>
-    <updated>2023-01-02T05:04:51.781Z</updated>
+    <updated>2023-02-12T15:53:28.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jeromezjl.github.io"/>
-    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
-    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[C++查缺补漏]]></title>
+        <id>http://localhost:4000/post/ccha-que-bu-lou/</id>
+        <link href="http://localhost:4000/post/ccha-que-bu-lou/">
+        </link>
+        <updated>2023-01-04T05:36:25.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yourfriendyo/article/details/119544221">C语言详解：结构体</a><br>
+<a href="https://blog.csdn.net/m0_52902391/article/details/120614881">模板类/模板函数 template 的用法(超详细)</a><br>
+template：模板</p>
+<h1 id="循环">循环</h1>
+<p>while (cin &gt;&gt; x){}<br>
+cin函数，输入NULL时返回0，输入其他值返回它的地址</p>
+<h1 id="指针">指针</h1>
+<p><a href="https://blog.csdn.net/weixin_39640298/article/details/84900326">C++指针详解</a><br>
+&amp;：取地址<br>
+*：取地址里面的值<br>
+<a href="https://www.w3cschool.cn/cpp/cpp-passing-arrays-to-functions.html">向函数传递数组的写法</a><br>
+用“-&gt;”的情况：<br>
+A是一个类 class / struct<br>
+p是一个指向A类型的指针，那么用p访问A中的成员变量和函数时，使用p-&gt;x，p-&gt;f(x)来访问。</p>
+<h1 id="类和对象">类和对象</h1>
+<p>类中不带返回类型的函数为构造函数。造函数可用于为某些成员变量设置初始值。</p>
+<p><strong>C++三种常见的实例化方法</strong></p>
+<ol>
+<li>静态实例化：在程序的全局或静态作用域中定义并初始化一个对象，该对象在程序整个生命周期内只存在一个实例。</li>
+<li>堆实例化：使用 new 运算符在动态存储区域中分配内存并实例化一个对象。这样创建的对象在程序运行期间一直存在，直到使用 delete 运算符显式释放其内存。</li>
+<li>栈实例化：在函数或代码块的作用域中定义并实例化一个对象，该对象的生命周期与所在的函数或代码块相同。对象在离开该作用域时自动销毁。</li>
+</ol>
+<p><strong>静态实例化的例子</strong></p>
+<pre><code class="language-c++">class MyClass {
+public:
+    MyClass() : m_x(0) {}
+    void setX(int x) { m_x = x; }
+    int getX() const { return m_x; }
+private:
+    int m_x;
+};
+
+MyClass globalObject;  // 全局实例
+
+int main() {
+    static MyClass staticObject;  // 静态实例
+    globalObject.setX(5);
+    staticObject.setX(10);
+    int globalX = globalObject.getX(); // globalX = 5
+    int staticX = staticObject.getX(); // staticX = 10
+    // ...
+    return 0;
+}
+</code></pre>
+<p>上面的例子中，通过调用 setX 和 getX 来对全局对象 globalObject 和静态对象 staticObject 的成员变量进行访问。</p>
+<p><strong>堆实例化的例子</strong></p>
+<pre><code class="language-c++">class MyClass {
+public:
+    MyClass() : m_x(0) {}
+    void setX(int x) { m_x = x; }
+    int getX() const { return m_x; }
+private:
+    int m_x;
+};
+
+int main() {
+    MyClass* heapObject = new MyClass;  // 堆实例
+    heapObject-&gt;setX(5);
+    int heapX = heapObject-&gt;getX(); // heapX = 5
+    // ...
+    delete heapObject;
+    return 0;
+}
+</code></pre>
+<p>上面的例子中，通过调用 setX 和 getX 来对堆对象 heapObject 的成员变量进行访问。</p>
+<p><strong>栈实例化的例子</strong></p>
+<pre><code class="language-c++">class MyClass {
+public:
+    MyClass() : m_x(0) {}
+    void setX(int x) { m_x = x; }
+    int getX() const { return m_x; }
+private:
+    int m_x;
+};
+
+void someFunction() {
+    MyClass stackObject;  // 栈实例
+    stackObject.setX(5);
+    int stackX = stackObject.getX(); // stackX = 5
+    // ...
+}
+
+int main() {
+    someFunction();
+    return 0;
+}
+</code></pre>
+<p>上面的例子中，通过调用 setX 和 getX 来对栈对象 stackObject 的成员变量进行访问。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[GAN网络]]></title>
-        <id>https://jeromezjl.github.io/post/gan-wang-luo/</id>
-        <link href="https://jeromezjl.github.io/post/gan-wang-luo/">
+        <id>http://localhost:4000/post/gan-wang-luo/</id>
+        <link href="http://localhost:4000/post/gan-wang-luo/">
         </link>
         <updated>2022-12-26T11:37:25.000Z</updated>
         <content type="html"><![CDATA[<p>训练循环顺序：<br>
@@ -30,8 +126,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[数据归一化处理]]></title>
-        <id>https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</id>
-        <link href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">
+        <id>http://localhost:4000/post/shu-ju-gui-yi-hua-chu-li/</id>
+        <link href="http://localhost:4000/post/shu-ju-gui-yi-hua-chu-li/">
         </link>
         <updated>2022-12-25T11:59:16.000Z</updated>
         <content type="html"><![CDATA[<p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
@@ -68,8 +164,8 @@ tranform = transforms.Compose([
     </entry>
     <entry>
         <title type="html"><![CDATA[【线性代数】矩阵的特征值和特征向量]]></title>
-        <id>https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
-        <link href="https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
+        <id>http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
+        <link href="http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
         </link>
         <updated>2022-12-05T10:23:51.000Z</updated>
         <content type="html"><![CDATA[<p>所谓凡事见微知著，由简推繁，要理解多维矩阵的特征值和特征向量的意思，我们不如从二维推起。<br>
@@ -82,13 +178,14 @@ tranform = transforms.Compose([
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL 复习]]></title>
-        <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
-        <link href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/">
+        <id>http://localhost:4000/post/sql-qi-zhong-fu-xi/</id>
+        <link href="http://localhost:4000/post/sql-qi-zhong-fu-xi/">
         </link>
         <updated>2022-10-27T09:14:16.000Z</updated>
         <content type="html"><![CDATA[<p>复习策略：<br>
 看网络资料的数据库复习<br>
 弄懂知识点，然后做一下里面的题</p>
+<p><a href="https://jeromezjl.github.io/post/sql/">SQL笔记</a></p>
 <h1 id="第三章-sql">第三章 SQL</h1>
 <p>熟练编写 sql 语句，创建、删除语句也要看，数据类型</p>
 <h1 id="第四章">第四章</h1>
@@ -140,6 +237,7 @@ where T.salary &gt; S.salary</p>
 <h1 id="第七章-e-r-图">第七章 E-R 图</h1>
 <p>非ER关系中，两个实体关联，每个实体中可能会有对方实体的主码，从而产生冗余<br>
 在ER关系中，如果一个实体的属性是另一个实体的主码，则删除该属性。二者的关联会在联系集里表达。（P183）</p>
+<p>双线表示一对一关系，实体集唯一对应关系集</p>
 <p>大学实体集及属性（P154 输入183）</p>
 <p>大学 E-R 图（P159 输入188）</p>
 <p>E-R 图图形含义（P172 输入 201）</p>
@@ -176,13 +274,32 @@ i.e. file structures<br>
 <p>搜索码：用于在文件中查找记录的属性或属性集<br>
 索引<br>
 什么是<br>
-聚集索引，非聚集索引，稠密索引，稀疏索引，</p>
+聚集索引 clustering index ，非聚集索引，稠密索引，稀疏索引，</p>
 <p>每个索引对数据增删改查是否有影响，</p>
 <p>索引创建在搜索码（属性）上面，可提高检索速度<br>
 要会说明原因</p>
 <p>在除了查询之外，delete update insert 时如何提高效率，搜索码<br>
 索引也有空间、时间开销，增加/删除，所以不一定能对增加删除修改起到提高效率的作用<br>
 也可能拖慢速度</p>
+<p><strong>on which attributes the indices can be further defined to speed up the query? 在哪里添加索引会继续加快查找？</strong><br>
+1.找语句中频繁使用的元素<br>
+2.找where后面的元素<br>
+3.找join on后面的元素<br>
+例：<br>
+select branch_city, sum(amount)<br>
+from branch inner join loan on branch_name<br>
+where assets&gt;1000<br>
+group by branch_city<br>
+1.branch_city加索引<br>
+2.assets加索引<br>
+3.branch_name加索引</p>
+<p><strong>Give a SQL statement to define a composite index on combined search key(branch_name, amount) on the table loan.  创建索引</strong><br>
+语法：<br>
+create index branch_name_amount_index on loan(branch_name, amount);<br>
+create index 索引名 on 表名（属性名）</p>
+<p><strong>Can this index be efficiently used for the following query, and why? 是否可以提升查询速度？</strong><br>
+答题角度：看被索引的对象在什么关键词后面。<br>
+比如在where后/经常被查询使用</p>
 <h1 id="第十二章-查询处理">第十二章 查询处理</h1>
 <p>熟悉关系代数的表示<br>
 <a href="https://blog.csdn.net/bianyamei/article/details/89491358">启发式查询树优化实例</a><br>
@@ -192,12 +309,57 @@ i.e. file structures<br>
 2、画出查询树<br>
 3、选择关系下移<br>
 4、投影下移，注意投影要在选择关系之上；每个自然连接前面必须有投影</p>
+<h1 id="函数依赖">函数依赖</h1>
+<p><a href="https://blog.csdn.net/m0_46670811/article/details/109526906">求属性集闭包(AB+)</a><br>
+<a href="https://blog.csdn.net/Game_Zmh/article/details/88058069">求属性集闭包</a></p>
+<p><strong>List all the candidate keys of R. 求候选键</strong><br>
+1.<a href="https://blog.csdn.net/YYbLQQ/article/details/124508824">即只出现在F箭头左边的一定是候选码</a><br>
+上例中，A和C只出现在箭头左边，我们用闭包计算可以得到U，则（AC）是该关系的候选码<br>
+注：除了候选键，其余都是非主属性<br>
+2.可以推出所有的字母的是候选键</p>
+<p><strong>What is the highest normal form of R 关系R的最高范式是什么（判断是第几范式）</strong><br>
+<a href="https://blog.csdn.net/m0_37345402/article/details/106163096">如何判断范式（1NF、2NF、3NF、BCNF）</a><br>
+1.求候选码。候选键可以是连着的几个字母，而主属性是分开的独立字母；除了主属性之外的字母都是非主属性<br>
+2.如果F中，存在左部没有候选码的关系，则有非平凡FD，则不是BCNF<br>
+3.如果上述关系中，右部都是主属性，则为3NF<br>
+4.如果任何主属性都不能推出非主属性，则为2NF<br>
+5.否则为1NF</p>
+<p><strong>lossless-join decomposition 判断无损分解</strong><br>
+<a href="https://blog.csdn.net/qq_41338249/article/details/112724127">无损分解讲解</a></p>
+<p><strong>Compute the canonical cover Fc 求最小函数依赖</strong><br>
+<a href="https://www.zhihu.com/question/21235096">知乎讲解</a><br>
+1.将右部都化为单一字母<br>
+2.去掉左边多余属性，具体方法：只需关注非单属性，求左侧的闭包，但不要加上左边推出的字母，比如 DG-&gt;C：判断(DG)+ = DG，不要再把C加上再推了。观察得到的闭包，如果闭包含有右侧推出的字母，则删除；否则保留。DG不含C，则保留。<br>
+3.剩余的单个关系，判断是否存在形如 D-&gt;C, C-&gt;A, D-&gt;A 这样的，删除 D-&gt;A 即可<br>
+综上可得出最小函数依赖</p>
+<p><strong>Give a lossless-join and dependency-preserving decomposition of R into 3NF</strong><br>
+在最小函数依赖上进行构建</p>
+<h1 id="事务">事务</h1>
+<p>concurrent transactions：并发事务<br>
+<a href="https://www.youtube.com/watch?v=U3SHusK80q0">画优先图 precedence graph 并 判断是否可串行化 serializable：油管清晰讲解</a><br>
+关注三对关系：R-&gt;W，W-&gt;R，W-&gt;W</p>
+<p><strong>是否是可恢复调度？ Is S a recoverable schedule, and why?</strong><br>
+对于可恢复调度，如果一个调度从另外一个调度的结果中读取数据，那么它必须在另外以后调度的commit之后commit。<br>
+不是可恢复调度的例子：<br>
+T2 读取 student 表中 stuID=10 的元组时，该元组内容已由 T1 修改过，但 T2 提交操作<br>
+commit 早于 T1 提交 commit。一旦 T1 在 T2 的 commit 操作之后回滚其 update student 操作，将 stuName 回滚为旧值，则 T2 的 select 操作无法随着回滚，T2 读取的仍然是 stuName 修改后的值。</p>
+<p><strong>是否是无级联调度？Is S a cascadeless schedule, and why?</strong><br>
+如果事务要对某个值执行读操作，则必须等到执行写入该值的事务 commit。</p>
+<p><strong>是否满足二阶段锁？ obey the two-phase locking protocol？</strong><br>
+在同一个事务中，前半部分全是lock，后面全是unlock，则满足，否则不满足<br>
+注意是在同一个事务中，如在T1这一列中看。</p>
+<p><strong>是否满足严格二阶段锁？ Strict two phase locking protocol</strong><br>
+共享锁（share）：lock_s；排他锁（exclusive）：lock_x<br>
+S2PLP 可以在 lock_s上锁之后随时释放它，但只能在 commit 的时候释放 lock_x<br>
+严锁在commit的时候同时释放所有锁。其主要区别简单来说，就是：2PL能随时释放锁，S2PL只能在事务结束后释放锁。但注意，随时释放不是指</p>
+<p><strong>是否满足严格二阶段锁？Rigorous two phase locking protocol</strong><br>
+R2PLP 只能在 commit 的时候释放所有锁， lock_s 和 lock_x</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[ML/DL 中常见的英文]]></title>
-        <id>https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/</id>
-        <link href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">
+        <id>http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/</id>
+        <link href="http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/">
         </link>
         <updated>2022-10-25T14:06:00.000Z</updated>
         <content type="html"><![CDATA[<p>parameters / params：参数<br>
@@ -211,8 +373,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[以梯度下降（Gradient Descent）展开的优化器总结]]></title>
-        <id>https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/</id>
-        <link href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">
+        <id>http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/</id>
+        <link href="http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/">
         </link>
         <updated>2022-10-25T12:57:09.000Z</updated>
         <content type="html"><![CDATA[<p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）</p>
@@ -232,8 +394,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[KPL 语言]]></title>
-        <id>https://jeromezjl.github.io/post/kpl-yu-yan/</id>
-        <link href="https://jeromezjl.github.io/post/kpl-yu-yan/">
+        <id>http://localhost:4000/post/kpl-yu-yan/</id>
+        <link href="http://localhost:4000/post/kpl-yu-yan/">
         </link>
         <updated>2022-10-16T09:38:19.000Z</updated>
         <content type="html"><![CDATA[<h1 id="编译过程">编译过程</h1>
@@ -264,8 +426,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[MNIST 手写数字识别]]></title>
-        <id>https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/</id>
-        <link href="https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/">
+        <id>http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/</id>
+        <link href="http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/">
         </link>
         <updated>2022-10-14T07:23:30.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;utm_relevant_index=2">手把手实战PyTorch手写数据集MNIST识别项目全流程</a></p>
@@ -445,31 +607,13 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[Novelai 使用]]></title>
-        <id>https://jeromezjl.github.io/post/novelai-shi-yong/</id>
-        <link href="https://jeromezjl.github.io/post/novelai-shi-yong/">
+        <id>http://localhost:4000/post/novelai-shi-yong/</id>
+        <link href="http://localhost:4000/post/novelai-shi-yong/">
         </link>
         <updated>2022-10-13T06:07:39.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1EV4y1L7dX/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">教程</a></p>
 <p>启动：浏览器输入域名：127.0.0.1:6969</p>
 <p><a href="https://zhuanlan.zhihu.com/p/572865961">参数教程</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[如何用英语思考？]]></title>
-        <id>https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/</id>
-        <link href="https://jeromezjl.github.io/post/ru-he-yong-ying-yu-si-kao/">
-        </link>
-        <updated>2022-09-26T07:37:07.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1TD4y1q7u9/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">b站</a></p>
-<h1 id="reading">Reading</h1>
-<p>阅读帮助建立特定单词的特定语境</p>
-<h1 id="new-words">New Words</h1>
-<p>看全英文的单词解释，用英语解释英语，形成英语思维。如果用中文，那么还是在用中文思考。<br>
-学习一个单词的所有变形，尽量学习所有意思<br>
-在语境中学习</p>
-<p><a href="https://www.vocabulary.com/">vocabulary 英文单词查询网站</a></p>
-<p>#Idioms<br>
-在正确的情况下正确使用谚语</p>
 ]]></content>
     </entry>
 </feed>
