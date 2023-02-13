@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-02-12T15:53:28.597Z</updated>
+    <updated>2023-02-13T04:29:47.341Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://jeromezjl.github.io"/>
+    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
+    <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
         <title type="html"><![CDATA[C++查缺补漏]]></title>
-        <id>http://localhost:4000/post/ccha-que-bu-lou/</id>
-        <link href="http://localhost:4000/post/ccha-que-bu-lou/">
+        <id>https://jeromezjl.github.io/post/ccha-que-bu-lou/</id>
+        <link href="https://jeromezjl.github.io/post/ccha-que-bu-lou/">
         </link>
         <updated>2023-01-04T05:36:25.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yourfriendyo/article/details/119544221">C语言详解：结构体</a><br>
@@ -108,8 +108,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[GAN网络]]></title>
-        <id>http://localhost:4000/post/gan-wang-luo/</id>
-        <link href="http://localhost:4000/post/gan-wang-luo/">
+        <id>https://jeromezjl.github.io/post/gan-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/gan-wang-luo/">
         </link>
         <updated>2022-12-26T11:37:25.000Z</updated>
         <content type="html"><![CDATA[<p>训练循环顺序：<br>
@@ -126,8 +126,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[数据归一化处理]]></title>
-        <id>http://localhost:4000/post/shu-ju-gui-yi-hua-chu-li/</id>
-        <link href="http://localhost:4000/post/shu-ju-gui-yi-hua-chu-li/">
+        <id>https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</id>
+        <link href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">
         </link>
         <updated>2022-12-25T11:59:16.000Z</updated>
         <content type="html"><![CDATA[<p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
@@ -164,8 +164,8 @@ tranform = transforms.Compose([
     </entry>
     <entry>
         <title type="html"><![CDATA[【线性代数】矩阵的特征值和特征向量]]></title>
-        <id>http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
-        <link href="http://localhost:4000/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
+        <id>https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
+        <link href="https://jeromezjl.github.io/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
         </link>
         <updated>2022-12-05T10:23:51.000Z</updated>
         <content type="html"><![CDATA[<p>所谓凡事见微知著，由简推繁，要理解多维矩阵的特征值和特征向量的意思，我们不如从二维推起。<br>
@@ -178,8 +178,8 @@ tranform = transforms.Compose([
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL 复习]]></title>
-        <id>http://localhost:4000/post/sql-qi-zhong-fu-xi/</id>
-        <link href="http://localhost:4000/post/sql-qi-zhong-fu-xi/">
+        <id>https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/</id>
+        <link href="https://jeromezjl.github.io/post/sql-qi-zhong-fu-xi/">
         </link>
         <updated>2022-10-27T09:14:16.000Z</updated>
         <content type="html"><![CDATA[<p>复习策略：<br>
@@ -358,8 +358,8 @@ R2PLP 只能在 commit 的时候释放所有锁， lock_s 和 lock_x</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[ML/DL 中常见的英文]]></title>
-        <id>http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/</id>
-        <link href="http://localhost:4000/post/mldl-zhong-chang-jian-de-ying-wen/">
+        <id>https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/</id>
+        <link href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">
         </link>
         <updated>2022-10-25T14:06:00.000Z</updated>
         <content type="html"><![CDATA[<p>parameters / params：参数<br>
@@ -373,8 +373,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[以梯度下降（Gradient Descent）展开的优化器总结]]></title>
-        <id>http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/</id>
-        <link href="http://localhost:4000/post/ti-du-xia-jiang-gradient-descent/">
+        <id>https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/</id>
+        <link href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">
         </link>
         <updated>2022-10-25T12:57:09.000Z</updated>
         <content type="html"><![CDATA[<p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）</p>
@@ -394,8 +394,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[KPL 语言]]></title>
-        <id>http://localhost:4000/post/kpl-yu-yan/</id>
-        <link href="http://localhost:4000/post/kpl-yu-yan/">
+        <id>https://jeromezjl.github.io/post/kpl-yu-yan/</id>
+        <link href="https://jeromezjl.github.io/post/kpl-yu-yan/">
         </link>
         <updated>2022-10-16T09:38:19.000Z</updated>
         <content type="html"><![CDATA[<h1 id="编译过程">编译过程</h1>
@@ -426,8 +426,8 @@ Regularization： 正则化</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[MNIST 手写数字识别]]></title>
-        <id>http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/</id>
-        <link href="http://localhost:4000/post/mnist-shou-xie-shu-zi-shi-bie/">
+        <id>https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/</id>
+        <link href="https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/">
         </link>
         <updated>2022-10-14T07:23:30.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;utm_relevant_index=2">手把手实战PyTorch手写数据集MNIST识别项目全流程</a></p>
@@ -607,8 +607,8 @@ KFold_and_Train(k_split_value)
     </entry>
     <entry>
         <title type="html"><![CDATA[Novelai 使用]]></title>
-        <id>http://localhost:4000/post/novelai-shi-yong/</id>
-        <link href="http://localhost:4000/post/novelai-shi-yong/">
+        <id>https://jeromezjl.github.io/post/novelai-shi-yong/</id>
+        <link href="https://jeromezjl.github.io/post/novelai-shi-yong/">
         </link>
         <updated>2022-10-13T06:07:39.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1EV4y1L7dX/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">教程</a></p>
