@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-02-13T04:29:47.341Z</updated>
+    <updated>2023-02-27T14:39:17.135Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -22,6 +22,15 @@ template：模板</p>
 <h1 id="循环">循环</h1>
 <p>while (cin &gt;&gt; x){}<br>
 cin函数，输入NULL时返回0，输入其他值返回它的地址</p>
+<h1 id="结构体">结构体</h1>
+<p>typedef struct xxx {} yyy；yyy为结构体xxx的别名，是一种数据类型，需要实例化。<br>
+<a href="https://blog.csdn.net/jacksls/article/details/108529761">定义结构体 typedef struct 的用法总结</a></p>
+<p><strong>在结构体别名中定义结构体指针</strong></p>
+<pre><code class="language-c">typedef struct DNode{
+	ElemType data;
+	DNode* prior, * next;
+}DNode, * DLinkList;  // * DLinkList 就是指向DNode类型的指针，声明时用DNode和DLinkList都可以
+</code></pre>
 <h1 id="指针">指针</h1>
 <p><a href="https://blog.csdn.net/weixin_39640298/article/details/84900326">C++指针详解</a><br>
 &amp;：取地址<br>
@@ -30,8 +39,120 @@ cin函数，输入NULL时返回0，输入其他值返回它的地址</p>
 用“-&gt;”的情况：<br>
 A是一个类 class / struct<br>
 p是一个指向A类型的指针，那么用p访问A中的成员变量和函数时，使用p-&gt;x，p-&gt;f(x)来访问。</p>
+<p><strong>向函数传入变量的指针和引用的区别</strong><br>
+传入指针时，函数参数中是对指针的定义 int* a，传入函数的是变量的地址，&amp;a；<br>
+传入引用时，函数参数中是对原变量的引用 int &amp;a，传入函数的是原变量，a。<br>
+总之，传入指针是 通过指针，对指针指向的内存地址进行操作；传入变量的引用是直接对原变量进行修改。二者效果一样，但是原理不一样。<br>
+<code>指针</code></p>
+<pre><code class="language-c">typedef struct SqList{
+	int data[MaxSize];
+	int length;
+};
+
+void InitList(SqList *list){
+	cout&lt;&lt;&quot;type in the length of list:&quot;&lt;&lt;endl;
+	cin&gt;&gt;list-&gt;length;
+	cout&lt;&lt;&quot;type in the data:&quot;&lt;&lt;endl; 
+	for(int i = 0; i&lt;list-&gt;length; i++)
+		cin&gt;&gt;list-&gt;data[i];
+}
+int main(){
+	SqList sqlist;
+	InitList(&amp;sqlist);
+}
+</code></pre>
+<p><code>引用</code></p>
+<pre><code class="language-c">typedef struct SqList{
+	int data[MaxSize];
+	int length;
+};
+
+void InitList(SqList &amp;list){
+	cout&lt;&lt;&quot;type in the length of list:&quot;&lt;&lt;endl;
+	cin&gt;&gt;list.length;
+	cout&lt;&lt;&quot;type in the data:&quot;&lt;&lt;endl; 
+	for(int i = 0; i&lt;list.length; i++)
+		cin&gt;&gt;list.data[i];
+}
+int main(){
+	SqList sqlist;
+	InitList(sqlist);
+}
+</code></pre>
+<p>上面两段代码，如果用指针访问结构体，则需要用-&gt;访问结构体成员；如果用原结构体，则用 . 由此可见，指针和引用的差别。</p>
+<p><strong>向函数中传入指针类型的数据</strong><br>
+和上面的不同，上面传入的是变量的地址，在函数列表中被定义，成为指针。而本问题描述的是直接将指针类型的数据传入函数。</p>
+<pre><code class="language-c">#include&lt;bits/stdc++.h&gt;
+
+typedef struct DNode{
+	ElemType data;
+	DNode* prior, * next;
+}DNode, * DLinkList;  //DLinkList为指向结构体的指针类型
+ 
+//初始化双链表
+bool InitDLinkList(DLinkList L) {  //此处和变量的指针一样，也可该写作 DNode* L
+	L = (DLinkList)malloc(sizeof(DLinkList));
+	if (L == NULL) {
+		return false;          
+	}
+	L-&gt;prior = NULL;
+	L-&gt;next = NULL;
+	return true;
+}
+
+int main() {
+	DLinkList L;  //定义指针类型数据L
+	InitDLinkList(L);  //由于指针的值即为变量的地址，所以和&amp;+变量名一样，都是将地址传入函数。
+	return 0;
+}
+</code></pre>
+<p><strong>swap的例子</strong><br>
+<code>指针</code></p>
+<pre><code class="language-c"># include&lt;iostream&gt;
+using namespace std;
+
+void MySwap(int* a, int* b){  //在列表中定义两个指针a，b，分别指向传入变量a，b的地址 
+	int t = 0;  
+	t = *a;  //交换值 
+	*a = *b;
+	*b = t;
+	
+	//错误的思路：用指针交换来交换 
+	int *t = NULL;  //定义中间指针t，用于指针之间的赋值 
+	t = a;
+	a = b;
+	b = t;
+	//以上操作只是让函数内的指针ab分别指向了ba，但没有对对应地址内的值进行任何改变 
+}
+
+int main(){
+	int a = 1,b = 2;
+	MySwap(&amp;a, &amp;b);  //传入变量ab的地址 
+	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b;
+}
+//向函数传入变量的地址。把函数声明和传入函数的形式整体来看，就是 int* a = &amp;a; 
+//也就是指针定义操作 
+</code></pre>
+<p><code>引用</code></p>
+<pre><code class="language-c"># include&lt;iostream&gt;
+using namespace std;
+
+void MySwap(int　&amp;a, int　&amp;b){  //在列表中定义两个地址引用
+	int t = 0;  
+	t = a; //直接修改原变量
+	a = b;
+	b = t;
+}
+
+int main(){
+	int a = 1,b = 2;
+	MySwap(a, b);  //直接传入原始变量ab
+	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b;
+}
+</code></pre>
 <h1 id="类和对象">类和对象</h1>
-<p>类中不带返回类型的函数为构造函数。造函数可用于为某些成员变量设置初始值。</p>
+<p>类中不带返回类型的函数为构造函数。造函数可用于为某些成员变量设置初始值。<br>
+<a href="https://blog.csdn.net/qq_42565910/article/details/90346236">c语言malloc函数的用法和意义</a></p>
 <p><strong>C++三种常见的实例化方法</strong></p>
 <ol>
 <li>静态实例化：在程序的全局或静态作用域中定义并初始化一个对象，该对象在程序整个生命周期内只存在一个实例。</li>
