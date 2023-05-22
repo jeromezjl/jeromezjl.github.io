@@ -1,19 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4001</id>
+    <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-03-30T06:33:33.407Z</updated>
+    <updated>2023-05-22T02:06:33.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4001"/>
-    <link rel="self" href="http://localhost:4001/atom.xml"/>
+    <link rel="alternate" href="https://jeromezjl.github.io"/>
+    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>http://localhost:4001/images/avatar.png</logo>
-    <icon>http://localhost:4001/favicon.ico</icon>
+    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
+    <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[深度学习的一般步骤]]></title>
+        <id>https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/</id>
+        <link href="https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/">
+        </link>
+        <updated>2023-05-19T07:05:13.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/66021413">快速搞定 epoch, batch, iteration</a><br>
+<a href="https://link.zhihu.com/?target=http%3A//playground.tensorflow.org">深度学习模拟网站，可观察参数变化对训练的影响</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【NLP】BiLSTM-CRF算法]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa/">
+        </link>
+        <updated>2023-05-15T14:27:05.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/u010366748/article/details/113784204">BiLSTM-CRF实现中文命名实体识别（NER）</a></p>
+<p><strong>概述</strong><br>
+BiLSTM-CRF（Bidirectional Long Short-Term Memory - Conditional Random Field）是一种深度学习算法，常用于序列标注任务，如命名实体识别、词性标注等。BiLSTM-CRF结合了双向长短时记忆网络（BiLSTM）和条件随机场（CRF）两种技术，具有较强的建模能力和预测准确性。</p>
+<p>BiLSTM是一种递归神经网络，可以捕捉序列中前后文的依赖关系。它由两个LSTM（Long Short-Term Memory）层组成，分别从左向右和从右向左处理输入序列，然后将它们的输出拼接起来。这样，每个时间步的输出包含了当前时刻及其前后若干时刻的信息，更好地表达了序列的语义。</p>
+<p>CRF是一种概率模型，用于对序列标注结果进行建模，考虑标签之间的关联性和约束条件，可以使得标注结果更加合理和连贯。在BiLSTM-CRF中，CRF层接受BiLSTM层的输出作为输入，并且通过联合学习的方式，将BiLSTM层的输出和CRF层的标注结果进行训练，以最大化标注的准确性。</p>
+<p>BiLSTM-CRF的训练过程通常采用反向传播算法，以最小化模型对标注数据的损失。在测试阶段，通过在CRF层上使用维特比算法，找到最可能的标注序列，作为模型的预测结果。</p>
+<p>总之，BiLSTM-CRF算法在序列标注任务中表现出了良好的性能，能够捕捉序列中的长距离依赖关系和标签之间的约束关系，从而提高了模型的预测准确性。</p>
+<p><strong>命名实体</strong><br>
+在自然语言处理中，命名实体（Named Entity）是指具有特定语义的实体，如人名、地名、组织机构名、时间、数量、货币等。命名实体识别（Named Entity Recognition，NER）是一种信息抽取技术，用于自动识别文本中的命名实体，并将其分类为预定义的类型。</p>
+<p>命名实体识别在信息检索、机器翻译、问答系统、自然语言生成等领域中有着广泛的应用。例如，在搜索引擎中，将用户查询中的命名实体与数据库中的实体进行匹配，可以帮助用户更快地找到所需信息。在机器翻译中，识别源文本中的命名实体可以帮助翻译系统更准确地理解句子的含义，从而提高翻译质量。</p>
+<p>命名实体识别通常使用基于规则、基于统计的方法或基于深度学习的方法。其中，基于深度学习的方法，如BiLSTM-CRF等模型，因其在序列标注任务中的优越表现，已经成为了命名实体识别的主流方法。</p>
+<p><strong>序列标注任务</strong><br>
+序列标注任务是一种自然语言处理任务，旨在将输入序列中的每个元素标注为特定的类别。常见的序列标注任务包括词性标注、命名实体识别、情感分析、语义角色标注等。</p>
+<p>在序列标注任务中，输入序列通常是一个由单词或字符组成的序列，每个单词或字符都要被标注为特定的类别。标注的类别可以是预定义的固定类别，例如名词、动词、形容词等，也可以是根据任务需要定义的自定义类别，例如人名、地名、组织机构名等。</p>
+<p>序列标注任务通常使用监督学习的方法进行模型训练，例如最大熵模型、条件随机场、递归神经网络等。在最近几年，基于深度学习的方法，如卷积神经网络（CNN）、循环神经网络（RNN）和其变体，如LSTM、GRU等，已经成为序列标注任务中最有效的方法之一，取得了很好的效果。</p>
+<p>序列标注任务在自然语言处理中有着广泛的应用，如文本分类、机器翻译、信息抽取、问答系统等。</p>
+<p><strong>BIO-三位序列标注法（BIO-3）</strong><br>
+BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标注方法，特别在命名实体识别（NER）任务中广泛应用。该方法将每个标记分为三个部分：B（Beginning）、I（Inside）、O（Outside）。下面对BIO-3的含义进行解释：</p>
+<p>B（Beginning）：表示实体的起始位置。在一个实体的第一个字上标记为B，例如&quot;B-Person&quot;表示一个人名实体的起始位置。</p>
+<p>I（Inside）：表示实体的中间位置。在一个实体的非起始字上标记为I，例如&quot;I-Person&quot;表示一个人名实体的中间或结束位置。</p>
+<p>O（Outside）：表示不属于任何实体的标记，即普通文本部分。</p>
+<p>通过使用BIO-3标记法，我们可以准确地表示实体在文本中的起始和结束位置。这种方法的主要优点是灵活性，因为它可以处理不同长度和类型的实体。</p>
+<p>除了BIO-3，还有其他常见的序列标注方法，包括：</p>
+<p>IOB（Inside-Outside-Beginning）：与BIO-3类似，但使用I（Inside）和B（Beginning）标记来表示实体的起始和中间位置。</p>
+<p>IOB2：与IOB方法类似，但在一段连续的实体标记序列中，每个实体的第一个字都标记为B，而后续的字标记为I。</p>
+<p>IOE（Inside-Outside-End）：与BIO-3类似，但使用I（Inside）和E（End）标记来表示实体的中间和结束位置。</p>
+<p>IO：只有I（Inside）和O（Outside）两个标记，没有明确的起始标记。</p>
+<p>这些标注方法都是为了在序列标注任务中准确表示实体的位置和边界。具体选择哪种标注方法取决于任务的需求和数据集的特点。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/367995480"> 测试集、训练集、开发集的区别</a><br>
+<a href="https://zhuanlan.zhihu.com/p/148813079">CRF条件随机场的原理、例子、公式推导和应用</a><br>
+<a href="https://zhuanlan.zhihu.com/p/44042528">最通俗易懂的BiLSTM-CRF模型中的CRF层介绍</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[K-means]]></title>
+        <id>https://jeromezjl.github.io/post/k-means/</id>
+        <link href="https://jeromezjl.github.io/post/k-means/">
+        </link>
+        <updated>2023-05-10T13:27:56.000Z</updated>
+        <content type="html"><![CDATA[<p>kelbow_visualizer</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【摄影】调色思路]]></title>
+        <id>https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/</id>
+        <link href="https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/">
+        </link>
+        <updated>2023-04-02T13:54:49.000Z</updated>
+        <content type="html"><![CDATA[<p>降低纹理可以减少画面杂乱感，比如杂草背景<br>
+背光人像可以通过提高清晰度提高人像亮度<br>
+调节曝光要保证画面整体看起来和谐。比如白色色阶不能过于割裂</p>
+<p>调色工具<br>
+<a href="https://www.chinavid.com/color.html">高级在线配色器</a></p>
+<p>色卡生成工具<br>
+<a href="https://photokit.com/colors/palette-generator/?lang=zh">调色板生成器1</a><br>
+<a href="https://colors.dopely.top/image-color-picker/">调色板生成器2</a></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[BPE]]></title>
-        <id>http://localhost:4001/post/bpe/</id>
-        <link href="http://localhost:4001/post/bpe/">
+        <id>https://jeromezjl.github.io/post/bpe/</id>
+        <link href="https://jeromezjl.github.io/post/bpe/">
         </link>
         <updated>2023-03-30T06:22:31.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_43902773/article/details/115191790">基于BPE的汉语tokenization</a></p>
@@ -23,12 +97,12 @@
 <li>英文单词由于时态、单复数、大小写等因素，可能具有多个单词变体，比如单词go具有这样的变体： going, gone, goes，单纯基于空格从语料中收集单词，可能会导致词表过大，进而导致模型学习过程中，需要设置较大的词向量矩阵，增加模型参数。</li>
 <li>由于词表难以穷尽所有单词，以及网络中会出现一些新的词，导致某些词无法出现在词表中，即出现集外词（OOV）。<br>
 BPE（Byte-Pair Encoding）是缓解这些问题的一种算法，其不再按照完整的单词进行分词，而是将单词划分成了子词（sub-word）的粒度。例如单词showed可以被划分为show和ed， 如此做法，可以有效缩减单词个数，同时通过拆解子词也能够缓解OOV问题。图1展示了一种BPE算法效果的示例，一方面通过右侧的子词组合可以表示左侧任意一个单词，另一方面通过子词的表示大大减小了原本词表的大小。<br>
-<img src="http://localhost:4001/post-images/1680157576369.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1680157576369.png" alt="" loading="lazy"><br>
 图1 BPE算法示例</li>
 </ol>
 <h1 id="12-实现流程">1.2 实现流程</h1>
 <p>如图2所示，使用BPE算法进行对文本进行分词，首先需要根据英文语料构建BPE的子词词表，根据此词表即可对给定的文本序列进行编码，即分词，获取分词后的文本序列。同时提供根据编码后的结果还原原始语句的方法。<br>
-<img src="http://localhost:4001/post-images/1680157622297.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1680157622297.png" alt="" loading="lazy"><br>
 图2 BPE实现流程</p>
 <h1 id="13-词表构建">1.3 词表构建</h1>
 <p>词表构建是BPE算法的核心，首先需要准备一批语料，然后从语料中逐步统计词频，构建BPE子词词表。具体来讲，首先需要将训练数据中的每个单词切分成字符作为初始子词，并统计语料中的子词初始化子词词表。接下来，可以按照如下步骤逐步迭代：</p>
@@ -347,8 +421,8 @@ print(&quot;还原结果: &quot;, text)
     </entry>
     <entry>
         <title type="html"><![CDATA[视频目标检测]]></title>
-        <id>http://localhost:4001/post/shi-pin-mu-biao-jian-ce/</id>
-        <link href="http://localhost:4001/post/shi-pin-mu-biao-jian-ce/">
+        <id>https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/</id>
+        <link href="https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/">
         </link>
         <updated>2023-03-10T05:51:59.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_40557160/article/details/109536612">视频目标检测VID论文及代码（更新至2020.12）</a><br>
@@ -360,8 +434,8 @@ print(&quot;还原结果: &quot;, text)
     </entry>
     <entry>
         <title type="html"><![CDATA[【Linux】内核模块开发]]></title>
-        <id>http://localhost:4001/post/linux-nei-he-mo-kuai-kai-fa/</id>
-        <link href="http://localhost:4001/post/linux-nei-he-mo-kuai-kai-fa/">
+        <id>https://jeromezjl.github.io/post/linux-nei-he-mo-kuai-kai-fa/</id>
+        <link href="https://jeromezjl.github.io/post/linux-nei-he-mo-kuai-kai-fa/">
         </link>
         <updated>2023-03-09T01:59:01.000Z</updated>
         <content type="html"><![CDATA[<p>https://zhuanlan.zhihu.com/p/420194002</p>
@@ -389,8 +463,8 @@ makefile里要用tab，不能用空格<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[C++查缺补漏]]></title>
-        <id>http://localhost:4001/post/ccha-que-bu-lou/</id>
-        <link href="http://localhost:4001/post/ccha-que-bu-lou/">
+        <id>https://jeromezjl.github.io/post/ccha-que-bu-lou/</id>
+        <link href="https://jeromezjl.github.io/post/ccha-que-bu-lou/">
         </link>
         <updated>2023-01-04T05:36:25.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yourfriendyo/article/details/119544221">C语言详解：结构体</a><br>
@@ -679,11 +753,23 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[GAN网络]]></title>
-        <id>http://localhost:4001/post/gan-wang-luo/</id>
-        <link href="http://localhost:4001/post/gan-wang-luo/">
+        <id>https://jeromezjl.github.io/post/gan-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/gan-wang-luo/">
         </link>
         <updated>2022-12-26T11:37:25.000Z</updated>
         <content type="html"><![CDATA[<h1 id="图像预处理">图像预处理</h1>
+<p>对文件夹下批量图片进行rename</p>
+<pre><code>import os
+
+# 图片存放的路径
+path = r&quot;C:\Users\ZJL\Desktop\1&quot;
+
+# 遍历更改文件名
+num = 1
+for file in os.listdir(path):
+    os.rename(os.path.join(path,file),os.path.join(path,str(num))+&quot;.jpg&quot;)
+    num = num + 1
+</code></pre>
 <p>本次项目只有八张图片，我们需要进行数据增强，获取更大的数据集。</p>
 <p>首先，要对图像进行<strong>分辨率的统一</strong>。分辨率，即为图像中像素点的个数，例如，一个分辨率为 1920x1080 的图像，表示它在水平方向上有 1920 个像素，在垂直方向上有 1080 个像素。</p>
 <p>问：为什么相同分辨率，相同文件类型，但是图片的文件大小不一样？<br>
@@ -707,8 +793,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[数据归一化处理]]></title>
-        <id>http://localhost:4001/post/shu-ju-gui-yi-hua-chu-li/</id>
-        <link href="http://localhost:4001/post/shu-ju-gui-yi-hua-chu-li/">
+        <id>https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</id>
+        <link href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">
         </link>
         <updated>2022-12-25T11:59:16.000Z</updated>
         <content type="html"><![CDATA[<p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
@@ -741,236 +827,6 @@ tranform = transforms.Compose([
 </code></pre>
 <p>其中 0.1307 和 0.3081 分别是MNIST的均值和方差，可以自己计算，也可以网上查<br>
 等同于 X_normalized = (X - 0.1307) / 0.3081，转化为均值为0，方差为1的数据。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【线性代数】矩阵的特征值和特征向量]]></title>
-        <id>http://localhost:4001/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/</id>
-        <link href="http://localhost:4001/post/xian-xing-dai-shu-ju-zhen-de-te-zheng-zhi-he-te-zheng-xiang-liang/">
-        </link>
-        <updated>2022-12-05T10:23:51.000Z</updated>
-        <content type="html"><![CDATA[<p>所谓凡事见微知著，由简推繁，要理解多维矩阵的特征值和特征向量的意思，我们不如从二维推起。<br>
-矩阵，又称为矩阵空间，矩阵包含空间信息。1x2 的矩阵，是二维空间上的矩阵</p>
-<p>若非零向量 x 满足 Ax = λx，则 λ 为特征值，x 为特征向量。<br>
-特征向量在经过矩阵 A 的变换后，不改变，只需要乘上一个常数 λ</p>
-<p>对于矩阵特征值和特征向量公式的理解：一个矩阵点乘一个向量就相当于对该向量进行旋转或者拉伸等一系列线性变换。在我们求解矩阵的特征值和特征向量的时候就是要求解矩阵 A，A能够使得这些特征向量只发生伸缩变换，而变换的效果等价于特征向量与某个常量 λ 相乘。<br>
-在二维空间理解一下这个式子的含义。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SQL 复习]]></title>
-        <id>http://localhost:4001/post/sql-qi-zhong-fu-xi/</id>
-        <link href="http://localhost:4001/post/sql-qi-zhong-fu-xi/">
-        </link>
-        <updated>2022-10-27T09:14:16.000Z</updated>
-        <content type="html"><![CDATA[<p>复习策略：<br>
-看网络资料的数据库复习<br>
-弄懂知识点，然后做一下里面的题</p>
-<p><a href="https://jeromezjl.github.io/post/sql/">SQL笔记</a></p>
-<h1 id="第三章-sql">第三章 SQL</h1>
-<p>熟练编写 sql 语句，创建、删除语句也要看，数据类型</p>
-<h1 id="第四章">第四章</h1>
-<p>◼ Join Expressions（连接表达式）<br>
-◼ Views 视图<br>
-◼ Transactions<br>
-◼ Integrity Constraints<br>
-◼ SQL Data Types and Schemas<br>
-◼ Authorization<br>
-◼ Security in SQL</p>
-<p>Join 参见 sql 的总结，natural join，inner join 等</p>
-<h1 id="第五章-高级-sql">第五章 高级 SQL</h1>
-<p>这章期中没考</p>
-<p>使用程序设计语言访问数据库<br>
-通过两种方式从通用编程语言访问 SQL：<br>
-动态 SQL：通过函数或方法<br>
-嵌入式 SQL：在编译时全部确定</p>
-<p>JDBC 标准定义了 java 和 SQL 的 API</p>
-<h1 id="第六章-关系代数">第六章 关系代数</h1>
-<p><a href="https://blog.csdn.net/quinnnorris/article/details/70739094">SQL 形式化语言——关系代数</a><br>
-重点是如何将sql语句转化为关系代数</p>
-<p>选择运算 select operation σ<br>
-选择关系instructor中属于物理系的元组：<br>
-σ dept_name=“Physics”(instructor)<br>
-选择关系 instructor 中 salary&gt;90000 的元组：<br>
-σ salary&gt;90000 (instructor)<br>
-⋀ (and), ⋁ (or), (not)</p>
-<p>投影运算 project operation  ∏<br>
-用于选择表中想要的属性<br>
-∏ name, salary (instructor)<br>
-找出物理系中所有教师的名字：<br>
-∏ name (σ dept_name=“Physic’ (instructor))</p>
-<p>并运算 union operation ∪<br>
-找出开设在 2009 年球季或者 2010 年春季学期，或者二者皆开的课程集合<br>
-∏course_id (σ semester=“Fall” Λ year=2009 (section)) ∪<br>
-∏course_id (σ semester=“Spring” Λ year=2010 (section))</p>
-<p>集合差运算 Set Difference Operation -<br>
-找出开设在 2009 年秋季但不开设在 2010 年春季的课程<br>
-∏course_id (σ semester=“Fall”Λ year=2009(section))-<br>
-∏course_id (σ semester=“Spring”Λ year=2010(section))</p>
-<p>笛卡尔积运算 Cartesian-Product Operation x<br>
-∏ name (σ dept_name=“Physic’ (instructor x teaches))</p>
-<p>更名运算 Rename Operation<br>
-选出 instructor 中 salary 最高的：<br>
-σ instructor.salary &lt; d.salary (instructor ╳ ρ d(instructor))</p>
-<p>select T.salary<br>
-from instructor T, instructor S<br>
-where T.salary &gt; S.salary</p>
-<h1 id="第七章-e-r-图">第七章 E-R 图</h1>
-<p>非ER关系中，两个实体关联，每个实体中可能会有对方实体的主码，从而产生冗余<br>
-在ER关系中，如果一个实体的属性是另一个实体的主码，则删除该属性。二者的关联会在联系集里表达。（P183）</p>
-<p>双线表示一对一关系，实体集唯一对应关系集</p>
-<p>大学实体集及属性（P154 输入183）</p>
-<p>大学 E-R 图（P159 输入188）</p>
-<p>E-R 图图形含义（P172 输入 201）</p>
-<p>练习题（P179 输入208）</p>
-<p>弱实体集：如果保留某些属性，则在和别的集合关联时，会造成属性的冗余。所以我们选择删掉该属性。但删掉后，当前剩余的属性就不能保证唯一标识元素。这样的实体集称为弱实体集。弱实体集必须与强实体集关联才有意义。</p>
-<p>E-R 图中，双线表示有且仅有一个相关的对象<br>
-箭头：A → B 表明 每个 A 至多有一个 B</p>
-<p>构造关系表时，如果有多个候选键，最好选取数值型（int, float）候选键作为关系表主键，便于提高基于主键的查询速度<br>
-—不要选字符串型属性，如varchar、datetime<br>
-—e.g. studentname, instructorName</p>
-<p>双菱形表示弱实体集的标识性联系集</p>
-<p>构建 E-R 图步骤<br>
-从关系集入手，分别判断其关联的两个实体集的对应关系。看是采用双线、箭头，还是单线。<br>
-判断弱实体集：看关联的两个实体集的属性，是否有相同的，如果有，去掉其中一个的属性，将其变为弱实体集，然后将关系变为双菱形。</p>
-<h1 id="第八章-关系数据库的设计">第八章 关系数据库的设计</h1>
-<p>◼ Features of Good Relational Design<br>
-◼ Atomic Domains and First Normal Form<br>
-◼ Decomposition Using Functional Dependencies<br>
-◼ Functional Dependency Theory<br>
-◼ Algorithms for Functional Dependencies</p>
-<p><strong>好的关系设计的特点</strong><br>
-取决于E-R图质量<br>
-是否有重复，是否可以很好的表示所有信息<br>
-删除和更新问题</p>
-<p><a href="https://www.cnblogs.com/sky20080101/articles/8445061.html">原子性和第一范式</a></p>
-<h1 id="第十章-数据存储和文件结构">第十章 数据存储和文件结构</h1>
-<p>◼ File organization (at physical level, §10.5)<br>
-◼ Organization of records in files (at logical level, §10.6 ),<br>
-i.e. file structures<br>
-◼ Data-dictionary Storage (§10.7)<br>
-◼ Data Buffer (§10.8)</p>
-<p><strong>10.5 文件组织</strong></p>
-<h1 id="第十一章-索引">第十一章 索引</h1>
-<p>搜索码：用于在文件中查找记录的属性或属性集<br>
-索引<br>
-什么是<br>
-聚集索引 clustering index ，非聚集索引，稠密索引，稀疏索引，</p>
-<p>每个索引对数据增删改查是否有影响，</p>
-<p>索引创建在搜索码（属性）上面，可提高检索速度<br>
-要会说明原因</p>
-<p>在除了查询之外，delete update insert 时如何提高效率，搜索码<br>
-索引也有空间、时间开销，增加/删除，所以不一定能对增加删除修改起到提高效率的作用<br>
-也可能拖慢速度</p>
-<p><strong>on which attributes the indices can be further defined to speed up the query? 在哪里添加索引会继续加快查找？</strong><br>
-1.找语句中频繁使用的元素<br>
-2.找where后面的元素<br>
-3.找join on后面的元素<br>
-例：<br>
-select branch_city, sum(amount)<br>
-from branch inner join loan on branch_name<br>
-where assets&gt;1000<br>
-group by branch_city<br>
-1.branch_city加索引<br>
-2.assets加索引<br>
-3.branch_name加索引</p>
-<p><strong>Give a SQL statement to define a composite index on combined search key(branch_name, amount) on the table loan.  创建索引</strong><br>
-语法：<br>
-create index branch_name_amount_index on loan(branch_name, amount);<br>
-create index 索引名 on 表名（属性名）</p>
-<p><strong>Can this index be efficiently used for the following query, and why? 是否可以提升查询速度？</strong><br>
-答题角度：看被索引的对象在什么关键词后面。<br>
-比如在where后/经常被查询使用</p>
-<h1 id="第十二章-查询处理">第十二章 查询处理</h1>
-<p>熟悉关系代数的表示<br>
-<a href="https://blog.csdn.net/bianyamei/article/details/89491358">启发式查询树优化实例</a><br>
-<a href="https://www.bilibili.com/video/BV1Fp4y1a7Cs/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解 数据库语法树优化</a></p>
-<p>步骤<br>
-1、写出关系代数表达式<br>
-2、画出查询树<br>
-3、选择关系下移<br>
-4、投影下移，注意投影要在选择关系之上；每个自然连接前面必须有投影</p>
-<h1 id="函数依赖">函数依赖</h1>
-<p><a href="https://blog.csdn.net/m0_46670811/article/details/109526906">求属性集闭包(AB+)</a><br>
-<a href="https://blog.csdn.net/Game_Zmh/article/details/88058069">求属性集闭包</a></p>
-<p><strong>List all the candidate keys of R. 求候选键</strong><br>
-1.<a href="https://blog.csdn.net/YYbLQQ/article/details/124508824">即只出现在F箭头左边的一定是候选码</a><br>
-上例中，A和C只出现在箭头左边，我们用闭包计算可以得到U，则（AC）是该关系的候选码<br>
-注：除了候选键，其余都是非主属性<br>
-2.可以推出所有的字母的是候选键</p>
-<p><strong>What is the highest normal form of R 关系R的最高范式是什么（判断是第几范式）</strong><br>
-<a href="https://blog.csdn.net/m0_37345402/article/details/106163096">如何判断范式（1NF、2NF、3NF、BCNF）</a><br>
-1.求候选码。候选键可以是连着的几个字母，而主属性是分开的独立字母；除了主属性之外的字母都是非主属性<br>
-2.如果F中，存在左部没有候选码的关系，则有非平凡FD，则不是BCNF<br>
-3.如果上述关系中，右部都是主属性，则为3NF<br>
-4.如果任何主属性都不能推出非主属性，则为2NF<br>
-5.否则为1NF</p>
-<p><strong>lossless-join decomposition 判断无损分解</strong><br>
-<a href="https://blog.csdn.net/qq_41338249/article/details/112724127">无损分解讲解</a></p>
-<p><strong>Compute the canonical cover Fc 求最小函数依赖</strong><br>
-<a href="https://www.zhihu.com/question/21235096">知乎讲解</a><br>
-1.将右部都化为单一字母<br>
-2.去掉左边多余属性，具体方法：只需关注非单属性，求左侧的闭包，但不要加上左边推出的字母，比如 DG-&gt;C：判断(DG)+ = DG，不要再把C加上再推了。观察得到的闭包，如果闭包含有右侧推出的字母，则删除；否则保留。DG不含C，则保留。<br>
-3.剩余的单个关系，判断是否存在形如 D-&gt;C, C-&gt;A, D-&gt;A 这样的，删除 D-&gt;A 即可<br>
-综上可得出最小函数依赖</p>
-<p><strong>Give a lossless-join and dependency-preserving decomposition of R into 3NF</strong><br>
-在最小函数依赖上进行构建</p>
-<h1 id="事务">事务</h1>
-<p>concurrent transactions：并发事务<br>
-<a href="https://www.youtube.com/watch?v=U3SHusK80q0">画优先图 precedence graph 并 判断是否可串行化 serializable：油管清晰讲解</a><br>
-关注三对关系：R-&gt;W，W-&gt;R，W-&gt;W</p>
-<p><strong>是否是可恢复调度？ Is S a recoverable schedule, and why?</strong><br>
-对于可恢复调度，如果一个调度从另外一个调度的结果中读取数据，那么它必须在另外以后调度的commit之后commit。<br>
-不是可恢复调度的例子：<br>
-T2 读取 student 表中 stuID=10 的元组时，该元组内容已由 T1 修改过，但 T2 提交操作<br>
-commit 早于 T1 提交 commit。一旦 T1 在 T2 的 commit 操作之后回滚其 update student 操作，将 stuName 回滚为旧值，则 T2 的 select 操作无法随着回滚，T2 读取的仍然是 stuName 修改后的值。</p>
-<p><strong>是否是无级联调度？Is S a cascadeless schedule, and why?</strong><br>
-如果事务要对某个值执行读操作，则必须等到执行写入该值的事务 commit。</p>
-<p><strong>是否满足二阶段锁？ obey the two-phase locking protocol？</strong><br>
-在同一个事务中，前半部分全是lock，后面全是unlock，则满足，否则不满足<br>
-注意是在同一个事务中，如在T1这一列中看。</p>
-<p><strong>是否满足严格二阶段锁？ Strict two phase locking protocol</strong><br>
-共享锁（share）：lock_s；排他锁（exclusive）：lock_x<br>
-S2PLP 可以在 lock_s上锁之后随时释放它，但只能在 commit 的时候释放 lock_x<br>
-严锁在commit的时候同时释放所有锁。其主要区别简单来说，就是：2PL能随时释放锁，S2PL只能在事务结束后释放锁。但注意，随时释放不是指</p>
-<p><strong>是否满足严格二阶段锁？Rigorous two phase locking protocol</strong><br>
-R2PLP 只能在 commit 的时候释放所有锁， lock_s 和 lock_x</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ML/DL 中常见的英文]]></title>
-        <id>http://localhost:4001/post/mldl-zhong-chang-jian-de-ying-wen/</id>
-        <link href="http://localhost:4001/post/mldl-zhong-chang-jian-de-ying-wen/">
-        </link>
-        <updated>2022-10-25T14:06:00.000Z</updated>
-        <content type="html"><![CDATA[<p>parameters / params：参数<br>
-epochs：总训练次数，使用全部数据训练一次是一个epochs<br>
-learning rate：学习率<br>
-optimize：优化<br>
-regularization：正则化<br>
-normalize：归一化、标准化<br>
-Regularization： 正则化</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[以梯度下降（Gradient Descent）展开的优化器总结]]></title>
-        <id>http://localhost:4001/post/ti-du-xia-jiang-gradient-descent/</id>
-        <link href="http://localhost:4001/post/ti-du-xia-jiang-gradient-descent/">
-        </link>
-        <updated>2022-10-25T12:57:09.000Z</updated>
-        <content type="html"><![CDATA[<p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）</p>
-<p><a href="https://zhuanlan.zhihu.com/p/68468520">梯度下降</a><br>
-<a href="https://zhuanlan.zhihu.com/p/357963858">随机梯度下降</a></p>
-<p>大多数机器学习模型都会有一个损失函数。比如常见的 均方误差 （Mean Squared Error —— MSE）损失函数，其输出值为 模型的输出值和实际值的偏差。<br>
-损失函数的输出值越小，模型精度越高。我们用梯度下降的方法最小化损失函数。</p>
-<p>梯度下降（Gradient Descent）：使用所有样本进行梯度下降<br>
-小批量样本梯度下降（Mini Batch GD）：使用小批量样本进行梯度下降<br>
-随机梯度下降（Stochastic GD）：使用一个样本进行梯度下降</p>
-<p><a href="https://www.zhihu.com/question/395685065/answer/2535950728">怎么通俗易懂的理解SGD中Momentum的含义？</a></p>
-<p>SGD 的改进形式 —— Adam</p>
-<p><a href="https://www.zhihu.com/question/42115548/answer/1636798770">SGD有多种改进的形式(RMSprop,Adadelta等),为什么大多数论文中仍然用SGD?</a></p>
-<p><a href="https://blog.csdn.net/qq_42109740/article/details/105401197">深度学习各类优化器详解（动量、NAG、adam、Adagrad、adadelta、RMSprop、adaMax、Nadam、AMSGrad）</a></p>
-<p><a href="https://blog.csdn.net/qq_36589234/article/details/89330342">PyTorch学习之 torch.optim 的6种优化器及优化算法介绍</a></p>
 ]]></content>
     </entry>
 </feed>
