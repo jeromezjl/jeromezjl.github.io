@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-05-22T02:06:33.459Z</updated>
+    <updated>2023-06-05T13:05:22.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,7 +11,305 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[深度学习的一般步骤]]></title>
+        <title type="html"><![CDATA[【音乐】即兴练习思路]]></title>
+        <id>https://jeromezjl.github.io/post/lian-qin/</id>
+        <link href="https://jeromezjl.github.io/post/lian-qin/">
+        </link>
+        <updated>2023-06-03T14:06:36.000Z</updated>
+        <content type="html"><![CDATA[<p>B站琴友原文链接：<br>
+<a href="https://t.bilibili.com/798087679282511889?share_from=dynamic&amp;share_medium=android&amp;share_plat=android&amp;share_source=WEIXIN&amp;share_tag=s_i&amp;timestamp=1685638014&amp;unique_k=JbGgziL">自学乐器真的有硬伤，那就是乐理真的感觉很难学......</a></p>
+<p>你先尝试扒二十首歌，我说的扒不是你能跟着弹下来那么简单，你得知道你弹的什么，这一句旋律是什么，是套在哪个和弦里的。当你扒够100首歌的时候，你这些问题就都不是问题了</p>
+<p>即兴呢其实就是要在前面的各种乐理基础上，加上你积累出的各种句子以及演奏技巧，跟着感觉弹出来的。<br>
+所以现在问题就明了了，你的即兴苦恼源于没有这些基础和积累。最好找一个老师带着你</p>
+<p>1、基础乐理—熟悉指板+即兴—和声学+即兴—配器法—实战编曲—混音、母带<br>
+2、多听曲子，多学曲子，多扒曲子，海纳百川<br>
+3、保持热爱</p>
+<p>先在一个调里把指板吃透了就行 主要还是要掌握大小调已经各种调式音阶的相对音程 一味地练别人的solo一点用都没有（除非你会乐理知道人家在弹什么）</p>
+<p>小调里的三五七和弦都会按吗 这个也比较基础</p>
+<p>制定计划逼着自己去学，特别是乐理和编曲，乐理得实际应用才记得住，编曲得大量编才能熟练，制定计划每天练多少、课看多少、资料找多少。</p>
+<p>学乐理就是少走弯路，但要是自己玩靠耳朵慢慢积累也不是不行，只是弹出来的东西可能就有点固定走不出自己听的最多的五声音阶，我原来学琴的时候老师不怎么讲乐理只有后来自己自学一点点基本属于文盲了[喜极而泣]，但是耳朵还不错 弹久了指板熟了基本听到什么想到什么能弹出来自己玩玩还挺乐。<br>
+当年学的时候坑比老师很多，以至于我跟的最久的不怎么讲乐理的老师我还觉得教的很好了[喜极而泣]，多年之后重新学乐理挺头疼的，现在教学环境比原来好了如果是新入门钱包足有条件还是找个好老师少走弯路，但是自学好资源也多了 找不到好老师的话，自学也挺好 ，看自己能不能坚持吧<br>
+然后多跟同好交流，即使没有老师和爱好者互相交流帮助也挺大的。</p>
+<p>b站找lick library的视频，精通指板。我全自学的音乐，都半职业水平了</p>
+<p>是的，乐理就是十二平均律和各种排列组合，不难，难的是持续的兴趣，精力投入，坐住板凳</p>
+<p>别练什么视唱练耳，扒歌这些东西，你现在最要紧的是赶紧用你学的五声音阶即兴起来，跟着伴奏弹几个音比你练什么吉他曲子都有效果，把他玩起来才是你学会即兴的最重要的一步，指板不是说练几个乐句，重复练爬几百上千遍音阶可以记住的，只有你即兴的多了，你才能想弹什么音就立马弹出来，找老师是最没有性价比的，浪费时间浪费金钱，你先试着跟着你喜欢的歌弹点旋律吧。这是我的经验之谈，我就是这样从只会弹唱到可以即兴的，不说很厉害，但是已经可以在各种流行歌曲里随意即兴了。</p>
+<p>可以试试steve vai写的《吉他巫师 史蒂夫范的独门演奏心法》正版有点小贵，经济不允许可以某宝上买复印版四十几，比较通俗易懂不过是繁体，台湾出版的</p>
+<p>买本人民音乐出版社的《吉他指板手册》，看不懂不翻页看完之后最基础的乐理就没啥问题了。但是想学更多的就得买别的教材了，到时候你就根据喜好自己找吧。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【DL】RNN | Attention | LSTM | Transformer]]></title>
+        <id>https://jeromezjl.github.io/post/dl-rnn-or-attention-or-lstm-or-transformer/</id>
+        <link href="https://jeromezjl.github.io/post/dl-rnn-or-attention-or-lstm-or-transformer/">
+        </link>
+        <updated>2023-06-01T06:35:52.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="rnn">RNN</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/30844905">一文搞懂RNN（循环神经网络）基础篇</a></p>
+<p><a href="https://blog.csdn.net/bestrivern/article/details/90723524">RNN详解(Recurrent Neural Network)</a></p>
+<p><a href="https://blog.csdn.net/weixin_45727931/article/details/114369073">Pytorch循环神经网络（RNN）快速入门与实战</a></p>
+<h1 id="attention">Attention</h1>
+<p><a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a></p>
+<h1 id="lstm">LSTM</h1>
+<p><a href="https://www.bilibili.com/video/BV1fp4y1t7Xb/?p=3&amp;spm_id_from=pageDriver&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">RNN &amp; LSTM (时间序列模型）</a></p>
+<h1 id="transformer">Transformer</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[机器视觉]]></title>
+        <id>https://jeromezjl.github.io/post/ji-qi-shi-jue/</id>
+        <link href="https://jeromezjl.github.io/post/ji-qi-shi-jue/">
+        </link>
+        <updated>2023-05-30T09:09:04.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="cv-xueba.club">北邮鲁鹏资源</a></p>
+<p>分辨率是 1024 x 768 则图像有 1024 x 768 个像素点</p>
+<p>二进制图像：每个点用一个bit表示<br>
+灰度图：每个点用一个Byte表示，范围 0-255<br>
+RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255</p>
+<p><strong>卷积核/滤波核：filter kernel</strong><br>
+卷积运算：对应点相乘再相加（对核内数据进行加权，然后赋给中心点）</p>
+<p>在利用均值核对图像进行平滑处理的时候，考虑到距离中心点越远的点 对中心值影响越小。所以考虑使用高斯分布设置核内权重。</p>
+<p><strong>高斯核</strong><br>
+<a href="https://blog.csdn.net/u013066730/article/details/123112159">CSDN 文字讲解</a><br>
+<a href="https://www.bilibili.com/video/BV15B4y1D7QJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站高斯分布复习</a><br>
+标准差σ越大，高斯分布的图像越扁平。对应高斯核可取值的范围就会增大。若在这同时增大高斯核的大小，则被用于计算的均值的范围变大，则得到的图像就会越模糊。<br>
+当使用高斯滤波器进行图像处理时，W代表窗口的大小（也称为卷积核的尺寸），σ代表高斯函数的标准差（方差的平方根）。经验上，有一个常见的规则是W/2=3σ，它表示窗口的一半尺寸大约等于3倍的标准差。<br>
+这个经验规则可以用于选择适当的窗口大小和标准差，以确保高斯滤波器在平滑图像的同时保持图像细节。具体而言，较大的窗口尺寸和较大的标准差可以产生更强烈的平滑效果，但可能会导致图像细节的丢失。相反，较小的窗口尺寸和较小的标准差可以保留更多的细节，但平滑效果会较弱。<br>
+根据经验，W/2=3σ提供了一种简单的方法来选择窗口大小和标准差的相对关系，以获得平衡的结果。但需要注意的是，这只是一个经验规则，具体的选择还取决于特定的应用和图像处理的需求。在实际应用中，可能需要进行实验和调整以找到最适合的参数。</p>
+<p><a href="https://blog.csdn.net/zjh12312311/article/details/109649188">cv2中的滤波，均值，高斯，中值，高通，低通，傅里叶变换</a></p>
+<h1 id="canny算法边缘检测">Canny算法——边缘检测</h1>
+<p><a href="https://www.bilibili.com/video/BV1nz4y197Qv?p=3&amp;spm_id_from=pageDriver&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">鲁鹏讲解</a><br>
+<a href="https://blog.csdn.net/minjiuhong/article/details/89320225">CSDN文字讲解</a></p>
+<p><strong>算法原理概述</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1685450396261.png" alt="" loading="lazy"></p>
+<p><a href="https://blog.csdn.net/m0_51402531/article/details/121066693">OpenCV——Canny边缘检测（cv2.Canny()）</a></p>
+<pre><code class="language-python">edges = cv.Canny( image, threshold1, threshold2[, apertureSize[, L2gradient]])
+# threshold1为低阈值，threshold2为高阈值
+</code></pre>
+<h1 id="图像拟合-fitting">图像拟合 fitting</h1>
+<p><strong>最小二乘法拟合</strong><br>
+假设需要拟合一条线，通过最小二乘法可以求得这条线的方程，从而将像素点拟合成一条平滑的曲线。这样的应用场景很多，比如图像的边缘检测、图像的灰度平滑和曲线的修正等<br>
+<a href="https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163978851616780269814649&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;spm=1018.2226.3001.4187">一文让你彻底搞懂最小二乘法（超详细推导）</a></p>
+<p><strong>鲁棒性最小二乘法</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1685457722865.png" alt="" loading="lazy"></p>
+<p><strong>RANSAC——随机一致性采样</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/45532306">文字讲解</a><br>
+在使用RANSAC找到内点之后，再利用找到的点，使用最小二乘法找到直线</p>
+<p><code>RANSAC的利弊</code><br>
+优点<br>
+简单、适用于许多不同的问题，经常在实践中效果很好<br>
+缺点<br>
+有很多参数需要调整，对于较低的初始比率不能很好地工作(要迭代太多次，或者可能完全失败)<br>
+在较小的样本数上不能总是得到一个良好的初始化模型</p>
+<p><strong>霍夫变换 Hough transform</strong><br>
+<a href="https://blog.csdn.net/leonardohaig/article/details/87907462">CSDN 文字讲解</a><br>
+<a href="https://www.bilibili.com/video/BV1nz4y197Qv?p=4&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">鲁鹏讲解</a><br>
+软投票法：给相邻的也投一票</p>
+<p><a href="https://blog.csdn.net/on2way/article/details/47028969">Python下opencv使用笔记（十一）（详解hough变换检测直线与圆）</a></p>
+<h1 id="特征提取">特征提取</h1>
+<p><a href="https://blog.csdn.net/max_LLL/article/details/119728338">OpenCV中的几种角点检测方法</a></p>
+<p><strong>Harris corner detection(角点检测)</strong><br>
+<a href="https://www.bilibili.com/video/BV1Wb411b79B/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+典型的数学建模过程，将实际问题用数学模型来表示，从而量化，让计算机理解。<br>
+适用于：光照情况、位置、旋转、平移等变化ss<br>
+不适用于：大小的变化</p>
+<p>Blob detection</p>
+<p><strong>SIFT(Scale Invariant Feature Transform)尺度不变特征变换</strong><br>
+<a href="https://www.bilibili.com/video/BV1Qb411W7cK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+<img src="https://jeromezjl.github.io/post-images/1685946237448.png" alt="" loading="lazy"><br>
+高斯金字塔：图像的尺度空间，用于模拟观察者距离物体的远近程度及模糊程度<br>
+参数<br>
+层数 octave：O = [log2(min(M,N))]-3   M、N：原图片的宽和高<br>
+每层的图片数：S = n + 3   n：能找到的特征图数<br>
+n的解释：<br>
+假如每层用了五个不同的高斯核进行卷积，那么每层得到五个高斯后的图片（S）。<br>
+相邻两个做差，得到四张差分后的图片。差分后的图片需要求梯度来找特征点，但是最上和最下两张找不到。所以n为S-3 = 2。也可以理解为，三个差分图为一组，对中间的那张进行计算，所以四张图片能找到上下两个组。</p>
+<p><strong>SIFT 和 CNN 在图像检索任务上的比较</strong><br>
+SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索任务中具有不同的特点和应用场景。下面是它们之间的一些比较：</p>
+<ol>
+<li>
+<p>特征表示：</p>
+<ul>
+<li>SIFT：SIFT算法提取的特征是局部特征，主要关注图像中的关键点和它们的描述子。这些特征具有旋转不变性和尺度不变性，适用于处理图像中的局部变化和几何变换。</li>
+<li>CNN：卷积神经网络通过多层卷积和池化操作，从整个图像中学习到的特征表示。这些特征是全局的，能够捕捉到图像中的语义信息和高层次的抽象特征。</li>
+</ul>
+</li>
+<li>
+<p>训练需求：</p>
+<ul>
+<li>SIFT：SIFT算法不需要大规模标注的训练数据，因为它是一种手工设计的特征提取算法。</li>
+<li>CNN：卷积神经网络需要大规模的标注数据进行训练，以便通过反向传播算法学习到适合任务的特征表示。这需要大量的计算资源和训练时间。</li>
+</ul>
+</li>
+<li>
+<p>鲁棒性：</p>
+<ul>
+<li>SIFT：SIFT算法在旋转、缩放和仿射变换等情况下具有较强的鲁棒性。它对于图像中的局部变化和几何变换能够提取稳定的特征。</li>
+<li>CNN：卷积神经网络在大规模训练的情况下可以具有一定的鲁棒性，但对于缩放和旋转等变换相对较敏感。</li>
+</ul>
+</li>
+<li>
+<p>性能：</p>
+<ul>
+<li>SIFT：SIFT算法在传统的图像检索任务中表现良好，并且在计算机视觉领域经过多年的研究和验证。它在小规模图像数据库上具有较高的检索准确性。</li>
+<li>CNN：卷积神经网络在大规模图像数据集上进行端到端的训练，能够学习到更复杂的特征表示，并在一些特定的图像检索任务中达到更好的性能。例如，对于基于图像分类的图像检索任务，CNN通常能够获得更好的结果。</li>
+</ul>
+</li>
+</ol>
+<p>综上所述，SIFT适用于小规模图像数据库和对局部特征关注较多的场景，而CNN在大规模图像数据集和需要全局语义信息的任务中具有优势。实际应用中，可以根据具体任务的需求和数据的特点选择适合的方法或结合两者的优势进行</p>
+<h1 id="alexnet">AlexNet</h1>
+<p><a href="https://blog.csdn.net/guzhao9901/article/details/118552085">AlexNet网络结构详解（含各层维度大小计算过程）与PyTorch实现</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/467017218">手撕 CNN 经典网络之 AlexNet（理论篇）</a></p>
+<h1 id="resnet">ResNet</h1>
+<h1 id="swin">Swin</h1>
+<h1 id="vgg">VGG</h1>
+<h1 id="纹理">纹理</h1>
+<p>常见任务：<br>
+·从图像纹理估计表面方向或形状<br>
+·根据纹理线索进行分割/分类 分析，表示纹理<br>
+·将纹理一致的图像区域分组<br>
+·生成新的纹理/图像</p>
+<p>用不同方向的卷积核卷积图像，每个核为输出向量的一维，向量中的最大值对应的卷积核方向，就是该纹理的方向。</p>
+<h1 id="分割-segmentation">分割  Segmentation</h1>
+<p><strong>Mean shift</strong><br>
+<a href="https://blog.csdn.net/google19890102/article/details/51030884">简单易学的机器学习算法——Mean Shift聚类算法</a><br>
+找局部密度最高的点</p>
+<p>Mean shift算法是一种非参数的聚类算法，其主要用于数据聚类和密度估计。以下是Mean shift算法的基本流程：</p>
+<ol>
+<li>初始化：选择一个初始种子点，作为每个聚类的中心点，并确定一个窗口大小。</li>
+<li>密度估计：对于每个种子点，计算在窗口内的数据点的密度估计。可以使用核函数来衡量数据点在窗口内的密度，通常使用高斯核函数。</li>
+<li>平移向量计算：计算每个数据点相对于种子点的平移向量。平移向量的计算方式是通过计算数据点在窗口内的质心（mean）和当前种子点的差异。</li>
+<li>平移：将种子点沿着平移向量进行平移，更新种子点的位置。</li>
+<li>收敛判断：重复步骤3和步骤4，直到种子点收敛于局部最大值（即平移向量接近于零）。这表示种子点已经找到了局部密度最大的聚类中心。</li>
+<li>聚类：将收敛的种子点作为聚类的中心点，并将其他数据点分配到最近的聚类中心。</li>
+<li>重复步骤1到步骤6，直到所有数据点都被分配到聚类中心。</li>
+</ol>
+<p>Mean shift算法的核心思想是通过不断迭代调整种子点的位置，使其向高密度区域移动，直到收敛于局部最大值。这样可以找到数据中的聚类中心，并将数据点分配到对应的聚类中心。</p>
+<p><strong>归一化图割 Normalized cut</strong><br>
+<a href="https://blog.csdn.net/qq_38476684/article/details/80553850">图像处理--归一化切割--(normalized cut)--Python实现</a></p>
+<p>以下是Normalization Cut算法的完整详细步骤：</p>
+<p>输入：图像（以像素矩阵表示），标准差σ</p>
+<ol>
+<li>将像素转换为向量：将图像中的每个像素表示为一个向量。对于灰度图像，可以使用像素的灰度值作为向量的元素；对于彩色图像，可以使用像素的颜色通道值作为向量的元素。</li>
+<li>计算两两像素的距离：对于每对像素向量，使用选定的距离函数（如欧氏距离或曼哈顿距离）计算它们之间的距离。得到一个距离矩阵，其中每个元素表示两个像素之间的距离。</li>
+<li>将距离映射到[0, 1]范围内：将距离映射到[0, 1]的范围内，可以使用公式 d' = (d - min_distance) / (max_distance - min_distance)，其中 d 是原始距离，d' 是映射后的距离，min_distance 和 max_distance 分别是所有像素对之间距离的最小值和最大值。</li>
+<li>利用高斯核函数计算相似度：使用高斯核函数将距离转换为相似度。计算每对像素之间的相似度，可以使用公式 similarity = exp(-d'^2 / (2 * σ^2))，其中 d' 是映射后的距离，σ 是标准差。</li>
+<li>生成相似度矩阵W（邻接矩阵）：将计算得到的相似度值填充到一个相似度矩阵中。矩阵的每个元素表示两个像素之间的相似度。注意，W是对称的。且对角线为0，因为相同点间距离为0。</li>
+<li>构建拉普拉斯矩阵：根据相似度矩阵，构建拉普拉斯矩阵。拉普拉斯矩阵可以有多种形式，例如对称归一化拉普拉斯矩阵或非对称拉普拉斯矩阵。定义对角矩阵D，D的第n行不为0的元素为W第n行数值之和。</li>
+<li>对拉普拉斯矩阵进行特征值分解：对构建的拉普拉斯矩阵进行特征值分解，得到特征值和对应的特征向量。(D-W)y = λDy；取第二小的特征值对应的y向量。</li>
+<li>利用特征向量进行聚类或分割：根据特征向量的特定特征值，进行聚类或分割操作。可以使用聚类算法（如谱聚类）或基于特征向量的阈值操作来实现。设置门限值，假设为1，低于1的为一类，高于1的为另一类。</li>
+<li>输出分割结果：根据聚类或分割的结果，将图像中的像素分为不同的区域或类别。可以根据特征向量的某个阈值或聚类算法的结果将像素分配到不同的分割区域或类别。</li>
+<li>可选的后处理：根据需要，可以进行一些后处理步骤来进一步优化分割结果。例如，可以应用边缘平滑技术来消除分割边界上的噪声或不连续性。</li>
+<li>输出最终结果：将最终的图像分割结果作为算法的输出，可以是标记每个像素所属区域或类别的图像。</li>
+</ol>
+<p><strong>Minimum Cut</strong><br>
+<a href="https://blog.csdn.net/mmm_jsw/article/details/83787395">图像分割经典算法--《最小割最大流》（Minimum Cut——Max Flow）</a><br>
+去除图中权重最小的边</p>
+<h1 id="识别-recognition">识别 Recognition</h1>
+<p><strong>BOW词袋模型应用于图像识别分类</strong><br>
+词袋模型将图片分成小块，从而一定程度上解决了遮挡等问题<br>
+一般步骤：</p>
+<ul>
+<li>
+<p>特征提取<br>
+类比一下上面文本特征的提取，把文本1这句话切成一个个单词，这个过程就是在提取这个文本的特征，那么在图像中提取特征也类似，就是把图像切成一个个的片（patch），每片当成该图像的特征。常用的特征提取方法有SIFT、LBP、SURF等。</p>
+</li>
+<li>
+<p>生成字典/词袋（codebook）<br>
+在上一步特征提取中我们得到了很多的特征点，我们不能把每个点都放进词袋吧，那么就需要想一个招找到这些点中具有代表性的几类点，这一般需要聚类方法来完成的。对全部特征点进行聚类，得到了几个聚类中心，这些聚类中心就是这些点的特征向量。这一步之后就得到了词袋。（不理解的可以类比一下上面文本形成词袋的过程，上面文本形成词袋是把所有单词都放进去了，但是对图像来说特征点太多不可能全部放进去，所以使用聚类把聚类中心就当成词袋中的点）。</p>
+</li>
+<li>
+<p>根据词袋生成特征直方图<br>
+对于每张图片都有大量的特征点，那么就把这些点对照着上面得到的词袋统计出来，这样每张图片都会得到一个特征直方图，可以参考一下上面文本直方图。</p>
+</li>
+</ul>
+<p><strong>空间金字塔算法（Spatial Pyramid）</strong><br>
+一种用于图像分类和目标识别的传统机器视觉算法，可以有效地处理不同尺度和大小的图像内容。下面是Spatial Pyramid算法的实现过程：</p>
+<ol>
+<li>
+<p>提取特征：首先，对输入图像进行特征提取。常用的特征提取方法包括SIFT（尺度不变特征变换）、HOG（方向梯度直方图）和LBP（局部二值模式）等。这些方法可以提取图像中的局部特征，用于后续的分析和处理。</p>
+</li>
+<li>
+<p>划分金字塔：接下来，将图像划分为不同层级的金字塔结构。每个金字塔层级对应着不同的尺度和大小。通常，金字塔层级的数量和大小是预先定义好的，例如2层、3层或更多。</p>
+</li>
+<li>
+<p>分块统计：对于每个金字塔层级，将图像分割为固定大小的块。这些块可以是正方形或矩形的区域。然后，在每个块内计算特征的统计信息。这可以包括直方图、均值、方差等。通过这种方式，可以捕捉到图像在不同空间位置的局部特征。</p>
+</li>
+<li>
+<p>特征融合：将每个金字塔层级中的特征统计信息进行融合。一种常见的方法是将不同层级的特征串联起来，形成一个综合的特征向量。这样可以保留不同尺度和大小的信息，从而更好地描述图像的内容。</p>
+</li>
+<li>
+<p>分类器训练：使用融合后的特征向量来训练分类器，例如支持向量机（SVM）、随机森林（Random Forest）或神经网络等。分类器可以根据提供的训练数据学习图像类别的模式，并用于对新图像进行分类和识别。</p>
+</li>
+<li>
+<p>图像分类：对于待分类的新图像，首先进行与训练图像相同的特征提取和金字塔分块过程。然后，将提取到的特征输入训练好的分类器中进行预测。分类器会输出图像所属的类别标签。</p>
+</li>
+</ol>
+<p>Spatial Pyramid算法通过在不同层级和块上进行特征统计和融合，可以有效地捕捉到图像的局部和全局信息。这种方法在处理尺度变化和多尺度目标时具有优势，并且对于不同大小的图像也具有较好的鲁棒性。</p>
+<p><strong>Boosting（增强学习算法）</strong><br>
+一种集成学习方法，旨在通过组合多个弱分类器来构建一个更强大的分类器。Boosting算法通过迭代的方式逐步改进分类器的准确性，将先前分类器的错误样本权重增加，并对分类错误的样本进行重点关注。</p>
+<p>以下是Boosting算法的简要实现过程：</p>
+<ol>
+<li>
+<p>初始化权重：对于包含N个训练样本的训练集，初始化每个样本的权重为相等值（1/N）。</p>
+</li>
+<li>
+<p>迭代训练：进行T轮迭代，每一轮迭代中都训练一个弱分类器。</p>
+</li>
+<li>
+<p>弱分类器训练：在每一轮迭代中，根据当前样本权重，使用训练集训练一个弱分类器。弱分类器通常是一个性能较差的分类器，如决策树桩（仅有一层决策树）或者简单的线性分类器。</p>
+</li>
+<li>
+<p>分类器权重：根据弱分类器的错误率（分类错误的样本比例）计算其权重。错误率越低的弱分类器获得的权重越高，能够对分类结果做出更大的贡献。</p>
+</li>
+<li>
+<p>更新样本权重：根据弱分类器的权重调整训练样本的权重。被错误分类的样本权重会增加，而被正确分类的样本权重会减少。这样，下一轮迭代时，错误分类的样本会受到更多关注。</p>
+</li>
+<li>
+<p>结合弱分类器：将每个弱分类器按照其权重进行加权组合，得到最终的强分类器。强分类器通过累加弱分类器的预测结果，以投票或加权平均的方式进行最终分类。</p>
+</li>
+<li>
+<p>重复迭代：重复步骤3至步骤6，直到达到预定的迭代次数T或者满足某个停止条件（如达到预期准确率）。</p>
+</li>
+</ol>
+<p>Boosting算法通过多次迭代，逐步改进分类器的性能，重点关注那些难以分类的样本。它的优点在于能够构建出具有较高准确性的分类器，并且对于噪声和复杂数据集有一定的鲁棒性。著名的Boosting算法包括AdaBoost（自适应Boosting）和Gradient Boosting（梯度提升）。</p>
+<p><strong>Viola-Jones算法</strong><br>
+一种用于实时目标检测的传统机器视觉算法。它由Paul Viola和Michael Jones于2001年提出，被广泛应用于人脸检测。Viola-Jones算法基于Haar特征和级联分类器的概念，其实现过程如下：</p>
+<ol>
+<li>
+<p>Haar特征：Haar特征是一种基于图像局部区域的特征描述符。它可以用于描述图像中的边缘、线段、角等特征。Haar特征可以通过在图像上滑动不同大小和位置的滑窗，并计算窗口内不同区域的像素和来表示。</p>
+</li>
+<li>
+<p>积分图像：为了加速特征计算，Viola-Jones算法使用积分图像（Integral Image）进行快速计算。积分图像可以在常数时间内计算出任意矩形区域的像素和，使得特征计算的复杂度降低。</p>
+</li>
+<li>
+<p>Adaboost训练：使用Adaboost算法，Viola-Jones算法训练了一个级联分类器。级联分类器由多个弱分类器组成，每个弱分类器都是一个基于Haar特征的简单二分类器。Adaboost算法通过迭代训练，在每一轮迭代中调整样本的权重，使得错误分类的样本得到更多关注。</p>
+</li>
+<li>
+<p>特征选择：在每一轮迭代中，Viola-Jones算法通过选择具有最小错误率的特征来构建弱分类器。这样可以选择最具区分性的特征，以便有效地区分目标和非目标区域。</p>
+</li>
+<li>
+<p>级联结构：为了提高检测速度，Viola-Jones算法采用了级联的结构。级联分类器将所有弱分类器按顺序组织成级联的多个阶段。每个阶段都具有不同的分类器数量和阈值，以逐步过滤出非目标区域，减少检测的计算量。</p>
+</li>
+<li>
+<p>移动窗口检测：在测试阶段，Viola-Jones算法使用移动窗口技术在图像上滑动不同大小的窗口，对每个窗口进行分类器的评估。通过级联结构和快速特征计算，可以高效地排除大多数非目标窗口，并快速识别出目标窗口。</p>
+</li>
+</ol>
+<p>Viola-Jones算法具有高速和高准确性的特点，尤其在人脸检测方面表现出色。它被广泛应用于实时的图像和视频处理应用中，如人脸识别、表情分析和眼部追踪等。然而</p>
+<h1 id="三维重建">三维重建</h1>
+<p><strong>摄像机模型</strong><br>
+通过多张图片重构三维场景。无人驾驶车、地图等。<br>
+摄像机几何</p>
+<p><strong>相机标定</strong><br>
+找到二维和三维点之间的对应关系，用于计算相机的内参数</p>
+<h1 id="计算摄影学">计算摄影学</h1>
+<p><a href="https://www.zhihu.com/tardis/zm/art/51490200?source_id=1005">计算摄影学及本专栏介绍</a><br>
+<a href="https://www.zhihu.com/question/427425910">计算成像(computational photography)方向的就业前景如何？</a><br>
+<a href="https://www.bilibili.com/video/BV1VA4y1Z7DG/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">iPhone 13系列解读之二——让我们聊聊计算摄影</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【DL】深度学习的一般步骤]]></title>
         <id>https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/</id>
         <link href="https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/">
         </link>
@@ -60,12 +358,70 @@ BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标�
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[K-means]]></title>
+        <title type="html"><![CDATA[【ML】KNN | K-means]]></title>
         <id>https://jeromezjl.github.io/post/k-means/</id>
         <link href="https://jeromezjl.github.io/post/k-means/">
         </link>
         <updated>2023-05-10T13:27:56.000Z</updated>
-        <content type="html"><![CDATA[<p>kelbow_visualizer</p>
+        <content type="html"><![CDATA[<h1 id="knnk-最近邻">KNN（K-最近邻）</h1>
+<p><a href="https://www.bilibili.com/video/BV1Ma411F7Y4/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+<a href="https://blog.csdn.net/codedz/article/details/108862498">KNN算法详解及实现</a><br>
+<a href="https://zhuanlan.zhihu.com/p/341572059">史上最全面K近邻算法/KNN算法详解+python实现</a></p>
+<p><code>总结：</code></p>
+<ol>
+<li>有监督学习</li>
+<li>用于分类和回归任务</li>
+<li>物体类别由旁边最近的K个样本决定</li>
+</ol>
+<h1 id="k-meansk-均值">K-means（K-均值）</h1>
+<p><a href="https://www.bilibili.com/video/BV1mf4y1k7UC/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+<a href="https://www.zhihu.com/tardis/zm/art/158776162?source_id=1005">K-means（K-均值）算法的原理、Python实现和应用</a></p>
+<p><code>总结：</code></p>
+<ol>
+<li>无监督学习</li>
+<li>用于聚类</li>
+<li>K为簇的数量</li>
+</ol>
+<h1 id="辨析">辨析</h1>
+<p>相似点：<br>
+K-means和KNN都是基于距离度量的算法。它们使用距离来衡量数据点之间的相似性或距离。<br>
+K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类的数量，KNN中的K代表邻居的数量。</p>
+<p>不同点：<br>
+目标：K-means旨在将数据点划分为不同的聚类，使同一聚类内的数据点相似度较高，不同聚类之间的相似度较低。而KNN旨在通过找到最近的K个邻居来进行分类或回归预测。<br>
+学习方式：K-means是一种迭代的聚类算法，通过最小化聚类内部的方差来更新聚类中心，直到达到收敛条件。KNN是一种基于实例的学习方法，通过存储和比较训练集中的实例来进行预测。<br>
+数据需求：K-means通常要求数据点能够表示为数值向量，且距离度量可定义。KNN对数据的要求较少，可以处理不同类型的特征和度量方法。<br>
+算法复杂度：K-means的计算复杂度较低，但对初始聚类中心的选择敏感，可能会收敛到局部最优解。KNN的计算复杂度较高，因为需要计算每个测试样本与所有训练样本之间的距离。</p>
+<p>总结而言，K-means和KNN是不同类型的机器学习算法，K-means用于聚类，而KNN用于分类和回归预测。它们在目标、学习方式、数据需求和算法复杂度等方面有显著的区别。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】分类模型的评估]]></title>
+        <id>https://jeromezjl.github.io/post/hun-yao-ju-zhen-confusion-matrix/</id>
+        <link href="https://jeromezjl.github.io/post/hun-yao-ju-zhen-confusion-matrix/">
+        </link>
+        <updated>2023-04-25T06:18:29.000Z</updated>
+        <content type="html"><![CDATA[<p>#混淆矩阵 Confusion Matrix<br>
+<a href="https://www.bilibili.com/video/BV1oz4y1R71a/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站入门讲解</a><br>
+<a href="https://blog.csdn.net/SartinL/article/details/105844832">sklearn中混淆矩阵（confusion_matrix函数）的理解与使用</a><br>
+运行博客二中的代码：</p>
+<pre><code class="language-python">from sklearn.metrics import confusion_matrix
+
+y_true = [&quot;cat&quot;, &quot;ant&quot;, &quot;cat&quot;, &quot;cat&quot;, &quot;ant&quot;, &quot;bird&quot;]
+y_pred = [&quot;ant&quot;, &quot;ant&quot;, &quot;cat&quot;, &quot;cat&quot;, &quot;ant&quot;, &quot;cat&quot;]
+confusion_matrix(y_true, y_pred, labels=[&quot;ant&quot;, &quot;bird&quot;, &quot;cat&quot;])
+</code></pre>
+<pre><code class="language-python">array([[2, 0, 0],
+       [0, 0, 1],
+       [1, 0, 2]], dtype=int64)
+</code></pre>
+<p>labels表示，行，列的标签顺序为[&quot;ant&quot;, &quot;bird&quot;, &quot;cat&quot;]。通过观察对角线（预测正确的次数），第一个数据是ant被预测为ant的次数，为2次，bird被预测为bird的次数为0次，cat被预测为cat的次数为2次.</p>
+<p><code>debug</code><br>
+<a href="https://fixexception.com/scikit-learn/at-least-one-label-specified-must-be-in-y-true/">ValueError: At least one label specified must be in y_true</a></p>
+<h1 id="准确率-accuracy-精确率-precision-召回率-recall-f1值">准确率 (Accuracy) 精确率 (Precision) 召回率 (Recall)  F1值</h1>
+<p><a href="https://www.bilibili.com/video/BV1vt4y117Zz/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站</a><br>
+（模型）准确率：所有正确预测分类的数据 / 所有数据<br>
+精确率：预测正确的正样本 / 所有预测为正的样本<br>
+召回率：预测正确的正样本 / 测试集中所有正样本数</p>
 ]]></content>
     </entry>
     <entry>
@@ -76,16 +432,18 @@ BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标�
         <updated>2023-04-02T13:54:49.000Z</updated>
         <content type="html"><![CDATA[<p>降低纹理可以减少画面杂乱感，比如杂草背景<br>
 背光人像可以通过提高清晰度提高人像亮度<br>
-调节曝光要保证画面整体看起来和谐。比如白色色阶不能过于割裂</p>
+调节曝光要保证画面整体看起来和谐。比如白色色阶不能过于割裂<br>
+如果遇到颜色过于单一，或者色彩不好平衡的时候，不妨试试黑白调色</p>
 <p>调色工具<br>
-<a href="https://www.chinavid.com/color.html">高级在线配色器</a></p>
+<a href="https://www.chinavid.com/color.html">高级在线配色器</a><br>
+<a href="https://photokit.com/colors/eyedropper/?lang=zh">屏幕取色器</a></p>
 <p>色卡生成工具<br>
 <a href="https://photokit.com/colors/palette-generator/?lang=zh">调色板生成器1</a><br>
 <a href="https://colors.dopely.top/image-color-picker/">调色板生成器2</a></p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[BPE]]></title>
+        <title type="html"><![CDATA[【NLP】BPE]]></title>
         <id>https://jeromezjl.github.io/post/bpe/</id>
         <link href="https://jeromezjl.github.io/post/bpe/">
         </link>
@@ -420,7 +778,7 @@ print(&quot;还原结果: &quot;, text)
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[视频目标检测]]></title>
+        <title type="html"><![CDATA[【CV】视频目标检测]]></title>
         <id>https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/</id>
         <link href="https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/">
         </link>
@@ -430,403 +788,6 @@ print(&quot;还原结果: &quot;, text)
 <a href="https://blog.csdn.net/breeze_blows/article/details/105323491">视频目标检测(video object detection)简单综述</a><br>
 <a href="https://blog.csdn.net/weixin_43702653/article/details/123973629?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167842568816782427467521%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=167842568816782427467521&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-123973629-null-null.142%5Ev73%5Einsert_down4,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=R-CNN&amp;spm=1018.2226.3001.4187">R-CNN史上最全讲解</a><br>
 <a href="https://blog.csdn.net/qq_40716944/article/details/114822515">YOLO系列详解：YOLOv1、YOLOv2、YOLOv3、YOLOv4、YOLOv5、YOLOv6、YOLOv7</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Linux】内核模块开发]]></title>
-        <id>https://jeromezjl.github.io/post/linux-nei-he-mo-kuai-kai-fa/</id>
-        <link href="https://jeromezjl.github.io/post/linux-nei-he-mo-kuai-kai-fa/">
-        </link>
-        <updated>2023-03-09T01:59:01.000Z</updated>
-        <content type="html"><![CDATA[<p>https://zhuanlan.zhihu.com/p/420194002</p>
-<p>Linux 内核模块开发，首先需要下载和Linux系统内核相匹配的内核文件。<br>
-<a href="https://mirror.bjtu.edu.cn/kernel/linux/kernel/">国内Linux内核下载镜像</a></p>
-<p>Linux 内核文件编译（这步不需要，走弯路了）<br>
-<a href="https://zhuanlan.zhihu.com/p/378149586">Linux内核编译很简单，6步编译一个自己的内核</a><br>
-<a href="https://blog.csdn.net/hxxjxw/article/details/105899282">编译安装linux内核</a></p>
-<p>这个博客讲vim和gcc编译c文件<br>
-<a href="https://blog.csdn.net/m0_47668487/article/details/115289154">VMware下安装Ubuntu系统并编译运行C语言程序</a></p>
-<p><a href="https://blog.csdn.net/qq_36417014/article/details/98239337">【linux环境下】【C语言编译】【使用makefile】【详细版】</a></p>
-<p>在内核模块中使用printk()函数输出信息，而不是使用printf()等C语言标准库函数。</p>
-<p>编写内核模块makefile和普通的不一样，需要按照一下格式：</p>
-<p><strong>make 时报的错</strong><br>
-makefile里要用tab，不能用空格<br>
-一个函数在没有参数的情况下没有赋参数void</p>
-<p>查看已经存在的mod：lsmod<br>
-删除mod：rmmod modname<br>
-将编译好的mod加载进去：sudo insmod hello.ko<br>
-查看内核日志，最后为新模块产生的日志：dmesg<br>
-看最近的内核日志：dmesg | tail<br>
-实时监视内核日志的变化，并输出最新的日志信息：tail -f /var/log/kern.log<br>
-删除make产生的所有文件：make clean</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C++查缺补漏]]></title>
-        <id>https://jeromezjl.github.io/post/ccha-que-bu-lou/</id>
-        <link href="https://jeromezjl.github.io/post/ccha-que-bu-lou/">
-        </link>
-        <updated>2023-01-04T05:36:25.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/yourfriendyo/article/details/119544221">C语言详解：结构体</a><br>
-<a href="https://blog.csdn.net/m0_52902391/article/details/120614881">模板类/模板函数 template 的用法(超详细)</a><br>
-template：模板</p>
-<h1 id="循环">循环</h1>
-<p>while (cin &gt;&gt; x){}<br>
-cin函数，输入NULL时返回0，输入其他值返回它的地址</p>
-<h1 id="结构体">结构体</h1>
-<p>typedef struct xxx {} yyy；yyy为结构体xxx的别名，是一种数据类型，需要实例化。<br>
-<a href="https://blog.csdn.net/jacksls/article/details/108529761">定义结构体 typedef struct 的用法总结</a></p>
-<p><strong>在结构体别名中定义结构体指针</strong></p>
-<pre><code class="language-c">typedef struct DNode{
-	ElemType data;
-	DNode* prior, * next;
-}DNode, * DLinkList;  // * DLinkList 就是指向DNode类型的指针，声明时用DNode和DLinkList都可以
-</code></pre>
-<h1 id="指针">指针</h1>
-<p><a href="https://blog.csdn.net/weixin_39640298/article/details/84900326">C++指针详解</a><br>
-&amp;：取地址<br>
-*：取地址里面的值<br>
-<a href="https://www.w3cschool.cn/cpp/cpp-passing-arrays-to-functions.html">向函数传递数组的写法</a><br>
-用“-&gt;”的情况：<br>
-A是一个类 class / struct<br>
-p是一个指向A类型的指针，那么用p访问A中的成员变量和函数时，使用p-&gt;x，p-&gt;f(x)来访问。</p>
-<p><strong>向函数传入变量的指针和引用的区别</strong><br>
-传入指针时，函数参数中是对指针的定义 int* a，传入函数的是变量的地址，&amp;a；<br>
-传入引用时，函数参数中是对原变量的引用 int &amp;a，传入函数的是原变量，a。<br>
-总之，传入指针是 通过指针，对指针指向的内存地址进行操作；传入变量的引用是直接对原变量进行修改。二者效果一样，但是原理不一样。<br>
-<code>指针</code></p>
-<pre><code class="language-c">typedef struct SqList{
-	int data[MaxSize];
-	int length;
-};
-
-void InitList(SqList *list){
-	cout&lt;&lt;&quot;type in the length of list:&quot;&lt;&lt;endl;
-	cin&gt;&gt;list-&gt;length;
-	cout&lt;&lt;&quot;type in the data:&quot;&lt;&lt;endl; 
-	for(int i = 0; i&lt;list-&gt;length; i++)
-		cin&gt;&gt;list-&gt;data[i];
-}
-int main(){
-	SqList sqlist;
-	InitList(&amp;sqlist);
-}
-</code></pre>
-<p><code>引用</code></p>
-<pre><code class="language-c">typedef struct SqList{
-	int data[MaxSize];
-	int length;
-};
-
-void InitList(SqList &amp;list){
-	cout&lt;&lt;&quot;type in the length of list:&quot;&lt;&lt;endl;
-	cin&gt;&gt;list.length;
-	cout&lt;&lt;&quot;type in the data:&quot;&lt;&lt;endl; 
-	for(int i = 0; i&lt;list.length; i++)
-		cin&gt;&gt;list.data[i];
-}
-int main(){
-	SqList sqlist;
-	InitList(sqlist);
-}
-</code></pre>
-<p>上面两段代码，如果用指针访问结构体，则需要用-&gt;访问结构体成员；如果用原结构体，则用 . 由此可见，指针和引用的差别。</p>
-<p><strong>向函数中传入指针类型的数据</strong><br>
-和上面的不同，上面传入的是变量的地址，在函数列表中被定义，成为指针。而本问题描述的是直接将指针类型的数据传入函数。</p>
-<pre><code class="language-c">#include&lt;bits/stdc++.h&gt;
-
-typedef struct DNode{
-	ElemType data;
-	DNode* prior, * next;
-}DNode, * DLinkList;  //DLinkList为指向结构体的指针类型
- 
-//初始化双链表
-bool InitDLinkList(DLinkList L) {  //此处和变量的指针一样，也可该写作 DNode* L
-	L = (DLinkList)malloc(sizeof(DLinkList));
-	if (L == NULL) {
-		return false;          
-	}
-	L-&gt;prior = NULL;
-	L-&gt;next = NULL;
-	return true;
-}
-
-int main() {
-	DLinkList L;  //定义指针类型数据L
-	InitDLinkList(L);  //由于指针的值即为变量的地址，所以和&amp;+变量名一样，都是将地址传入函数。
-	return 0;
-}
-</code></pre>
-<p><strong>swap的例子</strong><br>
-<code>指针</code></p>
-<pre><code class="language-c"># include&lt;iostream&gt;
-using namespace std;
-
-void MySwap(int* a, int* b){  //在列表中定义两个指针a，b，分别指向传入变量a，b的地址 
-	int t = 0;  
-	t = *a;  //交换值 
-	*a = *b;
-	*b = t;
-	
-	//错误的思路：用指针交换来交换 
-	int *t = NULL;  //定义中间指针t，用于指针之间的赋值 
-	t = a;
-	a = b;
-	b = t;
-	//以上操作只是让函数内的指针ab分别指向了ba，但没有对对应地址内的值进行任何改变 
-}
-
-int main(){
-	int a = 1,b = 2;
-	MySwap(&amp;a, &amp;b);  //传入变量ab的地址 
-	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b;
-}
-//向函数传入变量的地址。把函数声明和传入函数的形式整体来看，就是 int* a = &amp;a; 
-//也就是指针定义操作 
-</code></pre>
-<p><code>引用</code></p>
-<pre><code class="language-c"># include&lt;iostream&gt;
-using namespace std;
-
-void MySwap(int　&amp;a, int　&amp;b){  //在列表中定义两个地址引用
-	int t = 0;  
-	t = a; //直接修改原变量
-	a = b;
-	b = t;
-}
-
-int main(){
-	int a = 1,b = 2;
-	MySwap(a, b);  //直接传入原始变量ab
-	cout&lt;&lt;a&lt;&lt;&quot; &quot;&lt;&lt;b;
-}
-</code></pre>
-<h1 id="类和对象">类和对象</h1>
-<p>类中不带返回类型的函数为构造函数。造函数可用于为某些成员变量设置初始值。<br>
-<a href="https://blog.csdn.net/qq_42565910/article/details/90346236">c语言malloc函数的用法和意义</a></p>
-<p><strong>C++三种常见的实例化方法</strong></p>
-<ol>
-<li>静态实例化：在程序的全局或静态作用域中定义并初始化一个对象，该对象在程序整个生命周期内只存在一个实例。</li>
-<li>堆实例化：使用 new 运算符在动态存储区域中分配内存并实例化一个对象。这样创建的对象在程序运行期间一直存在，直到使用 delete 运算符显式释放其内存。</li>
-<li>栈实例化：在函数或代码块的作用域中定义并实例化一个对象，该对象的生命周期与所在的函数或代码块相同。对象在离开该作用域时自动销毁。</li>
-</ol>
-<p><strong>静态实例化的例子</strong></p>
-<pre><code class="language-c++">class MyClass {
-public:
-    MyClass() : m_x(0) {}
-    void setX(int x) { m_x = x; }
-    int getX() const { return m_x; }
-private:
-    int m_x;
-};
-
-MyClass globalObject;  // 全局实例
-
-int main() {
-    static MyClass staticObject;  // 静态实例
-    globalObject.setX(5);
-    staticObject.setX(10);
-    int globalX = globalObject.getX(); // globalX = 5
-    int staticX = staticObject.getX(); // staticX = 10
-    // ...
-    return 0;
-}
-</code></pre>
-<p>上面的例子中，通过调用 setX 和 getX 来对全局对象 globalObject 和静态对象 staticObject 的成员变量进行访问。</p>
-<p><strong>堆实例化的例子</strong></p>
-<pre><code class="language-c++">class MyClass {
-public:
-    MyClass() : m_x(0) {}
-    void setX(int x) { m_x = x; }
-    int getX() const { return m_x; }
-private:
-    int m_x;
-};
-
-int main() {
-    MyClass* heapObject = new MyClass;  // 堆实例
-    heapObject-&gt;setX(5);
-    int heapX = heapObject-&gt;getX(); // heapX = 5
-    // ...
-    delete heapObject;
-    return 0;
-}
-</code></pre>
-<p>上面的例子中，通过调用 setX 和 getX 来对堆对象 heapObject 的成员变量进行访问。</p>
-<p><strong>栈实例化的例子</strong></p>
-<pre><code class="language-c++">class MyClass {
-public:
-    MyClass() : m_x(0) {}
-    void setX(int x) { m_x = x; }
-    int getX() const { return m_x; }
-private:
-    int m_x;
-};
-
-void someFunction() {
-    MyClass stackObject;  // 栈实例
-    stackObject.setX(5);
-    int stackX = stackObject.getX(); // stackX = 5
-    // ...
-}
-
-int main() {
-    someFunction();
-    return 0;
-}
-</code></pre>
-<p>上面的例子中，通过调用 setX 和 getX 来对栈对象 stackObject 的成员变量进行访问。</p>
-<p><strong>函数模板</strong><br>
-若想向函数传入不同类型的数据，则还需要另外定义不同的函数。为解决该问题，引入函数模板template。</p>
-<pre><code class="language-c">#include &lt;iostream&gt;
-using namespace std;
-
-template&lt;typename T&gt;  //定义模板数据类型 T
-T add(T&amp; a, T&amp; b){  //把T当作一种数据类型来用
-	return a+b;
-}
-
-int main()
-{
-	float a = 10.3, b = 20.5;  //如果是int，则直接传入函数即可
-	cout&lt;&lt;add(a, b);
-	return 0;
-}
-</code></pre>
-<p>上例中，可以直接传入int/float等类型，而不用重新定义函数。</p>
-<p><strong>类模板</strong><br>
-参考如下构建栈的写法，照着写就行，功能也是可以随便定义函数的数据类型</p>
-<pre><code class="language-c"># include&lt;iostream&gt;
-using namespace std;
-
-const int StackSize = 1024;			//定义栈的最大长度
-template&lt;class T&gt;
-class SeqStack {					//定义顺序栈的模板类
-	public:
-		SeqStack() { top = -1; }	//构造函数，初始化空栈
-		void Push(T x);				//入栈操作
-		T Pop();					//出栈操作
-		T GetTop();					//查找栈顶元素
-		bool Empty();				//判别栈是否为空
-	private:
-		T data[StackSize];			//定义数组
-		int top;					//栈顶指针
-};
-
-
-template&lt;class T&gt;
-void SeqStack&lt;T&gt;::Push(T x) {
-	if (top &gt;= StackSize - 1) throw &quot;上溢&quot;;
-	data[++top] = x;
-}
-
-template&lt;class T&gt;
-T SeqStack&lt;T&gt;::Pop() {
-	if (Empty()) throw &quot;下溢&quot;;
-	return data[top--];
-}
-
-template&lt;class T&gt;
-T SeqStack&lt;T&gt;::GetTop() {
-	if (Empty()) throw &quot;下溢&quot;;
-	return data[top];
-}
-
-template&lt;class T&gt;
-bool SeqStack&lt;T&gt;::Empty() {
-	if(top == -1) return true;
-	else return false;
-}
-
-int main() {
-	SeqStack&lt;int&gt; stack;  //声明的时候要加上数据类型
-	stack.Push(1);
-	stack.Push(2);
-	stack.Push(3);
-	cout &lt;&lt; stack.GetTop();
-	cout&lt;&lt;endl;
-	
-	cout &lt;&lt; stack.Pop();
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GAN网络]]></title>
-        <id>https://jeromezjl.github.io/post/gan-wang-luo/</id>
-        <link href="https://jeromezjl.github.io/post/gan-wang-luo/">
-        </link>
-        <updated>2022-12-26T11:37:25.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="图像预处理">图像预处理</h1>
-<p>对文件夹下批量图片进行rename</p>
-<pre><code>import os
-
-# 图片存放的路径
-path = r&quot;C:\Users\ZJL\Desktop\1&quot;
-
-# 遍历更改文件名
-num = 1
-for file in os.listdir(path):
-    os.rename(os.path.join(path,file),os.path.join(path,str(num))+&quot;.jpg&quot;)
-    num = num + 1
-</code></pre>
-<p>本次项目只有八张图片，我们需要进行数据增强，获取更大的数据集。</p>
-<p>首先，要对图像进行<strong>分辨率的统一</strong>。分辨率，即为图像中像素点的个数，例如，一个分辨率为 1920x1080 的图像，表示它在水平方向上有 1920 个像素，在垂直方向上有 1080 个像素。</p>
-<p>问：为什么相同分辨率，相同文件类型，但是图片的文件大小不一样？<br>
-答：<br>
-图像内容的复杂程度：相同分辨率的图像，如果其内容越复杂，文件大小就可能越大。因为图像的复杂程度与其所包含的信息量有关，而信息量越大，文件大小也就越大。</p>
-<p>像素的位深度：像素的位深度指的是每个像素能够表示的颜色的数量。例如，8 位深度的像素可以表示 256 种颜色，而 16 位深度的像素可以表示 65,536 种颜色。相同分辨率的图像，如果其像素的位深度不同，文件大小也可能会不同。</p>
-<p>元数据的不同：图像文件中可能包含一些元数据，例如创建时间、修改时间、拍摄设备等信息，这些元数据的不同也可能会导致文件大小的差异。</p>
-<p>在神经网络中，我们通常需要将输入图像的尺寸规范化为相同的分辨率。</p>
-<p>然后我们进行数据增强</p>
-<p>训练循环顺序：<br>
-步骤1<br>
-生成器不动，生成器产生一批假图片，再拿取一批真实图片，喂给判别器，训练判别器。<br>
-我们希望判别器对假图片打上标签0，对真图片打上标签1<br>
-步骤2<br>
-判别器不动，训练生成器</p>
-<p><a href="https://blog.csdn.net/weixin_44887621/article/details/120535309">pytorch保存图片 save_image ，读取图片</a></p>
-<p>训练GAN网络训练多少次比较合适？<br>
-最好使用一种称为 &quot;early stopping&quot; 的方法，即在模型在验证集上的表现开始下降时停止训练。这样可以避免模型出现过拟合的情况。</p>
-<p>另外，也可以使用 &quot;learning rate decay&quot; 的方法来防止模型出现过拟合的情况。这种方法的原理是，在训练过程中，会逐渐降低学习率，以便模型能够更加稳定地收敛到最优解。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数据归一化处理]]></title>
-        <id>https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/</id>
-        <link href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">
-        </link>
-        <updated>2022-12-25T11:59:16.000Z</updated>
-        <content type="html"><![CDATA[<p>数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。</p>
-<p>常见的数据归一化方法有以下几种：</p>
-<p><strong>最值归一化（Min-Max Normalization）</strong><br>
-最值归一化是将数据映射到[0,1]范围内，公式如下：</p>
-<p>X_normalized = (X - Xmin) / (Xmax - Xmin)</p>
-<p>其中，Xmin和Xmax分别是数据集中的最小值和最大值。</p>
-<p><strong>均值方差归一化（Standardization）</strong><br>
-均值方差归一化是将数据转换为均值为0，方差为1的数据，公式如下：</p>
-<p>X_normalized = (X - Xmean) / Xstd</p>
-<p>其中，Xmean和Xstd分别是数据集的均值和标准差。</p>
-<p><strong>小数定标归一化</strong><br>
-小数定标归一化是将数据的小数点移动到某一位置，使得数据范围在一定程度上缩小。例如，将数据的小数点向左移动2位，可以将数据的范围缩小100倍。</p>
-<p><strong>对数归一化</strong><br>
-对数归一化是将数据取对数后进行归一化处理。这种方法通常用于处理数据的取值范围差异很大的情况。</p>
-<p>数据归一化的目的是使得数据的分布更加规律<br>
-归一化处理可以使不同的数据具有相似的分布和取值范围，这在许多机器学习算法中是很有用的。例如，在使用梯度下降算法进行模型训练时，如果数据的范围差异很大，模型可能会在局部最小值附近来回震荡，导致收敛速度减慢。归一化处理可以使梯度下降算法更快地收敛，并且可以使模型的泛化能力更强。</p>
-<p>但是，也要注意，如果数据已经具有相似的分布和取值范围，则不需要进行归一化处理。另外，在使用归一化处理后的数据进行模型训练后，在使用模型进行预测时，还需要将输入数据进行相应的反归一化处理，才能得到正确的预测结果。</p>
-<p><strong>使用pytorch进行归一化操作</strong></p>
-<pre><code class="language-python">normalize = transforms.Normalize((mean,), (std,))
-</code></pre>
-<p>其中 mean 为均值，std为方差，想进行归一化操作需要先计算出数据的均值和方差。</p>
-<p>例如对MNIST数据集的处理：</p>
-<pre><code class="language-python"># 定义图像处理方法
-tranform = transforms.Compose([
-    transforms.ToTensor(),  # 将图片转换成Tensor
-    transforms.Normalize((0.1307,), (0.3081,))  # 进行数据归一化处理
-])
-</code></pre>
-<p>其中 0.1307 和 0.3081 分别是MNIST的均值和方差，可以自己计算，也可以网上查<br>
-等同于 X_normalized = (X - 0.1307) / 0.3081，转化为均值为0，方差为1的数据。</p>
 ]]></content>
     </entry>
 </feed>
