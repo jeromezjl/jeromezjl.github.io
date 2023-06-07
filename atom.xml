@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-06-05T13:05:22.162Z</updated>
+    <updated>2023-06-07T07:08:15.241Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【NLP】Transformer]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-transformer/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-transformer/">
+        </link>
+        <updated>2023-06-06T13:19:42.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>仔细看这个文章就全懂了</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/338817680">Transformer模型详解（图解最完整版）</a></p>
+<p><strong>基础预备</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
+Transformer：Seq2Seq model with attention</p>
+<p><a href="https://zhuanlan.zhihu.com/p/105722023">一文详解Softmax函数</a><br>
+通过Softmax函数就可以将多分类的输出值转换为范围在[0, 1]和为1的概率分布</p>
+<p><strong>思维导图</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1686115237621.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115244889.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115251026.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115255439.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【音乐】即兴练习思路]]></title>
         <id>https://jeromezjl.github.io/post/lian-qin/</id>
@@ -157,12 +177,6 @@ SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索�
 </li>
 </ol>
 <p>综上所述，SIFT适用于小规模图像数据库和对局部特征关注较多的场景，而CNN在大规模图像数据集和需要全局语义信息的任务中具有优势。实际应用中，可以根据具体任务的需求和数据的特点选择适合的方法或结合两者的优势进行</p>
-<h1 id="alexnet">AlexNet</h1>
-<p><a href="https://blog.csdn.net/guzhao9901/article/details/118552085">AlexNet网络结构详解（含各层维度大小计算过程）与PyTorch实现</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/467017218">手撕 CNN 经典网络之 AlexNet（理论篇）</a></p>
-<h1 id="resnet">ResNet</h1>
-<h1 id="swin">Swin</h1>
-<h1 id="vgg">VGG</h1>
 <h1 id="纹理">纹理</h1>
 <p>常见任务：<br>
 ·从图像纹理估计表面方向或形状<br>
@@ -306,6 +320,12 @@ SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索�
 <p><a href="https://www.zhihu.com/tardis/zm/art/51490200?source_id=1005">计算摄影学及本专栏介绍</a><br>
 <a href="https://www.zhihu.com/question/427425910">计算成像(computational photography)方向的就业前景如何？</a><br>
 <a href="https://www.bilibili.com/video/BV1VA4y1Z7DG/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">iPhone 13系列解读之二——让我们聊聊计算摄影</a></p>
+<h1 id="alexnet">AlexNet</h1>
+<p><a href="https://blog.csdn.net/guzhao9901/article/details/118552085">AlexNet网络结构详解（含各层维度大小计算过程）与PyTorch实现</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/467017218">手撕 CNN 经典网络之 AlexNet（理论篇）</a></p>
+<h1 id="resnet">ResNet</h1>
+<h1 id="swin">Swin</h1>
+<h1 id="vgg">VGG</h1>
 ]]></content>
     </entry>
     <entry>
@@ -775,19 +795,6 @@ print(&quot;还原结果: &quot;, text)
 </code></pre>
 <pre><code class="language-python">还原结果:  ['the', 'deep', 'learning']
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【CV】视频目标检测]]></title>
-        <id>https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/</id>
-        <link href="https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/">
-        </link>
-        <updated>2023-03-10T05:51:59.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_40557160/article/details/109536612">视频目标检测VID论文及代码（更新至2020.12）</a><br>
-<a href="https://zhuanlan.zhihu.com/p/94986199">写给小白的YOLO介绍</a><br>
-<a href="https://blog.csdn.net/breeze_blows/article/details/105323491">视频目标检测(video object detection)简单综述</a><br>
-<a href="https://blog.csdn.net/weixin_43702653/article/details/123973629?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167842568816782427467521%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=167842568816782427467521&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-123973629-null-null.142%5Ev73%5Einsert_down4,201%5Ev4%5Eadd_ask,239%5Ev2%5Einsert_chatgpt&amp;utm_term=R-CNN&amp;spm=1018.2226.3001.4187">R-CNN史上最全讲解</a><br>
-<a href="https://blog.csdn.net/qq_40716944/article/details/114822515">YOLO系列详解：YOLOv1、YOLOv2、YOLOv3、YOLOv4、YOLOv5、YOLOv6、YOLOv7</a></p>
 ]]></content>
     </entry>
 </feed>
