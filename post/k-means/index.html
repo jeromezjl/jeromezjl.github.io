@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>【ML】KNN | K-means | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1686121680162">
+<link rel="shortcut icon" href="/favicon.ico?v=1686151959038">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -78,8 +78,6 @@
           
         </div>
         
-          <p class="subtitle">精于心，简于形</p>
-        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
@@ -132,6 +130,19 @@
               
                 <a href="/post/about" target="_self">
                   <i class="fa fa-globe"></i> 关于
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/tree" target="_self">
+                  <i class="fa fa-globe"></i> 索引
                 </a>
               
             </li>
@@ -215,7 +226,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">81</span>
+        <span class="site-item-stat-count">82</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -565,20 +576,6 @@
         ></span
       >
     </span>
-      
-    <span
-      id="/post/k-means/"
-      data-flag-title="【ML】KNN | K-means"
-      class="meta-item pc-show leancloud_visitors"
-    >
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-eye"></i>
-      <span
-        ><span class="language" data-lan="view">浏览量:</span>:<span
-          class="leancloud-visitors-count"
-        ></span
-      ></span>
-    </span>
     
   </div>
 </section>
@@ -615,10 +612,6 @@ K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类�
 <p>总结而言，K-means和KNN是不同类型的机器学习算法，K-means用于聚类，而KNN用于分类和回归预测。它们在目标、学习方式、数据需求和算法复杂度等方面有显著的区别。</p>
 
             </div>
-            
-              <div class="reward-btn">
-                <div class="reward-btn-text">赞赏</div>
-              </div>
             
             
               <div class="post-footer">
@@ -658,7 +651,56 @@ K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类�
 </div>
             
             
-  
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: '',
+    appKey: '',
+    avatar: '',
+    placeholder: '',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: 'true' === 'false',
+    visitor: 'true' === 'false',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+    serverURLs: '',
+		recordIP: 'true' === 'true',
+  });
+</script>
 
           </div>
         </div>
@@ -1148,6 +1190,15 @@ K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类�
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/tree/"" data-c="
+          &lt;h1 id=&#34;ml&#34;&gt;ML&lt;/h1&gt;
+&lt;h1 id=&#34;dl&#34;&gt;DL&lt;/h1&gt;
+&lt;h1 id=&#34;cv&#34;&gt;CV&lt;/h1&gt;
+&lt;h1 id=&#34;nlp&#34;&gt;NLP&lt;/h1&gt;
+">索引</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-transformer/"" data-c="
           &lt;p&gt;&lt;strong&gt;仔细看这个文章就全懂了&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/338817680&#34;&gt;Transformer模型详解（图解最完整版）&lt;/a&gt;&lt;/p&gt;
@@ -1161,6 +1212,60 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115244889.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115251026.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115255439.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;基于 Transformer 搭建英译中翻译模型&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/347061440&#34;&gt;教你用PyTorch玩转Transformer英译中翻译模型！&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;设计一个中译英的翻译系统基于BPE（Byte-Pair Encoding）和Transformer的话，可以按照以下步骤进行设计：&lt;/p&gt;
+&lt;p&gt;步骤 1：数据准备&lt;br&gt;
+收集中英文平行语料，并进行预处理。确保数据干净且格式一致。可以使用一些开源的中英文平行语料库，如WMT、OpenSubtitles等。&lt;/p&gt;
+&lt;p&gt;步骤 2：BPE分词&lt;br&gt;
+使用BPE算法对中英文语料进行分词，将其转换为子词级别的表示。BPE是一种基于统计的分词方法，可以将常见的词组或者词素分解为子词。这样做的好处是能够处理未登录词和稀有词，同时减小词表的大小。&lt;/p&gt;
+&lt;p&gt;对于中文，可以使用开源工具如SentencePiece、Jieba等进行BPE分词。对于英文，可以使用类似的工具或者直接按空格进行分词。&lt;/p&gt;
+&lt;p&gt;步骤 3：构建词汇表&lt;br&gt;
+根据BPE分词的结果，构建中英文的词汇表。将每个子词映射到一个唯一的索引，以便于后续的模型输入和输出。&lt;/p&gt;
+&lt;p&gt;步骤 4：数据编码&lt;br&gt;
+将分词后的中英文语料转换为模型可接受的数值表示。将每个子词根据词汇表中的索引进行编码。可以使用One-hot编码或者更高效的词嵌入（如Word2Vec、GloVe）对子词进行表示。&lt;/p&gt;
+&lt;p&gt;步骤 5：设计Transformer模型&lt;br&gt;
+基于编码后的数值表示，设计一个Transformer模型用于中译英翻译。Transformer模型是一种基于自注意力机制的神经网络模型，已经被证明在机器翻译任务上取得了优秀的性能。&lt;/p&gt;
+&lt;p&gt;Transformer模型由编码器（Encoder）和解码器（Decoder）组成。编码器将源语言的输入序列转换为上下文表示，解码器使用该上下文表示生成目标语言的输出序列。&lt;/p&gt;
+&lt;p&gt;步骤 6：训练模型&lt;br&gt;
+使用已准备好的平行语料对Transformer模型进行训练。训练的过程中可以使用一些技巧，如批量训练、学习率调整、正则化等。目标是通过最小化损失函数（如交叉熵损失）来优化模型参数，使其能够更好地完成中译英的翻译任务。&lt;/p&gt;
+&lt;p&gt;步骤 7：评估和调优&lt;br&gt;
+使用一些评估指标，如BLEU、ROUGE等，对训练得到的模型进行评估。根据评估结果，进行调优和改进。可以尝试不同的超参数&lt;/p&gt;
+&lt;p&gt;步骤 8：推理和翻译&lt;br&gt;
+使用训练好的模型进行推理和翻译。对于输入的中文句子，首先进行BPE分词，然后根据词汇表进行编码，得到数值表示。将数值表示输入到编码器中，得到上下文表示。接下来，使用解码器生成目标语言的输出序列，直到遇到结束符或达到最大长度。&lt;/p&gt;
+&lt;p&gt;步骤 9：后处理&lt;br&gt;
+对生成的英文句子进行后处理，如去除多余的空格、标点符号等，以得到最终的翻译结果。&lt;/p&gt;
+&lt;p&gt;步骤 10：调优和改进&lt;br&gt;
+根据推理的结果和用户反馈，进行模型的调优和改进。可以尝试不同的模型架构、超参数调整、数据增强等方法，以提高翻译质量和性能。&lt;/p&gt;
+&lt;h1 id=&#34;人机对话&#34;&gt;人机对话&lt;/h1&gt;
+&lt;p&gt;设计一个人机对话系统需要经过以下步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;数据收集和预处理：收集对话数据集，包括人类与机器之间的对话。预处理数据，例如分词、词性标注、命名实体识别等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文本表示：使用预训练的词向量（例如Word2Vec、GloVe等）将对话文本转换为向量表示。可以使用Transformer模型将文本序列转换为语义向量表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;意图识别：使用分类模型（例如基于卷积神经网络或循环神经网络）来识别对话中用户的意图。意图识别模型可以使用对话的历史上下文信息进行训练。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;槽位填充：使用序列标注模型（例如条件随机场CRF）来识别对话中的槽位信息，例如用户的姓名、日期、地点等。可以将槽位填充任务看作是一个序列标注问题，其中每个词语对应一个标签。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对话管理：设计对话管理器来决定系统对用户的回应。对话管理器可以基于强化学习方法进行训练，将对话系统的目标设置为最大化预定义的奖励函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回复生成：使用生成式模型（例如循环神经网络）生成对话回复。可以使用带有注意力机制的Transformer模型来提高生成质量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模型训练和评估：将数据集分为训练集、验证集和测试集。使用训练集对对话系统的各个组件进行训练，使用验证集进行超参数调整和模型选择。最后，在测试集上评估对话系统的性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迭代改进：根据评估结果和用户反馈，对对话系统进行改进。可以增加更多的训练数据、调整模型结构或优化超参数来提高系统的性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要注意的是，以上步骤仅提供了一个基本的框架，实际设计一个人机对话系统可能需要更多的细化和调整，根据具体需求和场景进行相应的改进。&lt;/p&gt;
 ">【NLP】Transformer</a>
       </div>
       
@@ -1555,6 +1660,13 @@ confusion_matrix(y_true, y_pred, labels=[&amp;quot;ant&amp;quot;, &amp;quot;bird
 精确率：预测正确的正样本 / 所有预测为正的样本&lt;br&gt;
 召回率：预测正确的正样本 / 测试集中所有正样本数&lt;/p&gt;
 ">【ML】分类模型的评估</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/skip-gram-ci-xiang-liang-xue-xi/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/27234078&#34;&gt;理解 Word2Vec 之 Skip-Gram 模型&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/m0_63642362/article/details/127991177&#34;&gt;图学习【参考资料1】词向量word2vec&lt;/a&gt;&lt;/p&gt;
+">【NLP】词向量</a>
       </div>
       
       <div class="item">

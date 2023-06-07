@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
-<title>【NLP】BPE | Jerome</title>
+<title>索引 | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1686151959038">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="【NLP】BPE" />
-  <meta name="keywords" content="NLP" />
+  <meta name="description" content="索引" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -280,11 +280,10 @@
   <div class="toc-wrapper  auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E5%9F%BA%E4%BA%8Ebpe%E7%9A%84%E5%AD%90%E8%AF%8D%E5%8E%8B%E7%BC%A9">基于BPE的子词压缩</a></li>
-<li><a href="#12-%E5%AE%9E%E7%8E%B0%E6%B5%81%E7%A8%8B">1.2 实现流程</a></li>
-<li><a href="#13-%E8%AF%8D%E8%A1%A8%E6%9E%84%E5%BB%BA">1.3 词表构建</a></li>
-<li><a href="#14-%E8%AF%AD%E6%96%99%E7%BC%96%E7%A0%81">1.4 语料编码</a></li>
-<li><a href="#15-%E8%AF%AD%E6%96%99%E8%A7%A3%E7%A0%81">1.5 语料解码</a></li>
+<li><a href="#ml">ML</a></li>
+<li><a href="#dl">DL</a></li>
+<li><a href="#cv">CV</a></li>
+<li><a href="#nlp">NLP</a></li>
 </ul>
 
   </div>
@@ -550,32 +549,21 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/bpe/"> 【NLP】BPE </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/tree/"> 索引 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2023-03-30 14:22:31">2023-03-30</span>
+      <span class="publish-time" data-t="2023-06-07 16:01:38">2023-06-07</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">标签:</span>
-       
-      <a href="https://jeromezjl.github.io/tag/KZ9H-uQw1/">
-        <span>NLP</span>
-      </a>
-       
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >23<span class="language" data-lan="minute"
+        >1<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -584,7 +572,7 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >4598<span class="pc-show language" data-lan="words"
+        >4<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
@@ -594,333 +582,10 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <p><a href="https://blog.csdn.net/weixin_43902773/article/details/115191790">基于BPE的汉语tokenization</a></p>
-<h1 id="基于bpe的子词压缩">基于BPE的子词压缩</h1>
-<p>对于英文语料来讲，特别是在预训练模型兴起之前，一种常见的分词方式是通过空格对英文语句直接进行分词。然而这种分词方式可能也会带来一些问题。</p>
-<ol>
-<li>英文单词由于时态、单复数、大小写等因素，可能具有多个单词变体，比如单词go具有这样的变体： going, gone, goes，单纯基于空格从语料中收集单词，可能会导致词表过大，进而导致模型学习过程中，需要设置较大的词向量矩阵，增加模型参数。</li>
-<li>由于词表难以穷尽所有单词，以及网络中会出现一些新的词，导致某些词无法出现在词表中，即出现集外词（OOV）。<br>
-BPE（Byte-Pair Encoding）是缓解这些问题的一种算法，其不再按照完整的单词进行分词，而是将单词划分成了子词（sub-word）的粒度。例如单词showed可以被划分为show和ed， 如此做法，可以有效缩减单词个数，同时通过拆解子词也能够缓解OOV问题。图1展示了一种BPE算法效果的示例，一方面通过右侧的子词组合可以表示左侧任意一个单词，另一方面通过子词的表示大大减小了原本词表的大小。<br>
-<img src="https://jeromezjl.github.io/post-images/1680157576369.png" alt="" loading="lazy"><br>
-图1 BPE算法示例</li>
-</ol>
-<h1 id="12-实现流程">1.2 实现流程</h1>
-<p>如图2所示，使用BPE算法进行对文本进行分词，首先需要根据英文语料构建BPE的子词词表，根据此词表即可对给定的文本序列进行编码，即分词，获取分词后的文本序列。同时提供根据编码后的结果还原原始语句的方法。<br>
-<img src="https://jeromezjl.github.io/post-images/1680157622297.png" alt="" loading="lazy"><br>
-图2 BPE实现流程</p>
-<h1 id="13-词表构建">1.3 词表构建</h1>
-<p>词表构建是BPE算法的核心，首先需要准备一批语料，然后从语料中逐步统计词频，构建BPE子词词表。具体来讲，首先需要将训练数据中的每个单词切分成字符作为初始子词，并统计语料中的子词初始化子词词表。接下来，可以按照如下步骤逐步迭代：</p>
-<ol>
-<li>统计每一个连续子词对的出现频率，选择最高频子词对合并成新的子词，并将该子词对加入词表中；</li>
-<li>根据最高频子词对，将语料中的这两个相邻子词进行合并；</li>
-<li>如果组成最高频子词对的子词在原始语料中不再存在，则在词表中进行删除；</li>
-<li>重复第1-3步直到达到设定的子词词表大小或迭代次数；<br>
-下面通过一个例子说明如何构造子词词典，假设通过统计获得了如下预处理好的语料库，其中每个单词中的字符通过空格进行分割为子词，同时单词后使用</w>作为单词结尾符号：</li>
-</ol>
-<pre><code class="language-python">train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n i n g &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a n g u a g e &lt;/w&gt;': 3,'p r o c e s s i n g &lt;/w&gt;':7}
-</code></pre>
-<p>利用以上训练数据，初始化子词词表为：</p>
-<pre><code class="language-python">bpe_vocab = {'a', 'e', 'p', '&lt;/w&gt;', 'g', 'o', 's', 'l', 'r', 'u', 'd', 'n', 'i', 't', 'c'}
-</code></pre>
-<p>接下来，便可以逐步统计最高频的相邻子词对，并对训练数据进行子词合并。</p>
-<p>第1次迭代： 最高频连续子词对&quot;n&quot;和&quot;g&quot;出现了7+3+7=17次，合并成&quot;ng&quot;加入词表。&quot;n&quot;和&quot;g&quot;在语料库中依旧存在，因此不需要在词表中删除，语料库和词表在本次迭代之后的结果为：</p>
-<pre><code class="language-python">train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n i ng &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3,'p r o c e s s i ng &lt;/w&gt;':7}
-bpe_vocab = {'a', 'e', 'p', '&lt;/w&gt;', 'g', 'o', 's', 'l', 'r', 'u', 'd', 'n', 'i', 't', 'c', 'ng'}
-</code></pre>
-<p>第2次迭代： 最高频连续子词对&quot;i&quot;和&quot;ng&quot;出现了7+7=14次，合并成&quot;ing&quot;加入词表。子词&quot;i&quot;在语料库中不再存在，因此在词表中进行删除，语料库和词表在本次迭代之后的结果为：</p>
-<pre><code class="language-python">train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n ing &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3,'p r o c e s s ing &lt;/w&gt;':7}
-bpe_vocab = {'a', 'e', 'p', '&lt;/w&gt;', 'g', 'o', 's', 'l', 'r', 'u', 'd', 'n', 't', 'c', 'ng', 'ing'}
-</code></pre>
-<p>第3次迭代： 最高频连续子词对&quot;ing&quot;和&quot;</w>&quot;出现了7+7=14次，合并成&quot;ing</w>&quot;加入词表。&quot;ing&quot;在语料库中不再存在，因此在词表中进行删除，语料库和词表在本次迭代之后的结果为：</p>
-<pre><code class="language-python">train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3,'p r o c e s s ing&lt;/w&gt;':7}
-bpe_vocab = {'a', 'e', 'p', '&lt;/w&gt;', 'g', 'o', 's', 'l', 'r', 'u', 'd', 'n', 't', 'c', 'ng','ing&lt;/w&gt;'}
-</code></pre>
-<p>重复以上迭代过程，直到子词词表规模达到预先设定的大小或下一个最高频的子词对出现频率为1。</p>
-<p>首先，定义函数get_subwords，用以统计子词以及对应的词频，并获取初始化后的子词词表bpe_vocab。</p>
-<pre><code class="language-python">import re
-import collections
-
-def get_subwords(data):
-    &quot;&quot;&quot;
-    统计子词以及对应的词频
-    &quot;&quot;&quot;
-    subwords = collections.defaultdict(int)
-    for word, freq in data.items():
-        for subword in word.split():
-            subwords[subword] += freq
-
-    return subwords
-
-train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n i n g &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a n g u a g e &lt;/w&gt;': 3,'p r o c e s s i n g &lt;/w&gt;':7}
-subwords = get_subwords(train_data)
-# 获取初始化的子词词表
-bpe_vocab = set(subwords.keys())
-print(&quot;词表：&quot;, bpe_vocab)
-</code></pre>
-<pre><code class="language-python">词表： {'d', 's', 'a', 'u', 'o', '&lt;/w&gt;', 'i', 'g', 'c', 'r', 'l', 't', 'n', 'p', 'e'}
-</code></pre>
-<p>接下来，在构造词表过程中，需要统计相邻子词对的词频，以便获取最高频的词对，代码实现如下。</p>
-<pre><code class="language-python">def get_pair_with_frequency(data):
-    &quot;&quot;&quot;
-    获取子词对以及子词集合
-    &quot;&quot;&quot;
-    pairs = collections.defaultdict(int)
-    for word, freq in data.items():
-        sub_words = word.split()
-        for i in range(len(sub_words)-1):
-            pair = (sub_words[i],sub_words[i+1])
-            pairs[pair] += freq
-    return pairs
-
-pairs = get_pair_with_frequency(train_data)
-print(&quot;子词词对：&quot;, pairs)
-best_pair = max(pairs, key=pairs.get)
-print(&quot;当前最高频的子词对: &quot;, best_pair)
-</code></pre>
-<pre><code class="language-python">子词词对： defaultdict(&lt;class 'int'&gt;, {('d', 'e'): 5, ('e', 'e'): 5, ('e', 'p'): 5, ('p', '&lt;/w&gt;'): 5, ('l', 'e'): 7, ('e', 'a'): 7, ('a', 'r'): 7, ('r', 'n'): 7, ('n', 'i'): 7, ('i', 'n'): 14, ('n', 'g'): 17, ('g', '&lt;/w&gt;'): 14, ('n', 'a'): 6, ('a', 't'): 6, ('t', 'u'): 6, ('u', 'r'): 6, ('r', 'a'): 6, ('a', 'l'): 6, ('l', '&lt;/w&gt;'): 6, ('l', 'a'): 3, ('a', 'n'): 3, ('g', 'u'): 3, ('u', 'a'): 3, ('a', 'g'): 3, ('g', 'e'): 3, ('e', '&lt;/w&gt;'): 3, ('p', 'r'): 7, ('r', 'o'): 7, ('o', 'c'): 7, ('c', 'e'): 7, ('e', 's'): 7, ('s', 's'): 7, ('s', 'i'): 7})
-当前最高频的子词对:  ('n', 'g')
-</code></pre>
-<p>接下来，根据获取的最高频子词对，对训练语料中的相应子词进行合并，代码实现如下。</p>
-<pre><code class="language-python">def merge_data_with_pair(pair, data):
-    &quot;&quot;&quot;
-    将语料中的最高频子词对进行合并
-    输入：
-        - pair: 最高频子词词对
-        - data: 字典形式，统计好的输入语料
-    &quot;&quot;&quot;
-    result = {}
-    bigram = re.escape(' '.join(pair))
-    p = re.compile(r'(?&lt;!\S)' + bigram + r'(?!\S)')
-    for word in data:
-        merged_word = p.sub(''.join(pair), word)
-        result[merged_word] = data[word]
-    return result
-
-train_data = merge_data_with_pair(best_pair, train_data)
-print(&quot;语料库: &quot;, train_data)
-</code></pre>
-<pre><code class="language-python">语料库:  {'d e e p &lt;/w&gt;': 5, 'l e a r n i ng &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s i ng &lt;/w&gt;': 7}
-</code></pre>
-<p>最后，将最高频的子词对加入词表，对于不再存在于语料库中的子词在词表中进行删除。基于上述这流程，下面正式定义构建词表函数build_vocab，代码实现如下。</p>
-<pre><code class="language-python">def build_vocab(train_data, num_merges):
-    &quot;&quot;&quot;
-    根据训练语料构建词表
-    输入：
-        - train_data: 字典形式，统计好的输入语料
-        - num_merges: 迭代次数
-    &quot;&quot;&quot;
-
-    # 初始化词表
-    subwords = get_subwords(train_data)
-    bpe_vocab = set(subwords.keys())
-    print(bpe_vocab, len(bpe_vocab))
-    i = 1
-    # 逐步生成词表
-    for _ in range(num_merges):
-        # 根据语料统计相邻子词对的词频
-        pairs = get_pair_with_frequency(train_data)
-        # 取频率最大的子词对, 如果pairs 为空或子词对的最大频次为1，则停止
-        if not pairs:
-            break
-        best_pair = max(pairs, key=pairs.get)
-        if pairs[best_pair] == 1:
-            break
-        # 合并语料
-        train_data = merge_data_with_pair(best_pair, train_data)
-        # 将子词加入词表中
-        merged_word = &quot;&quot;.join(best_pair)
-        bpe_vocab.add(merged_word)
-        # 删除子词
-        subwords = get_subwords(train_data)
-        if best_pair[0] not in subwords:
-            bpe_vocab.remove(best_pair[0])
-        if best_pair[1] not in subwords:
-            bpe_vocab.remove(best_pair[1])
-
-        print(&quot;Iter - {}, 最高频子词对: {}&quot;.format(i, best_pair))
-        print(&quot;训练数据: &quot;, train_data)
-        print(&quot;词表: {}, {}\n&quot;.format(len(bpe_vocab), bpe_vocab))
-        i += 1
-    return bpe_vocab
-
-num_merges = 14
-
-train_data = {'d e e p &lt;/w&gt;': 5, 'l e a r n i n g &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a n g u a g e &lt;/w&gt;': 3,'p r o c e s s i n g &lt;/w&gt;':7}
-
-bpe_vocab = build_vocab(train_data, num_merges)
-print(&quot;词表: &quot;, bpe_vocab)
-</code></pre>
-<pre><code class="language-python">{'d', 's', 'a', 'u', 'o', '&lt;/w&gt;', 'i', 'g', 'c', 'r', 'l', 't', 'n', 'p', 'e'} 15
-Iter - 1, 最高频子词对: ('n', 'g')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'l e a r n i ng &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s i ng &lt;/w&gt;': 7}
-词表: 16, {'d', 's', 'a', 'u', 'o', '&lt;/w&gt;', 'i', 'g', 'c', 'r', 'ng', 'l', 't', 'n', 'p', 'e'}
-
-Iter - 2, 最高频子词对: ('i', 'ng')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'l e a r n ing &lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing &lt;/w&gt;': 7}
-词表: 16, {'d', 'ing', 's', 'a', 'u', 'o', '&lt;/w&gt;', 'g', 'c', 'r', 'ng', 'l', 't', 'n', 'p', 'e'}
-
-Iter - 3, 最高频子词对: ('ing', '&lt;/w&gt;')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'l e a r n ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 16, {'d', 's', 'a', 'u', 'o', '&lt;/w&gt;', 'g', 'c', 'r', 'ng', 'l', 't', 'n', 'p', 'ing&lt;/w&gt;', 'e'}
-
-Iter - 4, 最高频子词对: ('l', 'e')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'le a r n ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 'le', 's', 'ng', 't', 'o'}
-
-Iter - 5, 最高频子词对: ('le', 'a')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'lea r n ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', '&lt;/w&gt;', 'g', 'p', 'e', 'lea', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't', 'o'}
-
-Iter - 6, 最高频子词对: ('lea', 'r')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'lear n ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'lear', 'ng', 't', 'o'}
-
-Iter - 7, 最高频子词对: ('lear', 'n')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learn ing&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', '&lt;/w&gt;', 'g', 'learn', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't', 'o'}
-
-Iter - 8, 最高频子词对: ('learn', 'ing&lt;/w&gt;')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'p r o c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't', 'o'}
-
-Iter - 9, 最高频子词对: ('p', 'r')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'pr o c e s s ing&lt;/w&gt;': 7}
-词表: 18, {'a', 'u', 'c', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'pr', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't', 'o'}
-
-Iter - 10, 最高频子词对: ('pr', 'o')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'pro c e s s ing&lt;/w&gt;': 7}
-词表: 17, {'a', 'u', 'c', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'pro', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't'}
-
-Iter - 11, 最高频子词对: ('pro', 'c')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'proc e s s ing&lt;/w&gt;': 7}
-词表: 16, {'proc', 'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't'}
-
-Iter - 12, 最高频子词对: ('proc', 'e')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'proce s s ing&lt;/w&gt;': 7}
-词表: 16, {'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', 'proce', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't'}
-
-Iter - 13, 最高频子词对: ('proce', 's')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'proces s ing&lt;/w&gt;': 7}
-词表: 16, {'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'proces', 'r', 'ing&lt;/w&gt;', 'd', 's', 'ng', 't'}
-
-Iter - 14, 最高频子词对: ('proces', 's')
-训练数据:  {'d e e p &lt;/w&gt;': 5, 'learning&lt;/w&gt;': 7, 'n a t u r a l &lt;/w&gt;': 6, 'l a ng u a g e &lt;/w&gt;': 3, 'process ing&lt;/w&gt;': 7}
-词表: 15, {'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'process', 'ing&lt;/w&gt;', 'd', 'ng', 't'}
-
-词表:  {'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'process', 'ing&lt;/w&gt;', 'd', 'ng', 't'}
-</code></pre>
-<h1 id="14-语料编码">1.4 语料编码</h1>
-<p>在获得子词词表之后，便可以根据该词表将文本序列进行编码，即分词。这里可以采用贪心的思想，根据子词词表中的子词长度对子词词表由大到小进行排序，然后对于一个待编码的单词，从前向后依次遍历词表中的子词，如果该子词在单词之后，则将该单词在子词位置进行切分，这样便可以获得最多三个单词子串：子词前的单词子串、子词串、子词后的单词子串，然后按照同样的思路继续遍历剩余的单词子串。如果在子词词表遍历完成之后，依然有一些单词子串没有被切分，则使用'<UNK>'进行替代。</p>
-<p>下面来看一个例子，假设给定子词词表为：</p>
-<pre><code class="language-python">[“ning&lt;/w&gt;”, “lear”, “deep&lt;/w&gt;”, “est&lt;/w&gt;”, “the&lt;/w&gt;”, “a&lt;/w&gt;”]
-</code></pre>
-<p>待分词的文本序列为:</p>
-<pre><code class="language-python">[“the&lt;/w&gt;”, “deep&lt;/w&gt;”, “learning&lt;/w&gt;”]
-</code></pre>
-<p>则最后分词编码的结果为：</p>
-<pre><code class="language-python">[“the&lt;/w&gt;”, “deep&lt;/w&gt;”, &quot;lear&quot;, “ning&lt;/w&gt;”]
-</code></pre>
-<p>接下来，先定义函数tokenize_word用于对单词进行编码。</p>
-<pre><code class="language-python">import re
-
-def tokenize_word(word, sorted_vocab, unknown_token='&lt;unk&gt;'):
-    &quot;&quot;&quot;
-    输入:
-        - word: 待编码的单词
-        - sorted_vocab: 排序后的子词词典
-        - unknown_token: 不能被切分的子词替代符
-    &quot;&quot;&quot;
-    # 如果传入的词为空
-    if word == &quot;&quot;:
-        return []
-    # 如果词表为空，则将输入的词替换为&lt;UNK&gt;
-    if sorted_vocab == []:
-        return [unknown_token] + len(string)
-
-    word_tokens = []
-    # 遍历词表拆分单词
-    for i in range(len(sorted_vocab)):
-        token = sorted_vocab[i]
-        # 基于该token定义正则，同时将token里面包含句号的变成[.]
-        token_reg = re.escape(token.replace('.', '[.]'))
-        # 在当前word中进行遍历，找到匹配的token的起始和结束位置
-        matched_positions = [(m.start(0), m.end(0)) for m in re.finditer(token_reg, word)]
-        # 如果当前token没有匹配到相应串，则跳过
-        if  len(matched_positions) == 0:
-            continue
-        
-        # 获取匹配到的子串的起始位置
-        end_positions = [matched_position[0] for matched_position in matched_positions]
-        start_position = 0
-
-        for end_position in end_positions:
-            subword = word[start_position: end_position]
-            word_tokens += tokenize_word(subword, sorted_vocab[i+1:], unknown_token)
-            word_tokens += [token]
-            start_position = end_position + len(token)
-        # 匹配剩余的子串
-        word_tokens += tokenize_word(word[start_position:], sorted_vocab[i+1:], unknown_token)
-        break
-    else:
-        # 如果word没有被匹配，则映射为&lt;unk&gt;
-        word_tokens = [unknown_token] * len(word)
-    
-    return word_tokens
-</code></pre>
-<p>定义函数tokenize用于对语句进行编码。</p>
-<pre><code class="language-python">def tokenize(text, bpe_vocab):
-    &quot;&quot;&quot;
-    使用BPE对输入语句进行编码
-    &quot;&quot;&quot;
-    # 对子词词表按照子词长度进行排序
-    sorted_vocab = sorted(bpe_vocab, key=lambda subword: len(subword), reverse=True)
-    print(&quot;待编码语句: &quot;, text)
-    tokens = []
-    for word in text.split():
-        word = word + &quot;&lt;/w&gt;&quot;
-        word_tokens = tokenize_word(word, sorted_vocab, unknown_token='&lt;unk&gt;')
-        tokens.extend(word_tokens)
-    
-    return tokens
-
-text = &quot;natural language processing&quot;
-tokens = tokenize(text, bpe_vocab)
-print(&quot;词表: &quot;, bpe_vocab)
-print(&quot;编码结果: &quot;, tokens)
-</code></pre>
-<pre><code class="language-python">待编码语句:  natural language processing
-词表:  {'a', 'u', 'l', 'n', 'learning&lt;/w&gt;', '&lt;/w&gt;', 'g', 'p', 'e', 'r', 'process', 'ing&lt;/w&gt;', 'd', 'ng', 't'}
-编码结果:  ['n', 'a', 't', 'u', 'r', 'a', 'l', '&lt;/w&gt;', 'l', 'a', 'ng', 'u', 'a', 'g', 'e', '&lt;/w&gt;', 'process', 'ing&lt;/w&gt;']
-</code></pre>
-<h1 id="15-语料解码">1.5 语料解码</h1>
-<p>在将一串语句使用BPE进行编码后，如何还原成原来的语句呢。这种情况下，单词后设置的&lt;\w&gt;便起了作用。即可以一直合并分词后的子词，直到遇见&lt;\w&gt;便可以解码出一个完整单词。下面给出了一个例子。</p>
-<p>假设使用BPE编码后的序列：</p>
-<pre><code class="language-python">[“the&lt;/w&gt;”, “deep&lt;/w&gt;”, “lear”, “ning&lt;/w&gt;”]
-</code></pre>
-<p>则对应的解码结果为:</p>
-<pre><code class="language-python">[&quot;the&quot;, &quot;deep&quot;,&quot;learning&quot;]
-</code></pre>
-<p>代码实现如下。</p>
-<pre><code class="language-python">def restore(tokens):
-
-    text = []
-    word = []
-    for token in tokens:
-        if token[-4:] == &quot;&lt;/w&gt;&quot;:
-            if token != &quot;&lt;/w&gt;&quot;:
-                word.append(token[:-4])
-            text.append(&quot;&quot;.join(word))
-            word.clear()
-        else:
-            word.append(token)
-    return text
-
-tokens = [&quot;the&lt;/w&gt;&quot;, &quot;deep&lt;/w&gt;&quot;, &quot;lear&quot;, &quot;ning&lt;/w&gt;&quot;]
-text = restore(tokens)
-print(&quot;还原结果: &quot;, text)
-</code></pre>
-<pre><code class="language-python">还原结果:  ['the', 'deep', 'learning']
-</code></pre>
+              <h1 id="ml">ML</h1>
+<h1 id="dl">DL</h1>
+<h1 id="cv">CV</h1>
+<h1 id="nlp">NLP</h1>
 
             </div>
             
@@ -933,7 +598,7 @@ print(&quot;还原结果: &quot;, text)
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/bpe/" title="【NLP】BPE">https://jeromezjl.github.io/post/bpe/</a>
+      <a href="https://jeromezjl.github.io/post/tree/" title="索引">https://jeromezjl.github.io/post/tree/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -942,22 +607,12 @@ print(&quot;还原结果: &quot;, text)
   </ul>
   <div class="tags">
     
-      <a href="https://jeromezjl.github.io/tag/KZ9H-uQw1/"># NLP</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【摄影】调色思路" href="https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/">【摄影】调色思路</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【摄影】调色思路" href="https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/">上一篇</a>
-      
     </div>
     <div class="nav-next">
-      
-        <a class="nav-pc-next" title="【CV】视频目标检测" href="https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/">【CV】视频目标检测</a>
-        <a class="nav-mobile-next" title="【CV】视频目标检测" href="https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
