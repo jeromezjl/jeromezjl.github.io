@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-06-15T14:46:04.093Z</updated>
+    <updated>2023-10-07T14:48:30.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,319 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[Some Words]]></title>
+        <id>https://jeromezjl.github.io/post/some-words/</id>
+        <link href="https://jeromezjl.github.io/post/some-words/">
+        </link>
+        <updated>2023-09-30T02:59:11.000Z</updated>
+        <content type="html"><![CDATA[<p>要有清醒的自我认知<br>
+不要看到别人很牛，就误认为自己也很牛<br>
+要制定与自己能力相当的计划，才能达到和别人相同的目标</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【考研】高数]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-gao-shu/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-gao-shu/">
+        </link>
+        <updated>2023-08-11T10:17:37.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【考研441分】24考研数学全年规划！B站最全！</a><br>
+<a href="https://zhuanlan.zhihu.com/p/390928056">考生必记：三角函数公式汇总+记忆（没有比这更全）</a></p>
+<p>n 项和展开公式：二项式定理</p>
+<p>A=&gt;B，A 能推出 B，则 A 是 B 的充分条件（B 的充分条件是 A），B 是 A 的必要条件（A 的必要条件是 B）</p>
+<p>A 能推出 B，则 A 发生，B 一定发生，则事件 A ∈ B （小充分，小的是充分条件，大必要，大的是必要条件）</p>
+<p><strong>函数极限和数列极限的辨析</strong><br>
+🔸函数<br>
+极限可以取在任意位置</p>
+<p>🔸数列 （定义在 0, +∞）极限的定义理解：<br>
+n 趋于正无穷时，xn 趋于 a<br>
+<code>注</code><br>
+数列的极限一定是 n 趋向于无穷，因为数列中的 n 是指自然序列，也就是 n=1，2，...... 以此类推，也就是说，n 只取正整数，所以求数列的极限 n 只能趋于正无穷大。有限数列没有极限，只有无穷数列才有极限</p>
+<p><strong>函数有界和数列有界的辨析</strong><br>
+🔸函数有界<br>
+f(x) 在 (a,b) 上连续，且 f(a+) f(b-) 均存在。区间可以拓展到无穷，只要保证两端极限均存在即有界。</p>
+<p>🔸数列有界<br>
+任意一项均小于一个数 &amp;&amp; 大于一个数。比如 xn = 1/n，上界：1，下界：0<br>
+有界数列一定有上界和下界；只有上界/下界的数列不是有界数列</p>
+<p><strong>极限和有界的联系</strong><br>
+🔸函数<br>
+函数有极限 a，则在 a 的邻域内局部有界（可以拓展为无穷）<br>
+函数有界不能推出函数有极限，比如 sin cos</p>
+<p>🔸数列<br>
+如果一个数列“收敛”（有极限），那么这个数列一定有界<br>
+如果一个数列有界，这个数列未必收敛。例如数列 ：“1，-1，1，-1，……，(-1)n+1”</p>
+<p><strong>无穷小和有界</strong><br>
+函数在 x-&gt;x0 无穷小，则 x0 点极限为 0，且在 x0 邻域内局部有界。（显而易见，为了和数列做对比）<br>
+无穷小数列，n-&gt;+∞ ，an = 0；无穷小数列同时是有界和收敛数列</p>
+<p><strong>综上分析：</strong><br>
+数列 xn = 1/n，上界：1，下界：0；极限 n-&gt;∞ xn = 0；1/n 是无穷小数列</p>
+<p><strong>经典反例</strong><br>
+在判断无穷和有界的题目中，经典反例如下</p>
+<p>xn = 0 n奇；n n偶；yn = n n奇；0 n偶；<br>
+xn，yn 的无穷极限不存在；都是无界值；xn 和 yn 相乘为0；</p>
+<p>xn = 1，1，3，1，....  yn = 1，2，1，4，....<br>
+xn，yn 无穷极限不存在，但 xn 和 yn 乘积极限为无穷；</p>
+<p><strong>可去间断点</strong><br>
+f(x) 在 x₀ 处得到左、右极限均存在且相等的间断点，称为可去间断点。 需要注意的是，可去间断点需满足 f(x) 在 x₀ 处无定义，或在 x₀ 处有定义但不等于函数 f(x) 在 x₀ 的左右极限。</p>
+<p>拉格朗日中值求极限要保证 f′(ξ) 不为 0 / ∞<br>
+<a href="https://blog.csdn.net/yuxuezhang/article/details/120242578">一文彻底搞懂拉格朗日中值定理秒杀复杂极限问题（内含高级秒杀结论）</a></p>
+<p>注意，n 阶可导，洛必达只能到 n-1 阶。<br>
+因为 n 阶可导，只能保证 n-1 阶导数存在且连续。而不知道 n 阶导数是否连续。不连续是不能用洛必达的。<br>
+若 n 阶连续可导，则可以洛到 n 阶</p>
+<p><strong>驻点</strong><br>
+驻点是一阶导数等于零的点，拐点是指函数凹凸性发生改变的点。 驻点要么是极值点（二阶导不等于零）要么是拐点（二阶导等于零）。</p>
+<p><strong>拐点</strong><br>
+函数在某点的二阶导数为零或不存在，且二阶导数在该点两侧符号相反，该点即为函数的拐点。若二阶导数在该点两侧符号相同，则不是拐点。</p>
+<p><strong>渐近线</strong><br>
+先找间断点，看有没有铅直渐近线<br>
+再把x趋向于无穷，看有没有水平渐近线<br>
+有水平渐近线的地方没有斜渐近线<br>
+没有水平渐近线的一侧，找斜渐近线</p>
+<h1 id="积分">积分</h1>
+<p><strong>不定积分：原函数的存在定理</strong></p>
+<ol>
+<li>fx 连续，则原函数 Fx 一定存在</li>
+<li>fx 不连续，fx 存在第一类间断点，则 Fx 不存在；fx 仅存在震荡间断点，Fx 可能存在（x²sin(1/x)）</li>
+</ol>
+<p>连续 -&gt; 有原函数；有原函数 !-&gt; 连续</p>
+<p><strong>定积分的可积性</strong><br>
+必要条件：可积函数必有界<br>
+充分条件：在闭区间 [a, b] 上</p>
+<ol>
+<li>fx 连续</li>
+<li>fx 有界，且只有有限个间断点</li>
+<li>fx 只有有限个第一类间断点（间断点对定积分无影响）</li>
+</ol>
+<p>注意<br>
+fx 可积指的是在一定区间上的定积分，而是否存在原函数指的是不定积分，二者不同</p>
+<p><a href="https://www.bilibili.com/video/BV1G4411U7X9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33"><strong>快速学会“极坐标积分换序”</strong></a><br>
+最简单的方法就是把 θ 和 r 换在直角坐标中，然后使用直角坐标的思路进行换限。<br>
+注意换完限之后也要加 rdrdθ</p>
+<p><strong>积分不等式比较</strong><br>
+常用结论<br>
+sinx &lt; x &lt; tanx (x∈[0, pai])</p>
+<p>积分不等式证明常用思路</p>
+<ol>
+<li>拆积分限，使两边积分限相等，再做比较</li>
+<li>变量代换，使两边积分限相等</li>
+<li>积分中值定理</li>
+<li>fx 单调性已知，构造变上限积分</li>
+</ol>
+<p><strong>反常积分审敛</strong></p>
+<ol>
+<li>定义法：直接求积分</li>
+<li>和 p 积分相比较：① 直接将原式化为 p 积分进行判断 ②和 p 积分作比求极限</li>
+</ol>
+<p><strong>带绝对值的积分</strong><br>
+由定积分推得二重积分，都需要分区间讨论，二重积分的区间就是被积区域，通过几何关系讨论正负<br>
+<a href="https://www.bilibili.com/video/BV1QP41177nx/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">带绝对值的定积分：分区间讨论</a><br>
+<a href="https://www.bilibili.com/video/BV1UP4y137TN/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">被积函数带有绝对值的二重积分</a></p>
+<p><strong>三角函数</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/162297688">三角函数的另外三个伙伴—cot，sec，csc</a></p>
+<p><strong>极坐标换元</strong><br>
+x = rcosθ<br>
+y = rsinθ<br>
+θ 范围直接看就行，把 r 和 θ 带入原方程，求得 r 的范围。<br>
+如：x^2 + y^2 &lt;= 2x；带入得：r^2 &lt;= 2rcosθ；r &lt;= 2cosθ<br>
+注：r 恒大于 0</p>
+<p><a href="https://zhuanlan.zhihu.com/p/364642276">变量代换求解微分方程</a></p>
+<p><strong>质心</strong><br>
+<a href="https://blog.csdn.net/qq_42578970/article/details/106419646?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D">质心计算公式</a></p>
+<p><strong>收敛域和收敛区间</strong><br>
+收敛区间是个开区间，而收敛域就是判断在收敛区间的端点上是否收敛</p>
+<p>收敛半径一定存在</p>
+<p><strong>二重积分的奇偶性</strong><br>
+有积分区域 D<br>
+x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<br>
+关于 x/y 为奇函数，积分为 0；关于 x/y 为偶函数，则积分为二倍</p>
+<p><a href="https://www.bilibili.com/video/BV1Qs4y1e75h/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">三重积分的对称性（奇偶＋轮换）</a></p>
+<p><strong>计算第二型曲面积分的方法</strong></p>
+<ol>
+<li>若曲线封闭，用格林公式</li>
+<li>若与路径无关，改换路径/找原函数</li>
+<li>补线用格林</li>
+<li>直接换元计算</li>
+</ol>
+<p>判断是否与路径无关：若 ∂P/∂y = ∂Q/∂x，则与路径无关，反之不是<br>
+改换路径：沿坐标轴走直线，可先沿x再沿y，也可先沿y再沿x，看哪个更简单<br>
+找原函数：凑微分，直接带值</p>
+<p>补线用格林：补一条路径，形成封闭曲线，再把补的减掉<br>
+注意格林公式使用条件，P、Q 在封闭曲线上有连续一阶偏导。若在某点（比如0点）没有定义</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【踩坑】WIFI连不上——网络适配器错误]]></title>
+        <id>https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
+        <link href="https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
+        </link>
+        <updated>2023-08-10T04:01:55.000Z</updated>
+        <content type="html"><![CDATA[<p>总是出现 WIFI 图标消失的问题，原因是网卡被禁用，处理方式是去 Intel 官网下载符合型号的官方驱动，进行修复。</p>
+<p>查看设备管理器：<br>
+运行窗口输入 devmgmt.msc</p>
+<p><a href="https://blog.csdn.net/hhxy_wlzx/article/details/103749207?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D">AC9560网卡等类似驱动无法正常启动解决方法</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/419468589">Windows 踩坑——Intel(R) Wireless-AC 9560 160MHz 报错无法连接 WiFi</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[微信小程序开发]]></title>
+        <id>https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
+        <link href="https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/">
+        </link>
+        <updated>2023-08-06T10:01:14.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jackson-yqj/p/9843696.html">微信小程序开发的基本流程</a><br>
+<a href="https://blog.csdn.net/baidu_31788709/article/details/107348402">微信小程序开发全流程记录（从前台到后台，到发布）</a><br>
+<a href="https://blog.csdn.net/m0_64875238/article/details/127796691">微信小程序开发（超详细保姆式教程）</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【考研】信息整合]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/">
+        </link>
+        <updated>2023-07-26T11:34:41.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/615652800">23复试分析|清华大学-深圳研究院！</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/615696688">2023年北京邮电大学计算机考研考情分析！！</a></p>
+<p><a href="https://www.zhihu.com/question/536212509">考研如何备考北京邮电大学人工智能专业809方向？</a></p>
+<h1 id="香港留学">香港留学</h1>
+<p><a href="https://www.zhihu.com/question/496130863">香港前五的大学里，哪些计算机硕士专业人工智能强一点？</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/611773896">24考研PDF无水印电子书汇总</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/612655797">考研英语黄皮书选择与使用方法指南（非常全）</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【考研】概率论]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/">
+        </link>
+        <updated>2023-07-14T04:15:37.000Z</updated>
+        <content type="html"><![CDATA[<p>全概率公式做题步骤</p>
+<ol>
+<li>确定要求的事件A</li>
+<li>找完备事件组，列出各种情况Bi(i=1,2,3...)</li>
+<li>在情况Bi下，事件A发生的概率，P(A) = ∑P(Bi)P(A|Bi) = ∑P(ABi)</li>
+</ol>
+<p>注意，事件A零碎分布于事件B，所以需要将B的各种情况合起来计算<br>
+<img src="https://jeromezjl.github.io/post-images/1689308727900.png" alt="" loading="lazy"></p>
+<p>将自然语言和数学语言相互转化，找到对应的值</p>
+<h1 id="分布函数">分布函数</h1>
+<p>分布函数端点值的辨析：<br>
+<a href="https://blog.csdn.net/qq_24451605/article/details/44115311">理解分布函数(概率论)</a></p>
+<p><code>注意</code><br>
+只有连续型分布有分布函数和概率密度，离散型没有<br>
+混合型概率分布只有分布函数，没有概率密度</p>
+<p>分布函数连续 ⇔ 连续型随机变量<br>
+分布函数必须右连续，只是针对点而言，右连续的函数也可以不是连续函数</p>
+<h1 id="联合概率">联合概率</h1>
+<p>用联合概率密度求概率<br>
+当作二重积分算。比如 P{X+Y&gt;1} ，选定一个要积的变量，比如x，则 y&gt;1-x<br>
+作图，在积分区域里积分，得到概率值。</p>
+<p>注意：不管积分区域是什么样，也就是 P{} 括号内的函数是什么样，和联合分布函数无关。联合分布函数都是 f(x, y) （被积函数）</p>
+<p>求 z = g(x, y) 的分布函数</p>
+<ol>
+<li>xy都是离散型，很简单，直接看就行</li>
+<li>xy都是连续型，则把 z 看作常数，讨论 z 的范围，然后再用上面联合概率密度求概率的方法</li>
+<li>x是离散型，y是连续型（离连型）全概率公式+分布函数法<br>
+先写出 P{ X + Y ≤ Z } ，然后用全概率公式，分为 P{ X + Y ≤ Z ，X=0} P{ X + Y ≤ Z ，X=1} 等区间<br>
+然后带入 X=0，X=1，化简表达式，变成  P{ X=0，Y ≤ Z }，P{ X=1，Y ≤ Z-1 }<br>
+然后讨论 z 的范围，根据 X+Y=Z 来估计。比如 0&lt;X&lt;1，0&lt;Y&lt;1，那么 讨论 Z ∈（0，2）比如      z&lt;0 时，Fz(z)=0<br>
+当 z 的取值在积分区域里时，用二重积分计算概率值</li>
+</ol>
+<p><a href="https://blog.csdn.net/kangkanglhb88008/article/details/90750074">关于概率论里的Z=max{X,Y}，min{ X,Y }分布的理解与计算方法</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【考研】线性代数]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/">
+        </link>
+        <updated>2023-07-10T13:50:14.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="行列式">行列式</h1>
+<p>性质</p>
+<ol>
+<li>行列式的性质对于行和列都满足</li>
+<li>行列式中相邻的两行(列)互换，行列式值反号。注意，不是相邻的行(列)不能直接交换，必须一行一行或者一列一列的交换。</li>
+<li>某一行乘 k，行列式乘 k；所有行都乘 k，行列式乘 k 的 n 次方</li>
+<li>有两行(列)一样 / 成倍数（提出一个 k 还是一样）行列式值为 0</li>
+<li>若行列式的某一列（行）的元素都是两数之和，则此行列式等于两个行列式之和</li>
+<li>矩阵可逆 行列式为 0</li>
+<li>矩阵转置行列式的值不变</li>
+<li>|kA|  = k^n |A|</li>
+</ol>
+<h1 id="特征值与特征向量">特征值与特征向量</h1>
+<p>求特征向量不能列变换</p>
+<p><strong>矩阵的迹：tr(A)</strong><br>
+迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></p>
+<p><strong>向量组的定理辨析</strong><br>
+梳理思路：从定义 到 方程组 到 方程组的直观理解 到 系数矩阵的秩 的解释</p>
+<p>🔺向量组线性相关 ⇔ 至少存在一组非零系数使向量组为 0 ⇔<br>
+齐次方程组有非零解 ⇔ 行列式 = 0  ⇔ 未知数数量比方程组多  ⇔<br>
+n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &gt; n  ⇔<br>
+系数矩阵为扁长方形则一定相关 ⇔ 有效方程组数量（向量组的秩）小于未知数个数 s（列数）</p>
+<p>🔺向量组线性无关 ⇔ 当且仅当 k1=k2=...=ks=0 向量组 = 0 ⇔<br>
+齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔<br>
+后面和上面的相反</p>
+<p><strong>判定向量组线性无关</strong></p>
+<ol>
+<li>用定义，k1=k2=...=ks=0</li>
+<li>以列向量构成的矩阵列满秩 ⇔ 方程组只有零解<br>
+特殊情况：当矩阵为 nxn 时，行列式不等于 0<br>
+行向量组线性无关 ⇔ 行满秩<br>
+列向量组线性无关 ⇔ 列满秩</li>
+</ol>
+<p><strong>p68 定理 3.7 理解</strong><br>
+相关的多数向量能用少数向量表出（少数向量是基底，多数向量为空间中的很多向量）<br>
+无关的少数向量能用多数向量表出（空间中的很多向量通过变换可以求出基底）</p>
+<p><strong>判断矩阵相似</strong><br>
+“两个矩阵相似”的充要条件只有相似矩阵的定义本身<br>
+矩阵A与矩阵B相似 等价于 存在n阶可逆矩阵P，使得P^(-1)<em>A</em>P=B成立<br>
+“两个矩阵相似”的必要条件有：<br>
+1、两个矩阵的秩相等<br>
+2、两个矩阵对应的行列式相等<br>
+3、两个矩阵有相同的特征多项式、特征方程及特征值（迹相等）</p>
+<p>注意：可逆矩阵P不唯一（列不同或者差一个倍数）<br>
+<a href="https://zhuanlan.zhihu.com/p/77007052">线性代数——相似矩阵的可逆变换矩阵P是否唯一</a></p>
+<p><strong>判断步骤：</strong></p>
+<ol>
+<li>迹相等，不相等——&gt;不相似</li>
+<li>行列式值相等，不相等——&gt;不相似</li>
+<li>求特征值，不相等——&gt;不相似</li>
+<li>求特征向量的个数（秩），不相等——&gt;不相似</li>
+</ol>
+<p><strong>正交矩阵</strong><br>
+正交矩阵（Orthogonal Matrix）是指其转置等于其逆的矩阵。<br>
+ATA=E<br>
+在求正交矩阵的时候，不同特征值的特征向量一定正交。相同特征值对应的特征向量不一定正交，所以要进行施密特正交化。<br>
+然后把所有特征向量单位化，按列排列成正交矩阵。</p>
+<p><strong>矩阵等价 &amp; 向量组等价</strong><br>
+矩阵等价：A 经过有限次初等变换可以变成 B ⇔ r(A)=r(B)<br>
+向量组等价：两个向量组可以相互线性表出</p>
+<p>矩阵等价，其行列向量组都可以不等价；矩阵等价和行列向量组等价无关</p>
+<p><strong>与矩阵的秩有关的结论</strong></p>
+<ol>
+<li>A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}</li>
+<li>AT 为 A 的转置，则有 r(A) = r(AT) = r(AAT) = r(ATA)</li>
+<li>r(A + B) ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>r(AB) ≤ min{r(A),r(B)}</li>
+<li>若 A 可逆， r(AB)=r(BA)=r(B)；若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
+<li>A 为 m x n 矩阵，且 r(A) = n（列满秩），则  r(AB)= r(B)</li>
+<li>A 为 m x n 矩阵，B 为 n x s 矩阵，且 AB = O，则  r(A) + r(B) ≤ n</li>
+<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
+<li>max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>伴随矩阵 A* 的秩：0、1、n</li>
+</ol>
+<p><strong>矩阵的等价，相似，合同</strong><br>
+关系：<br>
+（（（相似）合同 ）等价 ）</p>
+<p>判断合同：</p>
+<ol>
+<li>定义法</li>
+<li>正负惯性指数相同矩阵合同</li>
+</ol>
+<p><a href="https://zhuanlan.zhihu.com/p/151231495">“拨开迷雾”，如何判定矩阵相似？</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【摄影】人像思路]]></title>
         <id>https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/</id>
@@ -66,900 +379,6 @@ informative是指深入浅出、娓娓道来<br>
 <a href="https://regexlearn.com/zh-cn/learn/regex101">正则表达式学习网站</a></p>
 <p>当作字典查找：<br>
 <a href="https://www.runoob.com/regexp/regexp-tutorial.html">正则表达式 - 教程</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Linux】期末复习]]></title>
-        <id>https://jeromezjl.github.io/post/linux-qi-mo-fu-xi/</id>
-        <link href="https://jeromezjl.github.io/post/linux-qi-mo-fu-xi/">
-        </link>
-        <updated>2023-06-08T07:08:31.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="linux概述">Linux概述</h1>
-<p>安卓就是一种Linux，上层使用Java<br>
-<a href="https://zhuanlan.zhihu.com/p/495025002">Linux 终端新手指南 | Linux 中国</a> {Linux 终端是一个基于文本的交互界面，它是用来控制 Linux 计算机的。}</p>
-<p><a href="https://blog.csdn.net/nyist_zxp/article/details/103940686">Linux 终端之物理终端、虚拟终端和伪终端的区别</a></p>
-<p>一台物理上的字符终端必须具备：显示器、串行通信口，键盘。不必须具备磁盘存储器</p>
-<p>‎C语言编写的应用程序，通过printf打印一个换行符\n，但在终端上执行的是回车加换行\r\n，把换行符替换为回车换行是由Linux内核中的行律模块完成的。在Linux内核中，终端设备通常以行为单位进行输入和输出。当你在C语言程序中使用 printf 打印一个换行符 \n 时，终端设备会将其解释为换行操作，并自动添加回车符 \r。这样做是为了在输出文本时在终端中正确实现换行的效果。</p>
-<p>使用PuTTY或SecureCRT仿真终端登录Linux，将终端类型设置为linux，输入echo -e &quot;\033[1;31mHello&quot;命令后文字变为红色。输入echo -e &quot;\033[1;33mHello&quot;文字变为黄色。</p>
-<p>终端仅仅是Linux主机的一个外部设备，不分担存储和计算工作<br>
-传统的终端与Linux主机之间传输的是字节流</p>
-<p>‌终端转义序列的意义在于终端收到某一特定字符序列后执行一些约定好的控制功能，而不是把这些字符显示在显示器上。比如执行换行符、退格符<br>
-<a href="https://zhuanlan.zhihu.com/p/611470376">5 个有用的 Linux Shell 转义序列 | Linux 中国</a></p>
-<h1 id="开始使用linux">开始使用Linux</h1>
-<p><strong>用户登录和联机手册的查阅</strong><br>
-root用户（超级用户）</p>
-<ul>
-<li>root不受权限的制约，可随意修改和删除文件</li>
-<li>root用户误删重要文件可能带来严重后果</li>
-</ul>
-<p><strong>创建新用户</strong><br>
-由root用户创建（useradd命令），用户信息存放在/etc/passwd文件中，<br>
-包括用户名和用户ID，以及Home目录，登录shell<br>
-登录shell：一般为bash，也可以选其他shell，其他系统程序，甚至自设<br>
-计的程序<br>
-用户可以从普通终端或者网络虚拟终端登录进入系</p>
-<p>普通用户：$  |  root用户：#<br>
-组成命令的英文字母大小写敏感</p>
-<p>几个基本命令：<br>
-man查阅手册：各种命令说明、系统调用使用手册等<br>
-date日期和时间<br>
-ntpdate通过NTP协议校对系统时间<br>
-cal日历<br>
-bc计算器，缺省精度为小数点后20位<br>
-passwd修改口令（密码）<br>
-超级用户root<br>
-修改口令之前不验证旧的口令<br>
-可修改自己的口令，还可强迫设置/查看其它用户口令</p>
-<p>几个了解系统状态的命令<br>
-who：确定谁在系统中<br>
-uptime：了解系统启动时间和忙碌程度<br>
-top：列出资源占用（CPU）排名靠前的进程<br>
-free：了解<s>总体</s>内存使用情况<br>
-vmstat：了解系统负载情况<br>
-ps：查阅进程状态（关于进程的属性都可以） ps -SZ：进程逻辑内存大小</p>
-<h1 id="文本文件的处理">文本文件的处理</h1>
-<p><strong>文本文件及处理工具</strong><br>
-文本信息包含：<br>
-文本文件：C语言，Java语言等编程文件的源程序语言；文本格式的数据文件；文本格式的文字信息<br>
-程序输出<br>
-系统配置信息<br>
-文本型的网络协议<br>
-文本文件的处理命令</p>
-<p>重定向与管道机制<br>
-输出重定向：ls -l&gt;filelist.txt<br>
-输入重定向：sort &lt; filelist.txt</p>
-<p><strong>读取文件内容</strong><br>
-Linux中和文本处理有关的命令：vi more grep yacc lex awk sed<br>
-介绍几个文本文件读取与处理的命令<br>
- more/less：逐屏显示文件<br>
- cat与od：列出文件内容<br>
- head与tail：显示文件的头部或者尾部<br>
- tee：三通<br>
- wc：字计数<br>
- sort：对文件内容排序<br>
- tr：翻译字符<br>
- uniq：筛选文件中的重复行</p>
-<p>tail命令</p>
-<p>‏使用more命令逐屏显示文本文件时，使得显示内容上滚一行而不是滚动一屏，应按下回车键<br>
-使用less命令逐屏显示文本文件时，使得显示内容上滚一行而不是滚动一屏，应按下向下的箭头<br>
-‌Linux中用来实现计数功能，比如：统计系统有多少个登录用户，实现计数功能的命令是：wc -l</p>
-<p>uniq命令可以通过无选项运行uniq bar.txt，或者使用选项-d运行uniq -d bar.txt，两种情况的输出结果中都不会出现相邻两行内容完全相同的情况。</p>
-<p>uniq bar.txt逐行检查bar.txt中的文本行，如果本行与上一行完全相同则不输出，否则输出；<br>
-uniq -d bar.txt的选项d是duplicate，如果本行与下一行不同却与上一行相同，才输出，结果只输出连续两次或多次出现的行。<br>
--c选项是counter计数器。</p>
-<p>一个应用程序的C语言源程序通过printf语句在标准输出输出信息，运行时只要使用输出重定向机制，不需要修改原先的程序加入文件操作的代码，就可以把输出结果存入指定名字的文件。</p>
-<p>‌od命令可以实现用16进制方式逐字节打印一个文件内容的功能，但并不要求文件的每个字节必须是可打印字符，不可打印也能输出。</p>
-<p>tail命令的-f选项可以让tail命令持续运行下去，持续地将它操作的文本文件新增的数据显示出来。如果这个文本文件被其他进程随时间推移断断续续追加几行，tail也会断断续续地输出这些新增的内容。</p>
-<p>‎可以为tee命令提供一个文件名abc.log，例如：xyz | tee abc.log 那么，通过管道的方式可以把前面xyz命令的输出结果在当前终端上显示的同时也存入磁盘文件abc.log，可供事后查阅。如果以某用户正在使用的终端的设备文件名(如/dev/pts/2)代替文件名abc.log，那么，这个xyz命令执行时的输出就会同时在两个终端上实时显示。就算是把前面的xyz命令换成vi也是完全可能的，也就是说完全可能在第二个终端上实时看到第一个终端上的编辑画面。</p>
-<p>uniq 命令只能消除相邻的重复行。如果文件中有多个相同的行，但它们不是相邻的，那么 uniq 命令不会消除它们。</p>
-<p>‏信息由一个个字节组成，tr命令处理这些信息时，可以将256种字节值中的任何一种取值“翻译”为另一个字节值，并且不限于可打印字符之间的转译，比如把换行符替换为斜线。</p>
-<h1 id="正则表达式的概念和相关命令">正则表达式的概念和相关命令</h1>
-<p><strong>正则表达式语法</strong><br>
-<a href="https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/">正则表达式</a><br>
-正则表达式中6个元字符（特殊字符）： . * [ \ ^ $<br>
-用反斜线可以取消特殊字符的特殊含义：正则表达式*与字符串*匹配，与字符串*不匹配<br>
-转义字符后除以上六种之外的不该出现其他字符</p>
-<p>“.”匹配任意单字符<br>
-“[ ]”在该位置上匹配括号内任意一个单字符：例如 [abcd] 与a或b,c,d匹配（只能匹配一位）<br>
-圆点、星号在方括号内时，代表它们自己：[*.] 匹配 * 和 .</p>
-<p><strong>Linux中的正则表达式</strong><br>
-三个与正则表达式相关的处理命令</p>
-<ul>
-<li>grep/egrep/fgrep：在文件中查找字符串（筛选）</li>
-<li>sed：流编辑（加工）</li>
-<li>awk：逐行扫描进行文本处理的一门语言（筛选与加工）</li>
-</ul>
-<p>🔺grep（Global regular expression print）<br>
-<a href="https://cloud.tencent.com/developer/article/1554542">是真的很详细了！Linux中的Grep命令使用实例</a><br>
-<a href="https://zhuanlan.zhihu.com/p/65515740">grep命令的思维导图</a></p>
-<p>‌grep和fgrep都可以从一个文本文件中搜索出指定的字符串。</p>
-<p>egrep 使用扩展正则表达式ERE描述模式，在指定模式方面比grep更灵活<br>
-fgrep 快速搜索指定字符串，按字符串搜索而不是按模式搜索。</p>
-<p>🔺sed（Stream Editor） 一个强大的流式文本编辑器<br>
-常用功能：</p>
-<ul>
-<li>
-<p>文本替换：sed最常用的功能是进行文本替换。使用s/模式/替换字符串/命令，sed可以根据正则表达式模式匹配文本，并将匹配到的部分替换为指定的字符串。</p>
-</li>
-<li>
-<p>删除行：sed可以根据正则表达式模式删除符合条件的行。使用d命令，sed可以删除匹配到的行。</p>
-</li>
-<li>
-<p>插入和追加行：sed可以在指定位置插入或追加文本行。使用i命令可以在匹配行之前插入行，而使用a命令可以在匹配行之后追加行。</p>
-</li>
-<li>
-<p>打印行：sed可以根据匹配条件选择性地打印文本行。使用p命令，sed可以打印匹配到的行，或者使用-n选项来禁止自动输出，只有通过命令显式打印才会输出结果。</p>
-</li>
-<li>
-<p>转换命令：sed提供了一些转换命令，可以对文本进行处理。例如，y命令可以进行字符替换，tr命令可以进行字符转换，y/abc/ABC/将会把输入中的小写字母a、b、c分别替换为大写字母A、B、C。</p>
-</li>
-<li>
-<p>多行处理：sed可以处理包含多行的文本数据。通过使用N命令，可以将多行文本合并为一行进行处理，或者使用/pattern/{commands}语法在匹配模式的范围内执行一系列命令。</p>
-</li>
-<li>
-<p>文件处理：sed可以直接在文件中进行文本处理，也可以通过管道接收输入数据。使用-i选项，sed可以直接在原始文件上进行修改，而不需要创建新文件。</p>
-</li>
-<li>
-<p>脚本模式：除了直接在命令行中使用sed命令，还可以将sed命令保存在脚本文件中进行批处理。通过在命令行中使用-f选项指定脚本文件，可以执行包含多个sed命令的脚本。</p>
-</li>
-</ul>
-<p><a href="http://c.biancheng.net/linux/sed.html">sed命令_Linux sed命令：替换、删除、更新文件中的内容</a></p>
-<p><code>判断</code><br>
-​fgrep，grep，egrep三个命令在指定待查找字符串的模式方面，依次越来越灵活，后面的命令可以覆盖前面命令的功能，并且模式描述的语法也是完全兼容的。（错）</p>
-<p>‎命令cat pm.txt | sed ‘s/[[^][]*]//g’  可以把pm.txt中所有用方括号括起来的内容（包括方括号自身）类似“ [参考文献23] ”这样的字符串片段删除。</p>
-<p>​grep可以筛选出包括某些特定模式的文本行，awk不仅可以筛出指定模式的行，还可以筛掉文本型表格中的部分列。</p>
-<p>正则表达式&lt;[^&lt;&gt;]*&gt;可以匹配一个HTML格式数据中的诸如<span class="src-time">这样的用尖括号包裹起来的标签信息。</p>
-<p>‏awk是一门小型的文本数据处理语言，有类似C语言一样的语法，可以使用自定义的变量，变量之间可以进行算术运算、关系运算和逻辑运算，还可以进行正则表达式匹配运算，支持条件、循环等流程控制。</p>
-<h1 id="文件比较">文件比较</h1>
-<p><strong>两文件逐字节比较：cmp</strong><br>
-<a href="https://www.runoob.com/linux/linux-comm-cmp.html">Linux cmp 命令</a><br>
-🔺用法<br>
-cmp file1 file2<br>
-🔺功能<br>
-逐字节比较两个文件是否完全相同。<br>
-两个文件完全相同时，不给出任何提示；两个文件不同时，打印出第一个不同之处<br>
-在Windows中有类似的命令COMP</p>
-<p>md5sum计算出位于两台不同计算机上的两文件的校验和是相同的，我们就认为两个文件的内容是完全相同的，无论这两个文件有多大。两计算机之间仅交换16字节的校验和就可以完成文件内容的比较。</p>
-<p><strong>求出两个文件的差别：diff</strong><br>
-<a href="https://www.runoob.com/linux/linux-comm-diff.html">Linux diff 命令</a><br>
-🔺用法<br>
-diff file1 file2<br>
-diff –u file1 file2<br>
-🔺功能<br>
-比较两个版本的文本文件，以寻找两者间差别<br>
-输出格式 normal，unified (-u)<br>
-normal格式：列出一个如何将file1转化为file2的指令。这些指令有a（Add），c（Change）和d（Delete）</p>
-<p><code>判断</code><br>
-diff命令只可以求出两个文件中文本文件的差异，二进制的数据文件不可以</p>
-<p>diff -u 的输出格式和git相同，而不是normal格式<br>
-normal 列出将file1转化为file2的指令</p>
-<h1 id="vi编辑器">vi编辑器</h1>
-<p><a href="https://www.runoob.com/linux/linux-vim.html">Linux vi/vim</a><br>
-<a href="https://blog.csdn.net/cyl101816/article/details/82026678">Linux—vi命令详解</a></p>
-<p>刚进入vi时，进入命令状态。按 i 进入文本输入状态。再按下Esc按键可以返回命令状态</p>
-<p><strong>常用命令</strong><br>
-🔺删除<br>
-删除当前字符：x<br>
-删除从当前光标开始的5个字符：5x</p>
-<p>🔺替换命令：r<br>
-ra命令将当前光标处字符替换为a<br>
-将当前光标处开始的三个字符依次替换为abc，则需要按命令rarbrc</p>
-<p>🔺取消上一次的编辑操作(undo) u<br>
-如：误删了一段正文，用u命令可撤销删除<br>
-如：把文件中的所有abc字符串替换成xyz字符串， 用u命令可撤销替换</p>
-<p>🔺重复上一次的编辑操作 .<br>
-按圆点键，可以重复上一次的编辑操作<br>
-例如：按3dd命令删除了三行，然后按圆点键就再删除三行，接着连续按<br>
-圆点键，每按一次删三</p>
-<p>🔺存盘退出命令<br>
-方法一：首先需要按ESC键回到命令模式，然后按“:wq回车”。<br>
-方法二：按住shift再按两下’z‘键。</p>
-<p>🔺存盘不退出<br>
-:w</p>
-<p>🔺不存盘退出<br>
-:q!</p>
-<p><strong>操作失误导致的问题</strong><br>
-Ctrl-S 在 Linux 中用于流量控制，而不是保存文件。使用 Ctrl-Q 流量控制解除<br>
-vi存盘命令Shift-ZZ，误操作为Ctrl-ZZ<br>
-当前终端的“行律”设置不正确，导致退格键(Backspace)无法使用<br>
-由于 /bin/bash 文件不是文本文件，是二进制文件。cat /bin/bash或head -n 1 /bin/bash导致屏幕乱码<br>
-Linux：行尾处仅存换行字符；Windows：行尾处存回车和换行两个字符<br>
-许多Linux默认中文编码方案：UTF8；Windows默认中文编码方案：GBK。迁移文件时不兼容导致乱码</p>
-<h1 id="文件名和文件通配符">文件名和文件通配符</h1>
-<p><strong>文件和目录的命名规则</strong><br>
-一般允许1－255字符<br>
-除斜线“/”外的所有字符都是命名的合法字符</p>
-<p>🔺系统配置信息<br>
-/etc目录：供系统维护管理用的命令和配置文件<br>
-🔺临时目录<br>
-/tmp：临时文件<br>
-/var：系统运行时要改变的数据，系统日志 syslog 等<br>
-🔺可运行程序和设备文件<br>
-/bin：系统常用命令，如ls，ln，cp，cat等<br>
-/usr/bin：存放一些常用命令，如ssh,ftp，make，gcc，git等<br>
-/sbin,/usr/sbi：系统管理员专用命令<br>
-/dev：设备文件，如终端设备，磁带机，打印机<br>
-🔺头文件和库文件<br>
-/usr/include (usr=Unix System Resource）：C语言头文件存放目录<br>
-/lib,/usr/lib：存放各种库文件，指C语言的链接库文件，以及terminfo终端库等等</p>
-<p><strong>文件通配符规则</strong><br>
-🔺星号 *<br>
-匹配任意长度的文件名字符串(包括空字符串)<br>
-点字符(.)，当它作为文件名或路径名分量的第一个<br>
-字符时，必须显式匹配<br>
-斜线(/)也必须显式匹配<br>
-例：*file匹配file，makefile，不匹配.profile文件<br>
-🔺问号 ?<br>
-匹配任一单字符<br>
-🔺方括号 [ ]<br>
-匹配括号内任一字符，也可以用减号指定一个范围<br>
-例: [A-Z]* *.[ch] [Mm]akefile<br>
-🔺波浪线 ~<br>
-（Bash特有的）<br>
-~ 当前用户的主目录(home)<br>
-~kuan 用户kuan的主目录(home)</p>
-<p>文件名通配符规则与正则表达式的规则不同，应用场合不同<br>
-不同种类shell通配符规则会略有些差别</p>
-<p><code>选择题</code><br>
-在windows中*.<em>可以匹配所有文件，但在Linux有的文件名与</em>.*不匹配，下列哪个不匹配？<br>
-abc Makefile .profile comp.exe sort.c find.obj readme.text admin-ver3.1.2sp.tar<br>
-A、readme.txt<br>
-B、comp.ext<br>
-C、abc<br>
-D、admin-ver3.1.2sp.tar<br>
-<code>解析</code> 匹配的名称必须有“ . ”，选 C</p>
-<h1 id="文件管理和目录管理">文件管理和目录管理</h1>
-<p>ls选项-l: 长格式列表<br>
-第1列：文件属性；第一个字符为文件类型，后面为文件访问权限<br>
-第2列：文件link数，涉及到此文件的目录项数<br>
-第3列，第4列：文件主的名字和组名<br>
-第5列：文件大小/目录表大小<br>
-第6列：文件最后一次被修改的日期和时间<br>
-第7列：文件名</p>
-<p>注意：ls -l 未列出 文件占用多少存储空间</p>
-<p>ls是ls指令的普通模式，列出当前目录下的普通文件的文件名<br>
-ls * 中的 * 会在shell中进行替换，替换成可以匹配到的所有的文件名，相当于命令 ls file_name</p>
-<p><strong>cp: 拷贝文件</strong><br>
-命令的两种格式和功能<br>
-cp file1 file2 cp file1 file2 ... filen dir<br>
-其中file1，……，filen为文件名，dir为已有目录名<br>
-第二种格式中： dir必须已经存在并且是一个目录<br>
-第一种格式中： file2不存在，则创建；file2存在且是文件，则覆盖； file2<br>
-存在且是目录，则按格式二处理<br>
-例:cp a.c a.bak<br>
-cp a.c b.c backup.d</p>
-<p><strong>mv: 移动文件</strong><br>
-格式<br>
-mv file1 file2<br>
-mv file1 file2 ... filen dir<br>
-mv dir1 dir2<br>
-功能<br>
-使用mv命令可以将文件和目录改名<br>
-可以将文件和子目录从一个目录移动到另一个目录<br>
-mv dir1 dir2 两种执行情况（同文件系统，不同文件系统）</p>
-<p><strong>rm: 删除文件</strong><br>
-命令格式<br>
-rm file1 file2 ... filen<br>
-例<br>
-rm core a.out<br>
-rm *.o *.tmp<br>
-rm * .bak<br>
-选项<br>
--r 递归地(Recursive)删除实参表中的目录，也就是删除一整棵目录树。<br>
--i 每删除一个文件前需要操作员确认(Inform)<br>
--f 强迫删除(Force)。只读文件也被删除并且无提示<br>
-注：正在运行的可执行程序文件不能被删除</p>
-<p><strong>目录管理</strong><br>
-pwd (print working directory)：打印当前工作目录<br>
-cd (Change Directory)：改变当前工作目录<br>
-mkdir：创建目录<br>
-rmdir：删除目录<br>
-cp: 复制目录</p>
-<ul>
-<li>–r，递归地复制一个目录</li>
-<li>–v，冗长(verbose)方式：复制目录时实时列出正在复制的文件的名字</li>
-<li>选项–u，增量拷贝(update)，便于备份目录<br>
-rsync：数据备份工具（增量拷贝工具）</li>
-</ul>
-<p><code>例题</code><br>
-cd只能是内部命令，但是pwd是可以设计成外部命令的<br>
-rm命令的–r选项是递归（recursion）的意思，-f是强制删除的意思，rm -rf *命令能把当前目录下的所有文件都删除。（x）<br>
-错误一：*并不能匹配到所有的文件，例如.profile就不能匹配到<br>
-错误二：-f虽然是强制删除的意思，但实际作用是省去了删除时的提示信息，对没有权限删除的文件，它是不会删除的<br>
-rm命令的-f选项是force：“强制删除”，可能会将只读文件强制删除不给出任何提示。</p>
-<p><strong>find:遍历目录树</strong><br>
-🔺功能<br>
-find命令从指定的查找范围开始，递归地查找子目录，凡满足条件的文件或目录，执行规定的动作<br>
-🔺举例<br>
-find verl.d ver2.d -name '*.c' -print<br>
-范围：当前目录的子目录 ver1.d 和 ver2.d<br>
-条件：与名字 *.c 匹配。注：*.c 应当用引号括起<br>
-动作：把查找到的文件的路径名打印出来<br>
-🔺条件选项<br>
--name wildcard：文件名与wildcard匹配，<br>
-注意：必需的引号；这里的“文件名”仅指路径名的最后一部分；对通配符的解释由find完成<br>
--regex pattern：整个路径名与正则表达式pattern匹配<br>
-🔺动作选项<br>
--print<br>
-打印查找的文件的路径名<br>
--exec<br>
-对查找到的目标执行某一命令<br>
-在-exec及随后的分号之间的内容作为一条命令<br>
-在这命令的命令参数中，{}代表遍历到的目标文件的路径名<br>
--ok<br>
-与-exec类似，只是对查找到符合条件的目标执行一个命令前需要经过操作员确认</p>
-<p>注：使用find命令的-exec选项启用一个命令处理符合条件的文件，比find结合xargs的方式，花费更多的CPU时间</p>
-<p>tar命令输出文件的后缀必须符合规定，为.tar，.tar.gz, .tgz, .tar.bz2等，否则无法解包。（x）<br>
-文件名后缀.tar,.tar.gz,.tar.bz2仅仅是惯例，不是系统级强制要求</p>
-<h1 id="应用程序获取信息的方法">应用程序获取信息的方法</h1>
-<p><strong>命令获取信息的方法</strong><br>
-易变性从小到大为<br>
-配置文件：较复杂的程序<br>
-环境变量：与“环境”相关的配置或选项信息<br>
-命令行参数：程序启动之前指定<br>
-交互式键盘输入：程序启动之后通过计算机与操作员之间的人机交互获取信息</p>
-<p><strong>命令行参数的三种风格</strong><br>
-类似dd命令的风格<br>
-类似find和gcc的风格<br>
-类似ls和grep的风格：现今流行的格式</p>
-<h1 id="文件系统">文件系统</h1>
-<p><strong>文件系统的创建与安装</strong><br>
-🔺根文件系统 (root filesystem)<br>
-根文件系统是整个文件系统的基础，不能“脱卸(umount)”<br>
-🔺子文件系统<br>
-子文件系统，包括硬盘，软盘，CD-ROM，USB盘，网络文件系统NFS以根文件系统中某一子目录的身份出现(不似Windows逻辑盘）<br>
-🔺独立的存储结构<br>
-根文件系统和子文件系统都有其自己独立的文件系统存储结构，甚至文件系统的格式也不同</p>
-<p>mkfs和mount：文件系统的创建和安装<br>
-umount：文件系统的卸载</p>
-<p><strong>文件系统的存储结构</strong><br>
-引导块(0号块)：用于启动系统，只有根文件系统的引导块有效<br>
-专用块(1号块)：也叫管理块，或者超级块。存放文件系统的管理信息<br>
-i节点区：i节点(index node，简记为i-node)：每块可容若干个i节点，每个i节点包括：指向文件存储区数据块的一些索引（index）指针；文件类型<br>
-文件存储区：用于存放文件数据的区域，包括目录表。文件名也存放在磁盘的文件存储区</p>
-<p><strong>inode</strong><br>
-<a href="https://www.bilibili.com/video/BV17J41147a8/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【小知识】第12期 linux中的iNode介绍</a><br>
-inode：存储文件的元数据信息，比如类型、owner、权限、时间信息、连接数、文件内容所在的位置<br>
-inode 以数组的方式存储。inode一般是128/256 byte<br>
-初始化数组之后会生成一个目录表（Map），存放 inode-index 和文件名的对应关系（目录项：“文件名-节点号”对）</p>
-<p>示例：如何通过文件名找到 inode</p>
-<ol>
-<li>假定要找 /etc/1.txt 文件，首先用文件名在 Map 中找到对应的 inode-index</li>
-<li>利用 inode-index 找到 inode 数组中对应的 inode</li>
-<li>查看 inode 中的信息，查看是否有 读写权限</li>
-<li>如果具有读/写信息，则找到 inode 中文件内容所在的位置（磁盘上块的下标）</li>
-</ol>
-<p>扇区（sector）：磁盘制造的时候就定好了（硬件层面）<br>
-磁盘上的块（block）：包含多个扇区（逻辑层面）</p>
-<p>inode用尽：由于 inode 数组的大小在声明的时候就定好了，所以如果 inode 数组被完全占用，则称为 inode 用尽</p>
-<p>一个文件名只能对应一个inode，但一个inode可以被多个文件名同时指向。</p>
-<p><a href="https://www.cnblogs.com/llife/p/11470668.html">Linux inode 详解（包括硬链接和软链接）</a></p>
-<p><strong>硬链接</strong><br>
-<code>例</code><br>
-现在有 filename1，在 Map 中对应 inode_index1，这种对应关系称为一个硬链接。此时使用如下命令：</p>
-<pre><code class="language-shell">ln filename2 inode_index1
-</code></pre>
-<p>建立 filename2 文件名与 inode_index1 的对应关系。此操作为创建硬链接。此操作后 inode 中硬链接数+1（同一 inode 被目录项引用的次）</p>
-<p><a href="https://www.cnblogs.com/klb561/p/9240758.html">Linux命令——ln命令创建和删除软、硬链接</a></p>
-<p>由此可见，Linux 可以在同一目录或者不同目录中的两个目录项，有相同的 i 节点号。<br>
-可以类比 C 语言中，不同指针指向同一个地址号。如果对地址内容（inode对应的地址块）进行修改，那么所有的文件名对应的文件都会改变。<br>
-删除一个文件名，不会对 inode 造成影响。除非删除所有的文件名。</p>
-<p><code>注</code><br>
-‎命令 ln 只允许对同一文件系统的普通文件建立硬链接，不允许对目录用 ln 命令建立硬链接，防止形成环状目录结构，难以处理。目录的 link 数=直属子目录数+2（包括自身目录 . 和上级目录 .. ）</p>
-<p><strong>符号链接（软链接）</strong><br>
-类似于Windows中的快捷方式。是一个文件，包含的有另一文件的位置信息。使用如下代码建立软链接</p>
-<pre><code class="language-shell">ln -s 源文件或目录 目标文件或目录
-</code></pre>
-<p>符号链接的内容可以是“绝对路径”也可以是“相对路径”，相对路径指的是相对于符号链接文件所处位置，而不是相对于进程的当前工作目录。</p>
-<p><code>比较</code><br>
-<a href="https://zhuanlan.zhihu.com/p/67366919">Linux软连接和硬链接</a><br>
-🔺硬连接<br>
-在数据结构层次上实现<br>
-只适用于文件，不适用于目录<br>
-同文件系统之间也不行<br>
-🔺符号连接<br>
-在算法软件上实现<br>
-硬连接能够完成的功能软连接都可以做到（软&gt;硬）<br>
-适用于目录，也适用于不同的文件系统<br>
-同硬连接相比要占用操作系统内核的一部分开销（因为单独创建了文件）<br>
-循环式符号连接，以及处理方法（解析路径时设置符号链接解析计数器）<br>
-无论采用符号链接还是硬链接，都可以实现将只存储一份的数据文件同时加入到两个或两个以上不同目录中。</p>
-<p><strong>系统调用</strong><br>
-系统调用以C语言函数调用的方式提供<br>
-操作系统内核提供的编程界面<br>
-应用程序(ap)和操作系统(kernel)进行交互的唯一手段<br>
-例如：文件操作的open，read，write，close<br>
-种类：早期UNIX有50多个，后来扩充到120个，Linux有300个左</p>
-<p>返回值<br>
-一般返回一个整数值<br>
-返回值大于或等于零：成功<br>
-返回值为-1：失败</p>
-<p>strerror<br>
-char *strerror(int errno);<br>
-errno是个整数，便于程序识别错误原因，不便于操作员理解失败原因。<br>
-库函数strerror将数字形式的错误代码转换成一个可阅读的字符串</p>
-<p><strong>访问i节点和目录</strong><br>
-系统调用stat/fstat：从i节点获得文件的状态信息<br>
-结构体stat包括access时间、modification时间、change时间</p>
-<h1 id="文件和目录的权限">文件和目录的权限</h1>
-<p><strong>文件权限</strong><br>
-🔺权限的三个级别<br>
-文件主，同组用户，其他用户<br>
-每个文件有唯一的属主<br>
-🔺普通文件的权限<br>
-读、写、可执行<br>
-不可写文件也可能会被删</p>
-<p>两类可执行文件：程序文件、脚本文件</p>
-<p><strong>目录权限</strong><br>
-若无读权限，”目录表“文件不许读取，ls 会失败<br>
-若无写权限，”目录表“文件不许写<br>
-目录无写权限不是指目录下所有文件都禁止写<br>
-有执行权限（x）意味着分析路径名过程中可检索该目录<br>
-STICKY权限（黏着位）：目录有写权限并且带STICKY属性，此目录下的文件仅文件主可以删除，其他用户删除操作会失败</p>
-<p>在Linux中用户可以把他的某个文件设置为他本人不可以读、写、执行，但是与他同组的人可以读、可以执行，即使他是该组的成员之一也无法读取文件。</p>
-<p><strong>权限相关命令</strong><br>
-ls -l ：查询当前目录下所有文件和子目录权限<br>
-chmod：修改已有文件的权限<br>
-umask命令：控制文件/目录的初始权限。进程新创建的文件的权限受其影响</p>
-<h1 id="shell的基本机制">shell的基本机制</h1>
-<p><a href="https://blog.csdn.net/xq151750111/article/details/114491731">Linux基础篇（一）-- Shell与Bash的区别和联系</a><br>
-Bash是Shell的一种</p>
-<p>交互方式：直接在窗口输入命令。熟悉shell的替换机制、转义机制，掌握循环等控制流程，可以编写复合命令<br>
-非交互方式：编写shell脚本程序，把一系列的操作变成一个脚本文件，批量处理</p>
-<p>交互式bash的命令提示符下输入!v并按下回车，其功能是引用历史机制，重复执行最近输入的以v开头的命令</p>
-<p>bash的重定向符&lt;&lt;&lt;的作用是：将重定向符后面的单词作为这个命令的标准输入</p>
-<p><strong>程序的标准输入/输出</strong><br>
-标准输入：stdin，fd=0<br>
-标准输出：stdout，fd=1；标准错误输出：stderr，fd=2</p>
-<p>stdout 输出重定向</p>
-<blockquote>
-<p>filename：将stdout重定向到文件filename，文件已存在则覆盖</p>
-<blockquote>
-<p>filename：将stdout重定向追加到filename尾</p>
-</blockquote>
-</blockquote>
-<p>命令执行时在终端上显示的信息有些属于标准输出stdout，有些属于标准错误输出stderr。显示信息到底属于stdout还是stderr，这取决于命令提供者如何设计的程序，与操作员无关。</p>
-<h1 id="变量">变量</h1>
-<p><strong>变量赋值及应用</strong></p>
-<p><strong>在脚本中编辑文件</strong></p>
-<p><strong>环境变量</strong></p>
-<h1 id="替换">替换</h1>
-<p>shell的替换工作：先替换命令在执行命令<br>
-变量替换、命令替换、文件名替换</p>
-<p>方便交互使用的功能：历史替换与别名替换</p>
-<h1 id="元字符和转义">元字符和转义</h1>
-<p>bash的元字符有：</p>
-<p>单引号、双引号</p>
-<h1 id="shell流程控制条件-循环与函数">shell流程控制：条件、循环与函数</h1>
-<h1 id="进程的基本概念">进程的基本概念</h1>
-<p><a href="https://blog.csdn.net/zhybiancheng/article/details/120312400">【Linux】进程详解一：进程概念</a></p>
-<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1686833745625.png" alt="" loading="lazy"></figure>
-<h1 id="进程的创建和重定向">进程的创建和重定向</h1>
-<h1 id="重定向-信号">重定向、信号</h1>
-<p>重定向与管道机制</p>
-<h1 id="进程间协作">进程间协作</h1>
-<h1 id="socket概述">Socket概述</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【NLP】Transformer]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-transformer/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-transformer/">
-        </link>
-        <updated>2023-06-06T13:19:42.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>仔细看这个文章就全懂了</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/338817680">Transformer模型详解（图解最完整版）</a></p>
-<p><strong>基础预备</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
-Transformer：Seq2Seq model with attention</p>
-<p><a href="https://zhuanlan.zhihu.com/p/105722023">一文详解Softmax函数</a><br>
-通过Softmax函数就可以将多分类的输出值转换为范围在[0, 1]和为1的概率分布</p>
-<p><strong>思维导图</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1686115237621.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115244889.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115251026.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115255439.png" alt="" loading="lazy"></p>
-<p><strong>基于 Transformer 搭建英译中翻译模型</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/347061440">教你用PyTorch玩转Transformer英译中翻译模型！</a></p>
-<p>设计一个中译英的翻译系统基于BPE（Byte-Pair Encoding）和Transformer的话，可以按照以下步骤进行设计：</p>
-<p>步骤 1：数据准备<br>
-收集中英文平行语料，并进行预处理。确保数据干净且格式一致。可以使用一些开源的中英文平行语料库，如WMT、OpenSubtitles等。</p>
-<p>步骤 2：BPE分词<br>
-使用BPE算法对中英文语料进行分词，将其转换为子词级别的表示。BPE是一种基于统计的分词方法，可以将常见的词组或者词素分解为子词。这样做的好处是能够处理未登录词和稀有词，同时减小词表的大小。</p>
-<p>对于中文，可以使用开源工具如SentencePiece、Jieba等进行BPE分词。对于英文，可以使用类似的工具或者直接按空格进行分词。</p>
-<p>步骤 3：构建词汇表<br>
-根据BPE分词的结果，构建中英文的词汇表。将每个子词映射到一个唯一的索引，以便于后续的模型输入和输出。</p>
-<p>步骤 4：数据编码<br>
-将分词后的中英文语料转换为模型可接受的数值表示。将每个子词根据词汇表中的索引进行编码。可以使用One-hot编码或者更高效的词嵌入（如Word2Vec、GloVe）对子词进行表示。</p>
-<p>步骤 5：设计Transformer模型<br>
-基于编码后的数值表示，设计一个Transformer模型用于中译英翻译。Transformer模型是一种基于自注意力机制的神经网络模型，已经被证明在机器翻译任务上取得了优秀的性能。</p>
-<p>Transformer模型由编码器（Encoder）和解码器（Decoder）组成。编码器将源语言的输入序列转换为上下文表示，解码器使用该上下文表示生成目标语言的输出序列。</p>
-<p>步骤 6：训练模型<br>
-使用已准备好的平行语料对Transformer模型进行训练。训练的过程中可以使用一些技巧，如批量训练、学习率调整、正则化等。目标是通过最小化损失函数（如交叉熵损失）来优化模型参数，使其能够更好地完成中译英的翻译任务。</p>
-<p>步骤 7：评估和调优<br>
-使用一些评估指标，如BLEU、ROUGE等，对训练得到的模型进行评估。根据评估结果，进行调优和改进。可以尝试不同的超参数</p>
-<p>步骤 8：推理和翻译<br>
-使用训练好的模型进行推理和翻译。对于输入的中文句子，首先进行BPE分词，然后根据词汇表进行编码，得到数值表示。将数值表示输入到编码器中，得到上下文表示。接下来，使用解码器生成目标语言的输出序列，直到遇到结束符或达到最大长度。</p>
-<p>步骤 9：后处理<br>
-对生成的英文句子进行后处理，如去除多余的空格、标点符号等，以得到最终的翻译结果。</p>
-<p>步骤 10：调优和改进<br>
-根据推理的结果和用户反馈，进行模型的调优和改进。可以尝试不同的模型架构、超参数调整、数据增强等方法，以提高翻译质量和性能。</p>
-<h1 id="人机对话">人机对话</h1>
-<p>设计一个人机对话系统需要经过以下步骤：</p>
-<ol>
-<li>
-<p>数据收集和预处理：收集对话数据集，包括人类与机器之间的对话。预处理数据，例如分词、词性标注、命名实体识别等。</p>
-</li>
-<li>
-<p>文本表示：使用预训练的词向量（例如Word2Vec、GloVe等）将对话文本转换为向量表示。可以使用Transformer模型将文本序列转换为语义向量表示。</p>
-</li>
-<li>
-<p>意图识别：使用分类模型（例如基于卷积神经网络或循环神经网络）来识别对话中用户的意图。意图识别模型可以使用对话的历史上下文信息进行训练。</p>
-</li>
-<li>
-<p>槽位填充：使用序列标注模型（例如条件随机场CRF）来识别对话中的槽位信息，例如用户的姓名、日期、地点等。可以将槽位填充任务看作是一个序列标注问题，其中每个词语对应一个标签。</p>
-</li>
-<li>
-<p>对话管理：设计对话管理器来决定系统对用户的回应。对话管理器可以基于强化学习方法进行训练，将对话系统的目标设置为最大化预定义的奖励函数。</p>
-</li>
-<li>
-<p>回复生成：使用生成式模型（例如循环神经网络）生成对话回复。可以使用带有注意力机制的Transformer模型来提高生成质量。</p>
-</li>
-<li>
-<p>模型训练和评估：将数据集分为训练集、验证集和测试集。使用训练集对对话系统的各个组件进行训练，使用验证集进行超参数调整和模型选择。最后，在测试集上评估对话系统的性能。</p>
-</li>
-<li>
-<p>迭代改进：根据评估结果和用户反馈，对对话系统进行改进。可以增加更多的训练数据、调整模型结构或优化超参数来提高系统的性能。</p>
-</li>
-</ol>
-<p>需要注意的是，以上步骤仅提供了一个基本的框架，实际设计一个人机对话系统可能需要更多的细化和调整，根据具体需求和场景进行相应的改进。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【音乐】即兴练习思路]]></title>
-        <id>https://jeromezjl.github.io/post/lian-qin/</id>
-        <link href="https://jeromezjl.github.io/post/lian-qin/">
-        </link>
-        <updated>2023-06-03T14:06:36.000Z</updated>
-        <content type="html"><![CDATA[<p>B站琴友原文链接：<br>
-<a href="https://t.bilibili.com/798087679282511889?share_from=dynamic&amp;share_medium=android&amp;share_plat=android&amp;share_source=WEIXIN&amp;share_tag=s_i&amp;timestamp=1685638014&amp;unique_k=JbGgziL">自学乐器真的有硬伤，那就是乐理真的感觉很难学......</a></p>
-<p>你先尝试扒二十首歌，我说的扒不是你能跟着弹下来那么简单，你得知道你弹的什么，这一句旋律是什么，是套在哪个和弦里的。当你扒够100首歌的时候，你这些问题就都不是问题了</p>
-<p>即兴呢其实就是要在前面的各种乐理基础上，加上你积累出的各种句子以及演奏技巧，跟着感觉弹出来的。<br>
-所以现在问题就明了了，你的即兴苦恼源于没有这些基础和积累。最好找一个老师带着你</p>
-<p>1、基础乐理—熟悉指板+即兴—和声学+即兴—配器法—实战编曲—混音、母带<br>
-2、多听曲子，多学曲子，多扒曲子，海纳百川<br>
-3、保持热爱</p>
-<p>先在一个调里把指板吃透了就行 主要还是要掌握大小调已经各种调式音阶的相对音程 一味地练别人的solo一点用都没有（除非你会乐理知道人家在弹什么）</p>
-<p>小调里的三五七和弦都会按吗 这个也比较基础</p>
-<p>制定计划逼着自己去学，特别是乐理和编曲，乐理得实际应用才记得住，编曲得大量编才能熟练，制定计划每天练多少、课看多少、资料找多少。</p>
-<p>学乐理就是少走弯路，但要是自己玩靠耳朵慢慢积累也不是不行，只是弹出来的东西可能就有点固定走不出自己听的最多的五声音阶，我原来学琴的时候老师不怎么讲乐理只有后来自己自学一点点基本属于文盲了[喜极而泣]，但是耳朵还不错 弹久了指板熟了基本听到什么想到什么能弹出来自己玩玩还挺乐。<br>
-当年学的时候坑比老师很多，以至于我跟的最久的不怎么讲乐理的老师我还觉得教的很好了[喜极而泣]，多年之后重新学乐理挺头疼的，现在教学环境比原来好了如果是新入门钱包足有条件还是找个好老师少走弯路，但是自学好资源也多了 找不到好老师的话，自学也挺好 ，看自己能不能坚持吧<br>
-然后多跟同好交流，即使没有老师和爱好者互相交流帮助也挺大的。</p>
-<p>b站找lick library的视频，精通指板。我全自学的音乐，都半职业水平了</p>
-<p>是的，乐理就是十二平均律和各种排列组合，不难，难的是持续的兴趣，精力投入，坐住板凳</p>
-<p>别练什么视唱练耳，扒歌这些东西，你现在最要紧的是赶紧用你学的五声音阶即兴起来，跟着伴奏弹几个音比你练什么吉他曲子都有效果，把他玩起来才是你学会即兴的最重要的一步，指板不是说练几个乐句，重复练爬几百上千遍音阶可以记住的，只有你即兴的多了，你才能想弹什么音就立马弹出来，找老师是最没有性价比的，浪费时间浪费金钱，你先试着跟着你喜欢的歌弹点旋律吧。这是我的经验之谈，我就是这样从只会弹唱到可以即兴的，不说很厉害，但是已经可以在各种流行歌曲里随意即兴了。</p>
-<p>可以试试steve vai写的《吉他巫师 史蒂夫范的独门演奏心法》正版有点小贵，经济不允许可以某宝上买复印版四十几，比较通俗易懂不过是繁体，台湾出版的</p>
-<p>买本人民音乐出版社的《吉他指板手册》，看不懂不翻页看完之后最基础的乐理就没啥问题了。但是想学更多的就得买别的教材了，到时候你就根据喜好自己找吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DL】RNN | Attention | LSTM | Transformer]]></title>
-        <id>https://jeromezjl.github.io/post/dl-rnn-or-attention-or-lstm-or-transformer/</id>
-        <link href="https://jeromezjl.github.io/post/dl-rnn-or-attention-or-lstm-or-transformer/">
-        </link>
-        <updated>2023-06-01T06:35:52.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="rnn">RNN</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/30844905">一文搞懂RNN（循环神经网络）基础篇</a></p>
-<p><a href="https://blog.csdn.net/bestrivern/article/details/90723524">RNN详解(Recurrent Neural Network)</a></p>
-<p><a href="https://blog.csdn.net/weixin_45727931/article/details/114369073">Pytorch循环神经网络（RNN）快速入门与实战</a></p>
-<h1 id="attention">Attention</h1>
-<p><a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a></p>
-<h1 id="lstm">LSTM</h1>
-<p><a href="https://www.bilibili.com/video/BV1fp4y1t7Xb/?p=3&amp;spm_id_from=pageDriver&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">RNN &amp; LSTM (时间序列模型）</a></p>
-<h1 id="transformer">Transformer</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[机器视觉]]></title>
-        <id>https://jeromezjl.github.io/post/ji-qi-shi-jue/</id>
-        <link href="https://jeromezjl.github.io/post/ji-qi-shi-jue/">
-        </link>
-        <updated>2023-05-30T09:09:04.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="cv-xueba.club">北邮鲁鹏资源</a></p>
-<p>分辨率是 1024 x 768 则图像有 1024 x 768 个像素点</p>
-<p>二进制图像：每个点用一个bit表示<br>
-灰度图：每个点用一个Byte表示，范围 0-255<br>
-RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255</p>
-<p><strong>卷积核/滤波核：filter kernel</strong><br>
-卷积运算：对应点相乘再相加（对核内数据进行加权，然后赋给中心点）</p>
-<p>在利用均值核对图像进行平滑处理的时候，考虑到距离中心点越远的点 对中心值影响越小。所以考虑使用高斯分布设置核内权重。</p>
-<p><strong>高斯核</strong><br>
-<a href="https://blog.csdn.net/u013066730/article/details/123112159">CSDN 文字讲解</a><br>
-<a href="https://www.bilibili.com/video/BV15B4y1D7QJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站高斯分布复习</a><br>
-标准差σ越大，高斯分布的图像越扁平。对应高斯核可取值的范围就会增大。若在这同时增大高斯核的大小，则被用于计算的均值的范围变大，则得到的图像就会越模糊。<br>
-当使用高斯滤波器进行图像处理时，W代表窗口的大小（也称为卷积核的尺寸），σ代表高斯函数的标准差（方差的平方根）。经验上，有一个常见的规则是W/2=3σ，它表示窗口的一半尺寸大约等于3倍的标准差。<br>
-这个经验规则可以用于选择适当的窗口大小和标准差，以确保高斯滤波器在平滑图像的同时保持图像细节。具体而言，较大的窗口尺寸和较大的标准差可以产生更强烈的平滑效果，但可能会导致图像细节的丢失。相反，较小的窗口尺寸和较小的标准差可以保留更多的细节，但平滑效果会较弱。<br>
-根据经验，W/2=3σ提供了一种简单的方法来选择窗口大小和标准差的相对关系，以获得平衡的结果。但需要注意的是，这只是一个经验规则，具体的选择还取决于特定的应用和图像处理的需求。在实际应用中，可能需要进行实验和调整以找到最适合的参数。</p>
-<p><a href="https://blog.csdn.net/zjh12312311/article/details/109649188">cv2中的滤波，均值，高斯，中值，高通，低通，傅里叶变换</a></p>
-<h1 id="canny算法边缘检测">Canny算法——边缘检测</h1>
-<p><a href="https://www.bilibili.com/video/BV1nz4y197Qv?p=3&amp;spm_id_from=pageDriver&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">鲁鹏讲解</a><br>
-<a href="https://blog.csdn.net/minjiuhong/article/details/89320225">CSDN文字讲解</a></p>
-<p><strong>算法原理概述</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1685450396261.png" alt="" loading="lazy"></p>
-<p><a href="https://blog.csdn.net/m0_51402531/article/details/121066693">OpenCV——Canny边缘检测（cv2.Canny()）</a></p>
-<pre><code class="language-python">edges = cv.Canny( image, threshold1, threshold2[, apertureSize[, L2gradient]])
-# threshold1为低阈值，threshold2为高阈值
-</code></pre>
-<h1 id="图像拟合-fitting">图像拟合 fitting</h1>
-<p><strong>最小二乘法拟合</strong><br>
-假设需要拟合一条线，通过最小二乘法可以求得这条线的方程，从而将像素点拟合成一条平滑的曲线。这样的应用场景很多，比如图像的边缘检测、图像的灰度平滑和曲线的修正等<br>
-<a href="https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163978851616780269814649&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;spm=1018.2226.3001.4187">一文让你彻底搞懂最小二乘法（超详细推导）</a></p>
-<p><strong>鲁棒性最小二乘法</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1685457722865.png" alt="" loading="lazy"></p>
-<p><strong>RANSAC——随机一致性采样</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/45532306">文字讲解</a><br>
-在使用RANSAC找到内点之后，再利用找到的点，使用最小二乘法找到直线</p>
-<p><code>RANSAC的利弊</code><br>
-优点<br>
-简单、适用于许多不同的问题，经常在实践中效果很好<br>
-缺点<br>
-有很多参数需要调整，对于较低的初始比率不能很好地工作(要迭代太多次，或者可能完全失败)<br>
-在较小的样本数上不能总是得到一个良好的初始化模型</p>
-<p><strong>霍夫变换 Hough transform</strong><br>
-<a href="https://blog.csdn.net/leonardohaig/article/details/87907462">CSDN 文字讲解</a><br>
-<a href="https://www.bilibili.com/video/BV1nz4y197Qv?p=4&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">鲁鹏讲解</a><br>
-软投票法：给相邻的也投一票</p>
-<p><a href="https://blog.csdn.net/on2way/article/details/47028969">Python下opencv使用笔记（十一）（详解hough变换检测直线与圆）</a></p>
-<h1 id="特征提取">特征提取</h1>
-<p><a href="https://blog.csdn.net/max_LLL/article/details/119728338">OpenCV中的几种角点检测方法</a></p>
-<p><strong>Harris corner detection(角点检测)</strong><br>
-<a href="https://www.bilibili.com/video/BV1Wb411b79B/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
-典型的数学建模过程，将实际问题用数学模型来表示，从而量化，让计算机理解。<br>
-适用于：光照情况、位置、旋转、平移等变化ss<br>
-不适用于：大小的变化</p>
-<p>Blob detection</p>
-<p><strong>SIFT(Scale Invariant Feature Transform)尺度不变特征变换</strong><br>
-<a href="https://www.bilibili.com/video/BV1Qb411W7cK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
-<img src="https://jeromezjl.github.io/post-images/1685946237448.png" alt="" loading="lazy"><br>
-高斯金字塔：图像的尺度空间，用于模拟观察者距离物体的远近程度及模糊程度<br>
-参数<br>
-层数 octave：O = [log2(min(M,N))]-3   M、N：原图片的宽和高<br>
-每层的图片数：S = n + 3   n：能找到的特征图数<br>
-n的解释：<br>
-假如每层用了五个不同的高斯核进行卷积，那么每层得到五个高斯后的图片（S）。<br>
-相邻两个做差，得到四张差分后的图片。差分后的图片需要求梯度来找特征点，但是最上和最下两张找不到。所以n为S-3 = 2。也可以理解为，三个差分图为一组，对中间的那张进行计算，所以四张图片能找到上下两个组。</p>
-<p><strong>SIFT 和 CNN 在图像检索任务上的比较</strong><br>
-SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索任务中具有不同的特点和应用场景。下面是它们之间的一些比较：</p>
-<ol>
-<li>
-<p>特征表示：</p>
-<ul>
-<li>SIFT：SIFT算法提取的特征是局部特征，主要关注图像中的关键点和它们的描述子。这些特征具有旋转不变性和尺度不变性，适用于处理图像中的局部变化和几何变换。</li>
-<li>CNN：卷积神经网络通过多层卷积和池化操作，从整个图像中学习到的特征表示。这些特征是全局的，能够捕捉到图像中的语义信息和高层次的抽象特征。</li>
-</ul>
-</li>
-<li>
-<p>训练需求：</p>
-<ul>
-<li>SIFT：SIFT算法不需要大规模标注的训练数据，因为它是一种手工设计的特征提取算法。</li>
-<li>CNN：卷积神经网络需要大规模的标注数据进行训练，以便通过反向传播算法学习到适合任务的特征表示。这需要大量的计算资源和训练时间。</li>
-</ul>
-</li>
-<li>
-<p>鲁棒性：</p>
-<ul>
-<li>SIFT：SIFT算法在旋转、缩放和仿射变换等情况下具有较强的鲁棒性。它对于图像中的局部变化和几何变换能够提取稳定的特征。</li>
-<li>CNN：卷积神经网络在大规模训练的情况下可以具有一定的鲁棒性，但对于缩放和旋转等变换相对较敏感。</li>
-</ul>
-</li>
-<li>
-<p>性能：</p>
-<ul>
-<li>SIFT：SIFT算法在传统的图像检索任务中表现良好，并且在计算机视觉领域经过多年的研究和验证。它在小规模图像数据库上具有较高的检索准确性。</li>
-<li>CNN：卷积神经网络在大规模图像数据集上进行端到端的训练，能够学习到更复杂的特征表示，并在一些特定的图像检索任务中达到更好的性能。例如，对于基于图像分类的图像检索任务，CNN通常能够获得更好的结果。</li>
-</ul>
-</li>
-</ol>
-<p>综上所述，SIFT适用于小规模图像数据库和对局部特征关注较多的场景，而CNN在大规模图像数据集和需要全局语义信息的任务中具有优势。实际应用中，可以根据具体任务的需求和数据的特点选择适合的方法或结合两者的优势进行</p>
-<h1 id="纹理">纹理</h1>
-<p>常见任务：<br>
-·从图像纹理估计表面方向或形状<br>
-·根据纹理线索进行分割/分类 分析，表示纹理<br>
-·将纹理一致的图像区域分组<br>
-·生成新的纹理/图像</p>
-<p>用不同方向的卷积核卷积图像，每个核为输出向量的一维，向量中的最大值对应的卷积核方向，就是该纹理的方向。</p>
-<h1 id="分割-segmentation">分割  Segmentation</h1>
-<p><strong>Mean shift</strong><br>
-<a href="https://blog.csdn.net/google19890102/article/details/51030884">简单易学的机器学习算法——Mean Shift聚类算法</a><br>
-找局部密度最高的点</p>
-<p>Mean shift算法是一种非参数的聚类算法，其主要用于数据聚类和密度估计。以下是Mean shift算法的基本流程：</p>
-<ol>
-<li>初始化：选择一个初始种子点，作为每个聚类的中心点，并确定一个窗口大小。</li>
-<li>密度估计：对于每个种子点，计算在窗口内的数据点的密度估计。可以使用核函数来衡量数据点在窗口内的密度，通常使用高斯核函数。</li>
-<li>平移向量计算：计算每个数据点相对于种子点的平移向量。平移向量的计算方式是通过计算数据点在窗口内的质心（mean）和当前种子点的差异。</li>
-<li>平移：将种子点沿着平移向量进行平移，更新种子点的位置。</li>
-<li>收敛判断：重复步骤3和步骤4，直到种子点收敛于局部最大值（即平移向量接近于零）。这表示种子点已经找到了局部密度最大的聚类中心。</li>
-<li>聚类：将收敛的种子点作为聚类的中心点，并将其他数据点分配到最近的聚类中心。</li>
-<li>重复步骤1到步骤6，直到所有数据点都被分配到聚类中心。</li>
-</ol>
-<p>Mean shift算法的核心思想是通过不断迭代调整种子点的位置，使其向高密度区域移动，直到收敛于局部最大值。这样可以找到数据中的聚类中心，并将数据点分配到对应的聚类中心。</p>
-<p><strong>归一化图割 Normalized cut</strong><br>
-<a href="https://blog.csdn.net/qq_38476684/article/details/80553850">图像处理--归一化切割--(normalized cut)--Python实现</a></p>
-<p>以下是Normalization Cut算法的完整详细步骤：</p>
-<p>输入：图像（以像素矩阵表示），标准差σ</p>
-<ol>
-<li>将像素转换为向量：将图像中的每个像素表示为一个向量。对于灰度图像，可以使用像素的灰度值作为向量的元素；对于彩色图像，可以使用像素的颜色通道值作为向量的元素。</li>
-<li>计算两两像素的距离：对于每对像素向量，使用选定的距离函数（如欧氏距离或曼哈顿距离）计算它们之间的距离。得到一个距离矩阵，其中每个元素表示两个像素之间的距离。</li>
-<li>将距离映射到[0, 1]范围内：将距离映射到[0, 1]的范围内，可以使用公式 d' = (d - min_distance) / (max_distance - min_distance)，其中 d 是原始距离，d' 是映射后的距离，min_distance 和 max_distance 分别是所有像素对之间距离的最小值和最大值。</li>
-<li>利用高斯核函数计算相似度：使用高斯核函数将距离转换为相似度。计算每对像素之间的相似度，可以使用公式 similarity = exp(-d'^2 / (2 * σ^2))，其中 d' 是映射后的距离，σ 是标准差。</li>
-<li>生成相似度矩阵W（邻接矩阵）：将计算得到的相似度值填充到一个相似度矩阵中。矩阵的每个元素表示两个像素之间的相似度。注意，W是对称的。且对角线为0，因为相同点间距离为0。</li>
-<li>构建拉普拉斯矩阵：根据相似度矩阵，构建拉普拉斯矩阵。拉普拉斯矩阵可以有多种形式，例如对称归一化拉普拉斯矩阵或非对称拉普拉斯矩阵。定义对角矩阵D，D的第n行不为0的元素为W第n行数值之和。</li>
-<li>对拉普拉斯矩阵进行特征值分解：对构建的拉普拉斯矩阵进行特征值分解，得到特征值和对应的特征向量。(D-W)y = λDy；取第二小的特征值对应的y向量。</li>
-<li>利用特征向量进行聚类或分割：根据特征向量的特定特征值，进行聚类或分割操作。可以使用聚类算法（如谱聚类）或基于特征向量的阈值操作来实现。设置门限值，假设为1，低于1的为一类，高于1的为另一类。</li>
-<li>输出分割结果：根据聚类或分割的结果，将图像中的像素分为不同的区域或类别。可以根据特征向量的某个阈值或聚类算法的结果将像素分配到不同的分割区域或类别。</li>
-<li>可选的后处理：根据需要，可以进行一些后处理步骤来进一步优化分割结果。例如，可以应用边缘平滑技术来消除分割边界上的噪声或不连续性。</li>
-<li>输出最终结果：将最终的图像分割结果作为算法的输出，可以是标记每个像素所属区域或类别的图像。</li>
-</ol>
-<p><strong>Minimum Cut</strong><br>
-<a href="https://blog.csdn.net/mmm_jsw/article/details/83787395">图像分割经典算法--《最小割最大流》（Minimum Cut——Max Flow）</a><br>
-去除图中权重最小的边</p>
-<h1 id="识别-recognition">识别 Recognition</h1>
-<p><strong>BOW词袋模型应用于图像识别分类</strong><br>
-词袋模型将图片分成小块，从而一定程度上解决了遮挡等问题<br>
-一般步骤：</p>
-<ul>
-<li>
-<p>特征提取<br>
-类比一下上面文本特征的提取，把文本1这句话切成一个个单词，这个过程就是在提取这个文本的特征，那么在图像中提取特征也类似，就是把图像切成一个个的片（patch），每片当成该图像的特征。常用的特征提取方法有SIFT、LBP、SURF等。</p>
-</li>
-<li>
-<p>生成字典/词袋（codebook）<br>
-在上一步特征提取中我们得到了很多的特征点，我们不能把每个点都放进词袋吧，那么就需要想一个招找到这些点中具有代表性的几类点，这一般需要聚类方法来完成的。对全部特征点进行聚类，得到了几个聚类中心，这些聚类中心就是这些点的特征向量。这一步之后就得到了词袋。（不理解的可以类比一下上面文本形成词袋的过程，上面文本形成词袋是把所有单词都放进去了，但是对图像来说特征点太多不可能全部放进去，所以使用聚类把聚类中心就当成词袋中的点）。</p>
-</li>
-<li>
-<p>根据词袋生成特征直方图<br>
-对于每张图片都有大量的特征点，那么就把这些点对照着上面得到的词袋统计出来，这样每张图片都会得到一个特征直方图，可以参考一下上面文本直方图。</p>
-</li>
-</ul>
-<p><strong>空间金字塔算法（Spatial Pyramid）</strong><br>
-一种用于图像分类和目标识别的传统机器视觉算法，可以有效地处理不同尺度和大小的图像内容。下面是Spatial Pyramid算法的实现过程：</p>
-<ol>
-<li>
-<p>提取特征：首先，对输入图像进行特征提取。常用的特征提取方法包括SIFT（尺度不变特征变换）、HOG（方向梯度直方图）和LBP（局部二值模式）等。这些方法可以提取图像中的局部特征，用于后续的分析和处理。</p>
-</li>
-<li>
-<p>划分金字塔：接下来，将图像划分为不同层级的金字塔结构。每个金字塔层级对应着不同的尺度和大小。通常，金字塔层级的数量和大小是预先定义好的，例如2层、3层或更多。</p>
-</li>
-<li>
-<p>分块统计：对于每个金字塔层级，将图像分割为固定大小的块。这些块可以是正方形或矩形的区域。然后，在每个块内计算特征的统计信息。这可以包括直方图、均值、方差等。通过这种方式，可以捕捉到图像在不同空间位置的局部特征。</p>
-</li>
-<li>
-<p>特征融合：将每个金字塔层级中的特征统计信息进行融合。一种常见的方法是将不同层级的特征串联起来，形成一个综合的特征向量。这样可以保留不同尺度和大小的信息，从而更好地描述图像的内容。</p>
-</li>
-<li>
-<p>分类器训练：使用融合后的特征向量来训练分类器，例如支持向量机（SVM）、随机森林（Random Forest）或神经网络等。分类器可以根据提供的训练数据学习图像类别的模式，并用于对新图像进行分类和识别。</p>
-</li>
-<li>
-<p>图像分类：对于待分类的新图像，首先进行与训练图像相同的特征提取和金字塔分块过程。然后，将提取到的特征输入训练好的分类器中进行预测。分类器会输出图像所属的类别标签。</p>
-</li>
-</ol>
-<p>Spatial Pyramid算法通过在不同层级和块上进行特征统计和融合，可以有效地捕捉到图像的局部和全局信息。这种方法在处理尺度变化和多尺度目标时具有优势，并且对于不同大小的图像也具有较好的鲁棒性。</p>
-<p><strong>Boosting（增强学习算法）</strong><br>
-一种集成学习方法，旨在通过组合多个弱分类器来构建一个更强大的分类器。Boosting算法通过迭代的方式逐步改进分类器的准确性，将先前分类器的错误样本权重增加，并对分类错误的样本进行重点关注。</p>
-<p>以下是Boosting算法的简要实现过程：</p>
-<ol>
-<li>
-<p>初始化权重：对于包含N个训练样本的训练集，初始化每个样本的权重为相等值（1/N）。</p>
-</li>
-<li>
-<p>迭代训练：进行T轮迭代，每一轮迭代中都训练一个弱分类器。</p>
-</li>
-<li>
-<p>弱分类器训练：在每一轮迭代中，根据当前样本权重，使用训练集训练一个弱分类器。弱分类器通常是一个性能较差的分类器，如决策树桩（仅有一层决策树）或者简单的线性分类器。</p>
-</li>
-<li>
-<p>分类器权重：根据弱分类器的错误率（分类错误的样本比例）计算其权重。错误率越低的弱分类器获得的权重越高，能够对分类结果做出更大的贡献。</p>
-</li>
-<li>
-<p>更新样本权重：根据弱分类器的权重调整训练样本的权重。被错误分类的样本权重会增加，而被正确分类的样本权重会减少。这样，下一轮迭代时，错误分类的样本会受到更多关注。</p>
-</li>
-<li>
-<p>结合弱分类器：将每个弱分类器按照其权重进行加权组合，得到最终的强分类器。强分类器通过累加弱分类器的预测结果，以投票或加权平均的方式进行最终分类。</p>
-</li>
-<li>
-<p>重复迭代：重复步骤3至步骤6，直到达到预定的迭代次数T或者满足某个停止条件（如达到预期准确率）。</p>
-</li>
-</ol>
-<p>Boosting算法通过多次迭代，逐步改进分类器的性能，重点关注那些难以分类的样本。它的优点在于能够构建出具有较高准确性的分类器，并且对于噪声和复杂数据集有一定的鲁棒性。著名的Boosting算法包括AdaBoost（自适应Boosting）和Gradient Boosting（梯度提升）。</p>
-<p><strong>Viola-Jones算法</strong><br>
-一种用于实时目标检测的传统机器视觉算法。它由Paul Viola和Michael Jones于2001年提出，被广泛应用于人脸检测。Viola-Jones算法基于Haar特征和级联分类器的概念，其实现过程如下：</p>
-<ol>
-<li>
-<p>Haar特征：Haar特征是一种基于图像局部区域的特征描述符。它可以用于描述图像中的边缘、线段、角等特征。Haar特征可以通过在图像上滑动不同大小和位置的滑窗，并计算窗口内不同区域的像素和来表示。</p>
-</li>
-<li>
-<p>积分图像：为了加速特征计算，Viola-Jones算法使用积分图像（Integral Image）进行快速计算。积分图像可以在常数时间内计算出任意矩形区域的像素和，使得特征计算的复杂度降低。</p>
-</li>
-<li>
-<p>Adaboost训练：使用Adaboost算法，Viola-Jones算法训练了一个级联分类器。级联分类器由多个弱分类器组成，每个弱分类器都是一个基于Haar特征的简单二分类器。Adaboost算法通过迭代训练，在每一轮迭代中调整样本的权重，使得错误分类的样本得到更多关注。</p>
-</li>
-<li>
-<p>特征选择：在每一轮迭代中，Viola-Jones算法通过选择具有最小错误率的特征来构建弱分类器。这样可以选择最具区分性的特征，以便有效地区分目标和非目标区域。</p>
-</li>
-<li>
-<p>级联结构：为了提高检测速度，Viola-Jones算法采用了级联的结构。级联分类器将所有弱分类器按顺序组织成级联的多个阶段。每个阶段都具有不同的分类器数量和阈值，以逐步过滤出非目标区域，减少检测的计算量。</p>
-</li>
-<li>
-<p>移动窗口检测：在测试阶段，Viola-Jones算法使用移动窗口技术在图像上滑动不同大小的窗口，对每个窗口进行分类器的评估。通过级联结构和快速特征计算，可以高效地排除大多数非目标窗口，并快速识别出目标窗口。</p>
-</li>
-</ol>
-<p>Viola-Jones算法具有高速和高准确性的特点，尤其在人脸检测方面表现出色。它被广泛应用于实时的图像和视频处理应用中，如人脸识别、表情分析和眼部追踪等。然而</p>
-<h1 id="三维重建">三维重建</h1>
-<p><strong>摄像机模型</strong><br>
-通过多张图片重构三维场景。无人驾驶车、地图等。<br>
-摄像机几何</p>
-<p><strong>相机标定</strong><br>
-找到二维和三维点之间的对应关系，用于计算相机的内参数</p>
-<h1 id="计算摄影学">计算摄影学</h1>
-<p><a href="https://www.zhihu.com/tardis/zm/art/51490200?source_id=1005">计算摄影学及本专栏介绍</a><br>
-<a href="https://www.zhihu.com/question/427425910">计算成像(computational photography)方向的就业前景如何？</a><br>
-<a href="https://www.bilibili.com/video/BV1VA4y1Z7DG/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">iPhone 13系列解读之二——让我们聊聊计算摄影</a></p>
-<h1 id="alexnet">AlexNet</h1>
-<p><a href="https://blog.csdn.net/guzhao9901/article/details/118552085">AlexNet网络结构详解（含各层维度大小计算过程）与PyTorch实现</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/467017218">手撕 CNN 经典网络之 AlexNet（理论篇）</a></p>
-<h1 id="resnet">ResNet</h1>
-<h1 id="swin">Swin</h1>
-<h1 id="vgg">VGG</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DL】深度学习的一般步骤]]></title>
-        <id>https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/</id>
-        <link href="https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/">
-        </link>
-        <updated>2023-05-19T07:05:13.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/66021413">快速搞定 epoch, batch, iteration</a><br>
-<a href="https://link.zhihu.com/?target=http%3A//playground.tensorflow.org">深度学习模拟网站，可观察参数变化对训练的影响</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【NLP】BiLSTM-CRF算法]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa/">
-        </link>
-        <updated>2023-05-15T14:27:05.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/u010366748/article/details/113784204">BiLSTM-CRF实现中文命名实体识别（NER）</a></p>
-<p><strong>概述</strong><br>
-BiLSTM-CRF（Bidirectional Long Short-Term Memory - Conditional Random Field）是一种深度学习算法，常用于序列标注任务，如命名实体识别、词性标注等。BiLSTM-CRF结合了双向长短时记忆网络（BiLSTM）和条件随机场（CRF）两种技术，具有较强的建模能力和预测准确性。</p>
-<p>BiLSTM是一种递归神经网络，可以捕捉序列中前后文的依赖关系。它由两个LSTM（Long Short-Term Memory）层组成，分别从左向右和从右向左处理输入序列，然后将它们的输出拼接起来。这样，每个时间步的输出包含了当前时刻及其前后若干时刻的信息，更好地表达了序列的语义。</p>
-<p>CRF是一种概率模型，用于对序列标注结果进行建模，考虑标签之间的关联性和约束条件，可以使得标注结果更加合理和连贯。在BiLSTM-CRF中，CRF层接受BiLSTM层的输出作为输入，并且通过联合学习的方式，将BiLSTM层的输出和CRF层的标注结果进行训练，以最大化标注的准确性。</p>
-<p>BiLSTM-CRF的训练过程通常采用反向传播算法，以最小化模型对标注数据的损失。在测试阶段，通过在CRF层上使用维特比算法，找到最可能的标注序列，作为模型的预测结果。</p>
-<p>总之，BiLSTM-CRF算法在序列标注任务中表现出了良好的性能，能够捕捉序列中的长距离依赖关系和标签之间的约束关系，从而提高了模型的预测准确性。</p>
-<p><strong>命名实体</strong><br>
-在自然语言处理中，命名实体（Named Entity）是指具有特定语义的实体，如人名、地名、组织机构名、时间、数量、货币等。命名实体识别（Named Entity Recognition，NER）是一种信息抽取技术，用于自动识别文本中的命名实体，并将其分类为预定义的类型。</p>
-<p>命名实体识别在信息检索、机器翻译、问答系统、自然语言生成等领域中有着广泛的应用。例如，在搜索引擎中，将用户查询中的命名实体与数据库中的实体进行匹配，可以帮助用户更快地找到所需信息。在机器翻译中，识别源文本中的命名实体可以帮助翻译系统更准确地理解句子的含义，从而提高翻译质量。</p>
-<p>命名实体识别通常使用基于规则、基于统计的方法或基于深度学习的方法。其中，基于深度学习的方法，如BiLSTM-CRF等模型，因其在序列标注任务中的优越表现，已经成为了命名实体识别的主流方法。</p>
-<p><strong>序列标注任务</strong><br>
-序列标注任务是一种自然语言处理任务，旨在将输入序列中的每个元素标注为特定的类别。常见的序列标注任务包括词性标注、命名实体识别、情感分析、语义角色标注等。</p>
-<p>在序列标注任务中，输入序列通常是一个由单词或字符组成的序列，每个单词或字符都要被标注为特定的类别。标注的类别可以是预定义的固定类别，例如名词、动词、形容词等，也可以是根据任务需要定义的自定义类别，例如人名、地名、组织机构名等。</p>
-<p>序列标注任务通常使用监督学习的方法进行模型训练，例如最大熵模型、条件随机场、递归神经网络等。在最近几年，基于深度学习的方法，如卷积神经网络（CNN）、循环神经网络（RNN）和其变体，如LSTM、GRU等，已经成为序列标注任务中最有效的方法之一，取得了很好的效果。</p>
-<p>序列标注任务在自然语言处理中有着广泛的应用，如文本分类、机器翻译、信息抽取、问答系统等。</p>
-<p><strong>BIO-三位序列标注法（BIO-3）</strong><br>
-BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标注方法，特别在命名实体识别（NER）任务中广泛应用。该方法将每个标记分为三个部分：B（Beginning）、I（Inside）、O（Outside）。下面对BIO-3的含义进行解释：</p>
-<p>B（Beginning）：表示实体的起始位置。在一个实体的第一个字上标记为B，例如&quot;B-Person&quot;表示一个人名实体的起始位置。</p>
-<p>I（Inside）：表示实体的中间位置。在一个实体的非起始字上标记为I，例如&quot;I-Person&quot;表示一个人名实体的中间或结束位置。</p>
-<p>O（Outside）：表示不属于任何实体的标记，即普通文本部分。</p>
-<p>通过使用BIO-3标记法，我们可以准确地表示实体在文本中的起始和结束位置。这种方法的主要优点是灵活性，因为它可以处理不同长度和类型的实体。</p>
-<p>除了BIO-3，还有其他常见的序列标注方法，包括：</p>
-<p>IOB（Inside-Outside-Beginning）：与BIO-3类似，但使用I（Inside）和B（Beginning）标记来表示实体的起始和中间位置。</p>
-<p>IOB2：与IOB方法类似，但在一段连续的实体标记序列中，每个实体的第一个字都标记为B，而后续的字标记为I。</p>
-<p>IOE（Inside-Outside-End）：与BIO-3类似，但使用I（Inside）和E（End）标记来表示实体的中间和结束位置。</p>
-<p>IO：只有I（Inside）和O（Outside）两个标记，没有明确的起始标记。</p>
-<p>这些标注方法都是为了在序列标注任务中准确表示实体的位置和边界。具体选择哪种标注方法取决于任务的需求和数据集的特点。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/367995480"> 测试集、训练集、开发集的区别</a><br>
-<a href="https://zhuanlan.zhihu.com/p/148813079">CRF条件随机场的原理、例子、公式推导和应用</a><br>
-<a href="https://zhuanlan.zhihu.com/p/44042528">最通俗易懂的BiLSTM-CRF模型中的CRF层介绍</a></p>
 ]]></content>
     </entry>
 </feed>
