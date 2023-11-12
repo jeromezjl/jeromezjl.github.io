@@ -2066,13 +2066,13 @@ p > code {
       font-size: 17px !important
     }
     body {
-      color: #212529;
+      color: #f8f9fa;
     }
     .next-md-body {
-      color: #212529;
+      color: #f8f9fa;
     }
     .next-md-body h1, .next-md-body h2 {
-      border-bottom-color: #212529;
+      border-bottom-color: #f8f9fa;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
       background: #eeeeeecc;

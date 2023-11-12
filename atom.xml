@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-10-07T14:48:30.830Z</updated>
+    <updated>2023-11-12T13:13:34.525Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,14 +11,57 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[Some Words]]></title>
-        <id>https://jeromezjl.github.io/post/some-words/</id>
-        <link href="https://jeromezjl.github.io/post/some-words/">
+        <title type="html"><![CDATA[【考研】英语作文]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/">
         </link>
-        <updated>2023-09-30T02:59:11.000Z</updated>
-        <content type="html"><![CDATA[<p>要有清醒的自我认知<br>
-不要看到别人很牛，就误认为自己也很牛<br>
-要制定与自己能力相当的计划，才能达到和别人相同的目标</p>
+        <updated>2023-10-11T13:47:29.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/liu-ji/">六级整理的作文</a></p>
+<p><a href="https://www.zhihu.com/question/380341976">考研英语一的各题型，怎么分配时间合理？</a></p>
+<p>小作文<br>
+大作文</p>
+<h1 id="小作文">小作文</h1>
+<p><strong>常考题目有四种</strong><br>
+私人书信、公务书信、通知和告示（去年考的）、会议纪要</p>
+<p><strong>审题三要素</strong></p>
+<ol>
+<li>故事背景：打散+改写背景信息</li>
+<li>体裁（letter/email+notice）+ 内容要求</li>
+<li>正式（I am / It is）/非正式（I'm / It's） + 格式<br>
+都写正式肯定没错</li>
+</ol>
+<p><strong>小作文三段式简易思路</strong><br>
+小作文：说事说明白就行，不要求句型很复杂<br>
+段首1-2句<br>
+a. 写给熟人：首句寒暄，二句目的；<br>
+b. 写给陌生人或机构：自我介绍和目的</p>
+<p>中间 4-6 句<br>
+按题目要求写相应内容，并辅以感谢、强调、对比、建议、说明等功能表达完成写作</p>
+<p>段尾 1 句<br>
+再次致歉、感谢、期待、展望等</p>
+<p>正文缩进四个字符</p>
+<p><strong>书信</strong><br>
+dear 称呼<br>
+Yours sincerely</p>
+<p><strong>告示</strong><br>
+标题</p>
+<p>the purpose of sth. / sth. aims(targets) to 目的是<br>
+use their best endeavors to do 尽最大努力做<br>
+attach importance to sth. 认为...很重要<br>
+contribute to 是导致...的原因<br>
+complete one's work 完成工作<br>
+joint efforts 共同努力<br>
+I am deeply obliged for your hard work 我十分感谢您的努力</p>
+<p><strong>背单词遇到的词组</strong><br>
+compensate for / compensate sb. for sth. 弥补、补偿<br>
+urge sb to do 敦促某人做<br>
+guarantee sb. sth. 向某人保证某事<br>
+remains to do 仍需做某事<br>
+government grant 政府拨款<br>
+take for granted 认为...理所应当<br>
+justify doing sth. 证明做...（是正确的）<br>
+judge by/from 从...判定<br>
+starved of 缺乏、挨饿</p>
 ]]></content>
     </entry>
     <entry>
@@ -28,7 +71,13 @@
         </link>
         <updated>2023-08-11T10:17:37.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【考研441分】24考研数学全年规划！B站最全！</a><br>
-<a href="https://zhuanlan.zhihu.com/p/390928056">考生必记：三角函数公式汇总+记忆（没有比这更全）</a></p>
+<a href="https://zhuanlan.zhihu.com/p/390928056">考生必记：三角函数公式汇总+记忆（没有比这更全）</a><br>
+<a href="https://www.desmos.com/calculator?lang=zh-CN">在线函数作图</a></p>
+<p><strong>数学竞赛小 tips</strong></p>
+<p>两项形式相似想夹逼，放缩，最大最小值</p>
+<p>真    题    嗅    探<br>
+2020年前：证明喜欢中值定理<br>
+2020年后：证明喜欢泰勒</p>
 <p>n 项和展开公式：二项式定理</p>
 <p>A=&gt;B，A 能推出 B，则 A 是 B 的充分条件（B 的充分条件是 A），B 是 A 的必要条件（A 的必要条件是 B）</p>
 <p>A 能推出 B，则 A 发生，B 一定发生，则事件 A ∈ B （小充分，小的是充分条件，大必要，大的是必要条件）</p>
@@ -149,6 +198,25 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 找原函数：凑微分，直接带值</p>
 <p>补线用格林：补一条路径，形成封闭曲线，再把补的减掉<br>
 注意格林公式使用条件，P、Q 在封闭曲线上有连续一阶偏导。若在某点（比如0点）没有定义</p>
+<h1 id="无穷级数">无穷级数</h1>
+<p><strong>和函数计算</strong></p>
+<ol>
+<li>求收敛域，也就是和函数的定义域（因为逐项可导、逐项可积都是在开区间上成立）</li>
+<li>在收敛区间（开区间上求和函数）</li>
+<li>单独判断端点，若不能合并，需要分段</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>已知 S'(x) 求 S(x) 需要使用变上限积分  ∫x S(t)dt</li>
+<li>只要对 x 的 n 次方进行改变的时候，就要判断 n 从 0 还是 1 开始取</li>
+</ol>
+<h1 id="曲线曲面积分">曲线曲面积分</h1>
+<p><strong>二型面积分</strong><br>
+注意：只有用高斯公式时才需要考虑曲面是否封闭，投影法不需要<br>
+投影法可以考虑的点：</p>
+<ol>
+<li>若投到面上为一条线，则积分为 0</li>
+</ol>
 ]]></content>
     </entry>
     <entry>
@@ -181,7 +249,18 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
         <link href="https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/">
         </link>
         <updated>2023-07-26T11:34:41.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/615652800">23复试分析|清华大学-深圳研究院！</a></p>
+        <content type="html"><![CDATA[<h1 id="北邮">北邮</h1>
+<p><a href="https://ai.bupt.edu.cn/kxyj/yjfx.htm">研究方向</a></p>
+<p><strong>北邮人论坛</strong><br>
+导师推荐<br>
+https://bbs.byr.cn/#!article/StudyShare/203152</p>
+<p>何召锋、</p>
+<p>杨洁：海量泛在感知数据的智能分析与处理方法，以及基于感知信息的智能决策计算理论与技术；泛在网络感知大数据智能计算、智能网络优化与路由算法、公共安全智能图像计算、多模态天基感知数据智能计算、人机协同智能辅助诊断</p>
+<p>复试：<br>
+数据结构<br>
+人工智能算法<br>
+英文自我介绍</p>
+<p><a href="https://zhuanlan.zhihu.com/p/615652800">23复试分析|清华大学-深圳研究院！</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/615696688">2023年北京邮电大学计算机考研考情分析！！</a></p>
 <p><a href="https://www.zhihu.com/question/536212509">考研如何备考北京邮电大学人工智能专业809方向？</a></p>
 <h1 id="香港留学">香港留学</h1>
@@ -196,7 +275,7 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
         <link href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/">
         </link>
         <updated>2023-07-14T04:15:37.000Z</updated>
-        <content type="html"><![CDATA[<p>全概率公式做题步骤</p>
+        <content type="html"><![CDATA[<p><strong>全概率公式做题步骤</strong></p>
 <ol>
 <li>确定要求的事件A</li>
 <li>找完备事件组，列出各种情况Bi(i=1,2,3...)</li>
@@ -214,11 +293,11 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 <p>分布函数连续 ⇔ 连续型随机变量<br>
 分布函数必须右连续，只是针对点而言，右连续的函数也可以不是连续函数</p>
 <h1 id="联合概率">联合概率</h1>
-<p>用联合概率密度求概率<br>
+<p><strong>用联合概率密度求概率</strong><br>
 当作二重积分算。比如 P{X+Y&gt;1} ，选定一个要积的变量，比如x，则 y&gt;1-x<br>
 作图，在积分区域里积分，得到概率值。</p>
-<p>注意：不管积分区域是什么样，也就是 P{} 括号内的函数是什么样，和联合分布函数无关。联合分布函数都是 f(x, y) （被积函数）</p>
-<p>求 z = g(x, y) 的分布函数</p>
+<p>🔺注意：不管积分区域是什么样，也就是 P{} 括号内的函数是什么样，和联合分布函数无关。联合分布函数都是 f(x, y) （被积函数）</p>
+<p><strong>求 z = g(x, y) 的分布函数</strong></p>
 <ol>
 <li>xy都是离散型，很简单，直接看就行</li>
 <li>xy都是连续型，则把 z 看作常数，讨论 z 的范围，然后再用上面联合概率密度求概率的方法</li>
@@ -229,6 +308,12 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 当 z 的取值在积分区域里时，用二重积分计算概率值</li>
 </ol>
 <p><a href="https://blog.csdn.net/kangkanglhb88008/article/details/90750074">关于概率论里的Z=max{X,Y}，min{ X,Y }分布的理解与计算方法</a></p>
+<h1 id="数字特征">数字特征</h1>
+<p><strong>连续型求期望</strong><br>
+先求密度：先用 P{U≤u} 卡出分布函数，然后求导</p>
+<p><strong>判断相关和独立</strong><br>
+X Y 不相关 ⇔ EXY = EXEY (ρ=0)<br>
+X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)</p>
 ]]></content>
     </entry>
     <entry>
@@ -249,34 +334,86 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 <li>矩阵转置行列式的值不变</li>
 <li>|kA|  = k^n |A|</li>
 </ol>
-<h1 id="特征值与特征向量">特征值与特征向量</h1>
-<p>求特征向量不能列变换</p>
-<p><strong>矩阵的迹：tr(A)</strong><br>
-迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></p>
+<h1 id="矩阵">矩阵</h1>
+<p><strong>与矩阵的秩有关的结论</strong></p>
+<ol>
+<li>A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}</li>
+<li>AT 为 A 的转置，则有 r(A) = r(AT) = r(AAT) = r(ATA)</li>
+<li>r(A + B) ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>r(AB) ≤ min{r(A),r(B)}</li>
+<li>若 A 可逆， r(AB)=r(BA)=r(B)；若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
+<li>A 为 m x n 矩阵，且 r(A) = n（列满秩），则  r(AB)= r(B)</li>
+<li>A 为 m x n 矩阵，B 为 n x s 矩阵，且 AB = O，则  r(A) + r(B) ≤ n</li>
+<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
+<li>max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>伴随矩阵 A* 的秩：0、1、n</li>
+</ol>
+<h1 id="n维向量">ｎ维向量</h1>
 <p><strong>向量组的定理辨析</strong><br>
 梳理思路：从定义 到 方程组 到 方程组的直观理解 到 系数矩阵的秩 的解释</p>
 <p>🔺向量组线性相关 ⇔ 至少存在一组非零系数使向量组为 0 ⇔<br>
-齐次方程组有非零解 ⇔ 行列式 = 0  ⇔ 未知数数量比方程组多  ⇔<br>
+齐次方程组有非零解 ⇔ 行列式 = 0 ⇔ 未知数数量比方程组多 ⇔<br>
 n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &gt; n  ⇔<br>
 系数矩阵为扁长方形则一定相关 ⇔ 有效方程组数量（向量组的秩）小于未知数个数 s（列数）</p>
+<p>向量 α 和 β 线性相关，则 β=kα</p>
 <p>🔺向量组线性无关 ⇔ 当且仅当 k1=k2=...=ks=0 向量组 = 0 ⇔<br>
-齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔<br>
-后面和上面的相反</p>
+齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔ 未知数数量比方程组少<br>
+⇔ 向量组的秩（有效方程组数量）等于列数（未知数个数），即列满秩（A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}）⇔ 向量组中至少有一个向量可由其余的向量线性表出</p>
 <p><strong>判定向量组线性无关</strong></p>
 <ol>
-<li>用定义，k1=k2=...=ks=0</li>
-<li>以列向量构成的矩阵列满秩 ⇔ 方程组只有零解<br>
-特殊情况：当矩阵为 nxn 时，行列式不等于 0<br>
-行向量组线性无关 ⇔ 行满秩<br>
+<li>用定义，k1=k2=...=ks=0，利用已知条件对式子做变换（左乘、右乘 / 相加减）</li>
+<li>方程组只有零解 ⇔ 特殊情况：当矩阵为 nxn 时，行列式 ≠ 0 ⇔ 一般情况：矩阵满秩<br>
+行向量组线性无关 ⇔ 行满秩4<br>
 列向量组线性无关 ⇔ 列满秩</li>
+<li>整体组无关，部分组无关</li>
 </ol>
+<p><strong>相关无关判定</strong><br>
+部分组相关 ⇒ 整体组相关<br>
+整体组无关 ⇒ 部分组无关</p>
+<p>缩短组无关 ⇒ 延伸组无关<br>
+延伸组相关 ⇒ 缩短组相关</p>
 <p><strong>p68 定理 3.7 理解</strong><br>
 相关的多数向量能用少数向量表出（少数向量是基底，多数向量为空间中的很多向量）<br>
 无关的少数向量能用多数向量表出（空间中的很多向量通过变换可以求出基底）</p>
+<p><strong>向量线性表出相关定理</strong></p>
+<ol>
+<li>x1α1+x2α2+....=xnαn=β 有非零解</li>
+<li>[α1,α2,...,αn,β] 方程组有解，r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)</li>
+<li>高维可以表示低维：α1,α2,...,αt 可由 β1,β2,...,βt 表出，则 r(α1,α2,...,αt) ≤ r(β1,β2,...,βt)</li>
+<li>向量组 α1,α2,...αm 线性相关 ⇔ 向量组中至少有一个向量可由其余的 m-1个向量线性表出</li>
+<li>若向量组 α1,α2,...αm 线性无关，而 β,α1,α2,...αm 线性相关，则 β 可由 α1,α2,...αm 线性表出，并且表示法唯一</li>
+<li>向量组 B 能由向量组 A 线性表出 ⇔ r(A,B)=r(A)  （B是由A表出的，所以A,B的秩还是A的秩）</li>
+</ol>
+<h1 id="线性方程组">线性方程组</h1>
+<p>化简线性方程组不能列变换</p>
+<p><strong>线性方程组有解辨析</strong><br>
+对于 m×n 矩阵，分为三种情况，m&gt;n、m&lt;n、m=n，讨论在这三种情况下 齐次 和 非齐次 解的情况<br>
+核心思想：对于 β 一列，经过变换后无法判断尾部是否为 0<br>
+🔺对于 m&gt;n，即 行&gt;列，方程组个数大于未知数个数。设系数矩阵为 A<br>
+若 r(A)=n 即列满秩 { r(A) 恒小于等于 n }，此时 n 个有效方程组，n 个未知数，则方程组 Ax=0 有唯一 0 解；Ax=β 可能有解也可能无解。有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
+<p>🔺对于 m&lt;n，即 行&lt;列，方程组个数小于未知数个数。此时 Ax=0 一定有非零解；Ax=β 可能有解也可能无解。若 r(A)=m 即 A 行满秩 { r(A) 恒小于等于 m }，r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>) 恒等于 r(A)，则一定有解；若 r(A)&lt;m，有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
+<p>🔺对于 m=n，即 行=列，方程组个数等于未知数个数。<br>
+若 r(A)=n 即 A 满秩，方程组 Ax=0 只有 0 解，此时 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>) 恒等于 r(A)，Ax=β 有唯一解；若 r(A)&lt;n，方程组 Ax=0 有无穷个非 0 解，此时对于 Ax=β ：有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
+<p>💠综上，没说明行列关系时，r(A) 推不出 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)，由 齐次 解的情况推不出 非齐次 解的情况</p>
+<h1 id="特征值与特征向量">特征值与特征向量</h1>
+<p><strong>求特征值特征向量注意的问题</strong></p>
+<ol>
+<li>带入特征值化简时可先根据秩消去一行</li>
+<li>特征向量需要加系数 k</li>
+<li>重根的特征向量是基础解系相加，如 k1α1+k2α2</li>
+</ol>
+<p><strong>实对称矩阵</strong><br>
+实对称矩阵不同特征值的特征向量一定正交<br>
+实对称矩阵同一特征值的不同特征向量线性无关，但不一定正交，<br>
+在要求求对应的正交矩阵时，要施密特正交化</p>
+<p>又因为 n 阶方阵可相似对角化 ⇔ A 有 n 个线性无关的特征向量<br>
+所以 n 阶实对称矩阵必可以相似对角化</p>
+<p><strong>矩阵的迹：tr(A)</strong><br>
+迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></p>
 <p><strong>判断矩阵相似</strong><br>
 “两个矩阵相似”的充要条件只有相似矩阵的定义本身<br>
-矩阵A与矩阵B相似 等价于 存在n阶可逆矩阵P，使得P^(-1)<em>A</em>P=B成立<br>
+矩阵 A 与矩阵 B 相似 等价于 存在 n 阶可逆矩阵 P，使得 P^(-1)<em>A</em>P=B成立<br>
 “两个矩阵相似”的必要条件有：<br>
 1、两个矩阵的秩相等<br>
 2、两个矩阵对应的行列式相等<br>
@@ -299,27 +436,23 @@ ATA=E<br>
 矩阵等价：A 经过有限次初等变换可以变成 B ⇔ r(A)=r(B)<br>
 向量组等价：两个向量组可以相互线性表出</p>
 <p>矩阵等价，其行列向量组都可以不等价；矩阵等价和行列向量组等价无关</p>
-<p><strong>与矩阵的秩有关的结论</strong></p>
-<ol>
-<li>A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}</li>
-<li>AT 为 A 的转置，则有 r(A) = r(AT) = r(AAT) = r(ATA)</li>
-<li>r(A + B) ≤ r(A,B) ≤ r(A) + r(B)</li>
-<li>r(AB) ≤ min{r(A),r(B)}</li>
-<li>若 A 可逆， r(AB)=r(BA)=r(B)；若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
-<li>A 为 m x n 矩阵，且 r(A) = n（列满秩），则  r(AB)= r(B)</li>
-<li>A 为 m x n 矩阵，B 为 n x s 矩阵，且 AB = O，则  r(A) + r(B) ≤ n</li>
-<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
-<li>max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
-<li>伴随矩阵 A* 的秩：0、1、n</li>
-</ol>
 <p><strong>矩阵的等价，相似，合同</strong><br>
 关系：<br>
 （（（相似）合同 ）等价 ）</p>
-<p>判断合同：</p>
+<p><strong>判断等价</strong><br>
+r(A)=r(B)</p>
+<p><strong>判断合同</strong></p>
 <ol>
 <li>定义法</li>
-<li>正负惯性指数相同矩阵合同</li>
+<li>正负惯性指数相同（一定在标准型中看）</li>
 </ol>
+<p><strong>判断相似</strong><br>
+相似没有判断的充要条件，只能用必要条件判断<br>
+必要条件：<br>
+特征值相同，以及特征值相同相关判定。<br>
+注意，特征值相同，矩阵不一定相似<br>
+是否均可相似对角化</p>
+<p>从上往下，判断合同必须满足等价，判断相似必须满足合同</p>
 <p><a href="https://zhuanlan.zhihu.com/p/151231495">“拨开迷雾”，如何判定矩阵相似？</a></p>
 ]]></content>
     </entry>
@@ -350,16 +483,12 @@ ATA=E<br>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[随想]]></title>
-        <id>https://jeromezjl.github.io/post/sui-xiang/</id>
-        <link href="https://jeromezjl.github.io/post/sui-xiang/">
+        <title type="html"><![CDATA[【CV】KCF目标追踪算法]]></title>
+        <id>https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
+        <link href="https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
         </link>
-        <updated>2023-06-12T08:33:20.000Z</updated>
-        <content type="html"><![CDATA[<p>网上的文章分为informative文章和查阅型文章，<br>
-informative是指深入浅出、娓娓道来<br>
-查阅型是指全面的列出来，自己可以查阅<br>
-入门应该看informative</p>
-<p>写微信小程序赚钱</p>
+        <updated>2023-06-10T11:44:24.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Augurlee/article/details/104995171">KCF论文理解与源码解析</a></p>
 ]]></content>
     </entry>
     <entry>
