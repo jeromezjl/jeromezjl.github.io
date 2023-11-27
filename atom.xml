@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jeromezjl.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Jerome</title>
-    <updated>2023-11-12T13:32:21.919Z</updated>
+    <updated>2023-11-27T02:54:00.256Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jeromezjl.github.io"/>
-    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
-    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
         <title type="html"><![CDATA[【考研】英语作文]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/">
+        <id>http://localhost:4000/post/kao-yan-ying-yu-zuo-wen/</id>
+        <link href="http://localhost:4000/post/kao-yan-ying-yu-zuo-wen/">
         </link>
         <updated>2023-10-11T13:47:29.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/liu-ji/">六级整理的作文</a></p>
@@ -66,13 +66,14 @@ starved of 缺乏、挨饿</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】高数]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-gao-shu/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-gao-shu/">
+        <id>http://localhost:4000/post/kao-yan-gao-shu/</id>
+        <link href="http://localhost:4000/post/kao-yan-gao-shu/">
         </link>
         <updated>2023-08-11T10:17:37.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【考研441分】24考研数学全年规划！B站最全！</a><br>
 <a href="https://zhuanlan.zhihu.com/p/390928056">考生必记：三角函数公式汇总+记忆（没有比这更全）</a><br>
 <a href="https://www.desmos.com/calculator?lang=zh-CN">在线函数作图</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/99945521">10幅图帮助理解拉格朗日乘数法的原理</a></p>
 <p><strong>数学竞赛小 tips</strong></p>
 <p>两项形式相似想夹逼，放缩，最大最小值</p>
 <p>真    题    嗅    探<br>
@@ -211,18 +212,40 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 <li>只要对 x 的 n 次方进行改变的时候，就要判断 n 从 0 还是 1 开始取</li>
 </ol>
 <h1 id="曲线曲面积分">曲线曲面积分</h1>
-<p><strong>二型面积分</strong><br>
-注意：只有用高斯公式时才需要考虑曲面是否封闭，投影法不需要<br>
-投影法可以考虑的点：</p>
+<p><a href="https://blog.csdn.net/weixin_47187147/article/details/124933148?spm=1001.2014.3001.5506">各类重积分 | 二重积分、三重积分、线面积分 —— 大总结</a><br>
+<strong>是否可以带入边界方程</strong><br>
+曲线曲面积分可直接带入边界方程，而二重、三重积分不可；使用格林、斯托克公式将线面积分化为二三重积分后也不可带入</p>
+<p><strong>对称性、奇偶性</strong><br>
+一型线面积分都有奇偶性、轮换对称性；二型线面无<br>
+🔺判断曲线对称性的小方法<br>
+将曲线线方程中的 x 换 -x 后，方程不变，则该曲线关于 x=0（即 y 轴）对称<br>
+当然最靠谱的是配方，然后看相对标准曲线的偏移<br>
+<strong>一型线积分</strong><br>
+得到的是弧长 / 周长；有对称性，可以直接带入边界方程<br>
+<strong>二型线积分</strong>（今年概率大）<br>
+对线坐标的积分，无对称性，</p>
 <ol>
+<li>x y 的参数式，直接计算（考的情况很少）</li>
+<li>补线用格林（必须封闭）且是：∂Q/∂x - ∂P/∂y （别反了）
+<ol>
+<li>面积在线左侧为正</li>
+<li>区域内点必须有定义，否则单独圈出来处理</li>
+<li>线积分与路径无关：∂Q/∂x =∂P/∂y<br>
+<strong>一型面积分</strong><br>
+得到曲面面积；对称性<br>
+<strong>二型面积分</strong>（去年考的这个）<br>
+注意：只有用高斯公式时才需要考虑曲面是否封闭，投影法不需要<br>
+投影法可以考虑的点：</li>
+</ol>
+</li>
 <li>若投到面上为一条线，则积分为 0</li>
 </ol>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[【踩坑】WIFI连不上——网络适配器错误]]></title>
-        <id>https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
-        <link href="https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
+        <id>http://localhost:4000/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
+        <link href="http://localhost:4000/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
         </link>
         <updated>2023-08-10T04:01:55.000Z</updated>
         <content type="html"><![CDATA[<p>总是出现 WIFI 图标消失的问题，原因是网卡被禁用，处理方式是去 Intel 官网下载符合型号的官方驱动，进行修复。</p>
@@ -234,8 +257,8 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
     </entry>
     <entry>
         <title type="html"><![CDATA[微信小程序开发]]></title>
-        <id>https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
-        <link href="https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/">
+        <id>http://localhost:4000/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
+        <link href="http://localhost:4000/post/wei-xin-xiao-cheng-xu-kai-fa/">
         </link>
         <updated>2023-08-06T10:01:14.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jackson-yqj/p/9843696.html">微信小程序开发的基本流程</a><br>
@@ -245,8 +268,8 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】信息整合]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/">
+        <id>http://localhost:4000/post/kao-yan-xin-xi-zheng-he/</id>
+        <link href="http://localhost:4000/post/kao-yan-xin-xi-zheng-he/">
         </link>
         <updated>2023-07-26T11:34:41.000Z</updated>
         <content type="html"><![CDATA[<h1 id="北邮">北邮</h1>
@@ -271,18 +294,19 @@ https://bbs.byr.cn/#!article/StudyShare/203152</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】概率论]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/">
+        <id>http://localhost:4000/post/kao-yan-gai-lu-lun/</id>
+        <link href="http://localhost:4000/post/kao-yan-gai-lu-lun/">
         </link>
         <updated>2023-07-14T04:15:37.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>全概率公式做题步骤</strong></p>
+        <content type="html"><![CDATA[<p>概率为 0 的事件与任意事件相互独立<br>
+<strong>全概率公式做题步骤</strong></p>
 <ol>
 <li>确定要求的事件A</li>
 <li>找完备事件组，列出各种情况Bi(i=1,2,3...)</li>
 <li>在情况Bi下，事件A发生的概率，P(A) = ∑P(Bi)P(A|Bi) = ∑P(ABi)</li>
 </ol>
 <p>注意，事件A零碎分布于事件B，所以需要将B的各种情况合起来计算<br>
-<img src="https://jeromezjl.github.io/post-images/1689308727900.png" alt="" loading="lazy"></p>
+<img src="http://localhost:4000/post-images/1689308727900.png" alt="" loading="lazy"></p>
 <p>将自然语言和数学语言相互转化，找到对应的值</p>
 <h1 id="分布函数">分布函数</h1>
 <p>分布函数端点值的辨析：<br>
@@ -293,8 +317,10 @@ https://bbs.byr.cn/#!article/StudyShare/203152</p>
 <p>分布函数连续 ⇔ 连续型随机变量<br>
 分布函数必须右连续，只是针对点而言，右连续的函数也可以不是连续函数</p>
 <h1 id="联合概率">联合概率</h1>
-<p><strong>用联合概率密度求概率</strong><br>
-当作二重积分算。比如 P{X+Y&gt;1} ，选定一个要积的变量，比如x，则 y&gt;1-x<br>
+<p>注意，已知边缘分布，不能推得联合分布，当且仅当边缘分布相互独立的时候，可以通过相乘来确定联合分布</p>
+<p><strong>用联合概率密度求 Z(x,y)</strong><br>
+当作二重积分算，积分区域是 xy 的范围，被积函数是 f(x,y)，要移动的图像是 P{} 内的函数<br>
+比如 P{X+Y&gt;1} ，选定一个要积的变量，比如x，则 y&gt;1-x<br>
 作图，在积分区域里积分，得到概率值。</p>
 <p>🔺注意：不管积分区域是什么样，也就是 P{} 括号内的函数是什么样，和联合分布函数无关。联合分布函数都是 f(x, y) （被积函数）</p>
 <p><strong>求 z = g(x, y) 的分布函数</strong></p>
@@ -318,8 +344,8 @@ X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】线性代数]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/">
+        <id>http://localhost:4000/post/kao-yan-xian-xing-dai-shu/</id>
+        <link href="http://localhost:4000/post/kao-yan-xian-xing-dai-shu/">
         </link>
         <updated>2023-07-10T13:50:14.000Z</updated>
         <content type="html"><![CDATA[<h1 id="行列式">行列式</h1>
@@ -363,7 +389,7 @@ n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &g
 <ol>
 <li>用定义，k1=k2=...=ks=0，利用已知条件对式子做变换（左乘、右乘 / 相加减）</li>
 <li>方程组只有零解 ⇔ 特殊情况：当矩阵为 nxn 时，行列式 ≠ 0 ⇔ 一般情况：矩阵满秩<br>
-行向量组线性无关 ⇔ 行满秩4<br>
+行向量组线性无关 ⇔ 行满秩<br>
 列向量组线性无关 ⇔ 列满秩</li>
 <li>整体组无关，部分组无关</li>
 </ol>
@@ -382,7 +408,7 @@ n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &g
 <li>高维可以表示低维：α1,α2,...,αt 可由 β1,β2,...,βt 表出，则 r(α1,α2,...,αt) ≤ r(β1,β2,...,βt)</li>
 <li>向量组 α1,α2,...αm 线性相关 ⇔ 向量组中至少有一个向量可由其余的 m-1个向量线性表出</li>
 <li>若向量组 α1,α2,...αm 线性无关，而 β,α1,α2,...αm 线性相关，则 β 可由 α1,α2,...αm 线性表出，并且表示法唯一</li>
-<li>向量组 B 能由向量组 A 线性表出 ⇔ r(A,B)=r(A)  （B是由A表出的，所以A,B的秩还是A的秩）</li>
+<li>向量组 B 能由向量组 A 线性表出 ⇔ r(A,B)=r(A)  （B是由A表出的，所以A,B的秩还是A的秩 / r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)）</li>
 </ol>
 <h1 id="线性方程组">线性方程组</h1>
 <p>化简线性方程组不能列变换</p>
@@ -427,6 +453,9 @@ n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &g
 <li>求特征值，不相等——&gt;不相似</li>
 <li>求特征向量的个数（秩），不相等——&gt;不相似</li>
 </ol>
+<p><strong>判断可相似对角化</strong><br>
+充要条件只需记“n 个特征值对应 n 个线性无关的特征向量”<br>
+注意，任何矩阵，不同特征值对应的特征向量线性无关</p>
 <p><strong>正交矩阵</strong><br>
 正交矩阵（Orthogonal Matrix）是指其转置等于其逆的矩阵。<br>
 ATA=E<br>
@@ -458,8 +487,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【摄影】人像思路]]></title>
-        <id>https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/</id>
-        <link href="https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/">
+        <id>http://localhost:4000/post/she-ying-ren-xiang-si-lu/</id>
+        <link href="http://localhost:4000/post/she-ying-ren-xiang-si-lu/">
         </link>
         <updated>2023-06-15T07:08:19.000Z</updated>
         <content type="html"><![CDATA[<p>最近拍毕业照，总结一下毕业照思路和注意事项</p>
@@ -484,8 +513,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【CV】KCF目标追踪算法]]></title>
-        <id>https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
-        <link href="https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
+        <id>http://localhost:4000/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
+        <link href="http://localhost:4000/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
         </link>
         <updated>2023-06-10T11:44:24.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Augurlee/article/details/104995171">KCF论文理解与源码解析</a></p>
@@ -493,8 +522,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[正则表达式]]></title>
-        <id>https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/</id>
-        <link href="https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/">
+        <id>http://localhost:4000/post/zheng-ze-biao-da-shi/</id>
+        <link href="http://localhost:4000/post/zheng-ze-biao-da-shi/">
         </link>
         <updated>2023-06-09T13:48:01.000Z</updated>
         <content type="html"><![CDATA[<h1 id="测试">测试</h1>
