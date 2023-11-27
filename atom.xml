@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-11-27T02:54:00.256Z</updated>
+    <updated>2023-11-27T14:53:26.895Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://jeromezjl.github.io"/>
+    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
+    <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
         <title type="html"><![CDATA[【考研】英语作文]]></title>
-        <id>http://localhost:4000/post/kao-yan-ying-yu-zuo-wen/</id>
-        <link href="http://localhost:4000/post/kao-yan-ying-yu-zuo-wen/">
+        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/">
         </link>
         <updated>2023-10-11T13:47:29.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/liu-ji/">六级整理的作文</a></p>
@@ -66,8 +66,8 @@ starved of 缺乏、挨饿</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】高数]]></title>
-        <id>http://localhost:4000/post/kao-yan-gao-shu/</id>
-        <link href="http://localhost:4000/post/kao-yan-gao-shu/">
+        <id>https://jeromezjl.github.io/post/kao-yan-gao-shu/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-gao-shu/">
         </link>
         <updated>2023-08-11T10:17:37.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【考研441分】24考研数学全年规划！B站最全！</a><br>
@@ -244,8 +244,8 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
     </entry>
     <entry>
         <title type="html"><![CDATA[【踩坑】WIFI连不上——网络适配器错误]]></title>
-        <id>http://localhost:4000/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
-        <link href="http://localhost:4000/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
+        <id>https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
+        <link href="https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
         </link>
         <updated>2023-08-10T04:01:55.000Z</updated>
         <content type="html"><![CDATA[<p>总是出现 WIFI 图标消失的问题，原因是网卡被禁用，处理方式是去 Intel 官网下载符合型号的官方驱动，进行修复。</p>
@@ -257,8 +257,8 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
     </entry>
     <entry>
         <title type="html"><![CDATA[微信小程序开发]]></title>
-        <id>http://localhost:4000/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
-        <link href="http://localhost:4000/post/wei-xin-xiao-cheng-xu-kai-fa/">
+        <id>https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
+        <link href="https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/">
         </link>
         <updated>2023-08-06T10:01:14.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jackson-yqj/p/9843696.html">微信小程序开发的基本流程</a><br>
@@ -268,8 +268,8 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】信息整合]]></title>
-        <id>http://localhost:4000/post/kao-yan-xin-xi-zheng-he/</id>
-        <link href="http://localhost:4000/post/kao-yan-xin-xi-zheng-he/">
+        <id>https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/">
         </link>
         <updated>2023-07-26T11:34:41.000Z</updated>
         <content type="html"><![CDATA[<h1 id="北邮">北邮</h1>
@@ -294,8 +294,8 @@ https://bbs.byr.cn/#!article/StudyShare/203152</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】概率论]]></title>
-        <id>http://localhost:4000/post/kao-yan-gai-lu-lun/</id>
-        <link href="http://localhost:4000/post/kao-yan-gai-lu-lun/">
+        <id>https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/">
         </link>
         <updated>2023-07-14T04:15:37.000Z</updated>
         <content type="html"><![CDATA[<p>概率为 0 的事件与任意事件相互独立<br>
@@ -306,7 +306,7 @@ https://bbs.byr.cn/#!article/StudyShare/203152</p>
 <li>在情况Bi下，事件A发生的概率，P(A) = ∑P(Bi)P(A|Bi) = ∑P(ABi)</li>
 </ol>
 <p>注意，事件A零碎分布于事件B，所以需要将B的各种情况合起来计算<br>
-<img src="http://localhost:4000/post-images/1689308727900.png" alt="" loading="lazy"></p>
+<img src="https://jeromezjl.github.io/post-images/1689308727900.png" alt="" loading="lazy"></p>
 <p>将自然语言和数学语言相互转化，找到对应的值</p>
 <h1 id="分布函数">分布函数</h1>
 <p>分布函数端点值的辨析：<br>
@@ -344,8 +344,8 @@ X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【考研】线性代数]]></title>
-        <id>http://localhost:4000/post/kao-yan-xian-xing-dai-shu/</id>
-        <link href="http://localhost:4000/post/kao-yan-xian-xing-dai-shu/">
+        <id>https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/">
         </link>
         <updated>2023-07-10T13:50:14.000Z</updated>
         <content type="html"><![CDATA[<h1 id="行列式">行列式</h1>
@@ -487,8 +487,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【摄影】人像思路]]></title>
-        <id>http://localhost:4000/post/she-ying-ren-xiang-si-lu/</id>
-        <link href="http://localhost:4000/post/she-ying-ren-xiang-si-lu/">
+        <id>https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/</id>
+        <link href="https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/">
         </link>
         <updated>2023-06-15T07:08:19.000Z</updated>
         <content type="html"><![CDATA[<p>最近拍毕业照，总结一下毕业照思路和注意事项</p>
@@ -513,8 +513,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【CV】KCF目标追踪算法]]></title>
-        <id>http://localhost:4000/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
-        <link href="http://localhost:4000/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
+        <id>https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
+        <link href="https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
         </link>
         <updated>2023-06-10T11:44:24.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Augurlee/article/details/104995171">KCF论文理解与源码解析</a></p>
@@ -522,8 +522,8 @@ r(A)=r(B)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[正则表达式]]></title>
-        <id>http://localhost:4000/post/zheng-ze-biao-da-shi/</id>
-        <link href="http://localhost:4000/post/zheng-ze-biao-da-shi/">
+        <id>https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/</id>
+        <link href="https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/">
         </link>
         <updated>2023-06-09T13:48:01.000Z</updated>
         <content type="html"><![CDATA[<h1 id="测试">测试</h1>
