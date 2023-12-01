@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-11-27T14:53:26.895Z</updated>
+    <updated>2023-12-01T14:50:40.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【考研】英语单词和词组]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/">
+        </link>
+        <updated>2023-11-29T13:50:01.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="单词">单词</h1>
+<p>measurement 测量<br>
+lean 倾斜、倚靠、精瘦<br>
+likewise 同样的<br>
+absently 心不在焉地<br>
+concede admit acknowledge confess allow grant 让步、承认<br>
+sitter 摆姿势让人画像的人<br>
+miserably 痛苦地<br>
+stiff、stiffly 僵硬的<br>
+notoriously 臭名昭著、众所周知<br>
+copper 铜<br>
+limbs 肢体、四肢<br>
+grin 露齿笑<br>
+contemplate 考虑、沉思 too...to contemplate 太...去考虑（无法想象）<br>
+notion 概念、观念 the notion is that 意思是说/人们认为</p>
+<h1 id="词组">词组</h1>
+<p>over a six-year period 在六年的时间里<br>
+be superior to 优于<br>
+be resistant to 不受损害的<br>
+increase the level 提高水平</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【考研】英语作文]]></title>
         <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/</id>
@@ -52,7 +80,14 @@ contribute to 是导致...的原因<br>
 complete one's work 完成工作<br>
 joint efforts 共同努力<br>
 I am deeply obliged for your hard work 我十分感谢您的努力</p>
-<p><strong>背单词遇到的词组</strong><br>
+<p><strong>可用词组</strong><br>
+表达喜欢<br>
+students who share a love for English 共同热爱<br>
+be keen on sth.<br>
+have a profound affection  有深厚的感情/浓厚的兴趣<br>
+be passionate about</p>
+<p>I cordially invite you to join us 我诚挚地邀请您来参加我们的活动<br>
+on behalf of<br>
 compensate for / compensate sb. for sth. 弥补、补偿<br>
 urge sb to do 敦促某人做<br>
 guarantee sb. sth. 向某人保证某事<br>
@@ -61,7 +96,8 @@ government grant 政府拨款<br>
 take for granted 认为...理所应当<br>
 justify doing sth. 证明做...（是正确的）<br>
 judge by/from 从...判定<br>
-starved of 缺乏、挨饿</p>
+starved of 缺乏、挨饿<br>
+over a six-year period 在六年的时间里</p>
 ]]></content>
     </entry>
     <entry>
@@ -200,6 +236,23 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 <p>补线用格林：补一条路径，形成封闭曲线，再把补的减掉<br>
 注意格林公式使用条件，P、Q 在封闭曲线上有连续一阶偏导。若在某点（比如0点）没有定义</p>
 <h1 id="无穷级数">无穷级数</h1>
+<p><a href="https://www.bilibili.com/video/BV1Va411V7bm/?is_story_h5=false&amp;p=1&amp;share_from=ugc&amp;share_plat=ios&amp;share_session_id=A7B70058-1BD8-42A6-9025-7B71CDEE01A4&amp;share_tag=s_i&amp;unique_k=sOfyyCn&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">级数选择题中的反例汇总（不只是反例，更是思想方法！）</a><br>
+收敛+发散 必发散<br>
+收敛+收敛 必收敛<br>
+都发散，和敛散性不定，比如两数列恰好抵消，则为收敛</p>
+<p>加括号会提高级数收敛的可能性<br>
+收敛级数加括号仍收敛<br>
+若级数加括号收敛，则原级数不一定收敛<br>
+加括号后发散，原级数一定发散<br>
+原因：加括号可能抵消一些项，可能会使级数收敛</p>
+<p>审敛法只是充分条件，非必要条件，且只适用于正项级数<br>
+比如当比值/根值等于1时，就判断不出来了</p>
+<p>加绝对值会提高发散的可能性，由于都变为正项，整体值变大<br>
+正项级数变为交错级数，提高收敛可能性<br>
+提高阶数，提高收敛可能性</p>
+<p>条件收敛也是收敛，指的是级数本身收敛，但加了绝对值不收敛<br>
+绝对收敛是，加了绝对值都收敛，那么原级数更收敛，二者都是收敛<br>
+落脚点都在原级数</p>
 <p><strong>和函数计算</strong></p>
 <ol>
 <li>求收敛域，也就是和函数的定义域（因为逐项可导、逐项可积都是在开区间上成立）</li>
@@ -518,25 +571,6 @@ r(A)=r(B)</p>
         </link>
         <updated>2023-06-10T11:44:24.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Augurlee/article/details/104995171">KCF论文理解与源码解析</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[正则表达式]]></title>
-        <id>https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/</id>
-        <link href="https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/">
-        </link>
-        <updated>2023-06-09T13:48:01.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="测试">测试</h1>
-<p><a href="https://c.runoob.com/front-end/854/">在线测试工具1</a><br>
-注意这个工具的表示：<br>
-如果显示匹配部分都是粉色的，则只有这一种匹配方式；<br>
-如果显示匹配部分粉色蓝色交替，则表示可以有单个粉色、蓝色这种匹配方式</p>
-<p><a href="https://regexr.com/">RegExr -- 正则表达式在线测试工具</a></p>
-<h1 id="学习">学习</h1>
-<p>忘了的时候用这个过一遍：<br>
-<a href="https://regexlearn.com/zh-cn/learn/regex101">正则表达式学习网站</a></p>
-<p>当作字典查找：<br>
-<a href="https://www.runoob.com/regexp/regexp-tutorial.html">正则表达式 - 教程</a></p>
 ]]></content>
     </entry>
 </feed>
