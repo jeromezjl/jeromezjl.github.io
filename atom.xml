@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-12-05T14:53:02.710Z</updated>
+    <updated>2023-12-13T12:30:00.536Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,12 +11,39 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[【考研】政治分析题]]></title>
+        <id>https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/</id>
+        <link href="https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/">
+        </link>
+        <updated>2023-12-06T02:10:48.000Z</updated>
+        <content type="html"><![CDATA[<p>实践</p>
+<p>分段分点，整洁清晰，用 ①②③<br>
+写满，写的愈多越好<br>
+可以把材料用自己的话组织一遍，抄个别关键词，不能整体抄<br>
+总分总结构，先总写点题，然后概括一下材料，引出自己背诵的内容</p>
+<p>抄材料方法：</p>
+<ol>
+<li>优先抄题干中出现的关键字附近的话</li>
+<li>文学性表达不抄，普通人讲的话不抄，数字不抄</li>
+<li>改写：理解材料句子意思，用自己的话复述，可以同义替换，改写句式、扩句</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[【考研】英语单词和词组]]></title>
         <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/</id>
         <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/">
         </link>
         <updated>2023-11-29T13:50:01.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="单词">单词</h1>
+        <content type="html"><![CDATA[<p><strong>时间安排</strong><br>
+下午 14：00~17：00 考试，三个小时<br>
+小作文：15min<br>
+大作文：35min<br>
+阅读：70min（17分钟一篇）<br>
+新题型：20min<br>
+翻译：20min<br>
+完形填空：20min</p>
+<h1 id="单词">单词</h1>
 <p>measurement 测量<br>
 lean 倾斜、倚靠、精瘦<br>
 likewise 同样的<br>
@@ -30,7 +57,13 @@ copper 铜<br>
 limbs 肢体、四肢<br>
 grin 露齿笑<br>
 contemplate 考虑、沉思 too...to contemplate 太...去考虑（无法想象）<br>
-notion 概念、观念 the notion is that 意思是说/人们认为</p>
+notion 概念、观念 the notion is that 意思是说/人们认为<br>
+compell 强迫<br>
+privilege 给特权<br>
+intensify 强化<br>
+crisp 脆的<br>
+crust 皮，外壳<br>
+mandate 授权</p>
 <h1 id="词组">词组</h1>
 <p>over a six-year period 在六年的时间里<br>
 be superior to 优于<br>
@@ -40,7 +73,14 @@ government grant 政府拨款<br>
 take for granted 认为...理所应当<br>
 justify doing sth. 证明做...（是正确的）<br>
 judge by/from 从...判定<br>
-starved of 缺乏、挨饿</p>
+starved of 缺乏、挨饿<br>
+at high temperature 在高温下<br>
+come across 遇到、给人留下印象</p>
+<h1 id="长难句">长难句</h1>
+<p>its campaign risks coming across as being pushy.<br>
+risk 是宾语，有...的风险<br>
+coming across as being pushy 给人留下咄咄逼人的印象（遇到被认为咄咄逼人）come across 有给人留下印象的意思<br>
+译为，它的活动有可能给人留下咄咄逼人的印象</p>
 ]]></content>
     </entry>
     <entry>
@@ -80,18 +120,21 @@ Yours sincerely</p>
 标题</p>
 <p>the purpose of sth. / sth. aims(targets) to 目的是<br>
 use their best endeavors to do 尽最大努力做<br>
-attach importance to sth. 认为...很重要<br>
-contribute to 是导致...的原因<br>
+attach emphasis to sth. 认为...很重要<br>
+utmost emphasis should be attached to...<br>
+contribute to / induce 是导致...的原因<br>
 complete one's work 完成工作<br>
 joint efforts 共同努力<br>
 I am deeply obliged for your hard work 我十分感谢您的努力</p>
-<p><strong>可用单词</strong><br>
-vigorous 有活力的<br>
+<h1 id="可用单词">可用单词</h1>
+<p>vigorous 有活力的<br>
+tremendous 巨大的<br>
 eminent 优秀的<br>
+eminently = exceedingly 非常<br>
 advantageous 有利的，有好处的<br>
 miraculous 奇迹般的<br>
 gorgeous 美丽的<br>
-pervasive 普遍的<br>
+pervasive = universal 普遍的<br>
 enhance = promote = strengthen = optimize 加强、优化、促进<br>
 deal with = resolve sth. = tackle sth. = cope with 解决，应对，处理<br>
 cultivate = foster 培养<br>
@@ -103,18 +146,33 @@ adequate 充足<br>
 rational 合理的<br>
 feasible 可行的<br>
 considerable 相当多的<br>
-critical / essential 至关重要的<br>
+critical / essential / be extremely vital to us 至关重要的<br>
 defect 缺点<br>
-eliminate 消除</p>
-<p>demonstrate / illustrate “说明，表明”，用在图表作文中替代show，reveal等单词。<br>
-depict / portray “描述，描绘”，在漫画作文中替代describe</p>
-<p><strong>可用词组</strong><br>
-I'm writing to request that 我写信恳求（t不双写）<br>
+eliminate 消除<br>
+therefore = hence 因此<br>
+demonstrate / illustrate “说明，表明”，用在图表作文中替代show，reveal等单词<br>
+depict / portray “描述，描绘”，在漫画作文中替代describe<br>
+punctuality 准时 / punctually 准时地<br>
+prestigious 有声望的<br>
+hospitality 热情好客 / hospitable 热情好客的<br>
+imperative 迫切的<br>
+magnificent = splendid 壮丽的<br>
+innumerable 无数的<br>
+deleterious 有害的<br>
+pursue 追求<br>
+primary 首要的<br>
+academic 学术的<br>
+indispensable 不可或缺的<br>
+severely 严重地</p>
+<h1 id="可用词组">可用词组</h1>
+<p>I'm writing to request that 我写信恳求（t不双写）<br>
+I have several request<br>
 表达喜欢{<br>
 students who share a love for English 共同热爱<br>
 be keen on sth.<br>
 have a profound affection  有深厚的感情/浓厚的兴趣<br>
 be passionate about<br>
+have a peculiar interest in 对...有特殊的兴趣<br>
 }<br>
 the Internet has become an increasingly important tool for students<br>
 Not only do professors require us to... but ... (前后连接复杂句，do 起强调作用)<br>
@@ -148,10 +206,12 @@ Some people assert that nothing is impossible.<br>
 stimulate sb. to do sth. 激励某人做<br>
 the merits of sth. 某事的好处<br>
 be saturated with 充斥着<br>
-strive for = spare no efforts for 努力做<br>
+strive for = spare no efforts for = endeavor to do 努力做<br>
 embark on sth. 开始做 sth.<br>
 in contemporary society 在当代社会<br>
 a multitude of = a vast amount of 大量<br>
+there are numerous ways of doing 有许多做...的方法<br>
+the majority of 大多数<br>
 an alternative is that… 作为替代的是...<br>
 cannot afford to 不应当做<br>
 attach importance to sth 强调...<br>
@@ -159,10 +219,112 @@ obstacle 阻碍<br>
 in such circumstances 在这样的情况下<br>
 in contrast = conversely 相反地<br>
 employ the policy of sth 采取...政策<br>
-It is generally established that 众所周知</p>
-<p>In addition 无所谓连接<br>
+It is generally established that 众所周知<br>
+enduring classic 经久不衰的经典<br>
+the inner world 内心世界<br>
+I am referring to that 我指的是<br>
+have a fascination with 对...感兴趣<br>
+a range of 一系列<br>
+be involved in 参加<br>
+extracurricular activities 课外活动<br>
+interpersonal relations 人际关系<br>
+i regret to tell you that 我很遗憾的告诉你<br>
+particular details 具体细节<br>
+one of the most magnificent tourist destination in China<br>
+China boasts of a splendid history 中国有辉煌的历史<br>
+In addition 无所谓连接<br>
 What's more 最好连着前面 比如 Initially，<br>
-Further more 最好用在最后，前面必须连</p>
+Further more 最好用在最后，前面必须连<br>
+be ascribed to 归因于<br>
+If... ever perished from..., it would be a tragedy of immeasurable proportions 如果... 从... 消失，那将是不可估量的悲剧<br>
+indulge in / indulgence in 沉浸在<br>
+derive from 源于<br>
+mental fitness 心理健康<br>
+enjoy striking popularity among / be in vogue 流行<br>
+demonstrate a social phenomena of 反映了...的社会现象<br>
+briefly speaking 简言之<br>
+provoke heated debates 引起激烈讨论<br>
+double-edged sword<br>
+exert profound influence on 产生深远影响<br>
+bridge / narrow the gap between<br>
+be adopted to 被采纳用于<br>
+repent（doing）后悔做<br>
+it is imperative for us to take drastic measures. 当务之急是采取严厉措施<br>
+enhance the public awareness 提高公众意识<br>
+a combination of ... 的结合<br>
+this tendency is rather disturbing 这种倾向很令人担忧</p>
+<p><strong>道歉信</strong><br>
+I have recently been diagnosed with a serious cold<br>
+If possible, i would like to postpone the interview to another day later in the week<br>
+I sincerely apologize for any inconvenience this may cause you (may have caused)<br>
+Please excuse me for not being able to inform you of my situation sooner.</p>
+<p>as a... , i am severely disappointed to find that the service you have recently provided us is far from satisfactory<br>
+i am writing to draw you attention to sth.<br>
+take...into serious concideration</p>
+<p><strong>感谢信</strong><br>
+comforting<br>
+Benevolence = kind deed<br>
+I am writing this letter to express my heartfelt gratitude to you for the meticulous care you provided during my time in the hospital.<br>
+The comforting scenes always remind me of the period you took such good care of me.<br>
+If it had not been for your timely assistance in giving me first aid, I fear that the consequences might have been very serious<br>
+What impressed me the most was<br>
+Your appearance has uplifted me/cheered me up<br>
+I would like to extend my thanks once again<br>
+Your kind deeds are like pearls that will forever be treasured in my mind.</p>
+<p><strong>求职、申请</strong><br>
+I am writing to apply for the job of doing / your recently advertised position for a teacher<br>
+I would like to apply for admission to...<br>
+I hold the belief that I am well qualified for this position for several reasons.<br>
+Enclosed with this note is my resume, which details my previous academic qualifications and relevant work experiences.<br>
+the experiences make me a perfect candidate<br>
+cheerful personality<br>
+If you could grant me an interview, i would appreciate it.<br>
+at your earliest convenience</p>
+<p><strong>活动</strong><br>
+To enhance the ability and enrich after-class activities<br>
+which is to be held on...<br>
+Those who have a fascination with ... are welcome to participate in this activity<br>
+If the would-be candidates have any questions, please do not hesitate to contact us<br>
+this club serves as a platform to demonstrate your marvelous abilities<br>
+are eminently beneficial in multiple regards 在多方面都很有益处<br>
+improve your level of proficiency 提高你的熟练程度<br>
+A good command of English will enable you to get an edge over your peers<br>
+好的英语水平让你比同龄人更胜一筹</p>
+<p><strong>纪要</strong><br>
+during the last meeting，the following issues were addressed.<br>
+If you find any errors or omissions, please contact me</p>
+<p><strong>询问信</strong><br>
+I am writing to seek your assistance to help...<br>
+I hope you can kindly furnish me with detailed information regarding the above-mentioned questions.<br>
+I wonder if it would be convenient for you to do...</p>
+<h1 id="大作文">大作文</h1>
+<p>第一段：不用提出论点，只描述即可<br>
+总体描述画面<br>
+挖掘细节</p>
+<p>第二段<br>
+主题句，点题，引出下文<br>
+论证+论据{<br>
+背景、事实（现象）、反方观点、原因、结果<br>
+因果、分类、举例<br>
+}<br>
+总结扣题</p>
+<p>第三段<br>
+结论<br>
+两点建议/评论<br>
+展望</p>
+<h1 id="大作文积累">大作文积累</h1>
+<p><strong>第一段</strong><br>
+As is vividly depicted in the caricature<br>
+The caricature depicts ....<br>
+the caption indicates that... 文字说明...<br>
+the caricature is to illustrate that<br>
+diagram 图表<br>
+excerpt 选段<br>
+the author assumes that</p>
+<p><strong>第二段</strong><br>
+I cling to the idea that 我坚持... 的观点</p>
+<p><strong>第三段</strong><br>
+To sum up</p>
 ]]></content>
     </entry>
     <entry>
@@ -329,6 +491,7 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<
 <li>已知 S'(x) 求 S(x) 需要使用变上限积分  ∫x S(t)dt</li>
 <li>只要对 x 的 n 次方进行改变的时候，就要判断 n 从 0 还是 1 开始取</li>
 </ol>
+<p><a href="https://www.bilibili.com/video/BV1eb4y1U7fP/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">如何选择恰当的××（区域），使得你的××（积分）最大！</a></p>
 <h1 id="曲线曲面积分">曲线曲面积分</h1>
 <p><a href="https://blog.csdn.net/weixin_47187147/article/details/124933148?spm=1001.2014.3001.5506">各类重积分 | 二重积分、三重积分、线面积分 —— 大总结</a><br>
 <strong>是否可以带入边界方程</strong><br>
@@ -602,8 +765,10 @@ A=-AT</p>
 r(A)=r(B)</p>
 <p><strong>判断合同</strong></p>
 <ol>
-<li>定义法</li>
-<li>正负惯性指数相同（一定在标准型中看）</li>
+<li>充要条件：CTAC=B；非对称只能找是否有一个对称阵，一般题目给的都不难找</li>
+<li>两个实对称矩阵合同的充要条件才是有相同的正负惯性指数（在标准型中看）<br>
+由于 CTAC=B，若A为实对称，则B也为实对称，实对称矩阵的合同矩阵一定也对称<br>
+非对称一定不和对称合同</li>
 </ol>
 <p><strong>判断相似</strong><br>
 相似没有判断的充要条件，只能用必要条件判断<br>
@@ -647,15 +812,6 @@ r(A)=r(B)</p>
 <li>一个场景拍摄结束，要给客户看一下构图、神态等等是否满意，否则如果结束后客户不满意就不好搞了。退钱自己有损失，不退钱口碑会有损失。</li>
 <li>多人讲究互动感，构建一个场景让大家互动起来，才自然融洽</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【CV】KCF目标追踪算法]]></title>
-        <id>https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/</id>
-        <link href="https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/">
-        </link>
-        <updated>2023-06-10T11:44:24.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Augurlee/article/details/104995171">KCF论文理解与源码解析</a></p>
 ]]></content>
     </entry>
 </feed>

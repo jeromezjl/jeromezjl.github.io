@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>【考研】数据结构 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1701787937975">
+<link rel="shortcut icon" href="/favicon.ico?v=1702470591203">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -226,7 +226,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">99</span>
+        <span class="site-item-stat-count">100</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -281,6 +281,7 @@
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
 <li><a href="#think-like-a-computer">Think like A Computer</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81%E9%A2%98%E6%B1%87%E6%80%BB">基本代码题汇总</a></li>
 <li><a href="#%E8%82%96%E6%B3%A2-ppt">肖波 PPT</a></li>
 <li><a href="#%E7%BB%AA%E8%AE%BA">绪论</a></li>
 <li><a href="#%E7%BA%BF%E6%80%A7%E8%A1%A8">线性表</a></li>
@@ -569,7 +570,7 @@
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >18<span class="language" data-lan="minute"
+        >19<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -578,7 +579,7 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >4964<span class="pc-show language" data-lan="words"
+        >5251<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
@@ -599,16 +600,31 @@
 写完代码一定读一遍，看看有无语法错误等<br>
 复习代码题时，要熟知代码逻辑，以及临界点 / 判断条件，一定要记住条件是什么，灵活应对<br>
 做代码题时，先自己写一个例子放在旁边，手动实现一遍，然后结合储存的数据结构，对照着还原代码</p>
+<h1 id="基本代码题汇总">基本代码题汇总</h1>
+<p>二叉树创建递归非递归<br>
+二叉树前序中序后序，递归非递归<br>
+二叉树层序<br>
+二叉树结点总数、深度、叶子结点总数<br>
+哈夫曼树构造、编解码<br>
+算数表达式二叉树<br>
+二叉树的复制<br>
+二叉树路径显示<br>
+交换二叉树所有结点的左右子树</p>
 <h1 id="肖波-ppt">肖波 PPT</h1>
 <p><strong>ch1</strong><br>
 p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳出循环</p>
 <h1 id="绪论">绪论</h1>
-<p>算法特性：<br>
+<p>数据结构：按照某种逻辑关系组织在一起的数据，按一定储存方式储存在计算机存储器中，并在这些数据上定义了一组运算的集合<br>
+数据结构包括：<br>
+逻辑结构（集合、线性结构、树结构、图结构）<br>
+物理结构、存储结构（顺序存储、链式存储）<br>
+对数的操作和运算</p>
+<p>算法：解题方法。从计算机角度看：若干条指令组成的有穷序列<br>
+算法特性：<br>
 输入、输出、有穷性、可行性、确定性</p>
 <p>好的算法还应具备：<br>
 健壮性/鲁棒性、高效性、可读性</p>
 <p>注意，写代码一定要考虑健壮性，考虑到不成立的情况</p>
-<p><a href="https://blog.csdn.net/weixin_63866037/article/details/128087397">详解时间复杂度计算公式(附例题细致讲解过程)</a></p>
 <p><strong>时间复杂度计算</strong><br>
 本质思想：代码执行趟数之和<br>
 计算思路：</p>
@@ -618,6 +634,8 @@ p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳�
 <li>k 等于边界条件，比如 n/二分之n 等</li>
 <li>解出用 n 表示 k 的表达式，即为复杂度</li>
 </ol>
+<p>对于多层循环，列出每一次外层循环，内层循环的执行次数，直至第 k 次，然后进行计算</p>
+<p><a href="https://blog.csdn.net/weixin_63866037/article/details/128087397">详解时间复杂度计算公式(附例题细致讲解过程)</a></p>
 <p><a href="https://blog.csdn.net/weixin_43300894/article/details/105951576">空间复杂度的四种计算情况，超级简单好懂</a></p>
 <p><code>真题分析：</code><br>
 书上画的，课后题填空背会即可<br>
@@ -688,11 +706,12 @@ p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳�
 子串匹配算法</p>
 <p>next数组：<br>
 长度和串的长度一样，从0到n，next[0] 不存数据；每一个位置 i 代表，当第 i 位未匹配成功时，子串指针 j 要重新指向串的位置。</p>
-<p>手动求 next数组：next[1] = 0，next[2] = 1 无脑写。</p>
+<p>手动求 next数组：next[1] = 0，next[2] = 1 无脑写</p>
 <p>nextval数组：<br>
 nextval[1]无脑写0</p>
 <h1 id="树">树</h1>
 <p><a href="https://blog.csdn.net/weixin_40646509/article/details/102828109">数据结构-满k叉树例题</a></p>
+<p><a href="https://blog.csdn.net/qq_43152052/article/details/90111095">二叉树的前序遍历、中序遍历、后序遍历、层序遍历的时间复杂度和空间复杂度</a></p>
 <p><strong>手动求线索二叉树的方法：</strong></p>
 <ol>
 <li>写出遍历序列</li>
@@ -1500,8 +1519,32 @@ path</p>
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/"" data-c="
+          &lt;p&gt;实践&lt;/p&gt;
+&lt;p&gt;分段分点，整洁清晰，用 ①②③&lt;br&gt;
+写满，写的愈多越好&lt;br&gt;
+可以把材料用自己的话组织一遍，抄个别关键词，不能整体抄&lt;br&gt;
+总分总结构，先总写点题，然后概括一下材料，引出自己背诵的内容&lt;/p&gt;
+&lt;p&gt;抄材料方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;优先抄题干中出现的关键字附近的话&lt;/li&gt;
+&lt;li&gt;文学性表达不抄，普通人讲的话不抄，数字不抄&lt;/li&gt;
+&lt;li&gt;改写：理解材料句子意思，用自己的话复述，可以同义替换，改写句式、扩句&lt;/li&gt;
+&lt;/ol&gt;
+">【考研】政治分析题</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/"" data-c="
-          &lt;h1 id=&#34;单词&#34;&gt;单词&lt;/h1&gt;
+          &lt;p&gt;&lt;strong&gt;时间安排&lt;/strong&gt;&lt;br&gt;
+下午 14：00~17：00 考试，三个小时&lt;br&gt;
+小作文：15min&lt;br&gt;
+大作文：35min&lt;br&gt;
+阅读：70min（17分钟一篇）&lt;br&gt;
+新题型：20min&lt;br&gt;
+翻译：20min&lt;br&gt;
+完形填空：20min&lt;/p&gt;
+&lt;h1 id=&#34;单词&#34;&gt;单词&lt;/h1&gt;
 &lt;p&gt;measurement 测量&lt;br&gt;
 lean 倾斜、倚靠、精瘦&lt;br&gt;
 likewise 同样的&lt;br&gt;
@@ -1515,7 +1558,13 @@ copper 铜&lt;br&gt;
 limbs 肢体、四肢&lt;br&gt;
 grin 露齿笑&lt;br&gt;
 contemplate 考虑、沉思 too...to contemplate 太...去考虑（无法想象）&lt;br&gt;
-notion 概念、观念 the notion is that 意思是说/人们认为&lt;/p&gt;
+notion 概念、观念 the notion is that 意思是说/人们认为&lt;br&gt;
+compell 强迫&lt;br&gt;
+privilege 给特权&lt;br&gt;
+intensify 强化&lt;br&gt;
+crisp 脆的&lt;br&gt;
+crust 皮，外壳&lt;br&gt;
+mandate 授权&lt;/p&gt;
 &lt;h1 id=&#34;词组&#34;&gt;词组&lt;/h1&gt;
 &lt;p&gt;over a six-year period 在六年的时间里&lt;br&gt;
 be superior to 优于&lt;br&gt;
@@ -1525,7 +1574,14 @@ government grant 政府拨款&lt;br&gt;
 take for granted 认为...理所应当&lt;br&gt;
 justify doing sth. 证明做...（是正确的）&lt;br&gt;
 judge by/from 从...判定&lt;br&gt;
-starved of 缺乏、挨饿&lt;/p&gt;
+starved of 缺乏、挨饿&lt;br&gt;
+at high temperature 在高温下&lt;br&gt;
+come across 遇到、给人留下印象&lt;/p&gt;
+&lt;h1 id=&#34;长难句&#34;&gt;长难句&lt;/h1&gt;
+&lt;p&gt;its campaign risks coming across as being pushy.&lt;br&gt;
+risk 是宾语，有...的风险&lt;br&gt;
+coming across as being pushy 给人留下咄咄逼人的印象（遇到被认为咄咄逼人）come across 有给人留下印象的意思&lt;br&gt;
+译为，它的活动有可能给人留下咄咄逼人的印象&lt;/p&gt;
 ">【考研】英语单词和词组</a>
       </div>
       
@@ -1562,18 +1618,21 @@ Yours sincerely&lt;/p&gt;
 标题&lt;/p&gt;
 &lt;p&gt;the purpose of sth. / sth. aims(targets) to 目的是&lt;br&gt;
 use their best endeavors to do 尽最大努力做&lt;br&gt;
-attach importance to sth. 认为...很重要&lt;br&gt;
-contribute to 是导致...的原因&lt;br&gt;
+attach emphasis to sth. 认为...很重要&lt;br&gt;
+utmost emphasis should be attached to...&lt;br&gt;
+contribute to / induce 是导致...的原因&lt;br&gt;
 complete one&#39;s work 完成工作&lt;br&gt;
 joint efforts 共同努力&lt;br&gt;
 I am deeply obliged for your hard work 我十分感谢您的努力&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可用单词&lt;/strong&gt;&lt;br&gt;
-vigorous 有活力的&lt;br&gt;
+&lt;h1 id=&#34;可用单词&#34;&gt;可用单词&lt;/h1&gt;
+&lt;p&gt;vigorous 有活力的&lt;br&gt;
+tremendous 巨大的&lt;br&gt;
 eminent 优秀的&lt;br&gt;
+eminently = exceedingly 非常&lt;br&gt;
 advantageous 有利的，有好处的&lt;br&gt;
 miraculous 奇迹般的&lt;br&gt;
 gorgeous 美丽的&lt;br&gt;
-pervasive 普遍的&lt;br&gt;
+pervasive = universal 普遍的&lt;br&gt;
 enhance = promote = strengthen = optimize 加强、优化、促进&lt;br&gt;
 deal with = resolve sth. = tackle sth. = cope with 解决，应对，处理&lt;br&gt;
 cultivate = foster 培养&lt;br&gt;
@@ -1585,18 +1644,33 @@ adequate 充足&lt;br&gt;
 rational 合理的&lt;br&gt;
 feasible 可行的&lt;br&gt;
 considerable 相当多的&lt;br&gt;
-critical / essential 至关重要的&lt;br&gt;
+critical / essential / be extremely vital to us 至关重要的&lt;br&gt;
 defect 缺点&lt;br&gt;
-eliminate 消除&lt;/p&gt;
-&lt;p&gt;demonstrate / illustrate “说明，表明”，用在图表作文中替代show，reveal等单词。&lt;br&gt;
-depict / portray “描述，描绘”，在漫画作文中替代describe&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;可用词组&lt;/strong&gt;&lt;br&gt;
-I&#39;m writing to request that 我写信恳求（t不双写）&lt;br&gt;
+eliminate 消除&lt;br&gt;
+therefore = hence 因此&lt;br&gt;
+demonstrate / illustrate “说明，表明”，用在图表作文中替代show，reveal等单词&lt;br&gt;
+depict / portray “描述，描绘”，在漫画作文中替代describe&lt;br&gt;
+punctuality 准时 / punctually 准时地&lt;br&gt;
+prestigious 有声望的&lt;br&gt;
+hospitality 热情好客 / hospitable 热情好客的&lt;br&gt;
+imperative 迫切的&lt;br&gt;
+magnificent = splendid 壮丽的&lt;br&gt;
+innumerable 无数的&lt;br&gt;
+deleterious 有害的&lt;br&gt;
+pursue 追求&lt;br&gt;
+primary 首要的&lt;br&gt;
+academic 学术的&lt;br&gt;
+indispensable 不可或缺的&lt;br&gt;
+severely 严重地&lt;/p&gt;
+&lt;h1 id=&#34;可用词组&#34;&gt;可用词组&lt;/h1&gt;
+&lt;p&gt;I&#39;m writing to request that 我写信恳求（t不双写）&lt;br&gt;
+I have several request&lt;br&gt;
 表达喜欢{&lt;br&gt;
 students who share a love for English 共同热爱&lt;br&gt;
 be keen on sth.&lt;br&gt;
 have a profound affection  有深厚的感情/浓厚的兴趣&lt;br&gt;
 be passionate about&lt;br&gt;
+have a peculiar interest in 对...有特殊的兴趣&lt;br&gt;
 }&lt;br&gt;
 the Internet has become an increasingly important tool for students&lt;br&gt;
 Not only do professors require us to... but ... (前后连接复杂句，do 起强调作用)&lt;br&gt;
@@ -1630,10 +1704,12 @@ Some people assert that nothing is impossible.&lt;br&gt;
 stimulate sb. to do sth. 激励某人做&lt;br&gt;
 the merits of sth. 某事的好处&lt;br&gt;
 be saturated with 充斥着&lt;br&gt;
-strive for = spare no efforts for 努力做&lt;br&gt;
+strive for = spare no efforts for = endeavor to do 努力做&lt;br&gt;
 embark on sth. 开始做 sth.&lt;br&gt;
 in contemporary society 在当代社会&lt;br&gt;
 a multitude of = a vast amount of 大量&lt;br&gt;
+there are numerous ways of doing 有许多做...的方法&lt;br&gt;
+the majority of 大多数&lt;br&gt;
 an alternative is that… 作为替代的是...&lt;br&gt;
 cannot afford to 不应当做&lt;br&gt;
 attach importance to sth 强调...&lt;br&gt;
@@ -1641,10 +1717,112 @@ obstacle 阻碍&lt;br&gt;
 in such circumstances 在这样的情况下&lt;br&gt;
 in contrast = conversely 相反地&lt;br&gt;
 employ the policy of sth 采取...政策&lt;br&gt;
-It is generally established that 众所周知&lt;/p&gt;
-&lt;p&gt;In addition 无所谓连接&lt;br&gt;
+It is generally established that 众所周知&lt;br&gt;
+enduring classic 经久不衰的经典&lt;br&gt;
+the inner world 内心世界&lt;br&gt;
+I am referring to that 我指的是&lt;br&gt;
+have a fascination with 对...感兴趣&lt;br&gt;
+a range of 一系列&lt;br&gt;
+be involved in 参加&lt;br&gt;
+extracurricular activities 课外活动&lt;br&gt;
+interpersonal relations 人际关系&lt;br&gt;
+i regret to tell you that 我很遗憾的告诉你&lt;br&gt;
+particular details 具体细节&lt;br&gt;
+one of the most magnificent tourist destination in China&lt;br&gt;
+China boasts of a splendid history 中国有辉煌的历史&lt;br&gt;
+In addition 无所谓连接&lt;br&gt;
 What&#39;s more 最好连着前面 比如 Initially，&lt;br&gt;
-Further more 最好用在最后，前面必须连&lt;/p&gt;
+Further more 最好用在最后，前面必须连&lt;br&gt;
+be ascribed to 归因于&lt;br&gt;
+If... ever perished from..., it would be a tragedy of immeasurable proportions 如果... 从... 消失，那将是不可估量的悲剧&lt;br&gt;
+indulge in / indulgence in 沉浸在&lt;br&gt;
+derive from 源于&lt;br&gt;
+mental fitness 心理健康&lt;br&gt;
+enjoy striking popularity among / be in vogue 流行&lt;br&gt;
+demonstrate a social phenomena of 反映了...的社会现象&lt;br&gt;
+briefly speaking 简言之&lt;br&gt;
+provoke heated debates 引起激烈讨论&lt;br&gt;
+double-edged sword&lt;br&gt;
+exert profound influence on 产生深远影响&lt;br&gt;
+bridge / narrow the gap between&lt;br&gt;
+be adopted to 被采纳用于&lt;br&gt;
+repent（doing）后悔做&lt;br&gt;
+it is imperative for us to take drastic measures. 当务之急是采取严厉措施&lt;br&gt;
+enhance the public awareness 提高公众意识&lt;br&gt;
+a combination of ... 的结合&lt;br&gt;
+this tendency is rather disturbing 这种倾向很令人担忧&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;道歉信&lt;/strong&gt;&lt;br&gt;
+I have recently been diagnosed with a serious cold&lt;br&gt;
+If possible, i would like to postpone the interview to another day later in the week&lt;br&gt;
+I sincerely apologize for any inconvenience this may cause you (may have caused)&lt;br&gt;
+Please excuse me for not being able to inform you of my situation sooner.&lt;/p&gt;
+&lt;p&gt;as a... , i am severely disappointed to find that the service you have recently provided us is far from satisfactory&lt;br&gt;
+i am writing to draw you attention to sth.&lt;br&gt;
+take...into serious concideration&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;感谢信&lt;/strong&gt;&lt;br&gt;
+comforting&lt;br&gt;
+Benevolence = kind deed&lt;br&gt;
+I am writing this letter to express my heartfelt gratitude to you for the meticulous care you provided during my time in the hospital.&lt;br&gt;
+The comforting scenes always remind me of the period you took such good care of me.&lt;br&gt;
+If it had not been for your timely assistance in giving me first aid, I fear that the consequences might have been very serious&lt;br&gt;
+What impressed me the most was&lt;br&gt;
+Your appearance has uplifted me/cheered me up&lt;br&gt;
+I would like to extend my thanks once again&lt;br&gt;
+Your kind deeds are like pearls that will forever be treasured in my mind.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求职、申请&lt;/strong&gt;&lt;br&gt;
+I am writing to apply for the job of doing / your recently advertised position for a teacher&lt;br&gt;
+I would like to apply for admission to...&lt;br&gt;
+I hold the belief that I am well qualified for this position for several reasons.&lt;br&gt;
+Enclosed with this note is my resume, which details my previous academic qualifications and relevant work experiences.&lt;br&gt;
+the experiences make me a perfect candidate&lt;br&gt;
+cheerful personality&lt;br&gt;
+If you could grant me an interview, i would appreciate it.&lt;br&gt;
+at your earliest convenience&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;活动&lt;/strong&gt;&lt;br&gt;
+To enhance the ability and enrich after-class activities&lt;br&gt;
+which is to be held on...&lt;br&gt;
+Those who have a fascination with ... are welcome to participate in this activity&lt;br&gt;
+If the would-be candidates have any questions, please do not hesitate to contact us&lt;br&gt;
+this club serves as a platform to demonstrate your marvelous abilities&lt;br&gt;
+are eminently beneficial in multiple regards 在多方面都很有益处&lt;br&gt;
+improve your level of proficiency 提高你的熟练程度&lt;br&gt;
+A good command of English will enable you to get an edge over your peers&lt;br&gt;
+好的英语水平让你比同龄人更胜一筹&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;纪要&lt;/strong&gt;&lt;br&gt;
+during the last meeting，the following issues were addressed.&lt;br&gt;
+If you find any errors or omissions, please contact me&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;询问信&lt;/strong&gt;&lt;br&gt;
+I am writing to seek your assistance to help...&lt;br&gt;
+I hope you can kindly furnish me with detailed information regarding the above-mentioned questions.&lt;br&gt;
+I wonder if it would be convenient for you to do...&lt;/p&gt;
+&lt;h1 id=&#34;大作文&#34;&gt;大作文&lt;/h1&gt;
+&lt;p&gt;第一段：不用提出论点，只描述即可&lt;br&gt;
+总体描述画面&lt;br&gt;
+挖掘细节&lt;/p&gt;
+&lt;p&gt;第二段&lt;br&gt;
+主题句，点题，引出下文&lt;br&gt;
+论证+论据{&lt;br&gt;
+背景、事实（现象）、反方观点、原因、结果&lt;br&gt;
+因果、分类、举例&lt;br&gt;
+}&lt;br&gt;
+总结扣题&lt;/p&gt;
+&lt;p&gt;第三段&lt;br&gt;
+结论&lt;br&gt;
+两点建议/评论&lt;br&gt;
+展望&lt;/p&gt;
+&lt;h1 id=&#34;大作文积累&#34;&gt;大作文积累&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;第一段&lt;/strong&gt;&lt;br&gt;
+As is vividly depicted in the caricature&lt;br&gt;
+The caricature depicts ....&lt;br&gt;
+the caption indicates that... 文字说明...&lt;br&gt;
+the caricature is to illustrate that&lt;br&gt;
+diagram 图表&lt;br&gt;
+excerpt 选段&lt;br&gt;
+the author assumes that&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二段&lt;/strong&gt;&lt;br&gt;
+I cling to the idea that 我坚持... 的观点&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三段&lt;/strong&gt;&lt;br&gt;
+To sum up&lt;/p&gt;
 ">【考研】英语作文</a>
       </div>
       
@@ -1820,6 +1998,7 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称&
 &lt;li&gt;已知 S&#39;(x) 求 S(x) 需要使用变上限积分  ∫x S(t)dt&lt;/li&gt;
 &lt;li&gt;只要对 x 的 n 次方进行改变的时候，就要判断 n 从 0 还是 1 开始取&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1eb4y1U7fP/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;如何选择恰当的××（区域），使得你的××（积分）最大！&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;曲线曲面积分&#34;&gt;曲线曲面积分&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_47187147/article/details/124933148?spm=1001.2014.3001.5506&#34;&gt;各类重积分 | 二重积分、三重积分、线面积分 —— 大总结&lt;/a&gt;&lt;br&gt;
 &lt;strong&gt;是否可以带入边界方程&lt;/strong&gt;&lt;br&gt;
@@ -2078,8 +2257,10 @@ A=-AT&lt;/p&gt;
 r(A)=r(B)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;判断合同&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;定义法&lt;/li&gt;
-&lt;li&gt;正负惯性指数相同（一定在标准型中看）&lt;/li&gt;
+&lt;li&gt;充要条件：CTAC=B；非对称只能找是否有一个对称阵，一般题目给的都不难找&lt;/li&gt;
+&lt;li&gt;两个实对称矩阵合同的充要条件才是有相同的正负惯性指数（在标准型中看）&lt;br&gt;
+由于 CTAC=B，若A为实对称，则B也为实对称，实对称矩阵的合同矩阵一定也对称&lt;br&gt;
+非对称一定不和对称合同&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;判断相似&lt;/strong&gt;&lt;br&gt;
 相似没有判断的充要条件，只能用必要条件判断&lt;br&gt;
@@ -3879,16 +4060,31 @@ int main() {
 写完代码一定读一遍，看看有无语法错误等&lt;br&gt;
 复习代码题时，要熟知代码逻辑，以及临界点 / 判断条件，一定要记住条件是什么，灵活应对&lt;br&gt;
 做代码题时，先自己写一个例子放在旁边，手动实现一遍，然后结合储存的数据结构，对照着还原代码&lt;/p&gt;
+&lt;h1 id=&#34;基本代码题汇总&#34;&gt;基本代码题汇总&lt;/h1&gt;
+&lt;p&gt;二叉树创建递归非递归&lt;br&gt;
+二叉树前序中序后序，递归非递归&lt;br&gt;
+二叉树层序&lt;br&gt;
+二叉树结点总数、深度、叶子结点总数&lt;br&gt;
+哈夫曼树构造、编解码&lt;br&gt;
+算数表达式二叉树&lt;br&gt;
+二叉树的复制&lt;br&gt;
+二叉树路径显示&lt;br&gt;
+交换二叉树所有结点的左右子树&lt;/p&gt;
 &lt;h1 id=&#34;肖波-ppt&#34;&gt;肖波 PPT&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;ch1&lt;/strong&gt;&lt;br&gt;
 p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳出循环&lt;/p&gt;
 &lt;h1 id=&#34;绪论&#34;&gt;绪论&lt;/h1&gt;
-&lt;p&gt;算法特性：&lt;br&gt;
+&lt;p&gt;数据结构：按照某种逻辑关系组织在一起的数据，按一定储存方式储存在计算机存储器中，并在这些数据上定义了一组运算的集合&lt;br&gt;
+数据结构包括：&lt;br&gt;
+逻辑结构（集合、线性结构、树结构、图结构）&lt;br&gt;
+物理结构、存储结构（顺序存储、链式存储）&lt;br&gt;
+对数的操作和运算&lt;/p&gt;
+&lt;p&gt;算法：解题方法。从计算机角度看：若干条指令组成的有穷序列&lt;br&gt;
+算法特性：&lt;br&gt;
 输入、输出、有穷性、可行性、确定性&lt;/p&gt;
 &lt;p&gt;好的算法还应具备：&lt;br&gt;
 健壮性/鲁棒性、高效性、可读性&lt;/p&gt;
 &lt;p&gt;注意，写代码一定要考虑健壮性，考虑到不成立的情况&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_63866037/article/details/128087397&#34;&gt;详解时间复杂度计算公式(附例题细致讲解过程)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;时间复杂度计算&lt;/strong&gt;&lt;br&gt;
 本质思想：代码执行趟数之和&lt;br&gt;
 计算思路：&lt;/p&gt;
@@ -3898,6 +4094,8 @@ p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳�
 &lt;li&gt;k 等于边界条件，比如 n/二分之n 等&lt;/li&gt;
 &lt;li&gt;解出用 n 表示 k 的表达式，即为复杂度&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;对于多层循环，列出每一次外层循环，内层循环的执行次数，直至第 k 次，然后进行计算&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_63866037/article/details/128087397&#34;&gt;详解时间复杂度计算公式(附例题细致讲解过程)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_43300894/article/details/105951576&#34;&gt;空间复杂度的四种计算情况，超级简单好懂&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;真题分析：&lt;/code&gt;&lt;br&gt;
 书上画的，课后题填空背会即可&lt;br&gt;
@@ -3968,11 +4166,12 @@ p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳�
 子串匹配算法&lt;/p&gt;
 &lt;p&gt;next数组：&lt;br&gt;
 长度和串的长度一样，从0到n，next[0] 不存数据；每一个位置 i 代表，当第 i 位未匹配成功时，子串指针 j 要重新指向串的位置。&lt;/p&gt;
-&lt;p&gt;手动求 next数组：next[1] = 0，next[2] = 1 无脑写。&lt;/p&gt;
+&lt;p&gt;手动求 next数组：next[1] = 0，next[2] = 1 无脑写&lt;/p&gt;
 &lt;p&gt;nextval数组：&lt;br&gt;
 nextval[1]无脑写0&lt;/p&gt;
 &lt;h1 id=&#34;树&#34;&gt;树&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_40646509/article/details/102828109&#34;&gt;数据结构-满k叉树例题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_43152052/article/details/90111095&#34;&gt;二叉树的前序遍历、中序遍历、后序遍历、层序遍历的时间复杂度和空间复杂度&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;手动求线索二叉树的方法：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;写出遍历序列&lt;/li&gt;
