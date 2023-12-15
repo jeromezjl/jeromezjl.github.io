@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-12-13T12:30:00.536Z</updated>
+    <updated>2023-12-15T14:53:09.330Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -127,7 +127,8 @@ complete one's work 完成工作<br>
 joint efforts 共同努力<br>
 I am deeply obliged for your hard work 我十分感谢您的努力</p>
 <h1 id="可用单词">可用单词</h1>
-<p>vigorous 有活力的<br>
+<p>character 角色<br>
+vigorous 有活力的<br>
 tremendous 巨大的<br>
 eminent 优秀的<br>
 eminently = exceedingly 非常<br>
@@ -317,12 +318,14 @@ I wonder if it would be convenient for you to do...</p>
 As is vividly depicted in the caricature<br>
 The caricature depicts ....<br>
 the caption indicates that... 文字说明...<br>
-the caricature is to illustrate that<br>
 diagram 图表<br>
 excerpt 选段<br>
 the author assumes that</p>
 <p><strong>第二段</strong><br>
-I cling to the idea that 我坚持... 的观点</p>
+the caricature is to illustrate that<br>
+what the drawing intends to convey is that<br>
+I cling to the idea that 我坚持... 的观点<br>
+it is of vital significance to be</p>
 <p><strong>第三段</strong><br>
 To sum up</p>
 ]]></content>
@@ -646,13 +649,13 @@ X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)</p>
 <ol>
 <li>A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}</li>
 <li>AT 为 A 的转置，则有 r(A) = r(AT) = r(AAT) = r(ATA)</li>
-<li>r(A + B) ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
 <li>r(AB) ≤ min{r(A),r(B)}</li>
-<li>若 A 可逆， r(AB)=r(BA)=r(B)；若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
+<li>r(A + B) ≤ max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
+<li>若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
+<li>若 A 可逆， r(AB)=r(BA)=r(B)</li>
 <li>A 为 m x n 矩阵，且 r(A) = n（列满秩），则  r(AB)= r(B)</li>
 <li>A 为 m x n 矩阵，B 为 n x s 矩阵，且 AB = O，则  r(A) + r(B) ≤ n</li>
-<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
-<li>max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
 <li>伴随矩阵 A* 的秩：0、1、n</li>
 </ol>
 <p><a href="https://www.bilibili.com/video/BV1VW4y1o7D2/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【矩阵】分块矩阵！那些&quot;考研机构&quot;舍不得讲的内容...</a></p>
@@ -665,8 +668,9 @@ n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &g
 系数矩阵为扁长方形则一定相关 ⇔ 有效方程组数量（向量组的秩）小于未知数个数 s（列数）</p>
 <p>向量 α 和 β 线性相关，则 β=kα</p>
 <p>🔺向量组线性无关 ⇔ 当且仅当 k1=k2=...=ks=0 向量组 = 0 ⇔<br>
-齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔ 未知数数量比方程组少<br>
+齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔ 未知数数量等于方程组<br>
 ⇔ 向量组的秩（有效方程组数量）等于列数（未知数个数），即列满秩（A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}）⇔ 向量组中至少有一个向量可由其余的向量线性表出</p>
+<p>注意，有效方程组只能为扁长形和正方形，不能为竖长，竖长意味着方程组个数大于未知数，则无解</p>
 <p><strong>判定向量组线性无关</strong></p>
 <ol>
 <li>用定义，k1=k2=...=ks=0，利用已知条件对式子做变换（左乘、右乘 / 相加减）</li>
@@ -688,7 +692,7 @@ n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &g
 <li>x1α1+x2α2+....=xnαn=β 有非零解</li>
 <li>[α1,α2,...,αn,β] 方程组有解，r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)</li>
 <li>高维可以表示低维：α1,α2,...,αt 可由 β1,β2,...,βt 表出，则 r(α1,α2,...,αt) ≤ r(β1,β2,...,βt)</li>
-<li>向量组 α1,α2,...αm 线性相关 ⇔ 向量组中至少有一个向量可由其余的 m-1个向量线性表出</li>
+<li>向量组 α1,α2,...αm 线性相关 向量组中至少有一个向量可由其余的 m-1个向量线性表出</li>
 <li>若向量组 α1,α2,...αm 线性无关，而 β,α1,α2,...αm 线性相关，则 β 可由 α1,α2,...αm 线性表出，并且表示法唯一</li>
 <li>向量组 B 能由向量组 A 线性表出 ⇔ r(A,B)=r(A)  （B是由A表出的，所以A,B的秩还是A的秩 / r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)）</li>
 </ol>
@@ -712,48 +716,42 @@ x=Cy，x 是在 α 下的坐标，y 是在 β 下的坐标（交叉原则）</li
 <p>🔺对于 m=n，即 行=列，方程组个数等于未知数个数。<br>
 若 r(A)=n 即 A 满秩，方程组 Ax=0 只有 0 解，此时 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>) 恒等于 r(A)，Ax=β 有唯一解；若 r(A)&lt;n，方程组 Ax=0 有无穷个非 0 解，此时对于 Ax=β ：有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
 <p>💠综上，没说明行列关系时，r(A) 推不出 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)，由 齐次 解的情况推不出 非齐次 解的情况</p>
+<p><code>注</code><br>
+方程组基础解系：α1 α2<br>
+求方程组的通解：k1α1+k2α2<br>
+重特征值的特征向量：k1α1+k2α2</p>
 <h1 id="特征值与特征向量">特征值与特征向量</h1>
 <p><strong>求特征值特征向量注意的问题</strong></p>
 <ol>
 <li>带入特征值化简时可先根据秩消去一行</li>
-<li>特征向量需要加系数 k</li>
+<li>特征向量是基础解系加系数 k，如 kα</li>
 <li>重根的特征向量是基础解系相加，如 k1α1+k2α2</li>
+<li>A-1的特征值是 1/λ，特征向量还是 α 不变</li>
 </ol>
+<p><strong>矩阵的迹：tr(A)</strong><br>
+迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
+<p><strong>反对称矩阵</strong><br>
+A=-AT</p>
 <p><strong>实对称矩阵</strong><br>
 实对称矩阵不同特征值的特征向量一定正交<br>
 实对称矩阵同一特征值的不同特征向量线性无关，但不一定正交，<br>
 在要求求对应的正交矩阵时，要施密特正交化</p>
 <p>又因为 n 阶方阵可相似对角化 ⇔ A 有 n 个线性无关的特征向量<br>
 所以 n 阶实对称矩阵必可以相似对角化</p>
-<p><strong>矩阵的迹：tr(A)</strong><br>
-迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></p>
-<p><strong>判断矩阵相似</strong><br>
-“两个矩阵相似”的充要条件只有相似矩阵的定义本身<br>
-矩阵 A 与矩阵 B 相似 等价于 存在 n 阶可逆矩阵 P，使得 P^(-1)<em>A</em>P=B成立<br>
-“两个矩阵相似”的必要条件有：<br>
-1、两个矩阵的秩相等<br>
-2、两个矩阵对应的行列式相等<br>
-3、两个矩阵有相同的特征多项式、特征方程及特征值（迹相等）</p>
-<p>注意：可逆矩阵P不唯一（列不同或者差一个倍数）<br>
-<a href="https://zhuanlan.zhihu.com/p/77007052">线性代数——相似矩阵的可逆变换矩阵P是否唯一</a></p>
-<p><strong>判断步骤：</strong></p>
-<ol>
-<li>迹相等，不相等——&gt;不相似</li>
-<li>行列式值相等，不相等——&gt;不相似</li>
-<li>求特征值，不相等——&gt;不相似</li>
-<li>求特征向量的个数（秩），不相等——&gt;不相似</li>
-</ol>
-<p><strong>判断可相似对角化</strong><br>
-充要条件只需记“n 个特征值对应 n 个线性无关的特征向量”<br>
-注意，任何矩阵，不同特征值对应的特征向量线性无关</p>
 <p><strong>正交矩阵</strong><br>
-正交矩阵（Orthogonal Matrix）是指其转置等于其逆的矩阵。<br>
+转置等于其逆的矩阵<br>
 ATA=E<br>
 在求正交矩阵的时候，不同特征值的特征向量一定正交。相同特征值对应的特征向量不一定正交，所以要进行施密特正交化。<br>
 然后把所有特征向量单位化，按列排列成正交矩阵。</p>
-<p><strong>反对称矩阵</strong><br>
-A=-AT</p>
+<p><strong>判断可相似对角化</strong><br>
+充要条件只需记“n 个特征值对应 n 个线性无关的特征向量”<br>
+注意，任何矩阵，不同特征值对应的特征向量线性无关（相同特征值不一定）</p>
+<ol>
+<li>有 n 个不同的特征值</li>
+<li>k 重特征值对应 k 个线性无关的特征向量</li>
+<li>实对称矩阵一定可相似对角化（因为实对称不同特征值特征向量必正交）<br>
+<a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></li>
+</ol>
 <p><strong>矩阵等价 &amp; 向量组等价</strong><br>
 矩阵等价：A 经过有限次初等变换可以变成 B ⇔ r(A)=r(B)<br>
 向量组等价：两个向量组可以相互线性表出</p>
@@ -765,19 +763,25 @@ A=-AT</p>
 r(A)=r(B)</p>
 <p><strong>判断合同</strong></p>
 <ol>
-<li>充要条件：CTAC=B；非对称只能找是否有一个对称阵，一般题目给的都不难找</li>
+<li>充要条件：CTAC=B，C 可逆；非对称只能找是否有一个对称阵，一般题目给的都不难找</li>
 <li>两个实对称矩阵合同的充要条件才是有相同的正负惯性指数（在标准型中看）<br>
 由于 CTAC=B，若A为实对称，则B也为实对称，实对称矩阵的合同矩阵一定也对称<br>
 非对称一定不和对称合同</li>
 </ol>
 <p><strong>判断相似</strong><br>
-相似没有判断的充要条件，只能用必要条件判断<br>
-必要条件：<br>
-特征值相同，以及特征值相同相关判定。<br>
-注意，特征值相同，矩阵不一定相似<br>
-是否均可相似对角化</p>
+P-1AP = B<br>
+实对称矩阵相似 ⇔ 特征值相等<br>
+非实对称：没有充要条件，只能用必要条件判断</p>
+<ol>
+<li>判定矩阵之迹</li>
+<li>判定行列式是否相等</li>
+<li>判定特征值是否相等</li>
+<li>判定重特征值是否对应相同个数的特征向量<br>
+（也就是 λE-A 的秩）<br>
+<a href="https://zhuanlan.zhihu.com/p/151231495">“拨开迷雾”，如何判定矩阵相似？</a><br>
+<a href="https://zhuanlan.zhihu.com/p/77007052">线性代数——相似矩阵的可逆变换矩阵P是否唯一</a></li>
+</ol>
 <p>从上往下，判断合同必须满足等价，判断相似必须满足合同</p>
-<p><a href="https://zhuanlan.zhihu.com/p/151231495">“拨开迷雾”，如何判定矩阵相似？</a></p>
 <h1 id="二次型">二次型</h1>
 <p><a href="https://www.bilibili.com/read/cv6499426/">（数一）二次曲面类型与二次型的正负惯性指数的关系</a><br>
 求二次型对应的二次曲面，求出标准型，然后判断对应的曲线即可<br>
@@ -786,6 +790,25 @@ r(A)=r(B)</p>
 ② 特征值法：一般有平方项了<br>
 🔺直观判断曲面的方法<br>
 分别看 xy xz yz 在 xoy，xoz，yoz 面上都是什么曲线，然后连起来即可</p>
+<p><strong>正定矩阵性质</strong><br>
+对称、可逆</p>
+<p><strong>判断正定</strong><br>
+充要条件</p>
+<ol>
+<li>正惯性指数为 n（特征值均大于零）</li>
+<li>A 与 E 合同</li>
+<li>各阶顺序主子式大于零</li>
+</ol>
+<p>二次型求标准型 ⇔ 二次型矩阵求特征值<br>
+所用正交矩阵就是矩阵正交的特征向量</p>
+<p><strong>证明正定</strong></p>
+<ol>
+<li>检验 A 对称</li>
+<li>证明正定（用判断条件证明）</li>
+</ol>
+<p><strong>求二次型最值</strong><br>
+最大值：最大特征值 乘以 xTx 的值<br>
+最小值：最小特征值 乘以 xTx 的值</p>
 ]]></content>
     </entry>
     <entry>
