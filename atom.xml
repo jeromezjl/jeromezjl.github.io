@@ -2,31 +2,397 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2023-12-15T14:53:09.330Z</updated>
+    <updated>2024-03-10T10:20:04.102Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2023, Jerome</rights>
+    <rights>All rights reserved 2024, Jerome</rights>
     <entry>
-        <title type="html"><![CDATA[【考研】政治分析题]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/">
+        <title type="html"><![CDATA[【DL】模型复用]]></title>
+        <id>https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/</id>
+        <link href="https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/">
         </link>
-        <updated>2023-12-06T02:10:48.000Z</updated>
-        <content type="html"><![CDATA[<p>实践</p>
-<p>分段分点，整洁清晰，用 ①②③<br>
-写满，写的愈多越好<br>
-可以把材料用自己的话组织一遍，抄个别关键词，不能整体抄<br>
-总分总结构，先总写点题，然后概括一下材料，引出自己背诵的内容</p>
-<p>抄材料方法：</p>
+        <updated>2024-03-10T08:51:41.000Z</updated>
+        <content type="html"><![CDATA[<p>模型复用，通常在机器学习和深度学习领域称为迁移学习（Transfer Learning），是一种非常有效的方法，可以将在一个任务上训练好的模型应用到另一个相关但不同的任务上。这种方法特别有用，因为从头开始训练一个复杂模型通常需要大量的计算资源和大量的标记数据，而这两者在很多情况下都是昂贵或难以获得的。</p>
+<h1 id="fine-tuning">Fine Tuning</h1>
+<h3 id="模型复用的基本思想">模型复用的基本思想</h3>
+<p>模型复用的核心思想是，对于不同但相关的任务，模型学习到的特征或知识在一定程度上是通用的。例如，一个在大型图像数据集（如ImageNet）上训练好的卷积神经网络（CNN）学会了识别各种视觉模式和结构，这些模式和结构对于其他视觉识别任务也是有用的。</p>
+<h3 id="迁移学习的主要步骤">迁移学习的主要步骤</h3>
 <ol>
-<li>优先抄题干中出现的关键字附近的话</li>
-<li>文学性表达不抄，普通人讲的话不抄，数字不抄</li>
-<li>改写：理解材料句子意思，用自己的话复述，可以同义替换，改写句式、扩句</li>
+<li>
+<p><strong>预训练模型选择</strong>：选择一个与目标任务相似或相关领域的预训练模型。例如，对于图像识别任务，人们常用在ImageNet数据集上预训练的模型。</p>
+</li>
+<li>
+<p><strong>特征提取</strong>：使用预训练模型的一部分（通常是除最后一层之外的所有层）作为特征提取器。这些层已经学会了从输入数据中提取有用的特征。</p>
+</li>
+<li>
+<p><strong>微调</strong>：根据具体任务，可以对预训练模型的顶层或所有层进行微调。微调是通过在新的目标任务上继续训练模型来完成的，这通常需要较小的学习率，以避免破坏已经学到的特征表示。</p>
+</li>
+<li>
+<p><strong>冻结层</strong>：在微调过程中，可以选择冻结预训练模型的一部分，以保留在原始任务上学到的特征。通常，只有模型的一部分（如顶层）被解冻以进行微调。</p>
+</li>
 </ol>
+<h3 id="模型复用的优点">模型复用的优点</h3>
+<ul>
+<li><strong>数据需求降低</strong>：迁移学习允许使用较少的标记数据来训练模型，因为模型已经从预训练任务中学习了很多有用的特征。</li>
+<li><strong>训练时间缩短</strong>：由于模型不是从零开始训练，因此训练时间通常会大大缩短。</li>
+<li><strong>提高性能</strong>：迁移学习可以帮助提高模型在特定任务上的性能，尤其是当原始数据集非常大且多样时。</li>
+</ul>
+<h3 id="应用场景">应用场景</h3>
+<p>迁移学习在许多领域都有应用，包括但不限于图像识别、自然语言处理（NLP）、语音识别和增强现实等。在NLP中，预训练的语言模型如BERT和GPT系列已经成为许多下游任务的基础。</p>
+<p>模型复用利用了已有知识，可以加速模型的开发过程，并提高模型在特定任务上的表现，尤其是在数据有限的情况下。</p>
+<h1 id="model-ensemble">Model Ensemble</h1>
+<p>将多个小模型结合起来解决不同的问题并实现模型复用，通常涉及到模型集成和多任务学习的策略。这些方法允许模型共享知识，并提高整体性能，特别是在数据稀缺或每个单独任务的数据不足以训练一个复杂模型的情况下。</p>
+<h3 id="模型集成model-ensemble">模型集成（Model Ensemble）</h3>
+<p>模型集成涉及到将多个模型的预测结果结合起来，以提高整体的预测性能。这些模型可以是针对同一个任务的不同模型，也可以是针对不同任务的模型。集成方法包括但不限于：</p>
+<ol>
+<li><strong>简单平均（Simple Averaging）</strong>：对所有模型的预测结果进行算术平均。</li>
+<li><strong>加权平均（Weighted Averaging）</strong>：根据每个模型的性能给予不同的权重，然后进行加权平均。</li>
+<li><strong>投票法（Voting）</strong>：对于分类问题，每个模型为每个类别投票，最终决策基于最多投票的类别。</li>
+<li><strong>堆叠（Stacking）</strong>：在堆叠方法中，多个模型的预测结果被用作另一个模型（称为元学习器或二级模型）的输入，以进行最终预测。</li>
+</ol>
+<h3 id="多任务学习multi-task-learning">多任务学习（Multi-task Learning）</h3>
+<p>多任务学习是一种同时解决多个相关任务的方法，通过共享底层表示，这种方法可以提高各个任务的学习效率和预测性能。多任务学习的关键在于找到一种方式让模型的不同部分专注于不同的任务：</p>
+<ol>
+<li>
+<p><strong>共享底层</strong>：在这种方法中，模型的底层（例如，神经网络的前几层）被多个任务共享，而顶层被设计为任务特定的层。这允许模型学习到可以跨多个任务通用的特征或表示。</p>
+</li>
+<li>
+<p><strong>软参数共享</strong>：在软参数共享中，不同任务的模型有自己的参数，但是这些参数之间通过某种方式（如正则化）相互约束，以鼓励它们学到相似的表示。</p>
+</li>
+<li>
+<p><strong>任务特定的分支</strong>：在这种结构中，模型从一个共享层分叉出多个分支，每个分支负责不同的任务。这种方法在多模态学习和多任务学习中尤其常见，其中不同的输入类型或不同的任务要求模型有不同的处理分支。</p>
+</li>
+</ol>
+<h3 id="模型复用策略">模型复用策略</h3>
+<ol>
+<li>
+<p><strong>预训练和微调</strong>：可以通过在一个通用任务上预训练模型，然后在特定任务上微调模型的某些层来实现模型复用。这在自然语言处理和图像处理领域尤为常见。</p>
+</li>
+<li>
+<p><strong>特征提取</strong>：利用预训练模型作为特征提取器，提取的特征可以用于不同任务的模型训练中。</p>
+</li>
+<li>
+<p><strong>模型蒸馏（Model Distillation）</strong>：通过模型蒸馏，可以将一个大型模型的知识转移到多个小型模型中。这些小型模型可以针对不同的任务进行优化，同时保持较小的模型大小和更快的推理速度。</p>
+</li>
+</ol>
+<p>将多个小模型结合起来解决不同的问题，需要仔细考虑每个模型的输出如何能为其他任务提供有价值的信息，以及如何在不同模型间高效地共享知识。这通常需要对任务之间</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】分类和回归]]></title>
+        <id>https://jeromezjl.github.io/post/fen-lei-he-hui-gui/</id>
+        <link href="https://jeromezjl.github.io/post/fen-lei-he-hui-gui/">
+        </link>
+        <updated>2024-03-10T07:54:20.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="分类">分类</h1>
+<ul>
+<li><strong>目标变量</strong>：分类任务中的目标变量是离散的，也就是说，它将输入数据映射到预定义的类别或标签中。这些类别通常是有限的且不连续的。</li>
+<li><strong>应用场景</strong>：邮件是否为垃圾邮件、图像中是否含有特定物体、患者是否患有某种疾病等。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>决策树（如CART, ID3, C4.5）</li>
+<li>支持向量机（SVM）</li>
+<li>逻辑回归</li>
+<li>K最近邻（KNN）</li>
+<li>随机森林</li>
+<li>梯度提升决策树（如XGBoost, LightGBM, CatBoost）</li>
+<li>神经网络</li>
+</ul>
+</li>
+</ul>
+<h1 id="回归">回归</h1>
+<ul>
+<li><strong>目标变量</strong>：回归任务中的目标变量是连续的数值。模型的目的是预测出一个具体的数值。</li>
+<li><strong>应用场景</strong>：房价预测、股票价格预测、温度预测等。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>线性回归</li>
+<li>多项式回归</li>
+<li>决策树回归</li>
+<li>支持向量回归（SVR）</li>
+<li>随机森林回归</li>
+<li>梯度提升决策树回归（如XGBoost, LightGBM）</li>
+<li>神经网络</li>
+</ul>
+</li>
+</ul>
+<h1 id="主要区别">主要区别</h1>
+<ul>
+<li><strong>输出类型</strong>：分类是预测离散标签，而回归是预测连续数值。</li>
+<li><strong>评估标准</strong>：分类任务通常使用准确率、精确度、召回率、F1分数等指标进行评估；回归任务则常用均方误差（MSE）、均方根误差（RMSE）、平均绝对误差（MAE）等指标。</li>
+<li><strong>决策边界</strong>：分类任务通常涉及到找到决策边界来区分不同的类别；回归任务则是找到一个最佳拟合线或曲面来预测连续值。</li>
+</ul>
+<h1 id="主要联系">主要联系</h1>
+<ul>
+<li><strong>监督学习</strong>：无论是分类还是回归，它们都属于监督学习范畴，这意味着它们都使用已标注的训练数据来学习输入和输出之间的映射关系。</li>
+<li><strong>模型构建与预测</strong>：分类和回归都涉及到使用训练数据构建模型，并使用这些模型来对新的、未见过的数据进行预测。</li>
+<li><strong>损失函数</strong>：两者都通过最小化损失函数来训练模型。虽然使用的具体损失函数可能不同（如分类通常使用交叉熵损失，回归通常使用均方误差损失），但最小化损失函数的基本思想是一致的。</li>
+</ul>
+<h3 id="从回归到分类的转变">从回归到分类的转变</h3>
+<ul>
+<li>在某些情况下，可以通过引入阈值将回归问题转化为分类问题。例如，在一个二元分类问题中，模型的输出可以是一个连续的概率值，当这个概率值超过某个阈值时，可以将其视为一个类别，否则视为另一个类别。</li>
+</ul>
+<h3 id="从分类到回归的转变">从分类到回归的转变</h3>
+<ul>
+<li>在某些情况下，分类问题也可以转换为回归问题，特别是当类别之间存在天然顺序（有序分类）时。通过预测一个连续的数值并将其映射到最接近的类别，可以处理这类问题。</li>
+</ul>
+<p>总的来说，虽然分类和回归处理的是不同类型的问题，但它们在许多方面是相似的，使用相似的方法，很多算法和技术可以在这两种任务之间转换和重用。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[复试英语]]></title>
+        <id>https://jeromezjl.github.io/post/fu-shi-ying-yu/</id>
+        <link href="https://jeromezjl.github.io/post/fu-shi-ying-yu/">
+        </link>
+        <updated>2024-03-09T06:41:13.000Z</updated>
+        <content type="html"><![CDATA[<p>Postgraduate是大学毕业（graduate）后继续深造、但未拿到学位（Master或Doctor）之前的身份，Master是硕士学位</p>
+<p>中文：<br>
+英文自我介绍</p>
+<p>我叫张继隆，我的英文名叫Jerome，我今年21岁了。我来自天津市，我喜欢我的家乡。我本科就读于北京邮电大学，主修人工智能专业</p>
+<p>我很喜欢人工智能，大学期间，我系统地学习了专业知识，我的线性代数、概率论、机器学习、深度学习、计算机视觉等课程均达到90分以上。我还参加了许多创新比赛，比如数学竞赛，并取得了奖项。做过很多人工智能相关的项目，提升了我的专业素养和专业能力。<br>
+我通过了大学英语四六级考试，其中CET6的成绩在550分以上。我一直是一个勤奋好学，不断提升自己的学生，</p>
+<p>我还积极参加各种活动，我喜欢做运动，因为我相信拥有健康的身体可以让我更加积极地学习和工作。同时，我还喜欢音乐和艺术，本科期间是社团的社长，这段经历提升了我的沟通能力，以及对事情的规划能力。对不同领域的探索扩展了我的思维，让我的头脑更加灵活，更能专注于研究工作。</p>
+<p>我选择继续在北邮深造的原因，是因为我深爱着北邮的学术氛围。老师们有很好的品德素养和专业能力，在我学习过程中给予了我很大的帮助。同时我们学校在社会上的认可度一直是很高的，我爱北邮。</p>
+<p>如果给我一个机会，我会继续努力提高自己。如果我的研究能力在研究生期间得到导师的认可，我将继续攻读博士学位。</p>
+<p>最后，我会尽最大努力发掘自己最大的潜力，脚踏实地地做好每件事。这就是我的自我介绍。我真诚地感谢您的聆听</p>
+<p>Dear professors, good morning/afternoon! Thank you for giving me this opportunity to attend the interview. I hope I can make a good performance today. Now I will briefly introduce myself.</p>
+<p>My name is Zhang Jilong, and my English name is Jerome. I am 21 years old this year. I come from Tianjin, and I love my hometown. I completed my undergraduate studies at Beijing University of Posts and Telecommunications. My major is Artificial Intelligence.</p>
+<p>I have a strong passion for artificial intelligence. During my university years, I systematically studied professional knowledge, and my grades in courses such as linear algebra, probability theory, machine learning, deep learning, and computer vision all exceeded 90 points. I also participated in many innovation competitions, such as math competitions, english competitions and won awards. I have worked on many artificial intelligence-related projects, which improved my professional quality and abilities. I passed the College English Test (CET) Levels 4 and 6, with a score of over 550 in CET6. I have always been a diligent and eager student, constantly striving to improve myself.</p>
+<p>Additionally, I actively participated in various activities. I enjoy doing sports because I believe having a healthy body allows me to study and work more positively. At the same time, I also love music and art. During my undergraduate studies, I was the president of a club, which enhanced my communication skills and ability to plan events. Exploring different fields expanded my thinking, making my mind more flexible and more focused on research work.</p>
+<p>The reason I chose to continue my studies at BUPT is my deep love for the academic atmosphere here. The teachers have good moral character and professional abilities, which have been of great help to me in my studies. At the same time, our school's social recognition has always been very high. I love BUPT.</p>
+<p>If given the opportunity, I will continue to work hard to improve myself. If my research abilities are recognized by my advisors during my graduate studies, I will continue to pursue a Ph.D.</p>
+<p>In conclusion, I will do my best to uncover my greatest potential and earnestly accomplish everything I undertake. This is my self-introduction. I sincerely thank you for listening.</p>
+<p>另外<br>
+I will strive to issue some papers on some influencial journals</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【CV】三维重建]]></title>
+        <id>https://jeromezjl.github.io/post/cv-san-wei-chong-jian/</id>
+        <link href="https://jeromezjl.github.io/post/cv-san-wei-chong-jian/">
+        </link>
+        <updated>2024-03-07T08:46:57.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://github.com/jeromezjl/PhotometricStereoTutorial">github链接</a></p>
+<p>多视角、多光照</p>
+<p>多光照：输入多光照图像，输出三维</p>
+<p><a href="https://www.bilibili.com/video/BV1Mt4y1a7e6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【”UE5夯实基础”每日2更系列】13朗伯漫反射理论</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【CV】人体姿态识别]]></title>
+        <id>https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/</id>
+        <link href="https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/">
+        </link>
+        <updated>2024-03-06T02:39:42.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】基础概念]]></title>
+        <id>https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/</id>
+        <link href="https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/">
+        </link>
+        <updated>2024-03-05T06:16:47.000Z</updated>
+        <content type="html"><![CDATA[<p>有监督：分类、回归<br>
+无监督：聚类、密度估计</p>
+<p>错误率：error_rate：预测错误/全部<br>
+精度：accuracy：1-error_rate</p>
+<p>在深度学习中，参数通常是指神经网络中的权重和偏差。<br>
+这些参数是通过<code>反向传播</code>算法，根据训练数据中的梯度信息自动调整的，以最小化<code>损失函数</code>。<br>
+参数的学习是模型训练的过程，目标是找到最佳的参数配置。</p>
+<h1 id="损失函数">损失函数</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/261059231">损失函数（Loss Function）</a><br>
+计算预测值f(x)与真实值Y的差异程度<br>
+绝对值损失 Mean Absolute Error (MAE)：L1 Loss<br>
+均方损失：L2 Loss<br>
+Huber Loss</p>
+<p><strong>正则化</strong><br>
+在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合<br>
+<a href="https://blog.csdn.net/weixin_41960890/article/details/104891561">一篇文章完全搞懂正则化（Regularization）</a></p>
+<h1 id="向前传播和反向传播">向前传播和反向传播</h1>
+<p>损失函数链式法则对参数求梯度来更新参数值<br>
+<a href="https://www.bilibili.com/video/BV1yG411x7Cc/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">5分钟深度学习-反向传播算法</a><br>
+<a href="https://zhuanlan.zhihu.com/p/447113449">【深度学习篇】：前向传播（forward）和反向传播（backward）</a><br>
+<a href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">【ML】以梯度下降（Gradient Descent）展开的优化器总结</a><br>
+<strong>激活函数</strong><br>
+增加神经网络的非线性表达能力，使之能更好的拟合非线性模型<br>
+<a href="https://www.bilibili.com/video/BV1qB4y1e7GJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">5分钟深度学习-激活函数</a><br>
+<a href="https://zhuanlan.zhihu.com/p/364620596">深度学习笔记：如何理解激活函数？（附常用激活函数）</a><br>
+特点：连续可导（梯度下降）；取值范围是全体实数，将全体实数映射到特定的范围；只需增加非线性的因素，而不需改变对输入的响应状态，所以是单增的，随输入增大而增大<br>
+梯度消失（梯度弥散）：sigmoid趋近无穷时，梯度趋近于0，若某次输入过大，梯度几乎为0，导致参数几乎不更新，导致整个网络学习能力下降<br>
+sigmoid：非零均值函数→同时更新正负→神经网络不易收敛；饱和函数→梯度消失，使用tanh函数可以<br>
+梯度爆炸：使用ReLU函数时，由于函数无上界，如果输出过大，会导致梯度累积，超出上限</p>
+<h1 id="分类和回归">分类和回归</h1>
+<p>本质都是对输入值进行预测的问题，分类输出离散的、对预测类别的置信度，回归输出连续的预测值<br>
+<a href="https://blog.csdn.net/shuiyixin/article/details/88816416">【机器学习小常识】“分类” 与 “回归”的概念及区别详解</a><br>
+<a href="https://www.bilibili.com/video/BV1m4421F7Fg/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">详解逻辑回归、softmax回归和神经网络，三种模型的关联和区别</a></p>
+<h1 id="训练集-验证集-测试集">训练集、验证集、测试集</h1>
+<p>三者必须无交集<br>
+<a href="https://blog.csdn.net/qlkaicx/article/details/134767111#:~:text=%E5%8F%82%E6%95%B0%20%E6%98%AF%E6%A8%A1%E5%9E%8B%E4%B8%AD%E5%8F%AF%E8%A2%AB%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%B0%83%E6%95%B4%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E9%80%9A%E8%BF%87%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BC%98%E5%8C%96%EF%BC%9B,%E8%80%8C%20%E8%B6%85%E5%8F%82%E6%95%B0%20%E5%88%99%E6%98%AF%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E7%94%A8%E4%BA%8E%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%E5%92%8C%E6%80%A7%E8%83%BD%EF%BC%8C%E8%B6%85%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9%E5%92%8C%E4%BC%98%E5%8C%96%E5%AF%B9%E6%A8%A1%E5%9E%8B%E6%80%A7%E8%83%BD%E6%9C%89%E9%87%8D%E8%A6%81%E5%BD%B1%E5%93%8D%E3%80%82">还搞不懂什么是参数，超参数吗？三分钟快速了解参数与超参数的概念和区别！！！</a><br>
+<a href="https://blog.csdn.net/qq_41895003/article/details/104811371">训练集、测试集、验证集之间的区别及理解</a><br>
+训练集：通过训练自动更新参数<br>
+验证集：手动更新超参数<br>
+测试集：测试生成的模型的泛化能力</p>
+<p>k折交叉验证：将数据集分成k份，每次拿出其中的一份作为验证集，剩下k-1份作为训练集<br>
+通过平均误差判断超参数好坏</p>
+<p><code>Q&amp;A</code></p>
+<pre><code>Q：如果loss很低，是不是就不用设置验证集了
+A：在深度学习训练中，即使训练损失（loss）很低，也不意味着可以忽略验证集的设置。这里有几个原因解释为什么验证集依然很重要：
+
+1. 过拟合（Overfitting）：一个很低的训练损失可能意味着模型在训练集上表现得很好，但这也可能是过拟合的一个迹象。过拟合发生时，模型学习到了训练数据中的噪声和细节，而不是底层模式，这会导致模型在未见过的数据上表现不佳。验证集可以帮助检测过拟合情况，因为它提供了模型在非训练数据上的性能评估。
+
+2. 模型选择（Model Selection）：在开发深度学习模型时，我们通常会尝试多种不同的架构、超参数设置等。验证集用于评估这些不同设置的性能，帮助我们选择最佳模型。
+
+3. 调参（Hyperparameter Tuning）：除了选择模型外，我们还需要调整模型的超参数（如学习率、批量大小等）。验证集对于这一过程至关重要，因为它可以帮助我们了解不同超参数设置对模型性能的影响。
+
+4. 泛化能力（Generalization Ability）：最终，我们关心的是模型在实际应用中的表现，即在新的、未见过的数据上的表现。验证集提供了一个近似的泛化能力评估，帮助我们估计模型在现实世界数据上的表现。
+
+因此，即使训练损失很低，也不应该忽视验证集的设置。验证集是深度学习训练过程中不可或缺的一部分，对于确保模型的泛化能力和避免过拟合至关重要。在模型训练的最后阶段，还应该使用独立的测试集对模型进行最终评估，以进一步验证模型的泛化能力。
+</code></pre>
+<pre><code>Q：验证集在所有任务中都是必须的吗？
+A：虽然验证集在许多深度学习和机器学习任务中非常重要，但是否“必须”使用验证集取决于具体的任务、数据的可用性以及目标。在大多数情况下，使用验证集是一种最佳实践，但也有一些情况或任务可能不那么依赖于验证集：
+
+1. 数据量极其有限：在某些情况下，如果可用的数据非常有限，可能无法划分出单独的验证集。在这种情况下，可能会采用交叉验证的方法，这种方法将数据集分为多个小分组，然后依次将其中一个分组作为验证集，其他分组作为训练集，从而有效利用有限的数据。
+
+2. 在线学习或持续学习：对于一些在线学习任务，模型会持续地接收数据并不断更新。在这种情况下，模型可能不会有一个固定的验证集，而是不断地用新数据评估和调整。
+
+3. 使用预训练模型进行微调：当使用预训练模型并对其进行微调以适应特定任务时，如果任务非常接近原始预训练任务，且数据集较小，可能会直接在训练数据上进行微调而不单独设置验证集。然而，这种情况下仍然推荐使用验证集来监控过拟合和模型性能。
+
+4. 简单任务或明确的成功标准：在一些简单的任务或当成功标准非常明确且容易评估时（如明确的数学问题），可能不需要单独的验证集来调整模型参数。
+
+即便在这些特殊情况下，最终还是需要一个独立的测试集来评估模型的性能，确保模型能够在未见过的数据上良好工作。综上所述，虽然在某些特定场景下可以不使用验证集，但在大多数情况下，为了保证模型的泛化能力和避免过拟合，使用验证集都是一种非常重要的实践。
+</code></pre>
+<p><strong>超参数调整</strong><br>
+利用验证集调整超参数的一些策略</p>
+<ol>
+<li>在每个epoch后或几个epoch后使用验证集验证模型的loss，确保模型权重可以被保存在本地，手动调整超参数后继续训练</li>
+<li>使用早停技术：在每个epoch结束时评估模型在验证集上的性能，并在性能不再提升时停止训练</li>
+<li>使用自动化超参数优化（Hyperparameter Optimization, HPO）</li>
+<li>设置模型检查点（Model Checkpointing）</li>
+</ol>
+<h1 id="过拟合">过拟合</h1>
+<p>过拟合：认为只有和训练数据一样的才是<br>
+欠拟合：认为树也是叶子<br>
+<a href="https://zhuanlan.zhihu.com/p/158869433">机器学习模型的容量，过拟合与欠拟合</a><br>
+dropout：前向传播的时候，让某个神经元的激活值以一定的概率 p 停止工作，这样可以使模型泛化性更强，防止过拟合</p>
+<h1 id="算法分类">算法分类</h1>
+<p>机器学习算法通常根据学习方式和应用场景被分类为几大类：</p>
+<ol>
+<li>
+<p><strong>监督学习（Supervised Learning）</strong>:</p>
+<ul>
+<li>在这种类型的学习中，算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。</li>
+<li>常见的算法包括线性回归、逻辑回归、支持向量机（SVM）、决策树、随机森林、神经网络等。</li>
+</ul>
+</li>
+<li>
+<p><strong>无监督学习（Unsupervised Learning）</strong>:</p>
+<ul>
+<li>在无监督学习中，算法试图从未标记的数据中找出模式。因为没有指导，所以这种类型的学习试图通过数据本身的结构来理解数据。</li>
+<li>典型的算法包括聚类算法（如K-means、层次聚类）、降维算法（如主成分分析PCA、t-SNE）、关联规则学习算法（如Apriori、Eclat）等。</li>
+</ul>
+</li>
+<li>
+<p><strong>半监督学习（Semi-Supervised Learning）</strong>:</p>
+<ul>
+<li>这种学习方式介于监督学习和无监督学习之间。它使用少量的标记数据和大量的未标记数据进行训练。通过这种方式，算法可以提高其性能和准确性。</li>
+<li>半监督学习方法通常包括自训练、多视图学习、图基方法等。</li>
+</ul>
+</li>
+<li>
+<p><strong>强化学习（Reinforcement Learning）</strong>:</p>
+<ul>
+<li>在强化学习中，算法（通常称为智能体）通过与环境交互来学习如何达到目标。智能体从环境中获得奖励或惩罚，并使用这些反馈来指导其未来的行为。</li>
+<li>常见的强化学习算法包括Q-learning、SARSA、深度Q网络（DQN）、策略梯度方法等。</li>
+</ul>
+</li>
+<li>
+<p><strong>自监督学习（Self-Supervised Learning）</strong>:</p>
+<ul>
+<li>这是一种特殊类型的无监督学习，其中数据的一部分被用作监督信号。在自监督学习中，模型试图从数据的未标记部分预测数据的标记部分，从而在没有显式标签的情况下学习数据的表示。</li>
+<li>应用示例包括预训练的语言模型、图像特征学习等。</li>
+</ul>
+</li>
+<li>
+<p><strong>迁移学习（Transfer Learning）</strong>:</p>
+<ul>
+<li>这种学习方法涉及将从一个任务中学到的知识应用到另一个不同但相关的任务上。这是通过重用预训练模型的一部分并对其进行微调来实现的，以适应新任务。</li>
+<li>这在深度学习中尤其常见，例如使用预训练的卷积神经网络（CNN）进行图像分类任务。<br>
+<a href="https://jeromezjl.github.io/post/dl-mo-xing-fu-yong">【DL】模型复用</a></li>
+</ul>
+</li>
+<li>
+<p><strong>生成式对抗网络（GANs）</strong>:</p>
+<ul>
+<li>GANs是一种框架，用于通过两个网络（一个生成器和一个鉴别器）之间的对抗过程来训练生成模型。生成器生成新的数据实例，而鉴别器评估它们是来自于真实数据集还是生成器产生的。</li>
+<li>GANs广泛用于图像生成、图像转换、增强现实等领域。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Linux】深度学习配置]]></title>
+        <id>https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi/</id>
+        <link href="https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi/">
+        </link>
+        <updated>2024-02-29T06:00:15.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_45484237/article/details/123514175">实现Linux服务器配置深度学习环境并跑代码完整步骤</a></p>
+<p>使用nvidia-smi完全查看显卡型号<br>
+nvidia-smi --format=csv --query-gpu=index,name,driver_version,memory.total,memory.used,memory.free<br>
+或使用<br>
+pip install gpustat<br>
+gpustat<br>
+来查看</p>
+<p><a href="https://zhuanlan.zhihu.com/p/102449309">Linux下Anaconda环境安装/创建/激活/退出/删除/管理</a><br>
+<a href="https://blog.csdn.net/Aorg1/article/details/134800426">conda环境下安装nvcc -V</a></p>
+<p><a href="https://blog.csdn.net/m0_50181189/article/details/122440985">【详细】Ubuntu18.04安装更新显卡驱动、安装CUDA及cuDNN、CUDA版本切换</a></p>
+<p>退出 python：&gt;&gt;&gt; quit（）</p>
+<p><a href="https://blog.csdn.net/weixin_59047731/article/details/135634418">pyCharm专业版破解激活（超详细）</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/486360176">一文读懂 PyTorch 显存管理机制</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[毕设]]></title>
+        <id>https://jeromezjl.github.io/post/bi-she/</id>
+        <link href="https://jeromezjl.github.io/post/bi-she/">
+        </link>
+        <updated>2024-02-28T14:16:52.000Z</updated>
+        <content type="html"><![CDATA[<p>Linux运行python文件<br>
+python3 script.py</p>
+<p><strong>Hugging Face</strong><br>
+&quot;NLP 界的 GitHub&quot;<br>
+<a href="https://www.bilibili.com/video/BV1YU4y1g753/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Hugging Face 系列视频（一）：Hugging Face 及 Transformer/Datasets/Tokenizers库</a><br>
+<a href="https://blog.csdn.net/a1920993165/article/details/128082968">Huggingface的介绍，使用（CSDN最强Huggingface入门手册）</a></p>
+<p><strong>Fine tuning 微调</strong><br>
+将模型迁移学习，影响因素：新数据集的大小、新数据和原数据集的相似程度<br>
+<a href="https://zhuanlan.zhihu.com/p/35890660">CNN入门讲解：什么是微调（Fine Tune）？</a><br>
+<a href="https://blog.csdn.net/weixin_42137700/article/details/82107208">什么是fine-tuning？</a><br>
+<a href="https://zhuanlan.zhihu.com/p/620618701">预训练大语言模型的三种微调技术总结：fine-tuning、parameter-efficient fine-tuning和prompt-tuning的介绍和对比</a></p>
+<p><strong>使用 COCO 数据集进行预训练的 VIT-GPT2 模型</strong><br>
+COCO：起源于微软的、大型的、丰富的物体检测数据集<br>
+<a href="https://blog.csdn.net/qq_41185868/article/details/82939959">Dataset之COCO数据集：COCO数据集的简介、下载、使用方法之详细攻略</a><br>
+<a href="https://huggingface.co/nlpconnect/vit-gpt2-image-captioning">vit-gpt2-image-captioning</a></p>
+<p><strong>CLIP</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50/101</a><br>
+<a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a><br>
+<a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a></p>
+<p>VIT<br>
+embedding：通过矩阵乘法，将token升降维，从而让计算机理解。将一个东西映射为向量</p>
+<p>linear层：1. 将每个patch变成一维  2. 使一维向量的维度和 transformer 输入维度相符</p>
+<p>位置编码和embedding相加</p>
+<p>是一个特征提取器<br>
+先将图像分割为不同的patch<br>
+然后将每个patch拉成一个向量，加入位置信息</p>
+<p>transformer必须在大量数据</p>
+<p><a href="https://blog.csdn.net/weixin_44966641/article/details/118733341">Vision Transformer（ViT）PyTorch代码全解析（附图解）</a><br>
+<a href="https://juejin.cn/post/7238148905095839804">用🤗 Transformers微调ViT图像分类</a></p>
+<p>deepfashion<br>
+图片：750x1101，共44096个</p>
 ]]></content>
     </entry>
     <entry>
@@ -128,10 +494,11 @@ joint efforts 共同努力<br>
 I am deeply obliged for your hard work 我十分感谢您的努力</p>
 <h1 id="可用单词">可用单词</h1>
 <p>character 角色<br>
+plight 困境<br>
 vigorous 有活力的<br>
 tremendous 巨大的<br>
 eminent 优秀的<br>
-eminently = exceedingly 非常<br>
+eminently = exceedingly = Immensely 非常<br>
 advantageous 有利的，有好处的<br>
 miraculous 奇迹般的<br>
 gorgeous 美丽的<br>
@@ -148,6 +515,8 @@ rational 合理的<br>
 feasible 可行的<br>
 considerable 相当多的<br>
 critical / essential / be extremely vital to us 至关重要的<br>
+severe、critical 严重的<br>
+terrible / harmful<br>
 defect 缺点<br>
 eliminate 消除<br>
 therefore = hence 因此<br>
@@ -253,7 +622,10 @@ repent（doing）后悔做<br>
 it is imperative for us to take drastic measures. 当务之急是采取严厉措施<br>
 enhance the public awareness 提高公众意识<br>
 a combination of ... 的结合<br>
-this tendency is rather disturbing 这种倾向很令人担忧</p>
+this tendency is rather disturbing 这种倾向很令人担忧<br>
+give a helping hand<br>
+a minority of<br>
+every individual</p>
 <p><strong>道歉信</strong><br>
 I have recently been diagnosed with a serious cold<br>
 If possible, i would like to postpone the interview to another day later in the week<br>
@@ -292,11 +664,11 @@ improve your level of proficiency 提高你的熟练程度<br>
 A good command of English will enable you to get an edge over your peers<br>
 好的英语水平让你比同龄人更胜一筹</p>
 <p><strong>纪要</strong><br>
-during the last meeting，the following issues were addressed.<br>
+during the latest meeting，the following issues were addressed.<br>
 If you find any errors or omissions, please contact me</p>
 <p><strong>询问信</strong><br>
 I am writing to seek your assistance to help...<br>
-I hope you can kindly furnish me with detailed information regarding the above-mentioned questions.<br>
+I hope you can kindly furnish me with specific details regarding the above-mentioned questions.<br>
 I wonder if it would be convenient for you to do...</p>
 <h1 id="大作文">大作文</h1>
 <p>第一段：不用提出论点，只描述即可<br>
@@ -325,516 +697,14 @@ the author assumes that</p>
 the caricature is to illustrate that<br>
 what the drawing intends to convey is that<br>
 I cling to the idea that 我坚持... 的观点<br>
-it is of vital significance to be</p>
+from my perspective<br>
+it is of vital significance to be<br>
+Take an example to illustrate....</p>
 <p><strong>第三段</strong><br>
-To sum up</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】高数]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-gao-shu/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-gao-shu/">
-        </link>
-        <updated>2023-08-11T10:17:37.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【考研441分】24考研数学全年规划！B站最全！</a><br>
-<a href="https://zhuanlan.zhihu.com/p/390928056">考生必记：三角函数公式汇总+记忆（没有比这更全）</a><br>
-<a href="https://www.desmos.com/calculator?lang=zh-CN">在线函数作图</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/99945521">10幅图帮助理解拉格朗日乘数法的原理</a></p>
-<p><strong>数学竞赛小 tips</strong></p>
-<p>两项形式相似想夹逼，放缩，最大最小值</p>
-<p>真    题    嗅    探<br>
-2020年前：证明喜欢中值定理<br>
-2020年后：证明喜欢泰勒</p>
-<p>n 项和展开公式：二项式定理</p>
-<p>A=&gt;B，A 能推出 B，则 A 是 B 的充分条件（B 的充分条件是 A），B 是 A 的必要条件（A 的必要条件是 B）</p>
-<p>A 能推出 B，则 A 发生，B 一定发生，则事件 A ∈ B （小充分，小的是充分条件，大必要，大的是必要条件）</p>
-<p><strong>函数极限和数列极限的辨析</strong><br>
-🔸函数<br>
-极限可以取在任意位置</p>
-<p>🔸数列 （定义在 0, +∞）极限的定义理解：<br>
-n 趋于正无穷时，xn 趋于 a<br>
-<code>注</code><br>
-数列的极限一定是 n 趋向于无穷，因为数列中的 n 是指自然序列，也就是 n=1，2，...... 以此类推，也就是说，n 只取正整数，所以求数列的极限 n 只能趋于正无穷大。有限数列没有极限，只有无穷数列才有极限</p>
-<p><strong>函数有界和数列有界的辨析</strong><br>
-🔸函数有界<br>
-f(x) 在 (a,b) 上连续，且 f(a+) f(b-) 均存在。区间可以拓展到无穷，只要保证两端极限均存在即有界。</p>
-<p>🔸数列有界<br>
-任意一项均小于一个数 &amp;&amp; 大于一个数。比如 xn = 1/n，上界：1，下界：0<br>
-有界数列一定有上界和下界；只有上界/下界的数列不是有界数列</p>
-<p><strong>极限和有界的联系</strong><br>
-🔸函数<br>
-函数有极限 a，则在 a 的邻域内局部有界（可以拓展为无穷）<br>
-函数有界不能推出函数有极限，比如 sin cos</p>
-<p>🔸数列<br>
-如果一个数列“收敛”（有极限），那么这个数列一定有界<br>
-如果一个数列有界，这个数列未必收敛。例如数列 ：“1，-1，1，-1，……，(-1)n+1”</p>
-<p><strong>无穷小和有界</strong><br>
-函数在 x-&gt;x0 无穷小，则 x0 点极限为 0，且在 x0 邻域内局部有界。（显而易见，为了和数列做对比）<br>
-无穷小数列，n-&gt;+∞ ，an = 0；无穷小数列同时是有界和收敛数列</p>
-<p><strong>综上分析：</strong><br>
-数列 xn = 1/n，上界：1，下界：0；极限 n-&gt;∞ xn = 0；1/n 是无穷小数列</p>
-<p><strong>经典反例</strong><br>
-在判断无穷和有界的题目中，经典反例如下</p>
-<p>xn = 0 n奇；n n偶；yn = n n奇；0 n偶；<br>
-xn，yn 的无穷极限不存在；都是无界值；xn 和 yn 相乘为0；</p>
-<p>xn = 1，1，3，1，....  yn = 1，2，1，4，....<br>
-xn，yn 无穷极限不存在，但 xn 和 yn 乘积极限为无穷；</p>
-<p><strong>可去间断点</strong><br>
-f(x) 在 x₀ 处得到左、右极限均存在且相等的间断点，称为可去间断点。 需要注意的是，可去间断点需满足 f(x) 在 x₀ 处无定义，或在 x₀ 处有定义但不等于函数 f(x) 在 x₀ 的左右极限。</p>
-<p>拉格朗日中值求极限要保证 f′(ξ) 不为 0 / ∞<br>
-<a href="https://blog.csdn.net/yuxuezhang/article/details/120242578">一文彻底搞懂拉格朗日中值定理秒杀复杂极限问题（内含高级秒杀结论）</a></p>
-<p>注意，n 阶可导，洛必达只能到 n-1 阶。<br>
-因为 n 阶可导，只能保证 n-1 阶导数存在且连续。而不知道 n 阶导数是否连续。不连续是不能用洛必达的。<br>
-若 n 阶连续可导，则可以洛到 n 阶</p>
-<p><strong>驻点</strong><br>
-驻点是一阶导数等于零的点，拐点是指函数凹凸性发生改变的点。 驻点要么是极值点（二阶导不等于零）要么是拐点（二阶导等于零）。</p>
-<p><strong>拐点</strong><br>
-函数在某点的二阶导数为零或不存在，且二阶导数在该点两侧符号相反，该点即为函数的拐点。若二阶导数在该点两侧符号相同，则不是拐点。</p>
-<p><strong>渐近线</strong><br>
-先找间断点，看有没有铅直渐近线<br>
-再把x趋向于无穷，看有没有水平渐近线<br>
-有水平渐近线的地方没有斜渐近线<br>
-没有水平渐近线的一侧，找斜渐近线</p>
-<h1 id="积分">积分</h1>
-<p><strong>不定积分：原函数的存在定理</strong></p>
-<ol>
-<li>fx 连续，则原函数 Fx 一定存在</li>
-<li>fx 不连续，fx 存在第一类间断点，则 Fx 不存在；fx 仅存在震荡间断点，Fx 可能存在（x²sin(1/x)）</li>
-</ol>
-<p>连续 -&gt; 有原函数；有原函数 !-&gt; 连续</p>
-<p><strong>定积分的可积性</strong><br>
-必要条件：可积函数必有界<br>
-充分条件：在闭区间 [a, b] 上</p>
-<ol>
-<li>fx 连续</li>
-<li>fx 有界，且只有有限个间断点</li>
-<li>fx 只有有限个第一类间断点（间断点对定积分无影响）</li>
-</ol>
-<p>注意<br>
-fx 可积指的是在一定区间上的定积分，而是否存在原函数指的是不定积分，二者不同</p>
-<p><a href="https://www.bilibili.com/video/BV1G4411U7X9/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33"><strong>快速学会“极坐标积分换序”</strong></a><br>
-最简单的方法就是把 θ 和 r 换在直角坐标中，然后使用直角坐标的思路进行换限。<br>
-注意换完限之后也要加 rdrdθ</p>
-<p><strong>积分不等式比较</strong><br>
-常用结论<br>
-sinx &lt; x &lt; tanx (x∈[0, pai])</p>
-<p>积分不等式证明常用思路</p>
-<ol>
-<li>拆积分限，使两边积分限相等，再做比较</li>
-<li>变量代换，使两边积分限相等</li>
-<li>积分中值定理</li>
-<li>fx 单调性已知，构造变上限积分</li>
-</ol>
-<p><strong>反常积分审敛</strong></p>
-<ol>
-<li>定义法：直接求积分</li>
-<li>和 p 积分相比较：① 直接将原式化为 p 积分进行判断 ②和 p 积分作比求极限</li>
-</ol>
-<p><strong>带绝对值的积分</strong><br>
-由定积分推得二重积分，都需要分区间讨论，二重积分的区间就是被积区域，通过几何关系讨论正负<br>
-<a href="https://www.bilibili.com/video/BV1QP41177nx/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">带绝对值的定积分：分区间讨论</a><br>
-<a href="https://www.bilibili.com/video/BV1UP4y137TN/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">被积函数带有绝对值的二重积分</a></p>
-<p><strong>三角函数</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/162297688">三角函数的另外三个伙伴—cot，sec，csc</a></p>
-<p><strong>极坐标换元</strong><br>
-x = rcosθ<br>
-y = rsinθ<br>
-θ 范围直接看就行，把 r 和 θ 带入原方程，求得 r 的范围。<br>
-如：x^2 + y^2 &lt;= 2x；带入得：r^2 &lt;= 2rcosθ；r &lt;= 2cosθ<br>
-注：r 恒大于 0</p>
-<p><a href="https://zhuanlan.zhihu.com/p/364642276">变量代换求解微分方程</a></p>
-<p><strong>质心</strong><br>
-<a href="https://blog.csdn.net/qq_42578970/article/details/106419646?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D">质心计算公式</a></p>
-<p><strong>收敛域和收敛区间</strong><br>
-收敛区间是个开区间，而收敛域就是判断在收敛区间的端点上是否收敛</p>
-<p>收敛半径一定存在</p>
-<p><strong>二重积分的奇偶性</strong><br>
-有积分区域 D<br>
-x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称<br>
-关于 x/y 为奇函数，积分为 0；关于 x/y 为偶函数，则积分为二倍</p>
-<p><a href="https://www.bilibili.com/video/BV1Qs4y1e75h/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">三重积分的对称性（奇偶＋轮换）</a></p>
-<p><strong>计算第二型曲面积分的方法</strong></p>
-<ol>
-<li>若曲线封闭，用格林公式</li>
-<li>若与路径无关，改换路径/找原函数</li>
-<li>补线用格林</li>
-<li>直接换元计算</li>
-</ol>
-<p>判断是否与路径无关：若 ∂P/∂y = ∂Q/∂x，则与路径无关，反之不是<br>
-改换路径：沿坐标轴走直线，可先沿x再沿y，也可先沿y再沿x，看哪个更简单<br>
-找原函数：凑微分，直接带值</p>
-<p>补线用格林：补一条路径，形成封闭曲线，再把补的减掉<br>
-注意格林公式使用条件，P、Q 在封闭曲线上有连续一阶偏导。若在某点（比如0点）没有定义</p>
-<h1 id="无穷级数">无穷级数</h1>
-<p><a href="https://www.bilibili.com/video/BV1Va411V7bm/?is_story_h5=false&amp;p=1&amp;share_from=ugc&amp;share_plat=ios&amp;share_session_id=A7B70058-1BD8-42A6-9025-7B71CDEE01A4&amp;share_tag=s_i&amp;unique_k=sOfyyCn&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">级数选择题中的反例汇总（不只是反例，更是思想方法！）</a><br>
-收敛+发散 必发散<br>
-收敛+收敛 必收敛<br>
-都发散，和敛散性不定，比如两数列恰好抵消，则为收敛</p>
-<p>加括号会提高级数收敛的可能性<br>
-收敛级数加括号仍收敛<br>
-若级数加括号收敛，则原级数不一定收敛<br>
-加括号后发散，原级数一定发散<br>
-原因：加括号可能抵消一些项，可能会使级数收敛</p>
-<p>审敛法只是充分条件，非必要条件，且只适用于正项级数<br>
-比如当比值/根值等于1时，就判断不出来了</p>
-<p>加绝对值会提高发散的可能性，由于都变为正项，整体值变大<br>
-正项级数变为交错级数，提高收敛可能性<br>
-提高阶数，提高收敛可能性</p>
-<p>条件收敛也是收敛，指的是级数本身收敛，但加了绝对值不收敛<br>
-绝对收敛是，加了绝对值都收敛，那么原级数更收敛，二者都是收敛<br>
-落脚点都在原级数</p>
-<p><strong>和函数计算</strong></p>
-<ol>
-<li>求收敛域，也就是和函数的定义域（因为逐项可导、逐项可积都是在开区间上成立）</li>
-<li>在收敛区间（开区间上求和函数）</li>
-<li>单独判断端点，若不能合并，需要分段</li>
-</ol>
-<p>注意：</p>
-<ol>
-<li>已知 S'(x) 求 S(x) 需要使用变上限积分  ∫x S(t)dt</li>
-<li>只要对 x 的 n 次方进行改变的时候，就要判断 n 从 0 还是 1 开始取</li>
-</ol>
-<p><a href="https://www.bilibili.com/video/BV1eb4y1U7fP/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">如何选择恰当的××（区域），使得你的××（积分）最大！</a></p>
-<h1 id="曲线曲面积分">曲线曲面积分</h1>
-<p><a href="https://blog.csdn.net/weixin_47187147/article/details/124933148?spm=1001.2014.3001.5506">各类重积分 | 二重积分、三重积分、线面积分 —— 大总结</a><br>
-<strong>是否可以带入边界方程</strong><br>
-曲线曲面积分可直接带入边界方程，而二重、三重积分不可；使用格林、斯托克公式将线面积分化为二三重积分后也不可带入</p>
-<p><strong>对称性、奇偶性</strong><br>
-一型线面积分都有奇偶性、轮换对称性；二型线面无<br>
-🔺判断曲线对称性的小方法<br>
-将曲线线方程中的 x 换 -x 后，方程不变，则该曲线关于 x=0（即 y 轴）对称<br>
-当然最靠谱的是配方，然后看相对标准曲线的偏移<br>
-<strong>一型线积分</strong><br>
-得到的是弧长 / 周长；有对称性，可以直接带入边界方程<br>
-<strong>二型线积分</strong>（今年概率大）<br>
-对线坐标的积分，无对称性，</p>
-<ol>
-<li>x y 的参数式，直接计算（考的情况很少）</li>
-<li>补线用格林（必须封闭）且是：∂Q/∂x - ∂P/∂y （别反了）
-<ol>
-<li>面积在线左侧为正</li>
-<li>区域内点必须有定义，否则单独圈出来处理</li>
-<li>线积分与路径无关：∂Q/∂x =∂P/∂y<br>
-<strong>一型面积分</strong><br>
-得到曲面面积；对称性<br>
-<strong>二型面积分</strong>（去年考的这个）<br>
-注意：只有用高斯公式时才需要考虑曲面是否封闭，投影法不需要<br>
-投影法可以考虑的点：</li>
-</ol>
-</li>
-<li>若投到面上为一条线，则积分为 0</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【踩坑】WIFI连不上——网络适配器错误]]></title>
-        <id>https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/</id>
-        <link href="https://jeromezjl.github.io/post/cai-keng-wifi-lian-bu-shang-wang-luo-gua-pei-qi-cuo-wu/">
-        </link>
-        <updated>2023-08-10T04:01:55.000Z</updated>
-        <content type="html"><![CDATA[<p>总是出现 WIFI 图标消失的问题，原因是网卡被禁用，处理方式是去 Intel 官网下载符合型号的官方驱动，进行修复。</p>
-<p>查看设备管理器：<br>
-运行窗口输入 devmgmt.msc</p>
-<p><a href="https://blog.csdn.net/hhxy_wlzx/article/details/103749207?ydreferer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8%3D">AC9560网卡等类似驱动无法正常启动解决方法</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/419468589">Windows 踩坑——Intel(R) Wireless-AC 9560 160MHz 报错无法连接 WiFi</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[微信小程序开发]]></title>
-        <id>https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/</id>
-        <link href="https://jeromezjl.github.io/post/wei-xin-xiao-cheng-xu-kai-fa/">
-        </link>
-        <updated>2023-08-06T10:01:14.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/jackson-yqj/p/9843696.html">微信小程序开发的基本流程</a><br>
-<a href="https://blog.csdn.net/baidu_31788709/article/details/107348402">微信小程序开发全流程记录（从前台到后台，到发布）</a><br>
-<a href="https://blog.csdn.net/m0_64875238/article/details/127796691">微信小程序开发（超详细保姆式教程）</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】信息整合]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-xin-xi-zheng-he/">
-        </link>
-        <updated>2023-07-26T11:34:41.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="北邮">北邮</h1>
-<p><a href="https://ai.bupt.edu.cn/kxyj/yjfx.htm">研究方向</a></p>
-<p><strong>北邮人论坛</strong><br>
-导师推荐<br>
-https://bbs.byr.cn/#!article/StudyShare/203152</p>
-<p>何召锋、</p>
-<p>杨洁：海量泛在感知数据的智能分析与处理方法，以及基于感知信息的智能决策计算理论与技术；泛在网络感知大数据智能计算、智能网络优化与路由算法、公共安全智能图像计算、多模态天基感知数据智能计算、人机协同智能辅助诊断</p>
-<p>复试：<br>
-数据结构<br>
-人工智能算法<br>
-英文自我介绍</p>
-<p><a href="https://zhuanlan.zhihu.com/p/615652800">23复试分析|清华大学-深圳研究院！</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/615696688">2023年北京邮电大学计算机考研考情分析！！</a></p>
-<p><a href="https://www.zhihu.com/question/536212509">考研如何备考北京邮电大学人工智能专业809方向？</a></p>
-<h1 id="香港留学">香港留学</h1>
-<p><a href="https://www.zhihu.com/question/496130863">香港前五的大学里，哪些计算机硕士专业人工智能强一点？</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/611773896">24考研PDF无水印电子书汇总</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/612655797">考研英语黄皮书选择与使用方法指南（非常全）</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】概率论]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/">
-        </link>
-        <updated>2023-07-14T04:15:37.000Z</updated>
-        <content type="html"><![CDATA[<p>概率为 0 的事件与任意事件相互独立<br>
-<strong>全概率公式做题步骤</strong></p>
-<ol>
-<li>确定要求的事件A</li>
-<li>找完备事件组，列出各种情况Bi(i=1,2,3...)</li>
-<li>在情况Bi下，事件A发生的概率，P(A) = ∑P(Bi)P(A|Bi) = ∑P(ABi)</li>
-</ol>
-<p>注意，事件A零碎分布于事件B，所以需要将B的各种情况合起来计算<br>
-<img src="https://jeromezjl.github.io/post-images/1689308727900.png" alt="" loading="lazy"></p>
-<p>将自然语言和数学语言相互转化，找到对应的值</p>
-<h1 id="分布函数">分布函数</h1>
-<p>分布函数端点值的辨析：<br>
-<a href="https://blog.csdn.net/qq_24451605/article/details/44115311">理解分布函数(概率论)</a></p>
-<p><code>注意</code><br>
-只有连续型分布有分布函数和概率密度，离散型没有<br>
-混合型概率分布只有分布函数，没有概率密度</p>
-<p>分布函数连续 ⇔ 连续型随机变量<br>
-分布函数必须右连续，只是针对点而言，右连续的函数也可以不是连续函数</p>
-<h1 id="联合概率">联合概率</h1>
-<p>注意，已知边缘分布，不能推得联合分布，当且仅当边缘分布相互独立的时候，可以通过相乘来确定联合分布</p>
-<p><strong>用联合概率密度求 Z(x,y)</strong><br>
-当作二重积分算，积分区域是 xy 的范围，被积函数是 f(x,y)，要移动的图像是 P{} 内的函数<br>
-比如 P{X+Y&gt;1} ，选定一个要积的变量，比如x，则 y&gt;1-x<br>
-作图，在积分区域里积分，得到概率值。</p>
-<p>🔺注意：不管积分区域是什么样，也就是 P{} 括号内的函数是什么样，和联合分布函数无关。联合分布函数都是 f(x, y) （被积函数）</p>
-<p><strong>求 z = g(x, y) 的分布函数</strong></p>
-<ol>
-<li>xy都是离散型，很简单，直接看就行</li>
-<li>xy都是连续型，则把 z 看作常数，讨论 z 的范围，然后再用上面联合概率密度求概率的方法</li>
-<li>x是离散型，y是连续型（离连型）全概率公式+分布函数法<br>
-先写出 P{ X + Y ≤ Z } ，然后用全概率公式，分为 P{ X + Y ≤ Z ，X=0} P{ X + Y ≤ Z ，X=1} 等区间<br>
-然后带入 X=0，X=1，化简表达式，变成  P{ X=0，Y ≤ Z }，P{ X=1，Y ≤ Z-1 }<br>
-然后讨论 z 的范围，根据 X+Y=Z 来估计。比如 0&lt;X&lt;1，0&lt;Y&lt;1，那么 讨论 Z ∈（0，2）比如      z&lt;0 时，Fz(z)=0<br>
-当 z 的取值在积分区域里时，用二重积分计算概率值</li>
-</ol>
-<p><a href="https://blog.csdn.net/kangkanglhb88008/article/details/90750074">关于概率论里的Z=max{X,Y}，min{ X,Y }分布的理解与计算方法</a></p>
-<h1 id="数字特征">数字特征</h1>
-<p><strong>连续型求期望</strong><br>
-先求密度：先用 P{U≤u} 卡出分布函数，然后求导</p>
-<p><strong>判断相关和独立</strong><br>
-X Y 不相关 ⇔ EXY = EXEY (ρ=0)<br>
-X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】线性代数]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/">
-        </link>
-        <updated>2023-07-10T13:50:14.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="行列式">行列式</h1>
-<p>性质</p>
-<ol>
-<li>行列式的性质对于行和列都满足</li>
-<li>行列式中相邻的两行(列)互换，行列式值反号。注意，不是相邻的行(列)不能直接交换，必须一行一行或者一列一列的交换。</li>
-<li>某一行乘 k，行列式乘 k；所有行都乘 k，行列式乘 k 的 n 次方</li>
-<li>有两行(列)一样 / 成倍数（提出一个 k 还是一样）行列式值为 0</li>
-<li>若行列式的某一列（行）的元素都是两数之和，则此行列式等于两个行列式之和</li>
-<li>矩阵可逆 行列式为 0</li>
-<li>矩阵转置行列式的值不变</li>
-<li>|kA|  = k^n |A|</li>
-</ol>
-<h1 id="矩阵">矩阵</h1>
-<p><strong>与矩阵的秩有关的结论</strong></p>
-<ol>
-<li>A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}</li>
-<li>AT 为 A 的转置，则有 r(A) = r(AT) = r(AAT) = r(ATA)</li>
-<li>若 A 与 B 相似即 A~B，则有 r(A) = r(B)</li>
-<li>r(AB) ≤ min{r(A),r(B)}</li>
-<li>r(A + B) ≤ max{r(A),r(B)} ≤ r(A,B) ≤ r(A) + r(B)</li>
-<li>若 P，Q 可逆，则有 r(PAQ) = r(A)</li>
-<li>若 A 可逆， r(AB)=r(BA)=r(B)</li>
-<li>A 为 m x n 矩阵，且 r(A) = n（列满秩），则  r(AB)= r(B)</li>
-<li>A 为 m x n 矩阵，B 为 n x s 矩阵，且 AB = O，则  r(A) + r(B) ≤ n</li>
-<li>伴随矩阵 A* 的秩：0、1、n</li>
-</ol>
-<p><a href="https://www.bilibili.com/video/BV1VW4y1o7D2/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【矩阵】分块矩阵！那些&quot;考研机构&quot;舍不得讲的内容...</a></p>
-<h1 id="n维向量">ｎ维向量</h1>
-<p><strong>向量组的定理辨析</strong><br>
-梳理思路：从定义 到 方程组 到 方程组的直观理解 到 系数矩阵的秩 的解释</p>
-<p>🔺向量组线性相关 ⇔ 至少存在一组非零系数使向量组为 0 ⇔<br>
-齐次方程组有非零解 ⇔ 行列式 = 0 ⇔ 未知数数量比方程组多 ⇔<br>
-n 维列向量对应 n 个方程组，s 个列向量对应 s 个未知数，s &gt; n  ⇔<br>
-系数矩阵为扁长方形则一定相关 ⇔ 有效方程组数量（向量组的秩）小于未知数个数 s（列数）</p>
-<p>向量 α 和 β 线性相关，则 β=kα</p>
-<p>🔺向量组线性无关 ⇔ 当且仅当 k1=k2=...=ks=0 向量组 = 0 ⇔<br>
-齐次方程组只有零解 ⇔ 若为 nxn 则 行列式 ≠ 0（可逆）⇔ 未知数数量等于方程组<br>
-⇔ 向量组的秩（有效方程组数量）等于列数（未知数个数），即列满秩（A 为 m x n 矩阵，则有 0 ≤ r(A) ≤ min{m,n}）⇔ 向量组中至少有一个向量可由其余的向量线性表出</p>
-<p>注意，有效方程组只能为扁长形和正方形，不能为竖长，竖长意味着方程组个数大于未知数，则无解</p>
-<p><strong>判定向量组线性无关</strong></p>
-<ol>
-<li>用定义，k1=k2=...=ks=0，利用已知条件对式子做变换（左乘、右乘 / 相加减）</li>
-<li>方程组只有零解 ⇔ 特殊情况：当矩阵为 nxn 时，行列式 ≠ 0 ⇔ 一般情况：矩阵满秩<br>
-行向量组线性无关 ⇔ 行满秩<br>
-列向量组线性无关 ⇔ 列满秩</li>
-<li>整体组无关，部分组无关</li>
-</ol>
-<p><strong>相关无关判定</strong><br>
-部分组相关 ⇒ 整体组相关<br>
-整体组无关 ⇒ 部分组无关</p>
-<p>缩短组无关 ⇒ 延伸组无关<br>
-延伸组相关 ⇒ 缩短组相关</p>
-<p><strong>p68 定理 3.7 理解</strong><br>
-相关的多数向量能用少数向量表出（少数向量是基底，多数向量为空间中的很多向量）<br>
-无关的少数向量能用多数向量表出（空间中的很多向量通过变换可以求出基底）</p>
-<p><strong>向量线性表出相关定理</strong></p>
-<ol>
-<li>x1α1+x2α2+....=xnαn=β 有非零解</li>
-<li>[α1,α2,...,αn,β] 方程组有解，r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)</li>
-<li>高维可以表示低维：α1,α2,...,αt 可由 β1,β2,...,βt 表出，则 r(α1,α2,...,αt) ≤ r(β1,β2,...,βt)</li>
-<li>向量组 α1,α2,...αm 线性相关 向量组中至少有一个向量可由其余的 m-1个向量线性表出</li>
-<li>若向量组 α1,α2,...αm 线性无关，而 β,α1,α2,...αm 线性相关，则 β 可由 α1,α2,...αm 线性表出，并且表示法唯一</li>
-<li>向量组 B 能由向量组 A 线性表出 ⇔ r(A,B)=r(A)  （B是由A表出的，所以A,B的秩还是A的秩 / r(A)=r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)）</li>
-</ol>
-<p><strong>向量空间</strong></p>
-<ol>
-<li>基底变换：由基 α1，α2，α3 到 β1，β2，β3<br>
-对 α 矩阵 列变换，右乘过渡矩阵 C：β=αC</li>
-<li>坐标变换<br>
-x=Cy，x 是在 α 下的坐标，y 是在 β 下的坐标（交叉原则）</li>
-<li>求 γ 在 α 下的坐标<br>
-列为：x1α1+x2α2+x3α3=γ，将左侧化为单位矩阵，右边则为 γ 在 α 下的坐标</li>
-</ol>
-<h1 id="线性方程组">线性方程组</h1>
-<p>化简线性方程组不能列变换</p>
-<p><strong>线性方程组有解辨析</strong><br>
-对于 m×n 矩阵，分为三种情况，m&gt;n、m&lt;n、m=n，讨论在这三种情况下 齐次 和 非齐次 解的情况<br>
-核心思想：对于 β 一列，经过变换后无法判断尾部是否为 0<br>
-🔺对于 m&gt;n，即 行&gt;列，方程组个数大于未知数个数。设系数矩阵为 A<br>
-若 r(A)=n 即列满秩 { r(A) 恒小于等于 n }，此时 n 个有效方程组，n 个未知数，则方程组 Ax=0 有唯一 0 解；Ax=β 可能有解也可能无解。有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
-<p>🔺对于 m&lt;n，即 行&lt;列，方程组个数小于未知数个数。此时 Ax=0 一定有非零解；Ax=β 可能有解也可能无解。若 r(A)=m 即 A 行满秩 { r(A) 恒小于等于 m }，r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>) 恒等于 r(A)，则一定有解；若 r(A)&lt;m，有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
-<p>🔺对于 m=n，即 行=列，方程组个数等于未知数个数。<br>
-若 r(A)=n 即 A 满秩，方程组 Ax=0 只有 0 解，此时 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>) 恒等于 r(A)，Ax=β 有唯一解；若 r(A)&lt;n，方程组 Ax=0 有无穷个非 0 解，此时对于 Ax=β ：有解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)≤r(A)；无解时：r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)&gt;r(A)</p>
-<p>💠综上，没说明行列关系时，r(A) 推不出 r(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault">A</span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span>)，由 齐次 解的情况推不出 非齐次 解的情况</p>
-<p><code>注</code><br>
-方程组基础解系：α1 α2<br>
-求方程组的通解：k1α1+k2α2<br>
-重特征值的特征向量：k1α1+k2α2</p>
-<h1 id="特征值与特征向量">特征值与特征向量</h1>
-<p><strong>求特征值特征向量注意的问题</strong></p>
-<ol>
-<li>带入特征值化简时可先根据秩消去一行</li>
-<li>特征向量是基础解系加系数 k，如 kα</li>
-<li>重根的特征向量是基础解系相加，如 k1α1+k2α2</li>
-<li>A-1的特征值是 1/λ，特征向量还是 α 不变</li>
-</ol>
-<p><strong>矩阵的迹：tr(A)</strong><br>
-迹：主对角线元素之和（不管怎么变化，矩阵的迹不会变），等于矩阵的特征值之和。</p>
-<p><strong>反对称矩阵</strong><br>
-A=-AT</p>
-<p><strong>实对称矩阵</strong><br>
-实对称矩阵不同特征值的特征向量一定正交<br>
-实对称矩阵同一特征值的不同特征向量线性无关，但不一定正交，<br>
-在要求求对应的正交矩阵时，要施密特正交化</p>
-<p>又因为 n 阶方阵可相似对角化 ⇔ A 有 n 个线性无关的特征向量<br>
-所以 n 阶实对称矩阵必可以相似对角化</p>
-<p><strong>正交矩阵</strong><br>
-转置等于其逆的矩阵<br>
-ATA=E<br>
-在求正交矩阵的时候，不同特征值的特征向量一定正交。相同特征值对应的特征向量不一定正交，所以要进行施密特正交化。<br>
-然后把所有特征向量单位化，按列排列成正交矩阵。</p>
-<p><strong>判断可相似对角化</strong><br>
-充要条件只需记“n 个特征值对应 n 个线性无关的特征向量”<br>
-注意，任何矩阵，不同特征值对应的特征向量线性无关（相同特征值不一定）</p>
-<ol>
-<li>有 n 个不同的特征值</li>
-<li>k 重特征值对应 k 个线性无关的特征向量</li>
-<li>实对称矩阵一定可相似对角化（因为实对称不同特征值特征向量必正交）<br>
-<a href="https://zhuanlan.zhihu.com/p/413697441"><strong>矩阵满足什么条件才能相似对角化！（相似于对角矩阵）</strong></a></li>
-</ol>
-<p><strong>矩阵等价 &amp; 向量组等价</strong><br>
-矩阵等价：A 经过有限次初等变换可以变成 B ⇔ r(A)=r(B)<br>
-向量组等价：两个向量组可以相互线性表出</p>
-<p>矩阵等价，其行列向量组都可以不等价；矩阵等价和行列向量组等价无关</p>
-<p><strong>矩阵的等价，相似，合同</strong><br>
-关系：<br>
-（（（相似）合同 ）等价 ）</p>
-<p><strong>判断等价</strong><br>
-r(A)=r(B)</p>
-<p><strong>判断合同</strong></p>
-<ol>
-<li>充要条件：CTAC=B，C 可逆；非对称只能找是否有一个对称阵，一般题目给的都不难找</li>
-<li>两个实对称矩阵合同的充要条件才是有相同的正负惯性指数（在标准型中看）<br>
-由于 CTAC=B，若A为实对称，则B也为实对称，实对称矩阵的合同矩阵一定也对称<br>
-非对称一定不和对称合同</li>
-</ol>
-<p><strong>判断相似</strong><br>
-P-1AP = B<br>
-实对称矩阵相似 ⇔ 特征值相等<br>
-非实对称：没有充要条件，只能用必要条件判断</p>
-<ol>
-<li>判定矩阵之迹</li>
-<li>判定行列式是否相等</li>
-<li>判定特征值是否相等</li>
-<li>判定重特征值是否对应相同个数的特征向量<br>
-（也就是 λE-A 的秩）<br>
-<a href="https://zhuanlan.zhihu.com/p/151231495">“拨开迷雾”，如何判定矩阵相似？</a><br>
-<a href="https://zhuanlan.zhihu.com/p/77007052">线性代数——相似矩阵的可逆变换矩阵P是否唯一</a></li>
-</ol>
-<p>从上往下，判断合同必须满足等价，判断相似必须满足合同</p>
-<h1 id="二次型">二次型</h1>
-<p><a href="https://www.bilibili.com/read/cv6499426/">（数一）二次曲面类型与二次型的正负惯性指数的关系</a><br>
-求二次型对应的二次曲面，求出标准型，然后判断对应的曲线即可<br>
-🔺标准型的求法<br>
-① 配方法：一般是一次方程相乘，特别注意，经坐标变换，x=Cy，若 |C|=0，则不是坐标变换，不能用配方法<br>
-② 特征值法：一般有平方项了<br>
-🔺直观判断曲面的方法<br>
-分别看 xy xz yz 在 xoy，xoz，yoz 面上都是什么曲线，然后连起来即可</p>
-<p><strong>正定矩阵性质</strong><br>
-对称、可逆</p>
-<p><strong>判断正定</strong><br>
-充要条件</p>
-<ol>
-<li>正惯性指数为 n（特征值均大于零）</li>
-<li>A 与 E 合同</li>
-<li>各阶顺序主子式大于零</li>
-</ol>
-<p>二次型求标准型 ⇔ 二次型矩阵求特征值<br>
-所用正交矩阵就是矩阵正交的特征向量</p>
-<p><strong>证明正定</strong></p>
-<ol>
-<li>检验 A 对称</li>
-<li>证明正定（用判断条件证明）</li>
-</ol>
-<p><strong>求二次型最值</strong><br>
-最大值：最大特征值 乘以 xTx 的值<br>
-最小值：最小特征值 乘以 xTx 的值</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【摄影】人像思路]]></title>
-        <id>https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/</id>
-        <link href="https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/">
-        </link>
-        <updated>2023-06-15T07:08:19.000Z</updated>
-        <content type="html"><![CDATA[<p>最近拍毕业照，总结一下毕业照思路和注意事项</p>
-<p><strong>单人</strong></p>
-<ol>
-<li>老生常谈一个场景多拍几张，防止表情管理失败</li>
-<li>可以准备书本、花束等道具；更多还可以准备气球、泡泡机等道具</li>
-</ol>
-<p>拍摄思路<br>
-在学校地标性街道/建筑前拍一个最常规的照片，比如抱着花束拍照，背景虚化<br>
-和帽子、书本、花束等产生互动。戴摘帽子、端着帽子、扔帽子、抱着书本等<br>
-站立姿势上，可以从头到脚进行一些变化。歪头、侧头，歪身侧头、看上下左右</p>
-<p><strong>多人</strong></p>
-<ol>
-<li>多人表情管理失败概率增大，而且人摆姿势往往第一遍是最自然的，解决方案就是<br>
-使用 Mid 挡的连拍，让人摆好姿势之后，说看镜头，321，确保大家都看镜头，然后连拍几张。<br>
-这样既可以确保姿势的自然，又可以确保选出表情管理成功的照片。</li>
-<li>一个场景拍摄结束，要给客户看一下构图、神态等等是否满意，否则如果结束后客户不满意就不好搞了。退钱自己有损失，不退钱口碑会有损失。</li>
-<li>多人讲究互动感，构建一个场景让大家互动起来，才自然融洽</li>
-</ol>
+To sum up<br>
+Only by doing so can we<br>
+we should always be ready to</p>
+<p>Love is a pearl  which will never perish from my heart</p>
 ]]></content>
     </entry>
 </feed>

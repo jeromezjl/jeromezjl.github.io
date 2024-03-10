@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>Next主题使用教程 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1702651976231">
+<link rel="shortcut icon" href="/favicon.ico?v=1710065972636">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -225,7 +225,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">100</span>
+        <span class="site-item-stat-count">107</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -974,19 +974,364 @@
     <div class="result" id="result">
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-zheng-zhi-fen-xi-ti/"" data-c="
-          &lt;p&gt;实践&lt;/p&gt;
-&lt;p&gt;分段分点，整洁清晰，用 ①②③&lt;br&gt;
-写满，写的愈多越好&lt;br&gt;
-可以把材料用自己的话组织一遍，抄个别关键词，不能整体抄&lt;br&gt;
-总分总结构，先总写点题，然后概括一下材料，引出自己背诵的内容&lt;/p&gt;
-&lt;p&gt;抄材料方法：&lt;/p&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/"" data-c="
+          &lt;p&gt;模型复用，通常在机器学习和深度学习领域称为迁移学习（Transfer Learning），是一种非常有效的方法，可以将在一个任务上训练好的模型应用到另一个相关但不同的任务上。这种方法特别有用，因为从头开始训练一个复杂模型通常需要大量的计算资源和大量的标记数据，而这两者在很多情况下都是昂贵或难以获得的。&lt;/p&gt;
+&lt;h1 id=&#34;fine-tuning&#34;&gt;Fine Tuning&lt;/h1&gt;
+&lt;h3 id=&#34;模型复用的基本思想&#34;&gt;模型复用的基本思想&lt;/h3&gt;
+&lt;p&gt;模型复用的核心思想是，对于不同但相关的任务，模型学习到的特征或知识在一定程度上是通用的。例如，一个在大型图像数据集（如ImageNet）上训练好的卷积神经网络（CNN）学会了识别各种视觉模式和结构，这些模式和结构对于其他视觉识别任务也是有用的。&lt;/p&gt;
+&lt;h3 id=&#34;迁移学习的主要步骤&#34;&gt;迁移学习的主要步骤&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;优先抄题干中出现的关键字附近的话&lt;/li&gt;
-&lt;li&gt;文学性表达不抄，普通人讲的话不抄，数字不抄&lt;/li&gt;
-&lt;li&gt;改写：理解材料句子意思，用自己的话复述，可以同义替换，改写句式、扩句&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;预训练模型选择&lt;/strong&gt;：选择一个与目标任务相似或相关领域的预训练模型。例如，对于图像识别任务，人们常用在ImageNet数据集上预训练的模型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特征提取&lt;/strong&gt;：使用预训练模型的一部分（通常是除最后一层之外的所有层）作为特征提取器。这些层已经学会了从输入数据中提取有用的特征。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;微调&lt;/strong&gt;：根据具体任务，可以对预训练模型的顶层或所有层进行微调。微调是通过在新的目标任务上继续训练模型来完成的，这通常需要较小的学习率，以避免破坏已经学到的特征表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;冻结层&lt;/strong&gt;：在微调过程中，可以选择冻结预训练模型的一部分，以保留在原始任务上学到的特征。通常，只有模型的一部分（如顶层）被解冻以进行微调。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-">【考研】政治分析题</a>
+&lt;h3 id=&#34;模型复用的优点&#34;&gt;模型复用的优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据需求降低&lt;/strong&gt;：迁移学习允许使用较少的标记数据来训练模型，因为模型已经从预训练任务中学习了很多有用的特征。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;训练时间缩短&lt;/strong&gt;：由于模型不是从零开始训练，因此训练时间通常会大大缩短。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;提高性能&lt;/strong&gt;：迁移学习可以帮助提高模型在特定任务上的性能，尤其是当原始数据集非常大且多样时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用场景&#34;&gt;应用场景&lt;/h3&gt;
+&lt;p&gt;迁移学习在许多领域都有应用，包括但不限于图像识别、自然语言处理（NLP）、语音识别和增强现实等。在NLP中，预训练的语言模型如BERT和GPT系列已经成为许多下游任务的基础。&lt;/p&gt;
+&lt;p&gt;模型复用利用了已有知识，可以加速模型的开发过程，并提高模型在特定任务上的表现，尤其是在数据有限的情况下。&lt;/p&gt;
+&lt;h1 id=&#34;model-ensemble&#34;&gt;Model Ensemble&lt;/h1&gt;
+&lt;p&gt;将多个小模型结合起来解决不同的问题并实现模型复用，通常涉及到模型集成和多任务学习的策略。这些方法允许模型共享知识，并提高整体性能，特别是在数据稀缺或每个单独任务的数据不足以训练一个复杂模型的情况下。&lt;/p&gt;
+&lt;h3 id=&#34;模型集成model-ensemble&#34;&gt;模型集成（Model Ensemble）&lt;/h3&gt;
+&lt;p&gt;模型集成涉及到将多个模型的预测结果结合起来，以提高整体的预测性能。这些模型可以是针对同一个任务的不同模型，也可以是针对不同任务的模型。集成方法包括但不限于：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;简单平均（Simple Averaging）&lt;/strong&gt;：对所有模型的预测结果进行算术平均。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加权平均（Weighted Averaging）&lt;/strong&gt;：根据每个模型的性能给予不同的权重，然后进行加权平均。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投票法（Voting）&lt;/strong&gt;：对于分类问题，每个模型为每个类别投票，最终决策基于最多投票的类别。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;堆叠（Stacking）&lt;/strong&gt;：在堆叠方法中，多个模型的预测结果被用作另一个模型（称为元学习器或二级模型）的输入，以进行最终预测。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;多任务学习multi-task-learning&#34;&gt;多任务学习（Multi-task Learning）&lt;/h3&gt;
+&lt;p&gt;多任务学习是一种同时解决多个相关任务的方法，通过共享底层表示，这种方法可以提高各个任务的学习效率和预测性能。多任务学习的关键在于找到一种方式让模型的不同部分专注于不同的任务：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;共享底层&lt;/strong&gt;：在这种方法中，模型的底层（例如，神经网络的前几层）被多个任务共享，而顶层被设计为任务特定的层。这允许模型学习到可以跨多个任务通用的特征或表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;软参数共享&lt;/strong&gt;：在软参数共享中，不同任务的模型有自己的参数，但是这些参数之间通过某种方式（如正则化）相互约束，以鼓励它们学到相似的表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;任务特定的分支&lt;/strong&gt;：在这种结构中，模型从一个共享层分叉出多个分支，每个分支负责不同的任务。这种方法在多模态学习和多任务学习中尤其常见，其中不同的输入类型或不同的任务要求模型有不同的处理分支。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;模型复用策略&#34;&gt;模型复用策略&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;预训练和微调&lt;/strong&gt;：可以通过在一个通用任务上预训练模型，然后在特定任务上微调模型的某些层来实现模型复用。这在自然语言处理和图像处理领域尤为常见。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特征提取&lt;/strong&gt;：利用预训练模型作为特征提取器，提取的特征可以用于不同任务的模型训练中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;模型蒸馏（Model Distillation）&lt;/strong&gt;：通过模型蒸馏，可以将一个大型模型的知识转移到多个小型模型中。这些小型模型可以针对不同的任务进行优化，同时保持较小的模型大小和更快的推理速度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将多个小模型结合起来解决不同的问题，需要仔细考虑每个模型的输出如何能为其他任务提供有价值的信息，以及如何在不同模型间高效地共享知识。这通常需要对任务之间&lt;/p&gt;
+">【DL】模型复用</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/fen-lei-he-hui-gui/"" data-c="
+          &lt;h1 id=&#34;分类&#34;&gt;分类&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目标变量&lt;/strong&gt;：分类任务中的目标变量是离散的，也就是说，它将输入数据映射到预定义的类别或标签中。这些类别通常是有限的且不连续的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：邮件是否为垃圾邮件、图像中是否含有特定物体、患者是否患有某种疾病等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;决策树（如CART, ID3, C4.5）&lt;/li&gt;
+&lt;li&gt;支持向量机（SVM）&lt;/li&gt;
+&lt;li&gt;逻辑回归&lt;/li&gt;
+&lt;li&gt;K最近邻（KNN）&lt;/li&gt;
+&lt;li&gt;随机森林&lt;/li&gt;
+&lt;li&gt;梯度提升决策树（如XGBoost, LightGBM, CatBoost）&lt;/li&gt;
+&lt;li&gt;神经网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;回归&#34;&gt;回归&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目标变量&lt;/strong&gt;：回归任务中的目标变量是连续的数值。模型的目的是预测出一个具体的数值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：房价预测、股票价格预测、温度预测等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;线性回归&lt;/li&gt;
+&lt;li&gt;多项式回归&lt;/li&gt;
+&lt;li&gt;决策树回归&lt;/li&gt;
+&lt;li&gt;支持向量回归（SVR）&lt;/li&gt;
+&lt;li&gt;随机森林回归&lt;/li&gt;
+&lt;li&gt;梯度提升决策树回归（如XGBoost, LightGBM）&lt;/li&gt;
+&lt;li&gt;神经网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;主要区别&#34;&gt;主要区别&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;输出类型&lt;/strong&gt;：分类是预测离散标签，而回归是预测连续数值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;评估标准&lt;/strong&gt;：分类任务通常使用准确率、精确度、召回率、F1分数等指标进行评估；回归任务则常用均方误差（MSE）、均方根误差（RMSE）、平均绝对误差（MAE）等指标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;决策边界&lt;/strong&gt;：分类任务通常涉及到找到决策边界来区分不同的类别；回归任务则是找到一个最佳拟合线或曲面来预测连续值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;主要联系&#34;&gt;主要联系&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;监督学习&lt;/strong&gt;：无论是分类还是回归，它们都属于监督学习范畴，这意味着它们都使用已标注的训练数据来学习输入和输出之间的映射关系。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型构建与预测&lt;/strong&gt;：分类和回归都涉及到使用训练数据构建模型，并使用这些模型来对新的、未见过的数据进行预测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;损失函数&lt;/strong&gt;：两者都通过最小化损失函数来训练模型。虽然使用的具体损失函数可能不同（如分类通常使用交叉熵损失，回归通常使用均方误差损失），但最小化损失函数的基本思想是一致的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;从回归到分类的转变&#34;&gt;从回归到分类的转变&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在某些情况下，可以通过引入阈值将回归问题转化为分类问题。例如，在一个二元分类问题中，模型的输出可以是一个连续的概率值，当这个概率值超过某个阈值时，可以将其视为一个类别，否则视为另一个类别。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;从分类到回归的转变&#34;&gt;从分类到回归的转变&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在某些情况下，分类问题也可以转换为回归问题，特别是当类别之间存在天然顺序（有序分类）时。通过预测一个连续的数值并将其映射到最接近的类别，可以处理这类问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总的来说，虽然分类和回归处理的是不同类型的问题，但它们在许多方面是相似的，使用相似的方法，很多算法和技术可以在这两种任务之间转换和重用。&lt;/p&gt;
+">【ML】分类和回归</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/fu-shi-ying-yu/"" data-c="
+          &lt;p&gt;Postgraduate是大学毕业（graduate）后继续深造、但未拿到学位（Master或Doctor）之前的身份，Master是硕士学位&lt;/p&gt;
+&lt;p&gt;中文：&lt;br&gt;
+英文自我介绍&lt;/p&gt;
+&lt;p&gt;我叫张继隆，我的英文名叫Jerome，我今年21岁了。我来自天津市，我喜欢我的家乡。我本科就读于北京邮电大学，主修人工智能专业&lt;/p&gt;
+&lt;p&gt;我很喜欢人工智能，大学期间，我系统地学习了专业知识，我的线性代数、概率论、机器学习、深度学习、计算机视觉等课程均达到90分以上。我还参加了许多创新比赛，比如数学竞赛，并取得了奖项。做过很多人工智能相关的项目，提升了我的专业素养和专业能力。&lt;br&gt;
+我通过了大学英语四六级考试，其中CET6的成绩在550分以上。我一直是一个勤奋好学，不断提升自己的学生，&lt;/p&gt;
+&lt;p&gt;我还积极参加各种活动，我喜欢做运动，因为我相信拥有健康的身体可以让我更加积极地学习和工作。同时，我还喜欢音乐和艺术，本科期间是社团的社长，这段经历提升了我的沟通能力，以及对事情的规划能力。对不同领域的探索扩展了我的思维，让我的头脑更加灵活，更能专注于研究工作。&lt;/p&gt;
+&lt;p&gt;我选择继续在北邮深造的原因，是因为我深爱着北邮的学术氛围。老师们有很好的品德素养和专业能力，在我学习过程中给予了我很大的帮助。同时我们学校在社会上的认可度一直是很高的，我爱北邮。&lt;/p&gt;
+&lt;p&gt;如果给我一个机会，我会继续努力提高自己。如果我的研究能力在研究生期间得到导师的认可，我将继续攻读博士学位。&lt;/p&gt;
+&lt;p&gt;最后，我会尽最大努力发掘自己最大的潜力，脚踏实地地做好每件事。这就是我的自我介绍。我真诚地感谢您的聆听&lt;/p&gt;
+&lt;p&gt;Dear professors, good morning/afternoon! Thank you for giving me this opportunity to attend the interview. I hope I can make a good performance today. Now I will briefly introduce myself.&lt;/p&gt;
+&lt;p&gt;My name is Zhang Jilong, and my English name is Jerome. I am 21 years old this year. I come from Tianjin, and I love my hometown. I completed my undergraduate studies at Beijing University of Posts and Telecommunications. My major is Artificial Intelligence.&lt;/p&gt;
+&lt;p&gt;I have a strong passion for artificial intelligence. During my university years, I systematically studied professional knowledge, and my grades in courses such as linear algebra, probability theory, machine learning, deep learning, and computer vision all exceeded 90 points. I also participated in many innovation competitions, such as math competitions, english competitions and won awards. I have worked on many artificial intelligence-related projects, which improved my professional quality and abilities. I passed the College English Test (CET) Levels 4 and 6, with a score of over 550 in CET6. I have always been a diligent and eager student, constantly striving to improve myself.&lt;/p&gt;
+&lt;p&gt;Additionally, I actively participated in various activities. I enjoy doing sports because I believe having a healthy body allows me to study and work more positively. At the same time, I also love music and art. During my undergraduate studies, I was the president of a club, which enhanced my communication skills and ability to plan events. Exploring different fields expanded my thinking, making my mind more flexible and more focused on research work.&lt;/p&gt;
+&lt;p&gt;The reason I chose to continue my studies at BUPT is my deep love for the academic atmosphere here. The teachers have good moral character and professional abilities, which have been of great help to me in my studies. At the same time, our school&#39;s social recognition has always been very high. I love BUPT.&lt;/p&gt;
+&lt;p&gt;If given the opportunity, I will continue to work hard to improve myself. If my research abilities are recognized by my advisors during my graduate studies, I will continue to pursue a Ph.D.&lt;/p&gt;
+&lt;p&gt;In conclusion, I will do my best to uncover my greatest potential and earnestly accomplish everything I undertake. This is my self-introduction. I sincerely thank you for listening.&lt;/p&gt;
+&lt;p&gt;另外&lt;br&gt;
+I will strive to issue some papers on some influencial journals&lt;/p&gt;
+">复试英语</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-san-wei-chong-jian/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://github.com/jeromezjl/PhotometricStereoTutorial&#34;&gt;github链接&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;多视角、多光照&lt;/p&gt;
+&lt;p&gt;多光照：输入多光照图像，输出三维&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Mt4y1a7e6/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【”UE5夯实基础”每日2更系列】13朗伯漫反射理论&lt;/a&gt;&lt;/p&gt;
+">【CV】三维重建</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/"" data-c="
+          &lt;p&gt;1&lt;/p&gt;
+">【CV】人体姿态识别</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/"" data-c="
+          &lt;p&gt;有监督：分类、回归&lt;br&gt;
+无监督：聚类、密度估计&lt;/p&gt;
+&lt;p&gt;错误率：error_rate：预测错误/全部&lt;br&gt;
+精度：accuracy：1-error_rate&lt;/p&gt;
+&lt;p&gt;在深度学习中，参数通常是指神经网络中的权重和偏差。&lt;br&gt;
+这些参数是通过&lt;code&gt;反向传播&lt;/code&gt;算法，根据训练数据中的梯度信息自动调整的，以最小化&lt;code&gt;损失函数&lt;/code&gt;。&lt;br&gt;
+参数的学习是模型训练的过程，目标是找到最佳的参数配置。&lt;/p&gt;
+&lt;h1 id=&#34;损失函数&#34;&gt;损失函数&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/261059231&#34;&gt;损失函数（Loss Function）&lt;/a&gt;&lt;br&gt;
+计算预测值f(x)与真实值Y的差异程度&lt;br&gt;
+绝对值损失 Mean Absolute Error (MAE)：L1 Loss&lt;br&gt;
+均方损失：L2 Loss&lt;br&gt;
+Huber Loss&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;正则化&lt;/strong&gt;&lt;br&gt;
+在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/weixin_41960890/article/details/104891561&#34;&gt;一篇文章完全搞懂正则化（Regularization）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;向前传播和反向传播&#34;&gt;向前传播和反向传播&lt;/h1&gt;
+&lt;p&gt;损失函数链式法则对参数求梯度来更新参数值&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1yG411x7Cc/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟深度学习-反向传播算法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/447113449&#34;&gt;【深度学习篇】：前向传播（forward）和反向传播（backward）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;br&gt;
+&lt;strong&gt;激活函数&lt;/strong&gt;&lt;br&gt;
+增加神经网络的非线性表达能力，使之能更好的拟合非线性模型&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1qB4y1e7GJ/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟深度学习-激活函数&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/364620596&#34;&gt;深度学习笔记：如何理解激活函数？（附常用激活函数）&lt;/a&gt;&lt;br&gt;
+特点：连续可导（梯度下降）；取值范围是全体实数，将全体实数映射到特定的范围；只需增加非线性的因素，而不需改变对输入的响应状态，所以是单增的，随输入增大而增大&lt;br&gt;
+梯度消失（梯度弥散）：sigmoid趋近无穷时，梯度趋近于0，若某次输入过大，梯度几乎为0，导致参数几乎不更新，导致整个网络学习能力下降&lt;br&gt;
+sigmoid：非零均值函数→同时更新正负→神经网络不易收敛；饱和函数→梯度消失，使用tanh函数可以&lt;br&gt;
+梯度爆炸：使用ReLU函数时，由于函数无上界，如果输出过大，会导致梯度累积，超出上限&lt;/p&gt;
+&lt;h1 id=&#34;分类和回归&#34;&gt;分类和回归&lt;/h1&gt;
+&lt;p&gt;本质都是对输入值进行预测的问题，分类输出离散的、对预测类别的置信度，回归输出连续的预测值&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/shuiyixin/article/details/88816416&#34;&gt;【机器学习小常识】“分类” 与 “回归”的概念及区别详解&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1m4421F7Fg/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;详解逻辑回归、softmax回归和神经网络，三种模型的关联和区别&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;训练集-验证集-测试集&#34;&gt;训练集、验证集、测试集&lt;/h1&gt;
+&lt;p&gt;三者必须无交集&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qlkaicx/article/details/134767111#:~:text=%E5%8F%82%E6%95%B0%20%E6%98%AF%E6%A8%A1%E5%9E%8B%E4%B8%AD%E5%8F%AF%E8%A2%AB%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%B0%83%E6%95%B4%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E9%80%9A%E8%BF%87%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BC%98%E5%8C%96%EF%BC%9B,%E8%80%8C%20%E8%B6%85%E5%8F%82%E6%95%B0%20%E5%88%99%E6%98%AF%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E7%94%A8%E4%BA%8E%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%E5%92%8C%E6%80%A7%E8%83%BD%EF%BC%8C%E8%B6%85%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9%E5%92%8C%E4%BC%98%E5%8C%96%E5%AF%B9%E6%A8%A1%E5%9E%8B%E6%80%A7%E8%83%BD%E6%9C%89%E9%87%8D%E8%A6%81%E5%BD%B1%E5%93%8D%E3%80%82&#34;&gt;还搞不懂什么是参数，超参数吗？三分钟快速了解参数与超参数的概念和区别！！！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_41895003/article/details/104811371&#34;&gt;训练集、测试集、验证集之间的区别及理解&lt;/a&gt;&lt;br&gt;
+训练集：通过训练自动更新参数&lt;br&gt;
+验证集：手动更新超参数&lt;br&gt;
+测试集：测试生成的模型的泛化能力&lt;/p&gt;
+&lt;p&gt;k折交叉验证：将数据集分成k份，每次拿出其中的一份作为验证集，剩下k-1份作为训练集&lt;br&gt;
+通过平均误差判断超参数好坏&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Q&amp;amp;A&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Q：如果loss很低，是不是就不用设置验证集了
+A：在深度学习训练中，即使训练损失（loss）很低，也不意味着可以忽略验证集的设置。这里有几个原因解释为什么验证集依然很重要：
+
+1. 过拟合（Overfitting）：一个很低的训练损失可能意味着模型在训练集上表现得很好，但这也可能是过拟合的一个迹象。过拟合发生时，模型学习到了训练数据中的噪声和细节，而不是底层模式，这会导致模型在未见过的数据上表现不佳。验证集可以帮助检测过拟合情况，因为它提供了模型在非训练数据上的性能评估。
+
+2. 模型选择（Model Selection）：在开发深度学习模型时，我们通常会尝试多种不同的架构、超参数设置等。验证集用于评估这些不同设置的性能，帮助我们选择最佳模型。
+
+3. 调参（Hyperparameter Tuning）：除了选择模型外，我们还需要调整模型的超参数（如学习率、批量大小等）。验证集对于这一过程至关重要，因为它可以帮助我们了解不同超参数设置对模型性能的影响。
+
+4. 泛化能力（Generalization Ability）：最终，我们关心的是模型在实际应用中的表现，即在新的、未见过的数据上的表现。验证集提供了一个近似的泛化能力评估，帮助我们估计模型在现实世界数据上的表现。
+
+因此，即使训练损失很低，也不应该忽视验证集的设置。验证集是深度学习训练过程中不可或缺的一部分，对于确保模型的泛化能力和避免过拟合至关重要。在模型训练的最后阶段，还应该使用独立的测试集对模型进行最终评估，以进一步验证模型的泛化能力。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Q：验证集在所有任务中都是必须的吗？
+A：虽然验证集在许多深度学习和机器学习任务中非常重要，但是否“必须”使用验证集取决于具体的任务、数据的可用性以及目标。在大多数情况下，使用验证集是一种最佳实践，但也有一些情况或任务可能不那么依赖于验证集：
+
+1. 数据量极其有限：在某些情况下，如果可用的数据非常有限，可能无法划分出单独的验证集。在这种情况下，可能会采用交叉验证的方法，这种方法将数据集分为多个小分组，然后依次将其中一个分组作为验证集，其他分组作为训练集，从而有效利用有限的数据。
+
+2. 在线学习或持续学习：对于一些在线学习任务，模型会持续地接收数据并不断更新。在这种情况下，模型可能不会有一个固定的验证集，而是不断地用新数据评估和调整。
+
+3. 使用预训练模型进行微调：当使用预训练模型并对其进行微调以适应特定任务时，如果任务非常接近原始预训练任务，且数据集较小，可能会直接在训练数据上进行微调而不单独设置验证集。然而，这种情况下仍然推荐使用验证集来监控过拟合和模型性能。
+
+4. 简单任务或明确的成功标准：在一些简单的任务或当成功标准非常明确且容易评估时（如明确的数学问题），可能不需要单独的验证集来调整模型参数。
+
+即便在这些特殊情况下，最终还是需要一个独立的测试集来评估模型的性能，确保模型能够在未见过的数据上良好工作。综上所述，虽然在某些特定场景下可以不使用验证集，但在大多数情况下，为了保证模型的泛化能力和避免过拟合，使用验证集都是一种非常重要的实践。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;超参数调整&lt;/strong&gt;&lt;br&gt;
+利用验证集调整超参数的一些策略&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在每个epoch后或几个epoch后使用验证集验证模型的loss，确保模型权重可以被保存在本地，手动调整超参数后继续训练&lt;/li&gt;
+&lt;li&gt;使用早停技术：在每个epoch结束时评估模型在验证集上的性能，并在性能不再提升时停止训练&lt;/li&gt;
+&lt;li&gt;使用自动化超参数优化（Hyperparameter Optimization, HPO）&lt;/li&gt;
+&lt;li&gt;设置模型检查点（Model Checkpointing）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;过拟合&#34;&gt;过拟合&lt;/h1&gt;
+&lt;p&gt;过拟合：认为只有和训练数据一样的才是&lt;br&gt;
+欠拟合：认为树也是叶子&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/158869433&#34;&gt;机器学习模型的容量，过拟合与欠拟合&lt;/a&gt;&lt;br&gt;
+dropout：前向传播的时候，让某个神经元的激活值以一定的概率 p 停止工作，这样可以使模型泛化性更强，防止过拟合&lt;/p&gt;
+&lt;h1 id=&#34;算法分类&#34;&gt;算法分类&lt;/h1&gt;
+&lt;p&gt;机器学习算法通常根据学习方式和应用场景被分类为几大类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;监督学习（Supervised Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在这种类型的学习中，算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。&lt;/li&gt;
+&lt;li&gt;常见的算法包括线性回归、逻辑回归、支持向量机（SVM）、决策树、随机森林、神经网络等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;无监督学习（Unsupervised Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在无监督学习中，算法试图从未标记的数据中找出模式。因为没有指导，所以这种类型的学习试图通过数据本身的结构来理解数据。&lt;/li&gt;
+&lt;li&gt;典型的算法包括聚类算法（如K-means、层次聚类）、降维算法（如主成分分析PCA、t-SNE）、关联规则学习算法（如Apriori、Eclat）等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;半监督学习（Semi-Supervised Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这种学习方式介于监督学习和无监督学习之间。它使用少量的标记数据和大量的未标记数据进行训练。通过这种方式，算法可以提高其性能和准确性。&lt;/li&gt;
+&lt;li&gt;半监督学习方法通常包括自训练、多视图学习、图基方法等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;强化学习（Reinforcement Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在强化学习中，算法（通常称为智能体）通过与环境交互来学习如何达到目标。智能体从环境中获得奖励或惩罚，并使用这些反馈来指导其未来的行为。&lt;/li&gt;
+&lt;li&gt;常见的强化学习算法包括Q-learning、SARSA、深度Q网络（DQN）、策略梯度方法等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自监督学习（Self-Supervised Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这是一种特殊类型的无监督学习，其中数据的一部分被用作监督信号。在自监督学习中，模型试图从数据的未标记部分预测数据的标记部分，从而在没有显式标签的情况下学习数据的表示。&lt;/li&gt;
+&lt;li&gt;应用示例包括预训练的语言模型、图像特征学习等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;迁移学习（Transfer Learning）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这种学习方法涉及将从一个任务中学到的知识应用到另一个不同但相关的任务上。这是通过重用预训练模型的一部分并对其进行微调来实现的，以适应新任务。&lt;/li&gt;
+&lt;li&gt;这在深度学习中尤其常见，例如使用预训练的卷积神经网络（CNN）进行图像分类任务。&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/dl-mo-xing-fu-yong&#34;&gt;【DL】模型复用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;生成式对抗网络（GANs）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GANs是一种框架，用于通过两个网络（一个生成器和一个鉴别器）之间的对抗过程来训练生成模型。生成器生成新的数据实例，而鉴别器评估它们是来自于真实数据集还是生成器产生的。&lt;/li&gt;
+&lt;li&gt;GANs广泛用于图像生成、图像转换、增强现实等领域。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+">【ML】基础概念</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_45484237/article/details/123514175&#34;&gt;实现Linux服务器配置深度学习环境并跑代码完整步骤&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用nvidia-smi完全查看显卡型号&lt;br&gt;
+nvidia-smi --format=csv --query-gpu=index,name,driver_version,memory.total,memory.used,memory.free&lt;br&gt;
+或使用&lt;br&gt;
+pip install gpustat&lt;br&gt;
+gpustat&lt;br&gt;
+来查看&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/102449309&#34;&gt;Linux下Anaconda环境安装/创建/激活/退出/删除/管理&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/Aorg1/article/details/134800426&#34;&gt;conda环境下安装nvcc -V&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/m0_50181189/article/details/122440985&#34;&gt;【详细】Ubuntu18.04安装更新显卡驱动、安装CUDA及cuDNN、CUDA版本切换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;退出 python：&amp;gt;&amp;gt;&amp;gt; quit（）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_59047731/article/details/135634418&#34;&gt;pyCharm专业版破解激活（超详细）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/486360176&#34;&gt;一文读懂 PyTorch 显存管理机制&lt;/a&gt;&lt;/p&gt;
+">【Linux】深度学习配置</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/bi-she/"" data-c="
+          &lt;p&gt;Linux运行python文件&lt;br&gt;
+python3 script.py&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hugging Face&lt;/strong&gt;&lt;br&gt;
+&amp;quot;NLP 界的 GitHub&amp;quot;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1YU4y1g753/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;Hugging Face 系列视频（一）：Hugging Face 及 Transformer/Datasets/Tokenizers库&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/a1920993165/article/details/128082968&#34;&gt;Huggingface的介绍，使用（CSDN最强Huggingface入门手册）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fine tuning 微调&lt;/strong&gt;&lt;br&gt;
+将模型迁移学习，影响因素：新数据集的大小、新数据和原数据集的相似程度&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/35890660&#34;&gt;CNN入门讲解：什么是微调（Fine Tune）？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/weixin_42137700/article/details/82107208&#34;&gt;什么是fine-tuning？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/620618701&#34;&gt;预训练大语言模型的三种微调技术总结：fine-tuning、parameter-efficient fine-tuning和prompt-tuning的介绍和对比&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用 COCO 数据集进行预训练的 VIT-GPT2 模型&lt;/strong&gt;&lt;br&gt;
+COCO：起源于微软的、大型的、丰富的物体检测数据集&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_41185868/article/details/82939959&#34;&gt;Dataset之COCO数据集：COCO数据集的简介、下载、使用方法之详细攻略&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://huggingface.co/nlpconnect/vit-gpt2-image-captioning&#34;&gt;vit-gpt2-image-captioning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CLIP&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/521151393&#34;&gt;详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50/101&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/lsb2002/article/details/132275132&#34;&gt;openai多模态大模型：clip详解及实战&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/493489688&#34;&gt;神器CLIP：连接文本和图像，打造可迁移的视觉模型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;VIT&lt;br&gt;
+embedding：通过矩阵乘法，将token升降维，从而让计算机理解。将一个东西映射为向量&lt;/p&gt;
+&lt;p&gt;linear层：1. 将每个patch变成一维  2. 使一维向量的维度和 transformer 输入维度相符&lt;/p&gt;
+&lt;p&gt;位置编码和embedding相加&lt;/p&gt;
+&lt;p&gt;是一个特征提取器&lt;br&gt;
+先将图像分割为不同的patch&lt;br&gt;
+然后将每个patch拉成一个向量，加入位置信息&lt;/p&gt;
+&lt;p&gt;transformer必须在大量数据&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44966641/article/details/118733341&#34;&gt;Vision Transformer（ViT）PyTorch代码全解析（附图解）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://juejin.cn/post/7238148905095839804&#34;&gt;用🤗 Transformers微调ViT图像分类&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;deepfashion&lt;br&gt;
+图片：750x1101，共44096个&lt;/p&gt;
+">毕设</a>
       </div>
       
       <div class="item">
@@ -1081,10 +1426,11 @@ joint efforts 共同努力&lt;br&gt;
 I am deeply obliged for your hard work 我十分感谢您的努力&lt;/p&gt;
 &lt;h1 id=&#34;可用单词&#34;&gt;可用单词&lt;/h1&gt;
 &lt;p&gt;character 角色&lt;br&gt;
+plight 困境&lt;br&gt;
 vigorous 有活力的&lt;br&gt;
 tremendous 巨大的&lt;br&gt;
 eminent 优秀的&lt;br&gt;
-eminently = exceedingly 非常&lt;br&gt;
+eminently = exceedingly = Immensely 非常&lt;br&gt;
 advantageous 有利的，有好处的&lt;br&gt;
 miraculous 奇迹般的&lt;br&gt;
 gorgeous 美丽的&lt;br&gt;
@@ -1101,6 +1447,8 @@ rational 合理的&lt;br&gt;
 feasible 可行的&lt;br&gt;
 considerable 相当多的&lt;br&gt;
 critical / essential / be extremely vital to us 至关重要的&lt;br&gt;
+severe、critical 严重的&lt;br&gt;
+terrible / harmful&lt;br&gt;
 defect 缺点&lt;br&gt;
 eliminate 消除&lt;br&gt;
 therefore = hence 因此&lt;br&gt;
@@ -1206,7 +1554,10 @@ repent（doing）后悔做&lt;br&gt;
 it is imperative for us to take drastic measures. 当务之急是采取严厉措施&lt;br&gt;
 enhance the public awareness 提高公众意识&lt;br&gt;
 a combination of ... 的结合&lt;br&gt;
-this tendency is rather disturbing 这种倾向很令人担忧&lt;/p&gt;
+this tendency is rather disturbing 这种倾向很令人担忧&lt;br&gt;
+give a helping hand&lt;br&gt;
+a minority of&lt;br&gt;
+every individual&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;道歉信&lt;/strong&gt;&lt;br&gt;
 I have recently been diagnosed with a serious cold&lt;br&gt;
 If possible, i would like to postpone the interview to another day later in the week&lt;br&gt;
@@ -1245,11 +1596,11 @@ improve your level of proficiency 提高你的熟练程度&lt;br&gt;
 A good command of English will enable you to get an edge over your peers&lt;br&gt;
 好的英语水平让你比同龄人更胜一筹&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;纪要&lt;/strong&gt;&lt;br&gt;
-during the last meeting，the following issues were addressed.&lt;br&gt;
+during the latest meeting，the following issues were addressed.&lt;br&gt;
 If you find any errors or omissions, please contact me&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;询问信&lt;/strong&gt;&lt;br&gt;
 I am writing to seek your assistance to help...&lt;br&gt;
-I hope you can kindly furnish me with detailed information regarding the above-mentioned questions.&lt;br&gt;
+I hope you can kindly furnish me with specific details regarding the above-mentioned questions.&lt;br&gt;
 I wonder if it would be convenient for you to do...&lt;/p&gt;
 &lt;h1 id=&#34;大作文&#34;&gt;大作文&lt;/h1&gt;
 &lt;p&gt;第一段：不用提出论点，只描述即可&lt;br&gt;
@@ -1278,9 +1629,14 @@ the author assumes that&lt;/p&gt;
 the caricature is to illustrate that&lt;br&gt;
 what the drawing intends to convey is that&lt;br&gt;
 I cling to the idea that 我坚持... 的观点&lt;br&gt;
-it is of vital significance to be&lt;/p&gt;
+from my perspective&lt;br&gt;
+it is of vital significance to be&lt;br&gt;
+Take an example to illustrate....&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第三段&lt;/strong&gt;&lt;br&gt;
-To sum up&lt;/p&gt;
+To sum up&lt;br&gt;
+Only by doing so can we&lt;br&gt;
+we should always be ready to&lt;/p&gt;
+&lt;p&gt;Love is a pearl  which will never perish from my heart&lt;/p&gt;
 ">【考研】英语作文</a>
       </div>
       
@@ -1587,7 +1943,7 @@ X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)&lt;/p&gt;
 &lt;li&gt;某一行乘 k，行列式乘 k；所有行都乘 k，行列式乘 k 的 n 次方&lt;/li&gt;
 &lt;li&gt;有两行(列)一样 / 成倍数（提出一个 k 还是一样）行列式值为 0&lt;/li&gt;
 &lt;li&gt;若行列式的某一列（行）的元素都是两数之和，则此行列式等于两个行列式之和&lt;/li&gt;
-&lt;li&gt;矩阵可逆 行列式为 0&lt;/li&gt;
+&lt;li&gt;矩阵可逆 行列式 ≠ 0&lt;/li&gt;
 &lt;li&gt;矩阵转置行列式的值不变&lt;/li&gt;
 &lt;li&gt;|kA|  = k^n |A|&lt;/li&gt;
 &lt;/ol&gt;
@@ -1757,6 +2113,15 @@ P-1AP = B&lt;br&gt;
 最大值：最大特征值 乘以 xTx 的值&lt;br&gt;
 最小值：最小特征值 乘以 xTx 的值&lt;/p&gt;
 ">【考研】线性代数</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/gong-ju/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://poe.com/ChatGPT&#34;&gt;ChatGPT 其他接口&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.94speed.com/?token=94speed666&#34;&gt;百度网盘快速下载解析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bili.iiilab.com/&#34;&gt;b站下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xn--ehq00hgtfdmt.xyz/#/dashboard&#34;&gt;三分机场&lt;/a&gt;&lt;/p&gt;
+">【工具】</a>
       </div>
       
       <div class="item">
@@ -2289,6 +2654,17 @@ Bash是Shell的一种&lt;/p&gt;
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/tree/"" data-c="
           &lt;h1 id=&#34;ml&#34;&gt;ML&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://scikit-learn.org.cn/&#34;&gt;sklearn中文社区（机器学习算法索引）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-ji-chu-gai-lan&#34;&gt;【ML】基础概念&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li&#34;&gt;【ML】数据预处理&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/mo-xing-ping-gu&#34;&gt;【ML】模型的评估&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-gan-zhi-ji-perceptron/&#34;&gt;【ML】感知机 Perceptron&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-bp-shen-jing-wang-luo/&#34;&gt;【ML】人工神经网络&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-zhi-chi-xiang-liang-ji-svm/&#34;&gt;【ML】支持向量机（SVM）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/k-means/&#34;&gt;【ML】KNN | K-means&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-jue-ce-shu/&#34;&gt;【ML】决策树&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/te-zheng-jiang-wei&#34;&gt;【ML】特征降维&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;dl&#34;&gt;DL&lt;/h1&gt;
 &lt;h1 id=&#34;cv&#34;&gt;CV&lt;/h1&gt;
 &lt;h1 id=&#34;nlp&#34;&gt;NLP&lt;/h1&gt;
@@ -2757,8 +3133,36 @@ K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类�
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/hun-yao-ju-zhen-confusion-matrix/"" data-c="
-          &lt;p&gt;#混淆矩阵 Confusion Matrix&lt;br&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/mo-xing-ping-gu/"" data-c="
+          &lt;h1 id=&#34;交叉验证&#34;&gt;交叉验证&lt;/h1&gt;
+&lt;p&gt;交叉验证作为一种统计学方法，既可以用于调整超参数，也可以用于评估模型的泛化能力，这两个应用虽然相关，但侧重点不同。&lt;/p&gt;
+&lt;h3 id=&#34;超参数调整&#34;&gt;超参数调整&lt;/h3&gt;
+&lt;p&gt;在调整超参数时，交叉验证用于比较不同超参数设置下模型的性能。通过在训练集的不同子集上训练并在验证集上评估模型，可以确定哪一组超参数能够带来最佳的模型性能。这个过程通常涉及到：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;定义超参数空间&lt;/strong&gt;：确定需要调整的超参数以及它们可能的取值范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择交叉验证策略&lt;/strong&gt;：最常用的是K折交叉验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能评估&lt;/strong&gt;：对每一组超参数，使用交叉验证来评估模型性能。这通常涉及到对每一折的数据进行训练和验证，并计算验证结果的平均值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择最佳超参数&lt;/strong&gt;：基于交叉验证结果，选择表现最好的超参数设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;模型评估&#34;&gt;模型评估&lt;/h3&gt;
+&lt;p&gt;在模型评估阶段，交叉验证用于估计模型在独立数据集上的表现。这是通过将数据集分成多个部分，然后在这些部分上重复训练和测试模型来实现的。每一部分都有机会作为测试集，从而使评估结果更加可靠和全面。这个过程可以揭示模型的泛化能力，即模型对未知数据的处理能力。&lt;/p&gt;
+&lt;p&gt;使用交叉验证进行模型评估时，通常遵循以下步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;选择交叉验证策略&lt;/strong&gt;：例如K折交叉验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行交叉验证&lt;/strong&gt;：对每一折（或&amp;quot;轮&amp;quot;），训练模型，并在保留的测试折上评估其性能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算平均性能指标&lt;/strong&gt;：通常对所有折的性能指标（如准确率、召回率、F1分数等）计算平均值，以得到模型性能的整体估计。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;综合应用&#34;&gt;综合应用&lt;/h3&gt;
+&lt;p&gt;在实践中，交叉验证通常先用于超参数调整，确定最佳的超参数设置后，再使用这些超参数在整个训练数据集上训练模型。然后，可以再次使用交叉验证（或保留一部分数据作为最终测试集）来评估这个最终模型的泛化能力。&lt;/p&gt;
+&lt;h1 id=&#34;分类问题&#34;&gt;分类问题&lt;/h1&gt;
+&lt;h2 id=&#34;准确率-accuracy-精确率-precision-召回率-recall-f1-score-等&#34;&gt;准确率 (Accuracy) 精确率 (Precision) 召回率 (Recall)  F1 score 等&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/93107394&#34;&gt;一文看懂机器学习指标：准确率、精准率、召回率、F1、ROC曲线、AUC曲线&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1vt4y117Zz/?vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站&lt;/a&gt;&lt;br&gt;
+（模型）准确率 Accuracy：所有正确预测分类的数据 / 所有数据&lt;br&gt;
+精确率 Precision：预测正确的正样本 / 所有预测为正的样本&lt;br&gt;
+召回率 Recall：预测正确的正样本 / 测试集中所有正样本数&lt;br&gt;
+用于多分类的时候，将自己看作一类，其余的看作另一类&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;混淆矩阵 Confusion Matrix&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1oz4y1R71a/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站入门讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/SartinL/article/details/105844832&#34;&gt;sklearn中混淆矩阵（confusion_matrix函数）的理解与使用&lt;/a&gt;&lt;br&gt;
 运行博客二中的代码：&lt;/p&gt;
@@ -2775,12 +3179,51 @@ confusion_matrix(y_true, y_pred, labels=[&amp;quot;ant&amp;quot;, &amp;quot;bird
 &lt;p&gt;labels表示，行，列的标签顺序为[&amp;quot;ant&amp;quot;, &amp;quot;bird&amp;quot;, &amp;quot;cat&amp;quot;]。通过观察对角线（预测正确的次数），第一个数据是ant被预测为ant的次数，为2次，bird被预测为bird的次数为0次，cat被预测为cat的次数为2次.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;debug&lt;/code&gt;&lt;br&gt;
 &lt;a href=&#34;https://fixexception.com/scikit-learn/at-least-one-label-specified-must-be-in-y-true/&#34;&gt;ValueError: At least one label specified must be in y_true&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;准确率-accuracy-精确率-precision-召回率-recall-f1值&#34;&gt;准确率 (Accuracy) 精确率 (Precision) 召回率 (Recall)  F1值&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1vt4y117Zz/?vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站&lt;/a&gt;&lt;br&gt;
-（模型）准确率：所有正确预测分类的数据 / 所有数据&lt;br&gt;
-精确率：预测正确的正样本 / 所有预测为正的样本&lt;br&gt;
-召回率：预测正确的正样本 / 测试集中所有正样本数&lt;/p&gt;
-">【ML】分类模型的评估</a>
+&lt;h1 id=&#34;回归问题&#34;&gt;回归问题&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;均方误差（Mean Squared Error, MSE）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MSE是实际值与预测值之差的平方和的平均值，是衡量预测准确性的常用指标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;均方根误差（Root Mean Squared Error, RMSE）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RMSE是MSE的平方根，用于量化预测误差的大小。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;平均绝对误差（Mean Absolute Error, MAE）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MAE是实际值与预测值之差的绝对值的平均值，它给所有的误差以相等的权重。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;R平方（R²或决定系数）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R平方衡量模型解释的变异量占总变异量的比例，值越接近1表示模型越好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;聚类问题的评分指标&#34;&gt;聚类问题的评分指标&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;轮廓系数（Silhouette Coefficient）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;轮廓系数结合了聚类的凝聚度和分离度，用于评估聚类的质量，其值的范围是[-1, 1]。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;戴维森堡丁指数（Davies-Bouldin Index）&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;该指数是一种内部评估方法，通过计算聚类之间的相似度来评估聚类质量，值越小表示聚类效果越好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Jaccard系数：用于分类和聚类问题&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/354289511&#34;&gt;距离相似度计算总结（欧式距离、余弦相似度、杰卡德、互信息等18种）&lt;/a&gt;&lt;/p&gt;
+">【ML】模型的评估</a>
       </div>
       
       <div class="item">
@@ -3204,7 +3647,8 @@ pwd：获取当前目录的绝对路径&lt;br&gt;
 输出内核版本、主机名、操作系统版本、CPU类型等信息：uname -a&lt;br&gt;
 查看已安装的linux-image各版本：dpkg --get-selections | grep linux-image&lt;br&gt;
 卸载内核：sudo apt-get remove linux-image-5.4.0-xx-generic&lt;br&gt;
-运行该代码将版本后面带有deinstall的彻底卸载干净：sudo dpkg -P linux-image-5.4.0-84-generic&lt;/p&gt;
+运行该代码将版本后面带有deinstall的彻底卸载干净：sudo dpkg -P linux-image-5.4.0-84-generic&lt;br&gt;
+输入 Ctrl+c 终止当前运行&lt;/p&gt;
 &lt;h1 id=&#34;内核模块开发&#34;&gt;内核模块开发&lt;/h1&gt;
 &lt;p&gt;查看已经存在的mod：lsmod&lt;br&gt;
 删除mod：rmmod modname&lt;br&gt;
@@ -3522,7 +3966,7 @@ int main() {
 	cout &amp;lt;&amp;lt; stack.Pop();
 }
 &lt;/code&gt;&lt;/pre&gt;
-">【考研】C++查缺补漏</a>
+">C++查缺补漏</a>
       </div>
       
       <div class="item">
@@ -3539,15 +3983,25 @@ int main() {
 复习代码题时，要熟知代码逻辑，以及临界点 / 判断条件，一定要记住条件是什么，灵活应对&lt;br&gt;
 做代码题时，先自己写一个例子放在旁边，手动实现一遍，然后结合储存的数据结构，对照着还原代码&lt;/p&gt;
 &lt;h1 id=&#34;基本代码题汇总&#34;&gt;基本代码题汇总&lt;/h1&gt;
-&lt;p&gt;二叉树创建递归非递归&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;线性表&lt;/strong&gt;&lt;br&gt;
+KMP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;树&lt;/strong&gt;&lt;br&gt;
+二叉树创建递归非递归&lt;br&gt;
 二叉树前序中序后序，递归非递归&lt;br&gt;
 二叉树层序&lt;br&gt;
 二叉树结点总数、深度、叶子结点总数&lt;br&gt;
-哈夫曼树构造、编解码&lt;br&gt;
+（哈夫曼树构造、编解码）&lt;br&gt;
 算数表达式二叉树&lt;br&gt;
 二叉树的复制&lt;br&gt;
 二叉树路径显示&lt;br&gt;
 交换二叉树所有结点的左右子树&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;图&lt;/strong&gt;&lt;br&gt;
+DFS、BFS&lt;br&gt;
+Prim、克鲁斯卡尔&lt;br&gt;
+dijkstra、Floyd&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查找&lt;/strong&gt;&lt;br&gt;
+二叉排序树插入、构建、删除&lt;/p&gt;
+&lt;p&gt;排序所有&lt;/p&gt;
 &lt;h1 id=&#34;肖波-ppt&#34;&gt;肖波 PPT&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;ch1&lt;/strong&gt;&lt;br&gt;
 p18 带哨兵的顺序查找，从后往前遍历，遍历到第一个哨兵跳出循环&lt;/p&gt;
@@ -3873,10 +4327,39 @@ path&lt;/p&gt;
 &lt;p&gt;#排序&lt;br&gt;
 &lt;a href=&#34;https://www.cs.usfca.edu/~galles/visualization/Algorithms.html&#34;&gt;算法可视化平台&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;今年题目预测&#34;&gt;今年题目预测&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;图&lt;/code&gt;&lt;br&gt;
-选择填空比较喜欢考图论的东西，好好看看公式&lt;br&gt;
-去年考了邻接矩阵 BFS，今年考 DFS 概率大，而且邻接矩阵的代码也得会；&lt;br&gt;
-去年考了迪杰斯特拉代码，今年考的概率不大，但是图的其余算法代码，还是要都看会&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选择&lt;/strong&gt;&lt;br&gt;
+多维数组，三维数组的存储&lt;br&gt;
+朴素模式匹配、KMP&lt;br&gt;
+图的概念&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;简答&lt;/strong&gt;&lt;br&gt;
+线性表语句分析&lt;/p&gt;
+&lt;p&gt;稀疏矩阵，三元组表，十字链表&lt;/p&gt;
+&lt;p&gt;二叉树遍历、转化森林&lt;br&gt;
+手算哈夫曼&lt;br&gt;
+构造平衡二叉树&lt;br&gt;
+B-树的插入删除&lt;/p&gt;
+&lt;p&gt;图十字链表、临界多重表的构造&lt;br&gt;
+图着色、关键路径、拓扑排序&lt;br&gt;
+手算 BFS\DFS，手算最小生成树，手算dijkstra&lt;/p&gt;
+&lt;p&gt;哈希（链地址法）&lt;/p&gt;
+&lt;p&gt;一趟排序&lt;br&gt;
+手算大根堆&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;程序&lt;/strong&gt;&lt;br&gt;
+（KMP）&lt;/p&gt;
+&lt;p&gt;二叉树创建递归非递归&lt;br&gt;
+二叉树前序（中序）后序，递归非递归&lt;br&gt;
+二叉树层序&lt;br&gt;
+二叉树结点总数、深度、叶子结点总数&lt;br&gt;
+（哈夫曼树构造、编解码）&lt;br&gt;
+（算数表达式二叉树）&lt;br&gt;
+二叉树的复制&lt;br&gt;
+（二叉树路径显示）&lt;br&gt;
+交换二叉树所有结点的左右子树&lt;/p&gt;
+&lt;p&gt;邻接表（矩阵）DFS&lt;br&gt;
+图的最小生成树算法 Prim、克鲁斯卡尔&lt;br&gt;
+最短路径 Floyd&lt;/p&gt;
+&lt;p&gt;二叉排序树插入、构建、删除&lt;/p&gt;
+&lt;p&gt;排序，除堆排序、计数排序、直接插入&lt;/p&gt;
 ">【考研】数据结构</a>
       </div>
       
@@ -3919,13 +4402,23 @@ for file in os.listdir(path):
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/"" data-c="
-          &lt;p&gt;数据归一化是一种常用的预处理技术，它的目的是将不同范围的数据转换为相同范围的数据，这样可以使不同的数据具有相似的分布和取值范围。&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&#34;https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features&#34;&gt;sklearn&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/57332604&#34;&gt;数据清洗&amp;amp;预处理入门完整指南&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;标准化&#34;&gt;标准化&lt;/h1&gt;
+&lt;p&gt;使数据符合高斯分布，每个数据减去平均值，再除以标准差。目的是让所有特征都在相同的尺度上，从而避免因为特征尺度差异过大而对模型训练产生不良影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;非线性变换&lt;/strong&gt;&lt;br&gt;
+如对数变换、平方根变换等，旨在处理偏斜的数据，使其分布更接近正态分布，或者是为了使数据的关系更符合模型的假设。例如，如果数据分布严重偏斜，一些模型的性能可能会受到影响，这时候非线性变换可以帮助改善模型的性能。&lt;/p&gt;
+&lt;p&gt;因此，即使在进行了标准化之后，如果数据仍然呈现出明显的偏斜或者模型的性能不佳，可能就需要考虑非线性变换。反之，如果数据在标准化之后表现良好，模型性能满足需求，那么可能不需要进行非线性变换。&lt;/p&gt;
+&lt;p&gt;实际操作中，是否采用非线性变换通常通过探索性数据分析（EDA）来决定，EDA可以帮助你了解数据的分布情况。此外，模型的表现和交叉验证的结果也是决策的重要依据。在一些情况下，你可能会同时使用标准化和非线性变换，以最大限度地提高数据质量和模型性能。&lt;/p&gt;
+&lt;h1 id=&#34;归一化规范化&#34;&gt;归一化（规范化）&lt;/h1&gt;
+&lt;p&gt;将将不同范围的数据缩放到一个指定的范围，通常是0到1之间，或者是-1到1之间。这是通过从每个值中减去特征的最小值并除以最大值和最小值之差来实现的。归一化有助于确保所有特征对模型的贡献是相等的，使不同的数据具有相似的分布和取值范围。&lt;/p&gt;
 &lt;p&gt;常见的数据归一化方法有以下几种：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;最值归一化（Min-Max Normalization）&lt;/strong&gt;&lt;br&gt;
 最值归一化是将数据映射到[0,1]范围内，公式如下：&lt;/p&gt;
 &lt;p&gt;X_normalized = (X - Xmin) / (Xmax - Xmin)&lt;/p&gt;
 &lt;p&gt;其中，Xmin和Xmax分别是数据集中的最小值和最大值。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;均值方差归一化（Standardization）&lt;/strong&gt;&lt;br&gt;
+就是标准化&lt;br&gt;
 均值方差归一化是将数据转换为均值为0，方差为1的数据，公式如下：&lt;/p&gt;
 &lt;p&gt;X_normalized = (X - Xmean) / Xstd&lt;/p&gt;
 &lt;p&gt;其中，Xmean和Xstd分别是数据集的均值和标准差。&lt;/p&gt;
@@ -3949,7 +4442,55 @@ tranform = transforms.Compose([
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;其中 0.1307 和 0.3081 分别是MNIST的均值和方差，可以自己计算，也可以网上查&lt;br&gt;
 等同于 X_normalized = (X - 0.1307) / 0.3081，转化为均值为0，方差为1的数据。&lt;/p&gt;
-">【ML】数据归一化处理</a>
+&lt;p&gt;&lt;code&gt;标准化和归一化的区别和联系&lt;/code&gt;&lt;br&gt;
+标准化和归一化是数据预处理中两种常用的尺度变换方法，它们都旨在调整特征值的尺度，以便于不同特征之间能够更公平地比较和组合，但它们在方法和用途上存在一些区别：&lt;/p&gt;
+&lt;h3 id=&#34;标准化z-score-normalization&#34;&gt;标准化（Z-score normalization）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目的&lt;/strong&gt;：使数据具有零均值（Mean = 0）和单位方差（Standard Deviation = 1）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算方法&lt;/strong&gt;：从每个特征值中减去特征的平均值，然后除以特征的标准差。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：特别适用于那些假设数据为正态分布的算法，如支持向量机（SVM）、线性回归、逻辑回归等。标准化有助于加快一些算法的收敛速度，并提高其性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;归一化min-max-normalization&#34;&gt;归一化（Min-Max normalization）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目的&lt;/strong&gt;：将数据缩放到一个指定的最小和最大值之间，通常是0和1之间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算方法&lt;/strong&gt;：从每个特征值中减去特征的最小值，然后除以最大值和最小值的差值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：特别适用于那些对输入数据的尺度敏感的算法，如神经网络、k-最近邻算法等。归一化有助于防止数据中某些特征在计算中占据主导地位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;区别和联系&#34;&gt;区别和联系&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;尺度范围&lt;/strong&gt;：标准化后的数据不限于特定范围，而归一化后的数据范围通常是0到1或者-1到1。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对异常值的敏感度&lt;/strong&gt;：归一化由于直接依赖于最小值和最大值，所以对异常值非常敏感。而标准化由于是依据均值和标准差进行的，对异常值的敏感度较低。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适用场景&lt;/strong&gt;：标准化在数据假定为正态分布时特别有效，归一化适用于不假定数据分布的情境，尤其是当算法对数据的尺度非常敏感时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;离散化&#34;&gt;离散化&lt;/h1&gt;
+&lt;p&gt;它涉及将连续特征的值划分为几个区间，并将这些区间转换为离散的值。这种技术有助于处理连续变量，使其更适合某些特定的算法，尤其是那些设计用于处理类别输入的算法。离散化可以简化模型，使其更易于理解和解释，同时有助于处理异常值和提高模型的稳健性。&lt;/p&gt;
+&lt;h1 id=&#34;编码分类特征&#34;&gt;编码分类特征&lt;/h1&gt;
+&lt;p&gt;将非数值特征转换为数值形式的过程。最常见的方法是独热编码（One-Hot Encoding），它为每个类别创建一个新的二进制特征，表明样本是否属于该类别。&lt;/p&gt;
+&lt;h1 id=&#34;缺失值的插补&#34;&gt;缺失值的插补&lt;/h1&gt;
+&lt;p&gt;缺失值的插补是处理缺失数据的方法。常见的插补技术包括使用平均值、中位数、众数填充缺失值，或者使用更复杂的方法如 k-NN 或回归。&lt;/p&gt;
+&lt;h1 id=&#34;生成多项式特征&#34;&gt;生成多项式特征&lt;/h1&gt;
+&lt;p&gt;通过现有特征的非线性组合来创建新特征的过程。例如，如果有两个特征 A 和 B ，可以创建新特征 A^2 B^2 和 AB 。这可以帮助机器学习模型捕捉特征之间的复杂关系。&lt;/p&gt;
+">【ML】数据预处理</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/fl-studio/"" data-c="
+          &lt;p&gt;Alt+R 调节音量swing&lt;br&gt;
+ctrl左键选择所有&lt;br&gt;
+Alt+U 切分音&lt;br&gt;
+ctrl+L 延长音符&lt;br&gt;
+ctrl+Alt+Z 撤回&lt;br&gt;
+ctrl+T 添加标签&lt;br&gt;
+ctrl+Q 对齐音符&lt;/p&gt;
+&lt;p&gt;FPC：打击垫&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://obeato.com/how-to-merge-patterns-in-fl-studio/#:~:text=To%20be%20able%20to%20do%20split%20patterns%20in,project%20and%20select%20the%20split%20by%20channel%20option.&#34;&gt;How To Merge Patterns In FL Studio + Split [Quick Guide]&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.flstudiochina.com/rumen/fl-yltz.html&#34;&gt;如何在FL Studio中对整首歌曲音量进行调整&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;BPM：每分钟节拍数&lt;br&gt;
+水果的一个格子里有四拍，一个格子是节拍器的一个循环；BPM越高，一个小结的拍数不变，则同小节的曲子长度越短&lt;/p&gt;
+&lt;p&gt;如果遇到爆音、嘈杂音质等问题（原音频没有问题，很清晰）那么是CPU带不动了。重新设置声卡。&lt;br&gt;
+点击 选项 - 音频设置 - 设备 更改选项。&lt;br&gt;
+&lt;a href=&#34;https://chilloutwithbeats.com/en/flstudio20-bufferlength/&#34;&gt;设备设置问题&lt;/a&gt;&lt;/p&gt;
+">FL Studio 水果</a>
       </div>
       
       <div class="item">
@@ -3970,12 +4511,12 @@ tranform = transforms.Compose([
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/pca-zhu-cheng-fen-fen-xi-principle-component-analysis/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/te-zheng-jiang-wei/"" data-c="
           &lt;p&gt;PCA（Principle Component Analysis）&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/bwqiang/article/details/110407382&#34;&gt;全面理解主成分分析（PCA）和MNIST数据集的Python降维实现&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;痛点：对于高维、大样本，难以直观地看出某个变量变异性的大小，难以提取到最有效的特征&lt;br&gt;
 PCA 是一种最常用的特征降维方法，去除掉相似的特征，保留无关性最大的特征，提高数据处理速度&lt;/p&gt;
-">【ML】PCA 主成分分析</a>
+">【ML】特征降维</a>
       </div>
       
       <div class="item">
@@ -4216,7 +4757,13 @@ Regularization： 正则化&lt;/p&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;amp;utm_relevant_index=2&#34;&gt;手把手实战PyTorch手写数据集MNIST识别项目全流程&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;MNIST：手写数字&lt;br&gt;
+50000张训练图片&lt;br&gt;
+10000张测试图片&lt;br&gt;
+图像大小：28x28&lt;br&gt;
+10个类别（0-9）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1t44y1r7ct/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;23 经典卷积神经网络 LeNet【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/m0_58092763/article/details/125631991?spm=1001.2101.3001.6650.1&amp;amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-125631991-blog-112980305.t5_landing_title_tags&amp;amp;utm_relevant_index=2&#34;&gt;手把手实战PyTorch手写数据集MNIST识别项目全流程&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/wqy1837154675/article/details/108003698&#34;&gt;pytorch读取MNIST数据集并显示&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;理论&#34;&gt;理论&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;数据读取和预处理&lt;/strong&gt;&lt;br&gt;
@@ -4389,7 +4936,7 @@ def KFold_and_Train(k_split_value):
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 调用函数
 KFold_and_Train(k_split_value)
 &lt;/code&gt;&lt;/pre&gt;
-">MNIST 手写数字识别</a>
+">【CV】MNIST 手写数字识别</a>
       </div>
       
       <div class="item">
@@ -4541,7 +5088,7 @@ one should adapt himself to the environment
 先读题干句子，抓关键词&lt;br&gt;
 看首尾句，明确段意&lt;br&gt;
 抓句子关键词，带回段落定位&lt;/p&gt;
-">【考研】六级</a>
+">六级</a>
       </div>
       
       <div class="item">
@@ -4577,6 +5124,7 @@ Tasksel 安装出错&lt;br&gt;
           &lt;p&gt;&lt;a href=&#34;http://c.biancheng.net/linux_tutorial/&#34;&gt;Linux 教程1&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.runoob.com/linux/linux-tutorial.html&#34;&gt;Linux 教程2&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.runoob.com/linux/linux-intro.html&#34;&gt;Linux shell 教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_72910567/article/details/132418542#:~:text=Windows%20%E7%B3%BB%E7%BB%9F%E4%B8%8B%EF%BC%9ASSH%20%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%20Linux%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%201%20Ubuntu%3A%201.,HOST%20IDENTIFICATION%20HAS%20CHANGED%21%20...%205%20%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%201.%E8%AF%B7%E7%A1%AE%E4%BF%9D%E4%BD%A0%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8E%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E7%8A%B6%E5%86%B5%E8%89%AF%E5%A5%BD&#34;&gt;Windows 系统下：SSH 远程连接 Linux 服务器的完整指南&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Bash 是 Shell 的一种&lt;/p&gt;
 &lt;p&gt;对于 Windows 而言，其 cmd 和 powershell 都属于 shell 程序，但 cmd 能干的事 powershell 都能干。&lt;a href=&#34;https://zhuanlan.zhihu.com/p/390464588#:~:text=powershell%E5%92%8Ccmd%E5%8C%BA%E5%88%AB%EF%BC%9A1%E3%80%81CMD%E5%86%99%E7%9A%84BAT%E8%84%9A%E6%9C%AC%E6%88%91%E4%BB%AC%E7%9C%8B%E4%BD%9C%E6%98%AF%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%EF%BC%8C%E8%80%8CPowerShell%E5%88%99%E6%98%AF%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%2C%E6%98%AF%E4%B8%80%E7%A7%8D%E7%AB%99%E5%9C%A8%E4%BD%BF%E7%94%A8%E8%80%85%E7%9A%84%E8%A7%92%E5%BA%A6%E8%BF%9B%E8%A1%8C%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99%EF%BC%9B2%E3%80%81CMD%E5%8F%AA%E8%83%BD%E6%89%A7%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%BB%BB%E5%8A%A1%EF%BC%8CPowerShell%E5%9B%A0%E4%B8%BA%E6%98%AF%E5%9F%BA%E4%BA%8E%E3%80%90.NET%E3%80%91%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E3%80%82,%E6%9C%AC%E6%96%87%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83%EF%BC%9Awindows7%E7%B3%BB%E7%BB%9F%E3%80%81Dell%20G3%E7%94%B5%E8%84%91%E3%80%82&#34;&gt;参考文章&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u010300484/article/details/8879176&#34;&gt;bash shell元字符（通配符）&lt;/a&gt;&lt;/p&gt;
@@ -5606,15 +6154,16 @@ CNN 相当于传统神经网络（用于分类）加上了卷积和池化层（�
 边缘填充（pad/padding）：为了解决区域边缘被扫描的次数较少的问题，在边缘添加一圈 0 ，使得原来的边界不为边界&lt;br&gt;
 注：padding = n 意思是在外围加 n 层。若原图 28 x 28，padding = 2，则一条边长度增加 4，尺寸变为 32 x 32&lt;br&gt;
 卷积核个数：决定了生成的特征图的数量、下一层的通道数。每个卷积核一定不同&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/428448728&#34;&gt;ReLU 激活函数&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/428448728&#34;&gt;ReLU 激活函数&lt;/a&gt;：将特征图上所有负数变为0，正数不变&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/77609689&#34;&gt;Dropout：每一层随机丢弃一些神经元防止过拟合&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;池化层：&lt;br&gt;
-对卷积得到的特征进行筛选，筛选出重要的特征。&lt;br&gt;
+对卷积得到的特征进行筛选，筛选出重要的特征，防止过拟合&lt;br&gt;
 常用池化方法：&lt;br&gt;
 Max Pooling：扫描一定区域，选择区域中的最大值（提取最有用的特征）&lt;/p&gt;
 &lt;p&gt;网络结构：&lt;br&gt;
 卷积（CONV）后面接着 RELU 激活函数，两层该结构，一层池化，重复累加&lt;/p&gt;
 &lt;p&gt;从池化层进入全连接层前，需要先把三维的数据转化为一维的向量&lt;/p&gt;
+&lt;p&gt;LeNet&lt;/p&gt;
 &lt;p&gt;残差神经网络 Resnet&lt;br&gt;
 随着 CNN 层数不断增加，效果不一定会越来越好，是为什么呢？因为某一层可能会效果不好，影响了总体的特征提取效果。Resnet 将其中效果不好的层的权重设置为 0 ，只保留对整体效果有益的层数，从而保证了，层数越多，深度越深，学习效果越好。不过提升程度可能很细微，但是总有提升。&lt;/p&gt;
 &lt;p&gt;迁移学习&lt;/p&gt;
@@ -5636,23 +6185,7 @@ print(outputSize,&#39;\n&#39;)
 若最后一层输出为 10 x 10 x 20 ，则作为全连接层的输入为 10 x 10 x 20 = 2000&lt;/p&gt;
 &lt;h1 id=&#34;批标准化-batch-normalization&#34;&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/24810318&#34;&gt;批标准化 (Batch Normalization)&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44023658/article/details/105844861&#34;&gt;Batch Normalization（BN）超详细解析&lt;/a&gt;&lt;/p&gt;
-">CNN 卷积神经网络</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-mo-xing-ping-gu/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/86120987&#34;&gt;知乎总结（有错误，注意看评论）&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/sinat_16388393/article/details/91427631&#34;&gt;CSDN 总结&lt;/a&gt;&lt;br&gt;
-输入模型中的 x 是特征，y 是分类结果，所以模型评估输入的参数是 y_true, y_predict&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;混淆矩阵&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.bilibili.com/video/BV1oz4y1R71a?spm_id_from=333.337.search-card.all.click&#34;&gt;b站讲解&lt;/a&gt;&lt;br&gt;
-confusion_matix&lt;br&gt;
-对于二分类问题，有 TP，TN，FP，FN 四种情况，True Positive 意思就是正确的正样本，其是被分类正确的正样本；False Positive 是错误的正样本，则该样本本身为负样本。综上，所有的正样本为 TP+FN&lt;br&gt;
-对于多分类问题，扩大矩阵维度，对角线是所有预测正确的样本&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;F1-score&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/qq_43190189/article/details/105778058&#34;&gt;F1-score、Micro-F1-score、Macro-F1-score&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.kaggle.com/code/guglielmocamporese/macro-f1-score-keras&#34;&gt;使用 tf 和 Keras 计算 Macro F1-Score&lt;/a&gt;&lt;/p&gt;
-">【ML】模型评估</a>
+">【CV】CNN 卷积神经网络</a>
       </div>
       
       <div class="item">
@@ -5874,6 +6407,7 @@ Multi-Attention MA-CNN&lt;br&gt;
 &lt;h1 id=&#34;调色思路&#34;&gt;调色思路&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;人文&lt;/code&gt;&lt;br&gt;
 青橙、蓝绿&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cp.originoo.com/login&#34;&gt;锐景创意内容平台&lt;/a&gt;&lt;/p&gt;
 ">【摄影】摄影入门</a>
       </div>
       
@@ -6801,7 +7335,7 @@ print_linklist(linklist1)  # 展示链表
 &lt;h1 id=&#34;未完成任务&#34;&gt;未完成任务：&lt;/h1&gt;
 &lt;p&gt;1 sklearn svm 图 （分类结果可视化&lt;br&gt;
 2 实验代码中调参部分函数&lt;/p&gt;
-">【sklearn】每天一点 sklearn</a>
+">【ML】每天一点 sklearn</a>
       </div>
       
       <div class="item">
@@ -7007,13 +7541,53 @@ for i in range(10):
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-jue-ce-shu/"" data-c="
-          &lt;p&gt;&lt;strong&gt;b站讲解&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&#34;&gt;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;决策树是一种非常通用的机器学习算法，主要用于以下任务：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 分类
+决策树经常用于分类任务。在这类任务中，目标是根据一系列输入特征将实例分配给预定义的类别。
+例如，一个决策树可能用于基于病人的临床数据（如年龄、体重、血压等）来判断病人是否患有某种疾病。
+
+2. 回归
+决策树也可以用于回归任务，其中输出是一个连续值而非类别标签。回归树的构建与分类树类似，但在每个叶节点上，它们会预测一个连续值而不是类别标签。
+例如，决策树可用于根据房屋的特征（如面积、房间数、地段等）预测房屋的市场价格。
+
+3. 数据探索
+由于决策树易于理解和解释，它们经常被用于数据探索。通过构建决策树，数据科学家可以了解哪些特征对输出变量有重要影响，以及这些特征是如何组合影响输出的。
+这有助于生成有关数据的洞察，可能会指导进一步的分析。
+
+4. 特征选择
+在预处理阶段，决策树可以帮助识别最重要的特征，从而减少模型的复杂性和过拟合的风险。
+特征重要性是根据特征在构建树时的使用频率和深度来评估的。
+
+5. 多输出任务
+决策树还可以扩展到多输出任务，其中一个实例可能有多个标签或多个连续输出。
+例如，在环境监测中，一个模型可能需要根据一组传感器读数预测多种污染物的水平。
+
+决策树因其简单、易解释的特性而受到广泛欢迎，尽管它们可能容易过拟合，
+但通过技术如剪枝、随机森林和梯度提升树，可以有效地提高它们的泛化能力。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;b站讲解&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1ar4y137GD/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟学算法 #03 决策树 小明毕业当行长&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&#34;&gt;https://www.bilibili.com/video/BV1T7411b7DG?from=search&amp;amp;seid=4602675497552466282&amp;amp;spm_id_from=333.337.0.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;决策树的使用步骤&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据属性构建决策树（构建算法）&lt;/li&gt;
+&lt;li&gt;在新的数据上决策&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h1 id=&#34;决策树的构建&#34;&gt;决策树的构建&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;C4.5算法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;参考文章：&lt;/code&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/zjsghww/article/details/51638126&#34;&gt;https://blog.csdn.net/zjsghww/article/details/51638126&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;算法步骤：&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;典型决策树算法：ID3、C4.5、CART&lt;br&gt;
+ID3用信息增益，C4.5用信息增益率，CART用Gini系数&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710040898493.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;构建原则：希望第一次分类就尽量分对，即优先选择使数据纯度提升的属性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ID3&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/133846252&#34;&gt;决策树算法--ID3算法&lt;/a&gt;&lt;br&gt;
+信息熵：介于0-1之间，反映了数据纯度（和Gini系数一样）样本越纯，信息熵越趋于0，当A，B各占一半时，信息熵达到最大，值为1&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV18D421E7Eq?p=76&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;信息熵公式讲解&lt;/a&gt;&lt;br&gt;
+信息增益：表示数据集 D 按照 A 属性划分后，D 的纯度。信息增益值越大，划分后的纯度越大。优先选择信息增益大的属性构建决策树&lt;/p&gt;
+&lt;p&gt;但若每个属性只有一个样本，那么信息增益为 0，无法划分，所以使用信息增益率，引出C4.5算法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C4.5算法&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/zjsghww/article/details/51638126&#34;&gt;C4.5算法详解（非常仔细）&lt;/a&gt;&lt;br&gt;
+信息增益率引入了属性内部信息&lt;br&gt;
+&lt;code&gt;算法步骤：&lt;/code&gt;&lt;br&gt;
 1）计算总信息熵 Entropy&lt;br&gt;
 2）分别计算每个属性信息熵&lt;br&gt;
 3）总信息熵 - 属性信息熵 得到信息增益 Gain(A)&lt;br&gt;
@@ -7025,6 +7599,14 @@ for i in range(10):
 ∑（ p(属性概率) * ∑ -（ p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;习题&lt;/code&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/166393579&#34;&gt;https://zhuanlan.zhihu.com/p/166393579&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CART（classification and regression tree）分类回归树&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/139523931&#34;&gt;决策树算法--CART分类树算法&lt;/a&gt;&lt;br&gt;
+基尼系数：反映了数据的纯度（最上面视频有讲解和图像）&lt;br&gt;
+假设有两个类别 A，B，单类别占比越多，代表样本越纯&lt;br&gt;
+若全是 A / B 则基尼系数为 0，若 A、B 各占一半，则是数据最不纯的情况，Gini系数为 0.5&lt;br&gt;
+构建决策树时，优先选择Gini系数小的属性，意味着通过该属性分割后得到的子集在类别分布上更加纯粹，有助于提高决策树的分类性能。&lt;/p&gt;
+&lt;h1 id=&#34;决策树的剪枝&#34;&gt;决策树的剪枝&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u012328159/article/details/79285214&#34;&gt;决策树（decision tree）(二)——剪枝&lt;/a&gt;&lt;/p&gt;
 ">【ML】决策树</a>
       </div>
       
@@ -7042,7 +7624,8 @@ opencv 在 anaconda 中文件夹的名称叫 cv2&lt;br&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi/"" data-c="
-          &lt;p&gt;下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了&lt;br&gt;
+          &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Inochigohan/article/details/120400990&#34;&gt;Anaconda||（踩坑无数，含泪总结！！！）Anaconda的卸载与安装（tensorflow+Keras+spyder+添加镜像源）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载anaconda之后，用pycharm分配虚拟环境自己摸索一下就会了&lt;br&gt;
 但是jupyter一直只有一个虚拟环境，于是上网搜索了一下&lt;br&gt;
 jupyter需要手动分配内核，&lt;strong&gt;具体参考：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44799217/article/details/116056976&#34;&gt;https://blog.csdn.net/weixin_44799217/article/details/116056976&lt;/a&gt;&lt;br&gt;
