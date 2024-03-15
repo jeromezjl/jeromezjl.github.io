@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-15T04:15:07.459Z</updated>
+    <updated>2024-03-15T13:21:42.629Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,134 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【CV】概述]]></title>
+        <id>https://jeromezjl.github.io/post/cv-gai-shu/</id>
+        <link href="https://jeromezjl.github.io/post/cv-gai-shu/">
+        </link>
+        <updated>2024-03-15T11:55:57.000Z</updated>
+        <content type="html"><![CDATA[<p>机器视觉领域包含多种任务，每种任务都旨在模拟或超越人类视觉系统的某些方面。以下是一些主要任务及其常用的算法：</p>
+<h3 id="1-图像分类-image-classification">1. 图像分类 (Image Classification)</h3>
+<ul>
+<li><strong>任务说明</strong>：将整个图像分配给一个或多个类别。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>AlexNet</li>
+<li>VGGNet</li>
+<li>ResNet</li>
+<li>Inception</li>
+<li>DenseNet</li>
+<li>EfficientNet</li>
+<li>转移学习：使用预训练的CNN模型进行微调以适应特定的图像分类任务。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-目标检测-object-detection">2. 目标检测 (Object Detection)</h3>
+<ul>
+<li><strong>任务说明</strong>：在图像中识别物体的位置，并将每个物体分类。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>R-CNN及其变体（Fast R-CNN, Faster R-CNN）</li>
+<li>YOLO系列（YOLOv1至YOLOv5）</li>
+<li>SSD (Single Shot MultiBox Detector)</li>
+<li>RetinaNet</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-图像分割-image-segmentation">3. 图像分割 (Image Segmentation)</h3>
+<ul>
+<li><strong>任务说明</strong>：将图像分割成多个区域或对象，可以进一步细分为语义分割和实例分割。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>FCN (Fully Convolutional Networks)</li>
+<li>U-Net</li>
+<li>Mask R-CNN（实例分割）</li>
+<li>DeepLab系列</li>
+<li>PSPNet (Pyramid Scene Parsing Network)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-姿态估计-pose-estimation">4. 姿态估计 (Pose Estimation)</h3>
+<ul>
+<li><strong>任务说明</strong>：估计图像中人或对象的姿态或关节位置。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>OpenPose</li>
+<li>AlphaPose</li>
+<li>DensePose</li>
+<li>PoseNet</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-物体跟踪-object-tracking">5. 物体跟踪 (Object Tracking)</h3>
+<ul>
+<li><strong>任务说明</strong>：在视频序列中跟踪一个或多个对象的运动。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>SiamFC (Siamese Fully Convolutional Network)</li>
+<li>SORT/Simple Online and Realtime Tracking</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-图像生成-image-generation">6. 图像生成 (Image Generation)</h3>
+<ul>
+<li><strong>任务说明</strong>：从现有的图像或随机噪声生成新图像。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>GANs (Generative Adversarial Networks) 及其变体（CGAN, DCGAN, StyleGAN）</li>
+<li>VAEs (Variational Autoencoders)</li>
+<li>PixelRNN/PixelCNN</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-图像恢复-image-restoration">7. 图像恢复 (Image Restoration)</h3>
+<ul>
+<li><strong>任务说明</strong>：从损坏或降质的图像中恢复出清晰图像。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>SRCNN (Super-Resolution Convolutional Neural Network)</li>
+<li>VDSR (Very Deep Super-Resolution)</li>
+<li>GANs在图像超分辨率方面的应用</li>
+<li>Denoising Autoencoders</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-3d重建-3d-reconstruction">8. 3D重建 (3D Reconstruction)</h3>
+<ul>
+<li><strong>任务说明</strong>：从一系列图像中重建出三维场景或对象的结构。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>Multi-View Stereo (MVS)</li>
+<li>COLMAP</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-行为分析-action-analysis">9. 行为分析 (Action Analysis)</h3>
+<ul>
+<li><strong>任务说明</strong>：分析视频中的人或物体的行为，比如行人的行走路线、人群的动态等。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>C3D (Convolutional 3D Networks)</li>
+<li>I3D (Inflated 3D ConvNet)</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-视觉问答-visual-question-answering">10. 视觉问答 (Visual Question Answering)</h3>
+<ul>
+<li><strong>任务说明</strong>：根据给定图像和自然语言问题提供答案。</li>
+<li><strong>常用算法</strong>：
+<ul>
+<li>基于注意力机制的模型</li>
+<li>LSTM (Long Short-Term Memory) 网络</li>
+<li>End-to-End模型</li>
+<li>Transformer模型及其在视觉问答中的应用</li>
+</ul>
+</li>
+</ul>
+<p>这些任务和算法展示了机器视觉领域的广泛性和深度，随着研究的进展，还会不断有新</p>
+<p>的任务和算法被提出。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【NLP】文本预处理]]></title>
         <id>https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/</id>
@@ -417,7 +545,8 @@
 h' 包含了 h 和 x 的信息，也就是之前状态的信息</p>
 <h1 id="马尔可夫模型">马尔可夫模型</h1>
 <p><a href="https://www.bilibili.com/video/BV1Mr4y1f7Nm?p=1&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">火遍油管！终于有大神把【马尔可夫链】给做成动画了！</a></p>
-<p>马尔可夫假设：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”</p>
+<p>马尔可夫性质：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”</p>
+<p>马尔可夫假设：第N个词的出现只与前面N-1个词相关，而与其它任何词都不相关。N-gram模型就是基于该假设构建的</p>
 <h1 id="马尔科夫链">马尔科夫链</h1>
 <p>是依赖于马尔可夫假设的最基本的模型，用于模拟随即系统的状态转移<br>
 未来的状态只取决于现在的状态，和之前的步骤无关<br>
@@ -982,18 +1111,6 @@ Transformer：Seq2Seq model with attention</p>
 <p>In conclusion, I will do my best to uncover my greatest potential and earnestly accomplish everything I undertake. This is my self-introduction. I sincerely thank you for listening.</p>
 <p>另外<br>
 I will strive to issue some papers on some influencial journals</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【CV】三维重建]]></title>
-        <id>https://jeromezjl.github.io/post/cv-san-wei-chong-jian/</id>
-        <link href="https://jeromezjl.github.io/post/cv-san-wei-chong-jian/">
-        </link>
-        <updated>2024-03-07T08:46:57.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://github.com/jeromezjl/PhotometricStereoTutorial">github链接</a></p>
-<p>多视角、多光照</p>
-<p>多光照：输入多光照图像，输出三维</p>
-<p><a href="https://www.bilibili.com/video/BV1Mt4y1a7e6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【”UE5夯实基础”每日2更系列】13朗伯漫反射理论</a></p>
 ]]></content>
     </entry>
 </feed>

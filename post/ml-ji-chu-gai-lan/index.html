@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>【ML】基础概念 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1710476074807">
+<link rel="shortcut icon" href="/favicon.ico?v=1710508894468">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -226,7 +226,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">112</span>
+        <span class="site-item-stat-count">113</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -280,6 +280,30 @@
   <div class="toc-wrapper  auto"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
+<li><a href="#%E5%8F%82%E6%95%B0%E5%92%8C%E8%B6%85%E5%8F%82%E6%95%B0">参数和超参数</a>
+<ul>
+<li><a href="#%E5%8F%82%E6%95%B0">参数</a></li>
+<li><a href="#%E8%B6%85%E5%8F%82%E6%95%B0">超参数</a>
+<ul>
+<li><a href="#1-%E5%AD%A6%E4%B9%A0%E7%8E%87-learning-rate">1. 学习率 (Learning Rate)</a></li>
+<li><a href="#2-%E6%89%B9%E5%A4%A7%E5%B0%8F-batch-size">2. 批大小 (Batch Size)</a></li>
+<li><a href="#batch-size-%E7%9A%84%E5%BD%B1%E5%93%8D">Batch Size 的影响：</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9-batch-size">如何选择 Batch Size：</a></li>
+<li><a href="#3-%E8%BF%AD%E4%BB%A3%E6%AC%A1%E6%95%B0-epochs">3. 迭代次数 (Epochs)</a></li>
+<li><a href="#4-%E4%BC%98%E5%8C%96%E5%99%A8-optimizer">4. 优化器 (Optimizer)</a></li>
+<li><a href="#5-%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%8C%96-weight-initialization">5. 权重初始化 (Weight Initialization)</a></li>
+<li><a href="#6-%E6%AD%A3%E5%88%99%E5%8C%96%E5%8F%82%E6%95%B0-regularization-parameters">6. 正则化参数 (Regularization Parameters)</a></li>
+<li><a href="#7-%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0-activation-function">7. 激活函数 (Activation Function)</a></li>
+<li><a href="#8-%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84-network-architecture">8. 网络架构 (Network Architecture)</a></li>
+<li><a href="#9-dropout%E7%8E%87-dropout-rate">9. Dropout率 (Dropout Rate)</a></li>
+<li><a href="#10-%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%A1%B0%E5%87%8F-learning-rate-decay">10. 学习率衰减 (Learning Rate Decay)</a></li>
+<li><a href="#11-%E6%A2%AF%E5%BA%A6%E8%A3%81%E5%89%AA-gradient-clipping">11. 梯度裁剪 (Gradient Clipping)</a></li>
+<li><a href="#%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0">参数更新</a></li>
+<li><a href="#%E4%B8%80%E4%B8%AAepoch">一个Epoch</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0">损失函数</a></li>
 <li><a href="#%E5%90%91%E5%89%8D%E4%BC%A0%E6%92%AD%E5%92%8C%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD">向前传播和反向传播</a></li>
 <li><a href="#%E5%88%86%E7%B1%BB%E5%92%8C%E5%9B%9E%E5%BD%92">分类和回归</a></li>
@@ -580,7 +604,7 @@
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >10<span class="language" data-lan="minute"
+        >15<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -589,7 +613,7 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >2825<span class="pc-show language" data-lan="words"
+        >4244<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
@@ -599,13 +623,93 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <p>有监督：分类、回归<br>
-无监督：聚类、密度估计</p>
-<p>错误率：error_rate：预测错误/全部<br>
-精度：accuracy：1-error_rate</p>
+              <h1 id="参数和超参数">参数和超参数</h1>
+<h2 id="参数">参数</h2>
 <p>在深度学习中，参数通常是指神经网络中的权重和偏差。<br>
 这些参数是通过<code>反向传播</code>算法，根据训练数据中的梯度信息自动调整的，以最小化<code>损失函数</code>。<br>
 参数的学习是模型训练的过程，目标是找到最佳的参数配置。</p>
+<h2 id="超参数">超参数</h2>
+<p>超参数是在训练开始前设置的参数，与模型的参数（权重和偏置）不同，参数是通过训练数据学习得到的。以下是一些常见的深度学习超参数：</p>
+<p>深度学习模型的性能很大程度上依赖于其超参数的选择。超参数是在训练过程开始前设置的参数，与模型的参数（权重和偏置）不同，后者是通过训练数据学习得到的。以下是一些常见的深度学习超参数：</p>
+<h3 id="1-学习率-learning-rate">1. 学习率 (Learning Rate)</h3>
+<ul>
+<li>决定模型参数在每次更新时调整的幅度。学习率过高可能导致训练不稳定，过低则训练速度缓慢。</li>
+</ul>
+<h3 id="2-批大小-batch-size">2. 批大小 (Batch Size)</h3>
+<ul>
+<li>每次传递给网络以进行一次参数更新的样本数量。批大小影响模型的内存需求和训练稳定性。</li>
+</ul>
+<p>Batch size 是指在训练神经网络时，每次迭代（每次前向传播和后向传播过程）中用于计算和更新网络参数的样本数量。Batch size 是深度学习中的一个重要超参数，对模型的训练过程和性能有着重要的影响。</p>
+<h3 id="batch-size-的影响">Batch Size 的影响：</h3>
+<ol>
+<li>
+<p><strong>内存使用</strong>：较大的 batch size 会增加在每次迭代中处理的数据量，这会导致更高的内存（RAM或GPU内存）使用。如果内存不足，可能无法使用大的 batch size。</p>
+</li>
+<li>
+<p><strong>训练速度</strong>：理论上，较大的 batch size 可以提高计算效率，因为并行处理的数据量更多。然而，每次迭代处理更多的数据也意味着每次参数更新需要更长的时间。实际的训练速度还会受到硬件能力和数据加载速度的影响。</p>
+</li>
+<li>
+<p><strong>收敛性和性能</strong>：</p>
+<ul>
+<li><strong>较小的 batch size</strong> 可能导致训练过程中的更多噪声（每次更新的方向变化更大），这有时可以帮助模型跳出局部最小值，可能导致更好的泛化能力。但同时，训练过程可能更不稳定，收敛速度可能较慢。</li>
+<li><strong>较大的 batch size</strong> 提供了更准确的梯度估计，可能导致更快的收敛。但是，这也可能使模型更容易陷入局部最小值或鞍点，尤其是在损失曲面复杂的情况下。</li>
+</ul>
+</li>
+<li>
+<p><strong>泛化能力</strong>：一些研究表明，使用较小的 batch size 训练的模型可能具有更好的泛化能力，尽管这并不是绝对的，且可能取决于具体的任务和数据集。</p>
+</li>
+</ol>
+<h3 id="如何选择-batch-size">如何选择 Batch Size：</h3>
+<p>选择合适的 batch size 通常需要考虑多个因素，包括可用的内存资源、训练的稳定性和速度、以及模型的最终性能。实践中，通常会通过实验来确定特定任务和模型结构下的最佳 batch size，有时也会使用一些启发式方法来进行选择。此外，也有一些技术，如梯度累积，可以在内存限制的情况下间接实现较大的有效 batch size，以提高训练的稳定性和效率。</p>
+<h3 id="3-迭代次数-epochs">3. 迭代次数 (Epochs)</h3>
+<ul>
+<li>整个训练数据集被遍历和学习的总次数。</li>
+</ul>
+<h3 id="4-优化器-optimizer">4. 优化器 (Optimizer)</h3>
+<ul>
+<li>用于更新网络权重的算法，如SGD (随机梯度下降)、Adam、RMSprop等。</li>
+</ul>
+<h3 id="5-权重初始化-weight-initialization">5. 权重初始化 (Weight Initialization)</h3>
+<ul>
+<li>网络参数的初始赋值策略，如随机初始化、Xavier/Glorot初始化、He初始化等。</li>
+</ul>
+<h3 id="6-正则化参数-regularization-parameters">6. 正则化参数 (Regularization Parameters)</h3>
+<ul>
+<li>如L1和L2正则化，用于控制模型复杂度和防止过拟合的参数。</li>
+</ul>
+<h3 id="7-激活函数-activation-function">7. 激活函数 (Activation Function)</h3>
+<ul>
+<li>神经网络中使用的非线性函数，如 ReLU、Sigmoid、Tanh 等。</li>
+</ul>
+<h3 id="8-网络架构-network-architecture">8. 网络架构 (Network Architecture)</h3>
+<ul>
+<li>涉及模型的层数、每层的神经元数目、卷积核大小等结构性参数。</li>
+</ul>
+<h3 id="9-dropout率-dropout-rate">9. Dropout率 (Dropout Rate)</h3>
+<ul>
+<li>训练过程中随机丢弃神经元的比率，用于防止过拟合。</li>
+</ul>
+<h3 id="10-学习率衰减-learning-rate-decay">10. 学习率衰减 (Learning Rate Decay)</h3>
+<ul>
+<li>随着训练的进行，逐渐减小学习率的策略。</li>
+</ul>
+<h3 id="11-梯度裁剪-gradient-clipping">11. 梯度裁剪 (Gradient Clipping)</h3>
+<ul>
+<li>限制梯度值的范围，防止梯度爆炸。</li>
+</ul>
+<p><code>辨析</code><br>
+进行一次参数更新和完成一个epoch是两个不同的概念，在深度学习的训练过程中它们扮演着不同的角色。</p>
+<h3 id="参数更新">参数更新</h3>
+<ul>
+<li>在深度学习中，一次参数更新通常指的是基于一批数据（一个batch）计算损失函数的梯度，然后使用这个梯度来更新网络的权重和偏置。这个过程是学习的基本步骤，通过反向传播算法实现。</li>
+<li>参数更新的频率取决于批大小（batch size）。例如，如果批大小设置为32，则每处理32个样本后模型的参数就会更新一次。</li>
+</ul>
+<h3 id="一个epoch">一个Epoch</h3>
+<ul>
+<li>一个epoch指的是整个训练数据集被完整地遍历一次的过程。这意味着每个训练样本都已被用于训练模型，参与了一次或多次的参数更新（取决于批大小和数据集大小）。</li>
+<li>完成一个epoch通常包括多次参数更新。例如，如果有1000个训练样本，批大小为100，则一个epoch包含10次参数更新。</li>
+</ul>
+<p>简而言之，一次参数更新是基于一批数据调整模型参数的单个步骤，而一个epoch是整个训练数据集被完整遍历一次的过程，通常包含多次参数更新。Epoch的概念用于控制训练的总体进度，而参数更新是训练过程中的基本操作。</p>
 <h1 id="损失函数">损失函数</h1>
 <p><a href="https://zhuanlan.zhihu.com/p/261059231">损失函数（Loss Function）</a><br>
 计算预测值f(x)与真实值Y的差异程度<br>
@@ -613,7 +717,7 @@
 均方损失：L2 Loss<br>
 Huber Loss</p>
 <p><strong>正则化</strong><br>
-在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合<br>
+在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合。常见的有L1正则化和L2正则化。<br>
 <a href="https://blog.csdn.net/weixin_41960890/article/details/104891561">一篇文章完全搞懂正则化（Regularization）</a></p>
 <h1 id="向前传播和反向传播">向前传播和反向传播</h1>
 <p>损失函数链式法则对参数求梯度来更新参数值<br>
@@ -693,7 +797,7 @@ dropout：前向传播的时候，让某个神经元的激活值以一定的概�
 <li>
 <p><strong>监督学习（Supervised Learning）</strong>:</p>
 <ul>
-<li>在这种类型的学习中，算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。</li>
+<li>包括分类和回归任务。算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。</li>
 <li>常见的算法包括线性回归、逻辑回归、支持向量机（SVM）、决策树、随机森林、神经网络等。</li>
 </ul>
 </li>
@@ -1331,6 +1435,131 @@ dropout：前向传播的时候，让某个神经元的激活值以一定的概�
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-gai-shu/"" data-c="
+          &lt;p&gt;机器视觉领域包含多种任务，每种任务都旨在模拟或超越人类视觉系统的某些方面。以下是一些主要任务及其常用的算法：&lt;/p&gt;
+&lt;h3 id=&#34;1-图像分类-image-classification&#34;&gt;1. 图像分类 (Image Classification)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：将整个图像分配给一个或多个类别。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;AlexNet&lt;/li&gt;
+&lt;li&gt;VGGNet&lt;/li&gt;
+&lt;li&gt;ResNet&lt;/li&gt;
+&lt;li&gt;Inception&lt;/li&gt;
+&lt;li&gt;DenseNet&lt;/li&gt;
+&lt;li&gt;EfficientNet&lt;/li&gt;
+&lt;li&gt;转移学习：使用预训练的CNN模型进行微调以适应特定的图像分类任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-目标检测-object-detection&#34;&gt;2. 目标检测 (Object Detection)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：在图像中识别物体的位置，并将每个物体分类。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;R-CNN及其变体（Fast R-CNN, Faster R-CNN）&lt;/li&gt;
+&lt;li&gt;YOLO系列（YOLOv1至YOLOv5）&lt;/li&gt;
+&lt;li&gt;SSD (Single Shot MultiBox Detector)&lt;/li&gt;
+&lt;li&gt;RetinaNet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-图像分割-image-segmentation&#34;&gt;3. 图像分割 (Image Segmentation)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：将图像分割成多个区域或对象，可以进一步细分为语义分割和实例分割。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;FCN (Fully Convolutional Networks)&lt;/li&gt;
+&lt;li&gt;U-Net&lt;/li&gt;
+&lt;li&gt;Mask R-CNN（实例分割）&lt;/li&gt;
+&lt;li&gt;DeepLab系列&lt;/li&gt;
+&lt;li&gt;PSPNet (Pyramid Scene Parsing Network)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-姿态估计-pose-estimation&#34;&gt;4. 姿态估计 (Pose Estimation)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：估计图像中人或对象的姿态或关节位置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;OpenPose&lt;/li&gt;
+&lt;li&gt;AlphaPose&lt;/li&gt;
+&lt;li&gt;DensePose&lt;/li&gt;
+&lt;li&gt;PoseNet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-物体跟踪-object-tracking&#34;&gt;5. 物体跟踪 (Object Tracking)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：在视频序列中跟踪一个或多个对象的运动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;SiamFC (Siamese Fully Convolutional Network)&lt;/li&gt;
+&lt;li&gt;SORT/Simple Online and Realtime Tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-图像生成-image-generation&#34;&gt;6. 图像生成 (Image Generation)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从现有的图像或随机噪声生成新图像。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;GANs (Generative Adversarial Networks) 及其变体（CGAN, DCGAN, StyleGAN）&lt;/li&gt;
+&lt;li&gt;VAEs (Variational Autoencoders)&lt;/li&gt;
+&lt;li&gt;PixelRNN/PixelCNN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-图像恢复-image-restoration&#34;&gt;7. 图像恢复 (Image Restoration)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从损坏或降质的图像中恢复出清晰图像。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;SRCNN (Super-Resolution Convolutional Neural Network)&lt;/li&gt;
+&lt;li&gt;VDSR (Very Deep Super-Resolution)&lt;/li&gt;
+&lt;li&gt;GANs在图像超分辨率方面的应用&lt;/li&gt;
+&lt;li&gt;Denoising Autoencoders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-3d重建-3d-reconstruction&#34;&gt;8. 3D重建 (3D Reconstruction)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从一系列图像中重建出三维场景或对象的结构。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;Multi-View Stereo (MVS)&lt;/li&gt;
+&lt;li&gt;COLMAP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9-行为分析-action-analysis&#34;&gt;9. 行为分析 (Action Analysis)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：分析视频中的人或物体的行为，比如行人的行走路线、人群的动态等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;C3D (Convolutional 3D Networks)&lt;/li&gt;
+&lt;li&gt;I3D (Inflated 3D ConvNet)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;10-视觉问答-visual-question-answering&#34;&gt;10. 视觉问答 (Visual Question Answering)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：根据给定图像和自然语言问题提供答案。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;基于注意力机制的模型&lt;/li&gt;
+&lt;li&gt;LSTM (Long Short-Term Memory) 网络&lt;/li&gt;
+&lt;li&gt;End-to-End模型&lt;/li&gt;
+&lt;li&gt;Transformer模型及其在视觉问答中的应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些任务和算法展示了机器视觉领域的广泛性和深度，随着研究的进展，还会不断有新&lt;/p&gt;
+&lt;p&gt;的任务和算法被提出。&lt;/p&gt;
+">【CV】概述</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/"" data-c="
           &lt;p&gt;数据预处理是自然语言处理（NLP）任务中至关重要的一步，它直接影响到模型训练的效果和最终结果的质量。预处理步骤的目的是将原始文本转换成一种更易于计算机理解和处理的格式。以下是数据预处理中常见的几个步骤：&lt;/p&gt;
 &lt;ol&gt;
@@ -1724,7 +1953,8 @@ dropout：前向传播的时候，让某个神经元的激活值以一定的概�
 h&#39; 包含了 h 和 x 的信息，也就是之前状态的信息&lt;/p&gt;
 &lt;h1 id=&#34;马尔可夫模型&#34;&gt;马尔可夫模型&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Mr4y1f7Nm?p=1&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;火遍油管！终于有大神把【马尔可夫链】给做成动画了！&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;马尔可夫假设：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”&lt;/p&gt;
+&lt;p&gt;马尔可夫性质：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”&lt;/p&gt;
+&lt;p&gt;马尔可夫假设：第N个词的出现只与前面N-1个词相关，而与其它任何词都不相关。N-gram模型就是基于该假设构建的&lt;/p&gt;
 &lt;h1 id=&#34;马尔科夫链&#34;&gt;马尔科夫链&lt;/h1&gt;
 &lt;p&gt;是依赖于马尔可夫假设的最基本的模型，用于模拟随即系统的状态转移&lt;br&gt;
 未来的状态只取决于现在的状态，和之前的步骤无关&lt;br&gt;
@@ -2294,13 +2524,93 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/"" data-c="
-          &lt;p&gt;有监督：分类、回归&lt;br&gt;
-无监督：聚类、密度估计&lt;/p&gt;
-&lt;p&gt;错误率：error_rate：预测错误/全部&lt;br&gt;
-精度：accuracy：1-error_rate&lt;/p&gt;
+          &lt;h1 id=&#34;参数和超参数&#34;&gt;参数和超参数&lt;/h1&gt;
+&lt;h2 id=&#34;参数&#34;&gt;参数&lt;/h2&gt;
 &lt;p&gt;在深度学习中，参数通常是指神经网络中的权重和偏差。&lt;br&gt;
 这些参数是通过&lt;code&gt;反向传播&lt;/code&gt;算法，根据训练数据中的梯度信息自动调整的，以最小化&lt;code&gt;损失函数&lt;/code&gt;。&lt;br&gt;
 参数的学习是模型训练的过程，目标是找到最佳的参数配置。&lt;/p&gt;
+&lt;h2 id=&#34;超参数&#34;&gt;超参数&lt;/h2&gt;
+&lt;p&gt;超参数是在训练开始前设置的参数，与模型的参数（权重和偏置）不同，参数是通过训练数据学习得到的。以下是一些常见的深度学习超参数：&lt;/p&gt;
+&lt;p&gt;深度学习模型的性能很大程度上依赖于其超参数的选择。超参数是在训练过程开始前设置的参数，与模型的参数（权重和偏置）不同，后者是通过训练数据学习得到的。以下是一些常见的深度学习超参数：&lt;/p&gt;
+&lt;h3 id=&#34;1-学习率-learning-rate&#34;&gt;1. 学习率 (Learning Rate)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;决定模型参数在每次更新时调整的幅度。学习率过高可能导致训练不稳定，过低则训练速度缓慢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-批大小-batch-size&#34;&gt;2. 批大小 (Batch Size)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;每次传递给网络以进行一次参数更新的样本数量。批大小影响模型的内存需求和训练稳定性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Batch size 是指在训练神经网络时，每次迭代（每次前向传播和后向传播过程）中用于计算和更新网络参数的样本数量。Batch size 是深度学习中的一个重要超参数，对模型的训练过程和性能有着重要的影响。&lt;/p&gt;
+&lt;h3 id=&#34;batch-size-的影响&#34;&gt;Batch Size 的影响：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;内存使用&lt;/strong&gt;：较大的 batch size 会增加在每次迭代中处理的数据量，这会导致更高的内存（RAM或GPU内存）使用。如果内存不足，可能无法使用大的 batch size。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;训练速度&lt;/strong&gt;：理论上，较大的 batch size 可以提高计算效率，因为并行处理的数据量更多。然而，每次迭代处理更多的数据也意味着每次参数更新需要更长的时间。实际的训练速度还会受到硬件能力和数据加载速度的影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;收敛性和性能&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;较小的 batch size&lt;/strong&gt; 可能导致训练过程中的更多噪声（每次更新的方向变化更大），这有时可以帮助模型跳出局部最小值，可能导致更好的泛化能力。但同时，训练过程可能更不稳定，收敛速度可能较慢。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;较大的 batch size&lt;/strong&gt; 提供了更准确的梯度估计，可能导致更快的收敛。但是，这也可能使模型更容易陷入局部最小值或鞍点，尤其是在损失曲面复杂的情况下。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;泛化能力&lt;/strong&gt;：一些研究表明，使用较小的 batch size 训练的模型可能具有更好的泛化能力，尽管这并不是绝对的，且可能取决于具体的任务和数据集。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;如何选择-batch-size&#34;&gt;如何选择 Batch Size：&lt;/h3&gt;
+&lt;p&gt;选择合适的 batch size 通常需要考虑多个因素，包括可用的内存资源、训练的稳定性和速度、以及模型的最终性能。实践中，通常会通过实验来确定特定任务和模型结构下的最佳 batch size，有时也会使用一些启发式方法来进行选择。此外，也有一些技术，如梯度累积，可以在内存限制的情况下间接实现较大的有效 batch size，以提高训练的稳定性和效率。&lt;/p&gt;
+&lt;h3 id=&#34;3-迭代次数-epochs&#34;&gt;3. 迭代次数 (Epochs)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;整个训练数据集被遍历和学习的总次数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-优化器-optimizer&#34;&gt;4. 优化器 (Optimizer)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用于更新网络权重的算法，如SGD (随机梯度下降)、Adam、RMSprop等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-权重初始化-weight-initialization&#34;&gt;5. 权重初始化 (Weight Initialization)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;网络参数的初始赋值策略，如随机初始化、Xavier/Glorot初始化、He初始化等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-正则化参数-regularization-parameters&#34;&gt;6. 正则化参数 (Regularization Parameters)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;如L1和L2正则化，用于控制模型复杂度和防止过拟合的参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-激活函数-activation-function&#34;&gt;7. 激活函数 (Activation Function)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;神经网络中使用的非线性函数，如 ReLU、Sigmoid、Tanh 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-网络架构-network-architecture&#34;&gt;8. 网络架构 (Network Architecture)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;涉及模型的层数、每层的神经元数目、卷积核大小等结构性参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;9-dropout率-dropout-rate&#34;&gt;9. Dropout率 (Dropout Rate)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;训练过程中随机丢弃神经元的比率，用于防止过拟合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;10-学习率衰减-learning-rate-decay&#34;&gt;10. 学习率衰减 (Learning Rate Decay)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;随着训练的进行，逐渐减小学习率的策略。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;11-梯度裁剪-gradient-clipping&#34;&gt;11. 梯度裁剪 (Gradient Clipping)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;限制梯度值的范围，防止梯度爆炸。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;辨析&lt;/code&gt;&lt;br&gt;
+进行一次参数更新和完成一个epoch是两个不同的概念，在深度学习的训练过程中它们扮演着不同的角色。&lt;/p&gt;
+&lt;h3 id=&#34;参数更新&#34;&gt;参数更新&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在深度学习中，一次参数更新通常指的是基于一批数据（一个batch）计算损失函数的梯度，然后使用这个梯度来更新网络的权重和偏置。这个过程是学习的基本步骤，通过反向传播算法实现。&lt;/li&gt;
+&lt;li&gt;参数更新的频率取决于批大小（batch size）。例如，如果批大小设置为32，则每处理32个样本后模型的参数就会更新一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;一个epoch&#34;&gt;一个Epoch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一个epoch指的是整个训练数据集被完整地遍历一次的过程。这意味着每个训练样本都已被用于训练模型，参与了一次或多次的参数更新（取决于批大小和数据集大小）。&lt;/li&gt;
+&lt;li&gt;完成一个epoch通常包括多次参数更新。例如，如果有1000个训练样本，批大小为100，则一个epoch包含10次参数更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简而言之，一次参数更新是基于一批数据调整模型参数的单个步骤，而一个epoch是整个训练数据集被完整遍历一次的过程，通常包含多次参数更新。Epoch的概念用于控制训练的总体进度，而参数更新是训练过程中的基本操作。&lt;/p&gt;
 &lt;h1 id=&#34;损失函数&#34;&gt;损失函数&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/261059231&#34;&gt;损失函数（Loss Function）&lt;/a&gt;&lt;br&gt;
 计算预测值f(x)与真实值Y的差异程度&lt;br&gt;
@@ -2308,7 +2618,7 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 均方损失：L2 Loss&lt;br&gt;
 Huber Loss&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正则化&lt;/strong&gt;&lt;br&gt;
-在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合&lt;br&gt;
+在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合。常见的有L1正则化和L2正则化。&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_41960890/article/details/104891561&#34;&gt;一篇文章完全搞懂正则化（Regularization）&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;向前传播和反向传播&#34;&gt;向前传播和反向传播&lt;/h1&gt;
 &lt;p&gt;损失函数链式法则对参数求梯度来更新参数值&lt;br&gt;
@@ -2388,7 +2698,7 @@ dropout：前向传播的时候，让某个神经元的激活值以一定的概�
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;监督学习（Supervised Learning）&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在这种类型的学习中，算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。&lt;/li&gt;
+&lt;li&gt;包括分类和回归任务。算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。&lt;/li&gt;
 &lt;li&gt;常见的算法包括线性回归、逻辑回归、支持向量机（SVM）、决策树、随机森林、神经网络等。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3832,10 +4142,12 @@ Bash是Shell的一种&lt;/p&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-transformer&#34;&gt;【DL】Transformer&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-mo-xing-fu-yong&#34;&gt;【DL】模型复用&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;cv&#34;&gt;CV&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/cv-gai-shu&#34;&gt;【CV】概述&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/cnn-juan-ji-shen-jing-wang-luo&#34;&gt;【CV】CNN 卷积神经网络&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;nlp&#34;&gt;NLP&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-gai-shu&#34;&gt;【NLP】概述&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li&#34;&gt;【NLP】文本预处理&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-ci-qian-ru&#34;&gt;【NLP】词嵌入&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing&#34;&gt;【NLP】时序模型与马尔可夫模型&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-rnn-lstm-gru&#34;&gt;【NLP】RNN | GRU | LSTM&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-bert&#34;&gt;【NLP】BERT&lt;/a&gt;&lt;br&gt;
@@ -4516,10 +4828,30 @@ confusion_matrix(y_true, y_pred, labels=[&amp;quot;ant&amp;quot;, &amp;quot;bird
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/skip-gram-ci-xiang-liang-xue-xi/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/27234078&#34;&gt;理解 Word2Vec 之 Skip-Gram 模型&lt;/a&gt;&lt;br&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-ci-qian-ru/"" data-c="
+          &lt;h1 id=&#34;词嵌入word-embedding&#34;&gt;词嵌入（Word Embedding）&lt;/h1&gt;
+&lt;p&gt;将词语映射为数值&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/422542949&#34;&gt;从0开始词嵌入（Word embedding）&lt;/a&gt;&lt;br&gt;
+one-hot：只编码了词汇，无语义信息&lt;br&gt;
+bag of words：只有词的频率信息，无其他语义信息&lt;br&gt;
+N-gram：大小为N的滑动窗口，每个片段称为gram，但会有零概率问题&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/187486026#:~:text=%E4%B8%BA%E4%BA%86%E8%A7%A3%E5%86%B3%E9%9B%B6%E6%A6%82%E7%8E%87%E9%97%AE%E9%A2%98%E5%91%A2%EF%BC%8C%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E7%BB%99,%E2%80%9C%E6%9C%AA%E5%87%BA%E7%8E%B0%E7%9A%84n-gram%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E4%B8%80%E4%B8%AA%E9%9D%9E%E9%9B%B6%E4%BC%B0%E8%AE%A1%E5%80%BC%EF%BC%8C%E7%9B%B8%E5%BA%94%E5%BE%97%E9%9C%80%E8%A6%81%E9%99%8D%E4%BD%8E%E5%B7%B2%E5%87%BA%E7%8E%B0n-gram%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%EF%BC%8C%E4%B8%94%E7%BB%8F%E6%95%B0%E6%8D%AE%E5%B9%B3%E6%BB%91%E5%90%8E%E4%B8%80%E5%AE%9A%E4%BF%9D%E8%AF%81%E6%A6%82%E7%8E%87%E5%92%8C%E4%B8%BA1%E2%80%9D%20%E3%80%82&#34;&gt;n-gram语言模型原理到实践&lt;/a&gt;&lt;br&gt;
+bag of words 和 N-gram 都是基于词频统计的模型，而一些高词频的词不一定有用，比如 &amp;quot;我&amp;quot;、&amp;quot;你&amp;quot; 等，称为停用词（stop words）在构建词汇表的时候可以抛弃这些词&lt;br&gt;
+TF-IDF：统计词频来估计词汇的重要程度&lt;/p&gt;
+&lt;h1 id=&#34;词袋模型bag-of-wordsbow&#34;&gt;词袋模型（bag of words，BOW）&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/667280452&#34;&gt;传统NLP之Bag of Words（词袋模型）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tf-idf&#34;&gt;TF-IDF&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV12u411C7Sq/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;4分钟TF-IDF原理讲解与简单实现！基础看这一篇就够啦&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/31197209&#34;&gt;机器学习：生动理解TF-IDF算法&lt;/a&gt;&lt;br&gt;
+用于评估一个词语在特定文档中相对于整个文档集合的重要程度，通过计算每个词语的TF-IDF值，可以确定哪些词语最具代表性或者最能区分当前文档与其他文档。可以自动过滤停用词&lt;/p&gt;
+&lt;h1 id=&#34;word2vec&#34;&gt;Word2vec&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/27234078&#34;&gt;理解 Word2Vec 之 Skip-Gram 模型&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/m0_63642362/article/details/127991177&#34;&gt;图学习【参考资料1】词向量word2vec&lt;/a&gt;&lt;/p&gt;
-">【NLP】词向量</a>
+&lt;p&gt;简述Word2vec模型&lt;/p&gt;
+&lt;h1 id=&#34;glove&#34;&gt;GloVe&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/42073620&#34;&gt;（十五）通俗易懂理解——Glove算法原理&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/50946044&#34;&gt;GloVe算法原理及简单使用&lt;/a&gt;&lt;/p&gt;
+">【NLP】词嵌入</a>
       </div>
       
       <div class="item">
@@ -7647,13 +7979,81 @@ kernel = 2
 stride = 2
 padding = 0
 
-outputSize = (inputSize - kernel + 2 * padding) / stride + 1
+outputSize = ((inputSize - kernel + 2 * padding) / stride) + 1
 print(outputSize,&#39;\n&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;全连接层计算：&lt;br&gt;
 若最后一层输出为 10 x 10 x 20 ，则作为全连接层的输入为 10 x 10 x 20 = 2000&lt;/p&gt;
 &lt;h1 id=&#34;批标准化-batch-normalization&#34;&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/24810318&#34;&gt;批标准化 (Batch Normalization)&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44023658/article/details/105844861&#34;&gt;Batch Normalization（BN）超详细解析&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;变体&#34;&gt;变体&lt;/h1&gt;
+&lt;p&gt;CNN 是卷积神经网络的总称，按照时间线，给出一些变体&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LeNet-5 (1998年)&lt;/strong&gt;: 由Yann LeCun开发，是早期的卷积神经网络，主要用于手写数字识别。LeNet-5被认为是卷积神经网络的先驱之一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;AlexNet (2012年)&lt;/strong&gt;: 由Alex Krizhevsky等人开发，这个模型在2012年的ImageNet挑战赛中取得了突破性的成功，标志着深度学习在视觉领域的崛起。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ZFNet (2013年)&lt;/strong&gt;: 也称为Zeiler&amp;amp;Fergus模型，通过修改AlexNet的结构并使用可视化技术来理解卷积层的工作方式，赢得了2013年ImageNet挑战赛。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GoogLeNet (Inception v1) (2014年)&lt;/strong&gt;: 由Google开发，引入了一种称为“Inception”的新架构，它能够显著减少参数的数量而不牺牲性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VGGNet (2014年)&lt;/strong&gt;: 由牛津大学的Visual Geometry Group开发，这个模型以其简单而均一的架构著称，证明了网络的深度是提高性能的关键因素。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ResNet (2015年)&lt;/strong&gt;: 由微软研究院开发，引入了残差学习的概念，使得训练非常深的网络成为可能。ResNet在2015年的ImageNet挑战赛中取得了胜利。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DenseNet (2017年)&lt;/strong&gt;: 引入了密集连接的概念，每一层都与前面的所有层相连，极大地提高了效率和效果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MobileNet (2017年)&lt;/strong&gt;: 专为移动和嵌入式设备设计，通过使用深度可分离的卷积来减少计算量和模型大小。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;EfficientNet (2019年)&lt;/strong&gt;: 使用复合系数对深度、宽度和分辨率进行缩放，创造出一系列模型，这些模型在效率和准确性之间取得了良好的平衡。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Vision Transformer (ViT) (2020年)&lt;/strong&gt;: 将Transformer架构应用于图像分析，这是从自然语言处理领域借鉴过来的技术，开辟了神经网络处理视觉信息的新途径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;lenet-5&#34;&gt;LeNet-5&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1t44y1r7ct?p=1&#34;&gt;23 经典卷积神经网络 LeNet【动手学深度学习v2】&lt;/a&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710506415759.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+使用MNIST：28x28，第一层 padding=2，输入网络是 32x32&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输入层（Input Layer）&lt;/strong&gt;：接受的输入图像大小通常是32x32像素。这是因为网络设计时考虑到数字的实际大小和希望网络能够捕捉到重要的特征。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第一卷积层（C1）&lt;/strong&gt;：这一层使用6个卷积核（或滤波器），每个大小为5x5，步长为1，无填充（padding），输出的特征图（feature map）大小为28x28x6。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第一下采样层（S2）&lt;/strong&gt;：也称为池化层，使用2x2的窗口进行平均池化，步长为2，将特征图的维度降低到14x14x6。这一步骤有助于减少数据的空间尺寸，从而减少计算量和控制过拟合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第二卷积层（C3）&lt;/strong&gt;：这一层有16个卷积核，每个大小为5x5，处理上一层的输出，产生10x10x16的特征图。这一层的设计允许网络学习更高级的特征。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第二下采样层（S4）&lt;/strong&gt;：同样采用2x2平均池化，步长为2，输出的维度为5x5x16。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全连接层（F5）&lt;/strong&gt;：这一层有120个节点，它将前一层的输出展平（flatten）并全连接到这120个节点上。这一层开始将学到的特征组合成更高级别的模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第二全连接层（F6）&lt;/strong&gt;：这一层有84个节点，进一步处理特征，为最终的分类决策做准备。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输出层（Output Layer）&lt;/strong&gt;：最后是一个具有10个节点的输出层，对应于10个数字类（0到9）。这一层通常使用softmax激活函数，将网络的输出转换为概率分布。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;两层卷积两层池化，卷积池化之间使用 Sigmoid 激活，最后使用全连接层映射到 10 个分类&lt;/p&gt;
+&lt;h2 id=&#34;alexnet&#34;&gt;AlexNet&lt;/h2&gt;
+&lt;h2 id=&#34;vggnet&#34;&gt;VGGNet&lt;/h2&gt;
+&lt;h2 id=&#34;resnet&#34;&gt;ResNet&lt;/h2&gt;
 ">【CV】CNN 卷积神经网络</a>
       </div>
       
@@ -8611,6 +9011,7 @@ if __name__ == &#39;__main__&#39;:
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;应用&lt;/strong&gt;：广泛用于分类、回归、特征学习等任务。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;当数据量和模型量比较大的时候，MLP会过拟合，而CNN等卷积神经网络可以相对更好的解决此类问题&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_39441762/article/details/80446692?spm=1001.2101.3001.6650.1&amp;amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_default&amp;amp;utm_relevant_index=2&#34;&gt;神经网络之BP算法(图说神经网络+BP算法理论推导+例子运用+代码)&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;sklearn-相关实现sklearnneural_network&#34;&gt;sklearn 相关实现——sklearn.neural_network&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.weixueyuan.net/a/913.html&#34;&gt;MLPClassifier分类演示&lt;/a&gt;&lt;/p&gt;
