@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-10T10:20:04.102Z</updated>
+    <updated>2024-03-15T04:15:07.459Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,636 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【NLP】文本预处理]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/">
+        </link>
+        <updated>2024-03-15T03:49:11.000Z</updated>
+        <content type="html"><![CDATA[<p>数据预处理是自然语言处理（NLP）任务中至关重要的一步，它直接影响到模型训练的效果和最终结果的质量。预处理步骤的目的是将原始文本转换成一种更易于计算机理解和处理的格式。以下是数据预处理中常见的几个步骤：</p>
+<ol>
+<li>
+<p><strong>文本清洗</strong>:<br>
+移除无关内容（如HTML标签）、标点符号、数字等，或者将它们转换成有意义的代替文本。</p>
+<ul>
+<li><strong>去除噪声</strong>：移除文本中的无关信息，如HTML标签、非文本内容（图片链接、JavaScript代码等）、格式符号等。</li>
+<li><strong>规范化文本</strong>：将文本统一为标准格式，例如，将所有字母转换为小写（或大写），以减少词汇的变体数量。</li>
+<li><strong>去除特殊字符和标点</strong>：根据任务需求，移除或替换文本中的特殊字符和标点符号，有时标点可以保留，因为它可能含有语义信息。</li>
+</ul>
+</li>
+<li>
+<p><strong>分词 (Tokenization)</strong>:</p>
+<ul>
+<li><strong>词级分词</strong>：将句子分割成单词或词汇单元，如短语。这是英文等西方语言中最常见的分词方式。</li>
+<li><strong>子词级分词</strong>：将单词进一步分割成更小的单位（如词根、词缀）。这对于处理一些复合词或未见过的词特别有用。</li>
+<li><strong>字符级分词</strong>：将文本分割成字符。这种方法对于某些任务或语言（如中文）可能更合适。</li>
+</ul>
+</li>
+<li>
+<p><strong>停用词去除</strong>:</p>
+<ul>
+<li>停用词是指在文本中频繁出现但对于理解文本意义贡献不大的词，如“的”、“是”、“在”等。去除这些词可以帮助减少数据噪声和特征维度。</li>
+</ul>
+</li>
+<li>
+<p><strong>词干提取 (Stemming) 和词形还原 (Lemmatization)</strong>:</p>
+<ul>
+<li><strong>词干提取</strong>：通过去除词缀来将词汇还原到基本形式（可能不是真正的词）。例如，“running”、“runs”词干提取后都变为“run”。</li>
+<li><strong>词形还原</strong>：将词汇还原到其词典形式（lemma），考虑了词汇的词性。比如，“better”的词形还原结果是“good”。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据增强</strong>:</p>
+<ul>
+<li>通过词替换、句子重排等方法人为增加训练数据的多样性，有助于改善模型的泛化能力。</li>
+</ul>
+</li>
+<li>
+<p><strong>向量化 (Vectorization)</strong>:</p>
+<ul>
+<li><strong>构建词汇表</strong>：统计词频，小于某个词频的词将不会被加入词汇表</li>
+<li><strong>Token 编码</strong>：在构建了词汇表之后，每个唯一的token都会被分配一个唯一的数字ID。向量化的这一阶段涉及将文本中的每个token替换成对应的数字ID。这个过程实际上是一种编码，将文本数据转换为模型可以处理的数值形式。</li>
+<li><strong>句子/文本向量化（tokenize）</strong>：完成token的数字编码后，整个句子或文本片段可以表示为一个数字序列。</li>
+<li><strong>序列填充 (Padding) 和截断</strong>：对于需要固定长度输入的模型（如很多深度学习模型），需要通过填充（通常用0或特殊标记<code>&lt;PAD&gt;</code> ）或截断来使所有文本序列长度一致。</li>
+<li><strong>词袋模型 (Bag of Words, BoW)</strong>：将文本转换为词频向量，但这种方法不考虑词序和上下文。</li>
+<li><strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong>：一种加权的词袋模型，考虑了词在文档集中的稀有程度。</li>
+<li><strong>词嵌入 (Word Embeddings)</strong>：将词汇token映射到连续的向量空间中，这些向量捕获了词汇之间的语义关系。常见的词嵌入模型包括Word2Vec、GloVe和BERT等。</li>
+</ul>
+</li>
+</ol>
+<p>每个步骤的具体实现和必要性可能会根据具体的任务和语言而有所不同。例如，对于某些任务，保留标点符号可能是有意义的，因为它们可以携带情感或语法信息。而对于一些语言（如中文、日文），分词步骤会比英文复杂得多，可能需要特定的算法和词库。预处理的目的是清洗和转换数据，以提高模型训练的效率和效果。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【NLP】概述]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-gai-shu/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-gai-shu/">
+        </link>
+        <updated>2024-03-15T03:19:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="任务">任务</h1>
+<ol>
+<li><strong>文本分类（Text Classification）</strong>：将文本数据分类到预定义的类别中。常见的应用包括垃圾邮件检测、情感分析和主题分类。</li>
+</ol>
+<ul>
+<li>朴素贝叶斯（Naive Bayes）</li>
+<li>支持向量机（SVM）</li>
+<li>随机森林（Random Forest）</li>
+<li>卷积神经网络（CNN）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>Transformer模型（如BERT）</li>
+</ul>
+<ol start="2">
+<li><strong>命名实体识别（Named Entity Recognition, NER）</strong>：识别文本中的命名实体，如人名、地点名、组织名等，并将其分类到预定义的类别。</li>
+</ol>
+<ul>
+<li>条件随机场（CRF）</li>
+<li>循环神经网络（RNN）</li>
+<li>长短期记忆网络（LSTM）+ CRF</li>
+<li>BERT及其变体</li>
+</ul>
+<ol start="3">
+<li><strong>词性标注（Part-of-Speech Tagging, POS Tagging）</strong>：为文本中的每个单词分配一个词性标签，如名词、动词、形容词等。</li>
+</ol>
+<ul>
+<li>隐马尔可夫模型（HMM）</li>
+<li>条件随机场（CRF）</li>
+<li>循环神经网络（RNN）</li>
+<li>Transformer模型（如BERT）</li>
+</ul>
+<ol start="4">
+<li><strong>句法分析（Syntactic Parsing）</strong>：分析句子的语法结构，确定单词之间的依赖关系和句子的语法树结构。</li>
+</ol>
+<ul>
+<li>基于规则的方法</li>
+<li>上下文无关文法（CFG）</li>
+<li>依存解析（Dependency Parsing）使用神经网络</li>
+<li>Transformer模型（如BERT、GPT）</li>
+</ul>
+<ol start="5">
+<li><strong>语义分析（Semantic Analysis）</strong>：理解句子或文本的含义，包括词义消歧和语义角色标注。</li>
+</ol>
+<ul>
+<li>潜在语义分析（LSA）</li>
+<li>潜在狄利克雷分配（LDA）</li>
+<li>词嵌入方法（如Word2Vec、GloVe）</li>
+<li>Transformer模型（如BERT、RoBERTa）</li>
+</ul>
+<ol start="6">
+<li><strong>情感分析（Sentiment Analysis）</strong>：判断文本的情感倾向，如正面、负面或中性。</li>
+</ol>
+<ul>
+<li>朴素贝叶斯（Naive Bayes）</li>
+<li>支持向量机（SVM）</li>
+<li>循环神经网络（RNN）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>Transformer模型（如BERT、XLNet）</li>
+</ul>
+<ol start="7">
+<li><strong>文本摘要（Text Summarization）</strong>：生成文本的简短且含义完整的摘要。</li>
+</ol>
+<ul>
+<li>抽取式摘要方法，如TF-IDF</li>
+<li>序列到序列模型（Seq2Seq），如LSTM</li>
+<li>注意力机制（Attention Mechanism）</li>
+<li>预训练语言模型（如GPT-3、BERT）</li>
+</ul>
+<ol start="8">
+<li><strong>机器翻译（Machine Translation）</strong>：将一种语言的文本翻译成另一种语言。</li>
+</ol>
+<ul>
+<li>统计机器翻译（SMT）</li>
+<li>序列到序列模型（Seq2Seq）</li>
+<li>注意力机制</li>
+<li>Transformer架构</li>
+</ul>
+<ol start="9">
+<li><strong>问答系统（Question Answering）</strong>：对自然语言形式的问题给出直接答案。</li>
+</ol>
+<ul>
+<li>信息检索技术</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>注意力机制</li>
+<li>BERT和Transformer模型</li>
+</ul>
+<ol start="10">
+<li><strong>对话系统和聊天机器人（Dialogue Systems and Chatbots）</strong>：构建能够与人类用户进行自然对话的系统。</li>
+</ol>
+<ul>
+<li>序列到序列模型（Seq2Seq）</li>
+<li>循环神经网络（RNN）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>Transformer和GPT系列</li>
+</ul>
+<ol start="11">
+<li><strong>文本生成（Text Generation）</strong>：基于某些输入生成自然语言文本，如新闻文章生成、故事创作等。</li>
+</ol>
+<ul>
+<li>马尔可夫模型</li>
+<li>循环神经网络（RNN）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>GPT系列</li>
+</ul>
+<ol start="12">
+<li><strong>语音识别（Speech Recognition）</strong>：将语音信号转换为文本。</li>
+</ol>
+<ul>
+<li>隐马尔可夫模型（HMM）</li>
+<li>深度神经网络（DNN）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>端到端的深度学习模型</li>
+</ul>
+<ol start="13">
+<li><strong>自然语言理解（Natural Language Understanding, NLU）</strong>：深入理解自然语言的含义和上下文。</li>
+</ol>
+<ul>
+<li>词嵌入（Word Embeddings）</li>
+<li>长短期记忆网络（LSTM）</li>
+<li>Transformer模型</li>
+<li>BERT及其变体</li>
+</ul>
+<ol start="14">
+<li><strong>自然语言生成（Natural Language Generation, NLG）</strong>：从非语言数据生成人类可理解的语言。</li>
+</ol>
+<ul>
+<li>模板方法</li>
+<li>序列到序列模型（Seq2Seq）</li>
+<li>Transformer模型</li>
+<li>GPT系列</li>
+</ul>
+<ol start="15">
+<li><strong>关键词提取（Keyword Extraction）</strong>：从文本中提取最相关的词汇或短语。</li>
+</ol>
+<ul>
+<li>TF-IDF</li>
+<li>TextRank</li>
+<li>LDA（潜在狄利克雷分配）</li>
+<li>BERT Embeddings</li>
+</ul>
+<ol start="16">
+<li><strong>主题建模（Topic Modeling）</strong>：无监督地识别大量文档集中的潜在主题。</li>
+</ol>
+<ul>
+<li>潜在语义分析（LSA）</li>
+<li>潜在狄利克雷分配（LDA）</li>
+<li>非负矩阵分解（NMF）</li>
+</ul>
+<p>对于每种任务，选择最合适的算法通常取决于具体的应用场景、可用数据的量和质以及性能要求。随着深度学习技术的发展，基于Transformer的模型如BERT、GPT系列在多个NLP任务中取得了突破性的成果。</p>
+<h1 id="算法">算法</h1>
+<p>自然语言处理（NLP）领域中有多种算法和技术，这些方法旨在帮助计算机理解、解释和生成人类语言。以下是一些核心的NLP算法和技术：</p>
+<ol>
+<li>
+<p><strong>基于规则的系统</strong>：早期的NLP系统大多依赖于手写的规则来解析和理解文本。这些规则可以基于语法、句法和语义规则来设计。</p>
+</li>
+<li>
+<p><strong>统计方法</strong>：</p>
+<ul>
+<li><strong>隐马尔可夫模型（HMM）</strong>：用于词性标注和命名实体识别等任务。</li>
+<li><strong>条件随机场（CRF）</strong>：用于序列建模，如标注问题和命名实体识别。</li>
+</ul>
+</li>
+<li>
+<p><strong>机器学习算法</strong>：随着机器学习的发展，许多传统算法被用于NLP任务，如朴素贝叶斯、决策树、支持向量机（SVM）等。</p>
+</li>
+<li>
+<p><strong>深度学习/神经网络方法</strong>：近年来，深度学习在NLP中取得了重大进展，以下是一些关键的神经网络架构：</p>
+<ul>
+<li><strong>卷积神经网络（CNNs）</strong>：虽然最初用于图像处理，但也被适用于处理文本数据，如句子分类任务。</li>
+<li><strong>循环神经网络（RNNs）</strong>：特别适合处理序列数据，如时间序列或文本。长短期记忆网络（LSTMs）和门控循环单元（GRUs）是RNN的变体，能够解决传统RNNs的梯度消失问题。</li>
+<li><strong>注意力机制和Transformer架构</strong>：注意力机制允许模型在处理序列数据时更加灵活地权衡不同部分的重要性，而Transformer架构则彻底改变了NLP领域，成为了多种任务的基础，如BERT、GPT系列、RoBERTa、T5等。</li>
+</ul>
+</li>
+<li>
+<p><strong>预训练语言模型</strong>：利用大量无标签文本数据进行预训练，然后在特定任务上进行微调。BERT和GPT系列是这一范式下的两个典型例子。</p>
+</li>
+<li>
+<p><strong>迁移学习和微调</strong>：借助预训练的语言模型，通过在特定任务上的微调，可以显著提高性能。这种方法减少了对大量标记数据的依赖。</p>
+</li>
+</ol>
+<p>这些算法和技术在各种NLP任务中被广泛应用，如文本分类、情感分析、机器翻译、语音识别、问答系统、文本摘要、自然语言生成等。随着研究的不断进展，新的算法和模型也在不断被提出和改进。</p>
+<h1 id="nlp-任务的一般过程">NLP 任务的一般过程</h1>
+<ol>
+<li>
+<p><strong>问题定义</strong>:</p>
+<ul>
+<li>明确任务目标：这可能是文本分类、情感分析、机器翻译、命名实体识别、问答系统等。</li>
+<li>确定输入输出：定义任务的输入数据（如文本、句子、段落）和期望的输出（如类别标签、文本响应等）。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据收集</strong>:</p>
+<ul>
+<li>收集足够的数据：根据任务需求，收集标注好的训练数据。对于一些任务，还可能需要收集未标注的数据进行无监督学习或半监督学习。</li>
+<li>来源：数据可以来自公共数据集、网络爬虫、社交媒体、公司数据库等。</li>
+</ul>
+</li>
+<li>
+<p><strong>数据预处理</strong>:</p>
+<ul>
+<li>文本清洗：移除无关内容（如HTML标签）、标点符号、数字等，或者将它们转换成有意义的代替文本。</li>
+<li>分词：将文本分割成单词、短语或其他有意义的单位。</li>
+<li>规范化：包括小写转换、词干提取、词形还原等，旨在将单词规范到基本形式。</li>
+<li>去除停用词：移除常见但对于理解文本意义不大的词，如“的”、“是”、“在”等。</li>
+<li>向量化：将文本转换为数值形式，常见方法包括词袋模型、TF-IDF、词嵌入等。</li>
+</ul>
+</li>
+<li>
+<p><strong>特征工程</strong>:</p>
+<ul>
+<li>特征提取：根据任务需求，选择或设计文本特征，如n-gram、词频、词嵌入向量等。</li>
+<li>降维：对高维特征空间应用降维技术，如PCA、t-SNE，以减少计算复杂度。</li>
+</ul>
+</li>
+<li>
+<p><strong>模型选择和训练</strong>:</p>
+<ul>
+<li>选择模型：根据任务类型选择合适的模型，可能是传统机器学习模型（如SVM、随机森林）或深度学习模型（如CNN、RNN、Transformer）。</li>
+<li>训练模型：使用训练数据训练模型，调整超参数以获得最佳性能。</li>
+</ul>
+</li>
+<li>
+<p><strong>评估和优化</strong>:</p>
+<ul>
+<li>使用验证集评估模型性能，采用适当的评估指标（如准确率、召回率、F1分数、BLEU分数等）。</li>
+<li>根据评估结果调整模型结构、超参数等，可能包括使用更复杂的模型、增加更多训练数据、应用不同的预处理或特征工程技术。</li>
+</ul>
+</li>
+<li>
+<p><strong>部署和监控</strong>:</p>
+<ul>
+<li>将训练好的模型部署到生产环境，使其能够处理实时数据或新数据。</li>
+<li>监控模型性能，定期检查并重新训练模型以适应新数据或变化的数据分布。</li>
+</ul>
+</li>
+<li>
+<p><strong>反馈循环</strong>:</p>
+<ul>
+<li>根据模型在实际应用中的表现，收集反馈，可能需要重新执行前面的步骤，如重新定义问题、收集更多或更高质量的数据、重新训练模型等。</li>
+</ul>
+</li>
+</ol>
+<p>这个流程不是一成不变的，具体的步骤和方法可能会根据具体的NLP任务、数据集、业务需求等因素有所不同。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【DL】强化学习]]></title>
+        <id>https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi/</id>
+        <link href="https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi/">
+        </link>
+        <updated>2024-03-14T14:40:15.000Z</updated>
+        <content type="html"><![CDATA[<p>强化学习是机器学习的一个领域，它主要关注如何使智能体（Agent）在环境（Environment）中学会采取行动（Action）以最大化某种累积奖励（Reward）。强化学习与其他类型的机器学习（如监督学习和无监督学习）的主要区别在于，它不依赖于预先标记的输入/输出对，而是通过智能体与环境的交互来学习。以下是这些概念的详细介绍：</p>
+<ol>
+<li>
+<p><strong>智能体（Agent）</strong>：</p>
+<ul>
+<li>智能体是强化学习中的决策者，它通过观察环境来学习如何采取行动。智能体的目标是通过这些行动来最大化其长期奖励。它可以是任何能够感知其环境并根据这些观察做出决策的实体，如机器人、软件程序等。</li>
+</ul>
+</li>
+<li>
+<p><strong>环境（Environment）</strong>：</p>
+<ul>
+<li>环境是智能体所处并与之互动的系统或问题域。环境接收智能体的行动并根据这些行动提供状态的反馈和奖励。环境的反馈可以是非常简单的，也可以是极其复杂且动态变化的。</li>
+</ul>
+</li>
+<li>
+<p><strong>状态（State）</strong>：</p>
+<ul>
+<li>状态是对环境在某一时刻的描述。它可以是环境的完整描述，也可以只是环境的一部分。状态为智能体提供了决策的上下文，在给定状态下采取行动可以导致环境状态的变化。</li>
+</ul>
+</li>
+<li>
+<p><strong>动作（Action）</strong>：</p>
+<ul>
+<li>动作是智能体在给定状态下可以采取的决策或步骤。智能体的动作空间可以是离散的（如左转、右转）或连续的（如加速的量）。智能体的行动会影响环境，并导致状态的变化和奖励的给予。</li>
+</ul>
+</li>
+<li>
+<p><strong>奖励（Reward）</strong>：</p>
+<ul>
+<li>奖励是环境对智能体采取特定行动的即时评价。奖励通常是一个标量值，指示智能体的行动对于达成其目标的有用程度。智能体的目标是最大化在整个学习过程中获得的累积奖励。</li>
+</ul>
+</li>
+<li>
+<p><strong>策略（Policy）</strong>：</p>
+<ul>
+<li>策略是从状态到动作的映射，它定义了智能体在给定状态下应该采取什么行动。策略可以是简单的静态规则，也可以是复杂的动态函数，取决于智能体的学习算法和环境的性质。智能体的目标是学习一个最优策略，这个策略能在长期内最大化累积奖励。</li>
+</ul>
+</li>
+</ol>
+<p>强化学习的过程过程可以通过多种算法来通常涉及智能体不断地通过与环境互动来尝试不同的策略，评估这些策略带来的奖励，并根据这些奖励来调整其策略，以学习如何最优地行动。这个实现，如Q学习、深度Q网络（DQN）、策略梯度方法等。</p>
+<h1 id="常见算法">常见算法</h1>
+<h2 id="动态规划">动态规划</h2>
+<p>动态规划（Dynamic Programming, DP）在强化学习中扮演着基础而重要的角色，尤其是在处理具有完全已知的环境模型（即状态转移概率和奖励函数已知）的问题时。DP方法依赖于贝尔曼方程，这是一组递归方程，用于描述状态值函数或动作值函数（即Q函数）之间的关系。在强化学习中，动态规划法主要用于两个方面：策略评估（Policy Evaluation）和策略提升（Policy Improvement），这两个步骤循环交替执行以找到最优策略。</p>
+<h3 id="策略评估policy-evaluation">策略评估（Policy Evaluation）</h3>
+<p>策略评估的目标是计算某策略下的状态值函数，即在遵循特定策略的条件下，从某状态开始所能获得的预期回报。通过迭代地应用贝尔曼期望方程，我们可以评估当前策略的效果：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>V</mi><mi>π</mi></msup><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></munder><mi>π</mi><mo>(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo>)</mo><munder><mo>∑</mo><mrow><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi></mrow></munder><mi>P</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>[</mo><mi>r</mi><mo>+</mo><mi>γ</mi><msup><mi>V</mi><mi>π</mi></msup><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">V^{\pi}(s) = \sum_{a \in A} \pi(a|s) \sum_{s&#x27;, r} P(s&#x27;, r | s, a)[r + \gamma V^{\pi}(s&#x27;)]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.480098em;vertical-align:-1.430093em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8556639999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mrel mtight">∈</span><span class="mord mathdefault mtight">A</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.321706em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8560149999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6828285714285715em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.430093em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
+<p>其中，$$  V^{\pi}(s) $$ 是在状态 ( s ) 下遵循策略 ( \pi ) 所得到的价值，( \pi(a|s) ) 是在状态 ( s ) 下采取动作 ( a ) 的概率，( P(s', r | s, a) ) 是从状态 ( s ) 采取动作 ( a ) 转移到状态 ( s' ) 并得到奖励 ( r ) 的概率，( \gamma ) 是折扣因子，用于计算未来奖励的现值。</p>
+<h3 id="策略提升policy-improvement">策略提升（Policy Improvement）</h3>
+<p>策略提升的目标是生成一个新策略，该策略在每个状态下都可以选择使动作价值最大化的动作。通过这个过程，我们可以从当前策略产生一个更好的策略。策略提升通常使用贝尔曼最优方程：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>Q</mi><mi>π</mi></msup><mo>(</mo><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>=</mo><munder><mo>∑</mo><mrow><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi></mrow></munder><mi>P</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>[</mo><mi>r</mi><mo>+</mo><mi>γ</mi><msup><mi>V</mi><mi>π</mi></msup><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">Q^{\pi}(s, a) = \sum_{s&#x27;, r} P(s&#x27;, r | s, a)[r + \gamma V^{\pi}(s&#x27;)]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.480098em;vertical-align:-1.430093em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8560149999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6828285714285715em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.430093em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
+<p>然后，新的策略 ( \pi' ) 在每个状态下选择最大化 ( Q^{\pi}(s, a) ) 的动作：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>π</mi><mo mathvariant="normal">′</mo></msup><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><mi>arg</mi><mo>⁡</mo><munder><mi>max</mi><mo>⁡</mo><mi>a</mi></munder><msup><mi>Q</mi><mi>π</mi></msup><mo>(</mo><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\pi&#x27;(s) = \arg\max_a Q^{\pi}(s, a)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.45em;vertical-align:-0.7em;"></span><span class="mop">ar<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">a</span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span></span></span></span></span></p>
+<h3 id="策略迭代policy-iteration">策略迭代（Policy Iteration）</h3>
+<p>策略迭代结合了策略评估和策略提升，通过迭代这两个步骤直到策略收敛到最优策略。每次迭代包括完全评估当前策略（直到值函数收敛），然后进行策略提升。</p>
+<h3 id="值迭代value-iteration">值迭代（Value Iteration）</h3>
+<p>值迭代是策略迭代的一种简化形式，它结合了策略评估的一步操作和策略提升。值迭代直接迭代更新每个状态的最大动作价值，直到价值函数收敛：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><munder><mi>max</mi><mo>⁡</mo><mi>a</mi></munder><munder><mo>∑</mo><mrow><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi></mrow></munder><mi>P</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>[</mo><mi>r</mi><mo>+</mo><mi>γ</mi><mi>V</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">V(s) = \max_a \sum_{s&#x27;, r} P(s&#x27;, r | s, a)[r + \gamma V(s&#x27;)]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.480098em;vertical-align:-1.430093em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">a</span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8560149999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6828285714285715em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.430093em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
+<p>动态规划方法在理论上可以得到最优策略，但其应用受限于环境模型的已知性以及状态和动作空间的规模。当状态和动作空间非常大或环境模型未知时，直接应用动态规划变得不可行，这时通常会</p>
+<h2 id="蒙特卡洛">蒙特卡洛</h2>
+<p>蒙特卡洛方法在强化学习中的应用提供了一种在不完全知道环境模型（即转移概率和奖励函数未知）的情况下学习最优策略的方法。与动态规划不同，蒙特卡洛（MC）方法不需要知道环境的具体动态，而是通过从环境中采样完成的序列（或称为“情节”）来学习。这些方法特别适用于具有高度不确定性或模型未知的环境。MC方法的关键特点是它们依赖于经验平均来估计值函数，这些平均值是从一系列完整情节中获得的。</p>
+<h3 id="mc策略评估">MC策略评估</h3>
+<p>在策略评估过程中，MC方法通过对从当前策略生成的一系列完整情节的回报进行平均来估计状态的值。每个情节包含一系列的状态、动作和奖励，以及情节的最终结果。通过对同一状态多次访问得到的回报进行平均，MC方法可以估计该状态的值，即该状态的长期回报期望。</p>
+<h3 id="mc控制">MC控制</h3>
+<p>为了找到最优策略，MC方法采用了一种称为MC控制的方法。MC控制通常涉及两个主要步骤：探索和利用。一个常见的策略是使用ε-贪婪策略，其中智能体大部分时间选择当前最佳动作（利用），但有时也随机选择其他动作（探索），以确保长期学习。</p>
+<p>MC控制方法通过不断交替执行策略评估和策略提升来工作。在策略评估阶段，智能体使用其当前策略在环境中执行动作，并记录下来每个情节的结果。接着，使用这些情节的结果来更新值函数。在策略提升阶段，智能体根据估计的值函数更新其策略，通常是通过选择使得估计值函数最大化的动作。</p>
+<h3 id="优点与局限">优点与局限</h3>
+<p>MC方法的一个主要优点是它们不依赖于环境的先验知识，使其适用于模型未知的情况。此外，MC方法直接从最终回报中学习，而不依赖于其他状态的值估计，这有助于减少累积的估计误差。</p>
+<p>然而，MC方法也有其局限性。首先，它们只适用于情节性任务，即那些有明确开始和结束的任务。其次，MC方法可能需要很多情节才能获得可靠的值估计，尤其是在回报信号稀疏或噪声很大的情境中。此外，MC方法只在情节结束时更新值函数和策略，这可能导致学习速度较慢。</p>
+<p>总的来说，蒙特卡洛方法在强化学习中提供了一种强大的工具，尤其是在那些模型未知或难以精确建模的情况下。通过适当的策略和技巧（如重要性采样）的改进，可以进一步增强MC方法的应用范围和效率。</p>
+<h2 id="时序差分法">时序差分法</h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【NLP】时序模型与马尔可夫模型]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing/">
+        </link>
+        <updated>2024-03-12T12:24:02.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39653948/article/details/105571760">原理+论文+实战：60篇由浅入深的时间序列预测/分类教程汇总</a></p>
+<h1 id="时序模型">时序模型</h1>
+<p>t 时刻的状态和前面的数据相关<br>
+自回归：预测（同一序列）后面的值，是根据（同一序列）前面的值来预测，即使用自身过去数据预测未来</p>
+<h1 id="潜变量模型">潜变量模型</h1>
+<p><img src="https://jeromezjl.github.io/post-images/1710309825352.jpg" alt="" loading="lazy"><br>
+h' 包含了 h 和 x 的信息，也就是之前状态的信息</p>
+<h1 id="马尔可夫模型">马尔可夫模型</h1>
+<p><a href="https://www.bilibili.com/video/BV1Mr4y1f7Nm?p=1&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">火遍油管！终于有大神把【马尔可夫链】给做成动画了！</a></p>
+<p>马尔可夫假设：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”</p>
+<h1 id="马尔科夫链">马尔科夫链</h1>
+<p>是依赖于马尔可夫假设的最基本的模型，用于模拟随即系统的状态转移<br>
+未来的状态只取决于现在的状态，和之前的步骤无关<br>
+任何状态所有出箭头概率之和为1<br>
+转移状态矩阵：类似于有向图<br>
+要找到在 n 步转移中，由状态 i 转移到状态 j 的概率，只需要找到 n 阶状态转移矩阵第 i 行 j 列</p>
+<h1 id="隐马尔可夫模型-hmm">隐马尔可夫模型 HMM</h1>
+<p>HMM 在马尔可夫链的基础上增加了“隐状态”和“观测状态”的概念。HMM 在马尔可夫链的基础上加入了观测数据，用于处理观测与状态间存在某种隐含关系的情况。</p>
+<p>在 HMM 中，系统的真实状态（隐状态）不能直接观测，只能通过一些观测到的事件（观测状态）间接推断。</p>
+<p>HMM 被广泛应用于序列数据的建模，如语音识别、生物序列分析等，其中系统的内部状态不是直接可见的。</p>
+<p>隐马尔可夫模型（Hidden Markov Model, HMM）是一种统计模型，它用于描述一个观测序列背后的一个不可观测（隐含）状态序列。这个模型假设隐含状态生成观测数据的过程具有马尔可夫性质，即每个状态的发生仅依赖于它之前的一个状态。隐马尔可夫模型在语音识别、自然语言处理、生物信息学和其他许多领域有广泛的应用。</p>
+<p>隐马尔可夫模型主要包含以下几个组成部分：</p>
+<ol>
+<li><strong>隐状态集合</strong>：模型中不可直接观测到的内部状态的集合。</li>
+<li><strong>观测集合</strong>：每个隐状态可以生成的观测数据的集合。</li>
+<li><strong>状态转移概率矩阵</strong>：隐状态之间转移的概率，表示为一个矩阵。矩阵的每个元素 aij 表示从状态 i 转移到状态 j 的概率。</li>
+<li><strong>观测概率分布</strong>：也称为发射概率，它表示在给定某个隐状态的情况下，生成某个观测值的概率。</li>
+<li><strong>初始状态概率分布</strong>：模型在开始时每个隐状态的初始概率分布。</li>
+</ol>
+<p>隐马尔可夫模型的基本假设包括：</p>
+<ul>
+<li><strong>马尔可夫假设</strong>：每个隐状态仅依赖于它之前的一个隐状态。</li>
+<li><strong>观测独立性假设</strong>：任何时刻的观测值仅依赖于当前的隐状态，与其他隐状态或观测值无关。</li>
+</ul>
+<p>隐马尔可夫模型的三个基本问题：</p>
+<ol>
+<li><strong>评估问题</strong>：给定模型参数和观测序列，计算观测序列出现的概率。这通常通过前向算法或后向算法解决。</li>
+<li><strong>解码问题</strong>：给定模型参数和观测序列，找出最有可能产生这些观测的隐状态序列。这通常通过Viterbi算法解决。</li>
+<li><strong>学习问题</strong>：给定观测序列，估计模型参数（状态转移概率、观测概率和初始状态概率），使得观测序列的概率最大。这可以通过Baum-Welch算法（一种特殊的期望最大化算法）来解决。</li>
+</ol>
+<h1 id="马尔可夫决策过程">马尔可夫决策过程</h1>
+<p>马尔可夫决策过程（Markov Decision Process, MDP）是一种数学框架，用于形式化描述在不确定性环境中的决策制定问题。MDP 适用于那些决策结果部分依赖于决策者并且部分依赖于随机因素的情形。MDP 主要用于需要做出一系列决策的场景，如自动控制、经济学决策、强化学习等，目标是找到最优策略，以最大化长期奖励。</p>
+<p>MDP 在马尔可夫链的基础上加入了“决策”的元素，引入了动作（Actions）、状态转移概率和奖励（Reward）。不仅关注状态的转移，还关注在给定状态下采取不同动作所导致的后果和收益。</p>
+<p>一个 MDP 主要由以下四个元素组成：</p>
+<ol>
+<li>
+<p><strong>状态（S）</strong>：描述决策过程中可能到达的所有状态的集合。每个状态提供了决策环境的完整描述。</p>
+</li>
+<li>
+<p><strong>动作（A）</strong>：对于每个状态，都有一组可能的动作（或决策）。动作决定了状态转移的可能性。</p>
+</li>
+<li>
+<p><strong>状态转移概率（P）</strong>：表示为 P(s'|s, a)，即在状态 s 下采取动作 a 后转移到状态 s' 的概率。这个概率捕捉了环境的动态性和不确定性。</p>
+</li>
+<li>
+<p><strong>奖励（R）</strong>：函数 R(s, a, s') 表示从状态 s 采取动作 a 并转移到状态 s' 所得到的即时奖励（或成本）。奖励函数评估每个动作的即时效用。</p>
+</li>
+</ol>
+<p>目标是找到一个<strong>策略</strong>（Policy），即从每个状态到动作的映射，以最大化某种性能标准，通常是预期收益的总和。这种性能标准可以是累积奖励的总和，也可能涉及对未来奖励的贴现（Discounting）。</p>
+<p>在解决 MDP 问题时，通常涉及到两种主要的策略：</p>
+<ul>
+<li>
+<p><strong>价值迭代（Value Iteration）</strong>：通过不断迭代更新状态值函数来逼近最优解，直到达到稳定状态。</p>
+</li>
+<li>
+<p><strong>策略迭代（Policy Iteration）</strong>：包含两个步骤，策略评估（计算当前策略的值）和策略改进（基于当前值函数更新策略），这两个步骤交替进行直到策略收敛。</p>
+</li>
+</ul>
+<p>MDP 提供了一种强大的框架来模拟和解决决策问题，尤其是在考虑时间和不确定性时。在强化学习中，智能体通过与环境的交互来学习最优策略，通常是在没有初始知识的情况下通过试错学习。</p>
+<h1 id="马尔可夫随机场">马尔可夫随机场</h1>
+<p>马尔可夫随机场（Markov Random Field，MRF），也被称为概率无向图模型，是一种用于建模多元随机变量联合分布的统计模型，其中变量间的关系用一个无向图来表示。在这个图中，每个节点代表一个随机变量，而边则表示变量之间的潜在依赖关系。</p>
+<p>MRF 主要用于建模那些变量间具有空间或者其他形式相互依赖性的系统，广泛应用于图像处理、空间数据分析和计算机视觉等领域。MRF 的一个关键特性是局部性原理，即给定某个变量的邻居（在图中直接与之相连的节点）后，该变量条件独立于其它所有变量。这种性质被称为马尔可夫性质。</p>
+<h3 id="关键概念">关键概念</h3>
+<ul>
+<li><strong>节点</strong>：图中的每个节点代表一个随机变量，可以是观测到的数据点或是隐藏变量。</li>
+<li><strong>边</strong>：节点之间的边表示变量间的直接依赖关系。</li>
+<li><strong>团和最大团</strong>：在图中，任何相互连接的节点集合称为团。不可能加入更多节点的团称为最大团。</li>
+<li><strong>势函数</strong>：用于量化节点或节点组合的概率分布，通常定义在最大团上。势函数表达了变量之间的相互作用强度。</li>
+</ul>
+<h3 id="马尔可夫性质">马尔可夫性质</h3>
+<p>MRF 的核心是马尔可夫性质，即在给定一个节点的邻居的情况下，该节点与图中其他节点条件独立。这意味着，节点的局部环境提供了足够的信息来预测该节点的行为，而无需考虑更远的节点。</p>
+<h3 id="hammersley-clifford-定理">Hammersley-Clifford 定理</h3>
+<p>这个定理是 MRF 理论中的一个关键结果，它指出：在满足一定条件下，一个分布可以被表示为一个马尔可夫随机场，如果且仅如果它可以被表示为一个图上的势函数的乘积形式。</p>
+<h3 id="应用示例">应用示例</h3>
+<p>在图像处理中，MRF 可以用于图像恢复、分割和纹理合成。比如，在噪声图像恢复中，每个像素点可以视为一个随机变量，相邻像素间的相关性可以用 MRF 来建模，以此推断最可能的干净图像。</p>
+<h3 id="求解方法">求解方法</h3>
+<p>MRF 的推断和学习通常是计算密集型的，常用的方法包括吉布斯采样（Gibbs Sampling）、模拟退火（Simulated Annealing）和置信传播（Belief Propagation）等。这些方法旨在通过迭代过程来近似地估计或优化目标函数，从而解决相关的最优化问题。</p>
+<p><a href="https://blog.csdn.net/qq_40986693/article/details/104179088">Belief Propagation信念传播算法详解</a><br>
+马尔科夫随机场提供了一种建模多变量依赖关系的框架，而信念传播算法则是一种在这种框架下进行有效推理的方法。通过在马尔科夫随机场上运用信念传播算法，可以进行高效的概率推断和决策。</p>
+<h1 id="关于马尔可夫模型的问答">关于马尔可夫模型的问答</h1>
+<h3 id="基础理解">基础理解</h3>
+<ol>
+<li>
+<p>请解释什么是马尔可夫链以及它的基本性质。<br>
+马尔可夫链是一种随机过程，其中下一个状态的概率仅依赖于当前状态，这被称为无记忆性。基本性质包括状态空间、初始状态概率和状态转移概率。</p>
+</li>
+<li>
+<p>描述隐马尔可夫模型（HMM）及其与马尔可夫链的主要区别。<br>
+HMM是一种统计模型，它用来描述观测序列背后的一个不可见的状态序列。与马尔可夫链不同，HMM包含隐状态和观测状态，且观测状态的概率分布依赖于隐状态。</p>
+</li>
+<li>
+<p>马尔可夫链的“无记忆性”或“马尔可夫性”是什么意思？请给出一个实际应用的例子。<br>
+马尔可夫性指的是系统的下一个状态仅依赖于当前状态，而与之前的历史无关。例如，天气模型中，明天是晴天还是雨天仅依赖于今天的天气，而不是之前的天气历史。</p>
+</li>
+<li>
+<p>在隐马尔可夫模型中，什么是隐状态？什么是观测状态？<br>
+在HMM中，隐状态是模型中不直接可见的内部状态，而观测状态是由隐状态生成的、可以直接观察到的状态。</p>
+</li>
+</ol>
+<h3 id="数学与算法">数学与算法</h3>
+<ol start="5">
+<li>
+<p>如何表示和计算马尔可夫链的状态转移概率矩阵？<br>
+状态转移概率矩阵是一个方阵，其元素 aij 表示从状态 i 转移到状态 j 的概率。（邻接矩阵）</p>
+</li>
+<li>
+<p>解释隐马尔可夫模型中的前向算法和后向算法的作用。<br>
+前向算法用于计算在给定模型参数的情况下，观测序列出现的概率。后向算法也用于相似的目的，但是从序列的末尾开始计算。</p>
+</li>
+<li>
+<p>什么是Viterbi算法？它在隐马尔可夫模型中用来解决什么问题？<br>
+Viterbi算法是一种动态规划算法，用于找出最有可能产生给定观测序列的隐状态序列，在HMM中用于解决解码问题。</p>
+</li>
+<li>
+<p>描述Baum-Welch算法在隐马尔可夫模型中的应用及其目的。<br>
+Baum-Welch算法是一种特殊的EM算法，用于未知参数的HMM中。它通过迭代过程优化模型参数以最大化给定观测序列的概率。</p>
+</li>
+</ol>
+<h3 id="应用与实践">应用与实践</h3>
+<ol>
+<li>描述一个使用隐马尔可夫模型的自然语言处理应用案例。<br>
+在自然语言处理中，HMM可用于词性标注，其中隐状态代表单词的词性，观测状态代表实际的单词。</li>
+</ol>
+<h3 id="深度与挑战">深度与挑战</h3>
+<ol>
+<li>
+<p>在处理非平稳时间序列数据时，马尔可夫链模型有哪些局限性，如何克服？<br>
+马尔可夫链假设转移概率不随时间变化。对于非平稳数据，可以使用时间依赖的马尔可夫模型或通过增加状态来模拟时间变化的影响。</p>
+</li>
+<li>
+<p>对于有大量状态的系统，隐马尔可夫模型的性能和可行性如何？存在哪些优化或替代方案？<br>
+当状态空间很大时，HMM的计算复杂性会显著增加。可能的优化包括使用近似方法、约简状态空间或采用更高效的算法。</p>
+</li>
+<li>
+<p>讨论在实际应用中构建和训练隐马尔可夫模型时可能遇到的挑战及其解决方案。<br>
+实际应用中的挑战包括数据稀疏性、参数初始化以及模型选择。解决方案可能包括使用平滑技术、合理的启发式初始化策略和交叉验证来选择模型。</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ML】Softmax]]></title>
+        <id>https://jeromezjl.github.io/post/ml-softmax/</id>
+        <link href="https://jeromezjl.github.io/post/ml-softmax/">
+        </link>
+        <updated>2024-03-11T14:44:10.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://jeromezjl.github.io/post-images/1710168281390.png" alt="" loading="lazy"><br>
+Softmax 函数如上图所示，分子 xi 是每个数据的值，将其指数化，将输出的数值拉开距离。分母是所有数据指数之和，这是一种概率形式，表达为样本占所有值的概率。<br>
+它可以用作 Softmax 回归、Softmax 激活函数在神经网络中往往用在最后一层，特别是在处理分类问题时，将网络的原始输出转换为更直观的概率形式。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/105722023">一文详解Softmax函数</a></p>
+<pre><code>Softmax 从字面上来说，可以分成soft和max两个部分。
+max故名思议就是最大值的意思。Softmax的核心在于soft，而soft有软的含义，与之相对的是hard硬。
+很多场景中需要我们找出数组所有元素中值最大的元素，实质上都是求的hardmax。
+hardmax 是求一组数据中唯一的最大值，而 Softmax 是输出概率，可以自己选择概率最大的前几个值
+</code></pre>
+<p><a href="https://www.bilibili.com/video/BV18u411L7tU/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">什么是softmax回归，如何使用softmax回归，解决多分类任务</a></p>
+<p>Softmax 激活函数：通常用于多分类问题的输出层（最后一层），将 logits（即最后一个线性层的输出）转换成概率分布。<br>
+隐藏层激活函数不用 Softmax，用 ReLU、tanh 和 sigmoid 等，用于增加网络的非线性，帮助模型学习复杂的特征表示。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【DL】Transformer]]></title>
+        <id>https://jeromezjl.github.io/post/dl-transformer/</id>
+        <link href="https://jeromezjl.github.io/post/dl-transformer/">
+        </link>
+        <updated>2024-03-11T09:23:50.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1MY41137AK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【Transformer模型】曼妙动画轻松学，形象比喻贼好记</a><br>
+<a href="https://www.bilibili.com/video/BV1ih4y1J7rx/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">超强动画，一步一步深入浅出解释Transformer原理！</a><br>
+<a href="https://zhuanlan.zhihu.com/p/338817680">Transformer模型详解（图解最完整版）</a><br>
+<a href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Transformer论文逐段精读【论文精读】</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
+Transformer：Seq2Seq model with attention</p>
+<p><strong>思维导图</strong><br>
+<img src="https://jeromezjl.github.io/post-images/1686115237621.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115244889.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115251026.png" alt="" loading="lazy"><br>
+<img src="https://jeromezjl.github.io/post-images/1686115255439.png" alt="" loading="lazy"></p>
+<p>时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率</p>
+<p>Muti-head attention 多头注意力模拟了卷积神经网络多输出通道卷积核</p>
+<p>encoder 和 decoder 都用了6个</p>
+<p>为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好</p>
+<p>attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。</p>
+<h1 id="attention">Attention</h1>
+<p><a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a></p>
+<h1 id="transformer">Transformer</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a></p>
+<h1 id="变体">变体</h1>
+<p>Transformer 模型自从在 &quot;Attention is All You Need&quot; 论文中被首次提出以来，已经孕育出许多变体，这些变体针对不同的应用场景和性能优化进行了设计。以下是一些比较著名的 Transformer 模型变体：</p>
+<ol>
+<li>
+<p><strong>BERT (Bidirectional Encoder Representations from Transformers)</strong>: 由 Google 提出，BERT 通过双向训练的方式来更好地理解语言上下文，广泛应用于文本分类、命名实体识别、问答系统等领域。</p>
+</li>
+<li>
+<p><strong>GPT (Generative Pre-trained Transformer)</strong>: OpenAI 开发的一系列模型，包括 GPT、GPT-2、GPT-3 等，主要用于文本生成任务，如文本续写、机器翻译、对话系统等。</p>
+</li>
+<li>
+<p><strong>Transformer-XL</strong>: 这个变体通过使用一个特殊的序列建模方式解决了标准 Transformer 在处理长序列时的限制，它能够在长序列文本上获得更好的性能。</p>
+</li>
+<li>
+<p><strong>XLNet</strong>: 结合了 Transformer-XL 和 GPT 的优点，使用了双向上下文和排列语言模型的训练方式，表现在很多自然语言处理任务中超越了 BERT。</p>
+</li>
+<li>
+<p><strong>RoBERTa (Robustly Optimized BERT approach)</strong>: 是 BERT 的一个优化版本，通过更大规模的数据集和更长时间的训练，以及调整了一些超参数，来提高模型的性能。</p>
+</li>
+<li>
+<p><strong>ALBERT (A Lite BERT)</strong>: 通过参数共享和因子化嵌入矩阵，显著减少了模型的大小，同时保持或超越了 BERT 的性能。</p>
+</li>
+<li>
+<p><strong>T5 (Text-to-Text Transfer Transformer)</strong>: 将各种自然语言处理任务统一为一个文本到文本的框架，通过简化任务格式提高了模型的通用性和灵活性。</p>
+</li>
+<li>
+<p><strong>Electra</strong>: 通过引入更有效率的预训练任务（类似于GAN的判别器任务），在较小的计算预算下达到或超过了 BERT 的性能。</p>
+</li>
+<li>
+<p><strong>DeBERTa (Decoding-enhanced BERT with Disentangled Attention)</strong>: 通过改进 BERT 的注意力机制，引入解耦注意力和增强的掩码解码器，提高了模型处理自然语言理解任务的能力。</p>
+</li>
+<li>
+<p><strong>ViT (Vision Transformer)</strong>: 将 Transformer 应用于图像分类任务，通过将图像分割成多个小块（patches）并将它们作为序列输入到 Transformer 中，展示了 Transformer 架构在非NLP任务上的潜力。</p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【DL】模型复用]]></title>
         <id>https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/</id>
@@ -141,6 +771,190 @@
 <li>在某些情况下，分类问题也可以转换为回归问题，特别是当类别之间存在天然顺序（有序分类）时。通过预测一个连续的数值并将其映射到最接近的类别，可以处理这类问题。</li>
 </ul>
 <p>总的来说，虽然分类和回归处理的是不同类型的问题，但它们在许多方面是相似的，使用相似的方法，很多算法和技术可以在这两种任务之间转换和重用。</p>
+<h1 id="分类-2">分类</h1>
+<h2 id="最小二乘法">最小二乘法</h2>
+<p><a href="https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163978851616780269814649&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;spm=1018.2226.3001.4187">一文让你彻底搞懂最小二乘法（超详细推导）</a><br>
+解决线性回归的常用方法，拟合函数时，让整体数据误差的平方和最小（损失函数），损失函数求导令其等于0就可以解出参数 θ</p>
+<h2 id="岭回归">岭回归</h2>
+<p><a href="https://blog.csdn.net/MoreAction_/article/details/125004112?spm=1001.2014.3001.5502">详解岭回归与L2正则化</a><br>
+当样本数据矩阵不可逆时，即数据中存在特征冗余，某些特征可以根据其它特征的线性组合来得到，或者，矩阵为病态矩阵，即求解方程组时对数据的微小扰动比较敏感的矩阵，这两种情况时，最小二乘法无法使用或效果不好，使用岭回归。<br>
+岭回归即对应着在最小二乘法基础上增加了一个L2正则化，求导导数=0即可解出参数 θ</p>
+<h2 id="贝叶斯回归">贝叶斯回归</h2>
+<p>贝叶斯回归是一种统计方法，它在回归分析的基础上应用了贝叶斯定理，允许我们在预测中考虑参数的不确定性。与传统的回归方法（如线性回归）不同，贝叶斯回归不仅给出了预测值，还提供了预测的不确定性估计，这在很多需要进行风险评估的应用中非常有用。</p>
+<p>在贝叶斯回归中，我们不再寻找一组固定的最优参数值来拟合数据，而是考虑参数的概率分布。这种方法的基本步骤如下：</p>
+<ol>
+<li>
+<p><strong>先验分布</strong>：首先，我们需要对模型参数设置一个先验分布，这反映了我们在观察数据之前对参数的信念。先验可以是无信息的（即不偏向任何特定值的宽泛分布），也可以是有信息的（基于先前研究或专家知识的分布）。</p>
+</li>
+<li>
+<p><strong>似然函数</strong>：似然函数描述了给定模型参数时数据出现的概率。在回归分析中，这通常涉及到假设数据中的误差项遵循某种分布，例如正态分布。</p>
+</li>
+<li>
+<p><strong>后验分布</strong>：应用贝叶斯定理结合先验分布和似然函数来计算参数的后验分布。后验分布反映了在考虑了观测数据之后对参数的信念更新。</p>
+</li>
+<li>
+<p><strong>预测</strong>：使用后验分布，我们可以对新的数据点进行预测，并为这些预测提供置信区间或预测区间，从而量化预测的不确定性。</p>
+</li>
+</ol>
+<h3 id="贝叶斯回归的优点">贝叶斯回归的优点</h3>
+<ul>
+<li><strong>不确定性量化</strong>：贝叶斯回归自然地提供了对预测不确定性的量化，这对于风险管理和决策制定非常重要。</li>
+<li><strong>先验知识的整合</strong>：贝叶斯方法允许我们在分析中显式地使用先前的知识或专家意见，这在数据稀缺的情况下特别有用。</li>
+<li><strong>灵活性</strong>：贝叶斯方法可以扩展到复杂的模型，包括非线性模型、层次模型等，且可以较好地处理过拟合问题。</li>
+</ul>
+<h3 id="贝叶斯回归的挑战">贝叶斯回归的挑战</h3>
+<ul>
+<li><strong>计算成本</strong>：贝叶斯分析通常比传统方法更为计算密集，尤其是在后验分布难以解析求解时，可能需要采用数值方法（如马尔可夫链蒙特卡罗方法）。</li>
+<li><strong>先验的选择</strong>：先验分布的选择可能对分析结果有较大影响，选择不当的先验可能会导致误导性的结果。</li>
+<li><strong>模型和算法的复杂性</strong>：实现贝叶斯回归和解释结果可能比传统的回归方法更加复杂。</li>
+</ul>
+<p>尽管存在挑战，贝叶斯回归因其提供预测不确定性的能力以及先验知识整合的优点，在统计分析和机器学习领域中得到了广泛应用。</p>
+<h2 id="logistic回归逻辑回归">Logistic回归（逻辑回归）</h2>
+<p><a href="https://www.bilibili.com/video/BV1gA411i7SR/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【五分钟机器学习】机器分类的基石：逻辑回归Logistic Regression</a></p>
+<p>线性回归输出一个连续值，适用于预测问题，如房价；逻辑回归输出一个概率值，适用于分类问题。<br>
+逻辑回归使用 Sigmoid 函数，将线性回归的输出映射为 0 到 1 之间的概率。Sigmoid 函数也叫做 Logistic 函数，所以叫 Logistic 回归；<br>
+<img src="https://jeromezjl.github.io/post-images/1710232480219.png" alt="" loading="lazy"><br>
+逻辑回归用的是交叉熵函数，来判断模型的优劣；</p>
+<h2 id="随机梯度下降sgd">随机梯度下降（SGD）</h2>
+<p><a href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">【ML】以梯度下降（Gradient Descent）展开的优化器总结</a><br>
+随机梯度下降（SGD）是一种优化算法，常用于机器学习和深度学习中以最小化损失函数，从而训练模型。与传统的梯度下降算法相比，随机梯度下降在每次更新模型参数时不是使用所有的数据，而是随机选择一个样本（或一小批样本）来计算梯度和进行更新。这种方法在处理大规模数据集时特别有效，因为它不需要在每次迭代中使用整个数据集，从而显著降低了计算成本。</p>
+<h3 id="工作原理">工作原理</h3>
+<p>SGD的每次迭代步骤如下：</p>
+<ol>
+<li><strong>随机选择</strong>：从训练数据中随机选择一个样本（或一小批样本，即 mini-batch）。</li>
+<li><strong>计算梯度</strong>：计算选中样本（或样本批次）的损失函数相对于模型参数的梯度。这个梯度是损失函数在当前参数位置的斜率，指示了损失函数增加最快的方向。</li>
+<li><strong>更新参数</strong>：根据计算得到的梯度和预先设定的学习率（步长），更新模型参数。更新的方向是梯度的反方向，因为我们的目标是最小化损失函数。</li>
+<li><strong>重复</strong>：重复上述步骤，直到满足某个停止准则，比如达到一个预定的迭代次数，或者模型性能的改进低于一个阈值。</li>
+</ol>
+<h3 id="优点">优点</h3>
+<ul>
+<li><strong>效率</strong>：对于大规模数据集，SGD可以快速进行迭代更新，因为每次迭代只需要计算一小部分数据的梯度。</li>
+<li><strong>在线学习</strong>：SGD可以用于在线学习，即模型可以随着新数据的到来实时更新。</li>
+<li><strong>逃离局部最优</strong>：随机选取样本引入的噪声有助于模型逃离局部最优解，有可能找到更好的全局最优解。</li>
+</ul>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li><strong>收敛性</strong>：由于每次迭代只使用一个样本，SGD的损失函数可能会有较大的波动，导致收敛到最优解的路径不是平滑的，有时甚至会远离最优解。</li>
+<li><strong>调参</strong>：SGD对学习率等超参数比较敏感，不恰当的超参数设置可能导致模型难以收敛。</li>
+<li><strong>非凸优化</strong>：在非凸优化问题中，SGD可能会被困在鞍点，而不是局部最小值。</li>
+</ul>
+<p>为了克服SGD的一些缺点，研究者们提出了多种改进版本，如带动量的SGD、AdaGrad、RMSProp和Adam等，这些变种通过调整学习率或引入二阶动量等机制，以提高收敛速度和稳定性。</p>
+<h2 id="感知机perceptron">感知机(Perceptron)</h2>
+<p><a href="https://jeromezjl.github.io/post/ml-ANN-MLP-linear">【ML】人工神经网络、MLP、全连接层</a></p>
+<h2 id="多项式回归用基函数扩展线性模型">多项式回归：用基函数扩展线性模型</h2>
+<p><a href="https://blog.csdn.net/weixin_44225602/article/details/112752565">多项式回归详解 从零开始 从理论到实践</a></p>
+<h2 id="支持向量机">支持向量机</h2>
+<p><a href="https://jeromezjl.github.io/post/ml-zhi-chi-xiang-liang-ji-svm">【ML】支持向量机（SVM）</a></p>
+<h2 id="knnk-最近邻">KNN（K-最近邻）</h2>
+<p><a href="https://www.bilibili.com/video/BV1Ma411F7Y4/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
+<a href="https://blog.csdn.net/codedz/article/details/108862498">KNN算法详解及实现</a><br>
+<a href="https://zhuanlan.zhihu.com/p/341572059">史上最全面K近邻算法/KNN算法详解+python实现</a></p>
+<p><code>总结：</code></p>
+<ol>
+<li>有监督学习</li>
+<li>用于分类和回归任务</li>
+<li>物体类别由旁边最近的K个样本决定</li>
+</ol>
+<h2 id="高斯过程-gaussian-processesgp">高斯过程 Gaussian Processes(GP)</h2>
+<p><a href="https://www.zhihu.com/question/46631426">如何通俗易懂地介绍 Gaussian Process？</a><br>
+<strong>随机过程</strong><br>
+在机器学习和深度学习领域，随机过程的概念和方法学被广泛应用于算法的开发和数据分析中，主要应用包括但不限于以下几个方面：</p>
+<ol>
+<li>
+<p><strong>随机优化方法</strong>：在机器学习模型的训练过程中，随机梯度下降（SGD）及其变体是非常流行的优化算法。这些算法利用随机性来有效地搜索参数空间，以找到使损失函数最小化的参数。随机性有助于算法跳出局部最小值，更可能找到全局最小值或较好的局部最小值。</p>
+</li>
+<li>
+<p><strong>贝叶斯方法</strong>：贝叶斯方法在机器学习中用于推理和决策，它们本质上依赖于随机过程的概念。例如，高斯过程是一种用于回归和分类任务的贝叶斯非参数方法，它可以提供关于预测的不确定性的信息。</p>
+</li>
+<li>
+<p><strong>序列模型</strong>：在自然语言处理（NLP）、语音识别、时间序列分析和其他序列数据处理领域，随机过程模型如隐马尔可夫模型（HMMs）和循环神经网络（RNNs）及其变体（如长短期记忆网络LSTM和门控循环单元GRU）被用来捕捉序列数据中的时间依赖性。</p>
+</li>
+<li>
+<p><strong>增强学习</strong>：在增强学习中，马尔可夫决策过程（MDPs）提供了一个框架，用于建模决策制定者（智能体）与环境之间的交互。每个决策或行动都会导致状态的变化和一定的奖励，智能体的目标是通过学习最佳策略来最大化其获得的总奖励。</p>
+</li>
+<li>
+<p><strong>随机网络</strong>：在深度学习中，一些网络结构引入了随机性以增强模型的泛化能力和鲁棒性。例如，Dropout技术通过在训练过程中随机忽略神经网络中的一部分神经元，来防止模型的过拟合。</p>
+</li>
+<li>
+<p><strong>生成模型</strong>：在生成对抗网络（GANs）和变分自编码器（VAEs）等生成模型中，随机性被用来生成新的、与训练数据相似的数据实例。这些模型在图像生成、文本到图像的转换和其他生成任务中表现出色。</p>
+</li>
+</ol>
+<p>这些应用显示了随机过程在现代机器学习和深度学习算法设计和数据分析中的广泛影响。随机性不仅增加了模型的灵活性，还有助于提高算法的效率和鲁棒性。</p>
+<p>高斯过程（Gaussian Process, GP）是一种非参数贝叶斯模型，广泛应用于机器学习中的回归、分类和其他任务。在高斯过程中，对于给定的数据集，模型假设数据可以由一个具有连续输入空间的随机过程生成，且该过程的任意有限集合的联合分布都是高斯分布的。换句话说，高斯过程提供了一种优雅的方法来描述函数的分布，使我们能够在数据点之间进行平滑插值，预测新的数据点，并量化预测的不确定性。</p>
+<h3 id="核心概念">核心概念</h3>
+<ul>
+<li><strong>非参数方法</strong>：尽管称为“非参数”，这并不意味着高斯过程中没有参数。相反，这意味着它们不依赖于固定维数的参数向量，模型复杂度可以随着数据量的增加而增加。</li>
+<li><strong>随机过程</strong>：高斯过程是一种随机过程，其中每个点 x 都被映射到一个随机变量 f(x) ，而这些随机变量的任意有限集合的联合分布都是高斯的。</li>
+<li><strong>均值函数和协方差函数</strong>：高斯过程由均值函数和协方差函数完全定义。均值函数定义了过程的平均水平，通常可以设置为零或其他简单形式。协方差函数（或核函数）定义了任意两点间的协方差，从而编码了函数值之间的相似性或平滑度。</li>
+</ul>
+<h3 id="高斯过程回归gpr">高斯过程回归（GPR）</h3>
+<p>在高斯过程回归（Gaussian Process Regression, GPR）中，目标是根据一组观测数据来预测新数据点的值。GPR的强大之处在于其能够提供预测的不确定性估计，这对于许多应用（如优化和控制）来说是非常宝贵的。</p>
+<ol>
+<li><strong>先验分布</strong>：在观察到任何数据之前，假设函数遵循一个高斯过程先验分布，具有特定的均值和协方差函数。</li>
+<li><strong>后验分布</strong>：给定观测数据，使用贝叶斯规则更新对函数的信念，从而得到后验分布。后验分布考虑了观测数据，可以用来进行预测。</li>
+<li><strong>预测和不确定性</strong>：在新的输入点，后验分布提供了对应函数值的最佳估计以及估计的不确定性（通常表现为置信区间）。</li>
+</ol>
+<h3 id="优缺点">优缺点</h3>
+<ul>
+<li><strong>优点</strong>：能够提供预测的不确定性度量；适应性强，可以通过选择合适的协方差函数来捕捉复杂的数据模式；非参数特性使得模型复杂度可以随数据量自动调整。</li>
+<li><strong>缺点</strong>：对于大数据集，计算成本可能非常高，因为需要对协方差矩阵进行求逆或其他线性代数操作，这些操作的计算复杂度通常是数据点数目的三次方。此外，选择和调整协方差函数的形式可能比较困难，需要专业知识和经验。</li>
+</ul>
+<h2 id="朴素贝叶斯">朴素贝叶斯</h2>
+<p>朴素：每个特征相互独立<br>
+<a href="https://zhuanlan.zhihu.com/p/26262151">带你理解朴素贝叶斯分类算法</a></p>
+<h2 id="决策树">决策树</h2>
+<p><a href="https://jeromezjl.github.io/post/ml-jue-ce-shu/">【ML】决策树和随机森林</a></p>
+<h2 id="集成算法">集成算法</h2>
+<p>集成算法的目的是将几个基估计器的预测与给定的学习算法结合起来，以提高单个估计器的通用性和鲁棒性。<br>
+集成方法一般分为两种：</p>
+<ul>
+<li>平均法（averaging methods)：该方法的原理是构建多个独立的估计器，然后取它们的预测结果的平均。一般来说，组合之后的估计器是会比单个估计器要好的，因为它的方差减小了。<br>
+示例: Bagging methods, Forests of randomized trees, …</li>
+<li>提升法(boosting methods)：基估计器是按顺序建立的，并且试图减小组合估计器的偏差。其动机是将几个弱模型结合起来，形成一个强大的整体。<br>
+示例: AdaBoost, Gradient Tree Boosting, …</li>
+</ul>
+<h2 id="半监督学习">半监督学习</h2>
+<p>介于监督学习和无监督学习之间，算法利用大量的未标记数据和少量的标记数据来进行模型训练。这种方法在实际应用中非常有用，因为在许多情况下，获取未标记的数据相对容易和成本较低，而获取大量准确的标记数据则更加困难和昂贵。</p>
+<h3 id="核心思想">核心思想</h3>
+<p>半监督学习的核心思想是利用未标记数据的分布信息来辅助标记数据的学习过程，以此提高学习的准确性和效率。它基于这样一个假设：相似的数据点可能具有相同的输出标签。</p>
+<h3 id="常见方法">常见方法</h3>
+<p>半监督学习包括多种不同的方法，其中一些主要方法包括：</p>
+<ol>
+<li>
+<p><strong>自训练（Self-training）</strong>：首先使用少量的标记数据训练一个监督模型，然后用这个模型对未标记数据进行预测，将预测结果中置信度高的作为新的标记数据加入训练集，反复迭代这个过程。</p>
+</li>
+<li>
+<p><strong>生成模型（Generative Models）</strong>：使用未标记数据学习数据的生成分布，然后利用这个分布来辅助监督学习任务。</p>
+</li>
+<li>
+<p><strong>协同训练（Co-training）</strong>：当数据有多个独立的视图（feature sets）时，可以分别在每个视图上训练一个分类器，然后让这些分类器在未标记数据上互相教学。</p>
+</li>
+<li>
+<p><strong>图基方法（Graph-based Methods）</strong>：构建一个图，其中节点代表标记和未标记的数据点，边反映数据点之间的相似性。然后使用图中的信息来推断未标记点的标签。</p>
+</li>
+<li>
+<p><strong>半监督支持向量机（Semi-supervised SVM）</strong>：这是支持向量机的一种变体，它利用未标记数据来寻找决策边界，使得边界尽可能地远离所有数据点，包括未标记和标记的数据点。</p>
+</li>
+</ol>
+<h3 id="应用场景">应用场景</h3>
+<p>半监督学习在实际应用中非常有价值，特别是在以下情况：</p>
+<ul>
+<li>标记数据稀缺或获取成本高昂，而未标记数据丰富且易于获取。</li>
+<li>完全监督学习由于标记数据不足而表现不佳。</li>
+<li>需要提高学习算法的泛化能力。</li>
+</ul>
+<h3 id="优缺点-2">优缺点</h3>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>能够利用丰富的未标记数据，减少对标记数据的依赖。</li>
+<li>通常比纯监督学习方法具有更好的泛化能力。</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>半监督学习的有效性依赖于未标记数据的质量和与标记数据的关联性。</li>
+<li>不当的使用可能导致模型偏差，特别是当未标记数据的分布与标记数据不一致时。</li>
+</ul>
+<h1 id="回归-2">回归</h1>
 ]]></content>
     </entry>
     <entry>
@@ -180,531 +994,6 @@ I will strive to issue some papers on some influencial journals</p>
 <p>多视角、多光照</p>
 <p>多光照：输入多光照图像，输出三维</p>
 <p><a href="https://www.bilibili.com/video/BV1Mt4y1a7e6/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【”UE5夯实基础”每日2更系列】13朗伯漫反射理论</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【CV】人体姿态识别]]></title>
-        <id>https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/</id>
-        <link href="https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/">
-        </link>
-        <updated>2024-03-06T02:39:42.000Z</updated>
-        <content type="html"><![CDATA[<p>1</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ML】基础概念]]></title>
-        <id>https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/</id>
-        <link href="https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/">
-        </link>
-        <updated>2024-03-05T06:16:47.000Z</updated>
-        <content type="html"><![CDATA[<p>有监督：分类、回归<br>
-无监督：聚类、密度估计</p>
-<p>错误率：error_rate：预测错误/全部<br>
-精度：accuracy：1-error_rate</p>
-<p>在深度学习中，参数通常是指神经网络中的权重和偏差。<br>
-这些参数是通过<code>反向传播</code>算法，根据训练数据中的梯度信息自动调整的，以最小化<code>损失函数</code>。<br>
-参数的学习是模型训练的过程，目标是找到最佳的参数配置。</p>
-<h1 id="损失函数">损失函数</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/261059231">损失函数（Loss Function）</a><br>
-计算预测值f(x)与真实值Y的差异程度<br>
-绝对值损失 Mean Absolute Error (MAE)：L1 Loss<br>
-均方损失：L2 Loss<br>
-Huber Loss</p>
-<p><strong>正则化</strong><br>
-在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合<br>
-<a href="https://blog.csdn.net/weixin_41960890/article/details/104891561">一篇文章完全搞懂正则化（Regularization）</a></p>
-<h1 id="向前传播和反向传播">向前传播和反向传播</h1>
-<p>损失函数链式法则对参数求梯度来更新参数值<br>
-<a href="https://www.bilibili.com/video/BV1yG411x7Cc/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">5分钟深度学习-反向传播算法</a><br>
-<a href="https://zhuanlan.zhihu.com/p/447113449">【深度学习篇】：前向传播（forward）和反向传播（backward）</a><br>
-<a href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">【ML】以梯度下降（Gradient Descent）展开的优化器总结</a><br>
-<strong>激活函数</strong><br>
-增加神经网络的非线性表达能力，使之能更好的拟合非线性模型<br>
-<a href="https://www.bilibili.com/video/BV1qB4y1e7GJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">5分钟深度学习-激活函数</a><br>
-<a href="https://zhuanlan.zhihu.com/p/364620596">深度学习笔记：如何理解激活函数？（附常用激活函数）</a><br>
-特点：连续可导（梯度下降）；取值范围是全体实数，将全体实数映射到特定的范围；只需增加非线性的因素，而不需改变对输入的响应状态，所以是单增的，随输入增大而增大<br>
-梯度消失（梯度弥散）：sigmoid趋近无穷时，梯度趋近于0，若某次输入过大，梯度几乎为0，导致参数几乎不更新，导致整个网络学习能力下降<br>
-sigmoid：非零均值函数→同时更新正负→神经网络不易收敛；饱和函数→梯度消失，使用tanh函数可以<br>
-梯度爆炸：使用ReLU函数时，由于函数无上界，如果输出过大，会导致梯度累积，超出上限</p>
-<h1 id="分类和回归">分类和回归</h1>
-<p>本质都是对输入值进行预测的问题，分类输出离散的、对预测类别的置信度，回归输出连续的预测值<br>
-<a href="https://blog.csdn.net/shuiyixin/article/details/88816416">【机器学习小常识】“分类” 与 “回归”的概念及区别详解</a><br>
-<a href="https://www.bilibili.com/video/BV1m4421F7Fg/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">详解逻辑回归、softmax回归和神经网络，三种模型的关联和区别</a></p>
-<h1 id="训练集-验证集-测试集">训练集、验证集、测试集</h1>
-<p>三者必须无交集<br>
-<a href="https://blog.csdn.net/qlkaicx/article/details/134767111#:~:text=%E5%8F%82%E6%95%B0%20%E6%98%AF%E6%A8%A1%E5%9E%8B%E4%B8%AD%E5%8F%AF%E8%A2%AB%E5%AD%A6%E4%B9%A0%E5%92%8C%E8%B0%83%E6%95%B4%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E9%80%9A%E8%BF%87%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BC%98%E5%8C%96%EF%BC%9B,%E8%80%8C%20%E8%B6%85%E5%8F%82%E6%95%B0%20%E5%88%99%E6%98%AF%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8C%E7%94%A8%E4%BA%8E%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%E5%92%8C%E6%80%A7%E8%83%BD%EF%BC%8C%E8%B6%85%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%89%E6%8B%A9%E5%92%8C%E4%BC%98%E5%8C%96%E5%AF%B9%E6%A8%A1%E5%9E%8B%E6%80%A7%E8%83%BD%E6%9C%89%E9%87%8D%E8%A6%81%E5%BD%B1%E5%93%8D%E3%80%82">还搞不懂什么是参数，超参数吗？三分钟快速了解参数与超参数的概念和区别！！！</a><br>
-<a href="https://blog.csdn.net/qq_41895003/article/details/104811371">训练集、测试集、验证集之间的区别及理解</a><br>
-训练集：通过训练自动更新参数<br>
-验证集：手动更新超参数<br>
-测试集：测试生成的模型的泛化能力</p>
-<p>k折交叉验证：将数据集分成k份，每次拿出其中的一份作为验证集，剩下k-1份作为训练集<br>
-通过平均误差判断超参数好坏</p>
-<p><code>Q&amp;A</code></p>
-<pre><code>Q：如果loss很低，是不是就不用设置验证集了
-A：在深度学习训练中，即使训练损失（loss）很低，也不意味着可以忽略验证集的设置。这里有几个原因解释为什么验证集依然很重要：
-
-1. 过拟合（Overfitting）：一个很低的训练损失可能意味着模型在训练集上表现得很好，但这也可能是过拟合的一个迹象。过拟合发生时，模型学习到了训练数据中的噪声和细节，而不是底层模式，这会导致模型在未见过的数据上表现不佳。验证集可以帮助检测过拟合情况，因为它提供了模型在非训练数据上的性能评估。
-
-2. 模型选择（Model Selection）：在开发深度学习模型时，我们通常会尝试多种不同的架构、超参数设置等。验证集用于评估这些不同设置的性能，帮助我们选择最佳模型。
-
-3. 调参（Hyperparameter Tuning）：除了选择模型外，我们还需要调整模型的超参数（如学习率、批量大小等）。验证集对于这一过程至关重要，因为它可以帮助我们了解不同超参数设置对模型性能的影响。
-
-4. 泛化能力（Generalization Ability）：最终，我们关心的是模型在实际应用中的表现，即在新的、未见过的数据上的表现。验证集提供了一个近似的泛化能力评估，帮助我们估计模型在现实世界数据上的表现。
-
-因此，即使训练损失很低，也不应该忽视验证集的设置。验证集是深度学习训练过程中不可或缺的一部分，对于确保模型的泛化能力和避免过拟合至关重要。在模型训练的最后阶段，还应该使用独立的测试集对模型进行最终评估，以进一步验证模型的泛化能力。
-</code></pre>
-<pre><code>Q：验证集在所有任务中都是必须的吗？
-A：虽然验证集在许多深度学习和机器学习任务中非常重要，但是否“必须”使用验证集取决于具体的任务、数据的可用性以及目标。在大多数情况下，使用验证集是一种最佳实践，但也有一些情况或任务可能不那么依赖于验证集：
-
-1. 数据量极其有限：在某些情况下，如果可用的数据非常有限，可能无法划分出单独的验证集。在这种情况下，可能会采用交叉验证的方法，这种方法将数据集分为多个小分组，然后依次将其中一个分组作为验证集，其他分组作为训练集，从而有效利用有限的数据。
-
-2. 在线学习或持续学习：对于一些在线学习任务，模型会持续地接收数据并不断更新。在这种情况下，模型可能不会有一个固定的验证集，而是不断地用新数据评估和调整。
-
-3. 使用预训练模型进行微调：当使用预训练模型并对其进行微调以适应特定任务时，如果任务非常接近原始预训练任务，且数据集较小，可能会直接在训练数据上进行微调而不单独设置验证集。然而，这种情况下仍然推荐使用验证集来监控过拟合和模型性能。
-
-4. 简单任务或明确的成功标准：在一些简单的任务或当成功标准非常明确且容易评估时（如明确的数学问题），可能不需要单独的验证集来调整模型参数。
-
-即便在这些特殊情况下，最终还是需要一个独立的测试集来评估模型的性能，确保模型能够在未见过的数据上良好工作。综上所述，虽然在某些特定场景下可以不使用验证集，但在大多数情况下，为了保证模型的泛化能力和避免过拟合，使用验证集都是一种非常重要的实践。
-</code></pre>
-<p><strong>超参数调整</strong><br>
-利用验证集调整超参数的一些策略</p>
-<ol>
-<li>在每个epoch后或几个epoch后使用验证集验证模型的loss，确保模型权重可以被保存在本地，手动调整超参数后继续训练</li>
-<li>使用早停技术：在每个epoch结束时评估模型在验证集上的性能，并在性能不再提升时停止训练</li>
-<li>使用自动化超参数优化（Hyperparameter Optimization, HPO）</li>
-<li>设置模型检查点（Model Checkpointing）</li>
-</ol>
-<h1 id="过拟合">过拟合</h1>
-<p>过拟合：认为只有和训练数据一样的才是<br>
-欠拟合：认为树也是叶子<br>
-<a href="https://zhuanlan.zhihu.com/p/158869433">机器学习模型的容量，过拟合与欠拟合</a><br>
-dropout：前向传播的时候，让某个神经元的激活值以一定的概率 p 停止工作，这样可以使模型泛化性更强，防止过拟合</p>
-<h1 id="算法分类">算法分类</h1>
-<p>机器学习算法通常根据学习方式和应用场景被分类为几大类：</p>
-<ol>
-<li>
-<p><strong>监督学习（Supervised Learning）</strong>:</p>
-<ul>
-<li>在这种类型的学习中，算法从标记的训练数据中学习，每个训练样本都有一个与之对应的标签或输出。</li>
-<li>常见的算法包括线性回归、逻辑回归、支持向量机（SVM）、决策树、随机森林、神经网络等。</li>
-</ul>
-</li>
-<li>
-<p><strong>无监督学习（Unsupervised Learning）</strong>:</p>
-<ul>
-<li>在无监督学习中，算法试图从未标记的数据中找出模式。因为没有指导，所以这种类型的学习试图通过数据本身的结构来理解数据。</li>
-<li>典型的算法包括聚类算法（如K-means、层次聚类）、降维算法（如主成分分析PCA、t-SNE）、关联规则学习算法（如Apriori、Eclat）等。</li>
-</ul>
-</li>
-<li>
-<p><strong>半监督学习（Semi-Supervised Learning）</strong>:</p>
-<ul>
-<li>这种学习方式介于监督学习和无监督学习之间。它使用少量的标记数据和大量的未标记数据进行训练。通过这种方式，算法可以提高其性能和准确性。</li>
-<li>半监督学习方法通常包括自训练、多视图学习、图基方法等。</li>
-</ul>
-</li>
-<li>
-<p><strong>强化学习（Reinforcement Learning）</strong>:</p>
-<ul>
-<li>在强化学习中，算法（通常称为智能体）通过与环境交互来学习如何达到目标。智能体从环境中获得奖励或惩罚，并使用这些反馈来指导其未来的行为。</li>
-<li>常见的强化学习算法包括Q-learning、SARSA、深度Q网络（DQN）、策略梯度方法等。</li>
-</ul>
-</li>
-<li>
-<p><strong>自监督学习（Self-Supervised Learning）</strong>:</p>
-<ul>
-<li>这是一种特殊类型的无监督学习，其中数据的一部分被用作监督信号。在自监督学习中，模型试图从数据的未标记部分预测数据的标记部分，从而在没有显式标签的情况下学习数据的表示。</li>
-<li>应用示例包括预训练的语言模型、图像特征学习等。</li>
-</ul>
-</li>
-<li>
-<p><strong>迁移学习（Transfer Learning）</strong>:</p>
-<ul>
-<li>这种学习方法涉及将从一个任务中学到的知识应用到另一个不同但相关的任务上。这是通过重用预训练模型的一部分并对其进行微调来实现的，以适应新任务。</li>
-<li>这在深度学习中尤其常见，例如使用预训练的卷积神经网络（CNN）进行图像分类任务。<br>
-<a href="https://jeromezjl.github.io/post/dl-mo-xing-fu-yong">【DL】模型复用</a></li>
-</ul>
-</li>
-<li>
-<p><strong>生成式对抗网络（GANs）</strong>:</p>
-<ul>
-<li>GANs是一种框架，用于通过两个网络（一个生成器和一个鉴别器）之间的对抗过程来训练生成模型。生成器生成新的数据实例，而鉴别器评估它们是来自于真实数据集还是生成器产生的。</li>
-<li>GANs广泛用于图像生成、图像转换、增强现实等领域。</li>
-</ul>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Linux】深度学习配置]]></title>
-        <id>https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi/</id>
-        <link href="https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi/">
-        </link>
-        <updated>2024-02-29T06:00:15.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_45484237/article/details/123514175">实现Linux服务器配置深度学习环境并跑代码完整步骤</a></p>
-<p>使用nvidia-smi完全查看显卡型号<br>
-nvidia-smi --format=csv --query-gpu=index,name,driver_version,memory.total,memory.used,memory.free<br>
-或使用<br>
-pip install gpustat<br>
-gpustat<br>
-来查看</p>
-<p><a href="https://zhuanlan.zhihu.com/p/102449309">Linux下Anaconda环境安装/创建/激活/退出/删除/管理</a><br>
-<a href="https://blog.csdn.net/Aorg1/article/details/134800426">conda环境下安装nvcc -V</a></p>
-<p><a href="https://blog.csdn.net/m0_50181189/article/details/122440985">【详细】Ubuntu18.04安装更新显卡驱动、安装CUDA及cuDNN、CUDA版本切换</a></p>
-<p>退出 python：&gt;&gt;&gt; quit（）</p>
-<p><a href="https://blog.csdn.net/weixin_59047731/article/details/135634418">pyCharm专业版破解激活（超详细）</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/486360176">一文读懂 PyTorch 显存管理机制</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[毕设]]></title>
-        <id>https://jeromezjl.github.io/post/bi-she/</id>
-        <link href="https://jeromezjl.github.io/post/bi-she/">
-        </link>
-        <updated>2024-02-28T14:16:52.000Z</updated>
-        <content type="html"><![CDATA[<p>Linux运行python文件<br>
-python3 script.py</p>
-<p><strong>Hugging Face</strong><br>
-&quot;NLP 界的 GitHub&quot;<br>
-<a href="https://www.bilibili.com/video/BV1YU4y1g753/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Hugging Face 系列视频（一）：Hugging Face 及 Transformer/Datasets/Tokenizers库</a><br>
-<a href="https://blog.csdn.net/a1920993165/article/details/128082968">Huggingface的介绍，使用（CSDN最强Huggingface入门手册）</a></p>
-<p><strong>Fine tuning 微调</strong><br>
-将模型迁移学习，影响因素：新数据集的大小、新数据和原数据集的相似程度<br>
-<a href="https://zhuanlan.zhihu.com/p/35890660">CNN入门讲解：什么是微调（Fine Tune）？</a><br>
-<a href="https://blog.csdn.net/weixin_42137700/article/details/82107208">什么是fine-tuning？</a><br>
-<a href="https://zhuanlan.zhihu.com/p/620618701">预训练大语言模型的三种微调技术总结：fine-tuning、parameter-efficient fine-tuning和prompt-tuning的介绍和对比</a></p>
-<p><strong>使用 COCO 数据集进行预训练的 VIT-GPT2 模型</strong><br>
-COCO：起源于微软的、大型的、丰富的物体检测数据集<br>
-<a href="https://blog.csdn.net/qq_41185868/article/details/82939959">Dataset之COCO数据集：COCO数据集的简介、下载、使用方法之详细攻略</a><br>
-<a href="https://huggingface.co/nlpconnect/vit-gpt2-image-captioning">vit-gpt2-image-captioning</a></p>
-<p><strong>CLIP</strong><br>
-<a href="https://zhuanlan.zhihu.com/p/521151393">详解CLIP (一) | 打通文本-图像预训练实现ImageNet的zero-shot分类，比肩全监督训练的ResNet50/101</a><br>
-<a href="https://blog.csdn.net/lsb2002/article/details/132275132">openai多模态大模型：clip详解及实战</a><br>
-<a href="https://zhuanlan.zhihu.com/p/493489688">神器CLIP：连接文本和图像，打造可迁移的视觉模型</a></p>
-<p>VIT<br>
-embedding：通过矩阵乘法，将token升降维，从而让计算机理解。将一个东西映射为向量</p>
-<p>linear层：1. 将每个patch变成一维  2. 使一维向量的维度和 transformer 输入维度相符</p>
-<p>位置编码和embedding相加</p>
-<p>是一个特征提取器<br>
-先将图像分割为不同的patch<br>
-然后将每个patch拉成一个向量，加入位置信息</p>
-<p>transformer必须在大量数据</p>
-<p><a href="https://blog.csdn.net/weixin_44966641/article/details/118733341">Vision Transformer（ViT）PyTorch代码全解析（附图解）</a><br>
-<a href="https://juejin.cn/post/7238148905095839804">用🤗 Transformers微调ViT图像分类</a></p>
-<p>deepfashion<br>
-图片：750x1101，共44096个</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】英语单词和词组]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-dan-ci-he-ci-zu/">
-        </link>
-        <updated>2023-11-29T13:50:01.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>时间安排</strong><br>
-下午 14：00~17：00 考试，三个小时<br>
-小作文：15min<br>
-大作文：35min<br>
-阅读：70min（17分钟一篇）<br>
-新题型：20min<br>
-翻译：20min<br>
-完形填空：20min</p>
-<h1 id="单词">单词</h1>
-<p>measurement 测量<br>
-lean 倾斜、倚靠、精瘦<br>
-likewise 同样的<br>
-absently 心不在焉地<br>
-concede admit acknowledge confess allow grant 让步、承认<br>
-sitter 摆姿势让人画像的人<br>
-miserably 痛苦地<br>
-stiff、stiffly 僵硬的<br>
-notoriously 臭名昭著、众所周知<br>
-copper 铜<br>
-limbs 肢体、四肢<br>
-grin 露齿笑<br>
-contemplate 考虑、沉思 too...to contemplate 太...去考虑（无法想象）<br>
-notion 概念、观念 the notion is that 意思是说/人们认为<br>
-compell 强迫<br>
-privilege 给特权<br>
-intensify 强化<br>
-crisp 脆的<br>
-crust 皮，外壳<br>
-mandate 授权</p>
-<h1 id="词组">词组</h1>
-<p>over a six-year period 在六年的时间里<br>
-be superior to 优于<br>
-be resistant to 不受损害的<br>
-increase the level 提高水平<br>
-government grant 政府拨款<br>
-take for granted 认为...理所应当<br>
-justify doing sth. 证明做...（是正确的）<br>
-judge by/from 从...判定<br>
-starved of 缺乏、挨饿<br>
-at high temperature 在高温下<br>
-come across 遇到、给人留下印象</p>
-<h1 id="长难句">长难句</h1>
-<p>its campaign risks coming across as being pushy.<br>
-risk 是宾语，有...的风险<br>
-coming across as being pushy 给人留下咄咄逼人的印象（遇到被认为咄咄逼人）come across 有给人留下印象的意思<br>
-译为，它的活动有可能给人留下咄咄逼人的印象</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【考研】英语作文]]></title>
-        <id>https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/</id>
-        <link href="https://jeromezjl.github.io/post/kao-yan-ying-yu-zuo-wen/">
-        </link>
-        <updated>2023-10-11T13:47:29.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/liu-ji/">六级整理的作文</a></p>
-<p><a href="https://www.zhihu.com/question/380341976">考研英语一的各题型，怎么分配时间合理？</a></p>
-<p>小作文<br>
-大作文</p>
-<h1 id="小作文">小作文</h1>
-<p><strong>常考题目有四种</strong><br>
-私人书信、公务书信、通知和告示（去年考的）、会议纪要</p>
-<p><strong>审题三要素</strong></p>
-<ol>
-<li>故事背景：打散+改写背景信息</li>
-<li>体裁（letter/email+notice）+ 内容要求</li>
-<li>正式（I am / It is）/非正式（I'm / It's） + 格式<br>
-都写正式肯定没错</li>
-</ol>
-<p><strong>小作文三段式简易思路</strong><br>
-小作文：说事说明白就行，不要求句型很复杂<br>
-段首1-2句<br>
-a. 写给熟人：首句寒暄，二句目的；<br>
-b. 写给陌生人或机构：自我介绍和目的</p>
-<p>中间 4-6 句<br>
-按题目要求写相应内容，并辅以感谢、强调、对比、建议、说明等功能表达完成写作</p>
-<p>段尾 1 句<br>
-再次致歉、感谢、期待、展望等</p>
-<p>正文缩进四个字符</p>
-<p><strong>书信</strong><br>
-dear 称呼<br>
-Yours sincerely</p>
-<p><strong>告示</strong><br>
-标题</p>
-<p>the purpose of sth. / sth. aims(targets) to 目的是<br>
-use their best endeavors to do 尽最大努力做<br>
-attach emphasis to sth. 认为...很重要<br>
-utmost emphasis should be attached to...<br>
-contribute to / induce 是导致...的原因<br>
-complete one's work 完成工作<br>
-joint efforts 共同努力<br>
-I am deeply obliged for your hard work 我十分感谢您的努力</p>
-<h1 id="可用单词">可用单词</h1>
-<p>character 角色<br>
-plight 困境<br>
-vigorous 有活力的<br>
-tremendous 巨大的<br>
-eminent 优秀的<br>
-eminently = exceedingly = Immensely 非常<br>
-advantageous 有利的，有好处的<br>
-miraculous 奇迹般的<br>
-gorgeous 美丽的<br>
-pervasive = universal 普遍的<br>
-enhance = promote = strengthen = optimize 加强、优化、促进<br>
-deal with = resolve sth. = tackle sth. = cope with 解决，应对，处理<br>
-cultivate = foster 培养<br>
-fulfill 完成<br>
-contamination 污染<br>
-obligation 责任<br>
-accelerate 加速<br>
-adequate 充足<br>
-rational 合理的<br>
-feasible 可行的<br>
-considerable 相当多的<br>
-critical / essential / be extremely vital to us 至关重要的<br>
-severe、critical 严重的<br>
-terrible / harmful<br>
-defect 缺点<br>
-eliminate 消除<br>
-therefore = hence 因此<br>
-demonstrate / illustrate “说明，表明”，用在图表作文中替代show，reveal等单词<br>
-depict / portray “描述，描绘”，在漫画作文中替代describe<br>
-punctuality 准时 / punctually 准时地<br>
-prestigious 有声望的<br>
-hospitality 热情好客 / hospitable 热情好客的<br>
-imperative 迫切的<br>
-magnificent = splendid 壮丽的<br>
-innumerable 无数的<br>
-deleterious 有害的<br>
-pursue 追求<br>
-primary 首要的<br>
-academic 学术的<br>
-indispensable 不可或缺的<br>
-severely 严重地</p>
-<h1 id="可用词组">可用词组</h1>
-<p>I'm writing to request that 我写信恳求（t不双写）<br>
-I have several request<br>
-表达喜欢{<br>
-students who share a love for English 共同热爱<br>
-be keen on sth.<br>
-have a profound affection  有深厚的感情/浓厚的兴趣<br>
-be passionate about<br>
-have a peculiar interest in 对...有特殊的兴趣<br>
-}<br>
-the Internet has become an increasingly important tool for students<br>
-Not only do professors require us to... but ... (前后连接复杂句，do 起强调作用)<br>
-much of the communication between...  communication 不可数<br>
-I cordially invite you to join us 我诚挚地邀请您来参加我们的活动<br>
-on behalf of<br>
-we are hoping that you will be available for a lecture on January 4th.<br>
-there will be 45 minutes allocated for you<br>
-in their spare time<br>
-sth be in great request 非常需要 sth<br>
-compensate for / compensate sb. for sth. 弥补、补偿<br>
-urge sb to do 敦促某人做<br>
-guarantee sb. sth. 向某人保证某事<br>
-remains to do 仍需做某事<br>
-be inspired  by 受到启发、鼓舞<br>
-A be conducive to B / do sth A有利于B/做某事<br>
-be detrimental to 不利于，对...有害<br>
-manifest improvement 明显的进步<br>
-a wholesome drink 有益健康的饮料<br>
-Prevailing among the general public 在一般人群中盛行<br>
-be triggered by 由...引起的<br>
-If tedious tasks could be eradicated, the world would be a much better place.<br>
-如果可以消灭那些单调乏味的工作，世界将会变得更加美好<br>
-We must eradicate the unhealthy tendency of cheating in exams.<br>
-我们一定要杜绝考试作弊的歪风邪气<br>
-The noise pollution badly jeopardizes the health of the operating workers.<br>
-噪声污染严重地危害人们的身体健康（jeopardize：危害）<br>
-alleviating psychological pressure 缓解心理压力（alleviate 减轻、缓解）<br>
-Some people assert that nothing is impossible.<br>
-一些人断言没有什么事是不可能的（assert：断言、声称）<br>
-stimulate sb. to do sth. 激励某人做<br>
-the merits of sth. 某事的好处<br>
-be saturated with 充斥着<br>
-strive for = spare no efforts for = endeavor to do 努力做<br>
-embark on sth. 开始做 sth.<br>
-in contemporary society 在当代社会<br>
-a multitude of = a vast amount of 大量<br>
-there are numerous ways of doing 有许多做...的方法<br>
-the majority of 大多数<br>
-an alternative is that… 作为替代的是...<br>
-cannot afford to 不应当做<br>
-attach importance to sth 强调...<br>
-obstacle 阻碍<br>
-in such circumstances 在这样的情况下<br>
-in contrast = conversely 相反地<br>
-employ the policy of sth 采取...政策<br>
-It is generally established that 众所周知<br>
-enduring classic 经久不衰的经典<br>
-the inner world 内心世界<br>
-I am referring to that 我指的是<br>
-have a fascination with 对...感兴趣<br>
-a range of 一系列<br>
-be involved in 参加<br>
-extracurricular activities 课外活动<br>
-interpersonal relations 人际关系<br>
-i regret to tell you that 我很遗憾的告诉你<br>
-particular details 具体细节<br>
-one of the most magnificent tourist destination in China<br>
-China boasts of a splendid history 中国有辉煌的历史<br>
-In addition 无所谓连接<br>
-What's more 最好连着前面 比如 Initially，<br>
-Further more 最好用在最后，前面必须连<br>
-be ascribed to 归因于<br>
-If... ever perished from..., it would be a tragedy of immeasurable proportions 如果... 从... 消失，那将是不可估量的悲剧<br>
-indulge in / indulgence in 沉浸在<br>
-derive from 源于<br>
-mental fitness 心理健康<br>
-enjoy striking popularity among / be in vogue 流行<br>
-demonstrate a social phenomena of 反映了...的社会现象<br>
-briefly speaking 简言之<br>
-provoke heated debates 引起激烈讨论<br>
-double-edged sword<br>
-exert profound influence on 产生深远影响<br>
-bridge / narrow the gap between<br>
-be adopted to 被采纳用于<br>
-repent（doing）后悔做<br>
-it is imperative for us to take drastic measures. 当务之急是采取严厉措施<br>
-enhance the public awareness 提高公众意识<br>
-a combination of ... 的结合<br>
-this tendency is rather disturbing 这种倾向很令人担忧<br>
-give a helping hand<br>
-a minority of<br>
-every individual</p>
-<p><strong>道歉信</strong><br>
-I have recently been diagnosed with a serious cold<br>
-If possible, i would like to postpone the interview to another day later in the week<br>
-I sincerely apologize for any inconvenience this may cause you (may have caused)<br>
-Please excuse me for not being able to inform you of my situation sooner.</p>
-<p>as a... , i am severely disappointed to find that the service you have recently provided us is far from satisfactory<br>
-i am writing to draw you attention to sth.<br>
-take...into serious concideration</p>
-<p><strong>感谢信</strong><br>
-comforting<br>
-Benevolence = kind deed<br>
-I am writing this letter to express my heartfelt gratitude to you for the meticulous care you provided during my time in the hospital.<br>
-The comforting scenes always remind me of the period you took such good care of me.<br>
-If it had not been for your timely assistance in giving me first aid, I fear that the consequences might have been very serious<br>
-What impressed me the most was<br>
-Your appearance has uplifted me/cheered me up<br>
-I would like to extend my thanks once again<br>
-Your kind deeds are like pearls that will forever be treasured in my mind.</p>
-<p><strong>求职、申请</strong><br>
-I am writing to apply for the job of doing / your recently advertised position for a teacher<br>
-I would like to apply for admission to...<br>
-I hold the belief that I am well qualified for this position for several reasons.<br>
-Enclosed with this note is my resume, which details my previous academic qualifications and relevant work experiences.<br>
-the experiences make me a perfect candidate<br>
-cheerful personality<br>
-If you could grant me an interview, i would appreciate it.<br>
-at your earliest convenience</p>
-<p><strong>活动</strong><br>
-To enhance the ability and enrich after-class activities<br>
-which is to be held on...<br>
-Those who have a fascination with ... are welcome to participate in this activity<br>
-If the would-be candidates have any questions, please do not hesitate to contact us<br>
-this club serves as a platform to demonstrate your marvelous abilities<br>
-are eminently beneficial in multiple regards 在多方面都很有益处<br>
-improve your level of proficiency 提高你的熟练程度<br>
-A good command of English will enable you to get an edge over your peers<br>
-好的英语水平让你比同龄人更胜一筹</p>
-<p><strong>纪要</strong><br>
-during the latest meeting，the following issues were addressed.<br>
-If you find any errors or omissions, please contact me</p>
-<p><strong>询问信</strong><br>
-I am writing to seek your assistance to help...<br>
-I hope you can kindly furnish me with specific details regarding the above-mentioned questions.<br>
-I wonder if it would be convenient for you to do...</p>
-<h1 id="大作文">大作文</h1>
-<p>第一段：不用提出论点，只描述即可<br>
-总体描述画面<br>
-挖掘细节</p>
-<p>第二段<br>
-主题句，点题，引出下文<br>
-论证+论据{<br>
-背景、事实（现象）、反方观点、原因、结果<br>
-因果、分类、举例<br>
-}<br>
-总结扣题</p>
-<p>第三段<br>
-结论<br>
-两点建议/评论<br>
-展望</p>
-<h1 id="大作文积累">大作文积累</h1>
-<p><strong>第一段</strong><br>
-As is vividly depicted in the caricature<br>
-The caricature depicts ....<br>
-the caption indicates that... 文字说明...<br>
-diagram 图表<br>
-excerpt 选段<br>
-the author assumes that</p>
-<p><strong>第二段</strong><br>
-the caricature is to illustrate that<br>
-what the drawing intends to convey is that<br>
-I cling to the idea that 我坚持... 的观点<br>
-from my perspective<br>
-it is of vital significance to be<br>
-Take an example to illustrate....</p>
-<p><strong>第三段</strong><br>
-To sum up<br>
-Only by doing so can we<br>
-we should always be ready to</p>
-<p>Love is a pearl  which will never perish from my heart</p>
 ]]></content>
     </entry>
 </feed>
