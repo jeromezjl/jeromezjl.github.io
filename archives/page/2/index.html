@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1710508894468">
+<link rel="shortcut icon" href="/favicon.ico?v=1710603185789">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -2352,7 +2352,8 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 &lt;p&gt;深度学习模型的性能很大程度上依赖于其超参数的选择。超参数是在训练过程开始前设置的参数，与模型的参数（权重和偏置）不同，后者是通过训练数据学习得到的。以下是一些常见的深度学习超参数：&lt;/p&gt;
 &lt;h3 id=&#34;1-学习率-learning-rate&#34;&gt;1. 学习率 (Learning Rate)&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;决定模型参数在每次更新时调整的幅度。学习率过高可能导致训练不稳定，过低则训练速度缓慢。&lt;/li&gt;
+&lt;li&gt;决定模型参数在每次更新时调整的幅度。学习率过高可能导致训练不稳定，过低则训练速度缓慢。&lt;br&gt;
+可以动态调整学习率，如使用cos函数学习率&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2-批大小-batch-size&#34;&gt;2. 批大小 (Batch Size)&lt;/h3&gt;
 &lt;ul&gt;
@@ -2417,6 +2418,7 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 &lt;li&gt;限制梯度值的范围，防止梯度爆炸。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;辨析&lt;/code&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/66021413&#34;&gt;快速搞定 epoch, batch, iteration&lt;/a&gt;&lt;br&gt;
 进行一次参数更新和完成一个epoch是两个不同的概念，在深度学习的训练过程中它们扮演着不同的角色。&lt;/p&gt;
 &lt;h3 id=&#34;参数更新&#34;&gt;参数更新&lt;/h3&gt;
 &lt;ul&gt;
@@ -2439,12 +2441,13 @@ Huber Loss&lt;/p&gt;
 在损失函数中添加一个正则项，使模型学习到更加稀疏的权重分布，防止过拟合。常见的有L1正则化和L2正则化。&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_41960890/article/details/104891561&#34;&gt;一篇文章完全搞懂正则化（Regularization）&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;向前传播和反向传播&#34;&gt;向前传播和反向传播&lt;/h1&gt;
-&lt;p&gt;损失函数链式法则对参数求梯度来更新参数值&lt;br&gt;
-&lt;a href=&#34;https://www.bilibili.com/video/BV1yG411x7Cc/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟深度学习-反向传播算法&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;向前传播：数据在神经网络中从输入层流向输出层的过程。在这个过程中，每一层的神经元会根据前一层的输入、自身的权重（weights）和偏置（biases），通过激活函数计算出自己的输出。这个输出会作为下一层的输入继续传递。这个过程一直持续到达输出层，最终产生模型的预测结果。&lt;/p&gt;
+&lt;p&gt;反向传播：从输出层流向输入层的过程。根据模型输出和实际值之间的误差来调整模型参数（即权重和偏置）。这个过程是通过链式法则计算损失函数的梯度并使用这些梯度来更新模型参数来实现的。一旦计算出梯度，就使用优化算法（如SGD、Adam等）来更新网络中的权重和偏置，目的是减小损失函数的值。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1yG411x7Cc/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟深度学习-反向传播算法&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/447113449&#34;&gt;【深度学习篇】：前向传播（forward）和反向传播（backward）&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;激活函数&lt;/strong&gt;&lt;br&gt;
-增加神经网络的非线性表达能力，使之能更好的拟合非线性模型，常见的有 Sigmoid、Tanh、ReLU&lt;br&gt;
+&lt;h1 id=&#34;激活函数&#34;&gt;激活函数&lt;/h1&gt;
+&lt;p&gt;增加神经网络的非线性表达能力，使之能更好的拟合非线性模型，常见的有 Sigmoid、Tanh、ReLU&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1qB4y1e7GJ/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;5分钟深度学习-激活函数&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/364620596&#34;&gt;深度学习笔记：如何理解激活函数？（附常用激活函数）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;特点&lt;/code&gt;：&lt;/p&gt;
@@ -2456,6 +2459,103 @@ Huber Loss&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;梯度消失（梯度弥散）&lt;/strong&gt;：sigmoid趋近无穷时，梯度趋近于0，若某次输入过大，梯度几乎为0，导致参数几乎不更新，导致整个网络学习能力下降&lt;br&gt;
 sigmoid：非零均值函数→同时更新正负→神经网络不易收敛；饱和函数→梯度消失，使用tanh函数可以&lt;br&gt;
 &lt;strong&gt;梯度爆炸&lt;/strong&gt;：使用ReLU函数时，由于函数无上界，如果输出过大，会导致梯度累积，超出上限&lt;/p&gt;
+&lt;h1 id=&#34;批量归一化和层归一化&#34;&gt;批量归一化和层归一化&lt;/h1&gt;
+&lt;p&gt;批量归一化（Batch Normalization, BN）和层归一化（Layer Normalization, LN）都是深度学习中用于改进神经网络训练的标准化技术，通常是在网络架构中作为特定的层来实现。这些归一化层被嵌入到神经网络中，可以学习数据的分布，并据此对数据进行归一化处理。这使得归一化过程能够在训练过程中自动调整，以适应数据的变化。&lt;/p&gt;
+&lt;p&gt;BN和LN都旨在通过标准化神经网络中的激活值来减少内部协变量偏移，加速训练并提高模型的性能。BN通过归一化一批样本中相同特征的值来实现，而LN则是对单个样本中所有特征的值进行归一化。&lt;/p&gt;
+&lt;h3 id=&#34;解决的问题&#34;&gt;解决的问题&lt;/h3&gt;
+&lt;p&gt;提高模型的训练效率和泛化能力，但批量归一化一般不改变模型精度&lt;br&gt;
+&lt;strong&gt;1. 内部协变量偏移（Internal Covariate Shift）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：在训练深度神经网络时，每一层的输入分布可能会因为前面层参数的更新而改变，这种现象被称为内部协变量偏移。这导致训练过程不稳定，需要更小的学习率和更仔细的参数初始化策略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方式&lt;/strong&gt;：BN通过对每一批数据的每个特征进行标准化（确保输入层的均值为0，方差为1），减少了内部协变量偏移，使得网络能够使用更高的学习率，加速训练过程。而LN通过对单个数据样本的所有特征进行标准化，也可以减少这种偏移，特别是在RNN和Transformer等模型中效果显著。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. 梯度消失/梯度爆炸（Vanishing/Exploding Gradients）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：在深层网络中，梯度可能随着传播逐渐变小（消失）或变得非常大（爆炸），这使得网络难以训练。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方式&lt;/strong&gt;：通过归一化处理，BN和LN可以在一定程度上缓解梯度消失或爆炸的问题，因为它们保证了网络中每一层的输入分布的一致性，从而有助于维持梯度的稳定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 训练过程中的参数敏感性和不稳定性&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：深度网络中的参数更新可能会对后续层产生放大的效应，导致训练过程中的不稳定性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方式&lt;/strong&gt;：BN和LN通过对激活进行标准化，减少了单个参数变化对整个网络的影响，从而增强了模型的稳定性，使得网络对参数初始化的敏感度降低。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4. 过拟合（Overfitting）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;问题&lt;/strong&gt;：深度网络可能会过度学习训练数据中的细节，从而导致在未见过的数据上表现不佳。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;解决方式&lt;/strong&gt;：虽然BN和LN的主要目标不是解决过拟合问题，但它们引入的轻微噪声（比如BN中来自小批量统计的噪声）可以带来轻微的正则化效果，有助于减少过拟合。不过，过拟合通常还需要通过其他正则化技术（如Dropout、权重衰减等）来更有效地控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;批量归一化batch-normalization-bn&#34;&gt;批量归一化（Batch Normalization, BN）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;归一化对象&lt;/strong&gt;：BN是对同一层内不同样本的同一特征进行归一化。具体来说，对于给定的一批数据，BN分别计算这批数据在每个特征维度上的均值和方差，然后使用这些统计信息来标准化每个样本的每个特征。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：BN通常用在卷积层或全连接层之后，激活函数之前。它在批量较大时表现较好，因为均值和方差的估计更为稳定。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;依赖批量大小&lt;/strong&gt;：BN的性能依赖于批量的大小，当批量大小很小时，BN的性能可能会受到影响，因为均值和方差的估计会变得不准确。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;层归一化layer-normalization-ln&#34;&gt;层归一化（Layer Normalization, LN）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;归一化对象&lt;/strong&gt;：LN是对同一样本内不同特征进行归一化。对于单个样本，LN计算所有特征的均值和方差，然后使用这些统计信息来标准化该样本的所有特征。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：LN不依赖于批量的大小，因此特别适用于批量大小较小或动态变化的情况，如自然语言处理中的循环神经网络（RNN）和Transformer模型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;独立于批量大小&lt;/strong&gt;：由于LN是在样本级别上进行的，因此它的性能不受批量大小的影响，这使得LN在批量大小受限或变化较大的应用场景中更为有用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在网络中的实现&#34;&gt;在网络中的实现：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;批量归一化（BN）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BN层通常置于卷积层（Convolutional Layer）或全连接层（Fully Connected Layer）之后，激活函数（如ReLU）之前。&lt;/li&gt;
+&lt;li&gt;在PyTorch中，BN可以通过&lt;code&gt;torch.nn.BatchNorm2d&lt;/code&gt;（对于2D卷积层）或&lt;code&gt;torch.nn.BatchNorm1d&lt;/code&gt;（对于全连接层）来实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;层归一化（LN）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LN层可以应用于网络中几乎任何地方，但在某些架构（如Transformer模型）中，它通常在每个子层的输出上使用，并在激活函数之前应用。&lt;/li&gt;
+&lt;li&gt;在PyTorch中，LN可以通过&lt;code&gt;torch.nn.LayerNorm&lt;/code&gt;来实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;示例代码pytorch&#34;&gt;示例代码（PyTorch）：&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;对于批量归一化&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch.nn as nn
+
+class MyModel(nn.Module):
+    def __init__(self):
+        super(MyModel, self).__init__()
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=20, kernel_size=5)
+        self.bn1 = nn.BatchNorm2d(num_features=20)
+        self.relu = nn.ReLU()
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu(x)
+        return x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;对于层归一化&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class MyModel(nn.Module):
+    def __init__(self):
+        super(MyModel, self).__init__()
+        self.linear1 = nn.Linear(in_features=10, out_features=20)
+        self.ln1 = nn.LayerNorm([20])
+        self.relu = nn.ReLU()
+
+    def forward(self, x):
+        x = self.linear1(x)
+        x = self.ln1(x)
+        x = self.relu(x)
+        return x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;拓展&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;批量归一化与dropout的关系&#34;&gt;批量归一化与Dropout的关系&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dropout&lt;/strong&gt;：是一种正则化技术，通过在训练过程中随机“丢弃”一部分神经元（即将它们的输出设置为0）来防止模型过拟合。这种随机性有助于使模型更加健壮，减少对特定训练样本的依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;批量归一化&lt;/strong&gt;：主要用于加速训练和提高训练过程的稳定性，虽然有时也能起到轻微的正则化效果，但并不是其主要目的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在使用批量归一化后，有些研究和实践经验表明，可能不那么需要依赖Dropout来防止过拟合，因为批量归一化本身就引入了一定的噪声（由于每个小批量的均值和方差的估计），这可能有助于正则化模型。此外，批量归一化使得网络能够使用更高的学习率，从而加速训练，而Dropout可能会降低训练速度。&lt;/p&gt;
+&lt;p&gt;尽管批量归一化和Dropout可以共存于同一个网络中，但在实际应用中，根据具体任务和网络结构的不同，可能会选择调整它们的使用。有时，为了简化模型并减少计算开销，如果批量归一化足以稳定训练并防止过拟合，就可能不使用Dropout。反之，在一些情况下，特别是在批量归一化不足以完全防止过拟合的情况下，仍然可以使用Dropout作为额外的正则化手段。实际操作中，这通常需要通过实验来确定最佳的策略。&lt;/p&gt;
 &lt;h1 id=&#34;分类和回归&#34;&gt;分类和回归&lt;/h1&gt;
 &lt;p&gt;本质都是对输入值进行预测的问题，分类输出离散的、对预测类别的置信度，回归输出连续的预测值&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/shuiyixin/article/details/88816416&#34;&gt;【机器学习小常识】“分类” 与 “回归”的概念及区别详解&lt;/a&gt;&lt;br&gt;
@@ -3955,7 +4055,8 @@ Bash是Shell的一种&lt;/p&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/ml-he-fang-fa-he-han-shu&#34;&gt;【ML】核方法和核函数&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/te-zheng-jiang-wei&#34;&gt;【ML】特征降维&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;dl&#34;&gt;DL&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi&#34;&gt;【DL】强化学习&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou&#34;&gt;【DL】深度学习的一般步骤&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi&#34;&gt;【DL】强化学习&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-shen-du-sheng-cheng-mo-xing&#34;&gt;【DL】深度生成模型&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-transformer&#34;&gt;【DL】Transformer&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-mo-xing-fu-yong&#34;&gt;【DL】模型复用&lt;/a&gt;&lt;/p&gt;
@@ -4361,8 +4462,88 @@ SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索�
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/66021413&#34;&gt;快速搞定 epoch, batch, iteration&lt;/a&gt;&lt;br&gt;
+          &lt;p&gt;&lt;a href=&#34;https://pytorch.org/&#34;&gt;pyTorch 英文官网&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.pytorch123.com/&#34;&gt;pyTorch 教程中文&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.w3cschool.cn/pytorch/&#34;&gt;pyTorch w3cschool&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_53904578/article/details/124414068?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166971072916800184193705%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=166971072916800184193705&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-124414068-null-null.142%5Ev67%5Econtrol,201%5Ev3%5Econtrol_2,213%5Ev2%5Et3_esquery_v2&amp;amp;utm_term=%E6%95%B0%E6%8D%AE%E9%9B%86&amp;amp;spm=1018.2226.3001.4187&#34;&gt;深度学习数据集汇总&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://link.zhihu.com/?target=http%3A//playground.tensorflow.org&#34;&gt;深度学习模拟网站，可观察参数变化对训练的影响&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用PyTorch进行深度学习的一般步骤可以概括为以下几个主要阶段：&lt;/p&gt;
+&lt;h3 id=&#34;1-准备数据集&#34;&gt;1. 准备数据集&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加载数据&lt;/strong&gt;：使用PyTorch的&lt;code&gt;torch.utils.data.Dataset&lt;/code&gt;和&lt;code&gt;torch.utils.data.DataLoader&lt;/code&gt;来加载和准备数据集，可能包括数据的预处理、增强等操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-构建模型&#34;&gt;2. 构建模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义模型结构&lt;/strong&gt;：继承&lt;code&gt;torch.nn.Module&lt;/code&gt;类来定义自己的模型，实现&lt;code&gt;__init__&lt;/code&gt;方法来定义模型的层，实现&lt;code&gt;forward&lt;/code&gt;方法来指定数据的前向传递路径。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-定义损失函数和优化器&#34;&gt;3. 定义损失函数和优化器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;选择损失函数&lt;/strong&gt;：根据任务（如分类、回归等）选择合适的损失函数，如&lt;code&gt;torch.nn.CrossEntropyLoss&lt;/code&gt;用于分类任务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择优化器&lt;/strong&gt;：选择一个优化算法来更新模型的参数，如&lt;code&gt;torch.optim.Adam&lt;/code&gt;、&lt;code&gt;torch.optim.SGD&lt;/code&gt;等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-训练模型&#34;&gt;4. 训练模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;训练循环&lt;/strong&gt;：编写训练循环，其中包括前向传播、损失计算、反向传播和参数更新。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型评估&lt;/strong&gt;：定期在验证集上评估模型，监控指标如准确率、损失等，以防止过拟合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-测试模型&#34;&gt;5. 测试模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;评估模式&lt;/strong&gt;：将模型设置为评估模式（&lt;code&gt;model.eval()&lt;/code&gt;），以禁用特定于训练的操作，如Dropout。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能评估&lt;/strong&gt;：在测试集上评估模型性能，通常使用指标如准确率、精确率、召回率等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-保存和加载模型&#34;&gt;6. 保存和加载模型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;保存模型&lt;/strong&gt;：使用&lt;code&gt;torch.save&lt;/code&gt;保存模型的参数或整个模型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载模型&lt;/strong&gt;：使用&lt;code&gt;torch.load&lt;/code&gt;加载模型参数或整个模型，用于推理或继续训练。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;示例代码&#34;&gt;示例代码&lt;/h3&gt;
+&lt;p&gt;以下是一个简化的示例，展示了这些步骤的基本结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
+import torch.nn as nn
+import torch.optim as optim
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+
+# 1. 准备数据集
+transform = transforms.Compose([transforms.ToTensor()])
+train_dataset = datasets.MNIST(root=&#39;./data&#39;, train=True, download=True, transform=transform)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+
+# 2. 构建模型
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(28*28, 500)
+        self.fc2 = nn.Linear(500, 10)
+
+    def forward(self, x):
+        x = x.view(-1, 28*28)
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+model = Net()
+
+# 3. 定义损失函数和优化器
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters())
+
+# 4. 训练模型
+for epoch in range(10):  # loop over the dataset multiple times
+    for data, target in train_loader:
+        optimizer.zero_grad()  # zero the parameter gradients
+        output = model(data)  # forward pass
+        loss = criterion(output, target)  # compute loss
+        loss.backward()  # backward pass
+        optimizer.step()  # update parameters
+
+print(&#39;Finished Training&#39;)
+
+# 5. 保存模型
+torch.save(model.state_dict(), &#39;model.pth&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个例子展示了使用PyTorch进行深度学习项目的基本框架，包括数据准备、模型定义、训练和保存模型等步骤。实际项目中可能需要添加额外的步骤，如更复杂的数据预处理、更细致的训练过程控制、模型评估和调参等。&lt;/p&gt;
+&lt;p&gt;在使用像PyTorch这样的深度学习框架时，反向传播（计算梯度并更新模型参数的过程）通常是写在训练循环中，而不是直接写在模型类中。这是因为反向传播和参数更新是训练过程的一部分，而模型类主要负责定义前向传播的逻辑。&lt;/p&gt;
 ">【DL】深度学习的一般步骤</a>
       </div>
       
@@ -7737,10 +7918,6 @@ G M K之间进位为 1024&lt;/p&gt;
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cnn-juan-ji-shen-jing-wang-luo/"" data-c="
           &lt;p&gt;Convolutional Neural Network&lt;br&gt;
-&lt;a href=&#34;https://pytorch.org/&#34;&gt;pyTorch 英文官网&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.pytorch123.com/&#34;&gt;pyTorch 教程中文&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.w3cschool.cn/pytorch/&#34;&gt;pyTorch w3cschool&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/qq_53904578/article/details/124414068?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166971072916800184193705%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=166971072916800184193705&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-124414068-null-null.142%5Ev67%5Econtrol,201%5Ev3%5Econtrol_2,213%5Ev2%5Et3_esquery_v2&amp;amp;utm_term=%E6%95%B0%E6%8D%AE%E9%9B%86&amp;amp;spm=1018.2226.3001.4187&#34;&gt;深度学习数据集汇总&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.cnblogs.com/hotsnow/p/9734375.html&#34;&gt;常见的 CNN&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/47184529&#34;&gt;文档&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/mvtechnology/article/details/9008499&#34;&gt;图像的通道数&lt;/a&gt;&lt;br&gt;
@@ -7782,10 +7959,8 @@ Max Pooling：扫描一定区域，选择区域中的最大值（提取最有用
 &lt;p&gt;网络结构：&lt;br&gt;
 卷积（CONV）后面接着 RELU 激活函数，两层该结构，一层池化，重复累加&lt;/p&gt;
 &lt;p&gt;从池化层进入全连接层前，需要先把三维的数据转化为一维的向量&lt;/p&gt;
-&lt;p&gt;LeNet&lt;/p&gt;
 &lt;p&gt;残差神经网络 Resnet&lt;br&gt;
 随着 CNN 层数不断增加，效果不一定会越来越好，是为什么呢？因为某一层可能会效果不好，影响了总体的特征提取效果。Resnet 将其中效果不好的层的权重设置为 0 ，只保留对整体效果有益的层数，从而保证了，层数越多，深度越深，学习效果越好。不过提升程度可能很细微，但是总有提升。&lt;/p&gt;
-&lt;p&gt;迁移学习&lt;/p&gt;
 &lt;h1 id=&#34;代码&#34;&gt;代码&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;http://c.biancheng.net/pillow/&#34;&gt;Pillow（PIL） 库：python 图像处理库&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_34714751/article/details/85610804&#34;&gt;tf 实现 CNN&lt;/a&gt;&lt;/p&gt;
@@ -7870,8 +8045,87 @@ print(outputSize,&#39;\n&#39;)
 &lt;/ol&gt;
 &lt;p&gt;两层卷积两层池化，卷积池化之间使用 Sigmoid 激活，最后使用全连接层映射到 10 个分类&lt;/p&gt;
 &lt;h2 id=&#34;alexnet&#34;&gt;AlexNet&lt;/h2&gt;
+&lt;p&gt;AlexNet 在2012年的ImageNet大规模视觉识别挑战（ILSVRC）中取得了冠军。&lt;br&gt;
+相比 LeNet，AlexNet 增加了以下部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;dropout 层&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用最大池化层&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sigmoid 换成 ReLU&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用了数据增强&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710595577423.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+AlexNet的结构大致可以分为以下几个关键部分：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输入层&lt;/strong&gt;：AlexNet接受的输入图像大小为227x227x3（宽x高x颜色通道），原论文中提到的是224x224x3，但实际实现时通常使用227x227x3，以适应网络中的卷积层。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;卷积层&lt;/strong&gt;：AlexNet 包含5个卷积层，其中一些卷积层后面跟有最大池化层。这些卷积层用于提取图像中的特征。第一层使用96个大小为11x11的卷积核，步长为4；第二层使用256个5x5的卷积核，其余层则逐渐减少卷积核的尺寸并增加卷积核的数量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;激活函数&lt;/strong&gt;：AlexNet中引入了ReLU（Rectified Linear Unit）作为激活函数，以增加非线性特性并加速训练过程。在每个卷积层和全连接层后都应用了ReLU。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;池化层&lt;/strong&gt;：使用了3层最大池化层，降低特征的空间维度，减少计算量，并在一定程度上提供平移不变性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;规范化层&lt;/strong&gt;：AlexNet在某些卷积层之后引入了局部响应规范化（LRN），这有助于提高泛化能力。但在后来的网络设计中，LRN并不常见，因为被发现效果不如Batch Normalization。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全连接层&lt;/strong&gt;：AlexNet的顶部有三个全连接层，每个层都有4096个神经元，最后一个全连接层输出1000个类别的得分，对应于1000个不同的图像类别。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dropout&lt;/strong&gt;：在全连接层中，AlexNet使用了Dropout技术来防止模型过拟合。Dropout会在训练过程中随机丢弃一部分神经元，减少神经元之间复杂的共适应关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输出层&lt;/strong&gt;：使用softmax层作为输出层，将神经网络的输出转换为概率分布，这些概率表示图像属于每个类别的可能性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;AlexNet的成功不仅因为它的网络结构，还因为它使用了多GPU训练和数据增强等技术，显著提高了训练速度和模型的泛化能力。&lt;/p&gt;
 &lt;h2 id=&#34;vggnet&#34;&gt;VGGNet&lt;/h2&gt;
+&lt;p&gt;最初是由牛津大学的视觉几何组（Visual Geometry Group，即VGG）开发的，用于参加2014年的 ImageNet 挑战赛。VGGNet 的关键特点在于其使用了非常深的网络结构来提高图像识别的准确性。&lt;/p&gt;
+&lt;p&gt;VGGNet 有几个版本，其中最著名的 是VGG16 和 VGG19，数字代表网络中的层数。VGG16 包含16层，VGG19 则包含19层。这些层数主要是卷积层和全连接层。&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710596398916.jpeg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+采用统一的小卷积核（3x3），并通过堆叠多个小卷积层来增加网络的深度和容量，比大卷积核效果更好，提取的特征更细致。&lt;/p&gt;
+&lt;p&gt;VGG块：图中①就是一个VGG块，包含多层卷积和一个 ReLU 函数&lt;/p&gt;
+&lt;p&gt;VGGNet 的架构特点包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;统一的卷积层设计&lt;/strong&gt;：VGGNet使用了3x3的小卷积核和1x1的卷积步长，并且在每个卷积层后面使用了 ReLU 激活函数。这种设计使得网络在保持感受野大小的同时能够更深。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;池化层&lt;/strong&gt;：在连续的卷积层之后，VGGNet 使用最大池化层来逐渐减少特征图的空间尺寸，增加特征的抽象程度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全连接层&lt;/strong&gt;：在卷积层和池化层之后，VGGNet 包含了三个全连接层，最后一层是用于分类的 softmax 层。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;深度&lt;/strong&gt;：VGGNet 的深度（即层数）是其最显著的特征之一，这使得网络能够学习到更复杂和抽象的特征表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;VGGNet由于其简单和高效的架构，在图像识别领域获得了广泛的应用，包括图像分类、面部识别和风格迁移等。尽管它的参数量比较大，导致模型较为庞大且计算密集，但它仍然是深度学习和计算机视觉领域的一个重要基准。&lt;/p&gt;
 &lt;h2 id=&#34;resnet&#34;&gt;ResNet&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1bV41177ap/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;29 残差网络 ResNet【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;拓展&#34;&gt;拓展&lt;/h1&gt;
+&lt;h2 id=&#34;1x1的卷积核有什么用&#34;&gt;1x1的卷积核有什么用？&lt;/h2&gt;
+&lt;p&gt;虽然在空间尺寸上看起来似乎不会对特征图的空间结构产生影响，但实际上它在深度学习中有几个非常有用的作用：&lt;/p&gt;
+&lt;h3 id=&#34;通道数变换&#34;&gt;通道数变换&lt;/h3&gt;
+&lt;p&gt;1x1卷积可以改变特征图的通道数。这对于控制网络的复杂性和参数数量非常有用。例如，可以用它来减少特征图的通道数，从而减少后续层的计算量和参数量（这种操作有时被称为“瓶颈层”），或者增加通道数以提供更丰富的特征表示。&lt;/p&gt;
+&lt;h3 id=&#34;增强非线性&#34;&gt;增强非线性&lt;/h3&gt;
+&lt;p&gt;尽管1x1卷积本身是线性的，但在1x1卷积层之后添加非线性激活函数（如ReLU）可以引入额外的非线性，使网络能够学习更复杂的函数。&lt;/p&gt;
+&lt;h3 id=&#34;跨通道信息整合&#34;&gt;跨通道信息整合&lt;/h3&gt;
+&lt;p&gt;1x1卷积可以实现特征图不同通道之间的信息整合。由于1x1卷积核作用于特征图的所有通道，它可以学习将不同通道的信息组合在一起的新方式，这有助于网络捕捉跨通道的特征依赖。&lt;/p&gt;
+&lt;h3 id=&#34;计算效率&#34;&gt;计算效率&lt;/h3&gt;
+&lt;p&gt;1x1卷积相对于更大卷积核的卷积操作要更加计算高效。它们可以用来设计更深但计算量不那么大的网络架构，特别是在处理具有大量通道的特征图时。&lt;/p&gt;
+&lt;h3 id=&#34;网络中的调节阀&#34;&gt;网络中的“调节阀”&lt;/h3&gt;
+&lt;p&gt;在一些复杂的网络结构中（如Inception模块），1x1卷积被用作调节阀，以控制不同路径上的参数量和计算复杂度。&lt;/p&gt;
+&lt;p&gt;综上所述，1x1卷积是一个非常强大的工具，它提供了一种简单而有效的方式来增加网络的深度和复杂性，同时控制计算和参数的增长，是现代深度学习架构中不可或缺的一个组件。&lt;/p&gt;
 ">【CV】CNN 卷积神经网络</a>
       </div>
       
