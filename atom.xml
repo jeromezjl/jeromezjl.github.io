@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-16T15:33:18.832Z</updated>
+    <updated>2024-03-22T10:19:37.689Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -11,13 +11,149 @@
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Jerome</rights>
     <entry>
+        <title type="html"><![CDATA[【DL】图神经网络]]></title>
+        <id>https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/</id>
+        <link href="https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/">
+        </link>
+        <updated>2024-03-22T09:53:55.000Z</updated>
+        <content type="html"><![CDATA[<p>图神经网络（Graph Neural Networks，GNNs）是一类专门处理图结构数据的神经网络。在图结构数据中，数据以图的形式表示，由节点（nodes）和边（edges）组成，非常适合描述物体（或实体）及其间的复杂关系。图神经网络通过直接在图上进行操作，能够有效地捕捉这种结构信息，因此在社交网络分析、推荐系统、蛋白质结构预测、化学分子建模等领域得到了广泛应用。</p>
+<h3 id="核心思想">核心思想</h3>
+<p>GNN的核心思想是节点表示的更新，这通过聚合来自邻居节点的信息来实现。每个节点的表示都是通过考虑其邻居节点的特征（以及可能的边的特征）进行更新的，这个过程可以迭代进行，直到达到一个稳定状态或者预定的迭代次数。这种信息的聚合方式使得每个节点能够捕捉到其在图中的局部结构信息。</p>
+<h3 id="关键组件">关键组件</h3>
+<ol>
+<li><strong>节点表示</strong>：GNN的起点是节点的特征表示，这可以是节点的初始属性，也可以是节点的嵌入向量。</li>
+<li><strong>聚合函数</strong>：用于聚合邻居节点信息的函数，这一步是GNN的核心。不同的GNN变体（如GCN、GAT等）在聚合函数的选择和设计上有所不同。</li>
+<li><strong>更新函数</strong>：用于更新节点表示的函数。在每一次迭代中，节点的表示都会根据聚合的邻居信息进行更新。</li>
+</ol>
+<h3 id="gnn的变体">GNN的变体</h3>
+<p>GNN有多种变体，主要包括：</p>
+<ul>
+<li><strong>图卷积网络（Graph Convolutional Networks, GCNs）</strong>：通过将卷积的概念推广到图上，对节点的特征进行聚合，从而更新节点的状态。</li>
+<li><strong>图注意力网络（Graph Attention Networks, GATs）</strong>：引入了注意力机制来动态地确定在聚合邻居节点信息时每个邻居的重要性。</li>
+<li><strong>图自编码器（Graph Autoencoders, GAEs）</strong>：用于学习图数据的低维表示，通常用于无监督学习任务。</li>
+<li><strong>图生成网络（Graph Generative Networks, GGNs）</strong>：能够生成新的图结构数据，用于药物设计、蛋白质设计等领域。</li>
+</ul>
+<h3 id="应用">应用</h3>
+<p>GNN在多个领域都有广泛应用，例如：</p>
+<ul>
+<li><strong>社交网络分析</strong>：通过分析社交网络中个体的关系图，进行好友推荐、信息传播分析等。</li>
+<li><strong>推荐系统</strong>：利用用户和物品之间的复杂关系进行更精准的推荐。</li>
+<li><strong>生物信息学</strong>：在蛋白质结构预测、基因表达数据分析等领域有着重要应用。</li>
+<li><strong>化学和材料科学</strong>：用于预测分子的性质、设计新的化合物等。</li>
+</ul>
+<p>GNN由于能够直接在图结构数据上操作，捕捉复杂的关系和依赖，因此在处理此类数据时比传统的神经网络模型有着明显的优势。随着研究的深入和技术的发展，GNN在更多领域的应用也在不断拓展。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 面试]]></title>
+        <id>https://jeromezjl.github.io/post/ai-mian-shi/</id>
+        <link href="https://jeromezjl.github.io/post/ai-mian-shi/">
+        </link>
+        <updated>2024-03-21T06:09:17.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>
+<p>请简要解释分类和回归的区别。<br>
+分类输出离散的类别，回归输出连续的值</p>
+</li>
+<li>
+<p>您能列举一些常用的分类算法吗？请简要说明它们的工作原理。<br>
+逻辑回归、决策树、随机森林、SVM、KNN、朴素贝叶斯、梯度提升决策树 (Gradient Boosted Decision Trees, GBDT)、CNN等</p>
+</li>
+<li>
+<p>同样地，您能列举一些常用的回归算法吗？请简要说明它们的工作原理。<br>
+线性回归、岭回归、SVM、KNN、SGD、贝叶斯、高斯过程</p>
+</li>
+<li>
+<p>既可以用于分类又可以回归的算法？<br>
+决策树、随机森林、SVM、KNN、梯度提升决策树 (Gradient Boosted Decision Trees, GBDT)、CNN等</p>
+</li>
+<li>
+<p>在分类问题中，如何评估模型的性能？您能解释准确率、召回率、F1分数等指标吗？</p>
+</li>
+<li>
+<p>在回归问题中，如何评估模型的性能？您能解释均方误差、均方根误差、决定系数等指标吗？</p>
+</li>
+<li>
+<p>过拟合和欠拟合是什么？如何避免这两种情况？</p>
+</li>
+<li>
+<p>在分类或回归任务中，如何处理不平衡数据集？<br>
+处理不平衡数据集是机器学习中的一个常见问题，特别是在分类任务中。不平衡数据集指的是数据集中不同类别的样本数量差异很大。这可能会导致模型对多数类别过拟合，而忽略少数类别。以下是一些常用的方法来处理不平衡数据集：</p>
+</li>
+</ol>
+<h3 id="1-重新采样技术">1. <strong>重新采样技术</strong>:</h3>
+<ul>
+<li><strong>过采样少数类</strong>: 通过复制少数类样本或通过生成类似样本的方法（如SMOTE - 合成少数过采样技术）来增加少数类样本的数量。</li>
+<li><strong>欠采样多数类</strong>: 减少多数类样本的数量，以使多数类和少数类的样本数量大致相同。这可能导致信息丢失，应谨慎使用。</li>
+</ul>
+<h3 id="2-修改损失函数">2. <strong>修改损失函数</strong>:</h3>
+<ul>
+<li>为不同类别的样本引入不同的权重，使得模型在训练过程中更加关注少数类。这可以通过修改损失函数来实现，使得少数类样本的错误分类的代价更高。</li>
+</ul>
+<h3 id="3-使用集成方法">3. <strong>使用集成方法</strong>:</h3>
+<ul>
+<li>使用如随机森林、梯度提升树（GBT）等集成学习方法可以部分缓解不平衡数据带来的问题，因为它们通过构建多个模型并结合它们的预测结果来提高性能。</li>
+</ul>
+<h3 id="4-选择合适的评估指标">4. <strong>选择合适的评估指标</strong>:</h3>
+<ul>
+<li>在不平衡数据集上，准确度不再是一个好的性能指标。应该使用混淆矩阵、精确度、召回率、F1分数、ROC-AUC曲线等更复杂的指标来评估模型性能。</li>
+</ul>
+<h3 id="5-人工合成数据生成">5. <strong>人工合成数据生成</strong>:</h3>
+<ul>
+<li>使用算法如SMOTE（合成少数过采样技术）或ADASYN（自适应合成采样方法）等来合成新的少数类样本，以解决不平衡问题。</li>
+</ul>
+<h3 id="6-使用专门针对不平衡数据设计的算法">6. <strong>使用专门针对不平衡数据设计的算法</strong>:</h3>
+<ul>
+<li>一些算法如代价敏感学习（Cost-sensitive Learning）和异常检测算法在设计时考虑了不平衡数据的特点，可以直接应用于这类问题。</li>
+</ul>
+<h3 id="7-数据层面的策略">7. <strong>数据层面的策略</strong>:</h3>
+<ul>
+<li>收集更多数据，尤其是少数类的数据，有助于减少数据不平衡的问题，虽然这在实际中并不总是可行的。</li>
+</ul>
+<p>选择哪种方法取决于具体问题、数据集的特性以及可用资源。在实践中，经常需要尝试多种方法，并结合问题的具体情况来确定最有效的策略。</p>
+<ol start="5">
+<li>请解释特征选择和特征工程的重要性。</li>
+<li>在机器学习中，如何处理缺失数据和异常值？<br>
+请您根据自己的理解和经验回答这些问题，谢谢！</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【NLP】Seq2Seq | Beam Search]]></title>
+        <id>https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch/</id>
+        <link href="https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch/">
+        </link>
+        <updated>2024-03-19T12:15:20.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="seq2seq">Seq2Seq</h1>
+<p><a href="https://www.bilibili.com/video/BV16g411L7FG/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">62 序列到序列学习（seq2seq）【动手学深度学习v2】</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
+Transformer：Seq2Seq model with attention</p>
+<p>encoder-decoder 架构，使用的都是 RNN</p>
+<h1 id="beam-search-束搜索">Beam Search 束搜索</h1>
+<p>在选择softmax输出时，使用贪心算法（每次选择概率最大值）不一定能达到最优<br>
+每次搜索保存k个最好的候选。k=1 是贪心，k=n 是穷举</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[【CV】概述]]></title>
         <id>https://jeromezjl.github.io/post/cv-gai-shu/</id>
         <link href="https://jeromezjl.github.io/post/cv-gai-shu/">
         </link>
         <updated>2024-03-15T11:55:57.000Z</updated>
-        <content type="html"><![CDATA[<p>机器视觉领域包含多种任务，每种任务都旨在模拟或超越人类视觉系统的某些方面。以下是一些主要任务及其常用的算法：</p>
-<h3 id="1-图像分类-image-classification">1. 图像分类 (Image Classification)</h3>
+        <content type="html"><![CDATA[<p>机器视觉算法是计算机视觉领域的关键组成部分，它使计算机能够通过图像和视频数据理解世界。这些算法可以根据它们的功能和用途进行分类。以下是一些常见的分类方式：</p>
+<h3 id="1-图像处理算法">1. 图像处理算法</h3>
+<ul>
+<li><strong>预处理</strong>：包括去噪、对比度增强、颜色空间转换等。</li>
+<li><strong>滤波和锐化</strong>：用于改善图像质量或提取特定特征。</li>
+<li><strong>边缘检测</strong>：如Sobel、Canny算法，用于检测图像中的边缘。</li>
+</ul>
+<h3 id="2-特征提取算法">2. 特征提取算法</h3>
+<ul>
+<li><strong>角点检测</strong>：如Harris角点检测、Shi-Tomasi算法。</li>
+<li><strong>兴趣点检测</strong>：如SIFT（尺度不变特征变换）、SURF（加速稳健特征）。</li>
+<li><strong>特征描述子</strong>：如ORB（Oriented FAST and Rotated BRIEF）。</li>
+</ul>
+<h3 id="3-图像分类-image-classification">3. 图像分类 (Image Classification)</h3>
 <ul>
 <li><strong>任务说明</strong>：将整个图像分配给一个或多个类别。</li>
 <li><strong>常用算法</strong>：
@@ -32,7 +168,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-目标检测-object-detection">2. 目标检测 (Object Detection)</h3>
+<h3 id="4-目标检测与识别-object-detection">4. 目标检测与识别 (Object Detection)</h3>
 <ul>
 <li><strong>任务说明</strong>：在图像中识别物体的位置，并将每个物体分类。</li>
 <li><strong>常用算法</strong>：
@@ -43,8 +179,9 @@
 <li>RetinaNet</li>
 </ul>
 </li>
+<li><strong>目标识别</strong>：CNN 变体</li>
 </ul>
-<h3 id="3-图像分割-image-segmentation">3. 图像分割 (Image Segmentation)</h3>
+<h3 id="5-图像分割-image-segmentation">5. 图像分割 (Image Segmentation)</h3>
 <ul>
 <li><strong>任务说明</strong>：将图像分割成多个区域或对象，可以进一步细分为语义分割和实例分割。</li>
 <li><strong>常用算法</strong>：
@@ -57,7 +194,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-姿态估计-pose-estimation">4. 姿态估计 (Pose Estimation)</h3>
+<h3 id="6-姿态估计-pose-estimation">6. 姿态估计 (Pose Estimation)</h3>
 <ul>
 <li><strong>任务说明</strong>：估计图像中人或对象的姿态或关节位置。</li>
 <li><strong>常用算法</strong>：
@@ -69,7 +206,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="5-物体跟踪-object-tracking">5. 物体跟踪 (Object Tracking)</h3>
+<h3 id="7-物体跟踪-object-tracking">7. 物体跟踪 (Object Tracking)</h3>
 <ul>
 <li><strong>任务说明</strong>：在视频序列中跟踪一个或多个对象的运动。</li>
 <li><strong>常用算法</strong>：
@@ -79,7 +216,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="6-图像生成-image-generation">6. 图像生成 (Image Generation)</h3>
+<h3 id="8-图像生成-image-generation">8. 图像生成 (Image Generation)</h3>
 <ul>
 <li><strong>任务说明</strong>：从现有的图像或随机噪声生成新图像。</li>
 <li><strong>常用算法</strong>：
@@ -90,7 +227,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="7-图像恢复-image-restoration">7. 图像恢复 (Image Restoration)</h3>
+<h3 id="9-图像恢复-image-restoration">9. 图像恢复 (Image Restoration)</h3>
 <ul>
 <li><strong>任务说明</strong>：从损坏或降质的图像中恢复出清晰图像。</li>
 <li><strong>常用算法</strong>：
@@ -102,7 +239,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="8-3d重建-3d-reconstruction">8. 3D重建 (3D Reconstruction)</h3>
+<h3 id="10-3d重建-3d-reconstruction">10. 3D重建 (3D Reconstruction)</h3>
 <ul>
 <li><strong>任务说明</strong>：从一系列图像中重建出三维场景或对象的结构。</li>
 <li><strong>常用算法</strong>：
@@ -112,7 +249,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="9-行为分析-action-analysis">9. 行为分析 (Action Analysis)</h3>
+<h3 id="11-行为分析-action-analysis">11. 行为分析 (Action Analysis)</h3>
 <ul>
 <li><strong>任务说明</strong>：分析视频中的人或物体的行为，比如行人的行走路线、人群的动态等。</li>
 <li><strong>常用算法</strong>：
@@ -122,7 +259,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="10-视觉问答-visual-question-answering">10. 视觉问答 (Visual Question Answering)</h3>
+<h3 id="12-视觉问答-visual-question-answering">12. 视觉问答 (Visual Question Answering)</h3>
 <ul>
 <li><strong>任务说明</strong>：根据给定图像和自然语言问题提供答案。</li>
 <li><strong>常用算法</strong>：
@@ -134,8 +271,15 @@
 </ul>
 </li>
 </ul>
+<h3 id="13-优化和机器学习算法">13. 优化和机器学习算法</h3>
+<pre><code>- 用于提高识别准确率和效率的算法，如支持向量机（SVM）、随机森林、梯度提升决策树（GBDT）等。
+- 
+</code></pre>
 <p>这些任务和算法展示了机器视觉领域的广泛性和深度，随着研究的进展，还会不断有新</p>
 <p>的任务和算法被提出。</p>
+<h1 id="数据增强">数据增强</h1>
+<p>对图片进行翻转、裁剪、变色（颜色、亮度、饱和度）等操作<br>
+<a href="https://www.bilibili.com/video/BV17y4y1g76q/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">36 数据增广【动手学深度学习v2】</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -446,6 +590,8 @@
 </li>
 </ol>
 <p>这个流程不是一成不变的，具体的步骤和方法可能会根据具体的NLP任务、数据集、业务需求等因素有所不同。</p>
+<h1 id="评估指标">评估指标</h1>
+<p><a href="https://blog.csdn.net/ph12345687/article/details/130205151">NLP常见任务及评估指标</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -516,6 +662,7 @@
 <p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><munder><mi>max</mi><mo>⁡</mo><mi>a</mi></munder><munder><mo>∑</mo><mrow><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi></mrow></munder><mi>P</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo separator="true">,</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>[</mo><mi>r</mi><mo>+</mo><mi>γ</mi><mi>V</mi><mo>(</mo><msup><mi>s</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">V(s) = \max_a \sum_{s&#x27;, r} P(s&#x27;, r | s, a)[r + \gamma V(s&#x27;)]
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord mathdefault">s</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.480098em;vertical-align:-1.430093em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">a</span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8560149999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6828285714285715em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.430093em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">∣</span><span class="mord mathdefault">s</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
 <p>动态规划方法在理论上可以得到最优策略，但其应用受限于环境模型的已知性以及状态和动作空间的规模。当状态和动作空间非常大或环境模型未知时，直接应用动态规划变得不可行，这时通常会</p>
+<h2 id="马尔可夫">马尔可夫</h2>
 <h2 id="蒙特卡洛">蒙特卡洛</h2>
 <p>蒙特卡洛方法在强化学习中的应用提供了一种在不完全知道环境模型（即转移概率和奖励函数未知）的情况下学习最优策略的方法。与动态规划不同，蒙特卡洛（MC）方法不需要知道环境的具体动态，而是通过从环境中采样完成的序列（或称为“情节”）来学习。这些方法特别适用于具有高度不确定性或模型未知的环境。MC方法的关键特点是它们依赖于经验平均来估计值函数，这些平均值是从一系列完整情节中获得的。</p>
 <h3 id="mc策略评估">MC策略评估</h3>
@@ -528,6 +675,7 @@
 <p>然而，MC方法也有其局限性。首先，它们只适用于情节性任务，即那些有明确开始和结束的任务。其次，MC方法可能需要很多情节才能获得可靠的值估计，尤其是在回报信号稀疏或噪声很大的情境中。此外，MC方法只在情节结束时更新值函数和策略，这可能导致学习速度较慢。</p>
 <p>总的来说，蒙特卡洛方法在强化学习中提供了一种强大的工具，尤其是在那些模型未知或难以精确建模的情况下。通过适当的策略和技巧（如重要性采样）的改进，可以进一步增强MC方法的应用范围和效率。</p>
 <h2 id="时序差分法">时序差分法</h2>
+<h3 id="q-learning">Q-Learning</h3>
 ]]></content>
     </entry>
     <entry>
@@ -715,24 +863,43 @@ hardmax 是求一组数据中唯一的最大值，而 Softmax 是输出概率，
         <updated>2024-03-11T09:23:50.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1MY41137AK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【Transformer模型】曼妙动画轻松学，形象比喻贼好记</a><br>
 <a href="https://www.bilibili.com/video/BV1ih4y1J7rx/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">超强动画，一步一步深入浅出解释Transformer原理！</a><br>
+<a href="https://www.bilibili.com/video/BV1Kq4y1H7FL?p=1">68 Transformer【动手学深度学习v2】</a><br>
 <a href="https://zhuanlan.zhihu.com/p/338817680">Transformer模型详解（图解最完整版）</a><br>
+<a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a><br>
 <a href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Transformer论文逐段精读【论文精读】</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
 Transformer：Seq2Seq model with attention</p>
+<h1 id="结构介绍">结构介绍</h1>
+<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1710839949031.png" alt="" loading="lazy"></figure>
+<h2 id="attention">Attention</h2>
+<p><a href="https://www.bilibili.com/video/BV1264y1i7R1/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">64 注意力机制【动手学深度学习v2】</a><br>
+<a href="https://www.bilibili.com/video/BV1QW4y167iq/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">09 Transformer 之什么是注意力机制（Attention）</a><br>
+<a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a><br>
+和RNN的区别：RNN 是串行的，attention 是并行的。时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率</p>
+<p>Query，Key，Value 的概念取自于信息检索系统，举个简单的搜索的例子来说。当你在某电商平台搜索某件商品（年轻女士冬季穿的红色薄款羽绒服）时，你在搜索引擎上输入的内容便是 Query。<br>
+然后搜索引擎根据 Query 为你匹配 Key（例如商品的种类，颜色，描述等）。<br>
+然后根据 Query 和 Key 的<code>相似度</code>，用 softmax 选择概率最大的，将结果和V相乘，得到 Value 中最匹配的内容。</p>
+<p>相似度计算：QK 求内积（余弦相似度）</p>
+<p>多头注意力机制是指，有n个自注意力模块，每个自注意力模块都有 QKV 三个矩阵。多头注意力的作用可以类比多卷积核，为了更好的提取特征</p>
+<p>分为注意力、自注意力、带有mask的注意力<br>
+注意力：简单的 QKV<br>
+自注意力：QKV都来自于序列自己<br>
+带有mask的注意力：attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。</p>
+<h2 id="feed-forward">Feed Forward</h2>
+<p>全连接层</p>
+<h2 id="addnorm">Add&amp;Norm</h2>
+<p>Add 是一个残差块，和 ResNet 中的一样，使得网络能做很深<br>
+<img src="https://jeromezjl.github.io/post-images/1710840452631.png" alt="" loading="lazy"><br>
+为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好</p>
+<h2 id="encoder-decoder">encoder-decoder</h2>
+<p>encoder和decoder是一一对应的，且encoder的输出维度等于decoder的输入维度<br>
+编码器的输出，将其作为解码器中第二层注意力的 key 和 value，其 query 来自目标序列</p>
+<p>原文 encoder 和 decoder 都用了6个</p>
 <p><strong>思维导图</strong><br>
 <img src="https://jeromezjl.github.io/post-images/1686115237621.png" alt="" loading="lazy"><br>
 <img src="https://jeromezjl.github.io/post-images/1686115244889.png" alt="" loading="lazy"><br>
 <img src="https://jeromezjl.github.io/post-images/1686115251026.png" alt="" loading="lazy"><br>
 <img src="https://jeromezjl.github.io/post-images/1686115255439.png" alt="" loading="lazy"></p>
-<p>时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率</p>
-<p>Muti-head attention 多头注意力模拟了卷积神经网络多输出通道卷积核</p>
-<p>encoder 和 decoder 都用了6个</p>
-<p>为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好</p>
-<p>attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。</p>
-<h1 id="attention">Attention</h1>
-<p><a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a></p>
-<h1 id="transformer">Transformer</h1>
-<p><a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a></p>
 <h1 id="变体">变体</h1>
 <p>Transformer 模型自从在 &quot;Attention is All You Need&quot; 论文中被首次提出以来，已经孕育出许多变体，这些变体针对不同的应用场景和性能优化进行了设计。以下是一些比较著名的 Transformer 模型变体：</p>
 <ol>
@@ -767,350 +934,6 @@ Transformer：Seq2Seq model with attention</p>
 <p><strong>ViT (Vision Transformer)</strong>: 将 Transformer 应用于图像分类任务，通过将图像分割成多个小块（patches）并将它们作为序列输入到 Transformer 中，展示了 Transformer 架构在非NLP任务上的潜力。</p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DL】模型复用]]></title>
-        <id>https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/</id>
-        <link href="https://jeromezjl.github.io/post/dl-mo-xing-fu-yong/">
-        </link>
-        <updated>2024-03-10T08:51:41.000Z</updated>
-        <content type="html"><![CDATA[<p>模型复用，通常在机器学习和深度学习领域称为迁移学习（Transfer Learning），是一种非常有效的方法，可以将在一个任务上训练好的模型应用到另一个相关但不同的任务上。这种方法特别有用，因为从头开始训练一个复杂模型通常需要大量的计算资源和大量的标记数据，而这两者在很多情况下都是昂贵或难以获得的。</p>
-<h1 id="fine-tuning">Fine Tuning</h1>
-<h3 id="模型复用的基本思想">模型复用的基本思想</h3>
-<p>模型复用的核心思想是，对于不同但相关的任务，模型学习到的特征或知识在一定程度上是通用的。例如，一个在大型图像数据集（如ImageNet）上训练好的卷积神经网络（CNN）学会了识别各种视觉模式和结构，这些模式和结构对于其他视觉识别任务也是有用的。</p>
-<h3 id="迁移学习的主要步骤">迁移学习的主要步骤</h3>
-<ol>
-<li>
-<p><strong>预训练模型选择</strong>：选择一个与目标任务相似或相关领域的预训练模型。例如，对于图像识别任务，人们常用在ImageNet数据集上预训练的模型。</p>
-</li>
-<li>
-<p><strong>特征提取</strong>：使用预训练模型的一部分（通常是除最后一层之外的所有层）作为特征提取器。这些层已经学会了从输入数据中提取有用的特征。</p>
-</li>
-<li>
-<p><strong>微调</strong>：根据具体任务，可以对预训练模型的顶层或所有层进行微调。微调是通过在新的目标任务上继续训练模型来完成的，这通常需要较小的学习率，以避免破坏已经学到的特征表示。</p>
-</li>
-<li>
-<p><strong>冻结层</strong>：在微调过程中，可以选择冻结预训练模型的一部分，以保留在原始任务上学到的特征。通常，只有模型的一部分（如顶层）被解冻以进行微调。</p>
-</li>
-</ol>
-<h3 id="模型复用的优点">模型复用的优点</h3>
-<ul>
-<li><strong>数据需求降低</strong>：迁移学习允许使用较少的标记数据来训练模型，因为模型已经从预训练任务中学习了很多有用的特征。</li>
-<li><strong>训练时间缩短</strong>：由于模型不是从零开始训练，因此训练时间通常会大大缩短。</li>
-<li><strong>提高性能</strong>：迁移学习可以帮助提高模型在特定任务上的性能，尤其是当原始数据集非常大且多样时。</li>
-</ul>
-<h3 id="应用场景">应用场景</h3>
-<p>迁移学习在许多领域都有应用，包括但不限于图像识别、自然语言处理（NLP）、语音识别和增强现实等。在NLP中，预训练的语言模型如BERT和GPT系列已经成为许多下游任务的基础。</p>
-<p>模型复用利用了已有知识，可以加速模型的开发过程，并提高模型在特定任务上的表现，尤其是在数据有限的情况下。</p>
-<h1 id="model-ensemble">Model Ensemble</h1>
-<p>将多个小模型结合起来解决不同的问题并实现模型复用，通常涉及到模型集成和多任务学习的策略。这些方法允许模型共享知识，并提高整体性能，特别是在数据稀缺或每个单独任务的数据不足以训练一个复杂模型的情况下。</p>
-<h3 id="模型集成model-ensemble">模型集成（Model Ensemble）</h3>
-<p>模型集成涉及到将多个模型的预测结果结合起来，以提高整体的预测性能。这些模型可以是针对同一个任务的不同模型，也可以是针对不同任务的模型。集成方法包括但不限于：</p>
-<ol>
-<li><strong>简单平均（Simple Averaging）</strong>：对所有模型的预测结果进行算术平均。</li>
-<li><strong>加权平均（Weighted Averaging）</strong>：根据每个模型的性能给予不同的权重，然后进行加权平均。</li>
-<li><strong>投票法（Voting）</strong>：对于分类问题，每个模型为每个类别投票，最终决策基于最多投票的类别。</li>
-<li><strong>堆叠（Stacking）</strong>：在堆叠方法中，多个模型的预测结果被用作另一个模型（称为元学习器或二级模型）的输入，以进行最终预测。</li>
-</ol>
-<h3 id="多任务学习multi-task-learning">多任务学习（Multi-task Learning）</h3>
-<p>多任务学习是一种同时解决多个相关任务的方法，通过共享底层表示，这种方法可以提高各个任务的学习效率和预测性能。多任务学习的关键在于找到一种方式让模型的不同部分专注于不同的任务：</p>
-<ol>
-<li>
-<p><strong>共享底层</strong>：在这种方法中，模型的底层（例如，神经网络的前几层）被多个任务共享，而顶层被设计为任务特定的层。这允许模型学习到可以跨多个任务通用的特征或表示。</p>
-</li>
-<li>
-<p><strong>软参数共享</strong>：在软参数共享中，不同任务的模型有自己的参数，但是这些参数之间通过某种方式（如正则化）相互约束，以鼓励它们学到相似的表示。</p>
-</li>
-<li>
-<p><strong>任务特定的分支</strong>：在这种结构中，模型从一个共享层分叉出多个分支，每个分支负责不同的任务。这种方法在多模态学习和多任务学习中尤其常见，其中不同的输入类型或不同的任务要求模型有不同的处理分支。</p>
-</li>
-</ol>
-<h3 id="模型复用策略">模型复用策略</h3>
-<ol>
-<li>
-<p><strong>预训练和微调</strong>：可以通过在一个通用任务上预训练模型，然后在特定任务上微调模型的某些层来实现模型复用。这在自然语言处理和图像处理领域尤为常见。</p>
-</li>
-<li>
-<p><strong>特征提取</strong>：利用预训练模型作为特征提取器，提取的特征可以用于不同任务的模型训练中。</p>
-</li>
-<li>
-<p><strong>模型蒸馏（Model Distillation）</strong>：通过模型蒸馏，可以将一个大型模型的知识转移到多个小型模型中。这些小型模型可以针对不同的任务进行优化，同时保持较小的模型大小和更快的推理速度。</p>
-</li>
-</ol>
-<p>将多个小模型结合起来解决不同的问题，需要仔细考虑每个模型的输出如何能为其他任务提供有价值的信息，以及如何在不同模型间高效地共享知识。这通常需要对任务之间</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ML】分类和回归]]></title>
-        <id>https://jeromezjl.github.io/post/fen-lei-he-hui-gui/</id>
-        <link href="https://jeromezjl.github.io/post/fen-lei-he-hui-gui/">
-        </link>
-        <updated>2024-03-10T07:54:20.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="分类">分类</h1>
-<ul>
-<li><strong>目标变量</strong>：分类任务中的目标变量是离散的，也就是说，它将输入数据映射到预定义的类别或标签中。这些类别通常是有限的且不连续的。</li>
-<li><strong>应用场景</strong>：邮件是否为垃圾邮件、图像中是否含有特定物体、患者是否患有某种疾病等。</li>
-<li><strong>常用算法</strong>：
-<ul>
-<li>决策树（如CART, ID3, C4.5）</li>
-<li>支持向量机（SVM）</li>
-<li>逻辑回归</li>
-<li>K最近邻（KNN）</li>
-<li>随机森林</li>
-<li>梯度提升决策树（如XGBoost, LightGBM, CatBoost）</li>
-<li>神经网络</li>
-</ul>
-</li>
-</ul>
-<h1 id="回归">回归</h1>
-<ul>
-<li><strong>目标变量</strong>：回归任务中的目标变量是连续的数值。模型的目的是预测出一个具体的数值。</li>
-<li><strong>应用场景</strong>：房价预测、股票价格预测、温度预测等。</li>
-<li><strong>常用算法</strong>：
-<ul>
-<li>线性回归</li>
-<li>多项式回归</li>
-<li>决策树回归</li>
-<li>支持向量回归（SVR）</li>
-<li>随机森林回归</li>
-<li>梯度提升决策树回归（如XGBoost, LightGBM）</li>
-<li>神经网络</li>
-</ul>
-</li>
-</ul>
-<h1 id="主要区别">主要区别</h1>
-<ul>
-<li><strong>输出类型</strong>：分类是预测离散标签，而回归是预测连续数值。</li>
-<li><strong>评估标准</strong>：分类任务通常使用准确率、精确度、召回率、F1分数等指标进行评估；回归任务则常用均方误差（MSE）、均方根误差（RMSE）、平均绝对误差（MAE）等指标。</li>
-<li><strong>决策边界</strong>：分类任务通常涉及到找到决策边界来区分不同的类别；回归任务则是找到一个最佳拟合线或曲面来预测连续值。</li>
-</ul>
-<h1 id="主要联系">主要联系</h1>
-<ul>
-<li><strong>监督学习</strong>：无论是分类还是回归，它们都属于监督学习范畴，这意味着它们都使用已标注的训练数据来学习输入和输出之间的映射关系。</li>
-<li><strong>模型构建与预测</strong>：分类和回归都涉及到使用训练数据构建模型，并使用这些模型来对新的、未见过的数据进行预测。</li>
-<li><strong>损失函数</strong>：两者都通过最小化损失函数来训练模型。虽然使用的具体损失函数可能不同（如分类通常使用交叉熵损失，回归通常使用均方误差损失），但最小化损失函数的基本思想是一致的。</li>
-</ul>
-<h3 id="从回归到分类的转变">从回归到分类的转变</h3>
-<ul>
-<li>在某些情况下，可以通过引入阈值将回归问题转化为分类问题。例如，在一个二元分类问题中，模型的输出可以是一个连续的概率值，当这个概率值超过某个阈值时，可以将其视为一个类别，否则视为另一个类别。</li>
-</ul>
-<h3 id="从分类到回归的转变">从分类到回归的转变</h3>
-<ul>
-<li>在某些情况下，分类问题也可以转换为回归问题，特别是当类别之间存在天然顺序（有序分类）时。通过预测一个连续的数值并将其映射到最接近的类别，可以处理这类问题。</li>
-</ul>
-<p>总的来说，虽然分类和回归处理的是不同类型的问题，但它们在许多方面是相似的，使用相似的方法，很多算法和技术可以在这两种任务之间转换和重用。</p>
-<h1 id="分类-2">分类</h1>
-<h2 id="最小二乘法">最小二乘法</h2>
-<p><a href="https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163978851616780269814649&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;spm=1018.2226.3001.4187">一文让你彻底搞懂最小二乘法（超详细推导）</a><br>
-解决线性回归的常用方法，拟合函数时，让整体数据误差的平方和最小（损失函数），损失函数求导令其等于0就可以解出参数 θ</p>
-<h2 id="岭回归">岭回归</h2>
-<p><a href="https://blog.csdn.net/MoreAction_/article/details/125004112?spm=1001.2014.3001.5502">详解岭回归与L2正则化</a><br>
-当样本数据矩阵不可逆时，即数据中存在特征冗余，某些特征可以根据其它特征的线性组合来得到，或者，矩阵为病态矩阵，即求解方程组时对数据的微小扰动比较敏感的矩阵，这两种情况时，最小二乘法无法使用或效果不好，使用岭回归。<br>
-岭回归即对应着在最小二乘法基础上增加了一个L2正则化，求导导数=0即可解出参数 θ</p>
-<h2 id="贝叶斯回归">贝叶斯回归</h2>
-<p>贝叶斯回归是一种统计方法，它在回归分析的基础上应用了贝叶斯定理，允许我们在预测中考虑参数的不确定性。与传统的回归方法（如线性回归）不同，贝叶斯回归不仅给出了预测值，还提供了预测的不确定性估计，这在很多需要进行风险评估的应用中非常有用。</p>
-<p>在贝叶斯回归中，我们不再寻找一组固定的最优参数值来拟合数据，而是考虑参数的概率分布。这种方法的基本步骤如下：</p>
-<ol>
-<li>
-<p><strong>先验分布</strong>：首先，我们需要对模型参数设置一个先验分布，这反映了我们在观察数据之前对参数的信念。先验可以是无信息的（即不偏向任何特定值的宽泛分布），也可以是有信息的（基于先前研究或专家知识的分布）。</p>
-</li>
-<li>
-<p><strong>似然函数</strong>：似然函数描述了给定模型参数时数据出现的概率。在回归分析中，这通常涉及到假设数据中的误差项遵循某种分布，例如正态分布。</p>
-</li>
-<li>
-<p><strong>后验分布</strong>：应用贝叶斯定理结合先验分布和似然函数来计算参数的后验分布。后验分布反映了在考虑了观测数据之后对参数的信念更新。</p>
-</li>
-<li>
-<p><strong>预测</strong>：使用后验分布，我们可以对新的数据点进行预测，并为这些预测提供置信区间或预测区间，从而量化预测的不确定性。</p>
-</li>
-</ol>
-<h3 id="贝叶斯回归的优点">贝叶斯回归的优点</h3>
-<ul>
-<li><strong>不确定性量化</strong>：贝叶斯回归自然地提供了对预测不确定性的量化，这对于风险管理和决策制定非常重要。</li>
-<li><strong>先验知识的整合</strong>：贝叶斯方法允许我们在分析中显式地使用先前的知识或专家意见，这在数据稀缺的情况下特别有用。</li>
-<li><strong>灵活性</strong>：贝叶斯方法可以扩展到复杂的模型，包括非线性模型、层次模型等，且可以较好地处理过拟合问题。</li>
-</ul>
-<h3 id="贝叶斯回归的挑战">贝叶斯回归的挑战</h3>
-<ul>
-<li><strong>计算成本</strong>：贝叶斯分析通常比传统方法更为计算密集，尤其是在后验分布难以解析求解时，可能需要采用数值方法（如马尔可夫链蒙特卡罗方法）。</li>
-<li><strong>先验的选择</strong>：先验分布的选择可能对分析结果有较大影响，选择不当的先验可能会导致误导性的结果。</li>
-<li><strong>模型和算法的复杂性</strong>：实现贝叶斯回归和解释结果可能比传统的回归方法更加复杂。</li>
-</ul>
-<p>尽管存在挑战，贝叶斯回归因其提供预测不确定性的能力以及先验知识整合的优点，在统计分析和机器学习领域中得到了广泛应用。</p>
-<h2 id="logistic回归逻辑回归">Logistic回归（逻辑回归）</h2>
-<p><a href="https://www.bilibili.com/video/BV1gA411i7SR/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【五分钟机器学习】机器分类的基石：逻辑回归Logistic Regression</a></p>
-<p>线性回归输出一个连续值，适用于预测问题，如房价；逻辑回归输出一个概率值，适用于分类问题。<br>
-逻辑回归使用 Sigmoid 函数，将线性回归的输出映射为 0 到 1 之间的概率。Sigmoid 函数也叫做 Logistic 函数，所以叫 Logistic 回归；<br>
-<img src="https://jeromezjl.github.io/post-images/1710232480219.png" alt="" loading="lazy"><br>
-逻辑回归用的是交叉熵函数，来判断模型的优劣；</p>
-<h2 id="随机梯度下降sgd">随机梯度下降（SGD）</h2>
-<p><a href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/">【ML】以梯度下降（Gradient Descent）展开的优化器总结</a><br>
-随机梯度下降（SGD）是一种优化算法，常用于机器学习和深度学习中以最小化损失函数，从而训练模型。与传统的梯度下降算法相比，随机梯度下降在每次更新模型参数时不是使用所有的数据，而是随机选择一个样本（或一小批样本）来计算梯度和进行更新。这种方法在处理大规模数据集时特别有效，因为它不需要在每次迭代中使用整个数据集，从而显著降低了计算成本。</p>
-<h3 id="工作原理">工作原理</h3>
-<p>SGD的每次迭代步骤如下：</p>
-<ol>
-<li><strong>随机选择</strong>：从训练数据中随机选择一个样本（或一小批样本，即 mini-batch）。</li>
-<li><strong>计算梯度</strong>：计算选中样本（或样本批次）的损失函数相对于模型参数的梯度。这个梯度是损失函数在当前参数位置的斜率，指示了损失函数增加最快的方向。</li>
-<li><strong>更新参数</strong>：根据计算得到的梯度和预先设定的学习率（步长），更新模型参数。更新的方向是梯度的反方向，因为我们的目标是最小化损失函数。</li>
-<li><strong>重复</strong>：重复上述步骤，直到满足某个停止准则，比如达到一个预定的迭代次数，或者模型性能的改进低于一个阈值。</li>
-</ol>
-<h3 id="优点">优点</h3>
-<ul>
-<li><strong>效率</strong>：对于大规模数据集，SGD可以快速进行迭代更新，因为每次迭代只需要计算一小部分数据的梯度。</li>
-<li><strong>在线学习</strong>：SGD可以用于在线学习，即模型可以随着新数据的到来实时更新。</li>
-<li><strong>逃离局部最优</strong>：随机选取样本引入的噪声有助于模型逃离局部最优解，有可能找到更好的全局最优解。</li>
-</ul>
-<h3 id="缺点">缺点</h3>
-<ul>
-<li><strong>收敛性</strong>：由于每次迭代只使用一个样本，SGD的损失函数可能会有较大的波动，导致收敛到最优解的路径不是平滑的，有时甚至会远离最优解。</li>
-<li><strong>调参</strong>：SGD对学习率等超参数比较敏感，不恰当的超参数设置可能导致模型难以收敛。</li>
-<li><strong>非凸优化</strong>：在非凸优化问题中，SGD可能会被困在鞍点，而不是局部最小值。</li>
-</ul>
-<p>为了克服SGD的一些缺点，研究者们提出了多种改进版本，如带动量的SGD、AdaGrad、RMSProp和Adam等，这些变种通过调整学习率或引入二阶动量等机制，以提高收敛速度和稳定性。</p>
-<h2 id="感知机perceptron">感知机(Perceptron)</h2>
-<p><a href="https://jeromezjl.github.io/post/ml-ANN-MLP-linear">【ML】人工神经网络、MLP、全连接层</a></p>
-<h2 id="多项式回归用基函数扩展线性模型">多项式回归：用基函数扩展线性模型</h2>
-<p><a href="https://blog.csdn.net/weixin_44225602/article/details/112752565">多项式回归详解 从零开始 从理论到实践</a></p>
-<h2 id="支持向量机">支持向量机</h2>
-<p><a href="https://jeromezjl.github.io/post/ml-zhi-chi-xiang-liang-ji-svm">【ML】支持向量机（SVM）</a></p>
-<h2 id="knnk-最近邻">KNN（K-最近邻）</h2>
-<p><a href="https://www.bilibili.com/video/BV1Ma411F7Y4/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">B站讲解</a><br>
-<a href="https://blog.csdn.net/codedz/article/details/108862498">KNN算法详解及实现</a><br>
-<a href="https://zhuanlan.zhihu.com/p/341572059">史上最全面K近邻算法/KNN算法详解+python实现</a></p>
-<p><code>总结：</code></p>
-<ol>
-<li>有监督学习</li>
-<li>用于分类和回归任务</li>
-<li>物体类别由旁边最近的K个样本决定</li>
-</ol>
-<h2 id="高斯过程-gaussian-processesgp">高斯过程 Gaussian Processes(GP)</h2>
-<p><a href="https://www.zhihu.com/question/46631426">如何通俗易懂地介绍 Gaussian Process？</a><br>
-<strong>随机过程</strong><br>
-在机器学习和深度学习领域，随机过程的概念和方法学被广泛应用于算法的开发和数据分析中，主要应用包括但不限于以下几个方面：</p>
-<ol>
-<li>
-<p><strong>随机优化方法</strong>：在机器学习模型的训练过程中，随机梯度下降（SGD）及其变体是非常流行的优化算法。这些算法利用随机性来有效地搜索参数空间，以找到使损失函数最小化的参数。随机性有助于算法跳出局部最小值，更可能找到全局最小值或较好的局部最小值。</p>
-</li>
-<li>
-<p><strong>贝叶斯方法</strong>：贝叶斯方法在机器学习中用于推理和决策，它们本质上依赖于随机过程的概念。例如，高斯过程是一种用于回归和分类任务的贝叶斯非参数方法，它可以提供关于预测的不确定性的信息。</p>
-</li>
-<li>
-<p><strong>序列模型</strong>：在自然语言处理（NLP）、语音识别、时间序列分析和其他序列数据处理领域，随机过程模型如隐马尔可夫模型（HMMs）和循环神经网络（RNNs）及其变体（如长短期记忆网络LSTM和门控循环单元GRU）被用来捕捉序列数据中的时间依赖性。</p>
-</li>
-<li>
-<p><strong>增强学习</strong>：在增强学习中，马尔可夫决策过程（MDPs）提供了一个框架，用于建模决策制定者（智能体）与环境之间的交互。每个决策或行动都会导致状态的变化和一定的奖励，智能体的目标是通过学习最佳策略来最大化其获得的总奖励。</p>
-</li>
-<li>
-<p><strong>随机网络</strong>：在深度学习中，一些网络结构引入了随机性以增强模型的泛化能力和鲁棒性。例如，Dropout技术通过在训练过程中随机忽略神经网络中的一部分神经元，来防止模型的过拟合。</p>
-</li>
-<li>
-<p><strong>生成模型</strong>：在生成对抗网络（GANs）和变分自编码器（VAEs）等生成模型中，随机性被用来生成新的、与训练数据相似的数据实例。这些模型在图像生成、文本到图像的转换和其他生成任务中表现出色。</p>
-</li>
-</ol>
-<p>这些应用显示了随机过程在现代机器学习和深度学习算法设计和数据分析中的广泛影响。随机性不仅增加了模型的灵活性，还有助于提高算法的效率和鲁棒性。</p>
-<p>高斯过程（Gaussian Process, GP）是一种非参数贝叶斯模型，广泛应用于机器学习中的回归、分类和其他任务。在高斯过程中，对于给定的数据集，模型假设数据可以由一个具有连续输入空间的随机过程生成，且该过程的任意有限集合的联合分布都是高斯分布的。换句话说，高斯过程提供了一种优雅的方法来描述函数的分布，使我们能够在数据点之间进行平滑插值，预测新的数据点，并量化预测的不确定性。</p>
-<h3 id="核心概念">核心概念</h3>
-<ul>
-<li><strong>非参数方法</strong>：尽管称为“非参数”，这并不意味着高斯过程中没有参数。相反，这意味着它们不依赖于固定维数的参数向量，模型复杂度可以随着数据量的增加而增加。</li>
-<li><strong>随机过程</strong>：高斯过程是一种随机过程，其中每个点 x 都被映射到一个随机变量 f(x) ，而这些随机变量的任意有限集合的联合分布都是高斯的。</li>
-<li><strong>均值函数和协方差函数</strong>：高斯过程由均值函数和协方差函数完全定义。均值函数定义了过程的平均水平，通常可以设置为零或其他简单形式。协方差函数（或核函数）定义了任意两点间的协方差，从而编码了函数值之间的相似性或平滑度。</li>
-</ul>
-<h3 id="高斯过程回归gpr">高斯过程回归（GPR）</h3>
-<p>在高斯过程回归（Gaussian Process Regression, GPR）中，目标是根据一组观测数据来预测新数据点的值。GPR的强大之处在于其能够提供预测的不确定性估计，这对于许多应用（如优化和控制）来说是非常宝贵的。</p>
-<ol>
-<li><strong>先验分布</strong>：在观察到任何数据之前，假设函数遵循一个高斯过程先验分布，具有特定的均值和协方差函数。</li>
-<li><strong>后验分布</strong>：给定观测数据，使用贝叶斯规则更新对函数的信念，从而得到后验分布。后验分布考虑了观测数据，可以用来进行预测。</li>
-<li><strong>预测和不确定性</strong>：在新的输入点，后验分布提供了对应函数值的最佳估计以及估计的不确定性（通常表现为置信区间）。</li>
-</ol>
-<h3 id="优缺点">优缺点</h3>
-<ul>
-<li><strong>优点</strong>：能够提供预测的不确定性度量；适应性强，可以通过选择合适的协方差函数来捕捉复杂的数据模式；非参数特性使得模型复杂度可以随数据量自动调整。</li>
-<li><strong>缺点</strong>：对于大数据集，计算成本可能非常高，因为需要对协方差矩阵进行求逆或其他线性代数操作，这些操作的计算复杂度通常是数据点数目的三次方。此外，选择和调整协方差函数的形式可能比较困难，需要专业知识和经验。</li>
-</ul>
-<h2 id="朴素贝叶斯">朴素贝叶斯</h2>
-<p>朴素：每个特征相互独立<br>
-<a href="https://zhuanlan.zhihu.com/p/26262151">带你理解朴素贝叶斯分类算法</a></p>
-<h2 id="决策树">决策树</h2>
-<p><a href="https://jeromezjl.github.io/post/ml-jue-ce-shu/">【ML】决策树和随机森林</a></p>
-<h2 id="集成算法">集成算法</h2>
-<p>集成算法的目的是将几个基估计器的预测与给定的学习算法结合起来，以提高单个估计器的通用性和鲁棒性。<br>
-集成方法一般分为两种：</p>
-<ul>
-<li>平均法（averaging methods)：该方法的原理是构建多个独立的估计器，然后取它们的预测结果的平均。一般来说，组合之后的估计器是会比单个估计器要好的，因为它的方差减小了。<br>
-示例: Bagging methods, Forests of randomized trees, …</li>
-<li>提升法(boosting methods)：基估计器是按顺序建立的，并且试图减小组合估计器的偏差。其动机是将几个弱模型结合起来，形成一个强大的整体。<br>
-示例: AdaBoost, Gradient Tree Boosting, …</li>
-</ul>
-<h2 id="半监督学习">半监督学习</h2>
-<p>介于监督学习和无监督学习之间，算法利用大量的未标记数据和少量的标记数据来进行模型训练。这种方法在实际应用中非常有用，因为在许多情况下，获取未标记的数据相对容易和成本较低，而获取大量准确的标记数据则更加困难和昂贵。</p>
-<h3 id="核心思想">核心思想</h3>
-<p>半监督学习的核心思想是利用未标记数据的分布信息来辅助标记数据的学习过程，以此提高学习的准确性和效率。它基于这样一个假设：相似的数据点可能具有相同的输出标签。</p>
-<h3 id="常见方法">常见方法</h3>
-<p>半监督学习包括多种不同的方法，其中一些主要方法包括：</p>
-<ol>
-<li>
-<p><strong>自训练（Self-training）</strong>：首先使用少量的标记数据训练一个监督模型，然后用这个模型对未标记数据进行预测，将预测结果中置信度高的作为新的标记数据加入训练集，反复迭代这个过程。</p>
-</li>
-<li>
-<p><strong>生成模型（Generative Models）</strong>：使用未标记数据学习数据的生成分布，然后利用这个分布来辅助监督学习任务。</p>
-</li>
-<li>
-<p><strong>协同训练（Co-training）</strong>：当数据有多个独立的视图（feature sets）时，可以分别在每个视图上训练一个分类器，然后让这些分类器在未标记数据上互相教学。</p>
-</li>
-<li>
-<p><strong>图基方法（Graph-based Methods）</strong>：构建一个图，其中节点代表标记和未标记的数据点，边反映数据点之间的相似性。然后使用图中的信息来推断未标记点的标签。</p>
-</li>
-<li>
-<p><strong>半监督支持向量机（Semi-supervised SVM）</strong>：这是支持向量机的一种变体，它利用未标记数据来寻找决策边界，使得边界尽可能地远离所有数据点，包括未标记和标记的数据点。</p>
-</li>
-</ol>
-<h3 id="应用场景">应用场景</h3>
-<p>半监督学习在实际应用中非常有价值，特别是在以下情况：</p>
-<ul>
-<li>标记数据稀缺或获取成本高昂，而未标记数据丰富且易于获取。</li>
-<li>完全监督学习由于标记数据不足而表现不佳。</li>
-<li>需要提高学习算法的泛化能力。</li>
-</ul>
-<h3 id="优缺点-2">优缺点</h3>
-<p><strong>优点</strong>：</p>
-<ul>
-<li>能够利用丰富的未标记数据，减少对标记数据的依赖。</li>
-<li>通常比纯监督学习方法具有更好的泛化能力。</li>
-</ul>
-<p><strong>缺点</strong>：</p>
-<ul>
-<li>半监督学习的有效性依赖于未标记数据的质量和与标记数据的关联性。</li>
-<li>不当的使用可能导致模型偏差，特别是当未标记数据的分布与标记数据不一致时。</li>
-</ul>
-<h1 id="回归-2">回归</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[复试英语]]></title>
-        <id>https://jeromezjl.github.io/post/fu-shi-ying-yu/</id>
-        <link href="https://jeromezjl.github.io/post/fu-shi-ying-yu/">
-        </link>
-        <updated>2024-03-09T06:41:13.000Z</updated>
-        <content type="html"><![CDATA[<p>Postgraduate是大学毕业（graduate）后继续深造、但未拿到学位（Master或Doctor）之前的身份，Master是硕士学位</p>
-<p>中文：<br>
-英文自我介绍</p>
-<p>我叫张继隆，我的英文名叫Jerome，我今年21岁了。我来自天津市，我喜欢我的家乡。我本科就读于北京邮电大学，主修人工智能专业</p>
-<p>我很喜欢人工智能，大学期间，我系统地学习了专业知识，我的线性代数、概率论、机器学习、深度学习、计算机视觉等课程均达到90分以上。我还参加了许多创新比赛，比如数学竞赛，并取得了奖项。做过很多人工智能相关的项目，提升了我的专业素养和专业能力。<br>
-我通过了大学英语四六级考试，其中CET6的成绩在550分以上。我一直是一个勤奋好学，不断提升自己的学生，</p>
-<p>我还积极参加各种活动，我喜欢做运动，因为我相信拥有健康的身体可以让我更加积极地学习和工作。同时，我还喜欢音乐和艺术，本科期间是社团的社长，这段经历提升了我的沟通能力，以及对事情的规划能力。对不同领域的探索扩展了我的思维，让我的头脑更加灵活，更能专注于研究工作。</p>
-<p>我选择继续在北邮深造的原因，是因为我深爱着北邮的学术氛围。老师们有很好的品德素养和专业能力，在我学习过程中给予了我很大的帮助。同时我们学校在社会上的认可度一直是很高的，我爱北邮。</p>
-<p>如果给我一个机会，我会继续努力提高自己。如果我的研究能力在研究生期间得到导师的认可，我将继续攻读博士学位。</p>
-<p>最后，我会尽最大努力发掘自己最大的潜力，脚踏实地地做好每件事。这就是我的自我介绍。我真诚地感谢您的聆听</p>
-<p>Dear professors, good morning/afternoon! Thank you for giving me this opportunity to attend the interview. I hope I can make a good performance today. Now I will briefly introduce myself.</p>
-<p>My name is Zhang Jilong, and my English name is Jerome. I am 21 years old this year. I come from Tianjin, and I love my hometown. I completed my undergraduate studies at Beijing University of Posts and Telecommunications. My major is Artificial Intelligence.</p>
-<p>I have a strong passion for artificial intelligence. During my university years, I systematically studied professional knowledge, and my grades in courses such as linear algebra, probability theory, machine learning, deep learning, and computer vision all exceeded 90 points. I also participated in many innovation competitions, such as math competitions, english competitions and won awards. I have worked on many artificial intelligence-related projects, which improved my professional quality and abilities. I passed the College English Test (CET) Levels 4 and 6, with a score of over 550 in CET6. I have always been a diligent and eager student, constantly striving to improve myself.</p>
-<p>Additionally, I actively participated in various activities. I enjoy doing sports because I believe having a healthy body allows me to study and work more positively. At the same time, I also love music and art. During my undergraduate studies, I was the president of a club, which enhanced my communication skills and ability to plan events. Exploring different fields expanded my thinking, making my mind more flexible and more focused on research work.</p>
-<p>The reason I chose to continue my studies at BUPT is my deep love for the academic atmosphere here. The teachers have good moral character and professional abilities, which have been of great help to me in my studies. At the same time, our school's social recognition has always been very high. I love BUPT.</p>
-<p>If given the opportunity, I will continue to work hard to improve myself. If my research abilities are recognized by my advisors during my graduate studies, I will continue to pursue a Ph.D.</p>
-<p>In conclusion, I will do my best to uncover my greatest potential and earnestly accomplish everything I undertake. This is my self-introduction. I sincerely thank you for listening.</p>
-<p>另外<br>
-I will strive to issue some papers on some influencial journals</p>
 ]]></content>
     </entry>
 </feed>

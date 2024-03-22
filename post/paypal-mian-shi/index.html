@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>PayPal 面试 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1710603185789">
+<link rel="shortcut icon" href="/favicon.ico?v=1711102687491">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -225,13 +225,13 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">113</span>
+        <span class="site-item-stat-count">112</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">24</span>
+        <span class="site-item-stat-count">25</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -1002,9 +1002,136 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/"" data-c="
+          &lt;p&gt;图神经网络（Graph Neural Networks，GNNs）是一类专门处理图结构数据的神经网络。在图结构数据中，数据以图的形式表示，由节点（nodes）和边（edges）组成，非常适合描述物体（或实体）及其间的复杂关系。图神经网络通过直接在图上进行操作，能够有效地捕捉这种结构信息，因此在社交网络分析、推荐系统、蛋白质结构预测、化学分子建模等领域得到了广泛应用。&lt;/p&gt;
+&lt;h3 id=&#34;核心思想&#34;&gt;核心思想&lt;/h3&gt;
+&lt;p&gt;GNN的核心思想是节点表示的更新，这通过聚合来自邻居节点的信息来实现。每个节点的表示都是通过考虑其邻居节点的特征（以及可能的边的特征）进行更新的，这个过程可以迭代进行，直到达到一个稳定状态或者预定的迭代次数。这种信息的聚合方式使得每个节点能够捕捉到其在图中的局部结构信息。&lt;/p&gt;
+&lt;h3 id=&#34;关键组件&#34;&gt;关键组件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;节点表示&lt;/strong&gt;：GNN的起点是节点的特征表示，这可以是节点的初始属性，也可以是节点的嵌入向量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;聚合函数&lt;/strong&gt;：用于聚合邻居节点信息的函数，这一步是GNN的核心。不同的GNN变体（如GCN、GAT等）在聚合函数的选择和设计上有所不同。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新函数&lt;/strong&gt;：用于更新节点表示的函数。在每一次迭代中，节点的表示都会根据聚合的邻居信息进行更新。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;gnn的变体&#34;&gt;GNN的变体&lt;/h3&gt;
+&lt;p&gt;GNN有多种变体，主要包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;图卷积网络（Graph Convolutional Networks, GCNs）&lt;/strong&gt;：通过将卷积的概念推广到图上，对节点的特征进行聚合，从而更新节点的状态。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图注意力网络（Graph Attention Networks, GATs）&lt;/strong&gt;：引入了注意力机制来动态地确定在聚合邻居节点信息时每个邻居的重要性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图自编码器（Graph Autoencoders, GAEs）&lt;/strong&gt;：用于学习图数据的低维表示，通常用于无监督学习任务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图生成网络（Graph Generative Networks, GGNs）&lt;/strong&gt;：能够生成新的图结构数据，用于药物设计、蛋白质设计等领域。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用&#34;&gt;应用&lt;/h3&gt;
+&lt;p&gt;GNN在多个领域都有广泛应用，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;社交网络分析&lt;/strong&gt;：通过分析社交网络中个体的关系图，进行好友推荐、信息传播分析等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;推荐系统&lt;/strong&gt;：利用用户和物品之间的复杂关系进行更精准的推荐。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生物信息学&lt;/strong&gt;：在蛋白质结构预测、基因表达数据分析等领域有着重要应用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;化学和材料科学&lt;/strong&gt;：用于预测分子的性质、设计新的化合物等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GNN由于能够直接在图结构数据上操作，捕捉复杂的关系和依赖，因此在处理此类数据时比传统的神经网络模型有着明显的优势。随着研究的深入和技术的发展，GNN在更多领域的应用也在不断拓展。&lt;/p&gt;
+">【DL】图神经网络</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ai-mian-shi/"" data-c="
+          &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;请简要解释分类和回归的区别。&lt;br&gt;
+分类输出离散的类别，回归输出连续的值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;您能列举一些常用的分类算法吗？请简要说明它们的工作原理。&lt;br&gt;
+逻辑回归、决策树、随机森林、SVM、KNN、朴素贝叶斯、梯度提升决策树 (Gradient Boosted Decision Trees, GBDT)、CNN等&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同样地，您能列举一些常用的回归算法吗？请简要说明它们的工作原理。&lt;br&gt;
+线性回归、岭回归、SVM、KNN、SGD、贝叶斯、高斯过程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;既可以用于分类又可以回归的算法？&lt;br&gt;
+决策树、随机森林、SVM、KNN、梯度提升决策树 (Gradient Boosted Decision Trees, GBDT)、CNN等&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在分类问题中，如何评估模型的性能？您能解释准确率、召回率、F1分数等指标吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在回归问题中，如何评估模型的性能？您能解释均方误差、均方根误差、决定系数等指标吗？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过拟合和欠拟合是什么？如何避免这两种情况？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在分类或回归任务中，如何处理不平衡数据集？&lt;br&gt;
+处理不平衡数据集是机器学习中的一个常见问题，特别是在分类任务中。不平衡数据集指的是数据集中不同类别的样本数量差异很大。这可能会导致模型对多数类别过拟合，而忽略少数类别。以下是一些常用的方法来处理不平衡数据集：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;1-重新采样技术&#34;&gt;1. &lt;strong&gt;重新采样技术&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;过采样少数类&lt;/strong&gt;: 通过复制少数类样本或通过生成类似样本的方法（如SMOTE - 合成少数过采样技术）来增加少数类样本的数量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;欠采样多数类&lt;/strong&gt;: 减少多数类样本的数量，以使多数类和少数类的样本数量大致相同。这可能导致信息丢失，应谨慎使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-修改损失函数&#34;&gt;2. &lt;strong&gt;修改损失函数&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;为不同类别的样本引入不同的权重，使得模型在训练过程中更加关注少数类。这可以通过修改损失函数来实现，使得少数类样本的错误分类的代价更高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-使用集成方法&#34;&gt;3. &lt;strong&gt;使用集成方法&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用如随机森林、梯度提升树（GBT）等集成学习方法可以部分缓解不平衡数据带来的问题，因为它们通过构建多个模型并结合它们的预测结果来提高性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-选择合适的评估指标&#34;&gt;4. &lt;strong&gt;选择合适的评估指标&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在不平衡数据集上，准确度不再是一个好的性能指标。应该使用混淆矩阵、精确度、召回率、F1分数、ROC-AUC曲线等更复杂的指标来评估模型性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-人工合成数据生成&#34;&gt;5. &lt;strong&gt;人工合成数据生成&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用算法如SMOTE（合成少数过采样技术）或ADASYN（自适应合成采样方法）等来合成新的少数类样本，以解决不平衡问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-使用专门针对不平衡数据设计的算法&#34;&gt;6. &lt;strong&gt;使用专门针对不平衡数据设计的算法&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一些算法如代价敏感学习（Cost-sensitive Learning）和异常检测算法在设计时考虑了不平衡数据的特点，可以直接应用于这类问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-数据层面的策略&#34;&gt;7. &lt;strong&gt;数据层面的策略&lt;/strong&gt;:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;收集更多数据，尤其是少数类的数据，有助于减少数据不平衡的问题，虽然这在实际中并不总是可行的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;选择哪种方法取决于具体问题、数据集的特性以及可用资源。在实践中，经常需要尝试多种方法，并结合问题的具体情况来确定最有效的策略。&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;请解释特征选择和特征工程的重要性。&lt;/li&gt;
+&lt;li&gt;在机器学习中，如何处理缺失数据和异常值？&lt;br&gt;
+请您根据自己的理解和经验回答这些问题，谢谢！&lt;/li&gt;
+&lt;/ol&gt;
+">AI 面试</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch/"" data-c="
+          &lt;h1 id=&#34;seq2seq&#34;&gt;Seq2Seq&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV16g411L7FG/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;62 序列到序列学习（seq2seq）【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/194308943&#34;&gt;Seq2Seq模型介绍&lt;/a&gt;&lt;br&gt;
+Transformer：Seq2Seq model with attention&lt;/p&gt;
+&lt;p&gt;encoder-decoder 架构，使用的都是 RNN&lt;/p&gt;
+&lt;h1 id=&#34;beam-search-束搜索&#34;&gt;Beam Search 束搜索&lt;/h1&gt;
+&lt;p&gt;在选择softmax输出时，使用贪心算法（每次选择概率最大值）不一定能达到最优&lt;br&gt;
+每次搜索保存k个最好的候选。k=1 是贪心，k=n 是穷举&lt;/p&gt;
+">【NLP】Seq2Seq | Beam Search</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-gai-shu/"" data-c="
-          &lt;p&gt;机器视觉领域包含多种任务，每种任务都旨在模拟或超越人类视觉系统的某些方面。以下是一些主要任务及其常用的算法：&lt;/p&gt;
-&lt;h3 id=&#34;1-图像分类-image-classification&#34;&gt;1. 图像分类 (Image Classification)&lt;/h3&gt;
+          &lt;p&gt;机器视觉算法是计算机视觉领域的关键组成部分，它使计算机能够通过图像和视频数据理解世界。这些算法可以根据它们的功能和用途进行分类。以下是一些常见的分类方式：&lt;/p&gt;
+&lt;h3 id=&#34;1-图像处理算法&#34;&gt;1. 图像处理算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;预处理&lt;/strong&gt;：包括去噪、对比度增强、颜色空间转换等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;滤波和锐化&lt;/strong&gt;：用于改善图像质量或提取特定特征。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;边缘检测&lt;/strong&gt;：如Sobel、Canny算法，用于检测图像中的边缘。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-特征提取算法&#34;&gt;2. 特征提取算法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;角点检测&lt;/strong&gt;：如Harris角点检测、Shi-Tomasi算法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;兴趣点检测&lt;/strong&gt;：如SIFT（尺度不变特征变换）、SURF（加速稳健特征）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特征描述子&lt;/strong&gt;：如ORB（Oriented FAST and Rotated BRIEF）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-图像分类-image-classification&#34;&gt;3. 图像分类 (Image Classification)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：将整个图像分配给一个或多个类别。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1019,7 +1146,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-目标检测-object-detection&#34;&gt;2. 目标检测 (Object Detection)&lt;/h3&gt;
+&lt;h3 id=&#34;4-目标检测与识别-object-detection&#34;&gt;4. 目标检测与识别 (Object Detection)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：在图像中识别物体的位置，并将每个物体分类。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1030,8 +1157,9 @@
 &lt;li&gt;RetinaNet&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标识别&lt;/strong&gt;：CNN 变体&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;3-图像分割-image-segmentation&#34;&gt;3. 图像分割 (Image Segmentation)&lt;/h3&gt;
+&lt;h3 id=&#34;5-图像分割-image-segmentation&#34;&gt;5. 图像分割 (Image Segmentation)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：将图像分割成多个区域或对象，可以进一步细分为语义分割和实例分割。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1044,7 +1172,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;4-姿态估计-pose-estimation&#34;&gt;4. 姿态估计 (Pose Estimation)&lt;/h3&gt;
+&lt;h3 id=&#34;6-姿态估计-pose-estimation&#34;&gt;6. 姿态估计 (Pose Estimation)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：估计图像中人或对象的姿态或关节位置。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1056,7 +1184,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;5-物体跟踪-object-tracking&#34;&gt;5. 物体跟踪 (Object Tracking)&lt;/h3&gt;
+&lt;h3 id=&#34;7-物体跟踪-object-tracking&#34;&gt;7. 物体跟踪 (Object Tracking)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：在视频序列中跟踪一个或多个对象的运动。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1066,7 +1194,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;6-图像生成-image-generation&#34;&gt;6. 图像生成 (Image Generation)&lt;/h3&gt;
+&lt;h3 id=&#34;8-图像生成-image-generation&#34;&gt;8. 图像生成 (Image Generation)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从现有的图像或随机噪声生成新图像。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1077,7 +1205,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;7-图像恢复-image-restoration&#34;&gt;7. 图像恢复 (Image Restoration)&lt;/h3&gt;
+&lt;h3 id=&#34;9-图像恢复-image-restoration&#34;&gt;9. 图像恢复 (Image Restoration)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从损坏或降质的图像中恢复出清晰图像。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1089,7 +1217,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;8-3d重建-3d-reconstruction&#34;&gt;8. 3D重建 (3D Reconstruction)&lt;/h3&gt;
+&lt;h3 id=&#34;10-3d重建-3d-reconstruction&#34;&gt;10. 3D重建 (3D Reconstruction)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：从一系列图像中重建出三维场景或对象的结构。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1099,7 +1227,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;9-行为分析-action-analysis&#34;&gt;9. 行为分析 (Action Analysis)&lt;/h3&gt;
+&lt;h3 id=&#34;11-行为分析-action-analysis&#34;&gt;11. 行为分析 (Action Analysis)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：分析视频中的人或物体的行为，比如行人的行走路线、人群的动态等。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1109,7 +1237,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;10-视觉问答-visual-question-answering&#34;&gt;10. 视觉问答 (Visual Question Answering)&lt;/h3&gt;
+&lt;h3 id=&#34;12-视觉问答-visual-question-answering&#34;&gt;12. 视觉问答 (Visual Question Answering)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;任务说明&lt;/strong&gt;：根据给定图像和自然语言问题提供答案。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;常用算法&lt;/strong&gt;：
@@ -1121,8 +1249,15 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;13-优化和机器学习算法&#34;&gt;13. 优化和机器学习算法&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;- 用于提高识别准确率和效率的算法，如支持向量机（SVM）、随机森林、梯度提升决策树（GBDT）等。
+- 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这些任务和算法展示了机器视觉领域的广泛性和深度，随着研究的进展，还会不断有新&lt;/p&gt;
 &lt;p&gt;的任务和算法被提出。&lt;/p&gt;
+&lt;h1 id=&#34;数据增强&#34;&gt;数据增强&lt;/h1&gt;
+&lt;p&gt;对图片进行翻转、裁剪、变色（颜色、亮度、饱和度）等操作&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV17y4y1g76q/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;36 数据增广【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
 ">【CV】概述</a>
       </div>
       
@@ -1427,6 +1562,8 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;这个流程不是一成不变的，具体的步骤和方法可能会根据具体的NLP任务、数据集、业务需求等因素有所不同。&lt;/p&gt;
+&lt;h1 id=&#34;评估指标&#34;&gt;评估指标&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ph12345687/article/details/130205151&#34;&gt;NLP常见任务及评估指标&lt;/a&gt;&lt;/p&gt;
 ">【NLP】概述</a>
       </div>
       
@@ -1494,6 +1631,7 @@
 &lt;p class=&#39;katex-block&#39;&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;munder&gt;&lt;mi&gt;max&lt;/mi&gt;&lt;mo&gt;⁡&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/munder&gt;&lt;munder&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo mathvariant=&#34;normal&#34;&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo mathvariant=&#34;normal&#34;&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;∣&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;γ&lt;/mi&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo mathvariant=&#34;normal&#34;&gt;′&lt;/mo&gt;&lt;/msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;V(s) = \max_a \sum_{s&amp;#x27;, r} P(s&amp;#x27;, r | s, a)[r + \gamma V(s&amp;#x27;)]
 &lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:2.480098em;vertical-align:-1.430093em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop op-limits&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.43056em;&#34;&gt;&lt;span style=&#34;top:-2.1em;margin-left:0em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;a&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-2.7em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span&gt;&lt;span class=&#34;mop&#34;&gt;max&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop op-limits&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.050005em;&#34;&gt;&lt;span style=&#34;top:-1.8560149999999997em;margin-left:0em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3.05em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.6828285714285715em;&#34;&gt;&lt;span style=&#34;top:-2.786em;margin-right:0.07142857142857144em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.5em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct mtight&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.0500049999999996em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3.05em;&#34;&gt;&lt;/span&gt;&lt;span&gt;&lt;span class=&#34;mop op-symbol large-op&#34;&gt;∑&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:1.430093em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.801892em;&#34;&gt;&lt;span style=&#34;top:-3.113em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;∣&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.051892em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.05556em;&#34;&gt;γ&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.801892em;&#34;&gt;&lt;span style=&#34;top:-3.113em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;′&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;动态规划方法在理论上可以得到最优策略，但其应用受限于环境模型的已知性以及状态和动作空间的规模。当状态和动作空间非常大或环境模型未知时，直接应用动态规划变得不可行，这时通常会&lt;/p&gt;
+&lt;h2 id=&#34;马尔可夫&#34;&gt;马尔可夫&lt;/h2&gt;
 &lt;h2 id=&#34;蒙特卡洛&#34;&gt;蒙特卡洛&lt;/h2&gt;
 &lt;p&gt;蒙特卡洛方法在强化学习中的应用提供了一种在不完全知道环境模型（即转移概率和奖励函数未知）的情况下学习最优策略的方法。与动态规划不同，蒙特卡洛（MC）方法不需要知道环境的具体动态，而是通过从环境中采样完成的序列（或称为“情节”）来学习。这些方法特别适用于具有高度不确定性或模型未知的环境。MC方法的关键特点是它们依赖于经验平均来估计值函数，这些平均值是从一系列完整情节中获得的。&lt;/p&gt;
 &lt;h3 id=&#34;mc策略评估&#34;&gt;MC策略评估&lt;/h3&gt;
@@ -1506,6 +1644,7 @@
 &lt;p&gt;然而，MC方法也有其局限性。首先，它们只适用于情节性任务，即那些有明确开始和结束的任务。其次，MC方法可能需要很多情节才能获得可靠的值估计，尤其是在回报信号稀疏或噪声很大的情境中。此外，MC方法只在情节结束时更新值函数和策略，这可能导致学习速度较慢。&lt;/p&gt;
 &lt;p&gt;总的来说，蒙特卡洛方法在强化学习中提供了一种强大的工具，尤其是在那些模型未知或难以精确建模的情况下。通过适当的策略和技巧（如重要性采样）的改进，可以进一步增强MC方法的应用范围和效率。&lt;/p&gt;
 &lt;h2 id=&#34;时序差分法&#34;&gt;时序差分法&lt;/h2&gt;
+&lt;h3 id=&#34;q-learning&#34;&gt;Q-Learning&lt;/h3&gt;
 ">【DL】强化学习</a>
       </div>
       
@@ -1684,24 +1823,43 @@ hardmax 是求一组数据中唯一的最大值，而 Softmax 是输出概率，
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/dl-transformer/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1MY41137AK/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【Transformer模型】曼妙动画轻松学，形象比喻贼好记&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1ih4y1J7rx/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;超强动画，一步一步深入浅出解释Transformer原理！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1Kq4y1H7FL?p=1&#34;&gt;68 Transformer【动手学深度学习v2】&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/338817680&#34;&gt;Transformer模型详解（图解最完整版）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/403433120&#34;&gt;【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;Transformer论文逐段精读【论文精读】&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/194308943&#34;&gt;Seq2Seq模型介绍&lt;/a&gt;&lt;br&gt;
 Transformer：Seq2Seq model with attention&lt;/p&gt;
+&lt;h1 id=&#34;结构介绍&#34;&gt;结构介绍&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710839949031.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;attention&#34;&gt;Attention&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1264y1i7R1/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;64 注意力机制【动手学深度学习v2】&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1QW4y167iq/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;09 Transformer 之什么是注意力机制（Attention）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;Attention、Transformer公式推导和矩阵变化&lt;/a&gt;&lt;br&gt;
+和RNN的区别：RNN 是串行的，attention 是并行的。时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率&lt;/p&gt;
+&lt;p&gt;Query，Key，Value 的概念取自于信息检索系统，举个简单的搜索的例子来说。当你在某电商平台搜索某件商品（年轻女士冬季穿的红色薄款羽绒服）时，你在搜索引擎上输入的内容便是 Query。&lt;br&gt;
+然后搜索引擎根据 Query 为你匹配 Key（例如商品的种类，颜色，描述等）。&lt;br&gt;
+然后根据 Query 和 Key 的&lt;code&gt;相似度&lt;/code&gt;，用 softmax 选择概率最大的，将结果和V相乘，得到 Value 中最匹配的内容。&lt;/p&gt;
+&lt;p&gt;相似度计算：QK 求内积（余弦相似度）&lt;/p&gt;
+&lt;p&gt;多头注意力机制是指，有n个自注意力模块，每个自注意力模块都有 QKV 三个矩阵。多头注意力的作用可以类比多卷积核，为了更好的提取特征&lt;/p&gt;
+&lt;p&gt;分为注意力、自注意力、带有mask的注意力&lt;br&gt;
+注意力：简单的 QKV&lt;br&gt;
+自注意力：QKV都来自于序列自己&lt;br&gt;
+带有mask的注意力：attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。&lt;/p&gt;
+&lt;h2 id=&#34;feed-forward&#34;&gt;Feed Forward&lt;/h2&gt;
+&lt;p&gt;全连接层&lt;/p&gt;
+&lt;h2 id=&#34;addnorm&#34;&gt;Add&amp;amp;Norm&lt;/h2&gt;
+&lt;p&gt;Add 是一个残差块，和 ResNet 中的一样，使得网络能做很深&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710840452631.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好&lt;/p&gt;
+&lt;h2 id=&#34;encoder-decoder&#34;&gt;encoder-decoder&lt;/h2&gt;
+&lt;p&gt;encoder和decoder是一一对应的，且encoder的输出维度等于decoder的输入维度&lt;br&gt;
+编码器的输出，将其作为解码器中第二层注意力的 key 和 value，其 query 来自目标序列&lt;/p&gt;
+&lt;p&gt;原文 encoder 和 decoder 都用了6个&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;思维导图&lt;/strong&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115237621.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115244889.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115251026.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1686115255439.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率&lt;/p&gt;
-&lt;p&gt;Muti-head attention 多头注意力模拟了卷积神经网络多输出通道卷积核&lt;/p&gt;
-&lt;p&gt;encoder 和 decoder 都用了6个&lt;/p&gt;
-&lt;p&gt;为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好&lt;/p&gt;
-&lt;p&gt;attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。&lt;/p&gt;
-&lt;h1 id=&#34;attention&#34;&gt;Attention&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;Attention、Transformer公式推导和矩阵变化&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;transformer&#34;&gt;Transformer&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/403433120&#34;&gt;【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;变体&#34;&gt;变体&lt;/h1&gt;
 &lt;p&gt;Transformer 模型自从在 &amp;quot;Attention is All You Need&amp;quot; 论文中被首次提出以来，已经孕育出许多变体，这些变体针对不同的应用场景和性能优化进行了设计。以下是一些比较著名的 Transformer 模型变体：&lt;/p&gt;
 &lt;ol&gt;
@@ -1863,90 +2021,74 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;li&gt;在某些情况下，分类问题也可以转换为回归问题，特别是当类别之间存在天然顺序（有序分类）时。通过预测一个连续的数值并将其映射到最接近的类别，可以处理这类问题。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;总的来说，虽然分类和回归处理的是不同类型的问题，但它们在许多方面是相似的，使用相似的方法，很多算法和技术可以在这两种任务之间转换和重用。&lt;/p&gt;
-&lt;h1 id=&#34;分类-2&#34;&gt;分类&lt;/h1&gt;
-&lt;h2 id=&#34;最小二乘法&#34;&gt;最小二乘法&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=163978851616780269814649&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;amp;spm=1018.2226.3001.4187&#34;&gt;一文让你彻底搞懂最小二乘法（超详细推导）&lt;/a&gt;&lt;br&gt;
-解决线性回归的常用方法，拟合函数时，让整体数据误差的平方和最小（损失函数），损失函数求导令其等于0就可以解出参数 θ&lt;/p&gt;
-&lt;h2 id=&#34;岭回归&#34;&gt;岭回归&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/MoreAction_/article/details/125004112?spm=1001.2014.3001.5502&#34;&gt;详解岭回归与L2正则化&lt;/a&gt;&lt;br&gt;
-当样本数据矩阵不可逆时，即数据中存在特征冗余，某些特征可以根据其它特征的线性组合来得到，或者，矩阵为病态矩阵，即求解方程组时对数据的微小扰动比较敏感的矩阵，这两种情况时，最小二乘法无法使用或效果不好，使用岭回归。&lt;br&gt;
-岭回归即对应着在最小二乘法基础上增加了一个L2正则化，求导导数=0即可解出参数 θ&lt;/p&gt;
-&lt;h2 id=&#34;贝叶斯回归&#34;&gt;贝叶斯回归&lt;/h2&gt;
-&lt;p&gt;贝叶斯回归是一种统计方法，它在回归分析的基础上应用了贝叶斯定理，允许我们在预测中考虑参数的不确定性。与传统的回归方法（如线性回归）不同，贝叶斯回归不仅给出了预测值，还提供了预测的不确定性估计，这在很多需要进行风险评估的应用中非常有用。&lt;/p&gt;
-&lt;p&gt;在贝叶斯回归中，我们不再寻找一组固定的最优参数值来拟合数据，而是考虑参数的概率分布。这种方法的基本步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;先验分布&lt;/strong&gt;：首先，我们需要对模型参数设置一个先验分布，这反映了我们在观察数据之前对参数的信念。先验可以是无信息的（即不偏向任何特定值的宽泛分布），也可以是有信息的（基于先前研究或专家知识的分布）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;似然函数&lt;/strong&gt;：似然函数描述了给定模型参数时数据出现的概率。在回归分析中，这通常涉及到假设数据中的误差项遵循某种分布，例如正态分布。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;后验分布&lt;/strong&gt;：应用贝叶斯定理结合先验分布和似然函数来计算参数的后验分布。后验分布反映了在考虑了观测数据之后对参数的信念更新。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;预测&lt;/strong&gt;：使用后验分布，我们可以对新的数据点进行预测，并为这些预测提供置信区间或预测区间，从而量化预测的不确定性。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;贝叶斯回归的优点&#34;&gt;贝叶斯回归的优点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;不确定性量化&lt;/strong&gt;：贝叶斯回归自然地提供了对预测不确定性的量化，这对于风险管理和决策制定非常重要。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;先验知识的整合&lt;/strong&gt;：贝叶斯方法允许我们在分析中显式地使用先前的知识或专家意见，这在数据稀缺的情况下特别有用。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;灵活性&lt;/strong&gt;：贝叶斯方法可以扩展到复杂的模型，包括非线性模型、层次模型等，且可以较好地处理过拟合问题。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;贝叶斯回归的挑战&#34;&gt;贝叶斯回归的挑战&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;计算成本&lt;/strong&gt;：贝叶斯分析通常比传统方法更为计算密集，尤其是在后验分布难以解析求解时，可能需要采用数值方法（如马尔可夫链蒙特卡罗方法）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;先验的选择&lt;/strong&gt;：先验分布的选择可能对分析结果有较大影响，选择不当的先验可能会导致误导性的结果。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模型和算法的复杂性&lt;/strong&gt;：实现贝叶斯回归和解释结果可能比传统的回归方法更加复杂。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;尽管存在挑战，贝叶斯回归因其提供预测不确定性的能力以及先验知识整合的优点，在统计分析和机器学习领域中得到了广泛应用。&lt;/p&gt;
-&lt;h2 id=&#34;logistic回归逻辑回归&#34;&gt;Logistic回归（逻辑回归）&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1gA411i7SR/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【五分钟机器学习】机器分类的基石：逻辑回归Logistic Regression&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;线性回归输出一个连续值，适用于预测问题，如房价；逻辑回归输出一个概率值，适用于分类问题。&lt;br&gt;
-逻辑回归使用 Sigmoid 函数，将线性回归的输出映射为 0 到 1 之间的概率。Sigmoid 函数也叫做 Logistic 函数，所以叫 Logistic 回归；&lt;br&gt;
-&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710232480219.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
-逻辑回归用的是交叉熵函数，来判断模型的优劣；&lt;/p&gt;
-&lt;h2 id=&#34;随机梯度下降sgd&#34;&gt;随机梯度下降（SGD）&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;br&gt;
-随机梯度下降（SGD）是一种优化算法，常用于机器学习和深度学习中以最小化损失函数，从而训练模型。与传统的梯度下降算法相比，随机梯度下降在每次更新模型参数时不是使用所有的数据，而是随机选择一个样本（或一小批样本）来计算梯度和进行更新。这种方法在处理大规模数据集时特别有效，因为它不需要在每次迭代中使用整个数据集，从而显著降低了计算成本。&lt;/p&gt;
-&lt;h3 id=&#34;工作原理&#34;&gt;工作原理&lt;/h3&gt;
-&lt;p&gt;SGD的每次迭代步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;随机选择&lt;/strong&gt;：从训练数据中随机选择一个样本（或一小批样本，即 mini-batch）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;计算梯度&lt;/strong&gt;：计算选中样本（或样本批次）的损失函数相对于模型参数的梯度。这个梯度是损失函数在当前参数位置的斜率，指示了损失函数增加最快的方向。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;更新参数&lt;/strong&gt;：根据计算得到的梯度和预先设定的学习率（步长），更新模型参数。更新的方向是梯度的反方向，因为我们的目标是最小化损失函数。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;重复&lt;/strong&gt;：重复上述步骤，直到满足某个停止准则，比如达到一个预定的迭代次数，或者模型性能的改进低于一个阈值。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;效率&lt;/strong&gt;：对于大规模数据集，SGD可以快速进行迭代更新，因为每次迭代只需要计算一小部分数据的梯度。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;在线学习&lt;/strong&gt;：SGD可以用于在线学习，即模型可以随着新数据的到来实时更新。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;逃离局部最优&lt;/strong&gt;：随机选取样本引入的噪声有助于模型逃离局部最优解，有可能找到更好的全局最优解。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;缺点&#34;&gt;缺点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;收敛性&lt;/strong&gt;：由于每次迭代只使用一个样本，SGD的损失函数可能会有较大的波动，导致收敛到最优解的路径不是平滑的，有时甚至会远离最优解。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;调参&lt;/strong&gt;：SGD对学习率等超参数比较敏感，不恰当的超参数设置可能导致模型难以收敛。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;非凸优化&lt;/strong&gt;：在非凸优化问题中，SGD可能会被困在鞍点，而不是局部最小值。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;为了克服SGD的一些缺点，研究者们提出了多种改进版本，如带动量的SGD、AdaGrad、RMSProp和Adam等，这些变种通过调整学习率或引入二阶动量等机制，以提高收敛速度和稳定性。&lt;/p&gt;
-&lt;h2 id=&#34;感知机perceptron&#34;&gt;感知机(Perceptron)&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/ml-ANN-MLP-linear&#34;&gt;【ML】人工神经网络、MLP、全连接层&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;多项式回归用基函数扩展线性模型&#34;&gt;多项式回归：用基函数扩展线性模型&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44225602/article/details/112752565&#34;&gt;多项式回归详解 从零开始 从理论到实践&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;既可分类又可回归的算法&#34;&gt;既可分类又可回归的算法&lt;/h1&gt;
 &lt;h2 id=&#34;支持向量机&#34;&gt;支持向量机&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/ml-zhi-chi-xiang-liang-ji-svm&#34;&gt;【ML】支持向量机（SVM）&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;knnk-最近邻&#34;&gt;KNN（K-最近邻）&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Ma411F7Y4/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/codedz/article/details/108862498&#34;&gt;KNN算法详解及实现&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/341572059&#34;&gt;史上最全面K近邻算法/KNN算法详解+python实现&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由距离待决策样本最近的k个元素投票决定样本类别&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;总结：&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;有监督学习&lt;/li&gt;
 &lt;li&gt;用于分类和回归任务&lt;/li&gt;
 &lt;li&gt;物体类别由旁边最近的K个样本决定&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;决策树和随机森林&#34;&gt;决策树和随机森林&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/ml-jue-ce-shu/&#34;&gt;【ML】决策树和随机森林&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;梯度提升决策树-gradient-boosted-decision-trees-gbdt&#34;&gt;梯度提升决策树 (Gradient Boosted Decision Trees, GBDT)&lt;/h2&gt;
+&lt;p&gt;梯度提升决策树（Gradient Boosted Decision Trees，GBDT）是一种强大的机器学习算法，用于回归和分类问题，属于集成学习方法的一种。它通过结合多个简单的模型（通常是决策树）来构建一个复杂的模型，以此来提高预测的准确性。GBDT 的核心思想是逐步添加模型（通常是决策树），每次添加的模型都试图纠正前面所有模型的预测残差。&lt;/p&gt;
+&lt;h3 id=&#34;工作原理&#34;&gt;工作原理:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;初始化&lt;/strong&gt;: GBDT 首先使用一个基本模型（通常是一个常数值）来进行初始化，作为第一个基学习器，对所有数据做一个初步预测。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;迭代添加决策树&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在每一轮迭代中，GBDT 都会添加一个新的决策树来对之前所有树的预测残差进行拟合。&lt;/li&gt;
+&lt;li&gt;新添加的树试图补偿或改正之前所有树的总体预测中的错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;梯度下降&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“梯度提升”中的“梯度”指的是损失函数的梯度，GBDT 通过计算损失函数关于模型预测的梯度来确定残差的方向。&lt;/li&gt;
+&lt;li&gt;新树的目标是减少残差，这类似于梯度下降法中参数更新的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;学习率&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GBDT 引入了一个学习率（也称作缩减系数）来控制每棵树对最终模型的贡献程度，以避免过拟合。&lt;/li&gt;
+&lt;li&gt;学习率较小意味着需要更多的树来构建模型，但模型的泛化能力通常更好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;停止准则&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GBDT 的训练会在达到指定的树的数量、达到一定的误差改善阈值或满足其他停止条件时结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;特点&#34;&gt;特点:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;准确性高&lt;/strong&gt;：通过逐步减少残差，GBDT 能够构建非常精确的预测模型。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灵活性&lt;/strong&gt;：可以用于分类、回归甚至排序任务，并且能处理各种类型的数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可解释性&lt;/strong&gt;：虽然不如单一决策树，但相比于很多其他复杂模型，GBDT 的结果更容易理解。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用场景&#34;&gt;应用场景:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GBDT 在许多领域都有应用，包括但不限于搜索引擎（如排名算法）、生态模型、金融风险管理等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;流行的gbdt实现&#34;&gt;流行的GBDT实现:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;XGBoost&lt;/strong&gt;: 扩展梯度提升，优化了速度和效率，增加了正则化项以控制模型的复杂度，从而避免过拟合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LightGBM&lt;/strong&gt;: 微软开发的框架，优化了大规模数据的处理，通过梯度单边采样（GOSS）和互斥特征捆绑（EFB）技术提高了效率和速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CatBoost&lt;/strong&gt;: Yandex 开发，特别优化了类别特征的处理，提供了更好的准确性和训练速度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GBDT 由于其高效性和灵活性，在工业界和各种数据科学竞赛中非常受欢迎。&lt;/p&gt;
 &lt;h2 id=&#34;高斯过程-gaussian-processesgp&#34;&gt;高斯过程 Gaussian Processes(GP)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/46631426&#34;&gt;如何通俗易懂地介绍 Gaussian Process？&lt;/a&gt;&lt;br&gt;
 &lt;strong&gt;随机过程&lt;/strong&gt;&lt;br&gt;
@@ -1991,20 +2133,16 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：能够提供预测的不确定性度量；适应性强，可以通过选择合适的协方差函数来捕捉复杂的数据模式；非参数特性使得模型复杂度可以随数据量自动调整。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：对于大数据集，计算成本可能非常高，因为需要对协方差矩阵进行求逆或其他线性代数操作，这些操作的计算复杂度通常是数据点数目的三次方。此外，选择和调整协方差函数的形式可能比较困难，需要专业知识和经验。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;常用于分类的算法&#34;&gt;常用于分类的算法&lt;/h1&gt;
+&lt;h2 id=&#34;logistic回归逻辑回归&#34;&gt;Logistic回归（逻辑回归）&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1gA411i7SR/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【五分钟机器学习】机器分类的基石：逻辑回归Logistic Regression&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;线性回归输出一个连续值，适用于预测问题，如房价；逻辑回归输出一个概率值，适用于分类问题。&lt;br&gt;
+逻辑回归使用 Sigmoid 函数，将线性回归的输出映射为 0 到 1 之间的概率。Sigmoid 函数也叫做 Logistic 函数，所以叫 Logistic 回归；&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1710232480219.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
+逻辑回归用的是交叉熵函数，来判断模型的优劣；&lt;/p&gt;
 &lt;h2 id=&#34;朴素贝叶斯&#34;&gt;朴素贝叶斯&lt;/h2&gt;
 &lt;p&gt;朴素：每个特征相互独立&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/26262151&#34;&gt;带你理解朴素贝叶斯分类算法&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;决策树&#34;&gt;决策树&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/ml-jue-ce-shu/&#34;&gt;【ML】决策树和随机森林&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;集成算法&#34;&gt;集成算法&lt;/h2&gt;
-&lt;p&gt;集成算法的目的是将几个基估计器的预测与给定的学习算法结合起来，以提高单个估计器的通用性和鲁棒性。&lt;br&gt;
-集成方法一般分为两种：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;平均法（averaging methods)：该方法的原理是构建多个独立的估计器，然后取它们的预测结果的平均。一般来说，组合之后的估计器是会比单个估计器要好的，因为它的方差减小了。&lt;br&gt;
-示例: Bagging methods, Forests of randomized trees, …&lt;/li&gt;
-&lt;li&gt;提升法(boosting methods)：基估计器是按顺序建立的，并且试图减小组合估计器的偏差。其动机是将几个弱模型结合起来，形成一个强大的整体。&lt;br&gt;
-示例: AdaBoost, Gradient Tree Boosting, …&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2 id=&#34;半监督学习&#34;&gt;半监督学习&lt;/h2&gt;
 &lt;p&gt;介于监督学习和无监督学习之间，算法利用大量的未标记数据和少量的标记数据来进行模型训练。这种方法在实际应用中非常有用，因为在许多情况下，获取未标记的数据相对容易和成本较低，而获取大量准确的标记数据则更加困难和昂贵。&lt;/p&gt;
 &lt;h3 id=&#34;核心思想&#34;&gt;核心思想&lt;/h3&gt;
@@ -2028,7 +2166,7 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;半监督支持向量机（Semi-supervised SVM）&lt;/strong&gt;：这是支持向量机的一种变体，它利用未标记数据来寻找决策边界，使得边界尽可能地远离所有数据点，包括未标记和标记的数据点。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;应用场景&#34;&gt;应用场景&lt;/h3&gt;
+&lt;h3 id=&#34;应用场景-2&#34;&gt;应用场景&lt;/h3&gt;
 &lt;p&gt;半监督学习在实际应用中非常有价值，特别是在以下情况：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;标记数据稀缺或获取成本高昂，而未标记数据丰富且易于获取。&lt;/li&gt;
@@ -2046,7 +2184,46 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;li&gt;半监督学习的有效性依赖于未标记数据的质量和与标记数据的关联性。&lt;/li&gt;
 &lt;li&gt;不当的使用可能导致模型偏差，特别是当未标记数据的分布与标记数据不一致时。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;回归-2&#34;&gt;回归&lt;/h1&gt;
+&lt;h1 id=&#34;常用于回归的算法&#34;&gt;常用于回归的算法&lt;/h1&gt;
+&lt;h2 id=&#34;线性回归最小二乘法&#34;&gt;线性回归——最小二乘法&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=163978851616780269814649&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;amp;spm=1018.2226.3001.4187&#34;&gt;一文让你彻底搞懂最小二乘法（超详细推导）&lt;/a&gt;&lt;br&gt;
+解决线性回归的常用方法，拟合函数时，让整体数据误差的平方和最小（损失函数），损失函数求导令其等于0就可以解出参数 θ&lt;/p&gt;
+&lt;h2 id=&#34;多项式回归用基函数扩展线性模型&#34;&gt;多项式回归：用基函数扩展线性模型&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_44225602/article/details/112752565&#34;&gt;多项式回归详解 从零开始 从理论到实践&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;岭回归&#34;&gt;岭回归&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/MoreAction_/article/details/125004112?spm=1001.2014.3001.5502&#34;&gt;详解岭回归与L2正则化&lt;/a&gt;&lt;br&gt;
+当样本数据矩阵不可逆时，即数据中存在特征冗余，某些特征可以根据其它特征的线性组合来得到，或者，矩阵为病态矩阵，即求解方程组时对数据的微小扰动比较敏感的矩阵，这两种情况时，最小二乘法无法使用或效果不好，使用岭回归。&lt;br&gt;
+岭回归即对应着在最小二乘法基础上增加了一个L2正则化，求导导数=0即可解出参数 θ&lt;/p&gt;
+&lt;h2 id=&#34;贝叶斯回归&#34;&gt;贝叶斯回归&lt;/h2&gt;
+&lt;p&gt;贝叶斯回归是一种统计方法，它在回归分析的基础上应用了贝叶斯定理，允许我们在预测中考虑参数的不确定性。与传统的回归方法（如线性回归）不同，贝叶斯回归不仅给出了预测值，还提供了预测的不确定性估计，这在很多需要进行风险评估的应用中非常有用。&lt;/p&gt;
+&lt;p&gt;在贝叶斯回归中，我们不再寻找一组固定的最优参数值来拟合数据，而是考虑参数的概率分布。这种方法的基本步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;先验分布&lt;/strong&gt;：首先，我们需要对模型参数设置一个先验分布，这反映了我们在观察数据之前对参数的信念。先验可以是无信息的（即不偏向任何特定值的宽泛分布），也可以是有信息的（基于先前研究或专家知识的分布）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;似然函数&lt;/strong&gt;：似然函数描述了给定模型参数时数据出现的概率。在回归分析中，这通常涉及到假设数据中的误差项遵循某种分布，例如正态分布。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;后验分布&lt;/strong&gt;：应用贝叶斯定理结合先验分布和似然函数来计算参数的后验分布。后验分布反映了在考虑了观测数据之后对参数的信念更新。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;预测&lt;/strong&gt;：使用后验分布，我们可以对新的数据点进行预测，并为这些预测提供置信区间或预测区间，从而量化预测的不确定性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;贝叶斯回归的优点&#34;&gt;贝叶斯回归的优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不确定性量化&lt;/strong&gt;：贝叶斯回归自然地提供了对预测不确定性的量化，这对于风险管理和决策制定非常重要。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先验知识的整合&lt;/strong&gt;：贝叶斯方法允许我们在分析中显式地使用先前的知识或专家意见，这在数据稀缺的情况下特别有用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灵活性&lt;/strong&gt;：贝叶斯方法可以扩展到复杂的模型，包括非线性模型、层次模型等，且可以较好地处理过拟合问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;贝叶斯回归的挑战&#34;&gt;贝叶斯回归的挑战&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;计算成本&lt;/strong&gt;：贝叶斯分析通常比传统方法更为计算密集，尤其是在后验分布难以解析求解时，可能需要采用数值方法（如马尔可夫链蒙特卡罗方法）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先验的选择&lt;/strong&gt;：先验分布的选择可能对分析结果有较大影响，选择不当的先验可能会导致误导性的结果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模型和算法的复杂性&lt;/strong&gt;：实现贝叶斯回归和解释结果可能比传统的回归方法更加复杂。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;尽管存在挑战，贝叶斯回归因其提供预测不确定性的能力以及先验知识整合的优点，在统计分析和机器学习领域中得到了广泛应用。&lt;/p&gt;
 ">【ML】分类和回归</a>
       </div>
       
@@ -2075,23 +2252,20 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-san-wei-chong-jian/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-PhotometricStereo/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://github.com/jeromezjl/PhotometricStereoTutorial&#34;&gt;github链接&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;多视角、多光照&lt;/p&gt;
 &lt;p&gt;多光照：输入多光照图像，输出三维&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Mt4y1a7e6/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【”UE5夯实基础”每日2更系列】13朗伯漫反射理论&lt;/a&gt;&lt;/p&gt;
-">【CV】三维重建</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-ren-ti-zi-tai-shi-bie/"" data-c="
-          &lt;p&gt;1&lt;/p&gt;
-">【CV】人体姿态识别</a>
+">【CV】光度立体法 Photometric Stereo</a>
       </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-ji-chu-gai-lan/"" data-c="
-          &lt;h1 id=&#34;参数和超参数&#34;&gt;参数和超参数&lt;/h1&gt;
+          &lt;p&gt;&lt;a href=&#34;https://c.d2l.ai/stanford-cs329p/&#34;&gt;Practical Machine Learning&lt;/a&gt;&lt;br&gt;
+&lt;code&gt;ML、DL 地图&lt;/code&gt;&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1711101084064.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;参数和超参数&#34;&gt;参数和超参数&lt;/h1&gt;
 &lt;h2 id=&#34;参数&#34;&gt;参数&lt;/h2&gt;
 &lt;p&gt;在深度学习中，参数通常是指神经网络中的权重和偏差。&lt;br&gt;
 这些参数是通过&lt;code&gt;反向传播&lt;/code&gt;算法，根据训练数据中的梯度信息自动调整的，以最小化&lt;code&gt;损失函数&lt;/code&gt;。&lt;br&gt;
@@ -2789,7 +2963,7 @@ we should always be ready to&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-gao-shu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/gao-shu/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1zL411o7PD/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【考研441分】24考研数学全年规划！B站最全！&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/390928056&#34;&gt;考生必记：三角函数公式汇总+记忆（没有比这更全）&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.desmos.com/calculator?lang=zh-CN&#34;&gt;在线函数作图&lt;/a&gt;&lt;/p&gt;
@@ -2978,7 +3152,7 @@ x 奇偶看 D 是否关于 y 轴对称；y 奇偶看 D 是否关于 x 轴对称&
 &lt;/li&gt;
 &lt;li&gt;若投到面上为一条线，则积分为 0&lt;/li&gt;
 &lt;/ol&gt;
-">【考研】高数</a>
+">高等数学</a>
       </div>
       
       <div class="item">
@@ -3023,7 +3197,7 @@ https://bbs.byr.cn/#!article/StudyShare/203152&lt;/p&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-gai-lu-lun/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/gai-lu-lun/"" data-c="
           &lt;p&gt;概率为 0 的事件与任意事件相互独立&lt;br&gt;
 &lt;strong&gt;全概率公式做题步骤&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -3066,11 +3240,11 @@ https://bbs.byr.cn/#!article/StudyShare/203152&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;判断相关和独立&lt;/strong&gt;&lt;br&gt;
 X Y 不相关 ⇔ EXY = EXEY (ρ=0)&lt;br&gt;
 X Y 独立 ⇔ FXY = FXFY 或者 f(xy) = f(x)f(y)&lt;/p&gt;
-">【考研】概率论</a>
+">概率论</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-xian-xing-dai-shu/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/xian-xing-dai-shu/"" data-c="
           &lt;h1 id=&#34;行列式&#34;&gt;行列式&lt;/h1&gt;
 &lt;p&gt;性质&lt;/p&gt;
 &lt;ol&gt;
@@ -3248,7 +3422,7 @@ P-1AP = B&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;求二次型最值&lt;/strong&gt;&lt;br&gt;
 最大值：最大特征值 乘以 xTx 的值&lt;br&gt;
 最小值：最小特征值 乘以 xTx 的值&lt;/p&gt;
-">【考研】线性代数</a>
+">线性代数</a>
       </div>
       
       <div class="item">
@@ -3257,6 +3431,7 @@ P-1AP = B&lt;br&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.94speed.com/?token=94speed666&#34;&gt;百度网盘快速下载解析&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bili.iiilab.com/&#34;&gt;b站下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://xn--ehq00hgtfdmt.xyz/#/dashboard&#34;&gt;三分机场&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://xn--4gq62f52gdss.art/#/dashboard&#34;&gt;一元机场&lt;/a&gt;&lt;/p&gt;
 ">【工具】</a>
       </div>
       
@@ -3294,9 +3469,44 @@ informative是指深入浅出、娓娓道来&lt;br&gt;
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-kcf-mu-biao-zhui-zong-suan-fa/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Augurlee/article/details/104995171&#34;&gt;KCF论文理解与源码解析&lt;/a&gt;&lt;/p&gt;
-">【CV】KCF目标追踪算法</a>
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/cv-mu-biao-zhui-zong/"" data-c="
+          &lt;p&gt;目标追踪是计算机视觉中的一个重要领域，它涉及在视频序列中连续定位和识别特定目标。目标追踪算法可以分为两大类：生成式（generative）方法和判别式（discriminative）方法。以下是一些常用的目标追踪算法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;生成式方法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;均值漂移（Mean Shift）&lt;/strong&gt;：通过迭代寻找概率密度函数的峰值来进行目标定位。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;粒子滤波（Particle Filter）&lt;/strong&gt;：使用一组随机样本（粒子）来表示目标状态的概率分布，并通过重采样和权重更新来追踪目标。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;判别式方法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基于深度学习的方法&lt;/strong&gt;：使用卷积神经网络（CNN）来学习目标和背景的特征表示，如Siamese网络、孪生网络（Siamese Network）和基于深度强化学习的方法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在线序列判别式分析方法（OSDA）&lt;/strong&gt;：通过在线学习目标模型和背景模型，并计算目标与模型的匹配度来进行追踪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于相关滤波的方法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最小均方误差（Minimum Output Sum of Squared Error, MOSSE）滤波器&lt;/strong&gt;：一种快速且高效的相关滤波追踪方法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核化相关滤波器（Kernelized Correlation Filters, KCF）&lt;/strong&gt;：扩展了MOSSE滤波器，引入了核技巧来提高追踪性能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多通道滤波器&lt;/strong&gt;：如空间加权通道特征（CSK）和颜色名称（CN）滤波器，它们利用了颜色和其他特征通道来提高追踪的鲁棒性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于模型的方法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;模板匹配&lt;/strong&gt;：使用目标模板在当前帧中进行滑动窗口搜索，寻找最佳匹配。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于模型的方法&lt;/strong&gt;：构建目标的3D模型，并通过匹配模型和观测数据来进行追踪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;其他方法&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;光流法（Optical Flow）&lt;/strong&gt;：通过分析图像序列中的像素运动来追踪目标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基于特征的方法&lt;/strong&gt;：如尺度不变特征变换（SIFT）、加速鲁棒特征（SURF）和定向梯度直方图（HOG），它们提取图像特征并进行匹配以追踪目标。&lt;br&gt;
+目标追踪算法的选择取决于应用场景、性能要求、计算资源等因素。在实际应用中，可能需要根据具体情况选择或设计合适的追踪算法。随着深度学习技术的发展，基于深度学习的追踪方法在性能上取得了显著提升，成为目标追踪领域的热点研究方向。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/Augurlee/article/details/104995171&#34;&gt;KCF论文理解与源码解析&lt;/a&gt;&lt;/p&gt;
+">【CV】目标追踪</a>
       </div>
       
       <div class="item">
@@ -3802,42 +4012,87 @@ Bash是Shell的一种&lt;/p&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/jul-ei&#34;&gt;【ML】聚类&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/ml-jue-ce-shu/&#34;&gt;【ML】决策树和随机森林&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/ml-he-fang-fa-he-han-shu&#34;&gt;【ML】核方法和核函数&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://jeromezjl.github.io/post/te-zheng-jiang-wei&#34;&gt;【ML】特征降维&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/te-zheng-jiang-wei&#34;&gt;【ML】特征降维&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ml-mei-tian-yi-dian-numpy-xiao-ji-qiao&#34;&gt;【ML】每天一点 Numpy 小技巧&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/sklearn-mei-tian-yi-dian-sklearn&#34;&gt;【ML】每天一点 sklearn&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/keshihua&#34;&gt;【ML】可视化&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;dl&#34;&gt;DL&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou&#34;&gt;【DL】深度学习的一般步骤&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi&#34;&gt;【DL】强化学习&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-shen-du-sheng-cheng-mo-xing&#34;&gt;【DL】深度生成模型&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-transformer&#34;&gt;【DL】Transformer&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo&#34;&gt;【DL】图神经网络&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/dl-mo-xing-fu-yong&#34;&gt;【DL】模型复用&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;cv&#34;&gt;CV&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/cv-gai-shu&#34;&gt;【CV】概述&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/cnn-juan-ji-shen-jing-wang-luo&#34;&gt;【CV】CNN 卷积神经网络&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/cv-gai-shu&#34;&gt;【CV】概述&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ji-qi-shi-jue&#34;&gt;【CV】从零开始机器视觉&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/cnn-juan-ji-shen-jing-wang-luo&#34;&gt;【CV】CNN 卷积神经网络&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/mnist-shou-xie-shu-zi-shi-bie&#34;&gt;【CV】MNIST 手写数字识别&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/opencv-qian-ji&#34;&gt;【CV】OpenCV 浅记&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/cv-PhotometricStereo&#34;&gt;【CV】光度立体法 Photometric Stereo&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/shi-pin-mu-biao-jian-ce&#34;&gt;【CV】视频目标检测&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/cv-mu-biao-zhui-zong&#34;&gt;【CV】目标追踪&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;nlp&#34;&gt;NLP&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-gai-shu&#34;&gt;【NLP】概述&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li&#34;&gt;【NLP】文本预处理&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-ci-qian-ru&#34;&gt;【NLP】词嵌入&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch&#34;&gt;【NLP】Seq2Seq | Beam Search&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/bpe&#34;&gt;【NLP】BPE子词分割&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing&#34;&gt;【NLP】时序模型与马尔可夫模型&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-wen-ben-xiang-si-du-fen-xi&#34;&gt;【NLP】文本相似度分析&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/nlp-rnn-lstm-gru&#34;&gt;【NLP】RNN | GRU | LSTM&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-bert&#34;&gt;【NLP】BERT&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa&#34;&gt;【NLP】BiLSTM-CRF算法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/nlp-bert&#34;&gt;【NLP】BERT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;linux&#34;&gt;Linux&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/linux-ubuntu&#34;&gt;【Linux】Ubuntu配置与安装&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/linux-shell&#34;&gt;【Linux】Shell&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/linux-chang-yong-ming-ling-zong-jie&#34;&gt;【Linux】常用命令总结&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/linux-qi-mo-fu-xi&#34;&gt;【Linux】期末复习&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/linux-nei-he-mo-kuai-kai-fa&#34;&gt;【Linux】内核模块开发&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/linux-shen-du-xue-xi-pei-zhi&#34;&gt;【Linux】深度学习配置&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;基础&#34;&gt;基础&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/gao-shu&#34;&gt;高等数学&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/xian-xing-dai-shu&#34;&gt;线性代数&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/gai-lu-lun&#34;&gt;概率论&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/shu-ju-jie-gou&#34;&gt;数据结构&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/python-shui-de-python-xue-de-bu-zha-shi&#34;&gt;【Python】谁 Python 学的不扎实？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ji-wang-socket-bian-cheng-shi-yan&#34;&gt;【计网】Socket 编程实验&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/&#34;&gt;正则表达式&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/xing-shi-yu-yan-python-shi-xian-e-nfa-greater-dfa&#34;&gt;【形式语言】python实现 ε-ΝFA -&amp;gt; DFA&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/xing-shi-yu-yan-yu-zi-dong-ji-bi-ji&#34;&gt;《形式语言与自动机》笔记&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/ji-wang-bian-cheng-shi-yan&#34;&gt;【计网】可靠运输协议编程实验&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;项目和比赛&#34;&gt;项目和比赛&lt;/h1&gt;
 &lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/zheng-ze-biao-da-shi/&#34;&gt;正则表达式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo&#34;&gt;Pykeyboard 和 Pymouse 自动化操作&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;杂记&#34;&gt;杂记&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/lian-qin/&#34;&gt;【音乐】即兴练习思路&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/&#34;&gt;【摄影】调色思路&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/le-li/&#34;&gt;【音乐】乐理&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;工具&#34;&gt;工具&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/gong-ju/&#34;&gt;【工具】&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/markdown-yu-fa&#34;&gt;Markdown 语法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/git-shi-yong&#34;&gt;Github 使用&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/github-desktop-guan-li-ben-di-dai-ma&#34;&gt;Github Desktop 管理本地代码&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://jeromezjl.github.io/post/jupyter-notebook-de-anaconda-pei-zhi&#34;&gt;Jupyter notebook 的 Anaconda 配置&lt;/a&gt;&lt;/p&gt;
 ">索引</a>
       </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-bert/"" data-c="
-          &lt;p&gt;&lt;strong&gt;基础预备&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/194308943&#34;&gt;Seq2Seq模型介绍&lt;/a&gt;&lt;br&gt;
-Transformer：Seq2Seq model with attention&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;基于 Transformer 搭建英译中翻译模型&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/347061440&#34;&gt;教你用PyTorch玩转Transformer英译中翻译模型！&lt;/a&gt;&lt;/p&gt;
+          &lt;p&gt;Bidirectional Encoder Representation from Transformer（双向连接的多个 encoder）&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1NS4y1e7gz/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【BERT模型】暴力的美学，协作的力量&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1yU4y1E7Ns/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;69 BERT预训练【动手学深度学习v2】&lt;/a&gt;&lt;br&gt;
+针对微调设计&lt;br&gt;
+基于transformdr的encoder进行修改：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;模型更大，训练数据更多&lt;/li&gt;
+&lt;li&gt;输入句子对，片段嵌入，可学习的位置编码&lt;/li&gt;
+&lt;li&gt;训练时使用两个任务：带掩码的语言模型；下一个句子的预测&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;实战&#34;&gt;实战&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/347061440&#34;&gt;教你用PyTorch玩转Transformer英译中翻译模型！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihsu.com/p/524487313&#34;&gt;保姆级教程，用PyTorch和BERT进行文本分类&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;变体&#34;&gt;变体&lt;/h1&gt;
 &lt;p&gt;BERT（Bidirectional Encoder Representations from Transformers）自推出以来，催生了许多变体，这些变体旨在通过不同的方法提高性能、增强泛化能力或降低资源消耗。以下是一些著名的 BERT 变体的简述：&lt;/p&gt;
 &lt;ol&gt;
@@ -3962,12 +4217,15 @@ ct = forgetgate(ct-1)+inputgate(xt)&lt;/p&gt;
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ji-qi-shi-jue/"" data-c="
           &lt;p&gt;&lt;a href=&#34;cv-xueba.club&#34;&gt;北邮鲁鹏资源&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;分辨率是 1024 x 768 则图像有 1024 x 768 个像素点&lt;/p&gt;
+&lt;h1 id=&#34;像素&#34;&gt;像素&lt;/h1&gt;
+&lt;p&gt;分辨率是 1024 x 768 则图像有 1024 x 768 个像素点（pixel）&lt;/p&gt;
 &lt;p&gt;二进制图像：每个点用一个bit表示&lt;br&gt;
 灰度图：每个点用一个Byte表示，范围 0-255&lt;br&gt;
 RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;卷积核/滤波核：filter kernel&lt;/strong&gt;&lt;br&gt;
-卷积运算：对应点相乘再相加（对核内数据进行加权，然后赋给中心点）&lt;/p&gt;
+&lt;h1 id=&#34;卷积核和噪声&#34;&gt;卷积核和噪声&lt;/h1&gt;
+&lt;h2 id=&#34;卷积核滤波核filter-kernel&#34;&gt;卷积核/滤波核：filter kernel&lt;/h2&gt;
+&lt;p&gt;常见线性滤波： 方框滤波（boxFilter）、均值滤波（blur）、高斯滤波（GaussianBlur）；另一类是非线性滤波器，包括中值滤波（medianBlur）和双边滤波（bilateralFilter）&lt;/p&gt;
+&lt;p&gt;卷积运算：对应点相乘再相加（对核内数据进行加权，然后赋给中心点）&lt;/p&gt;
 &lt;p&gt;在利用均值核对图像进行平滑处理的时候，考虑到距离中心点越远的点 对中心值影响越小。所以考虑使用高斯分布设置核内权重。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;高斯核&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/u013066730/article/details/123112159&#34;&gt;CSDN 文字讲解&lt;/a&gt;&lt;br&gt;
@@ -3977,6 +4235,9 @@ RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255&lt;/
 这个经验规则可以用于选择适当的窗口大小和标准差，以确保高斯滤波器在平滑图像的同时保持图像细节。具体而言，较大的窗口尺寸和较大的标准差可以产生更强烈的平滑效果，但可能会导致图像细节的丢失。相反，较小的窗口尺寸和较小的标准差可以保留更多的细节，但平滑效果会较弱。&lt;br&gt;
 根据经验，W/2=3σ提供了一种简单的方法来选择窗口大小和标准差的相对关系，以获得平衡的结果。但需要注意的是，这只是一个经验规则，具体的选择还取决于特定的应用和图像处理的需求。在实际应用中，可能需要进行实验和调整以找到最适合的参数。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zjh12312311/article/details/109649188&#34;&gt;cv2中的滤波，均值，高斯，中值，高通，低通，傅里叶变换&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;噪声&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/poisonchry/article/details/110847127&#34;&gt;数字图像学笔记——6. 噪音生成（椒盐噪音、高斯噪音、泊松噪音）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_42856191/article/details/123706076?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171093113016800182180772%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=171093113016800182180772&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-123706076-null-null.142%5Ev99%5Econtrol&amp;amp;utm_term=%E5%9B%BE%E5%83%8F%E5%8E%BB%E5%99%AA&amp;amp;spm=1018.2226.3001.4187&#34;&gt;【OpenCV-Python】：基于均值、中值、方框、双边和高斯滤波的图像去噪&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;canny算法边缘检测&#34;&gt;Canny算法——边缘检测&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1nz4y197Qv?p=3&amp;amp;spm_id_from=pageDriver&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;鲁鹏讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/minjiuhong/article/details/89320225&#34;&gt;CSDN文字讲解&lt;/a&gt;&lt;/p&gt;
@@ -3987,13 +4248,13 @@ RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255&lt;/
 # threshold1为低阈值，threshold2为高阈值
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1 id=&#34;图像拟合-fitting&#34;&gt;图像拟合 fitting&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;最小二乘法拟合&lt;/strong&gt;&lt;br&gt;
-假设需要拟合一条线，通过最小二乘法可以求得这条线的方程，从而将像素点拟合成一条平滑的曲线。这样的应用场景很多，比如图像的边缘检测、图像的灰度平滑和曲线的修正等&lt;br&gt;
+&lt;h2 id=&#34;最小二乘法拟合&#34;&gt;最小二乘法拟合&lt;/h2&gt;
+&lt;p&gt;假设需要拟合一条线，通过最小二乘法可以求得这条线的方程，从而将像素点拟合成一条平滑的曲线。这样的应用场景很多，比如图像的边缘检测、图像的灰度平滑和曲线的修正等&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/MoreAction_/article/details/106443383?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163978851616780269814649%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;amp;request_id=163978851616780269814649&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-106443383.pc_search_result_cache&amp;amp;utm_term=%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95&amp;amp;spm=1018.2226.3001.4187&#34;&gt;一文让你彻底搞懂最小二乘法（超详细推导）&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;鲁棒性最小二乘法&lt;/strong&gt;&lt;br&gt;
-&lt;img src=&#34;https://jeromezjl.github.io/post-images/1685457722865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RANSAC——随机一致性采样&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/45532306&#34;&gt;文字讲解&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;鲁棒性最小二乘法&#34;&gt;鲁棒性最小二乘法&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://jeromezjl.github.io/post-images/1685457722865.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;ransac随机一致性采样&#34;&gt;RANSAC——随机一致性采样&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/45532306&#34;&gt;文字讲解&lt;/a&gt;&lt;br&gt;
 在使用RANSAC找到内点之后，再利用找到的点，使用最小二乘法找到直线&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;RANSAC的利弊&lt;/code&gt;&lt;br&gt;
 优点&lt;br&gt;
@@ -4001,21 +4262,32 @@ RGB图像：每个点由R\G\B三个信息表示，三个Byte，范围 0-255&lt;/
 缺点&lt;br&gt;
 有很多参数需要调整，对于较低的初始比率不能很好地工作(要迭代太多次，或者可能完全失败)&lt;br&gt;
 在较小的样本数上不能总是得到一个良好的初始化模型&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;霍夫变换 Hough transform&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/leonardohaig/article/details/87907462&#34;&gt;CSDN 文字讲解&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;霍夫变换-hough-transform&#34;&gt;霍夫变换 Hough transform&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/leonardohaig/article/details/87907462&#34;&gt;CSDN 文字讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1nz4y197Qv?p=4&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;鲁鹏讲解&lt;/a&gt;&lt;br&gt;
 软投票法：给相邻的也投一票&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/on2way/article/details/47028969&#34;&gt;Python下opencv使用笔记（十一）（详解hough变换检测直线与圆）&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;特征提取&#34;&gt;特征提取&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/max_LLL/article/details/119728338&#34;&gt;OpenCV中的几种角点检测方法&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Harris corner detection(角点检测)&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.bilibili.com/video/BV1Wb411b79B/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;harris-corner-detection角点检测&#34;&gt;Harris corner detection(角点检测)&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Wb411b79B/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/max_LLL/article/details/119728338&#34;&gt;OpenCV中的几种角点检测方法&lt;/a&gt;&lt;br&gt;
 典型的数学建模过程，将实际问题用数学模型来表示，从而量化，让计算机理解。&lt;br&gt;
 适用于：光照情况、位置、旋转、平移等变化ss&lt;br&gt;
 不适用于：大小的变化&lt;/p&gt;
-&lt;p&gt;Blob detection&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SIFT(Scale Invariant Feature Transform)尺度不变特征变换&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.bilibili.com/video/BV1Qb411W7cK/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;blob-detection&#34;&gt;Blob detection&lt;/h2&gt;
+&lt;p&gt;Blob检测是一种在数字图像中寻找连通区域（即blob）的方法，这些区域与周围区域在颜色、亮度或纹理上有所不同。Blob通常指的是图像中的斑点、团块或任何不规则的形状。在计算机视觉中，blob检测被广泛应用于对象识别、图像分析、机器视觉等领域。&lt;br&gt;
+Blob检测的基本步骤通常包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;图像预处理&lt;/strong&gt;：这可能包括灰度转换、二值化、滤波等，以减少噪声并突出感兴趣的区域。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阈值化&lt;/strong&gt;：通过设定亮度或颜色的阈值，将图像转换为仅包含黑白两色的二值图像。这有助于分离前景（blob）和背景。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连通区域标记&lt;/strong&gt;：在这一步中，算法会遍历二值图像，将相互连接的白色像素分组，并为每个连通区域分配一个唯一的标签。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特征提取&lt;/strong&gt;：对于每个检测到的blob，可以计算其特征，如面积、重心、周长、圆形度、惯性矩等。这些特征有助于进一步分析和识别不同的blob。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;过滤和筛选&lt;/strong&gt;：根据设定的标准（如blob的大小、形状或其他特征），可以过滤掉不感兴趣的blob，只保留满足条件的blob。&lt;br&gt;
+在OpenCV中，blob检测可以使用&lt;code&gt;SimpleBlobDetector&lt;/code&gt;或通过自定义的算法实现。&lt;code&gt;SimpleBlobDetector&lt;/code&gt;是一个基于特征的检测器，它允许用户设置各种参数来定义什么是blob，包括颜色、大小、形状、凹凸性等。&lt;br&gt;
+Blob检测在许多应用中都非常有用，例如在工业自动化中检测零件，在医学影像中识别细胞，在交通监控中跟踪车辆，以及在机器人导航中识别路径或障碍物。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;siftscale-invariant-feature-transform尺度不变特征变换&#34;&gt;SIFT(Scale Invariant Feature Transform)尺度不变特征变换&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Qb411W7cK/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;B站讲解&lt;/a&gt;&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1685946237448.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;br&gt;
 高斯金字塔：图像的尺度空间，用于模拟观察者距离物体的远近程度及模糊程度&lt;br&gt;
 参数&lt;br&gt;
@@ -4058,11 +4330,13 @@ SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索�
 &lt;/ol&gt;
 &lt;p&gt;综上所述，SIFT适用于小规模图像数据库和对局部特征关注较多的场景，而CNN在大规模图像数据集和需要全局语义信息的任务中具有优势。实际应用中，可以根据具体任务的需求和数据的特点选择适合的方法或结合两者的优势进行&lt;/p&gt;
 &lt;h1 id=&#34;纹理&#34;&gt;纹理&lt;/h1&gt;
-&lt;p&gt;常见任务：&lt;br&gt;
-·从图像纹理估计表面方向或形状&lt;br&gt;
-·根据纹理线索进行分割/分类 分析，表示纹理&lt;br&gt;
-·将纹理一致的图像区域分组&lt;br&gt;
-·生成新的纹理/图像&lt;/p&gt;
+&lt;p&gt;常见任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从图像纹理估计表面方向或形状&lt;/li&gt;
+&lt;li&gt;根据纹理线索进行分割/分类 分析，表示纹理&lt;/li&gt;
+&lt;li&gt;将纹理一致的图像区域分组&lt;/li&gt;
+&lt;li&gt;生成新的纹理/图像&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;用不同方向的卷积核卷积图像，每个核为输出向量的一维，向量中的最大值对应的卷积核方向，就是该纹理的方向。&lt;/p&gt;
 &lt;h1 id=&#34;分割-segmentation&#34;&gt;分割  Segmentation&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Mean shift&lt;/strong&gt;&lt;br&gt;
@@ -4200,18 +4474,15 @@ SIFT（尺度不变特征转换）和CNN（卷积神经网络）在图像检索�
 &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/tardis/zm/art/51490200?source_id=1005&#34;&gt;计算摄影学及本专栏介绍&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.zhihu.com/question/427425910&#34;&gt;计算成像(computational photography)方向的就业前景如何？&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1VA4y1Z7DG/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;iPhone 13系列解读之二——让我们聊聊计算摄影&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;alexnet&#34;&gt;AlexNet&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/guzhao9901/article/details/118552085&#34;&gt;AlexNet网络结构详解（含各层维度大小计算过程）与PyTorch实现&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/467017218&#34;&gt;手撕 CNN 经典网络之 AlexNet（理论篇）&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;resnet&#34;&gt;ResNet&lt;/h1&gt;
-&lt;h1 id=&#34;swin&#34;&gt;Swin&lt;/h1&gt;
-&lt;h1 id=&#34;vgg&#34;&gt;VGG&lt;/h1&gt;
-">【CV】机器视觉学习笔记</a>
+">【CV】从零开始机器视觉</a>
       </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shen-du-xue-xi-de-yi-ban-bu-zou/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://pytorch.org/&#34;&gt;pyTorch 英文官网&lt;/a&gt;&lt;br&gt;
+          &lt;p&gt;&lt;a href=&#34;https://nndl.github.io/&#34;&gt;邱锡鹏版&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zh-v2.d2l.ai/&#34;&gt;《动手学深度学习》&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.deeplearningbook.org/&#34;&gt;Deep Learning Book&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://pytorch.org/&#34;&gt;pyTorch 英文官网&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.pytorch123.com/&#34;&gt;pyTorch 教程中文&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.w3cschool.cn/pytorch/&#34;&gt;pyTorch w3cschool&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_53904578/article/details/124414068?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166971072916800184193705%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=166971072916800184193705&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-124414068-null-null.142%5Ev67%5Econtrol,201%5Ev3%5Econtrol_2,213%5Ev2%5Et3_esquery_v2&amp;amp;utm_term=%E6%95%B0%E6%8D%AE%E9%9B%86&amp;amp;spm=1018.2226.3001.4187&#34;&gt;深度学习数据集汇总&lt;/a&gt;&lt;br&gt;
@@ -4950,7 +5221,7 @@ print(&amp;quot;还原结果: &amp;quot;, text)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;还原结果:  [&#39;the&#39;, &#39;deep&#39;, &#39;learning&#39;]
 &lt;/code&gt;&lt;/pre&gt;
-">【NLP】BPE</a>
+">【NLP】BPE子词分割</a>
       </div>
       
       <div class="item">
@@ -5343,7 +5614,7 @@ int main() {
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kao-yan-shu-ju-jie-gou/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/shu-ju-jie-gou/"" data-c="
           &lt;h1 id=&#34;think-like-a-computer&#34;&gt;Think like A Computer&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.qq.com/mind/DRU9BS3ZzTU13T0pH&#34;&gt;数据结构强化课资料索引 （王道团队官方发布）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_47312141/article/details/108909724&#34;&gt;2021 王道考研 数据结构+习题讲解&lt;/a&gt;&lt;/p&gt;
@@ -5733,7 +6004,7 @@ B-树的插入删除&lt;/p&gt;
 最短路径 Floyd&lt;/p&gt;
 &lt;p&gt;二叉排序树插入、构建、删除&lt;/p&gt;
 &lt;p&gt;排序，除堆排序、计数排序、直接插入&lt;/p&gt;
-">【考研】数据结构</a>
+">数据结构</a>
       </div>
       
       <div class="item">
@@ -6708,16 +6979,6 @@ print(multi(2,3))
 print(f(10))
 &lt;/code&gt;&lt;/pre&gt;
 ">【数据结构】递归</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-shen-jing-wang-luo-yu-shen-du-xue-xi/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://nndl.github.io/&#34;&gt;邱锡鹏版&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://zh-v2.d2l.ai/&#34;&gt;《动手学深度学习》&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.deeplearningbook.org/&#34;&gt;Deep Learning Book&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/37471802&#34;&gt;one-hot 编码&lt;/a&gt;：&lt;br&gt;
-将类别数据编码为数字，在 pandas 中采用 pd.get_dummies 函数&lt;/p&gt;
-">【DL】神经网络与深度学习</a>
       </div>
       
       <div class="item">
@@ -7860,8 +8121,15 @@ AlexNet的结构大致可以分为以下几个关键部分：&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;VGGNet由于其简单和高效的架构，在图像识别领域获得了广泛的应用，包括图像分类、面部识别和风格迁移等。尽管它的参数量比较大，导致模型较为庞大且计算密集，但它仍然是深度学习和计算机视觉领域的一个重要基准。&lt;/p&gt;
 &lt;h2 id=&#34;resnet&#34;&gt;ResNet&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1bV41177ap/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;29 残差网络 ResNet【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;拓展&#34;&gt;拓展&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1cM4y117ob/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;三分钟说明白ResNet ，关于它的设计、原理、推导及优点&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/101332297&#34;&gt;残差神经网络（ResNet）&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1bV41177ap/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;29 残差网络 ResNet【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要用于解决深度卷积神经网络训练过程中遇到的梯度消失和梯度爆炸问题。ResNet通过引入“残差学习”的概念来实现对更深网络的有效训练。&lt;/p&gt;
+&lt;p&gt;残差块（Residual Block）是ResNet的核心，它允许输入直接通过一条“捷径”（skip connection或shortcut connection）连接到输出，从而实现输入与输出之间的&lt;code&gt;直接相加&lt;/code&gt;。&lt;br&gt;
+f(x)=x+g(x)&lt;br&gt;
+这种设计使得网络可以学习到残差映射，即学习到的是输入与输出之间的差异，而不是直接学习一个完整的映射。这样做的好处是可以&lt;code&gt;减轻网络训练中的梯度消失问题&lt;/code&gt;，使得网络即使在极深的情况下也能有效训练。&lt;/p&gt;
+&lt;p&gt;ResNet架构的另一个重要特点是它的模块化设计，使得网络可以很容易地扩展到不同的深度。ResNet的几个变体，如ResNet-50、ResNet-101和ResNet-152，分别包含不同数量的层，适用于不同的任务和性能要求。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;拓展&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;1x1的卷积核有什么用&#34;&gt;1x1的卷积核有什么用？&lt;/h2&gt;
 &lt;p&gt;虽然在空间尺寸上看起来似乎不会对特征图的空间结构产生影响，但实际上它在深度学习中有几个非常有用的作用：&lt;/p&gt;
 &lt;h3 id=&#34;通道数变换&#34;&gt;通道数变换&lt;/h3&gt;
@@ -8298,7 +8566,7 @@ CIDR记法：在 IP 后面加一个斜杠和一个数字，表示网络号位数
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/lesslessxing-shi-yu-yan-yu-zi-dong-ji-greatergreater-bi-ji/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/xing-shi-yu-yan-yu-zi-dong-ji-bi-ji/"" data-c="
           &lt;h1 id=&#34;绪论&#34;&gt;绪论&lt;/h1&gt;
 &lt;p&gt;∑（西格玛）表示字母表，字母表中的元素称为该字母表的一个字母&lt;/p&gt;
 &lt;p&gt;ɛ 为空串，长度为 0，就是什么都没有。0 次幂代表空串&lt;/p&gt;
@@ -8543,12 +8811,6 @@ F：终止状态集合{q1 q2 q3}&lt;/p&gt;
 &lt;li&gt;设置好不同的状态，不同的输入，列出表格&lt;/li&gt;
 &lt;/ol&gt;
 ">《形式语言与自动机》笔记</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/keras-qian-ru-qian-chu/"" data-c="
-          &lt;p&gt;1&lt;/p&gt;
-">Keras 浅入浅出</a>
       </div>
       
       <div class="item">
@@ -9016,7 +9278,9 @@ print_linklist(linklist1)  # 展示链表
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-he-fang-fa-he-han-shu/"" data-c="
-          &lt;p&gt;核方法（Kernel methods）是机器学习中的一类算法，它们通过&lt;code&gt;将数据映射到高维空间&lt;/code&gt;来解决非线性问题。核方法的关键思想是通过一个核函数来隐式地完成这种映射，而不需要显式地计算高维空间中的坐标。这种方法可以有效地处理那些&lt;code&gt;在原始特征空间中不容易用线性模型分割的数据&lt;/code&gt;。&lt;/p&gt;
+          &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Nb4y1s7pE/?buvid=XY1E7C2150D585E3FEFD8BAC7D8745A2A78B2&amp;amp;from_spmid=search.search-result.0.0&amp;amp;is_story_h5=false&amp;amp;mid=vUjUrmQZhYx7Mi0YPfhKgg%3D%3D&amp;amp;p=1&amp;amp;plat_id=116&amp;amp;share_from=ugc&amp;amp;share_medium=android&amp;amp;share_plat=android&amp;amp;share_session_id=9c86103b-c5e0-40c9-b57e-8a18a731d836&amp;amp;share_source=WEIXIN&amp;amp;share_tag=s_i&amp;amp;spmid=united.player-video-detail.0.0&amp;amp;timestamp=1711013875&amp;amp;unique_k=E3deF0u&amp;amp;up_id=152254793&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;核技巧Kernel Trick详解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;核方法（Kernel methods）是机器学习中的一类算法，它们通过&lt;code&gt;将数据映射到高维空间&lt;/code&gt;来解决非线性问题。核方法的关键思想是通过一个核函数来隐式地完成这种映射，而不需要显式地计算高维空间中的坐标。这种方法可以有效地处理那些&lt;code&gt;在原始特征空间中不容易用线性模型分割的数据&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;比如要计算两个向量在高维度的积，正常方法需要将向量升维，而核函数能直接输出两个向量的点积，省去了计算和储存资源。&lt;/p&gt;
 &lt;h3 id=&#34;核函数&#34;&gt;核函数&lt;/h3&gt;
 &lt;p&gt;核函数是核方法的核心，它是一个衡量两个输入数据点相似性的函数。常见的核函数包括：&lt;/p&gt;
 &lt;ul&gt;
@@ -9113,21 +9377,22 @@ print_linklist(linklist1)  # 展示链表
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/matplotlib-mei-tian-yi-dian-matplotlib-yong-fa/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;http://c.biancheng.net/matplotlib/&#34;&gt;详细教程&lt;/a&gt;&lt;br&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/keshihua/"" data-c="
+          &lt;h1 id=&#34;matplotlib&#34;&gt;matplotlib&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;http://c.biancheng.net/matplotlib/&#34;&gt;详细教程&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.runoob.com/w3cnote/matplotlib-tutorial.html&#34;&gt;简易教程&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/258106097&#34;&gt;plt.plot()&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/m0_37362454/article/details/81511427&#34;&gt;plt.figure()：设置图像参数&lt;/a&gt;&lt;/p&gt;
-">【matplotlib】每天一点 matplotlib 用法</a>
+">【ML】可视化</a>
       </div>
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/numpy-mei-tian-yi-dian-numpy-xiao-ji-qiao/"" data-c="
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-mei-tian-yi-dian-numpy-xiao-ji-qiao/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/38353562#:~:text=Scipy%EF%BC%9A%20%E4%B8%80%E4%B8%AA%E7%94%A8%E4%BA%8E%E6%95%B0%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E3%80%81%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%A4%84%E7%90%86%E6%8F%92%E5%80%BC%E3%80%81%E7%A7%AF%E5%88%86%E3%80%81%E4%BC%98%E5%8C%96%E3%80%81%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E3%80%81%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%95%B0%E5%80%BC%E8%A7%A3%E7%9A%84%E6%B1%82%E8%A7%A3%E3%80%81%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%AD%89%E9%97%AE%E9%A2%98%E3%80%82%20Pandas%EF%BC%9A,%E5%9F%BA%E4%BA%8E%20NumPy%20%E7%9A%84%E4%B8%80%E7%A7%8D%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%AF%A5%E5%B7%A5%E5%85%B7%E6%98%AF%E4%B8%BA%E4%BA%86%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%BB%BB%E5%8A%A1%E8%80%8C%E5%88%9B%E5%BB%BA%E7%9A%84%E3%80%82&#34;&gt;numpy，scipy，pandas这些库的区别是什么？&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_39072607/article/details/89321495&#34;&gt;np.zeros：用于生成全 0 的数组&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/qq_41800366/article/details/86589680&#34;&gt;np.arange()：生成序列（等差数列）&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.w3cschool.cn/article/54960412.html&#34;&gt;np.linspace()：当要生成浮点数序列时，用该函数代替arange()，来保证精度&lt;/a&gt;&lt;/p&gt;
-">【Numpy】每天一点 Numpy 小技巧</a>
+">【ML】每天一点 Numpy 小技巧</a>
       </div>
       
       <div class="item">
@@ -9144,15 +9409,44 @@ Hamibot 需要js&lt;/p&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV16T4y1y7qj?from=search&amp;amp;seid=9938878737703056911&amp;amp;spm_id_from=333.337.0.0&#34;&gt;b站入门讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV1UR4y147AT?p=7&#34;&gt;b站详细讲解&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://mp.weixin.qq.com/s/tj_O8H3S_kdag30jivBy6g&#34;&gt;文档讲解&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;#转导式支持向量机&lt;br&gt;
-转导式学习在训练过程中使用较少的有标签样本和较多的无标签样本进行学习&lt;/p&gt;
+&lt;p&gt;在数据点间选择一个使两类数据点之间间隔最大的超平面，这个间隔被称为最大间隔。位于最大间隔边界的数据点称为支持向量。&lt;/p&gt;
+&lt;p&gt;只有支持向量决定超平面位置，其他数据点不影响。&lt;/p&gt;
+&lt;p&gt;支持向量机（SVM）的完整算法流程可以分为以下几个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;选择核函数&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;根据数据的特性选择合适的核函数。如果数据是线性可分的，可以选择线性核；如果数据非线性，可以选择RBF核、多项式核或sigmoid核等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;构建模型&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;初始化SVM模型，设置核函数、惩罚参数C（用于控制误分类和间隔大小之间的权衡）和其他参数（如核函数的参数）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化问题&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;构建一个优化问题，目标是最大化间隔，同时允许一定的误分类（软间隔SVM）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;求解优化问题&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;使用序列最小优化（SMO）算法、梯度下降法或其他优化技术求解上述优化问题，得到最优的权重向量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;找到支持向量&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;在训练完成后，识别出支持向量，这些是位于最大间隔边界上的样本点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;构建决策函数&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;使用找到的权重向量和偏置项构建决策函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;转导式支持向量机&#34;&gt;转导式支持向量机&lt;/h1&gt;
+&lt;p&gt;转导式学习在训练过程中使用较少的有标签样本和较多的无标签样本进行学习&lt;/p&gt;
 ">【ML】支持向量机（SVM）</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ml-hopfield-shen-jing-wang-luo/"" data-c="
-          &lt;p&gt;开个帖&lt;/p&gt;
-">【ML】Hopfield 神经网络</a>
       </div>
       
       <div class="item">
@@ -9352,14 +9646,14 @@ for i in range(10):
 ID3用信息增益，C4.5用信息增益率，CART用Gini系数&lt;br&gt;
 &lt;img src=&#34;https://jeromezjl.github.io/post-images/1710040898493.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
 &lt;p&gt;构建原则：希望第一次分类就尽量分对，即优先选择使数据纯度提升的属性&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ID3&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/133846252&#34;&gt;决策树算法--ID3算法&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;id3&#34;&gt;ID3&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/133846252&#34;&gt;决策树算法--ID3算法&lt;/a&gt;&lt;br&gt;
 信息熵：介于0-1之间，反映了数据纯度（和Gini系数一样）样本越纯，信息熵越趋于0，当A，B各占一半时，信息熵达到最大，值为1&lt;br&gt;
 &lt;a href=&#34;https://www.bilibili.com/video/BV18D421E7Eq?p=76&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;信息熵公式讲解&lt;/a&gt;&lt;br&gt;
 信息增益：表示数据集 D 按照 A 属性划分后，D 的纯度。信息增益值越大，划分后的纯度越大。优先选择信息增益大的属性构建决策树&lt;/p&gt;
 &lt;p&gt;但若每个属性只有一个样本，那么信息增益为 0，无法划分，所以使用信息增益率，引出C4.5算法&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;C4.5算法&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/zjsghww/article/details/51638126&#34;&gt;C4.5算法详解（非常仔细）&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;c45算法&#34;&gt;C4.5算法&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zjsghww/article/details/51638126&#34;&gt;C4.5算法详解（非常仔细）&lt;/a&gt;&lt;br&gt;
 信息增益率引入了属性内部信息&lt;br&gt;
 &lt;code&gt;算法步骤：&lt;/code&gt;&lt;br&gt;
 1）计算总信息熵 Entropy&lt;br&gt;
@@ -9373,8 +9667,8 @@ ID3用信息增益，C4.5用信息增益率，CART用Gini系数&lt;br&gt;
 ∑（ p(属性概率) * ∑ -（ p(该属性内成功概率) log2 p + p(该属性内失败概率)log2 p ））&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;习题&lt;/code&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/166393579&#34;&gt;https://zhuanlan.zhihu.com/p/166393579&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;CART（classification and regression tree）分类回归树&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/139523931&#34;&gt;决策树算法--CART分类树算法&lt;/a&gt;&lt;br&gt;
+&lt;h2 id=&#34;cartclassification-and-regression-tree分类回归树&#34;&gt;CART（classification and regression tree）分类回归树&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/139523931&#34;&gt;决策树算法--CART分类树算法&lt;/a&gt;&lt;br&gt;
 基尼系数：反映了数据的纯度（最上面视频有讲解和图像）&lt;br&gt;
 假设有两个类别 A，B，单类别占比越多，代表样本越纯&lt;br&gt;
 若全是 A / B 则基尼系数为 0，若 A、B 各占一半，则是数据最不纯的情况，Gini系数为 0.5&lt;br&gt;
@@ -9382,17 +9676,19 @@ ID3用信息增益，C4.5用信息增益率，CART用Gini系数&lt;br&gt;
 &lt;h1 id=&#34;决策树的剪枝&#34;&gt;决策树的剪枝&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u012328159/article/details/79285214&#34;&gt;决策树（decision tree）(二)——剪枝&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;随机森林&#34;&gt;随机森林&lt;/h1&gt;
-&lt;p&gt;随机森林是一种流行且强大的机器学习算法，属于集成学习方法的一种。它由多个决策树构成，通过组合多个决策树的预测结果来提高整体模型的准确性和鲁棒性。随机森林可以用于分类和回归任务，并且因其易于理解、实现简单和表现出色而广受欢迎。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV12s4y1N7Bp/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【机器学习】动画讲解随机森林&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1H5411e73F/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【五分钟机器学习】随机森林（RandomForest）：看我以弱搏强&lt;/a&gt;&lt;br&gt;
+随机森林是一种流行且强大的机器学习算法，属于&lt;code&gt;集成学习&lt;/code&gt;方法的一种。它由多个决策树构成，通过组合多个决策树的预测结果来提高整体模型的准确性和鲁棒性。随机森林可以用于分类和回归任务，并且因其易于理解、实现简单和表现出色而广受欢迎。&lt;/p&gt;
 &lt;h3 id=&#34;工作原理&#34;&gt;工作原理&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;自助采样（Bootstrap sampling）&lt;/strong&gt;：随机森林通过从原始训练数据集中进行有放回的随机采样来创建多个子集，每个子集用来训练一个决策树。这种采样方法称为自助采样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自助采样（Bootstrap sampling）&lt;/strong&gt;：从原始训练数据集中进行&lt;code&gt;有放回的&lt;/code&gt;随机采样来创建多个子集，每个子集用来训练一个决策树。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;随机特征选择&lt;/strong&gt;：在决策树的每个分裂过程中，随机森林不会考虑所有可能的特征，而是从全部特征中随机选择一个特征子集，并基于这个子集来选择最佳分裂特征。这一步增加了模型的多样性，有助于提高整体的泛化能力。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;决策树集成&lt;/strong&gt;：随机森林训练多个决策树，每个决策树都尽可能地生长到最大程度，不进行剪枝。最终的预测结果是通过对所有决策树的预测结果进行汇总得到的。对于分类任务，采用投票机制（多数投票）；对于回归任务，则采用平均值。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;决策树集成&lt;/strong&gt;：使用多个子集训练多个决策树，每个决策树都尽可能地生长到最大程度，不进行剪枝。最终的预测结果是通过对所有决策树的预测结果进行汇总得到的。对于分类任务，采用&lt;code&gt;投票&lt;/code&gt;机制（多数投票）；对于回归任务，则采用平均值。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;优点&#34;&gt;优点&lt;/h3&gt;
@@ -9420,7 +9716,7 @@ opencv 在 anaconda 中文件夹的名称叫 cv2&lt;br&gt;
 可在编译器中输入 cv2.path 来查看 cv2 安装地址，从而找到对应的算法文件&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.lsbin.com/7111.html&#34;&gt;如何使用OpenCV截取图片指定区域？&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/fjswcjswzy/article/details/105881899&#34;&gt;cv2.selectROI：框取指定区域&lt;/a&gt;&lt;/p&gt;
-">OpenCV 浅记</a>
+">【CV】OpenCV 浅记</a>
       </div>
       
       <div class="item">
