@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-22T10:19:37.689Z</updated>
+    <updated>2024-03-25T05:10:21.387Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -10,6 +10,129 @@
     <logo>https://jeromezjl.github.io/images/avatar.png</logo>
     <icon>https://jeromezjl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[AIEnglish]]></title>
+        <id>https://jeromezjl.github.io/post/aienglish/</id>
+        <link href="https://jeromezjl.github.io/post/aienglish/">
+        </link>
+        <updated>2024-03-25T04:53:47.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>Artificial General（通用） Intelligence (AGI) represents the hypothetical（假想） ability of an AI system to understand, learn, and apply knowledge across a wide range of tasks at a level of complexity comparable to human intelligence. Unlike narrow AI designed for specific tasks, AGI would possess the versatility and adaptability to perform any intellectual task that a human being can. This includes reasoning, problem-solving, abstract thinking, understanding natural language, and learning from experience. Achieving AGI is considered a monumental milestone in AI research, marking the advent of machines with human-like cognitive abilities.</li>
+</ol>
+<p>人工通用智能（AGI）代表了一个AI系统的假想能力，即理解、学习并应用知识去完成广泛的任务，这些任务的复杂度与人类智能相当。与为特定任务设计的狭义人工智能不同，AGI将拥有执行人类可以执行的任何智力任务的多功能性和适应性。这包括推理、解决问题、抽象思考、理解自然语言以及从经验中学习。实现AGI被认为是AI研究的一个重要里程碑，标志着具有类似人类认知能力的机器的到来。</p>
+<ol start="2">
+<li>Supervised learning is a machine learning approach where models are trained on labeled data, meaning each input example is paired with the correct output. The model learns by comparing its predictions to the actual outputs during training, adjusting until it can accurately predict outcomes for unseen data. Unsupervised learning, conversely, involves training models on data without explicit instructions on what to predict. The model identifies patterns and structures within the data autonomously. Supervised learning is typically used for classification and regression tasks, while unsupervised learning is used for clustering, dimensionality reduction, and association rule learning.</li>
+</ol>
+<p>监督学习是一种机器学习方法，其中模型是在标注数据上训练的，这意味着每个输入实例都与正确的输出配对。模型通过在训练期间将其预测与实际输出进行比较来学习，并调整直到它能够准确预测未见数据的结果。相反，无监督学习涉及在没有关于应预测什么的明确指导的数据上训练模型。模型自主地识别数据中的模式和结构。监督学习通常用于分类和回归任务，而无监督学习用于聚类、降维和关联规则学习。</p>
+<ol start="3">
+<li>A Multilayer Perception (MLP) is a class of feedforward artificial neural network (ANN) that consists of at least three layers of nodes: an input layer, one or more hidden layers, and an output layer. Each node, except for input nodes, uses a nonlinear activation function. MLP utilizes a supervised learning technique called backpropagation for training. Its architecture of multiple layers and nonlinear processing enables complex pattern recognition and decision-making, making it foundational to deep learning. Deep learning involves networks with many layers (deep architectures) that can learn hierarchical representations of data, significantly advancing capabilities in AI research and applications.</li>
+</ol>
+<p>多层感知机（MLP）是一种前馈人工神经网络（ANN），至少包括三层节点：一个输入层、一个或多个隐藏层以及一个输出层。除输入节点外，每个节点都使用非线性激活函数。MLP利用一种称为反向传播的监督学习技术进行训练。它的多层结构和非线性处理使得复杂的模式识别和决策成为可能，是深度学习的基础。深度学习涉及有许多层（深度架构）的网络，这些网络可以学习数据的层次化表示，显著推进了AI研究和应用能力。</p>
+<ol start="4">
+<li>Backpropagation is a cornerstone algorithm for training neural networks, particularly in deep learning. It operates by propagating the error backward from the output layer to the input layer, allowing the algorithm to adjust the weights of connections in order to minimize the error in predictions. This process involves two key phases: forward pass, where input data is fed through the network to generate output predictions, and backward pass, where the gradient of the loss function is computed with respect to each weight by the chain rule, enabling the network to learn from errors systematically. This iterative adjustment refines the model's accuracy over time.</li>
+</ol>
+<p>反向传播是训练神经网络，尤其是在深度学习中的基石算法。它通过将错误从输出层反向传播到输入层来运作，允许算法调整连接权重以最小化预测中的错误。这个过程涉及两个关键阶段：前向传播，输入数据通过网络生成输出预测；反向传播，利用链式规则计算损失函数的梯度相对于每个权重，使网络能够系统地从错误中学习。这种迭代调整随着时间提高了模型的准确性。</p>
+<ol start="5">
+<li>Overfitting is a common problem in machine learning, where a model learns the training data too well, including its noise and outliers, rather than generalizing from the pattern it should learn. This results in high accuracy on training data but poor performance on new, unseen data. Essentially, the model becomes overly complex, capturing spurious correlations that do not exist in real-world data. To combat overfitting, techniques such as cross-validation, regularization, and pruning can be used, along with ensuring a sufficient amount of diverse training data. Overfitting highlights the delicate balance between model complexity and its generalization ability.</li>
+</ol>
+<p>过拟合是机器学习中的一个常见问题，其中模型过于完美地学习了训练数据，包括其噪音和异常值，而不是从它应该学习的模式中泛化。这导致在训练数据上的高准确度但在新的、未见过的数据上的性能差。本质上，模型变得过于复杂，捕捉到了在现实世界数据中不存在的假相关性。为了对抗过拟合，可以使用交叉验证、正则化和剪枝等技术，同时确保有足够数量的多样化训练数据。过拟合突出了模型复杂度和其泛化能力之间微妙的平衡。</p>
+<ol start="6">
+<li>A Convolutional Neural Network (CNN) is a class of deep learning algorithm that can take in an input image, assign importance (learnable weights and biases) to various aspects or objects in the image, and differentiate from one another. The preprocessing required in a CNN is much lower compared to other classification algorithms. The architecture of a CNN is analogous to that of the connectivity pattern of neurons in the human brain and was inspired by the organization of the visual cortex. CNNs are primarily used in image recognition, image classification, object detection, and similar tasks, leveraging their ability to learn spatial hierarchies of features.</li>
+</ol>
+<p>卷积神经网络（CNN）是一种深度学习算法，可以接受输入图像，为图像中的不同方面或对象分配重要性（可学习的权重和偏差），并且彼此区分开来。与其他分类算法相比，CNN所需的预处理要少得多。CNN的架构类似于人脑神经元的连接模式，并且受到视觉皮层组织的启发。CNN主要用于图像识别、图像分类、对象检测以及类似任务，利用它们学习特征的空间层次结构的能力。</p>
+<ol start="7">
+<li>Deep Reinforcement Learning (DRL) combines deep learning and reinforcement learning principles to create systems that can learn to make decisions. Deep learning processes vast amounts of data through neural networks, enabling feature detection and recognition. Reinforcement learning, on the other hand, is about agents learning to make actions in an environment to achieve a goal, guided by rewards or penalties. DRL utilizes deep neural networks to interpret complex, high-dimensional inputs, allowing the agent to learn optimal actions from its experiences, without explicit programming. This approach has led to significant breakthroughs, such as mastering complex games and improving decision-making in robotics and autonomous vehicles.**</li>
+</ol>
+<p>深度强化学习（DRL）结合了深度学习和强化学习原理，创造了能够学习做出决策的系统。深度学习通过神经网络处理大量数据，使特征检测和识别成为可能。另一方面，强化学习是关于代理在环境中学习采取行动以实现目标，由奖励或惩罚指导。DRL利用深度神经网络来解释复杂的、高维输入，允许代理从经验中学习最优行动，无需显式编程。这种方法已经在如掌握复杂游戏和改善机器人与自动驾驶车辆的决策制定方面取得了重大突破。</p>
+<ol start="8">
+<li>In deep learning, activation functions are crucial for neural networks to learn complex patterns. They introduce non-linearity into the network, allowing it to model complicated relationships between inputs and outputs that linear equations cannot. Without activation functions, a neural network, regardless of its depth, would behave like a single-layer perceptron, only capable of solving linear problems. Activation functions, such as Sigmoid, ReLU, and Tanh, help decide whether a neuron should be activated or not, determining the output of neural networks based on input features. This enables deep learning models to tackle non-linear problems, like image recognition and natural language processing, effectively.**</li>
+</ol>
+<p>在深度学习中，激活函数对于神经网络学习复杂模式至关重要。它们为网络引入非线性，使其能够模拟输入与输出之间的复杂关系，而这是线性方程无法做到的。没有激活函数，无论神经网络的深度如何，都会表现得像一个只能解决线性问题的单层感知机。激活函数，如Sigmoid、ReLU和Tanh，帮助决定一个神经元是否应该被激活，决定了神经网络基于输入特征的输出。这使得深度学习模型能够有效地处理非线性问题，如图像识别和自然语言处理。</p>
+<ol start="9">
+<li>A generative model in artificial intelligence is an approach used to automatically generate new data instances that resemble a given set of data. Unlike discriminative models, which focus on determining the boundary between different classes, generative models learn the underlying distribution of input data, enabling them to produce new examples that could plausibly come from the original dataset. This ability makes generative models especially valuable in tasks such as image and text generation, data augmentation, and unsupervised learning. Popular examples of generative models include Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), which have been applied in creating realistic images, text-to-image synthesis, and more.</li>
+</ol>
+<p>在人工智能中，生成模型是一种用于自动生成类似于给定数据集的新数据实例的方法。与专注于确定不同类别之间边界的判别模型不同，生成模型学习输入数据的底层分布，使它们能够生成可能来自原始数据集的新例子。这种能力使得生成模型在图像和文本生成、数据增强和无监督学习等任务中特别有价值。流行的生成模型例子包括生成对抗网络（GANs）和变分自编码器（VAEs），这些已被应用于创造逼真的图像、文本到图像的合成等。</p>
+<ol start="10">
+<li>Transformer is a groundbreaking architecture in deep learning, introduced for dealing with sequential data, notably in natural language processing (NLP). Unlike its predecessors that relied on recurrence or convolutions, the transformer utilizes attention mechanisms to weigh the significance of different words within the input data. This allows it to capture complex dependencies and relationships within the data more effectively. The architecture comprises an encoder to process the input and a decoder for output generation. Transformers have led to significant advancements in tasks such as machine translation, text summarization, and language understanding, serving as the foundation for models like BERT and GPT.</li>
+</ol>
+<p>Transformer 是深度学习中的一种开创性架构，专门用于处理顺序数据，特别是在自然语言处理（NLP）中。与依赖于递归或卷积的前身不同，Transformer 利用注意力机制来权衡输入数据中不同单词的重要性。这使它能够更有效地捕捉数据内的复杂依赖关系。该架构包括一个编码器来处理输入和一个解码器来生成输出。Transformer 在机器翻译、文本摘要和语言理解等任务上取得了重大进展，为像BERT和GPT这样的模型提供了基础。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[复试项目]]></title>
+        <id>https://jeromezjl.github.io/post/fu-shi-xiang-mu/</id>
+        <link href="https://jeromezjl.github.io/post/fu-shi-xiang-mu/">
+        </link>
+        <updated>2024-03-23T13:15:13.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="gan">GAN</h1>
+<p>使用 CIFAR-10 数据集，包含动物和交通工具的图片<br>
+生成器和判别器都使用 CNN<br>
+生成器：四层卷积，中间用 ReLU，最后用 Tanh<br>
+判别器：四层卷积，中间用 ReLU，最后用 Sigmoid<br>
+使用交叉熵损失函数<br>
+先训练判别器，给判别器真实图片和假图片，分别带有标签，来更新判别器参数<br>
+再训练生成器，让生成器生成图片，让判别器判断，更新生成器的参数，使判别器认为生成的是真实图片</p>
+<h1 id="cnn-人脸识别">CNN 人脸识别</h1>
+<p>首先进行三分类，小组同学三人，每人录制一个全方位的不同角度的面部视频，<br>
+使用openCV对视频进行分割，获得3000张左右不同角度、不同光照的人脸图片<br>
+CNN：使用alexnet架构，5层卷积，3层最大池化，使用 ReLU 激活，最后 softmax</p>
+<h1 id="手写数字">手写数字</h1>
+<p>LeNet-5<br>
+<img src="https://jeromezjl.github.io/post-images/1710506415759.png" alt="" loading="lazy"><br>
+使用MNIST：28x28，第一层 padding=2，输入网络是 32x32</p>
+<ol>
+<li>
+<p><strong>输入层（Input Layer）</strong>：接受的输入图像大小通常是32x32像素。这是因为网络设计时考虑到数字的实际大小和希望网络能够捕捉到重要的特征。</p>
+</li>
+<li>
+<p><strong>第一卷积层（C1）</strong>：这一层使用6个卷积核（或滤波器），每个大小为5x5，步长为1，无填充（padding），输出的特征图（feature map）大小为28x28x6。</p>
+</li>
+<li>
+<p><strong>第一下采样层（S2）</strong>：也称为池化层，使用2x2的窗口进行平均池化，步长为2，将特征图的维度降低到14x14x6。这一步骤有助于减少数据的空间尺寸，从而减少计算量和控制过拟合。</p>
+</li>
+<li>
+<p><strong>第二卷积层（C3）</strong>：这一层有16个卷积核，每个大小为5x5，处理上一层的输出，产生10x10x16的特征图。这一层的设计允许网络学习更高级的特征。</p>
+</li>
+<li>
+<p><strong>第二下采样层（S4）</strong>：同样采用2x2平均池化，步长为2，输出的维度为5x5x16。</p>
+</li>
+<li>
+<p><strong>全连接层（F5）</strong>：这一层有120个节点，它将前一层的输出展平（flatten）并全连接到这120个节点上。这一层开始将学到的特征组合成更高级别的模式。</p>
+</li>
+<li>
+<p><strong>第二全连接层（F6）</strong>：这一层有84个节点，进一步处理特征，为最终的分类决策做准备。</p>
+</li>
+<li>
+<p><strong>输出层（Output Layer）</strong>：最后是一个具有10个节点的输出层，对应于10个数字类（0到9）。这一层通常使用softmax激活函数，将网络的输出转换为概率分布。</p>
+</li>
+</ol>
+<p>两层卷积两层池化，卷积池化之间使用 Sigmoid 激活，最后使用全连接层映射到 10 个分类</p>
+<h1 id="光度立体法">光度立体法</h1>
+<p>对要检测物体在不同方向的光照条件下进行多次拍照。每次改变的只有光源的位置，确保光源的强度和颜色保持一致。<br>
+结合不同光照下的像素亮度值，使用最小二乘法计算每个像素点处的表面法向量。用法向量重构三维物体</p>
+<h1 id="sift和词袋模型">SIFT和词袋模型</h1>
+<p>使用 15-Scene 数据集，包含 15 种不同类型的场景，例如办公室、厨房、卧室、客厅、乡村、海滩等。<br>
+共4400张左右，7比3的比例来划分训练集和测试集</p>
+<p>原理<br>
+SIFT对每张图片生成不同个数的特征描述向量，将这些向量输入kmeans中，聚为300类，即构建了大小为300的视觉词汇表<br>
+使用bow对图像编码：<br>
+对于每张图像，将其SIFT特征向量与视觉词汇表中的词汇进行比较，找出每个特征向量最接近的视觉词。然后，为每张图像创建一个长度为k的向量（即BoW向量），其中每个元素记录了对应视觉词在该图像中出现的频率。<br>
+将图向量输入 svm，一对多将图片分为15类</p>
+<h1 id="roberta-问答系统">RoBERTa 问答系统</h1>
+<p>SQuAD 数据集是斯坦福大学开发的一个流行的问答数据集，广泛用于自然语言处理中的机器阅读理解研究。SQuAD挑战模型根据给定的段落文本来回答问题。这些段落来自维基百科的文章，问题则是由人工撰写的。SQuAD的目标是推进计算机对自然语言的理解，特别是在问答系统的开发上。</p>
+<p>使用transformer中预训练的 RoBERTa</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[八股文]]></title>
+        <id>https://jeromezjl.github.io/post/ba-gu-wen/</id>
+        <link href="https://jeromezjl.github.io/post/ba-gu-wen/">
+        </link>
+        <updated>2024-03-23T11:07:26.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/366839763">计算机网络八股文背诵版</a><br>
+<a href="https://zhuanlan.zhihu.com/p/373966882">操作系统八股文背诵版</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【DL】图神经网络]]></title>
         <id>https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/</id>
@@ -676,264 +799,6 @@ Transformer：Seq2Seq model with attention</p>
 <p>总的来说，蒙特卡洛方法在强化学习中提供了一种强大的工具，尤其是在那些模型未知或难以精确建模的情况下。通过适当的策略和技巧（如重要性采样）的改进，可以进一步增强MC方法的应用范围和效率。</p>
 <h2 id="时序差分法">时序差分法</h2>
 <h3 id="q-learning">Q-Learning</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【NLP】时序模型与马尔可夫模型]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-shi-xu-mo-xing-yu-ma-er-ke-fu-mo-xing/">
-        </link>
-        <updated>2024-03-12T12:24:02.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_39653948/article/details/105571760">原理+论文+实战：60篇由浅入深的时间序列预测/分类教程汇总</a></p>
-<h1 id="时序模型">时序模型</h1>
-<p>t 时刻的状态和前面的数据相关<br>
-自回归：预测（同一序列）后面的值，是根据（同一序列）前面的值来预测，即使用自身过去数据预测未来</p>
-<h1 id="潜变量模型">潜变量模型</h1>
-<p><img src="https://jeromezjl.github.io/post-images/1710309825352.jpg" alt="" loading="lazy"><br>
-h' 包含了 h 和 x 的信息，也就是之前状态的信息</p>
-<h1 id="马尔可夫模型">马尔可夫模型</h1>
-<p><a href="https://www.bilibili.com/video/BV1Mr4y1f7Nm?p=1&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">火遍油管！终于有大神把【马尔可夫链】给做成动画了！</a></p>
-<p>马尔可夫性质：系统的下一个状态只依赖于当前状态，而与之前的状态无关。具有“无记忆性”</p>
-<p>马尔可夫假设：第N个词的出现只与前面N-1个词相关，而与其它任何词都不相关。N-gram模型就是基于该假设构建的</p>
-<h1 id="马尔科夫链">马尔科夫链</h1>
-<p>是依赖于马尔可夫假设的最基本的模型，用于模拟随即系统的状态转移<br>
-未来的状态只取决于现在的状态，和之前的步骤无关<br>
-任何状态所有出箭头概率之和为1<br>
-转移状态矩阵：类似于有向图<br>
-要找到在 n 步转移中，由状态 i 转移到状态 j 的概率，只需要找到 n 阶状态转移矩阵第 i 行 j 列</p>
-<h1 id="隐马尔可夫模型-hmm">隐马尔可夫模型 HMM</h1>
-<p>HMM 在马尔可夫链的基础上增加了“隐状态”和“观测状态”的概念。HMM 在马尔可夫链的基础上加入了观测数据，用于处理观测与状态间存在某种隐含关系的情况。</p>
-<p>在 HMM 中，系统的真实状态（隐状态）不能直接观测，只能通过一些观测到的事件（观测状态）间接推断。</p>
-<p>HMM 被广泛应用于序列数据的建模，如语音识别、生物序列分析等，其中系统的内部状态不是直接可见的。</p>
-<p>隐马尔可夫模型（Hidden Markov Model, HMM）是一种统计模型，它用于描述一个观测序列背后的一个不可观测（隐含）状态序列。这个模型假设隐含状态生成观测数据的过程具有马尔可夫性质，即每个状态的发生仅依赖于它之前的一个状态。隐马尔可夫模型在语音识别、自然语言处理、生物信息学和其他许多领域有广泛的应用。</p>
-<p>隐马尔可夫模型主要包含以下几个组成部分：</p>
-<ol>
-<li><strong>隐状态集合</strong>：模型中不可直接观测到的内部状态的集合。</li>
-<li><strong>观测集合</strong>：每个隐状态可以生成的观测数据的集合。</li>
-<li><strong>状态转移概率矩阵</strong>：隐状态之间转移的概率，表示为一个矩阵。矩阵的每个元素 aij 表示从状态 i 转移到状态 j 的概率。</li>
-<li><strong>观测概率分布</strong>：也称为发射概率，它表示在给定某个隐状态的情况下，生成某个观测值的概率。</li>
-<li><strong>初始状态概率分布</strong>：模型在开始时每个隐状态的初始概率分布。</li>
-</ol>
-<p>隐马尔可夫模型的基本假设包括：</p>
-<ul>
-<li><strong>马尔可夫假设</strong>：每个隐状态仅依赖于它之前的一个隐状态。</li>
-<li><strong>观测独立性假设</strong>：任何时刻的观测值仅依赖于当前的隐状态，与其他隐状态或观测值无关。</li>
-</ul>
-<p>隐马尔可夫模型的三个基本问题：</p>
-<ol>
-<li><strong>评估问题</strong>：给定模型参数和观测序列，计算观测序列出现的概率。这通常通过前向算法或后向算法解决。</li>
-<li><strong>解码问题</strong>：给定模型参数和观测序列，找出最有可能产生这些观测的隐状态序列。这通常通过Viterbi算法解决。</li>
-<li><strong>学习问题</strong>：给定观测序列，估计模型参数（状态转移概率、观测概率和初始状态概率），使得观测序列的概率最大。这可以通过Baum-Welch算法（一种特殊的期望最大化算法）来解决。</li>
-</ol>
-<h1 id="马尔可夫决策过程">马尔可夫决策过程</h1>
-<p>马尔可夫决策过程（Markov Decision Process, MDP）是一种数学框架，用于形式化描述在不确定性环境中的决策制定问题。MDP 适用于那些决策结果部分依赖于决策者并且部分依赖于随机因素的情形。MDP 主要用于需要做出一系列决策的场景，如自动控制、经济学决策、强化学习等，目标是找到最优策略，以最大化长期奖励。</p>
-<p>MDP 在马尔可夫链的基础上加入了“决策”的元素，引入了动作（Actions）、状态转移概率和奖励（Reward）。不仅关注状态的转移，还关注在给定状态下采取不同动作所导致的后果和收益。</p>
-<p>一个 MDP 主要由以下四个元素组成：</p>
-<ol>
-<li>
-<p><strong>状态（S）</strong>：描述决策过程中可能到达的所有状态的集合。每个状态提供了决策环境的完整描述。</p>
-</li>
-<li>
-<p><strong>动作（A）</strong>：对于每个状态，都有一组可能的动作（或决策）。动作决定了状态转移的可能性。</p>
-</li>
-<li>
-<p><strong>状态转移概率（P）</strong>：表示为 P(s'|s, a)，即在状态 s 下采取动作 a 后转移到状态 s' 的概率。这个概率捕捉了环境的动态性和不确定性。</p>
-</li>
-<li>
-<p><strong>奖励（R）</strong>：函数 R(s, a, s') 表示从状态 s 采取动作 a 并转移到状态 s' 所得到的即时奖励（或成本）。奖励函数评估每个动作的即时效用。</p>
-</li>
-</ol>
-<p>目标是找到一个<strong>策略</strong>（Policy），即从每个状态到动作的映射，以最大化某种性能标准，通常是预期收益的总和。这种性能标准可以是累积奖励的总和，也可能涉及对未来奖励的贴现（Discounting）。</p>
-<p>在解决 MDP 问题时，通常涉及到两种主要的策略：</p>
-<ul>
-<li>
-<p><strong>价值迭代（Value Iteration）</strong>：通过不断迭代更新状态值函数来逼近最优解，直到达到稳定状态。</p>
-</li>
-<li>
-<p><strong>策略迭代（Policy Iteration）</strong>：包含两个步骤，策略评估（计算当前策略的值）和策略改进（基于当前值函数更新策略），这两个步骤交替进行直到策略收敛。</p>
-</li>
-</ul>
-<p>MDP 提供了一种强大的框架来模拟和解决决策问题，尤其是在考虑时间和不确定性时。在强化学习中，智能体通过与环境的交互来学习最优策略，通常是在没有初始知识的情况下通过试错学习。</p>
-<h1 id="马尔可夫随机场">马尔可夫随机场</h1>
-<p>马尔可夫随机场（Markov Random Field，MRF），也被称为概率无向图模型，是一种用于建模多元随机变量联合分布的统计模型，其中变量间的关系用一个无向图来表示。在这个图中，每个节点代表一个随机变量，而边则表示变量之间的潜在依赖关系。</p>
-<p>MRF 主要用于建模那些变量间具有空间或者其他形式相互依赖性的系统，广泛应用于图像处理、空间数据分析和计算机视觉等领域。MRF 的一个关键特性是局部性原理，即给定某个变量的邻居（在图中直接与之相连的节点）后，该变量条件独立于其它所有变量。这种性质被称为马尔可夫性质。</p>
-<h3 id="关键概念">关键概念</h3>
-<ul>
-<li><strong>节点</strong>：图中的每个节点代表一个随机变量，可以是观测到的数据点或是隐藏变量。</li>
-<li><strong>边</strong>：节点之间的边表示变量间的直接依赖关系。</li>
-<li><strong>团和最大团</strong>：在图中，任何相互连接的节点集合称为团。不可能加入更多节点的团称为最大团。</li>
-<li><strong>势函数</strong>：用于量化节点或节点组合的概率分布，通常定义在最大团上。势函数表达了变量之间的相互作用强度。</li>
-</ul>
-<h3 id="马尔可夫性质">马尔可夫性质</h3>
-<p>MRF 的核心是马尔可夫性质，即在给定一个节点的邻居的情况下，该节点与图中其他节点条件独立。这意味着，节点的局部环境提供了足够的信息来预测该节点的行为，而无需考虑更远的节点。</p>
-<h3 id="hammersley-clifford-定理">Hammersley-Clifford 定理</h3>
-<p>这个定理是 MRF 理论中的一个关键结果，它指出：在满足一定条件下，一个分布可以被表示为一个马尔可夫随机场，如果且仅如果它可以被表示为一个图上的势函数的乘积形式。</p>
-<h3 id="应用示例">应用示例</h3>
-<p>在图像处理中，MRF 可以用于图像恢复、分割和纹理合成。比如，在噪声图像恢复中，每个像素点可以视为一个随机变量，相邻像素间的相关性可以用 MRF 来建模，以此推断最可能的干净图像。</p>
-<h3 id="求解方法">求解方法</h3>
-<p>MRF 的推断和学习通常是计算密集型的，常用的方法包括吉布斯采样（Gibbs Sampling）、模拟退火（Simulated Annealing）和置信传播（Belief Propagation）等。这些方法旨在通过迭代过程来近似地估计或优化目标函数，从而解决相关的最优化问题。</p>
-<p><a href="https://blog.csdn.net/qq_40986693/article/details/104179088">Belief Propagation信念传播算法详解</a><br>
-马尔科夫随机场提供了一种建模多变量依赖关系的框架，而信念传播算法则是一种在这种框架下进行有效推理的方法。通过在马尔科夫随机场上运用信念传播算法，可以进行高效的概率推断和决策。</p>
-<h1 id="关于马尔可夫模型的问答">关于马尔可夫模型的问答</h1>
-<h3 id="基础理解">基础理解</h3>
-<ol>
-<li>
-<p>请解释什么是马尔可夫链以及它的基本性质。<br>
-马尔可夫链是一种随机过程，其中下一个状态的概率仅依赖于当前状态，这被称为无记忆性。基本性质包括状态空间、初始状态概率和状态转移概率。</p>
-</li>
-<li>
-<p>描述隐马尔可夫模型（HMM）及其与马尔可夫链的主要区别。<br>
-HMM是一种统计模型，它用来描述观测序列背后的一个不可见的状态序列。与马尔可夫链不同，HMM包含隐状态和观测状态，且观测状态的概率分布依赖于隐状态。</p>
-</li>
-<li>
-<p>马尔可夫链的“无记忆性”或“马尔可夫性”是什么意思？请给出一个实际应用的例子。<br>
-马尔可夫性指的是系统的下一个状态仅依赖于当前状态，而与之前的历史无关。例如，天气模型中，明天是晴天还是雨天仅依赖于今天的天气，而不是之前的天气历史。</p>
-</li>
-<li>
-<p>在隐马尔可夫模型中，什么是隐状态？什么是观测状态？<br>
-在HMM中，隐状态是模型中不直接可见的内部状态，而观测状态是由隐状态生成的、可以直接观察到的状态。</p>
-</li>
-</ol>
-<h3 id="数学与算法">数学与算法</h3>
-<ol start="5">
-<li>
-<p>如何表示和计算马尔可夫链的状态转移概率矩阵？<br>
-状态转移概率矩阵是一个方阵，其元素 aij 表示从状态 i 转移到状态 j 的概率。（邻接矩阵）</p>
-</li>
-<li>
-<p>解释隐马尔可夫模型中的前向算法和后向算法的作用。<br>
-前向算法用于计算在给定模型参数的情况下，观测序列出现的概率。后向算法也用于相似的目的，但是从序列的末尾开始计算。</p>
-</li>
-<li>
-<p>什么是Viterbi算法？它在隐马尔可夫模型中用来解决什么问题？<br>
-Viterbi算法是一种动态规划算法，用于找出最有可能产生给定观测序列的隐状态序列，在HMM中用于解决解码问题。</p>
-</li>
-<li>
-<p>描述Baum-Welch算法在隐马尔可夫模型中的应用及其目的。<br>
-Baum-Welch算法是一种特殊的EM算法，用于未知参数的HMM中。它通过迭代过程优化模型参数以最大化给定观测序列的概率。</p>
-</li>
-</ol>
-<h3 id="应用与实践">应用与实践</h3>
-<ol>
-<li>描述一个使用隐马尔可夫模型的自然语言处理应用案例。<br>
-在自然语言处理中，HMM可用于词性标注，其中隐状态代表单词的词性，观测状态代表实际的单词。</li>
-</ol>
-<h3 id="深度与挑战">深度与挑战</h3>
-<ol>
-<li>
-<p>在处理非平稳时间序列数据时，马尔可夫链模型有哪些局限性，如何克服？<br>
-马尔可夫链假设转移概率不随时间变化。对于非平稳数据，可以使用时间依赖的马尔可夫模型或通过增加状态来模拟时间变化的影响。</p>
-</li>
-<li>
-<p>对于有大量状态的系统，隐马尔可夫模型的性能和可行性如何？存在哪些优化或替代方案？<br>
-当状态空间很大时，HMM的计算复杂性会显著增加。可能的优化包括使用近似方法、约简状态空间或采用更高效的算法。</p>
-</li>
-<li>
-<p>讨论在实际应用中构建和训练隐马尔可夫模型时可能遇到的挑战及其解决方案。<br>
-实际应用中的挑战包括数据稀疏性、参数初始化以及模型选择。解决方案可能包括使用平滑技术、合理的启发式初始化策略和交叉验证来选择模型。</p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ML】Softmax]]></title>
-        <id>https://jeromezjl.github.io/post/ml-softmax/</id>
-        <link href="https://jeromezjl.github.io/post/ml-softmax/">
-        </link>
-        <updated>2024-03-11T14:44:10.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://jeromezjl.github.io/post-images/1710168281390.png" alt="" loading="lazy"><br>
-Softmax 函数如上图所示，分子 xi 是每个数据的值，将其指数化，将输出的数值拉开距离。分母是所有数据指数之和，这是一种概率形式，表达为样本占所有值的概率。<br>
-它可以用作 Softmax 回归、Softmax 激活函数在神经网络中往往用在最后一层，特别是在处理分类问题时，将网络的原始输出转换为更直观的概率形式。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/105722023">一文详解Softmax函数</a></p>
-<pre><code>Softmax 从字面上来说，可以分成soft和max两个部分。
-max故名思议就是最大值的意思。Softmax的核心在于soft，而soft有软的含义，与之相对的是hard硬。
-很多场景中需要我们找出数组所有元素中值最大的元素，实质上都是求的hardmax。
-hardmax 是求一组数据中唯一的最大值，而 Softmax 是输出概率，可以自己选择概率最大的前几个值
-</code></pre>
-<p><a href="https://www.bilibili.com/video/BV18u411L7tU/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">什么是softmax回归，如何使用softmax回归，解决多分类任务</a></p>
-<p>Softmax 激活函数：通常用于多分类问题的输出层（最后一层），将 logits（即最后一个线性层的输出）转换成概率分布。<br>
-隐藏层激活函数不用 Softmax，用 ReLU、tanh 和 sigmoid 等，用于增加网络的非线性，帮助模型学习复杂的特征表示。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DL】Transformer]]></title>
-        <id>https://jeromezjl.github.io/post/dl-transformer/</id>
-        <link href="https://jeromezjl.github.io/post/dl-transformer/">
-        </link>
-        <updated>2024-03-11T09:23:50.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1MY41137AK/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【Transformer模型】曼妙动画轻松学，形象比喻贼好记</a><br>
-<a href="https://www.bilibili.com/video/BV1ih4y1J7rx/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">超强动画，一步一步深入浅出解释Transformer原理！</a><br>
-<a href="https://www.bilibili.com/video/BV1Kq4y1H7FL?p=1">68 Transformer【动手学深度学习v2】</a><br>
-<a href="https://zhuanlan.zhihu.com/p/338817680">Transformer模型详解（图解最完整版）</a><br>
-<a href="https://zhuanlan.zhihu.com/p/403433120">【Transformer】10分钟学会Transformer | Pytorch代码讲解 | 代码可运行</a><br>
-<a href="https://www.bilibili.com/video/BV1pu411o7BE/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Transformer论文逐段精读【论文精读】</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/194308943">Seq2Seq模型介绍</a><br>
-Transformer：Seq2Seq model with attention</p>
-<h1 id="结构介绍">结构介绍</h1>
-<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1710839949031.png" alt="" loading="lazy"></figure>
-<h2 id="attention">Attention</h2>
-<p><a href="https://www.bilibili.com/video/BV1264y1i7R1/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">64 注意力机制【动手学深度学习v2】</a><br>
-<a href="https://www.bilibili.com/video/BV1QW4y167iq/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">09 Transformer 之什么是注意力机制（Attention）</a><br>
-<a href="https://www.bilibili.com/video/BV1q3411U7Hi/?spm_id_from=333.788.recommend_more_video.5&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">Attention、Transformer公式推导和矩阵变化</a><br>
-和RNN的区别：RNN 是串行的，attention 是并行的。时序模型会占用很大的内存，而且容易遗忘前面学过的东西，transformer使用attention矩阵运算，使得数据可以并行计算，提升了效率</p>
-<p>Query，Key，Value 的概念取自于信息检索系统，举个简单的搜索的例子来说。当你在某电商平台搜索某件商品（年轻女士冬季穿的红色薄款羽绒服）时，你在搜索引擎上输入的内容便是 Query。<br>
-然后搜索引擎根据 Query 为你匹配 Key（例如商品的种类，颜色，描述等）。<br>
-然后根据 Query 和 Key 的<code>相似度</code>，用 softmax 选择概率最大的，将结果和V相乘，得到 Value 中最匹配的内容。</p>
-<p>相似度计算：QK 求内积（余弦相似度）</p>
-<p>多头注意力机制是指，有n个自注意力模块，每个自注意力模块都有 QKV 三个矩阵。多头注意力的作用可以类比多卷积核，为了更好的提取特征</p>
-<p>分为注意力、自注意力、带有mask的注意力<br>
-注意力：简单的 QKV<br>
-自注意力：QKV都来自于序列自己<br>
-带有mask的注意力：attention 每一次都可以看见完整的输入，而训练 decoder 的时候，由于要预测 t 时刻后的输入，所以 decoder 的 attention 是带 mask 的，保证在 t 时间输入后不会看见 t 时间之后的输入，确保模型在生成每个词时只能依赖于它之前的词，从而保持自回归特性。</p>
-<h2 id="feed-forward">Feed Forward</h2>
-<p>全连接层</p>
-<h2 id="addnorm">Add&amp;Norm</h2>
-<p>Add 是一个残差块，和 ResNet 中的一样，使得网络能做很深<br>
-<img src="https://jeromezjl.github.io/post-images/1710840452631.png" alt="" loading="lazy"><br>
-为什么采用 layer norm 而不是 batch norm：因为在语言 embedding 中，每个样本的长度可能不一样，所以以 batch 为单位进行标准化会有无用信息；而 layer norm 是将每个特征做标准化，效果更好</p>
-<h2 id="encoder-decoder">encoder-decoder</h2>
-<p>encoder和decoder是一一对应的，且encoder的输出维度等于decoder的输入维度<br>
-编码器的输出，将其作为解码器中第二层注意力的 key 和 value，其 query 来自目标序列</p>
-<p>原文 encoder 和 decoder 都用了6个</p>
-<p><strong>思维导图</strong><br>
-<img src="https://jeromezjl.github.io/post-images/1686115237621.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115244889.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115251026.png" alt="" loading="lazy"><br>
-<img src="https://jeromezjl.github.io/post-images/1686115255439.png" alt="" loading="lazy"></p>
-<h1 id="变体">变体</h1>
-<p>Transformer 模型自从在 &quot;Attention is All You Need&quot; 论文中被首次提出以来，已经孕育出许多变体，这些变体针对不同的应用场景和性能优化进行了设计。以下是一些比较著名的 Transformer 模型变体：</p>
-<ol>
-<li>
-<p><strong>BERT (Bidirectional Encoder Representations from Transformers)</strong>: 由 Google 提出，BERT 通过双向训练的方式来更好地理解语言上下文，广泛应用于文本分类、命名实体识别、问答系统等领域。</p>
-</li>
-<li>
-<p><strong>GPT (Generative Pre-trained Transformer)</strong>: OpenAI 开发的一系列模型，包括 GPT、GPT-2、GPT-3 等，主要用于文本生成任务，如文本续写、机器翻译、对话系统等。</p>
-</li>
-<li>
-<p><strong>Transformer-XL</strong>: 这个变体通过使用一个特殊的序列建模方式解决了标准 Transformer 在处理长序列时的限制，它能够在长序列文本上获得更好的性能。</p>
-</li>
-<li>
-<p><strong>XLNet</strong>: 结合了 Transformer-XL 和 GPT 的优点，使用了双向上下文和排列语言模型的训练方式，表现在很多自然语言处理任务中超越了 BERT。</p>
-</li>
-<li>
-<p><strong>RoBERTa (Robustly Optimized BERT approach)</strong>: 是 BERT 的一个优化版本，通过更大规模的数据集和更长时间的训练，以及调整了一些超参数，来提高模型的性能。</p>
-</li>
-<li>
-<p><strong>ALBERT (A Lite BERT)</strong>: 通过参数共享和因子化嵌入矩阵，显著减少了模型的大小，同时保持或超越了 BERT 的性能。</p>
-</li>
-<li>
-<p><strong>T5 (Text-to-Text Transfer Transformer)</strong>: 将各种自然语言处理任务统一为一个文本到文本的框架，通过简化任务格式提高了模型的通用性和灵活性。</p>
-</li>
-<li>
-<p><strong>Electra</strong>: 通过引入更有效率的预训练任务（类似于GAN的判别器任务），在较小的计算预算下达到或超过了 BERT 的性能。</p>
-</li>
-<li>
-<p><strong>DeBERTa (Decoding-enhanced BERT with Disentangled Attention)</strong>: 通过改进 BERT 的注意力机制，引入解耦注意力和增强的掩码解码器，提高了模型处理自然语言理解任务的能力。</p>
-</li>
-<li>
-<p><strong>ViT (Vision Transformer)</strong>: 将 Transformer 应用于图像分类任务，通过将图像分割成多个小块（patches）并将它们作为序列输入到 Transformer 中，展示了 Transformer 架构在非NLP任务上的潜力。</p>
-</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
