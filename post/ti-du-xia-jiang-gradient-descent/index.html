@@ -8,7 +8,7 @@
 <meta name="keywords" content="Jerome">
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
-<title>FL Studio 水果 | Jerome</title>
+<title>【ML】以梯度下降（Gradient Descent）展开的优化器总结 | Jerome</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1711722264691">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -51,8 +51,8 @@
 
 
 
-  <meta name="description" content="FL Studio 水果" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="【ML】以梯度下降（Gradient Descent）展开的优化器总结" />
+  <meta name="keywords" content="ML" />
 </head>
 
 <body>
@@ -216,7 +216,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -275,6 +276,195 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper  auto"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%89%E7%A7%8D%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D">三种梯度下降</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
+  }
+
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
           
         
       </div>
@@ -362,21 +552,32 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jeromezjl.github.io/post/fl-studio/"> FL Studio 水果 </a>
+    <a class="post-title-link" href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/"> 【ML】以梯度下降（Gradient Descent）展开的优化器总结 </a>
   </h1>
   <div class="post-meta">
     
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2022-12-18 23:40:35">2022-12-18</span>
+      <span class="publish-time" data-t="2022-10-25 20:57:09">2022-10-25</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show language" data-lan="category-in">标签:</span>
+       
+      <a href="https://jeromezjl.github.io/tag/rxDlpU0zX/">
+        <span>ML</span>
+      </a>
+       
+    </span>
+    <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
       <i class="fa fa-clock-o"></i>
       <span
-        >1<span class="language" data-lan="minute"
+        >6<span class="language" data-lan="minute"
           >分钟</span
         ></span
       >
@@ -385,7 +586,7 @@
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
       <span
-        >184<span class="pc-show language" data-lan="words"
+        >1442<span class="pc-show language" data-lan="words"
           >字数</span
         ></span
       >
@@ -395,21 +596,60 @@
 </section>
 
             <div class="post-body next-md-body" id="post_body">
-              <p>Alt+R 调节音量swing<br>
-ctrl左键选择所有<br>
-Alt+U 切分音<br>
-ctrl+L 延长音符<br>
-ctrl+Alt+Z 撤回<br>
-ctrl+T 添加标签<br>
-ctrl+Q 对齐音符</p>
-<p>FPC：打击垫</p>
-<p><a href="https://obeato.com/how-to-merge-patterns-in-fl-studio/#:~:text=To%20be%20able%20to%20do%20split%20patterns%20in,project%20and%20select%20the%20split%20by%20channel%20option.">How To Merge Patterns In FL Studio + Split [Quick Guide]</a><br>
-<a href="https://www.flstudiochina.com/rumen/fl-yltz.html">如何在FL Studio中对整首歌曲音量进行调整</a></p>
-<p>BPM：每分钟节拍数<br>
-水果的一个格子里有四拍，一个格子是节拍器的一个循环；BPM越高，一个小结的拍数不变，则同小节的曲子长度越短</p>
-<p>如果遇到爆音、嘈杂音质等问题（原音频没有问题，很清晰）那么是CPU带不动了。重新设置声卡。<br>
-点击 选项 - 音频设置 - 设备 更改选项。<br>
-<a href="https://chilloutwithbeats.com/en/flstudio20-bufferlength/">设备设置问题</a></p>
+              <p>本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）<br>
+损失函数也可以理解为代价函数，机器学习中通常指同一种东西<br>
+<a href="https://www.bilibili.com/video/BV18P4y1j7uH/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【梯度下降】3D可视化讲解通俗易懂</a><br>
+<a href="https://www.bilibili.com/video/BV1oY411N7Xz/?spm_id_from=333.337.search-card.all.click">5分钟深度学习-01 梯度下降算法</a><br>
+<a href="https://www.bilibili.com/video/BV1bP4y1p7Gq/?spm_id_from=333.999.0.0&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">72 优化算法【动手学深度学习v2】</a></p>
+<p>梯度下降算法，拿最简单的线性拟合的例子，首先随机取一条直线 y=wx+b 计算每个真实数据点 xi 和预测值 yi 的差值的平方和，对所有点求和，然后求一个平均，其实就是在求样本的 MSE 均方误差。<br>
+MSE 越小代表直线对整体点的拟合效果越好，任务就是求 MSE 这个式子的最小值。<br>
+进行整理后发现，可以将这个式子变为一个二次函数的形式，最小值即对称轴所在点。<br>
+而机器学习中不能一下看出来，所以采取 GD 算法通过逐步迭代找出这个最小值<br>
+<strong>权重w = w - 学习率 x 梯度</strong><br>
+梯度下降步骤：1. 定义损失函数 2. 选择起始点 3. 计算梯度 4. 按照学习率前进<br>
+重复3，4，直到找到最低点</p>
+<h2 id="三种梯度下降">三种梯度下降</h2>
+<p>梯度下降（Gradient Descent）：使用所有样本进行梯度下降，更新方向正确，但计算成本高<br>
+随机梯度下降（Stochastic GD）：每次只使用一个样本进行梯度下降，更新快，可以跳出局部最优解，但方向不稳定，可能永远不会收敛<br>
+小批量样本梯度下降（Mini Batch GD）：每次使用小批量样本进行梯度下降，结合GD和SGD的优点，较稳定，且更新迭代较快，能跳出局部最优解<br>
+<a href="https://www.bilibili.com/video/BV13p4y1g7eQ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">什么是小批量梯度下降，和批量梯度下降、随机梯度下降有什么不同</a><br>
+能使用 SGD 和 Mini Batch GD 都是因为导数是线性可加的，可以求多次梯度进行迭代</p>
+<p>🔺目前，小批量样本梯度下降即为 ML、DL 中的默认方法。因为现在的项目数据量通常都很大，无法一次输入内存，需要通过设置 batch size 来决定一次参数更新所用的样本数量。</p>
+<p>🔺Adam：是 SGD 的优化版本，目前使用最广泛的优化算法，一般情况下使用 Adam 都没有问题</p>
+<p><a href="https://www.zhihu.com/question/395685065/answer/2535950728">怎么通俗易懂的理解SGD中Momentum的含义？</a><br>
+<a href="https://blog.csdn.net/qq_42109740/article/details/105401197">深度学习各类优化器详解（动量、NAG、adam、Adagrad、adadelta、RMSprop、adaMax、Nadam、AMSGrad）</a></p>
+<pre><code>Q：模型评估方法和损失函数使用的函数是否相同？
+A：在深度学习中，模型评估方法和损失函数使用的函数通常是不同的，
+尽管有些情况下可能会相同或者有所重叠。这两者之间的主要区别在于它们的目的和应用场景：
+
+1. 损失函数（Loss Functions）：
+   - 目的：损失函数是在模型训练过程中使用的，目的是量化模型预测的好坏。
+   损失函数衡量的是模型预测值和实际值之间的不一致程度。
+   训练深度学习模型的目标就是通过优化算法（如梯度下降）最小化这个损失函数。
+   - 常见例子：均方误差（MSE）用于回归任务，交叉熵损失用于分类任务，
+   以及其他更专业的损失函数，如对抗损失、对比损失等，它们适用于特定类型的深度学习任务。
+
+2. 模型评估方法（Evaluation Metrics）：
+   - 目的：模型评估方法用于在模型训练完成后评估模型的性能。
+   这些评估指标帮助我们理解模型在实际应用中的表现，比如它的准确度、召回率、F1 分数等。
+   - 常见例子：对于分类问题，常用的评估指标包括准确率、精确率、召回率和 F1 分数等。
+   对于回归问题，常用的评估指标包括均方误差（MSE）、均方根误差（RMSE）和平均绝对误差（MAE）等。
+
+虽然某些函数既可以用作损失函数也可以用作评估指标（例如，均方误差可以用作回归任务的损失函数，
+也可以用来评估回归模型的性能），但它们的用途和上下文是不同的。
+评估指标通常被选用来直观地反映模型的性能，而不一定是为了指导模型的训练过程。
+此外，一些评估指标（如准确率或F1 分数）并不总是可导的，因此不适合直接用作损失函数进行模型优化。
+</code></pre>
+<p><strong>MSE 和 方差的辨析</strong><br>
+均方误差（Mean Squared Error, MSE）和方差（Variance）是两个相关的概念，但它们并不相同。<br>
+<strong>均方误差（MSE）</strong> 是一种用于衡量模型预测值与实际值之间差异的指标。它是<code>预测值</code>与<code>实际值</code>之差的平方的平均值，公式如下：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>MSE</mtext><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>(</mo><msub><mi>Y</mi><mi>i</mi></msub><mo>−</mo><mover accent="true"><msub><mi>Y</mi><mi>i</mi></msub><mo>^</mo></mover><msup><mo>)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y_i})^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">MSE</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.19677em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9467699999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">^</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><br>
+<strong>方差（Variance）</strong> 是统计学中衡量一组数据分散程度的指标。它是各个<code>数据点</code>与<code>数据平均值</code>之差的平方的平均值，公式如下：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>Variance</mtext><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>(</mo><msub><mi>X</mi><mi>i</mi></msub><mo>−</mo><mi>μ</mi><msup><mo>)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{Variance} = \frac{1}{n}\sum_{i=1}^{n}(X_i - \mu)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord text"><span class="mord">Variance</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.804292em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault">μ</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code>
+`拓展阅读`
+[SGD有多种改进的形式(RMSprop,Adadelta等),为什么大多数论文中仍然用SGD?](https://www.zhihu.com/question/42115548/answer/1636798770)
+[PyTorch学习之 torch.optim 的6种优化器及优化算法介绍](https://blog.csdn.net/qq_36589234/article/details/89330342)</code></pre>
 
             </div>
             
@@ -426,7 +666,7 @@ ctrl+Q 对齐音符</p>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://jeromezjl.github.io/post/fl-studio/" title="FL Studio 水果">https://jeromezjl.github.io/post/fl-studio/</a>
+      <a href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/" title="【ML】以梯度下降（Gradient Descent）展开的优化器总结">https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -435,19 +675,21 @@ ctrl+Q 对齐音符</p>
   </ul>
   <div class="tags">
     
+      <a href="https://jeromezjl.github.io/tag/rxDlpU0zX/"># ML</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="【ML】数据预处理" href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">【ML】数据预处理</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="【ML】数据预处理" href="https://jeromezjl.github.io/post/shu-ju-gui-yi-hua-chu-li/">上一篇</a>
+        <a class="nav-pc-next" title="ML/DL 中常见的英文" href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">ML/DL 中常见的英文</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="ML/DL 中常见的英文" href="https://jeromezjl.github.io/post/mldl-zhong-chang-jian-de-ying-wen/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Mind" href="https://jeromezjl.github.io/post/mind/">Mind</a>
-        <a class="nav-mobile-next" title="Mind" href="https://jeromezjl.github.io/post/mind/">下一篇</a>
+        <a class="nav-pc-next" title="KPL 语言" href="https://jeromezjl.github.io/post/kpl-yu-yan/">KPL 语言</a>
+        <a class="nav-mobile-next" title="KPL 语言" href="https://jeromezjl.github.io/post/kpl-yu-yan/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

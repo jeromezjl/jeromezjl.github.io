@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-29T10:47:12.299Z</updated>
+    <updated>2024-03-29T14:24:46.141Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -85,7 +85,44 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
 <h1 id="roberta-问答系统">RoBERTa 问答系统</h1>
 <p>SQuAD 数据集是斯坦福大学开发的一个流行的问答数据集，广泛用于自然语言处理中的机器阅读理解研究。SQuAD挑战模型根据给定的段落文本来回答问题。这些段落来自维基百科的文章，问题则是由人工撰写的。SQuAD的目标是推进计算机对自然语言的理解，特别是在问答系统的开发上。</p>
 <p>使用transformer中预训练的 RoBERTa</p>
+<h1 id="kcf目标跟踪">KCF目标跟踪</h1>
+<p><code>原理</code><br>
+利用循环矩阵的特性来训练一个分类器，这个分类器用于区分目标和背景。它是基于前一帧的目标位置来预测当前帧的目标位置。这种方法允许算法在每一帧中快速更新模型，以适应目标的运动和外观的变化。</p>
+<p>相关滤波、循环矩阵、快速傅里叶变换、核技巧</p>
+<ol>
+<li>使用循环矩阵对目标进行平移，生成训练样本（数据增强），训练一个能检测目标位置的相关滤波器</li>
+<li>使用相关滤波器，对连续视频帧中不同位置的候选区滤波并评分，得分最高的位置是目标的当前位置</li>
+<li>快速傅里叶变换被用来加速相关滤波的计算。通过将图像和滤波器都转换到频域，点乘操作可以用来替代复杂的卷积操作，从而显著提高算法的计算效率。</li>
+<li>通过选择合适的核函数（如高斯核），算法能够在高维特征空间中更好地区分目标和背景，即使目标的外观发生了较大变化。</li>
+</ol>
+<p><code>步骤</code></p>
+<ol>
+<li>
+<p><strong>初始化</strong>：在视频的第一帧中，在视频中选定一个框，KCF算法利用这个初始框来提取目标的特征。这些特征包括原始像素值、颜色直方图、特征信息等。</p>
+</li>
+<li>
+<p><strong>训练分类器</strong>：用循环矩阵构建训练集，使得可以高效地利用所有平移版本的训练样本，训练滤波器找，到最佳的滤波器系数。这个过程中还可以通过引入核技巧来处理非线性特征映射。</p>
+</li>
+<li>
+<p><strong>检测</strong>：不断读取视频帧，在随后的每一帧中，KCF算法首先在目标的预期位置附近提取特征，然后使用之前训练的分类器（滤波器）对这些位置进行评分，以判断目标最可能的新位置。</p>
+</li>
+<li>
+<p><strong>模型更新</strong>：通过设置一个学习率，使滤波器在更新位置的过程中在旧的信息基础上更新模型，来保证对新变化的适应性</p>
+</li>
+<li>
+<p><strong>循环</strong>：步骤3和步骤4在视频的每一帧中重复执行，以此实现对目标的连续跟踪。</p>
+</li>
+</ol>
 <h1 id="bpe">BPE</h1>
+<h1 id="kaggle-titanic">kaggle Titanic</h1>
+<p>以不同乘客特征作为输入，判断是否死亡<br>
+下载 train.csv、test.csv<br>
+读取数据，展示中位数、众数，判断缺失值个数，选择是填充还是删除<br>
+分析各个特征之间的关系，删除无用的，如果有效果相似的保留更好的，或者进行合并<br>
+使用 MLP、随机森林、SVM、决策树 等模型对数据进行分类<br>
+精度达到百分之九十左右</p>
+<h1 id="linux-文件流">Linux 文件流</h1>
+<p>记录一个pid或者prog进程访问了哪些文件和IP地址，记录file被哪些进程访问，列出进程的PID、程序名、日期时间、访问模式。展示进程之间的父子关系，记录CPU和内存的使用情况</p>
 ]]></content>
     </entry>
     <entry>
@@ -138,7 +175,9 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
         <link href="https://jeromezjl.github.io/post/ai-mian-shi/">
         </link>
         <updated>2024-03-21T06:09:17.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/aienglish/">AIenglish</a></p>
+        <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/aienglish/">AIenglish</a><br>
+<a href="https://jeromezjl.github.io/post/fu-shi-ying-yu/">复试英语</a><br>
+<a href="https://jeromezjl.github.io/post/fu-shi-xiang-mu/">复试项目</a></p>
 <h1 id="ai">AI</h1>
 <ol>
 <li>
