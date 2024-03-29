@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jeromezjl.github.io</id>
+    <id>http://localhost:4000</id>
     <title>Jerome</title>
-    <updated>2024-03-29T01:13:21.866Z</updated>
+    <updated>2024-03-29T01:16:50.594Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jeromezjl.github.io"/>
-    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
     <subtitle>Jerome&apos;s blog</subtitle>
-    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
-    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
     <rights>All rights reserved 2024, Jerome</rights>
     <entry>
         <title type="html"><![CDATA[408复试]]></title>
-        <id>https://jeromezjl.github.io/post/408-fu-shi/</id>
-        <link href="https://jeromezjl.github.io/post/408-fu-shi/">
+        <id>http://localhost:4000/post/408-fu-shi/</id>
+        <link href="http://localhost:4000/post/408-fu-shi/">
         </link>
         <updated>2024-03-27T03:20:45.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/366839763">计算机网络八股文背诵版</a><br>
@@ -24,8 +24,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[复试项目]]></title>
-        <id>https://jeromezjl.github.io/post/fu-shi-xiang-mu/</id>
-        <link href="https://jeromezjl.github.io/post/fu-shi-xiang-mu/">
+        <id>http://localhost:4000/post/fu-shi-xiang-mu/</id>
+        <link href="http://localhost:4000/post/fu-shi-xiang-mu/">
         </link>
         <updated>2024-03-23T13:15:13.000Z</updated>
         <content type="html"><![CDATA[<h1 id="gan">GAN</h1>
@@ -42,7 +42,7 @@
 CNN：使用alexnet架构，5层卷积，3层最大池化，使用 ReLU 激活，最后 softmax</p>
 <h1 id="手写数字">手写数字</h1>
 <p>LeNet-5<br>
-<img src="https://jeromezjl.github.io/post-images/1710506415759.png" alt="" loading="lazy"><br>
+<img src="http://localhost:4000/post-images/1710506415759.png" alt="" loading="lazy"><br>
 使用MNIST：28x28，第一层 padding=2，输入网络是 32x32</p>
 <ol>
 <li>
@@ -89,8 +89,8 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
     </entry>
     <entry>
         <title type="html"><![CDATA[八股文]]></title>
-        <id>https://jeromezjl.github.io/post/ba-gu-wen/</id>
-        <link href="https://jeromezjl.github.io/post/ba-gu-wen/">
+        <id>http://localhost:4000/post/ba-gu-wen/</id>
+        <link href="http://localhost:4000/post/ba-gu-wen/">
         </link>
         <updated>2024-03-23T11:07:26.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/366839763">计算机网络八股文背诵版</a><br>
@@ -99,8 +99,8 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
     </entry>
     <entry>
         <title type="html"><![CDATA[【DL】图神经网络]]></title>
-        <id>https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/</id>
-        <link href="https://jeromezjl.github.io/post/dl-tu-shen-jing-wang-luo/">
+        <id>http://localhost:4000/post/dl-tu-shen-jing-wang-luo/</id>
+        <link href="http://localhost:4000/post/dl-tu-shen-jing-wang-luo/">
         </link>
         <updated>2024-03-22T09:53:55.000Z</updated>
         <content type="html"><![CDATA[<p>图神经网络（Graph Neural Networks，GNNs）是一类专门处理图结构数据的神经网络。在图结构数据中，数据以图的形式表示，由节点（nodes）和边（edges）组成，非常适合描述物体（或实体）及其间的复杂关系。图神经网络通过直接在图上进行操作，能够有效地捕捉这种结构信息，因此在社交网络分析、推荐系统、蛋白质结构预测、化学分子建模等领域得到了广泛应用。</p>
@@ -133,8 +133,8 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
     </entry>
     <entry>
         <title type="html"><![CDATA[复试]]></title>
-        <id>https://jeromezjl.github.io/post/ai-mian-shi/</id>
-        <link href="https://jeromezjl.github.io/post/ai-mian-shi/">
+        <id>http://localhost:4000/post/ai-mian-shi/</id>
+        <link href="http://localhost:4000/post/ai-mian-shi/">
         </link>
         <updated>2024-03-21T06:09:17.000Z</updated>
         <content type="html"><![CDATA[<p><a href="https://jeromezjl.github.io/post/aienglish/">AIenglish</a></p>
@@ -653,8 +653,8 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
     </entry>
     <entry>
         <title type="html"><![CDATA[【NLP】Seq2Seq | Beam Search]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-seq2seq-beamsearch/">
+        <id>http://localhost:4000/post/nlp-seq2seq-beamsearch/</id>
+        <link href="http://localhost:4000/post/nlp-seq2seq-beamsearch/">
         </link>
         <updated>2024-03-19T12:15:20.000Z</updated>
         <content type="html"><![CDATA[<h1 id="seq2seq">Seq2Seq</h1>
@@ -669,8 +669,8 @@ Transformer：Seq2Seq model with attention</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【CV】概述]]></title>
-        <id>https://jeromezjl.github.io/post/cv-gai-shu/</id>
-        <link href="https://jeromezjl.github.io/post/cv-gai-shu/">
+        <id>http://localhost:4000/post/cv-gai-shu/</id>
+        <link href="http://localhost:4000/post/cv-gai-shu/">
         </link>
         <updated>2024-03-15T11:55:57.000Z</updated>
         <content type="html"><![CDATA[<p>机器视觉算法是计算机视觉领域的关键组成部分，它使计算机能够通过图像和视频数据理解世界。这些算法可以根据它们的功能和用途进行分类。以下是一些常见的分类方式：</p>
@@ -817,8 +817,8 @@ Transformer：Seq2Seq model with attention</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【NLP】文本预处理]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-wen-ben-yu-chu-li/">
+        <id>http://localhost:4000/post/nlp-wen-ben-yu-chu-li/</id>
+        <link href="http://localhost:4000/post/nlp-wen-ben-yu-chu-li/">
         </link>
         <updated>2024-03-15T03:49:11.000Z</updated>
         <content type="html"><![CDATA[<p>数据预处理是自然语言处理（NLP）任务中至关重要的一步，它直接影响到模型训练的效果和最终结果的质量。预处理步骤的目的是将原始文本转换成一种更易于计算机理解和处理的格式。以下是数据预处理中常见的几个步骤：</p>
@@ -877,8 +877,8 @@ Transformer：Seq2Seq model with attention</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【NLP】概述]]></title>
-        <id>https://jeromezjl.github.io/post/nlp-gai-shu/</id>
-        <link href="https://jeromezjl.github.io/post/nlp-gai-shu/">
+        <id>http://localhost:4000/post/nlp-gai-shu/</id>
+        <link href="http://localhost:4000/post/nlp-gai-shu/">
         </link>
         <updated>2024-03-15T03:19:09.000Z</updated>
         <content type="html"><![CDATA[<h1 id="任务">任务</h1>
@@ -1129,8 +1129,8 @@ Transformer：Seq2Seq model with attention</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[【DL】强化学习]]></title>
-        <id>https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi/</id>
-        <link href="https://jeromezjl.github.io/post/dl-qiang-hua-xue-xi/">
+        <id>http://localhost:4000/post/dl-qiang-hua-xue-xi/</id>
+        <link href="http://localhost:4000/post/dl-qiang-hua-xue-xi/">
         </link>
         <updated>2024-03-14T14:40:15.000Z</updated>
         <content type="html"><![CDATA[<p>强化学习是机器学习的一个领域，它主要关注如何使智能体（Agent）在环境（Environment）中学会采取行动（Action）以最大化某种累积奖励（Reward）。强化学习与其他类型的机器学习（如监督学习和无监督学习）的主要区别在于，它不依赖于预先标记的输入/输出对，而是通过智能体与环境的交互来学习。以下是这些概念的详细介绍：</p>
