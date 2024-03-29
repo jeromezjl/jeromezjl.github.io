@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jeromezjl.github.io</id>
     <title>Jerome</title>
-    <updated>2024-03-29T02:33:30.572Z</updated>
+    <updated>2024-03-29T10:47:12.299Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jeromezjl.github.io"/>
     <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
@@ -74,7 +74,7 @@ CNN：使用alexnet架构，5层卷积，3层最大池化，使用 ReLU 激活�
 <h1 id="光度立体法">光度立体法</h1>
 <p>对要检测物体在不同方向的光照条件下进行多次拍照。每次改变的只有光源的位置，确保光源的强度和颜色保持一致。<br>
 结合不同光照下的像素亮度值，使用最小二乘法计算每个像素点处的表面法向量。用法向量重构三维物体</p>
-<h1 id="sift和词袋模型">SIFT和词袋模型</h1>
+<h1 id="sift和词袋模型图片分类">SIFT和词袋模型图片分类</h1>
 <p>使用 15-Scene 数据集，包含 15 种不同类型的场景，例如办公室、厨房、卧室、客厅、乡村、海滩等。<br>
 共4400张左右，7比3的比例来划分训练集和测试集</p>
 <p>原理<br>
@@ -85,6 +85,7 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
 <h1 id="roberta-问答系统">RoBERTa 问答系统</h1>
 <p>SQuAD 数据集是斯坦福大学开发的一个流行的问答数据集，广泛用于自然语言处理中的机器阅读理解研究。SQuAD挑战模型根据给定的段落文本来回答问题。这些段落来自维基百科的文章，问题则是由人工撰写的。SQuAD的目标是推进计算机对自然语言的理解，特别是在问答系统的开发上。</p>
 <p>使用transformer中预训练的 RoBERTa</p>
+<h1 id="bpe">BPE</h1>
 ]]></content>
     </entry>
     <entry>

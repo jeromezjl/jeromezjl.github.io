@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>数据结构 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1711679404366">
+<link rel="shortcut icon" href="/favicon.ico?v=1711709210980">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -228,7 +228,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">113</span>
+        <span class="site-item-stat-count">114</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1690,7 +1690,7 @@ CNN：使用alexnet架构，5层卷积，3层最大池化，使用 ReLU 激活�
 &lt;h1 id=&#34;光度立体法&#34;&gt;光度立体法&lt;/h1&gt;
 &lt;p&gt;对要检测物体在不同方向的光照条件下进行多次拍照。每次改变的只有光源的位置，确保光源的强度和颜色保持一致。&lt;br&gt;
 结合不同光照下的像素亮度值，使用最小二乘法计算每个像素点处的表面法向量。用法向量重构三维物体&lt;/p&gt;
-&lt;h1 id=&#34;sift和词袋模型&#34;&gt;SIFT和词袋模型&lt;/h1&gt;
+&lt;h1 id=&#34;sift和词袋模型图片分类&#34;&gt;SIFT和词袋模型图片分类&lt;/h1&gt;
 &lt;p&gt;使用 15-Scene 数据集，包含 15 种不同类型的场景，例如办公室、厨房、卧室、客厅、乡村、海滩等。&lt;br&gt;
 共4400张左右，7比3的比例来划分训练集和测试集&lt;/p&gt;
 &lt;p&gt;原理&lt;br&gt;
@@ -1701,6 +1701,7 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
 &lt;h1 id=&#34;roberta-问答系统&#34;&gt;RoBERTa 问答系统&lt;/h1&gt;
 &lt;p&gt;SQuAD 数据集是斯坦福大学开发的一个流行的问答数据集，广泛用于自然语言处理中的机器阅读理解研究。SQuAD挑战模型根据给定的段落文本来回答问题。这些段落来自维基百科的文章，问题则是由人工撰写的。SQuAD的目标是推进计算机对自然语言的理解，特别是在问答系统的开发上。&lt;/p&gt;
 &lt;p&gt;使用transformer中预训练的 RoBERTa&lt;/p&gt;
+&lt;h1 id=&#34;bpe&#34;&gt;BPE&lt;/h1&gt;
 ">复试项目</a>
       </div>
       
@@ -3015,6 +3016,12 @@ hardmax 是求一组数据中唯一的最大值，而 Softmax 是输出概率，
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV18u411L7tU/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;什么是softmax回归，如何使用softmax回归，解决多分类任务&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Softmax 激活函数：通常用于多分类问题的输出层（最后一层），将 logits（即最后一个线性层的输出）转换成概率分布。&lt;br&gt;
 隐藏层激活函数不用 Softmax，用 ReLU、tanh 和 sigmoid 等，用于增加网络的非线性，帮助模型学习复杂的特征表示。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;拓展&lt;/code&gt;&lt;br&gt;
+Sigmoid 函数可以用于二分类，而 Softmax 是多分类&lt;br&gt;
+Sigmoid 表达式如下&lt;/p&gt;
+&lt;h2 id=&#34;sigmax-frac11-e-x&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;σ&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\sigma(x) = \frac{1}{1 + e^{-x}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.03588em;&#34;&gt;σ&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.2484389999999999em;vertical-align:-0.403331em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.845108em;&#34;&gt;&lt;span style=&#34;top:-2.655em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mbin mtight&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.7026642857142857em;&#34;&gt;&lt;span style=&#34;top:-2.786em;margin-right:0.07142857142857144em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.5em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.394em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.403331em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Sigmoid函数的输出值范围在0到1之间，这使得它能够输出一个概率值。因此，Sigmoid函数常用于二分类问题，其中输出值可以解释为样本属于正类的概率。&lt;br&gt;
+在二分类问题中，如果一个样本的Sigmoid函数输出接近1，则可以认为该样本属于正类；如果输出接近0，则认为该样本属于负类。通常，我们会设置一个阈值（例如0.5），如果输出值大于这个阈值，则预测为正类；否则，预测为负类。&lt;/p&gt;
 ">【ML】Softmax</a>
       </div>
       
@@ -3482,7 +3489,7 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 &lt;li&gt;每次传递给网络以进行一次参数更新的样本数量。批大小影响模型的内存需求和训练稳定性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Batch size 是指在训练神经网络时，每次迭代（每次前向传播和后向传播过程）中用于计算和更新网络参数的样本数量。Batch size 是深度学习中的一个重要超参数，对模型的训练过程和性能有着重要的影响。&lt;/p&gt;
-&lt;h3 id=&#34;batch-size-的影响&#34;&gt;Batch Size 的影响：&lt;/h3&gt;
+&lt;h4 id=&#34;batch-size-的影响参考梯度下降&#34;&gt;Batch Size 的影响：（参考梯度下降）&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;内存使用&lt;/strong&gt;：较大的 batch size 会增加在每次迭代中处理的数据量，这会导致更高的内存（RAM或GPU内存）使用。如果内存不足，可能无法使用大的 batch size。&lt;/p&gt;
@@ -3501,7 +3508,7 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;泛化能力&lt;/strong&gt;：一些研究表明，使用较小的 batch size 训练的模型可能具有更好的泛化能力，尽管这并不是绝对的，且可能取决于具体的任务和数据集。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;如何选择-batch-size&#34;&gt;如何选择 Batch Size：&lt;/h3&gt;
+&lt;h4 id=&#34;如何选择-batch-size&#34;&gt;如何选择 Batch Size：&lt;/h4&gt;
 &lt;p&gt;选择合适的 batch size 通常需要考虑多个因素，包括可用的内存资源、训练的稳定性和速度、以及模型的最终性能。实践中，通常会通过实验来确定特定任务和模型结构下的最佳 batch size，有时也会使用一些启发式方法来进行选择。此外，也有一些技术，如梯度累积，可以在内存限制的情况下间接实现较大的有效 batch size，以提高训练的稳定性和效率。&lt;/p&gt;
 &lt;h3 id=&#34;3-迭代次数-epochs&#34;&gt;3. 迭代次数 (Epochs)&lt;/h3&gt;
 &lt;ul&gt;
@@ -3558,14 +3565,19 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 也可称为代价函数（Cost Function）&lt;br&gt;
 计算预测值f(x)与真实值Y的差异程度&lt;br&gt;
 &lt;strong&gt;不同问题常用的损失函数&lt;/strong&gt;&lt;br&gt;
-分类：交叉熵、Hinge Loss&lt;br&gt;
+分类：交叉熵、Hinge Loss（铰链损失函数，常用于 SVM）&lt;br&gt;
 回归：MSE（L2 Loss）、MAE（L1 Loss）、RMSE、Huber Loss&lt;/p&gt;
+&lt;p&gt;交叉熵：衡量模型输出与实际标签之间的差异&lt;br&gt;
+hinge loss：使模型能正确分类，且使分类距离越大越好。如果分类确信度不够高，会给予大损失&lt;/p&gt;
+&lt;p&gt;MAE：记忆：里面是 A，所以是 L1，MSE 因为有平方，所以是2，L2。&lt;br&gt;
+L1 Loss 零点不平滑，用的较少&lt;br&gt;
+L2 Loss 因为有平方，所以对离群点敏感&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正则化（规范化）&lt;/strong&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_41960890/article/details/104891561&#34;&gt;一篇文章完全搞懂正则化（Regularization）&lt;/a&gt;&lt;br&gt;
 在损失函数中添加一个正则项，限制其较高次的参数大小不能过大，使模型学习到更加稀疏的权重分布，防止过拟合。常见的有L1正则化和L2正则化。&lt;/p&gt;
 &lt;p&gt;L2正则化对于绝对值较大的权重予以很重的惩罚，对于绝对值很小的权重予以非常非常小的惩罚，当权重绝对值趋近于0时，基本不惩罚。&lt;/p&gt;
-&lt;p&gt;L1正则化对于所有权重（不论参数大小）予以同样的惩罚&lt;/p&gt;
-&lt;p&gt;L1要在稀疏条件下使用&lt;/p&gt;
+&lt;p&gt;L1正则化对于所有权重（不论参数大小）予以同样的惩罚&lt;br&gt;
+L1要在稀疏条件下使用&lt;/p&gt;
 &lt;h1 id=&#34;向前传播和反向传播&#34;&gt;向前传播和反向传播&lt;/h1&gt;
 &lt;p&gt;了解反向传播，先了解梯度下降：&lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;向前传播：数据在神经网络中从输入层流向输出层的过程。在这个过程中，每一层的神经元会根据前一层的输入、自身的权重（weights）和偏置（biases），通过激活函数计算出自己的输出。这个输出会作为下一层的输入继续传递。这个过程一直持续到达输出层，最终产生模型的预测结果。&lt;/p&gt;
@@ -4167,6 +4179,19 @@ we should always be ready to&lt;/p&gt;
 &lt;p&gt;快速阅读，同时在脑中处理看到的信息，抑制杂念的产生，用学习的东西主动排除杂念&lt;/p&gt;
 &lt;p&gt;做事、学习就像递归调用，永远是这步完成，才能继续下一步。所以永远不要急于求成，不要做着这步，想马上就做会后面几步。不论什么时候，都告诉自己慢慢来，把这步做好了，后面的事情自然也能做好了&lt;/p&gt;
 &lt;p&gt;在前进的步履艰难的时候，停下来回头看看，一定是有些该做的事情还没做好&lt;/p&gt;
+&lt;p&gt;人在压力大的时候容易屈服于多巴胺的诱惑，比如放纵一下，打游戏，干别的和工作无关的事情&lt;br&gt;
+感受到压力的原因：能力不能完全hold住任务，比如去教一个三岁小孩数学肯定不会感觉到压力&lt;br&gt;
+强大的心理素质的条件：&lt;br&gt;
+希望（目标明确且坚定，在自己能力范围内）&lt;br&gt;
+自我效能感：对自己能否完成某事的自信程度，需要提高自己的能力，来增加这种感觉。或者通过完成一点点的小事来给自己正向反馈，例如多邻国的奖励机制&lt;br&gt;
+提升心理韧性：接纳自己的暂时性失误，给自己一定的试错机会；和朋友分享感受；做快乐的事，比如听歌、吃饭、运动、冥想、早睡早起、吃早饭&lt;br&gt;
+不与别人作比较，和自己比较即可（我的人生只有我）&lt;br&gt;
+一切靠自己，自身强大才是王道&lt;br&gt;
+压力转化为动力，将事情化为一个个小事，逐一击破，不断给自己正向反馈，到最后击破最大的任务，此时回望经历的一切，都会内化为自身的能力，成为再攀高峰的资本&lt;/p&gt;
+&lt;p&gt;心理素质&lt;br&gt;
+专注度：身体静止，减少碎片信息摄入&lt;br&gt;
+大脑、身体状态：早睡才能早起，无痛早起，而不是被闹钟叫起才能有好的状态；三餐按时，适量运动，做冥想&lt;br&gt;
+身心是否和一：别抖腿，尽量保持身体静止，有助于专注的提升；眼睛看的时候大脑也要转，大脑要经常使用才灵活&lt;/p&gt;
 ">Some Words</a>
       </div>
       
@@ -7842,6 +7867,65 @@ Regularization： 正则化&lt;/p&gt;
       </div>
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/"" data-c="
+          &lt;p&gt;本篇关键词：损失函数/代价函数/误差函数、梯度下降、学习率、Momentum（动量）&lt;br&gt;
+损失函数也可以理解为代价函数，机器学习中通常指同一种东西&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV18P4y1j7uH/?spm_id_from=333.788.recommend_more_video.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【梯度下降】3D可视化讲解通俗易懂&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1oY411N7Xz/?spm_id_from=333.337.search-card.all.click&#34;&gt;5分钟深度学习-01 梯度下降算法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1bP4y1p7Gq/?spm_id_from=333.999.0.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;72 优化算法【动手学深度学习v2】&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;梯度下降算法，拿最简单的线性拟合的例子，首先随机取一条直线 y=wx+b 计算每个真实数据点 xi 和预测值 yi 的差值的平方和，对所有点求和，然后求一个平均，其实就是在求样本的 MSE 均方误差。&lt;br&gt;
+MSE 越小代表直线对整体点的拟合效果越好，任务就是求 MSE 这个式子的最小值。&lt;br&gt;
+进行整理后发现，可以将这个式子变为一个二次函数的形式，最小值即对称轴所在点。&lt;br&gt;
+而机器学习中不能一下看出来，所以采取 GD 算法通过逐步迭代找出这个最小值&lt;br&gt;
+&lt;strong&gt;权重w = w - 学习率 x 梯度&lt;/strong&gt;&lt;br&gt;
+梯度下降步骤：1. 定义损失函数 2. 选择起始点 3. 计算梯度 4. 按照学习率前进&lt;br&gt;
+重复3，4，直到找到最低点&lt;/p&gt;
+&lt;h2 id=&#34;三种梯度下降&#34;&gt;三种梯度下降&lt;/h2&gt;
+&lt;p&gt;梯度下降（Gradient Descent）：使用所有样本进行梯度下降，更新方向正确，但计算成本高&lt;br&gt;
+随机梯度下降（Stochastic GD）：每次只使用一个样本进行梯度下降，更新快，可以跳出局部最优解，但方向不稳定，可能永远不会收敛&lt;br&gt;
+小批量样本梯度下降（Mini Batch GD）：每次使用小批量样本进行梯度下降，结合GD和SGD的优点，较稳定，且更新迭代较快，能跳出局部最优解&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV13p4y1g7eQ/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;什么是小批量梯度下降，和批量梯度下降、随机梯度下降有什么不同&lt;/a&gt;&lt;br&gt;
+能使用 SGD 和 Mini Batch GD 都是因为导数是线性可加的，可以求多次梯度进行迭代&lt;/p&gt;
+&lt;p&gt;🔺目前，小批量样本梯度下降即为 ML、DL 中的默认方法。因为现在的项目数据量通常都很大，无法一次输入内存，需要通过设置 batch size 来决定一次参数更新所用的样本数量。&lt;/p&gt;
+&lt;p&gt;🔺Adam：是 SGD 的优化版本，目前使用最广泛的优化算法，一般情况下使用 Adam 都没有问题&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/395685065/answer/2535950728&#34;&gt;怎么通俗易懂的理解SGD中Momentum的含义？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_42109740/article/details/105401197&#34;&gt;深度学习各类优化器详解（动量、NAG、adam、Adagrad、adadelta、RMSprop、adaMax、Nadam、AMSGrad）&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Q：模型评估方法和损失函数使用的函数是否相同？
+A：在深度学习中，模型评估方法和损失函数使用的函数通常是不同的，
+尽管有些情况下可能会相同或者有所重叠。这两者之间的主要区别在于它们的目的和应用场景：
+
+1. 损失函数（Loss Functions）：
+   - 目的：损失函数是在模型训练过程中使用的，目的是量化模型预测的好坏。
+   损失函数衡量的是模型预测值和实际值之间的不一致程度。
+   训练深度学习模型的目标就是通过优化算法（如梯度下降）最小化这个损失函数。
+   - 常见例子：均方误差（MSE）用于回归任务，交叉熵损失用于分类任务，
+   以及其他更专业的损失函数，如对抗损失、对比损失等，它们适用于特定类型的深度学习任务。
+
+2. 模型评估方法（Evaluation Metrics）：
+   - 目的：模型评估方法用于在模型训练完成后评估模型的性能。
+   这些评估指标帮助我们理解模型在实际应用中的表现，比如它的准确度、召回率、F1 分数等。
+   - 常见例子：对于分类问题，常用的评估指标包括准确率、精确率、召回率和 F1 分数等。
+   对于回归问题，常用的评估指标包括均方误差（MSE）、均方根误差（RMSE）和平均绝对误差（MAE）等。
+
+虽然某些函数既可以用作损失函数也可以用作评估指标（例如，均方误差可以用作回归任务的损失函数，
+也可以用来评估回归模型的性能），但它们的用途和上下文是不同的。
+评估指标通常被选用来直观地反映模型的性能，而不一定是为了指导模型的训练过程。
+此外，一些评估指标（如准确率或F1 分数）并不总是可导的，因此不适合直接用作损失函数进行模型优化。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;MSE 和 方差的辨析&lt;/strong&gt;&lt;br&gt;
+均方误差（Mean Squared Error, MSE）和方差（Variance）是两个相关的概念，但它们并不相同。&lt;br&gt;
+&lt;strong&gt;均方误差（MSE）&lt;/strong&gt; 是一种用于衡量模型预测值与实际值之间差异的指标。它是&lt;code&gt;预测值&lt;/code&gt;与&lt;code&gt;实际值&lt;/code&gt;之差的平方的平均值，公式如下：&lt;br&gt;
+&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;MSE&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mfrac&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msubsup&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;Y&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mover accent=&#34;true&#34;&gt;&lt;msub&gt;&lt;mi&gt;Y&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;^&lt;/mo&gt;&lt;/mover&gt;&lt;msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{MSE} = \frac{1}{n}\sum_{i=1}^{n}(Y_i - \hat{Y_i})^2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;MSE&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.190108em;vertical-align:-0.345em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.845108em;&#34;&gt;&lt;span style=&#34;top:-2.6550000000000002em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.394em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.345em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.804292em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.29971000000000003em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.19677em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord accent&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.9467699999999999em;&#34;&gt;&lt;span style=&#34;top:-3em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.22222em;&#34;&gt;Y&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.25233em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;accent-body&#34; style=&#34;left:-0.25em;&#34;&gt;^&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&lt;strong&gt;方差（Variance）&lt;/strong&gt; 是统计学中衡量一组数据分散程度的指标。它是各个&lt;code&gt;数据点&lt;/code&gt;与&lt;code&gt;数据平均值&lt;/code&gt;之差的平方的平均值，公式如下：&lt;br&gt;
+&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;Variance&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mfrac&gt;&lt;msubsup&gt;&lt;mo&gt;∑&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msubsup&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;X&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;μ&lt;/mi&gt;&lt;msup&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;\text{Variance} = \frac{1}{n}\sum_{i=1}^{n}(X_i - \mu)^2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord text&#34;&gt;&lt;span class=&#34;mord&#34;&gt;Variance&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.190108em;vertical-align:-0.345em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mopen nulldelimiter&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.845108em;&#34;&gt;&lt;span style=&#34;top:-2.6550000000000002em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.23em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line&#34; style=&#34;border-bottom-width:0.04em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.394em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.345em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mop&#34;&gt;&lt;span class=&#34;mop op-symbol small-op&#34; style=&#34;position:relative;top:-0.0000050000000000050004em;&#34;&gt;∑&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.804292em;&#34;&gt;&lt;span style=&#34;top:-2.40029em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mrel mtight&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2029em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.29971000000000003em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathdefault&#34; style=&#34;margin-right:0.07847em;&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.31166399999999994em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathdefault mtight&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.064108em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathdefault&#34;&gt;μ&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+`拓展阅读`
+[SGD有多种改进的形式(RMSprop,Adadelta等),为什么大多数论文中仍然用SGD?](https://www.zhihu.com/question/42115548/answer/1636798770)
+[PyTorch学习之 torch.optim 的6种优化器及优化算法介绍](https://blog.csdn.net/qq_36589234/article/details/89330342)&lt;/code&gt;&lt;/pre&gt;
+">【ML】以梯度下降（Gradient Descent）展开的优化器总结</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/kpl-yu-yan/"" data-c="
           &lt;h1 id=&#34;编译过程&#34;&gt;编译过程&lt;/h1&gt;
 &lt;p&gt;编译 package Hello 生成 Hello.s&lt;/p&gt;
@@ -10739,8 +10823,52 @@ Hamibot 需要js&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;转导式支持向量机&#34;&gt;转导式支持向量机&lt;/h1&gt;
-&lt;p&gt;转导式学习在训练过程中使用较少的有标签样本和较多的无标签样本进行学习&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Q&amp;amp;A&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SVM是一种什么类型的机器学习算法？
+ SVM是一种监督学习算法，用于分类和回归问题。它是一种基于最大间隔原则的分类器，旨在找到能够最好地分隔数据集的超平面。
+
+SVM的主要目标是什么？
+SVM的主要目标是找到一个超平面，使得不同类别的数据点之间的间隔最大化，同时最小化分类错误。
+
+SVM如何处理非线性可分的数据？ 
+SVM通过使用核技巧将数据映射到高维特征空间，从而在新的空间中找到一个可以分隔数据的超平面。这种方法允许SVM处理非线性可分的数据。
+
+什么是支持向量？ 
+支持向量是指那些影响到超平面位置的训练样本。在SVM中，只有支持向量对模型的决策边界有影响，其他样本点则不影响。
+
+SVM中的核函数是什么作用？ 
+核函数在SVM中用于将输入数据映射到高维空间，以便在那里可以找到一个分隔超平面。核函数允许SVM在原始特征空间中执行计算，而不需要显式地计算高维特征空间中的坐标。
+
+常见的SVM核函数有哪些？ 
+常见的SVM核函数包括线性核（linear）、多项式核（poly）、径向基函数核（RBF，也称为高斯核）、和sigmoid核。
+
+SVM中的超参数C代表什么？ 
+超参数C在SVM中是一个惩罚参数，用于控制误分类的宽容度。C值大意味着分类器会选择一个较小的间隔，以减少训练样本上的错误分类。C值小则意味着分类器会选择一个较大的间隔，允许更多的错误分类。
+
+SVM中的软间隔是什么意思？ 
+软间隔是SVM中的一种概念，它允许一些样本不满足硬间隔的要求（即不一定要所有样本都正确分类）。软间隔通过引入一个超参数C来平衡模型的复杂度和训练错误率。
+
+SVM和逻辑回归有什么区别？ 
+SVM和逻辑回归都是分类算法，但它们有不同的目标函数和决策边界。SVM尝试最大化数据点之间的间隔，而逻辑回归则直接建模分类概率。SVM的决策边界由支持向量决定，而逻辑回归的决策边界由系数确定。
+
+SVM对于不平衡数据集如何处理？ 
+SVM本身不直接处理不平衡数据集。但是，可以通过调整超参数C或使用不同的权重来给不同类别的错误分类以不同的惩罚，从而间接处理不平衡问题。
+
+SVM如何进行多分类任务？ 
+SVM通过一对多（one-vs-rest）或一对一（one-vs-one）的策略进行多分类。在一对多策略中，为每个类训练一个分类器，将那个类与其他类分开。在一对一策略中，为每对类训练一个分类器，最终通过投票决定最终的类别。
+
+SVM的训练时间复杂度如何？ 
+SVM的训练时间复杂度取决于训练样本的数量和特征维度。对于线性SVM，时间复杂度是O(n^2)到O(n^3)，其中n是样本数量。使用核函数的SVM可能更慢，因为需要计算核函数和解决一个二次规划问题。
+
+如何选择SVM的核函数和超参数？ 
+选择核函数和超参数通常涉及交叉验证和网格搜索。交叉验证用于评估不同参数组合的性能，而网格搜索则是在参数空间中系统地尝试不同的参数组合。
+
+SVM在哪些应用场景中表现较好？ 
+SVM在中小规模的复杂数据集上表现较好，尤其是在特征维度高和样本数量不是非常巨大的情况下。它也适用于图像识别、文本分类和生物信息学等领域。
+
+SVM有哪些主要的变种？ 
+SVM的主要变种包括软间隔SVM、支持向量回归（SVR）、最小二乘SVM（LS-SVM）和多类SVM。每个变种都针对特定类型的问题或性能改进而设计。
+&lt;/code&gt;&lt;/pre&gt;
 ">【ML】支持向量机（SVM）</a>
       </div>
       
@@ -11283,7 +11411,7 @@ print(min)
 &lt;p&gt;&lt;code&gt;其他房间主题&lt;/code&gt; （我好像很喜欢房间？？&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://image.lnstzy.cn/aoaodcom/2020-08/04/20200804022855d8a3bc046d0ecb0189247bd82fb31d45.jpg.h700.jpg&#34;&gt;夏日房间&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://cdn.max-c.com/heybox/dailynews/img/051d4a61594116698e004a4f1c2208ac.jpg?imageMogr2/format/jpg&#34;&gt;电子厨房&lt;/a&gt;&lt;/p&gt;
-">Jerome BUPT</a>
+">关于</a>
       </div>
       
       <div class="item">
