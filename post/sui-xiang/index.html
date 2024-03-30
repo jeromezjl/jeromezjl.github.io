@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>随想 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1711776593520">
+<link rel="shortcut icon" href="/favicon.ico?v=1711792984548">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -227,7 +227,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">114</span>
+        <span class="site-item-stat-count">113</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -995,15 +995,6 @@ informative是指深入浅出、娓娓道来<br>
     <div class="result" id="result">
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/408-fu-shi/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/366839763&#34;&gt;计算机网络八股文背诵版&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/373966882&#34;&gt;操作系统八股文背诵版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_43468008/article/details/129418769&#34;&gt;考研408 王道计算机考研 (初试/复试) 网课笔记总结&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://blog.csdn.net/yinghui_yht/article/details/105443770&#34;&gt;计算机考研复试问题汇总（408+计算机前言知识）&lt;/a&gt;&lt;/p&gt;
-">408复试</a>
-      </div>
-      
-      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/aienglish/"" data-c="
           &lt;ol&gt;
 &lt;li&gt;Artificial General（通用） Intelligence (AGI) represents the hypothetical（假想） ability of an AI system to understand, learn, and apply knowledge across a wide range of tasks at a level of complexity comparable to human intelligence. Unlike narrow AI designed for specific tasks, AGI would possess the versatility and adaptability to perform any intellectual task that a human being can. This includes reasoning, problem-solving, abstract thinking, understanding natural language, and learning from experience. Achieving AGI is considered a monumental milestone in AI research, marking the advent of machines with human-like cognitive abilities.&lt;/li&gt;
@@ -1141,7 +1132,30 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
 &lt;p&gt;&lt;strong&gt;循环&lt;/strong&gt;：步骤3和步骤4在视频的每一帧中重复执行，以此实现对目标的连续跟踪。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;tf-idf&#34;&gt;TF-IDF&lt;/h1&gt;
+&lt;p&gt;数据预处理：去除无关字符（如HTML标签）、转换为小写、分词、去除停用词、进行词干提取或词形还原等&lt;br&gt;
+使用TF-IDF模型将文本数据转换为数值特征向量。&lt;br&gt;
+将特征值向量输入SVM，进行五分类&lt;br&gt;
+SVM五分类需要创建五个SVM模型，分别对每个类别和其他类别进行分类&lt;br&gt;
+最后评估&lt;/p&gt;
+&lt;h1 id=&#34;bilstm-crf命名实体识别&#34;&gt;BiLSTM-CRF命名实体识别&lt;/h1&gt;
+&lt;p&gt;人民日报 中文 NER 数据集&lt;br&gt;
+实体包括人名（PER）、地名（LOC）和组织机构名（ORG）。标注系统采用BIO系统，对数据集进行编码。&lt;br&gt;
+查看数据集信息，句子长度的3/4位点为58，那么可以设置最长句子长度为60，将所有句子填充到一样的长度&lt;/p&gt;
+&lt;p&gt;输入是一个原文文件，和一个标注文件&lt;br&gt;
+输入文本被转换成词向量序列。&lt;br&gt;
+BiLSTM层处理这些词向量，捕获每个词的双向上下文信息。&lt;br&gt;
+BiLSTM的输出被送入CRF层，CRF层利用这些信息以及标注之间的依赖关系，计算最可能的标注序列。&lt;/p&gt;
+&lt;p&gt;结果：输入一个句子，将其中的命名实体抽取出来，使用BIO系统标注&lt;/p&gt;
 &lt;h1 id=&#34;bpe&#34;&gt;BPE&lt;/h1&gt;
+&lt;p&gt;词汇表的准备：首先，需要将汉语文本中的所有词或汉字分割成基本单位。对于汉语来说，基本单位通常是单个汉字或字符。&lt;/p&gt;
+&lt;p&gt;初始化：算法以单个汉字或字符作为初始符号集合，并计算所有相邻符号对的出现频率。&lt;/p&gt;
+&lt;p&gt;合并阶段：&lt;/p&gt;
+&lt;p&gt;在每次迭代中，算法都会查找出现次数最多的相邻符号对。&lt;br&gt;
+这对最常见的符号被合并为一个新的符号，这个新的符号被加入到符号集合中。&lt;br&gt;
+例如，如果“的人”是最常见的符号对，那么它们会被合并为一个新的符号“的人”。&lt;br&gt;
+迭代：重复合并步骤，直到达到预定的合并操作次数，或者没有可以合并的符号对为止。合并的次数可以根据具体的任务和数据集来设定。&lt;/p&gt;
+&lt;p&gt;应用：一旦BPE模型训练完成，就可以用它来将新的文本分割成已知的子词单元。不在词汇表中的字或词会被进一步分割，直到分割成词汇表中的符号。&lt;/p&gt;
 &lt;h1 id=&#34;kaggle-titanic&#34;&gt;kaggle Titanic&lt;/h1&gt;
 &lt;p&gt;以不同乘客特征作为输入，判断是否死亡&lt;br&gt;
 下载 train.csv、test.csv&lt;br&gt;
@@ -1158,6 +1172,8 @@ SIFT对每张图片生成不同个数的特征描述向量，将这些向量输�
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ba-gu-wen/"" data-c="
           &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/366839763&#34;&gt;计算机网络八股文背诵版&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/373966882&#34;&gt;操作系统八股文背诵版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/qq_43468008/article/details/129418769&#34;&gt;考研408 王道计算机考研 (初试/复试) 网课笔记总结&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/yinghui_yht/article/details/105443770&#34;&gt;计算机考研复试问题汇总（408+计算机前言知识）&lt;/a&gt;&lt;/p&gt;
 ">八股文</a>
       </div>
       
@@ -1853,6 +1869,7 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;li&gt;GANs (Generative Adversarial Networks) 及其变体（CGAN, DCGAN, StyleGAN）&lt;/li&gt;
 &lt;li&gt;VAEs (Variational Autoencoders)&lt;/li&gt;
 &lt;li&gt;PixelRNN/PixelCNN&lt;/li&gt;
+&lt;li&gt;扩散模型&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1965,6 +1982,9 @@ Transformer：Seq2Seq model with attention&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;分词工具&lt;br&gt;
+中文：jieba，hanlp&lt;br&gt;
+英文：keria，spacy，nltk&lt;/p&gt;
 &lt;p&gt;每个步骤的具体实现和必要性可能会根据具体的任务和语言而有所不同。例如，对于某些任务，保留标点符号可能是有意义的，因为它们可以携带情感或语法信息。而对于一些语言（如中文、日文），分词步骤会比英文复杂得多，可能需要特定的算法和词库。预处理的目的是清洗和转换数据，以提高模型训练的效率和效果。&lt;/p&gt;
 ">【NLP】文本预处理</a>
       </div>
@@ -2927,6 +2947,7 @@ I will strive to issue some papers on some influencial journals&lt;/p&gt;
 &lt;p&gt;在深度学习中，参数通常是指神经网络中的权重和偏差。&lt;br&gt;
 这些参数是通过&lt;code&gt;反向传播&lt;/code&gt;算法，根据训练数据中的梯度信息自动调整的，以最小化&lt;code&gt;损失函数&lt;/code&gt;。&lt;br&gt;
 参数的学习是模型训练的过程，目标是找到最佳的参数配置。&lt;/p&gt;
+&lt;p&gt;网络参数初始化的方法：全0初始化、随机初始化&lt;/p&gt;
 &lt;h2 id=&#34;超参数&#34;&gt;超参数&lt;/h2&gt;
 &lt;p&gt;超参数是在训练开始前设置的参数，与模型的参数（权重和偏置）不同，参数是通过训练数据学习得到的。以下是一些常见的深度学习超参数：&lt;/p&gt;
 &lt;p&gt;深度学习模型的性能很大程度上依赖于其超参数的选择。超参数是在训练过程开始前设置的参数，与模型的参数（权重和偏置）不同，后者是通过训练数据学习得到的。以下是一些常见的深度学习超参数：&lt;/p&gt;
@@ -3029,6 +3050,7 @@ L2 Loss 因为有平方，所以对离群点敏感&lt;/p&gt;
 &lt;p&gt;L2正则化对于绝对值较大的权重予以很重的惩罚，对于绝对值很小的权重予以非常非常小的惩罚，当权重绝对值趋近于0时，基本不惩罚。&lt;/p&gt;
 &lt;p&gt;L1正则化对于所有权重（不论参数大小）予以同样的惩罚&lt;br&gt;
 L1要在稀疏条件下使用&lt;/p&gt;
+&lt;p&gt;dropout、早停&lt;/p&gt;
 &lt;h1 id=&#34;向前传播和反向传播&#34;&gt;向前传播和反向传播&lt;/h1&gt;
 &lt;p&gt;了解反向传播，先了解梯度下降：&lt;a href=&#34;https://jeromezjl.github.io/post/ti-du-xia-jiang-gradient-descent/&#34;&gt;【ML】以梯度下降（Gradient Descent）展开的优化器总结&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;向前传播：数据在神经网络中从输入层流向输出层的过程。在这个过程中，每一层的神经元会根据前一层的输入、自身的权重（weights）和偏置（biases），通过激活函数计算出自己的输出。这个输出会作为下一层的输入继续传递。这个过程一直持续到达输出层，最终产生模型的预测结果。&lt;/p&gt;
@@ -3047,7 +3069,8 @@ L1要在稀疏条件下使用&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;梯度消失（梯度弥散）&lt;/strong&gt;：sigmoid趋近无穷时，梯度趋近于0，若某次输入过大，梯度几乎为0，导致参数几乎不更新，导致整个网络学习能力下降&lt;br&gt;
 sigmoid：非零均值函数→同时更新正负→神经网络不易收敛；饱和函数→梯度消失，使用tanh函数可以&lt;br&gt;
-&lt;strong&gt;梯度爆炸&lt;/strong&gt;：使用ReLU函数时，由于函数无上界，如果输出过大，会导致梯度累积，超出上限&lt;/p&gt;
+&lt;strong&gt;梯度爆炸&lt;/strong&gt;：使用ReLU函数时，激活值在反向传播时会与梯度相乘，会导致梯度累积，超出上限&lt;/p&gt;
+&lt;p&gt;解决梯度爆炸：梯度裁剪（限制梯度的最大值）、适当的权重初始化策略、使用批量归一化等技术，而不是替换ReLU激活函数。&lt;/p&gt;
 &lt;h1 id=&#34;批量归一化和层归一化&#34;&gt;批量归一化和层归一化&lt;/h1&gt;
 &lt;p&gt;批量归一化（Batch Normalization, BN）和层归一化（Layer Normalization, LN）都是深度学习中用于改进神经网络训练的标准化技术，通常是在网络架构中作为特定的层来实现。&lt;/p&gt;
 &lt;p&gt;BN和LN都旨在通过标准化神经网络中的激活值来减少内部协变量偏移，加速训练并提高模型的性能。BN通过归一化一批样本中相同特征的值来实现，而LN则是对单个样本中所有特征的值进行归一化。&lt;/p&gt;
@@ -4853,7 +4876,6 @@ RNN 的输出：St=Wx+WSt-1+b，即基础上加入了 t-1 时刻的输入，作�
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/bestrivern/article/details/90723524&#34;&gt;RNN详解(Recurrent Neural Network)&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/weixin_45727931/article/details/114369073&#34;&gt;Pytorch循环神经网络（RNN）快速入门与实战&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Encoder-Decoder，也叫Seq2Seq，是RNN的一个重要变种。&lt;/p&gt;
-&lt;h1 id=&#34;gru&#34;&gt;GRU&lt;/h1&gt;
 &lt;h1 id=&#34;lstm&#34;&gt;LSTM&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Sz4y1E7oL/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;3分钟带你搞清LSTM 的计算过程和计算图&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;某时刻输入：xt，某时刻输出某时刻输出：ht&lt;br&gt;
@@ -4868,6 +4890,26 @@ ct = forgetgate(ct-1)+inputgate(xt)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1fp4y1t7Xb/?p=3&amp;amp;spm_id_from=pageDriver&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;RNN &amp;amp; LSTM (时间序列模型）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Fe41157Gh/?spm_id_from=333.788.recommend_more_video.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;动态可视化LSTM&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;bi-lstm&#34;&gt;Bi-LSTM&lt;/h1&gt;
+&lt;h1 id=&#34;gru&#34;&gt;GRU&lt;/h1&gt;
+&lt;p&gt;GRU（门控循环单元，Gated Recurrent Unit）是一种用于循环神经网络（RNN）的优化门控机制，旨在解决标准 RNN 在处理长序列数据时遇到的梯度消失问题，同时尝试减少长短期记忆网络（LSTM）的复杂性。GRU通过引入更新门（Update Gate）和重置门（Reset Gate）来控制信息的流动，这两个门控机制决定了信息被保留、遗忘或更新的方式。&lt;/p&gt;
+&lt;h3 id=&#34;结构和工作原理&#34;&gt;结构和工作原理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;更新门（Update Gate）&lt;/strong&gt;：决定了来自上一个状态的信息有多少会被保留到当前状态。这个门的作用类似于LSTM中的遗忘门和输入门的组合，它帮助模型决定在当前状态保留多少之前的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重置门（Reset Gate）&lt;/strong&gt;：决定了多少过去的信息会被用来计算当前状态的候选内容。通过这个门，GRU可以抛弃与未来状态无关的信息，使模型能够在处理每个输入时更灵活。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;候选隐藏状态（Candidate Hidden State）&lt;/strong&gt;：通过重置门控制的过去状态和当前输入共同生成的新的隐藏状态候选。这个候选隐藏状态包含了当前单元可能需要的新信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;最终隐藏状态（Final Hidden State）&lt;/strong&gt;：由更新门控制的上一个隐藏状态和候选隐藏状态的加权组合。更新门决定保留多少旧状态信息和引入多少新状态信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;优点和应用&#34;&gt;优点和应用&lt;/h3&gt;
+&lt;p&gt;GRU保留了LSTM处理长期依赖问题的能力，但结构比LSTM更简单，因为它只有两个门（相比之下，LSTM有三个）。这种简化通常使得GRU在计算效率上有所提升，尤其是在参数数量较少时。由于其性能与LSTM相近，GRU广泛用于需要处理序列数据的任务中，如语言建模、文本生成、语音识别和机器翻译等领域。&lt;/p&gt;
+&lt;p&gt;总的来说，GRU提供了一种既能有效处理长期依赖问题，又相对高效的门控循环单元设计，使其成为处理序列数据的强大工具。&lt;/p&gt;
 &lt;h1 id=&#34;问答&#34;&gt;问答&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -5296,8 +5338,38 @@ print(n_gpu)
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nlp-bilstm-crf-suan-fa/"" data-c="
-          &lt;h1 id=&#34;crf-随机条件场&#34;&gt;CRF 随机条件场&lt;/h1&gt;
-&lt;p&gt;条件随机场（CRF，Conditional Random Field）是一种统计建模方法，常用于标注和分割序列数据，如自然语言处理（NLP）中的词性标注、命名实体识别（NER）等。CRF是一种判别式模型，用于计算给定观察序列条件下，最可能的输出序列的条件概率。&lt;/p&gt;
+          &lt;h1 id=&#34;bilstm-crf&#34;&gt;BiLSTM-CRF&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u010366748/article/details/113784204&#34;&gt;BiLSTM-CRF实现中文命名实体识别（NER）&lt;/a&gt;&lt;br&gt;
+BiLSTM-CRF（Bidirectional Long Short-Term Memory - Conditional Random Field）常用于序列标注任务，如命名实体识别、词性标注等。BiLSTM-CRF 结合了双向长短时记忆网络（BiLSTM）和条件随机场（CRF）两种技术，具有较强的建模能力和预测准确性。&lt;/p&gt;
+&lt;p&gt;BiLSTM是一种递归神经网络，可以捕捉序列中前后文的依赖关系。它由两个 LSTM（Long Short-Term Memory）层组成，分别从左向右和从右向左处理输入序列，然后将它们的输出拼接起来。这样，每个时间步的输出包含了当前时刻及其前后若干时刻的信息，更好地表达了序列的语义。&lt;/p&gt;
+&lt;p&gt;CRF是一种概率模型，用于对序列标注结果进行建模，考虑标签之间的关联性和约束条件，可以使得标注结果更加合理和连贯。在BiLSTM-CRF中，CRF层接受BiLSTM层的输出作为输入，并且通过联合学习的方式，将BiLSTM层的输出和CRF层的标注结果进行训练，以最大化标注的准确性。&lt;/p&gt;
+&lt;p&gt;BiLSTM-CRF 的训练过程通常采用反向传播算法，以最小化模型对标注数据的损失。在测试阶段，通过在CRF层上使用维特比算法，找到最可能的标注序列，作为模型的预测结果。&lt;/p&gt;
+&lt;h2 id=&#34;bilstm&#34;&gt;BiLSTM&lt;/h2&gt;
+&lt;p&gt;BiLSTM，全称为双向长短期记忆网络（Bidirectional Long Short-Term Memory），是一种特殊的循环神经网络（RNN）。它结合了长短期记忆网络（LSTM）的能力以及双向网络的结构，从而能够更好地捕捉序列数据中的长期依赖关系和双向上下文信息。&lt;/p&gt;
+&lt;h3 id=&#34;lstm长短期记忆网络&#34;&gt;LSTM（长短期记忆网络）&lt;/h3&gt;
+&lt;p&gt;LSTM是为了解决传统RNN在处理长序列数据时出现的梯度消失或梯度爆炸问题而设计的。它通过引入门控机制（输入门、遗忘门和输出门）来调节信息的流动，从而有效地保存并传递长期依赖信息。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;单向信息流动&lt;/strong&gt;：在标准的LSTM中，信息是单向传递的，即从序列的开始到序列的结束。这意味着，在任何给定的时间点，LSTM单元只能访问当前时间点之前的信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期依赖捕捉&lt;/strong&gt;：LSTM通过引入门控机制（包括输入门、遗忘门和输出门）来控制信息的流入、记忆的保留和输出的流出，有效地解决了长期依赖问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用场景&lt;/strong&gt;：LSTM在许多需要捕捉时间序列数据中长期依赖的任务中表现良好，如文本生成、语音识别等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;bilstm双向长短期记忆网络&#34;&gt;BiLSTM（双向长短期记忆网络）&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;双向信息流动&lt;/strong&gt;：BiLSTM通过在每个时间点上部署两个LSTM单元，一个处理正向序列（从开始到结束），另一个处理反向序列（从结束到开始），允许网络同时捕捉之前和之后的上下文信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;增强的上下文理解&lt;/strong&gt;：由于能够访问整个序列的上下文信息，BiLSTM在处理需要理解上下文的任务上，如文本分类、命名实体识别、情感分析等，通常能够比单向的LSTM表现得更好。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复杂性增加&lt;/strong&gt;：与单向LSTM相比，BiLSTM的结构更复杂，参数更多，因此在训练时可能需要更多的计算资源和时间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上下文信息&lt;/strong&gt;：BiLSTM能够同时考虑到序列中每个点的前后上下文，而LSTM只能利用当前点之前的信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能&lt;/strong&gt;：在某些任务中，BiLSTM因为能够捕捉更丰富的上下文信息，通常能够提供更好的性能。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算资源&lt;/strong&gt;：BiLSTM的双向结构使得其计算成本高于LSTM，这在资源有限的情况下可能是一个考虑因素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此，选择使用LSTM还是BiLSTM通常取决于具体的任务需求以及可用的计算资源。在需要深入理解上下文信息的场景下，BiLSTM可能是更优的选择，而在计算资源受限或者任务不需要双向上下文信息时，LSTM可能更合适。&lt;/p&gt;
+&lt;h2 id=&#34;crf-随机条件场&#34;&gt;CRF 随机条件场&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/148813079&#34;&gt;CRF条件随机场的原理、例子、公式推导和应用&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/44042528&#34;&gt;最通俗易懂的BiLSTM-CRF模型中的CRF层介绍&lt;/a&gt;&lt;br&gt;
+条件随机场（CRF，Conditional Random Field）是一种统计建模方法，常用于标注和分割序列数据，如自然语言处理（NLP）中的词性标注、命名实体识别（NER）等。CRF是一种判别式模型，用于计算给定观察序列条件下，最可能的输出序列的条件概率。&lt;/p&gt;
 &lt;p&gt;CRF模型的核心思想是，在给定观测序列的情况下，构建一个输出序列的条件概率模型，该模型不仅考虑当前位置的特征，还考虑相邻位置之间的依赖关系。这使得CRF特别适合于序列数据的建模，因为序列中的元素通常不是独立的，而是彼此依赖的。&lt;/p&gt;
 &lt;p&gt;CRF分为两大类：&lt;/p&gt;
 &lt;ol&gt;
@@ -5310,27 +5382,21 @@ print(n_gpu)
 &lt;/ol&gt;
 &lt;p&gt;CRF的训练通常涉及最大化对数似然函数，这可以通过各种优化算法实现，如梯度下降法。在预测时，给定一个观测序列，CRF模型会利用维特比算法（Viterbi Algorithm）或其他解码算法来找出最可能的标签序列。&lt;/p&gt;
 &lt;p&gt;CRF模型的优势在于其能够捕捉到标签之间的依赖关系，以及观测数据与标签之间的复杂关系，这使得它在各种序列数据建模任务中表现优异。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/u010366748/article/details/113784204&#34;&gt;BiLSTM-CRF实现中文命名实体识别（NER）&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;概述&lt;/strong&gt;&lt;br&gt;
-BiLSTM-CRF（Bidirectional Long Short-Term Memory - Conditional Random Field）是一种深度学习算法，常用于序列标注任务，如命名实体识别、词性标注等。BiLSTM-CRF结合了双向长短时记忆网络（BiLSTM）和条件随机场（CRF）两种技术，具有较强的建模能力和预测准确性。&lt;/p&gt;
-&lt;p&gt;BiLSTM是一种递归神经网络，可以捕捉序列中前后文的依赖关系。它由两个LSTM（Long Short-Term Memory）层组成，分别从左向右和从右向左处理输入序列，然后将它们的输出拼接起来。这样，每个时间步的输出包含了当前时刻及其前后若干时刻的信息，更好地表达了序列的语义。&lt;/p&gt;
-&lt;p&gt;CRF是一种概率模型，用于对序列标注结果进行建模，考虑标签之间的关联性和约束条件，可以使得标注结果更加合理和连贯。在BiLSTM-CRF中，CRF层接受BiLSTM层的输出作为输入，并且通过联合学习的方式，将BiLSTM层的输出和CRF层的标注结果进行训练，以最大化标注的准确性。&lt;/p&gt;
-&lt;p&gt;BiLSTM-CRF的训练过程通常采用反向传播算法，以最小化模型对标注数据的损失。在测试阶段，通过在CRF层上使用维特比算法，找到最可能的标注序列，作为模型的预测结果。&lt;/p&gt;
-&lt;p&gt;总之，BiLSTM-CRF算法在序列标注任务中表现出了良好的性能，能够捕捉序列中的长距离依赖关系和标签之间的约束关系，从而提高了模型的预测准确性。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;命名实体&lt;/strong&gt;&lt;br&gt;
-在自然语言处理中，命名实体（Named Entity）是指具有特定语义的实体，如人名、地名、组织机构名、时间、数量、货币等。命名实体识别（Named Entity Recognition，NER）是一种信息抽取技术，用于自动识别文本中的命名实体，并将其分类为预定义的类型。&lt;/p&gt;
-&lt;p&gt;命名实体识别在信息检索、机器翻译、问答系统、自然语言生成等领域中有着广泛的应用。例如，在搜索引擎中，将用户查询中的命名实体与数据库中的实体进行匹配，可以帮助用户更快地找到所需信息。在机器翻译中，识别源文本中的命名实体可以帮助翻译系统更准确地理解句子的含义，从而提高翻译质量。&lt;/p&gt;
-&lt;p&gt;命名实体识别通常使用基于规则、基于统计的方法或基于深度学习的方法。其中，基于深度学习的方法，如BiLSTM-CRF等模型，因其在序列标注任务中的优越表现，已经成为了命名实体识别的主流方法。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;序列标注任务&lt;/strong&gt;&lt;br&gt;
-序列标注任务是一种自然语言处理任务，旨在将输入序列中的每个元素标注为特定的类别。常见的序列标注任务包括词性标注、命名实体识别、情感分析、语义角色标注等。&lt;/p&gt;
+&lt;h1 id=&#34;序列标注任务&#34;&gt;序列标注任务&lt;/h1&gt;
+&lt;p&gt;序列标注任务是一种自然语言处理任务，旨在将输入序列中的每个元素标注为特定的类别。常见的序列标注任务包括词性标注、命名实体识别、情感分析、语义角色标注等。&lt;/p&gt;
 &lt;p&gt;在序列标注任务中，输入序列通常是一个由单词或字符组成的序列，每个单词或字符都要被标注为特定的类别。标注的类别可以是预定义的固定类别，例如名词、动词、形容词等，也可以是根据任务需要定义的自定义类别，例如人名、地名、组织机构名等。&lt;/p&gt;
 &lt;p&gt;序列标注任务通常使用监督学习的方法进行模型训练，例如最大熵模型、条件随机场、递归神经网络等。在最近几年，基于深度学习的方法，如卷积神经网络（CNN）、循环神经网络（RNN）和其变体，如LSTM、GRU等，已经成为序列标注任务中最有效的方法之一，取得了很好的效果。&lt;/p&gt;
 &lt;p&gt;序列标注任务在自然语言处理中有着广泛的应用，如文本分类、机器翻译、信息抽取、问答系统等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;BIO-三位序列标注法（BIO-3）&lt;/strong&gt;&lt;br&gt;
-BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标注方法，特别在命名实体识别（NER）任务中广泛应用。该方法将每个标记分为三个部分：B（Beginning）、I（Inside）、O（Outside）。下面对BIO-3的含义进行解释：&lt;/p&gt;
-&lt;p&gt;B（Beginning）：表示实体的起始位置。在一个实体的第一个字上标记为B，例如&amp;quot;B-Person&amp;quot;表示一个人名实体的起始位置。&lt;/p&gt;
-&lt;p&gt;I（Inside）：表示实体的中间位置。在一个实体的非起始字上标记为I，例如&amp;quot;I-Person&amp;quot;表示一个人名实体的中间或结束位置。&lt;/p&gt;
-&lt;p&gt;O（Outside）：表示不属于任何实体的标记，即普通文本部分。&lt;/p&gt;
+&lt;h2 id=&#34;命名实体识别-ner&#34;&gt;命名实体识别 NER&lt;/h2&gt;
+&lt;p&gt;在自然语言处理中，命名实体（Named Entity）是指具有特定语义的实体，如人名、地名、组织机构名、时间、数量、货币等。命名实体识别（Named Entity Recognition，NER）是一种信息抽取技术，用于自动识别文本中的命名实体，并将其分类为预定义的类型。&lt;/p&gt;
+&lt;p&gt;NER是序列标注的一种，在信息检索、机器翻译、问答系统、自然语言生成等领域中有着广泛的应用。例如，在搜索引擎中，将用户查询中的命名实体与数据库中的实体进行匹配，可以帮助用户更快地找到所需信息。在机器翻译中，识别源文本中的命名实体可以帮助翻译系统更准确地理解句子的含义，从而提高翻译质量。&lt;/p&gt;
+&lt;p&gt;命名实体识别通常使用基于规则、基于统计的方法或基于深度学习的方法。其中，基于深度学习的方法，如BiLSTM-CRF等模型，因其在序列标注任务中的优越表现，已经成为了命名实体识别的主流方法。&lt;/p&gt;
+&lt;h1 id=&#34;bio-三位序列标注法bio-3&#34;&gt;BIO-三位序列标注法（BIO-3）&lt;/h1&gt;
+&lt;p&gt;BIO-3 是用于构建 NER 任务的数据集的编码方法。它将每个标记分为三个部分：&lt;br&gt;
+B（Beginning）、I（Inside）、O（Outside）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;B（Beginning）&lt;/code&gt;表示实体的起始位置。在一个实体的第一个字上标记为B，例如&amp;quot;B-Person&amp;quot;表示一个人名实体的起始位置。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;I（Inside）&lt;/code&gt;表示实体的中间位置。在一个实体的非起始字上标记为I，例如&amp;quot;I-Person&amp;quot;表示一个人名实体的中间或结束位置。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;O（Outside）&lt;/code&gt;表示不属于任何实体的标记，即普通文本部分。&lt;/p&gt;
 &lt;p&gt;通过使用BIO-3标记法，我们可以准确地表示实体在文本中的起始和结束位置。这种方法的主要优点是灵活性，因为它可以处理不同长度和类型的实体。&lt;/p&gt;
 &lt;p&gt;除了BIO-3，还有其他常见的序列标注方法，包括：&lt;/p&gt;
 &lt;p&gt;IOB（Inside-Outside-Beginning）：与BIO-3类似，但使用I（Inside）和B（Beginning）标记来表示实体的起始和中间位置。&lt;/p&gt;
@@ -5338,9 +5404,6 @@ BIO-三位序列标注法（BIO-3）是一种常用于序列标注任务的标�
 &lt;p&gt;IOE（Inside-Outside-End）：与BIO-3类似，但使用I（Inside）和E（End）标记来表示实体的中间和结束位置。&lt;/p&gt;
 &lt;p&gt;IO：只有I（Inside）和O（Outside）两个标记，没有明确的起始标记。&lt;/p&gt;
 &lt;p&gt;这些标注方法都是为了在序列标注任务中准确表示实体的位置和边界。具体选择哪种标注方法取决于任务的需求和数据集的特点。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/367995480&#34;&gt; 测试集、训练集、开发集的区别&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/148813079&#34;&gt;CRF条件随机场的原理、例子、公式推导和应用&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://zhuanlan.zhihu.com/p/44042528&#34;&gt;最通俗易懂的BiLSTM-CRF模型中的CRF层介绍&lt;/a&gt;&lt;/p&gt;
 ">【NLP】BiLSTM-CRF算法</a>
       </div>
       
@@ -5377,7 +5440,7 @@ K-means和KNN都使用K值来控制算法的行为。K-means中的K代表聚类�
 &lt;p&gt;&lt;strong&gt;选择核函数和带宽&lt;/strong&gt;：Mean Shift算法需要一个核函数（如高斯核）和一个带宽参数，这个参数决定了搜索窗口的大小，影响着局部密度估计的范围。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;对每个数据点执行Mean Shift向量计算&lt;/strong&gt;：对于每一个数据点，Mean Shift算法计算以该点为中心，带宽为半径的超球体内所有点的质心（即均值）。这个质心是当前点和其邻域内其他点位置的加权平均，权重由核函数决定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对每个数据点执行Mean Shift向量计算&lt;/strong&gt;：对于每一个数据点，Mean Shift 算法计算以该点为中心，带宽为半径的超球体内所有点的质心（即均值）。这个质心是当前点和其邻域内其他点位置的加权平均，权重由核函数决定。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;更新数据点位置&lt;/strong&gt;：将每个数据点移动到计算得到的质心位置。&lt;/p&gt;
@@ -5677,7 +5740,8 @@ TF-IDF：统计词频来估计词汇的重要程度&lt;/p&gt;
 &lt;h1 id=&#34;tf-idf&#34;&gt;TF-IDF&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV12u411C7Sq/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;4分钟TF-IDF原理讲解与简单实现！基础看这一篇就够啦&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://zhuanlan.zhihu.com/p/31197209&#34;&gt;机器学习：生动理解TF-IDF算法&lt;/a&gt;&lt;br&gt;
-用于评估一个词语在特定文档中相对于整个文档集合的重要程度，通过计算每个词语的TF-IDF值，可以确定哪些词语最具代表性或者最能区分当前文档与其他文档。可以自动过滤停用词&lt;/p&gt;
+用于评估一个词语在特定文档中相对于整个文档集合的重要程度，通过计算每个词语的TF-IDF值，可以确定哪些词语最具代表性或者最能区分当前文档与其他文档。可以自动过滤停用词&lt;br&gt;
+TF是衡量在文本中有多频繁，IDF是衡量在文本中有多重要&lt;/p&gt;
 &lt;h1 id=&#34;word2vec&#34;&gt;Word2vec&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/27234078&#34;&gt;理解 Word2Vec 之 Skip-Gram 模型&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://blog.csdn.net/m0_63642362/article/details/127991177&#34;&gt;图学习【参考资料1】词向量word2vec&lt;/a&gt;&lt;/p&gt;
@@ -10578,6 +10642,8 @@ ID3用信息增益，C4.5用信息增益率，CART用Gini系数&lt;br&gt;
 &lt;li&gt;&lt;strong&gt;计算和内存开销&lt;/strong&gt;：训练多个决策树需要较多的计算资源和内存，特别是当数据集很大时。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;预测速度&lt;/strong&gt;：随机森林在预测时需要汇总所有决策树的预测结果，可能会比单个决策树慢。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1 id=&#34;集成学习&#34;&gt;集成学习&lt;/h1&gt;
+&lt;p&gt;boosting bagging stacking&lt;/p&gt;
 ">【ML】决策树和随机森林</a>
       </div>
       
