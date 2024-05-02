@@ -9,7 +9,7 @@
 <meta name="description" content="Jerome&#39;s blog">
 <meta name="theme-color" content="#343a40">
 <title>【ML】基础概念 | Jerome</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1711847270482">
+<link rel="shortcut icon" href="/favicon.ico?v=1714620157247">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -228,7 +228,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">113</span>
+        <span class="site-item-stat-count">118</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -1581,48 +1581,333 @@ dropout：前向传播的时候，让某个神经元的激活值以一定的概�
     <div class="result" id="result">
       
       <div class="item">
-        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/aienglish/"" data-c="
-          &lt;ol&gt;
-&lt;li&gt;Artificial General（通用） Intelligence (AGI) represents the hypothetical（假想） ability of an AI system to understand, learn, and apply knowledge across a wide range of tasks at a level of complexity comparable to human intelligence. Unlike narrow AI designed for specific tasks, AGI would possess the versatility and adaptability to perform any intellectual task that a human being can. This includes reasoning, problem-solving, abstract thinking, understanding natural language, and learning from experience. Achieving AGI is considered a monumental milestone in AI research, marking the advent of machines with human-like cognitive abilities.&lt;/li&gt;
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/san-wei-chong-jian-ji-chu/"" data-c="
+          &lt;p&gt;mesh&lt;br&gt;
+在三维建模和计算机图形学中，&amp;quot;mesh&amp;quot;（网格）是指用于表示三维对象几何形状的数字框架。这个框架由顶点（vertices）、边（edges）和面（faces）组成，通常用于构建曲面和体积。&lt;br&gt;
+顶点（Vertices）是网格的基本构建块，它们定义了三维空间中的点。边（Edges）是连接两个顶点的直线，而面（Faces）则是由至少三个边组成的闭合图形，它们可以是三角形、四边形或其他多边形。在许多情况下，特别是实时渲染和游戏开发中，三角形是最常用的面类型，因为它们易于处理且不会产生渲染错误。&lt;br&gt;
+网格可以是以下几种类型：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;三角形网格&lt;/strong&gt;（Triangle Mesh）：由三角形面组成，是最常见的网格类型，因为它们易于处理且能够适应复杂的形状。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;四边形网格&lt;/strong&gt;（Quadrilateral Mesh）：由四边形面组成，常用于需要平滑表面的建模。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多边形网格&lt;/strong&gt;（Polygon Mesh）：由多边形面组成，多边形的边数可以大于四，但过多的边可能会增加计算的复杂性。&lt;br&gt;
+网格的质量和密度对于三维模型的视觉质量和性能有着直接的影响。高密度的网格（更多的顶点、边和面）可以更精确地表示对象的细节，但同时也需要更多的计算资源来处理。因此，在创建网格时，艺术家和工程师需要在细节、平滑度和性能之间找到平衡。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;人工通用智能（AGI）代表了一个AI系统的假想能力，即理解、学习并应用知识去完成广泛的任务，这些任务的复杂度与人类智能相当。与为特定任务设计的狭义人工智能不同，AGI将拥有执行人类可以执行的任何智力任务的多功能性和适应性。这包括推理、解决问题、抽象思考、理解自然语言以及从经验中学习。实现AGI被认为是AI研究的一个重要里程碑，标志着具有类似人类认知能力的机器的到来。&lt;/p&gt;
+&lt;p&gt;monocular depth estimation&lt;br&gt;
+Monocular depth estimation是一种计算机视觉技术，它旨在从单个图像中恢复场景的深度信息。在现实世界中，我们通过两只眼睛的视差来感知深度，这是因为我们的两只眼睛从略微不同的角度观察同一个场景，从而产生了深度感知。然而，计算机和大多数相机只有一个“眼睛”（即一个镜头），因此它们无法直接获得这种视差信息。&lt;br&gt;
+Monocular depth estimation的目标是利用图像中的线索来推断深度信息，这些线索可能包括物体的大小、遮挡、光照、纹理变化等。这种技术对于增强现实、机器人导航、三维重建等领域非常重要，因为在这些应用中，获取深度信息可以帮助更好地理解和解释场景。&lt;br&gt;
+Monocular depth estimation通常依赖于深度学习模型，特别是卷积神经网络（CNNs），这些模型可以从大量的成对图像和深度图中学习，其中成对图像包含相同的场景但视角略有不同，深度图则提供了每个像素的深度信息。通过训练，模型可以学习如何从单个图像中预测深度信息。&lt;br&gt;
+尽管monocular depth estimation是一个病态问题（因为多个不同的深度场景可以产生相同的二维图像），但现代深度学习模型已经能够以相当高的准确性估计深度，尤其是在合成数据集或特定场景类型上训练时。然而，这些模型通常在处理极端遮挡、缺乏纹理或非朗伯反射表面的场景时仍然面临挑战。&lt;/p&gt;
+">三维重建基础</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/she-ying-sao-jie/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://www.sohu.com/a/160831308_417563&#34;&gt;用相机扫街时，怎样设定光圈快门组合？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;除了需要虚化和捕捉快速物体时，用小光圈来获得全局合焦&lt;/p&gt;
+&lt;p&gt;在阳光灿烂的正午：f/8、1/500、ISO 400&lt;/p&gt;
+&lt;p&gt;在阳光明媚的午后：f/8、1/250、ISO 400&lt;/p&gt;
+&lt;p&gt;在阳光明媚的午后，稀疏的树荫底下：f/5.6、1/125、ISO 400&lt;/p&gt;
+&lt;p&gt;在阳光明媚的午后，浓密的树荫底下：f/4、1/60、ISO 400&lt;/p&gt;
+&lt;p&gt;多云：f/8、1/125、ISO 400&lt;/p&gt;
+&lt;p&gt;阴天：f/8、1/60、ISO 400&lt;/p&gt;
+&lt;p&gt;在地铁车厢里：f/2.8、1/30、ISO 400&lt;/p&gt;
+&lt;p&gt;室内的商场：f/2.8、1/30、ISO 400&lt;/p&gt;
+&lt;p&gt;夜晚有路灯的大街上：f/2.8、1/15、ISO 400&lt;/p&gt;
+">【摄影】扫街</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/du-lun-wen/"" data-c="
+          &lt;p&gt;论文：技术介绍、验证假设、探索问题、复现结果&lt;br&gt;
+综述 review article：总结或介绍某一领域的发展历程、研究现状、未来趋势&lt;/p&gt;
+&lt;p&gt;判断一篇文章是综述还是研究论文&lt;/p&gt;
+&lt;h3 id=&#34;1-观察题目的关键词&#34;&gt;1. &lt;strong&gt;观察题目的关键词&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;综述文章&lt;/strong&gt;的题目通常会包含如“Review”、“Overview”、“Summary”、“State of the Art”、“Synthesis”等词汇，这些词汇表明文章可能是对某一领域的文献或进展的总结。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;研究论文&lt;/strong&gt;的题目通常更具体，可能会提到特定的研究方法、数据或实验结果，如“Case Study”、“Effects of”、“Analysis of”、“Response of”等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-分析题目的内容&#34;&gt;2. &lt;strong&gt;分析题目的内容&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;综述文章的题目往往比较广泛，涉及某一学科或子领域的广泛内容，没有具体的实验或数据分析。&lt;/li&gt;
+&lt;li&gt;研究论文的题目通常具体到某一特定的研究问题、对象或变量，显示出对特定假设或模型的探讨。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-查看文章的摘要和引言&#34;&gt;3. &lt;strong&gt;查看文章的摘要和引言&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;如果可以访问到文章的摘要（abstract）或引言（introduction）部分，这些内容可以提供更多线索：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;综述文章的摘要通常说明了作者调研的范围、目的和方法，可能会提到是对哪个时间段内的文献进行了回顾。&lt;/li&gt;
+&lt;li&gt;研究论文的摘要会具体说明研究的方法、主要发现和结论，通常还会提及研究的重要性和创新点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-审查文章的结构&#34;&gt;4. &lt;strong&gt;审查文章的结构&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;综述文章可能没有典型的研究论文结构（即“引言、方法、结果、讨论”模式），而是按照主题或时间顺序组织文献。&lt;/li&gt;
+&lt;li&gt;研究论文则通常遵循严格的科学报告格式，包括研究方法、数据分析和结果讨论。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;读论文流程&lt;br&gt;
+阅读→提问→梳理→提问→解决问题→再次梳理&lt;/p&gt;
+">读论文</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/du-lun-wen-neus2/"" data-c="
+          &lt;p&gt;NeuS 适用于静态高质量三维重建，但速度很慢，无法应用于数千帧的动态场景。NeuS2采用一种渐进式的学习策略&lt;/p&gt;
+&lt;h1 id=&#34;英文积累&#34;&gt;英文积累&lt;/h1&gt;
+&lt;p&gt;achieves two orders of magnitude improvement in terms of acceleration without compromising reconstruction quality&lt;/p&gt;
+&lt;p&gt;在不影响重建质量的情况下，在加速方面实现了两个数量级的提高&lt;/p&gt;
+&lt;p&gt;magnitude 数量级&lt;br&gt;
+in terms of 就...而言&lt;br&gt;
+compromising 妥协、损害&lt;/p&gt;
+&lt;p&gt;multi-resolution 多分辨率&lt;br&gt;
+parameterize 参数化&lt;br&gt;
+lightweight 轻量级&lt;br&gt;
+second-order derivatives 二阶混合偏导数&lt;br&gt;
+leverage CUDA parallelism 利用CUDA的并行性&lt;br&gt;
+achieving a factor two speed up 达到了两倍的速度&lt;br&gt;
+expedite 加速&lt;br&gt;
+from coarse to fine 由粗到细&lt;br&gt;
+a progressive learning strategy 渐进式学习策略&lt;/p&gt;
+">【读论文】NeuS2</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/san-wei-chong-jian/"" data-c="
+          &lt;p&gt;三维重建是一个多学科交叉的研究领域，包含了从图像处理到计算机视觉，再到机器学习等多方面的技术。三维重建算法可以根据其核心技术和应用场景被大致分为以下几类：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于几何的方法&lt;br&gt;
+这些方法通常依赖于物理测量和几何推理来从一组数据中直接恢复出三维结构。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;立体视觉（Stereo Vision）：通过比较来自两个或多个相机视角的图像，找出图像间的对应点，以估计三维位置。&lt;br&gt;
+结构光（Structured Light）和激光扫描（Laser Scanning）：通过投射已知图案的光或激光到物体上，根据反射或散射光的变化推断物体的三维形状。&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Supervised learning is a machine learning approach where models are trained on labeled data, meaning each input example is paired with the correct output. The model learns by comparing its predictions to the actual outputs during training, adjusting until it can accurately predict outcomes for unseen data. Unsupervised learning, conversely, involves training models on data without explicit instructions on what to predict. The model identifies patterns and structures within the data autonomously. Supervised learning is typically used for classification and regression tasks, while unsupervised learning is used for clustering, dimensionality reduction, and association rule learning.&lt;/li&gt;
+&lt;li&gt;基于图像的方法&lt;br&gt;
+这类方法主要依赖于图像数据，通过分析图像特征和外观信息来重建三维结构。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;监督学习是一种机器学习方法，其中模型是在标注数据上训练的，这意味着每个输入实例都与正确的输出配对。模型通过在训练期间将其预测与实际输出进行比较来学习，并调整直到它能够准确预测未见数据的结果。相反，无监督学习涉及在没有关于应预测什么的明确指导的数据上训练模型。模型自主地识别数据中的模式和结构。监督学习通常用于分类和回归任务，而无监督学习用于聚类、降维和关联规则学习。&lt;/p&gt;
+&lt;p&gt;多视图立体匹配（Multi-View Stereo, MVS）：利用来自多个视角的图像，通过寻找图像间的对应关系来重建场景的三维结构。&lt;br&gt;
+光度立体法（Photometric Stereo）：通过分析同一场景在不同照明条件下的图像变化来估计表面的法线和细节。&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;A Multilayer Perception (MLP) is a class of feedforward artificial neural network (ANN) that consists of at least three layers of nodes: an input layer, one or more hidden layers, and an output layer. Each node, except for input nodes, uses a nonlinear activation function. MLP utilizes a supervised learning technique called backpropagation for training. Its architecture of multiple layers and nonlinear processing enables complex pattern recognition and decision-making, making it foundational to deep learning. Deep learning involves networks with many layers (deep architectures) that can learn hierarchical representations of data, significantly advancing capabilities in AI research and applications.&lt;/li&gt;
+&lt;li&gt;基于深度学习的方法&lt;br&gt;
+深度学习方法利用大量数据来训练神经网络模型，使其能够理解和重建三维结构。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;多层感知机（MLP）是一种前馈人工神经网络（ANN），至少包括三层节点：一个输入层、一个或多个隐藏层以及一个输出层。除输入节点外，每个节点都使用非线性激活函数。MLP利用一种称为反向传播的监督学习技术进行训练。它的多层结构和非线性处理使得复杂的模式识别和决策成为可能，是深度学习的基础。深度学习涉及有许多层（深度架构）的网络，这些网络可以学习数据的层次化表示，显著推进了AI研究和应用能力。&lt;/p&gt;
+&lt;p&gt;从单张或多张图像到三维模型：使用深度神经网络从一张或多张二维图像直接生成三维体素、网格或点云表示。&lt;br&gt;
+点云处理：直接从点云数据中学习三维形状的特征，用于点云的分类、分割和重建。&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Backpropagation is a cornerstone algorithm for training neural networks, particularly in deep learning. It operates by propagating the error backward from the output layer to the input layer, allowing the algorithm to adjust the weights of connections in order to minimize the error in predictions. This process involves two key phases: forward pass, where input data is fed through the network to generate output predictions, and backward pass, where the gradient of the loss function is computed with respect to each weight by the chain rule, enabling the network to learn from errors systematically. This iterative adjustment refines the model&#39;s accuracy over time.&lt;/li&gt;
+&lt;li&gt;基于体积场的方法&lt;br&gt;
+这些方法通过学习连续的三维场景表示来创建更加细腻和连续的三维模型。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;反向传播是训练神经网络，尤其是在深度学习中的基石算法。它通过将错误从输出层反向传播到输入层来运作，允许算法调整连接权重以最小化预测中的错误。这个过程涉及两个关键阶段：前向传播，输入数据通过网络生成输出预测；反向传播，利用链式规则计算损失函数的梯度相对于每个权重，使网络能够系统地从错误中学习。这种迭代调整随着时间提高了模型的准确性。&lt;/p&gt;
+&lt;p&gt;NeRF（Neural Radiance Fields）：通过深度网络学习场景的连续体积表示，能够从新的视角合成高质量的图像，并隐式地重建三维结构。&lt;/p&gt;
+&lt;p&gt;NeuS&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Overfitting is a common problem in machine learning, where a model learns the training data too well, including its noise and outliers, rather than generalizing from the pattern it should learn. This results in high accuracy on training data but poor performance on new, unseen data. Essentially, the model becomes overly complex, capturing spurious correlations that do not exist in real-world data. To combat overfitting, techniques such as cross-validation, regularization, and pruning can be used, along with ensuring a sufficient amount of diverse training data. Overfitting highlights the delicate balance between model complexity and its generalization ability.&lt;/li&gt;
+&lt;li&gt;基于模型的方法&lt;br&gt;
+特定场景下，可以预先定义一组模型或模板，通过调整模型参数来适配输入数据从而实现三维重建。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;过拟合是机器学习中的一个常见问题，其中模型过于完美地学习了训练数据，包括其噪音和异常值，而不是从它应该学习的模式中泛化。这导致在训练数据上的高准确度但在新的、未见过的数据上的性能差。本质上，模型变得过于复杂，捕捉到了在现实世界数据中不存在的假相关性。为了对抗过拟合，可以使用交叉验证、正则化和剪枝等技术，同时确保有足够数量的多样化训练数据。过拟合突出了模型复杂度和其泛化能力之间微妙的平衡。&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;A Convolutional Neural Network (CNN) is a class of deep learning algorithm that can take in an input image, assign importance (learnable weights and biases) to various aspects or objects in the image, and differentiate from one another. The preprocessing required in a CNN is much lower compared to other classification algorithms. The architecture of a CNN is analogous to that of the connectivity pattern of neurons in the human brain and was inspired by the organization of the visual cortex. CNNs are primarily used in image recognition, image classification, object detection, and similar tasks, leveraging their ability to learn spatial hierarchies of features.&lt;/li&gt;
+&lt;h1 id=&#34;nerf和neus&#34;&gt;NeRF和NeuS&lt;/h1&gt;
+&lt;p&gt;NeuS（Neural Implicit Surfaces）虽然与NeRF（Neural Radiance Fields）在某些基本概念上有相似之处，尤其是它们都利用深度学习来处理三维场景的表示，但NeuS并不是直接基于NeRF。这两种方法都是三维重建和渲染领域的研究成果，都利用神经网络对场景进行建模，但它们关注的重点和实现方式有所不同。&lt;/p&gt;
+&lt;h3 id=&#34;nerf&#34;&gt;NeRF&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;NeRF专注于通过大量从不同视角捕获的图像来学习场景的体积密度和颜色，从而能够渲染出新的视角图像。&lt;/li&gt;
+&lt;li&gt;它基于体积渲染的概念，使用神经网络来预测光线穿过场景时的颜色和透明度，从而实现逼真的渲染效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;neus&#34;&gt;NeuS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;NeuS则侧重于使用神经网络学习场景的隐式表面（如有符号距离函数SDF），直接表示三维表面而非整个体积。&lt;/li&gt;
+&lt;li&gt;它的目标是生成连续的、高质量的三维表面模型，适合需要精确几何信息的应用，比如三维打印或高精度模拟。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关系和区别&#34;&gt;关系和区别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;共同点&lt;/strong&gt;：两者都使用深度学习和大量图像数据来学习三维场景的表示，都能生成高质量的三维视图。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;区别&lt;/strong&gt;：NeRF通过体积渲染技术重建整个三维空间的密度和颜色，更适用于视觉效果渲染；而NeuS专注于表面的精确表示，适合需要精确三维模型的场合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此，尽管NeuS和NeRF在高层次上共享深度学习在三维场景建模的应用这一共同点，但它们各自独立发展，侧重点和应用场景有所不同。&lt;/p&gt;
+&lt;p&gt;基于模板的重建：对于一些标准化的对象（如人脸、车辆等），可以通过调整预定义模型的参数来匹配输入数据，实现快速重建。&lt;/p&gt;
+">三维重建</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/nerf/"" data-c="
+          &lt;p&gt;&lt;a href=&#34;https://www.matthewtancik.com/nerf&#34;&gt;官网&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/yenchenlin/nerf-pytorch?tab=readme-ov-file&#34;&gt;NeRF-pytorch&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;入门讲解&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1o34y1P7Md/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;十分钟带你快速入门NeRF原理&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1CC411V7oq/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【较真系列】讲人话-NeRF全解（原理+代码+公式）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;NeRF，即 Neural Radiance Fields（神经辐射场）&lt;br&gt;
+Title：NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis&lt;br&gt;
+将场景表示为用于视图合成的神经辐射场&lt;/p&gt;
+&lt;p&gt;输入：不同位姿相机拍摄的物体图片&lt;br&gt;
+输出：新视角下的物体图片&lt;/p&gt;
+&lt;h2 id=&#34;nerf的优势&#34;&gt;NeRF的优势&lt;/h2&gt;
+&lt;p&gt;NeRF（Neural Radiance Fields）提供了若干相对于以前&lt;strong&gt;视图合成&lt;/strong&gt;和&lt;strong&gt;三维重建模型&lt;/strong&gt;的显著优势。这些优势主要包括：&lt;/p&gt;
+&lt;h3 id=&#34;1-连续的场景表示&#34;&gt;1. &lt;strong&gt;连续的场景表示&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;细节与连续性&lt;/strong&gt;：NeRF表示场景为一个连续的、高度详细的函数，允许从任何视角生成非常平滑和连续的视图。这与传统的基于离散三维网格（如体素网格）或多边形网格的方法相比，可以生成更自然的过渡和更精细的细节。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-处理复杂光照和材料&#34;&gt;2. &lt;strong&gt;处理复杂光照和材料&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;视角依赖效果&lt;/strong&gt;：NeRF能够捕捉复杂的光照效果，如高光和阴影，以及非朗伯特（非漫反射）表面的视角依赖特性，这些在传统方法中往往难以准确渲染。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-高质量的新视角合成&#34;&gt;3. &lt;strong&gt;高质量的新视角合成&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;逼真度&lt;/strong&gt;：NeRF通过优化整个场景的辐射场来重建新视角，生成的图像在视觉上与真实世界的观察极为接近，特别是在合成高度逼真视图方面的表现优于许多先前技术。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-更少的先验几何需求&#34;&gt;4. &lt;strong&gt;更少的先验几何需求&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自底向上的学习&lt;/strong&gt;：与需要明确的3D模型或复杂场景几何先验的方法不同，NeRF仅依赖于输入的二维图像和相应的相机参数来学习场景的3D表示，不需要复杂的场景建模步骤。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-可微分渲染&#34;&gt;5. &lt;strong&gt;可微分渲染&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;端到端优化&lt;/strong&gt;：NeRF使用可微分的体积渲染技术，这使得可以通过标准的梯度下降技术直接从图像误差中优化网络参数，实现端到端的训练。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-存储和计算效率&#34;&gt;6. &lt;strong&gt;存储和计算效率&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;参数化表示&lt;/strong&gt;：虽然NeRF需要大量的计算资源进行训练和渲染，但它将整个3D场景以及相关的视角依赖特性编码在一个相对紧凑的神经网络中，这比传统的大规模3D数据结构更加存储高效。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;挑战与局限&#34;&gt;挑战与局限&lt;/h3&gt;
+&lt;p&gt;尽管NeRF有诸多优势，但它也存在一些局限，如渲染速度慢（因为需要大量的网络评估来渲染每个视图）和训练成本高。此外，对于动态场景的处理也是NeRF目前的一个挑战点，尽管已有研究在尝试解决这些问题。&lt;/p&gt;
+&lt;p&gt;总的来说，NeRF在视图合成和三维场景重建领域提供了一种创新的方法，通过其连续的、高度详细的场景表示能力，以及对复杂光照和材料特性的处理，显著提升了渲染的真实感和质量。&lt;/p&gt;
+&lt;h1 id=&#34;不成形的思考&#34;&gt;不成形的思考&lt;/h1&gt;
+&lt;p&gt;流程&lt;br&gt;
+拍摄不同位姿的图片，获得多视角的物体图像&lt;br&gt;
+每个相机的位置（xyz）和位姿，也就是朝向（用θ和φ表示），作为输入&lt;br&gt;
+每个图片上的每个像素对应一个射线，这条射线贯穿图片像素和实际物体上的一个点&lt;br&gt;
+在射线上均匀取一些采样点（sample_points）作为评估，每个点都输出颜色和密度&lt;br&gt;
+使用体渲染技术，对这些点的颜色和密度进行积分，合成一个像素颜色&lt;br&gt;
+将这个颜色和真实颜色做MSE，来训练网络&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Q&lt;/code&gt;&lt;br&gt;
+有监督学习？标签是什么&lt;/p&gt;
+&lt;p&gt;静态场景&lt;/p&gt;
+&lt;p&gt;rgb图、深度图&lt;/p&gt;
+&lt;h2 id=&#34;whats-new&#34;&gt;What&#39;s new?&lt;/h2&gt;
+&lt;h3 id=&#34;insight&#34;&gt;Insight&lt;/h3&gt;
+&lt;p&gt;以往：直接通过图片重建出一个网格/点云/体素的模型&lt;br&gt;
+NeRF：神经隐式的方式重建三维模型（implicit representation）&lt;/p&gt;
+&lt;p&gt;显示：有明确xyz的信息，mesh、体素、点云&lt;br&gt;
+隐式：用神经网络来表示三维空间中的场景属性（如颜色、密度等）的方法，而不是使用传统的显式几何结构（如点云、多边形网格等）&lt;/p&gt;
+&lt;p&gt;这种隐式表示的优势在于它可以非常精细地捕捉场景的细节，而不需要存储大量的几何数据。由于神经网络可以表示非常复杂的函数，这种方法可以用来重建具有高度细节和复杂几何结构的场景。&lt;br&gt;
+在NERF中，隐式表示允许我们通过简单的函数查询来渲染高质量的图像，而不需要知道场景的确切几何形状。这使得NERF非常适合于基于图像的三维重建任务，因为它可以处理大量的输入图像，并且能够生成连贯的三维场景表示。&lt;/p&gt;
+&lt;h3 id=&#34;method&#34;&gt;Method&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;5D neural radiance fields 5D神经辐射场&lt;/li&gt;
+&lt;li&gt;classical volume rendering techniques 经典体渲染技术&lt;/li&gt;
+&lt;li&gt;position encoding to map each input 5D coordinate into a higher dimensional space 使用位置编码将5D坐标映射到高维空间&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;卷积神经网络（CNN）是一种深度学习算法，可以接受输入图像，为图像中的不同方面或对象分配重要性（可学习的权重和偏差），并且彼此区分开来。与其他分类算法相比，CNN所需的预处理要少得多。CNN的架构类似于人脑神经元的连接模式，并且受到视觉皮层组织的启发。CNN主要用于图像识别、图像分类、对象检测以及类似任务，利用它们学习特征的空间层次结构的能力。&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;Deep Reinforcement Learning (DRL) combines deep learning and reinforcement learning principles to create systems that can learn to make decisions. Deep learning processes vast amounts of data through neural networks, enabling feature detection and recognition. Reinforcement learning, on the other hand, is about agents learning to make actions in an environment to achieve a goal, guided by rewards or penalties. DRL utilizes deep neural networks to interpret complex, high-dimensional inputs, allowing the agent to learn optimal actions from its experiences, without explicit programming. This approach has led to significant breakthroughs, such as mastering complex games and improving decision-making in robotics and autonomous vehicles.**&lt;/li&gt;
+&lt;p&gt;输入：5D的相机位姿，输出：4D向量：RGB和不透明度α（密度）&lt;br&gt;
+模型结构：8层MLP&lt;br&gt;
+2D图片→5D向量→NeRF→4D向量→2D图片&lt;/p&gt;
+&lt;p&gt;2D图片上的一个像素点为3D空间中一条射线上点之和（一个像素对应一条射线）&lt;br&gt;
+利用相机模型反推射线，射线表示为 r(t)=o+td&lt;/p&gt;
+&lt;p&gt;在一定范围内，取一组采样点（用near和far表示光线最近点和最远点）每个采样点都有RGBA的值&lt;br&gt;
+射线方向上对采样点进行积分得到像素点确切的颜色值&lt;br&gt;
+所以NeRF渲染的是一个个点，像雾状的东西，称为体积雾&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;经典体渲染技术&lt;/strong&gt;&lt;br&gt;
+位置 x =（x, y, z）&lt;br&gt;
+体积密度 σ(x) 可以解释为光线在位置 x 处终止于一个无限小粒子的微分概率。&lt;br&gt;
+相机光线 r(t)=o+td 的预期颜色 C(r)，其中 tn 和 tf 是近和远的边界&lt;br&gt;
+T(t) 表示从 tn 到 t 沿光线的累积透射率，即光线从 tn 到 t 行进而不撞击任何其他粒子的概率&lt;br&gt;
+&lt;img src=&#34;https://jeromezjl.github.io/post-images/1714616959972.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;位置编码&lt;/strong&gt;&lt;br&gt;
+采用位置编码提高图片细节质量，将图片中的高频信息体现出来&lt;/p&gt;
+&lt;p&gt;将图像的像素坐标映射为相机坐标系，再从相机坐标系映射为世界坐标系下的一些点&lt;br&gt;
+将点输入到NeRF网络中，得到该点的RGB值和不透明度（密度）&lt;br&gt;
+根据体渲染公式，将点映射回像素值，称为预测值&lt;br&gt;
+将预测值和真实值做一个损失，可以优化网络的运行&lt;/p&gt;
+&lt;p&gt;NeRF假设&lt;br&gt;
+物体是自发光的粒子、粒子本身有密度和颜色&lt;/p&gt;
+&lt;p&gt;将物体进行稀疏表示的单个粒子的位姿，输出的是粒子的密度和颜色&lt;/p&gt;
+&lt;p&gt;一个点对应一个相机位姿是一个训练数据单位，而不是以图片为单位&lt;/p&gt;
+&lt;p&gt;NERF（Neural Radiance Fields）是一种用于三维重建和视图合成的机器学习技术。它利用深度学习模型来表示一个场景的连续体积光场，从而能够从不同角度和光照条件下渲染高质量的图像。&lt;br&gt;
+NERF的核心思想是将一个场景表示为一个隐式的、连续的函数，该函数能够输出在场景中任意位置和方向上的颜色和密度信息。这个函数是通过一个神经网络来学习的，网络输入是一个三维坐标和一个观察方向，输出是该点的颜色和不透明度。&lt;br&gt;
+NERF的工作流程通常包括以下几个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据采集：使用多个相机从不同的视角和位置拍摄同一个场景，收集一组图像作为训练数据。&lt;/li&gt;
+&lt;li&gt;场景表示：选择一个合适的坐标系，并将场景表示为一个神经网络。这个网络将学习如何根据输入的三维坐标和观察方向来预测颜色和不透明度。&lt;/li&gt;
+&lt;li&gt;训练网络：通过优化网络参数，使得从不同视角渲染的图像尽可能接近真实的拍摄图像。这个过程通常涉及到体积渲染技术，将连续的体积光场离散化并计算光线在场景中的传播。&lt;/li&gt;
+&lt;li&gt;渲染新视图：一旦网络训练完成，就可以使用它来渲染新的视图。给定一个相机位置和方向，通过沿着光线路径积分场景的颜色和不透明度，可以得到最终的渲染图像。&lt;br&gt;
+NERF在计算机视觉和图形学领域引起了广泛关注，因为它提供了一种高效、灵活的三维重建和视图合成方法。与其他基于模型的方法相比，NERF能够生成更加真实和详细的图像，尤其是在处理复杂和高度动态的场景时。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;深度强化学习（DRL）结合了深度学习和强化学习原理，创造了能够学习做出决策的系统。深度学习通过神经网络处理大量数据，使特征检测和识别成为可能。另一方面，强化学习是关于代理在环境中学习采取行动以实现目标，由奖励或惩罚指导。DRL利用深度神经网络来解释复杂的、高维输入，允许代理从经验中学习最优行动，无需显式编程。这种方法已经在如掌握复杂游戏和改善机器人与自动驾驶车辆的决策制定方面取得了重大突破。&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;In deep learning, activation functions are crucial for neural networks to learn complex patterns. They introduce non-linearity into the network, allowing it to model complicated relationships between inputs and outputs that linear equations cannot. Without activation functions, a neural network, regardless of its depth, would behave like a single-layer perceptron, only capable of solving linear problems. Activation functions, such as Sigmoid, ReLU, and Tanh, help decide whether a neuron should be activated or not, determining the output of neural networks based on input features. This enables deep learning models to tackle non-linear problems, like image recognition and natural language processing, effectively.**&lt;/li&gt;
+&lt;p&gt;https://www.bilibili.com/video/BV1o34y1P7Md/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&lt;/p&gt;
+&lt;p&gt;https://blog.csdn.net/qq_45752541/article/details/130072505&lt;/p&gt;
+&lt;p&gt;https://zhuanlan.zhihu.com/p/569843149&lt;/p&gt;
+&lt;h2 id=&#34;relative-works&#34;&gt;Relative Works&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;表示方式&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/awesome666/article/details/123166344?spm=1001.2101.3001.6650.2&amp;amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-123166344-blog-119849702.235%5Ev43%5Epc_blog_bottom_relevance_base8&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-123166344-blog-119849702.235%5Ev43%5Epc_blog_bottom_relevance_base8&amp;amp;utm_relevant_index=5&#34;&gt;3D重建几种表现形式——深度图，体素，点云，网格&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;三角形网格（triangle mesh）是最常用的表示形式。这主要是因为三角形具有以下优点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;稳定性&lt;/strong&gt;：三角形是唯一一种在任何情况下都不会变形的多边形，这意味着它们可以很好地适应复杂的形状而不失去稳定性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一致性&lt;/strong&gt;：由于所有的三角形都有三个顶点和三个内角，因此它们在计算和渲染时具有一致性，这使得算法的实现更加简单和高效。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灵活性&lt;/strong&gt;：三角形可以组合成几乎任何形状，从简单的几何体到高度复杂的有机形状，都可以通过三角形网格来近似表示。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;渲染优化&lt;/strong&gt;：现代图形硬件和渲染管线针对三角形渲染进行了优化，因此使用三角形网格可以充分利用这些优化，提高渲染效率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易于处理&lt;/strong&gt;：在许多图形处理任务中，如碰撞检测、光线追踪和阴影计算，三角形网格比其他类型的多边形网格更容易处理。&lt;br&gt;
+尽管四边形网格（quadrilateral meshes）在某些情况下也有其优势，例如在需要平滑曲面的应用中，但三角形网格的通用性和易用性使得它们在大多数情况下成为首选。在实际应用中，即使是四边形网格也常常被分解成三角形来进行渲染和处理。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;在深度学习中，激活函数对于神经网络学习复杂模式至关重要。它们为网络引入非线性，使其能够模拟输入与输出之间的复杂关系，而这是线性方程无法做到的。没有激活函数，无论神经网络的深度如何，都会表现得像一个只能解决线性问题的单层感知机。激活函数，如Sigmoid、ReLU和Tanh，帮助决定一个神经元是否应该被激活，决定了神经网络基于输入特征的输出。这使得深度学习模型能够有效地处理非线性问题，如图像识别和自然语言处理。&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;A generative model in artificial intelligence is an approach used to automatically generate new data instances that resemble a given set of data. Unlike discriminative models, which focus on determining the boundary between different classes, generative models learn the underlying distribution of input data, enabling them to produce new examples that could plausibly come from the original dataset. This ability makes generative models especially valuable in tasks such as image and text generation, data augmentation, and unsupervised learning. Popular examples of generative models include Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), which have been applied in creating realistic images, text-to-image synthesis, and more.&lt;/li&gt;
+&lt;p&gt;&lt;strong&gt;几种坐标系&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/qq_40918859/article/details/122271381&#34;&gt;相机模型、参数和各个坐标系(世界坐标系、相机坐标系、归一化坐标系、图像坐标系、像素坐标系之间变换）&lt;/a&gt;&lt;br&gt;
+在三维重建过程中，通常会涉及多种坐标系，主要包括以下几种：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;世界坐标系（World Coordinate System）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;世界坐标系是一个固定的坐标系，用于描述场景中物体和相机的绝对位置。&lt;/li&gt;
+&lt;li&gt;它是一个三维直角坐标系，通常定义在场景的某个方便的位置和方向上。&lt;/li&gt;
+&lt;li&gt;世界坐标系是进行三维重建时的参考框架，所有的物体和相机的位置都是相对于这个世界坐标系来描述的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;相机坐标系（Camera Coordinate System）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;相机坐标系是以相机的光心为原点的三维直角坐标系。&lt;/li&gt;
+&lt;li&gt;在这个坐标系中，X轴通常水平向右，Y轴垂直向上，Z轴与光轴重合，指向相机前方。&lt;/li&gt;
+&lt;li&gt;相机的内参和外参参数用于将世界坐标系中的点转换到相机坐标系中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图像坐标系（Image Coordinate System）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;图像坐标系是二维坐标系，用于描述成像平面上的点。&lt;/li&gt;
+&lt;li&gt;它通常以图像的左上角为原点，X轴向右，Y轴向下。&lt;/li&gt;
+&lt;li&gt;图像坐标系中的坐标单位通常是像素。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;归一化图像坐标系（Normalized Image Coordinate System）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;归一化图像坐标系是图像坐标系的一种变换形式，其中每个点的坐标都除以该点的Z坐标（即相机坐标系中的深度值）。&lt;/li&gt;
+&lt;li&gt;在归一化图像坐标系中，成像平面的中心通常位于坐标原点，X轴和Y轴的范围通常是[-1, 1]。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;像素坐标系（Pixel Coordinate System）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;像素坐标系是图像坐标系的一种特殊形式，其中坐标的原点通常位于图像的左上角，X轴向右，Y轴向下。&lt;/li&gt;
+&lt;li&gt;像素坐标系的单位是像素，它直接对应于数字图像中的阵列结构。&lt;br&gt;
+在进行三维重建时，通常需要将这些不同的坐标系相互转换，以便从二维图像中恢复出三维信息。例如，通过相机标定可以得到相机内参，将图像坐标系中的点转换到归一化图像坐标系，然后再通过相机外参将归一化图像坐标系中的点转换到世界坐标系中进行三维重建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;在人工智能中，生成模型是一种用于自动生成类似于给定数据集的新数据实例的方法。与专注于确定不同类别之间边界的判别模型不同，生成模型学习输入数据的底层分布，使它们能够生成可能来自原始数据集的新例子。这种能力使得生成模型在图像和文本生成、数据增强和无监督学习等任务中特别有价值。流行的生成模型例子包括生成对抗网络（GANs）和变分自编码器（VAEs），这些已被应用于创造逼真的图像、文本到图像的合成等。&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;Transformer is a groundbreaking architecture in deep learning, introduced for dealing with sequential data, notably in natural language processing (NLP). Unlike its predecessors that relied on recurrence or convolutions, the transformer utilizes attention mechanisms to weigh the significance of different words within the input data. This allows it to capture complex dependencies and relationships within the data more effectively. The architecture comprises an encoder to process the input and a decoder for output generation. Transformers have led to significant advancements in tasks such as machine translation, text summarization, and language understanding, serving as the foundation for models like BERT and GPT.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Transformer 是深度学习中的一种开创性架构，专门用于处理顺序数据，特别是在自然语言处理（NLP）中。与依赖于递归或卷积的前身不同，Transformer 利用注意力机制来权衡输入数据中不同单词的重要性。这使它能够更有效地捕捉数据内的复杂依赖关系。该架构包括一个编码器来处理输入和一个解码器来生成输出。Transformer 在机器翻译、文本摘要和语言理解等任务上取得了重大进展，为像BERT和GPT这样的模型提供了基础。&lt;/p&gt;
-">AIEnglish</a>
+&lt;p&gt;&lt;strong&gt;相机标定&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1C54y1B7By/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;三维重建第三课：相机标定原理步骤(一）坐标系变换&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1eE411c7kr/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;相机标定的基本原理与经验分享&lt;/a&gt;&lt;br&gt;
+世界坐标系到相机坐标系：先旋转（R）再平移（T）&lt;/p&gt;
+&lt;h2 id=&#34;思考&#34;&gt;思考&lt;/h2&gt;
+&lt;p&gt;对于变量A和结果R，如何发现两者是否有映射关系？&lt;br&gt;
+本文中5D向量输入，4D的RGB+density输出，这个映射关系看似很难以想到，但是它来自于一个传统的体渲染思路。本文仅使用MLP将其转化为CV领域，便是一种创新。&lt;/p&gt;
+&lt;p&gt;对于一种想达到的结果R，一个变量组A在映射F下得到的R效果不好，而另一组变量B在映射F下得到的R效果要好，这就是科研中创新的过程&lt;/p&gt;
+&lt;p&gt;如何发现映射关系？站在巨人肩膀上，将其他领域应用于本领域；感性认知，加上手动验证，比如用ML方法验证，然后再投入实验。&lt;/p&gt;
+&lt;h2 id=&#34;英文单词&#34;&gt;英文单词&lt;/h2&gt;
+&lt;p&gt;state-of-the-art：最先进的&lt;br&gt;
+sparse：稀疏的&lt;br&gt;
+optimize：优化&lt;br&gt;
+spatial：空间的&lt;br&gt;
+rendering：渲染&lt;br&gt;
+continuous：连续的&lt;br&gt;
+map：映射&lt;br&gt;
+coordinate：坐标&lt;br&gt;
+world coordinate：世界坐标系&lt;br&gt;
+synthesize：合成&lt;br&gt;
+differentiable：可微的&lt;br&gt;
+density：密度（不透明度）&lt;br&gt;
+geometry：几何&lt;br&gt;
+outperform：比...做的好&lt;br&gt;
+referred to：被称为&lt;br&gt;
+corresponding：相对应的&lt;br&gt;
+pipeline：流程、框架&lt;br&gt;
+voxel grids：体素网格&lt;br&gt;
+infinitesimal：无穷小&lt;br&gt;
+particle：粒子&lt;br&gt;
+triangle meshes：三角网格&lt;/p&gt;
+">NeRF-用2D重建3D</a>
       </div>
       
       <div class="item">
@@ -1796,8 +2081,7 @@ BiLSTM的输出被送入CRF层，CRF层利用这些信息以及标注之间的�
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/ai-mian-shi/"" data-c="
-          &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/aienglish/&#34;&gt;AIenglish&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://jeromezjl.github.io/post/fu-shi-ying-yu/&#34;&gt;复试英语&lt;/a&gt;&lt;br&gt;
+          &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/fu-shi-ying-yu/&#34;&gt;复试英语&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/fu-shi-xiang-mu/&#34;&gt;复试项目&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;ai&#34;&gt;AI&lt;/h1&gt;
 &lt;ol&gt;
@@ -3884,6 +4168,7 @@ gpustat&lt;br&gt;
 &lt;p&gt;退出 python：&amp;gt;&amp;gt;&amp;gt; quit（）&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_59047731/article/details/135634418&#34;&gt;pyCharm专业版破解激活（超详细）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/486360176&#34;&gt;一文读懂 PyTorch 显存管理机制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;windows下使用pip时，如果挂了代理，比如clash等，可能会安装失败，需关掉代理再安装&lt;/p&gt;
 ">【Linux】深度学习配置</a>
       </div>
       
@@ -4735,12 +5020,16 @@ r(A)=r(B)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://bili.iiilab.com/&#34;&gt;b站下载&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://xn--ehq00hgtfdmt.xyz/#/dashboard&#34;&gt;三分机场&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://xn--4gq62f52gdss.art/#/dashboard&#34;&gt;一元机场&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://llgjc.com/#/dashboard&#34;&gt;流量光机场&lt;/a&gt;&lt;/p&gt;
 ">【工具】</a>
       </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/she-ying-ren-xiang-si-lu/"" data-c="
-          &lt;p&gt;最近拍毕业照，总结一下毕业照思路和注意事项&lt;/p&gt;
+          &lt;p&gt;人像参数&lt;br&gt;
+光圈、ISO、闪光灯功率决定人物亮度&lt;br&gt;
+快门速度、ISO决定背景亮度&lt;/p&gt;
+&lt;p&gt;最近拍毕业照，总结一下毕业照思路和注意事项&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;单人&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;老生常谈一个场景多拍几张，防止表情管理失败&lt;/li&gt;
@@ -5370,6 +5659,9 @@ Bash是Shell的一种&lt;/p&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/ba-gu-wen&#34;&gt;八股文&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/sql&#34;&gt;SQL&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://jeromezjl.github.io/post/sql-fu-xi&#34;&gt;SQL 复习&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;读论文&#34;&gt;读论文&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;项目和比赛&#34;&gt;项目和比赛&lt;/h1&gt;
 &lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://jeromezjl.github.io/post/pykeyboard-he-pymouse-zi-dong-hua-cao-zuo&#34;&gt;Pykeyboard 和 Pymouse 自动化操作&lt;/a&gt;&lt;/p&gt;
@@ -6340,10 +6632,17 @@ TF是衡量在文本中有多频繁，IDF是衡量在文本中有多重要&lt;/p
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://jeromezjl.github.io/post/she-ying-diao-se-si-lu/"" data-c="
-          &lt;p&gt;降低纹理可以减少画面杂乱感，比如杂草背景&lt;br&gt;
+          &lt;p&gt;调色：调色调、影调&lt;/p&gt;
+&lt;p&gt;降低纹理可以减少画面杂乱感，比如杂草背景&lt;br&gt;
 背光人像可以通过提高清晰度提高人像亮度&lt;br&gt;
 调节曝光要保证画面整体看起来和谐。比如白色色阶不能过于割裂&lt;br&gt;
 如果遇到颜色过于单一，或者色彩不好平衡的时候，不妨试试黑白调色&lt;/p&gt;
+&lt;p&gt;直方图&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV17S4y1m76h/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;直方图看懂了，你就会调色了！&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1pG411c7dp/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【摄影基础01】看懂直方图：摄影10大影调的奥秘，你知道多少？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1f54y1A7Ko/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;6分钟彻底看懂直方图｜离调色大师更进一步&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用点曲线模拟褪色效果&lt;/p&gt;
+&lt;p&gt;通过褪色模糊来给画面做减法。亮部较多，亮模糊；暗部较多，暗模糊&lt;/p&gt;
 &lt;p&gt;解决不能二次导入LR的问题：&lt;br&gt;
 只需更改文件夹名即可，LR就认为你换了个路径&lt;/p&gt;
 &lt;p&gt;临时调色文件用完就删&lt;/p&gt;
@@ -6354,6 +6653,8 @@ TF是衡量在文本中有多频繁，IDF是衡量在文本中有多重要&lt;/p
 &lt;p&gt;色卡生成工具&lt;br&gt;
 &lt;a href=&#34;https://photokit.com/colors/palette-generator/?lang=zh&#34;&gt;调色板生成器1&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://colors.dopely.top/image-color-picker/&#34;&gt;调色板生成器2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;视频增稳&lt;br&gt;
+GYRO flow 软件&lt;/p&gt;
 ">【摄影】调色思路</a>
       </div>
       
@@ -9691,7 +9992,7 @@ DBLP（DataBase systems and Logic Programming）是计算机领域内对研究�
 &lt;p&gt;&lt;strong&gt;AAAI&lt;/strong&gt;&lt;br&gt;
 国际先进人工智能协会（Association for the Advancement of Artificial Intelligence, AAAI）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;NeurIPS&lt;/strong&gt;&lt;br&gt;
-神经信息处理系统大会(Conference and Workshop on Neural Information Processing Systems) 关于机器学习和计算神经科学的国际会议&lt;/p&gt;
+神经信息处理系统大会(Conference and Workshop on Neural Information Processing Systems) 关于机器学习和计算神经科学的国际会议（机器学习界最好的会议）&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ACL&lt;/strong&gt;&lt;br&gt;
 （The Association for Computational Linguistics）计算语言学年会，由计算语言学学会（Association of Computational Linguistics）举办；ACL 是自然语言处理领域水平最高、最权威的国际会议&lt;/p&gt;
 &lt;p&gt;**ICML **&lt;br&gt;
@@ -9835,10 +10136,18 @@ Multi-Attention MA-CNN&lt;br&gt;
 调节 ISO 确保画质&lt;br&gt;
 最后调节光圈达到正确曝光&lt;/p&gt;
 &lt;p&gt;快门速度的单位：秒&lt;/p&gt;
-&lt;h1 id=&#34;调色思路&#34;&gt;调色思路&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;人文&lt;/code&gt;&lt;br&gt;
-青橙、蓝绿&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cp.originoo.com/login&#34;&gt;锐景创意内容平台&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV167411C7DZ/?spm_id_from=333.788.recommend_more_video.1&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;如何查看相机直方图来调整曝光三要素&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;测光模式&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1Xa4y1R7As/?spm_id_from=333.788.recommend_more_video.0&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【摄影新手必看】拍的照片总是曝光不准确？测光模式全解析&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.bilibili.com/video/BV1wa4y1M7ow/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;索尼a7m4对焦点和点测光联动的设置&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;滤镜选择&#34;&gt;滤镜选择&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Lt4y1871E/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33&#34;&gt;【体验】使用了10+款镜头滤镜后，我决定留下这些... 镜头滤镜们的使用体验 feat: Freewell镜头滤镜套装&lt;/a&gt;&lt;br&gt;
+UV镜：保护镜头，没用其余用处&lt;br&gt;
+ND镜：减少进光，可以白天拍延时&lt;br&gt;
+CPL偏振镜：消除物体反光&lt;br&gt;
+柔光镜（黑柔）：画面更柔和&lt;/p&gt;
+&lt;h1 id=&#34;摄影师&#34;&gt;摄影师&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;http://artspy.cn/activity/view/11007&#34;&gt;【资讯】十位世界级当代摄影大师&lt;/a&gt;&lt;/p&gt;
 ">【摄影】摄影入门</a>
       </div>
       
