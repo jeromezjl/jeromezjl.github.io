@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://jeromezjl.github.io</id>
+    <title>Jerome</title>
+    <updated>2024-05-15T15:33:36.733Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://jeromezjl.github.io"/>
+    <link rel="self" href="https://jeromezjl.github.io/atom.xml"/>
+    <subtitle>Jerome&apos;s blog</subtitle>
+    <logo>https://jeromezjl.github.io/images/avatar.png</logo>
+    <icon>https://jeromezjl.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Jerome</rights>
+    <entry>
+        <title type="html"><![CDATA[【读论文】Edge-preserving Near-light Photometric Stereo with Neural Surfaces]]></title>
+        <id>https://jeromezjl.github.io/post/du-lun-wen-edge-preserving-near-light-photometric-stereo-with-neural-surfaces/</id>
+        <link href="https://jeromezjl.github.io/post/du-lun-wen-edge-preserving-near-light-photometric-stereo-with-neural-surfaces/">
+        </link>
+        <updated>2024-05-15T15:32:37.000Z</updated>
+        <content type="html"><![CDATA[<p>1</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【读论文】Microgeometry Capture using an Elastomeric Sensor]]></title>
+        <id>https://jeromezjl.github.io/post/microgeometry-capture-using-an-elastomeric-sensor/</id>
+        <link href="https://jeromezjl.github.io/post/microgeometry-capture-using-an-elastomeric-sensor/">
+        </link>
+        <updated>2024-05-15T14:51:28.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://dl.acm.org/doi/10.1145/1964921.1964941">原文链接</a></p>
+<p>标题：Microgeometry Capture using an Elastomeric Sensor<br>
+翻译：使用弹性传感器进行微几何捕获</p>
+<h2 id="abstract">Abstract</h2>
+<p>我们描述了一个用于捕捉显微表面几何形状的系统。该系统将逆投影传感器扩展到显微领域，展示了小至2微米的空间分辨率。与现有的微几何捕捉技术不同，该系统不受被测表面光学特性的影响——无论物体是哑光、光滑还是透明，它都能捕捉到相同的几何形状。此外，硬件设计允许多种形态因素，包括一种便携式设备，可用于在现场捕捉高分辨率的表面几何形状。我们通过改进传感器材料、照明设计和重建算法实现了这些方法。</p>
+<p>总结：捕捉小至2微米的、任何材质的几何形状</p>
+<h2 id="whats-the-problem">What's the problem</h2>
+<p>传统的，基于被动或主动扫描的系统通常会被显微尺度上的表面光学性质所混淆。例如，大多数基于主动光扫描的系统假设主体材料是不透明的、漫反射的。虽然这个假设在宏观尺度上通常是成立的，但在微观尺度上通常不成立。例如，纸张在宏观尺度上看起来是哑光的，但当在微观尺度下观察时，单个纤维素纤维是透明且具有镜面反射的。<br>
+而现有解决方案，技巧复杂，如白光干涉法或扫描聚焦显微镜。这些基于实验室的设备往往体积大、速度慢、价格昂贵（10万美元或更多）。</p>
+<p>Johnson和Adelson提出的逆投影传感器对透明或镜面反射表面带来的问题免疫，因为传感器皮肤施加了一个已知的BRDF。然而，传感器材料、照明设计和重建算法的限制阻止了原始逆投影传感器达到我们系统可能的保真度。本文介绍了一种新的传感器材料、相应的新的照明设计，以及一个新的近场光度立体算法，该算法处理空间变化的照明和投射阴影。这些进步使得测量比以前的系统更准确，并在x和y方向上提高了空间分辨率一个数量级，产生了每毫米2高达100万像素的图像（即每个像素1微米的成像）。这些相同的进步也简化了构建紧凑型现场捕捉表面几何形状的设备的实际操作。我们展示了一个台式配置（图1a）和便携式版本（图1d），两者都是由低成本、容易获得的组件构建的。</p>
+<h2 id="whats-new">What's new</h2>
+<p>采用了Johnson和Adelson提出的逆投影传感器方法（retrographic sensor approach），并对其进行了扩展</p>
+<h2 id="relative-works">Relative works</h2>
+<p><strong>BRDF</strong><br>
+BRDF是“双向反射分布函数”（Bidirectional Reflectance Distribution Function）的缩写，它是计算机图形学、光学和材料科学中的一个概念，用于描述一个表面如何在一个给定的入射方向上反射光，并在另一个观察方向上被看到。BRDF是一个数学函数，它将四个变量作为输入：入射光的方向、观察方向、入射光的波长以及表面本身的属性，然后输出反射光的强度。<br>
+BRDF可以帮助我们理解不同材质和表面在不同光照条件下如何反射光线，这对于在计算机生成的图像中创建真实感光照效果至关重要。例如，在3D渲染和游戏设计中，通过模拟BRDF，可以更加精确地计算出场景中物体表面的光照效果，使得渲染的图像更加接近真实世界中的视觉效果。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Blender]]></title>
+        <id>https://jeromezjl.github.io/post/blender/</id>
+        <link href="https://jeromezjl.github.io/post/blender/">
+        </link>
+        <updated>2024-05-14T14:57:42.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/349393000">3D神器Blender：从准备入门到跨过门槛（基础操作快查）</a><br>
+<a href="https://www.bilibili.com/video/BV14u41147YH/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【Kurt】Blender零基础入门教程 | Blender中文区新手必刷教程(已完结)</a><br>
+<a href="https://www.bilibili.com/video/BV1qq4y1772P/?vd_source=3d9ada7d42c971c0c3f04a22270daf33">Blender完全入门教程 | 一个教程学会Blender，最佳入门教程</a></p>
+<h1 id="快捷键">快捷键</h1>
+<p>移动：G+(X, Y, Z)<br>
+缩放：S+(X, Y, Z)<br>
+旋转：R+(X, Y, Z)<br>
+着色方式：Z</p>
+<p>隐藏：选中+H<br>
+没选中的隐藏：shift+H<br>
+还原隐藏：Alt+H</p>
+<p>还原：Alt+快捷键<br>
+右键插销操作</p>
+<p>移动并复制：shift+D</p>
+<p>切换视图：按住~键</p>
+<p>最大化中心面板：ctrl+空格</p>
+<p>相机视角预览：F12</p>
+<p>关联材质：ctrl+L</p>
+<p><strong>游标</strong><br>
+游标位置：shift+右键<br>
+移动到游标：选中，shift+s<br>
+游标移动到原点：shift+c</p>
+<figure data-type="image" tabindex="1"><img src="https://jeromezjl.github.io/post-images/1715752969323.png" alt="" loading="lazy"></figure>
+<h1 id="操作">操作</h1>
+<p>滚轮调整视角大小<br>
+按住滚轮调整视角<br>
+点击右上角 xyz 轴切换视图，或按住~键</p>
+<p>左边菜单栏，右下角带小箭头的图标可以长按选择操作</p>
+<p>在窗口边缘，出现+时，向左拖拽为新增窗口，向右拖拽为合并窗口<br>
+新增窗口后，用滚轮选择菜单</p>
+<p><strong>调整摄像机位置</strong><br>
+选择摄像机，按N<br>
+选择视图，选择锁定摄像机<br>
+调整视图到合适位置后，取消勾选<br>
+调整完毕</p>
+<h1 id="一般流程">一般流程</h1>
+<p>建模<br>
+布光<br>
+材质<br>
+渲染</p>
+<h1 id="render">Render</h1>
+<figure data-type="image" tabindex="2"><img src="https://jeromezjl.github.io/post-images/1715763253549.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NeuS]]></title>
+        <id>https://jeromezjl.github.io/post/neus/</id>
+        <link href="https://jeromezjl.github.io/post/neus/">
+        </link>
+        <updated>2024-05-13T13:09:00.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://lingjie0206.github.io/papers/NeuS/">原文地址</a><br>
+<a href="https://www.bilibili.com/video/BV1JM411o7iP/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">论文分享-《NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-vie》</a></p>
+<p>把符号距离函数（SDF）作为先验信息，加到密度估计之前</p>
+<p>nerf：新视角合成<br>
+NeuS、IDR：表面重建</p>
+<h1 id="读论文">读论文</h1>
+<p>标题：NeuS: Learning Neural Implicit Surfaces by Volume Rendering for Multi-view Reconstruction<br>
+翻译：基于体渲染的神经隐式曲面多视图重构学习</p>
+<p>input：2D images<br>
+output：3D场景</p>
+<p>用于多视图表面重建</p>
+<h2 id="conclusion">conclusion</h2>
+<p>现有的神经表面重建方法，如DVR（Niemeyer等，2020年）和IDR（Yariv等，2020年），需要前景掩码作为监督，容易陷入局部最小值，因此在重建具有严重自遮挡或细薄结构的物体时遇到困难。同时，最近的用于新视角合成的神经方法，如NeRF（Mildenhall等，2020年）及其变体，由于在表示中没有足够的表面约束，所以从这种学习到的隐式表示中提取高质量的表面是困难的。</p>
+<p>在NeuS中，我们提出将表面表示为符号距离函数（SDF）的零水平集，并开发了一种新的体渲染方法来训练神经SDF表示。我们观察到，传统的体渲染方法会导致表面重建的固有几何误差（即偏差），因此提出了一种在一阶近似中无偏的新公式，从而即使在没有掩码监督的情况下也能进行更准确的表面重建。</p>
+<p><strong>Advantage</strong><br>
+DTU数据集和BlendedMVS数据集实验表明，NeuS 能够生成高质量的重建结果，在不需要掩码的情况下，成功重建具有严重遮挡和复杂结构的物体</p>
+<p><strong>Drawbacks</strong></p>
+<ol>
+<li>尽管 NeuS 不严重依赖于纹理特征的对应匹配，但对于无纹理的物体，其性能仍会下降。</li>
+<li>NeuS 只有一个用于建模所有空间位置的概率分布标准偏差的单一尺度参数s。因此，一个有趣的未来研究课题是根据不同的局部几何特征，使用不同的方差来建模不同空间位置的概率，并优化场景表示。</li>
+<li>大量计算</li>
+</ol>
+<h2 id="whats-new">What's new</h2>
+<p>将3D表面表示为神经符号距离函数（SDF），并开发了一种新的体渲染方法来训练隐式SDF表示</p>
+<p><strong>SDF（Signed Distance Field，有符号距离场）</strong><br>
+NeuS 使用符号距离函数（SDF）进行表面表示，并采用一种新颖的体渲染方案来学习神经SDF表示。具体而言，通过引入由SDF引导的密度分布，能够将体渲染方法应用于学习隐式SDF表示，从而实现两全其美的效果，即使用神经SDF模型进行准确的表面表示，并在存在深度突变的情况下，通过体渲染实现鲁棒的网络训练。</p>
+<p><a href="https://www.bilibili.com/video/BV1Jt4y1x7PJ?p=2&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">CV Master基于神经网络的3D重建（NeRF, SDF 等）</a></p>
+<p><strong>新体渲染</strong><br>
+简单地将标准体渲染方法应用于与SDF相关的密度会导致重建表面出现明显的偏差（即固有的几何误差）。因此，提出了一种新的体渲染方案，以确保在SDF的一阶近似中实现无偏的表面重建。对DTU数据集和BlendedMVS数据集的实验表明，NeuS能够在没有前景掩码监督的情况下，重建具有严重遮挡和细致结构的复杂3D物体和场景。在重建质量方面，它优于最先进的神经场景表示方法，即 IDR 和 NeRF 。</p>
+<h2 id="relative-works">Relative Works</h2>
+<p>前景掩码（foreground masks）是在图像处理中用于区分前景（感兴趣的物体）和背景的二值图像。前景掩码中的每个像素通常只有两个值：一种值（如1或白色）表示前景，另一种值（如0或黑色）表示背景。前景掩码常用于计算机视觉任务中，如对象检测、分割、跟踪和重建，以帮助算法专注于图像中的目标对象，而忽略背景的干扰。</p>
+<p>What is the problem?</p>
+<ul>
+<li>Input</li>
+<li>Output</li>
+</ul>
+<p>Why do we care?<br>
+3DGS vs 2DGS</p>
+<ul>
+<li>Advantage</li>
+<li>Drawbacks</li>
+</ul>
+<p>What's new</p>
+<ul>
+<li>Insight</li>
+<li>Method</li>
+</ul>
+<p>What's the experimental results?</p>
+<ul>
+<li>结果</li>
+<li>Speed vs Quality</li>
+</ul>
+<p>Bring-home message<br>
+一句话总结<br>
+How this research benefit your project?</p>
+<h1 id="英文单词">英文单词</h1>
+<p>reconstruction 重建<br>
+fidelity 精确度<br>
+foreground 前景<br>
+sufficient 充足的<br>
+inherent 内在的<br>
+self-occlusion 自遮挡<br>
+abrupt changes 突变<br>
+signed 有符号的，有正负之分的</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Diffusion]]></title>
+        <id>https://jeromezjl.github.io/post/diffusion/</id>
+        <link href="https://jeromezjl.github.io/post/diffusion/">
+        </link>
+        <updated>2024-04-29T13:16:44.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.bilibili.com/video/BV1p8411777A/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">18【3分钟AI】爆火的Diffusion从何而来？</a><br>
+<a href="https://www.bilibili.com/video/BV14c411J7f2/?spm_id_from=333.337.search-card.all.click">扩散模型 - Diffusion Model【李宏毅2023】</a></p>
+<h1 id="u-net">U-net</h1>
+<p><a href="https://www.bilibili.com/video/BV1oN4y1Y7tB/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">十分钟讲懂Unet | 中文字幕 | The U-Net (actually) explained in 10 minutes</a></p>
+<p>U-Net 最初是为了解决医学图像分割的问题而设计的。由于其在小规模数据集上表现良好，因此它也被广泛应用于其他类型的图像分割任务中。U-Net 的 U 形结构使得网络能够精确地定位分割边界。<br>
+U-Net 的核心思想是结合了全卷积网络（FCN）和跳跃连接。网络由一个收缩路径（编码器）和一个对称的扩张路径（解码器）组成。收缩路径用于捕获上下文信息，而扩张路径则用于精确定位分割边界。跳跃连接将编码器中的特征图与解码器中的对应特征图拼接起来，这样可以保留更多的细节信息，有助于提高分割的精度。<br>
+U-Net具有以下特点：</p>
+<ol>
+<li><strong>端到端的训练</strong>：U-Net可以直接从原始图像学习到像素级的分类，不需要额外的预处理或后处理步骤。</li>
+<li><strong>较少的训练样本</strong>：由于医学图像数据通常比较难获取，U-Net在小规模数据集上也能取得很好的效果。</li>
+<li><strong>高效的内存利用</strong>：U-Net采用了重叠的卷积和池化操作，这样可以减少内存的使用，同时也有助于提高分割的精度。</li>
+<li><strong>多尺度的特征融合</strong>：通过跳跃连接，U-Net能够将不同尺度的特征信息融合起来，有助于提高分割的准确性。</li>
+</ol>
+<h1 id="论文">论文</h1>
+<p>Diffusion是《NeurIPS-2020-denoising-diffusion-probabilistic-models-Paper》这篇文章提出的，先来分析一下这篇文章<br>
+标题：去噪概率扩散模型</p>
+<h1 id="过程">过程</h1>
+<p>噪声→denoise→denoise→denoise</p>
+<h1 id="相关模型">相关模型</h1>
+<p>DALL<br>
+CLIP（contrastive language-image pre-training）<br>
+Imagen</p>
+<p>在过去的一年里，diffusion model火遍整个学术界，而24年初sora的诞生更是让大家看到了diffusion model的无穷潜力。相信不少人都会跟我有一样的疑问：</p>
+<p>diffusion model是什么？<br>
+diffusion model好在哪里？<br>
+diffusion model是怎么来的？<br>
+这篇文章里，我将会带着这几个问题，由浅入深地剖析diffusion model的结构、训练过程、数学原理及其发展脉络。因为本人是一个看到太多公式会头疼的人（相信很多人有相同的烦恼），因此与大多数文章不同，本篇文章不会堆砌太多的数学公式，而是从整体入手，先带着大家对diffusion model有一个整体的了解，再逐渐细化到深处，争取让没有数学基础的人也可以轻松看懂。因为本人也是刚刚接触diffusion model，有些地方是基于自己的理解，如果有讲的不对的地方，欢迎大家指出！</p>
+<p>Diffusion Model是什么？<br>
+概述<br>
+Diffusion Model是一种生成模型，所谓生成模型就是能够随机生成观测数据的模型，在很多场景下这种数据都是图片。下图展现了生成模型中的几个经典模型的发展脉络。本文所介绍的diffusion model基本是基于Pieter Abbeel的Denoising Diffusion Probabilistic Models这篇论文[2]。</p>
+<p>图1 生成模型概述（来源[1]）<br>
+Diffusion Model和其他模型最大的区别我认为有两个，1）diffusion model中的latent code z和图片是同维度的；2）diffusion model的加噪声和去噪过程都是一步一步来的，不是一步到latent code也不是一步从latent code恢复成一张图片。</p>
+<p>Diffusion Model的训练简单来说，主要由两个步骤组成：加噪声和去噪声。加噪声就是由图1所示的从<br>
+逐渐加噪声到latent code<br>
+的过程，这个<br>
+在理论上是完全的白噪声，在实际操作中我们加T次噪声就形成了<br>
+。注意这里所有操作都没有改变输入的维度。而去噪声是从<br>
+一步步去噪恢复到输入<br>
+的过程。</p>
+<p>前传：加噪声<br>
+加噪声准确来说不是加噪声，而是原输入和高斯噪声的一个加权平均，对于每一步<br>
+来说，权重分别为<br>
+和<br>
+。（后文中提到的<br>
+）</p>
+<p>由独立高斯分布可加性，有<br>
+，于是我们可以将(1)式再往前推:</p>
+<p>令<br>
+，递推到<br>
+，有：</p>
+<p>这里的<br>
+的各种标识是不重要的，因为各种<br>
+本质上都是从标准高斯分布中独立采样的噪声，这也是由(1)式推到(2)式的根源。</p>
+<p>到这里我们已经知道了任意时刻的<br>
+可以由<br>
+和一系列的<br>
+得到，但是这个<br>
+是怎么来的呢？为了使<br>
+可以快速收敛到标准高斯分布，原文令<br>
+逐渐减小。在DDPM论文[2]中，令<br>
+从<br>
+到<br>
+线性增长，从而使得<br>
+线性减小。</p>
+<p>由此，我们可以总结得到，加噪声的过程是一个从慢到快逐渐改变原图像，让图像变成最终均值为0，方差为I的标准高斯噪声的过程。</p>
+<p>逆过程：去噪<br>
+在正向过程中，我们人为设置了T步加噪声过程。而在逆向过程中，我们希望能够倒过来去除所加的噪声，让一幅纯噪声图像变回原始的输入图像。</p>
+<p>直接求得去噪操作的理论解是不现实的，我们只能训练神经网络去拟合它。数学原理表明，当<br>
+​足够小时，每一步加噪声的逆操作也满足正态分布，即：<br>
+那么现在的问题就变成了怎么拟合每一步的<br>
+和<br>
+。我们知道<br>
+和<br>
+，那么是否可以列出已知<br>
+和<br>
+时的<br>
+条件分布呢？答案是可以，通过贝叶斯公式，我们可以得到：<br>
+看到这里已经可以发现，通过贝叶斯公式，逆向操作的未知分布可以被全部转化为前向操作的已知分布。<br>
+由前传的马尔可夫性等价为<br>
+，可以由(1)式得到；<br>
+和<br>
+可以由(2)式得到。代入(4)式，经过计算，简化之后可以得到(3)式中的均值<br>
+和方差<br>
+：</p>
+<p>在(5)式中，逆操作去噪时唯一一个不知道的值是<br>
+，因此，我们可以训练神经网络去预测噪声<br>
+去拟合生成<br>
+的噪声<br>
+​。相应的训练loss即为两者的MSE loss:<br>
+总结去噪过程：去噪过程就是一步步从<br>
+去噪得到<br>
+的过程，这个去噪过程实际上是在用神经网络去拟合生成<br>
+时的用到的随机噪声<br>
+，从而拟合正向过程的逆操作。</p>
+<p>训练算法和推断算法<br>
+首先看看DDPM的训练算法：</p>
+<p>图2 DDPM训练算法<br>
+我们来逐行分析训练算法：</p>
+<p>第二行是指从训练集里取一个数据<br>
+。<br>
+第三行是指随机从1到T中取一个时刻用来训练。在前面的分析中，我们虽然希望神经网络从<br>
+逐步恢复成为<br>
+，但在实际训练时，我们不用一轮预测T个结果，而是只用随机预测T个时刻中某一个时刻的结果就行；当数据量足够大时效果是一样的。<br>
+第四行指随机生成一个高斯噪声<br>
+，该噪声是用于执行前向过程生成<br>
+的。之后，我们把<br>
+和<br>
+传给神经网络得到<br>
+，即为预测噪声。<br>
+第五行则进行梯度下降来优化网络，损失函数是预测噪声和实际噪声之间的均方误差。<br>
+训练得到网络<br>
+（这里的网络结构可以自己定义）之后，就可以从任意一副噪声图中生成图像了，下面是DDPM的推断算法（原文叫做采样算法）：</p>
+<p>图3 DDPM推断算法<br>
+逐行分析推断算法：</p>
+<p>第一行是指生成一个标准高斯噪声。不同的噪声可以生成出不同的图像。<br>
+第二～四行是重复进行反向操作，令时刻从T到1，根据（5）式计算每一时刻去噪声操作的均值和方差，从而得到<br>
+。<br>
+到这里，我们已经了解了Diffusion Model的基本原理、训练及推断过程了。</p>
+<p>Diffusion Model好在哪里？<br>
+要了解一个模型好在哪里，我们可以先去了解这个模型是怎么诞生的。</p>
+<p>Diffusion 扩散模型的第一次提出在 2015 年的 Deep Unsupervised Learning using Nonequilibrium Thermodynamics [3]这篇文章中。但当时，这个扩散模型并没有立刻得到广泛的关注，而是在2020年Pieter Abbeel的Denoising diffusion probabilistic models[2]这篇文章出来之后大家才广泛注意到Diffusion Model的潜力，本文所介绍的算法也是来源于DDPM这篇文章。 Deep Unsupervised Learning using Nonequilibrium Thermodynamics [3]这篇文章是受到非平衡热力学的启发，其基本思想是通过前向扩散过程系统地、缓慢地破坏数据分布中的结构（类似于布朗运动），把原始状态一步步地破坏为混沌态，然后再让机器去学习反向扩散过程，从这片混沌中恢复出原始状态。因为每一步的破坏都足够微小，微小到其逆过程可以被神经网络拟合，所以神经网络才可以在单步逆过程中恢复出一个“以假乱真”的状态。这样微小的破坏可以慢慢“温水煮青蛙”式的导致原状态变为混沌态，那么神经网络每一步微小的拟合也可以一步步的从混沌态“恢复”出一个“以假乱真”的原状态。</p>
+<p>图4 Diffusion扩散过程示意图<br>
+个人认为Diffusion Model的好就好在它更加接近自然的本质。当我们在谈生成模型时，我们在谈论什么？从一片混沌的噪声中“无中生有”是墒减的过程，是违背自然规律的，正如一滴墨可以在水里扩散开来，但一杯混满了墨的水不能轻易的分成一滴墨和一杯干净的水。但如果每一滴墨在水里的扩散过程可以被完整的记录下来并且我们可以在小范围内去拟合其扩散的逆过程，那么我们就可以一步步的模仿出原来的状态。这里我们模仿出来的状态已经不是原来的那滴墨和那杯水了，但这并不重要，因为我们的目的是让神经网络去拟合这个“墒减”的过程，从而达到“无中生有”的目的。</p>
+<p>简单来说，diffusion model把“无中生有”这个看似不可能的任务拆解成了可以一步步完成的简单任务，我们很难从噪声中直接生成图片，但是我们可以先把噪声变的不那么像噪声，然后再一步步的1+1+1...因此扩散模型可以更加真实准确地还原数据，对图像细节的保持能力更强，写实性也更好。但有优点必然有代价，由于其计算步骤的繁琐，扩散模型也存在采样速度较慢的问题。</p>
+<p>Diffusion Model的应用<br>
+这里先占个坑，之后我不断学习现在diffusion model的各种发展及其应用，会总结到这里。</p>
+<p>1.title<br>
+2.abstract<br>
+3.introduction<br>
+4.method<br>
+5.experiments<br>
+6.conclusion<br>
+第一遍：标题、摘要、结论。可以看一看方法和实验部分重要的图和表。这样可以花费十几分钟时间了解到论文是否适合你的研究方向。<br>
+第二遍：确定论文值得读之后，可以快速的把整个论文过一遍，不需要知道所有的细节，需要了解重要的图和表，知道每一个部分在干什么，圈出相关文献。觉得文章太难，可以读引用的文献。<br>
+第三遍：提出什么问题，用什么方法来解决这个问题。实验是怎么做的。合上文章，回忆每一个部分在讲什么。</p>
+<p>Summary: 今天要讲什么，亮点是什么</p>
+<p>What is the problem?</p>
+<ul>
+<li>Input</li>
+<li>Output</li>
+</ul>
+<p>Why do we care?<br>
+和其他模型对比</p>
+<ul>
+<li>Advantage</li>
+<li>Drawbacks</li>
+</ul>
+<p>What's new</p>
+<ul>
+<li>Insight</li>
+<li>Method</li>
+</ul>
+<p>What's the experimental results?</p>
+<ul>
+<li>结果</li>
+<li>Speed vs Quality</li>
+</ul>
+<p>Bring-home message<br>
+一句话总结<br>
+How this research benefit your project?</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【摄影】扫街]]></title>
+        <id>https://jeromezjl.github.io/post/she-ying-sao-jie/</id>
+        <link href="https://jeromezjl.github.io/post/she-ying-sao-jie/">
+        </link>
+        <updated>2024-04-20T14:24:23.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.sohu.com/a/160831308_417563">用相机扫街时，怎样设定光圈快门组合？</a></p>
+<p>除了需要虚化和捕捉快速物体时，用小光圈来获得全局合焦</p>
+<p>在阳光灿烂的正午：f/8、1/500、ISO 400</p>
+<p>在阳光明媚的午后：f/8、1/250、ISO 400</p>
+<p>在阳光明媚的午后，稀疏的树荫底下：f/5.6、1/125、ISO 400</p>
+<p>在阳光明媚的午后，浓密的树荫底下：f/4、1/60、ISO 400</p>
+<p>多云：f/8、1/125、ISO 400</p>
+<p>阴天：f/8、1/60、ISO 400</p>
+<p>在地铁车厢里：f/2.8、1/30、ISO 400</p>
+<p>室内的商场：f/2.8、1/30、ISO 400</p>
+<p>夜晚有路灯的大街上：f/2.8、1/15、ISO 400</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[读论文]]></title>
+        <id>https://jeromezjl.github.io/post/du-lun-wen/</id>
+        <link href="https://jeromezjl.github.io/post/du-lun-wen/">
+        </link>
+        <updated>2024-04-15T08:33:14.000Z</updated>
+        <content type="html"><![CDATA[<p>论文：技术介绍、验证假设、探索问题、复现结果<br>
+综述 review article：总结或介绍某一领域的发展历程、研究现状、未来趋势</p>
+<p>判断一篇文章是综述还是研究论文</p>
+<h3 id="1-观察题目的关键词">1. <strong>观察题目的关键词</strong></h3>
+<ul>
+<li><strong>综述文章</strong>的题目通常会包含如“Review”、“Overview”、“Summary”、“State of the Art”、“Synthesis”等词汇，这些词汇表明文章可能是对某一领域的文献或进展的总结。</li>
+<li><strong>研究论文</strong>的题目通常更具体，可能会提到特定的研究方法、数据或实验结果，如“Case Study”、“Effects of”、“Analysis of”、“Response of”等。</li>
+</ul>
+<h3 id="2-分析题目的内容">2. <strong>分析题目的内容</strong></h3>
+<ul>
+<li>综述文章的题目往往比较广泛，涉及某一学科或子领域的广泛内容，没有具体的实验或数据分析。</li>
+<li>研究论文的题目通常具体到某一特定的研究问题、对象或变量，显示出对特定假设或模型的探讨。</li>
+</ul>
+<h3 id="3-查看文章的摘要和引言">3. <strong>查看文章的摘要和引言</strong></h3>
+<p>如果可以访问到文章的摘要（abstract）或引言（introduction）部分，这些内容可以提供更多线索：</p>
+<ul>
+<li>综述文章的摘要通常说明了作者调研的范围、目的和方法，可能会提到是对哪个时间段内的文献进行了回顾。</li>
+<li>研究论文的摘要会具体说明研究的方法、主要发现和结论，通常还会提及研究的重要性和创新点。</li>
+</ul>
+<h3 id="4-审查文章的结构">4. <strong>审查文章的结构</strong></h3>
+<ul>
+<li>综述文章可能没有典型的研究论文结构（即“引言、方法、结果、讨论”模式），而是按照主题或时间顺序组织文献。</li>
+<li>研究论文则通常遵循严格的科学报告格式，包括研究方法、数据分析和结果讨论。</li>
+</ul>
+<p>读论文流程<br>
+阅读→提问→梳理→提问→解决问题→再次梳理</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【读论文】NeuS2]]></title>
+        <id>https://jeromezjl.github.io/post/du-lun-wen-neus2/</id>
+        <link href="https://jeromezjl.github.io/post/du-lun-wen-neus2/">
+        </link>
+        <updated>2024-04-12T03:43:59.000Z</updated>
+        <content type="html"><![CDATA[<p>NeuS 适用于静态高质量三维重建，但速度很慢，无法应用于数千帧的动态场景。NeuS2采用一种渐进式的学习策略</p>
+<h1 id="英文积累">英文积累</h1>
+<p>achieves two orders of magnitude improvement in terms of acceleration without compromising reconstruction quality</p>
+<p>在不影响重建质量的情况下，在加速方面实现了两个数量级的提高</p>
+<p>magnitude 数量级<br>
+in terms of 就...而言<br>
+compromising 妥协、损害</p>
+<p>multi-resolution 多分辨率<br>
+parameterize 参数化<br>
+lightweight 轻量级<br>
+second-order derivatives 二阶混合偏导数<br>
+leverage CUDA parallelism 利用CUDA的并行性<br>
+achieving a factor two speed up 达到了两倍的速度<br>
+expedite 加速<br>
+from coarse to fine 由粗到细<br>
+a progressive learning strategy 渐进式学习策略</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[三维重建]]></title>
+        <id>https://jeromezjl.github.io/post/san-wei-chong-jian/</id>
+        <link href="https://jeromezjl.github.io/post/san-wei-chong-jian/">
+        </link>
+        <updated>2024-04-10T14:18:05.000Z</updated>
+        <content type="html"><![CDATA[<p>三维重建是一个多学科交叉的研究领域，包含了从图像处理到计算机视觉，再到机器学习等多方面的技术。三维重建算法可以根据其核心技术和应用场景被大致分为以下几类：</p>
+<ol>
+<li>基于几何的方法<br>
+这些方法通常依赖于物理测量和几何推理来从一组数据中直接恢复出三维结构。</li>
+</ol>
+<p>立体视觉（Stereo Vision）：通过比较来自两个或多个相机视角的图像，找出图像间的对应点，以估计三维位置。<br>
+结构光（Structured Light）和激光扫描（Laser Scanning）：通过投射已知图案的光或激光到物体上，根据反射或散射光的变化推断物体的三维形状。</p>
+<ol start="2">
+<li>基于图像的方法<br>
+这类方法主要依赖于图像数据，通过分析图像特征和外观信息来重建三维结构。</li>
+</ol>
+<p>多视图立体匹配（Multi-View Stereo, MVS）：利用来自多个视角的图像，通过寻找图像间的对应关系来重建场景的三维结构。<br>
+光度立体法（Photometric Stereo）：通过分析同一场景在不同照明条件下的图像变化来估计表面的法线和细节。</p>
+<ol start="3">
+<li>基于深度学习的方法<br>
+深度学习方法利用大量数据来训练神经网络模型，使其能够理解和重建三维结构。</li>
+</ol>
+<p>从单张或多张图像到三维模型：使用深度神经网络从一张或多张二维图像直接生成三维体素、网格或点云表示。<br>
+点云处理：直接从点云数据中学习三维形状的特征，用于点云的分类、分割和重建。</p>
+<ol start="4">
+<li>基于体积场的方法<br>
+这些方法通过学习连续的三维场景表示来创建更加细腻和连续的三维模型。</li>
+</ol>
+<p>NeRF（Neural Radiance Fields）：通过深度网络学习场景的连续体积表示，能够从新的视角合成高质量的图像，并隐式地重建三维结构。</p>
+<p>NeuS</p>
+<ol start="5">
+<li>基于模型的方法<br>
+特定场景下，可以预先定义一组模型或模板，通过调整模型参数来适配输入数据从而实现三维重建。</li>
+</ol>
+<h1 id="nerf和neus">NeRF和NeuS</h1>
+<p>NeuS（Neural Implicit Surfaces）虽然与NeRF（Neural Radiance Fields）在某些基本概念上有相似之处，尤其是它们都利用深度学习来处理三维场景的表示，但NeuS并不是直接基于NeRF。这两种方法都是三维重建和渲染领域的研究成果，都利用神经网络对场景进行建模，但它们关注的重点和实现方式有所不同。</p>
+<h3 id="nerf">NeRF</h3>
+<ul>
+<li>NeRF专注于通过大量从不同视角捕获的图像来学习场景的体积密度和颜色，从而能够渲染出新的视角图像。</li>
+<li>它基于体积渲染的概念，使用神经网络来预测光线穿过场景时的颜色和透明度，从而实现逼真的渲染效果。</li>
+</ul>
+<h3 id="neus">NeuS</h3>
+<ul>
+<li>NeuS则侧重于使用神经网络学习场景的隐式表面（如有符号距离函数SDF），直接表示三维表面而非整个体积。</li>
+<li>它的目标是生成连续的、高质量的三维表面模型，适合需要精确几何信息的应用，比如三维打印或高精度模拟。</li>
+</ul>
+<h3 id="关系和区别">关系和区别</h3>
+<ul>
+<li><strong>共同点</strong>：两者都使用深度学习和大量图像数据来学习三维场景的表示，都能生成高质量的三维视图。</li>
+<li><strong>区别</strong>：NeRF通过体积渲染技术重建整个三维空间的密度和颜色，更适用于视觉效果渲染；而NeuS专注于表面的精确表示，适合需要精确三维模型的场合。</li>
+</ul>
+<p>因此，尽管NeuS和NeRF在高层次上共享深度学习在三维场景建模的应用这一共同点，但它们各自独立发展，侧重点和应用场景有所不同。</p>
+<p>基于模板的重建：对于一些标准化的对象（如人脸、车辆等），可以通过调整预定义模型的参数来匹配输入数据，实现快速重建。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NeRF-用2D重建3D]]></title>
+        <id>https://jeromezjl.github.io/post/nerf/</id>
+        <link href="https://jeromezjl.github.io/post/nerf/">
+        </link>
+        <updated>2024-04-10T10:07:30.000Z</updated>
+        <content type="html"><![CDATA[<p>NeRF，即 Neural Radiance Fields（神经辐射场）<br>
+Title：NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis<br>
+将场景表示为用于视图合成的神经辐射场</p>
+<p><a href="https://www.matthewtancik.com/nerf">官网</a><br>
+<a href="https://github.com/yenchenlin/nerf-pytorch?tab=readme-ov-file">NeRF-pytorch</a></p>
+<p><strong>入门讲解</strong><br>
+<a href="https://www.bilibili.com/video/BV1o34y1P7Md/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">十分钟带你快速入门NeRF原理</a><br>
+<a href="https://www.bilibili.com/video/BV1CC411V7oq/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">【较真系列】讲人话-NeRF全解（原理+代码+公式）</a></p>
+<p><strong>参考博客</strong><br>
+<a href="https://zhuanlan.zhihu.com/p/595117334">NeRF入门之体渲染 (Volume Rendering)</a><br>
+<a href="https://blog.csdn.net/qq_45752541/article/details/130072505">【三维重建】NeRF原理+代码讲解</a></p>
+<p>输入：不同位姿相机拍摄的物体图片&amp;相机参数（位姿、内参）<br>
+输出：新视角下的物体图片</p>
+<h1 id="不成形的思考">不成形的思考</h1>
+<p>流程<br>
+拍摄不同位姿的图片，获得多视角的物体图像<br>
+每个相机的位置（xyz）和位姿，也就是朝向（用θ和φ表示），作为输入<br>
+每个图片上的每个像素对应一个射线，这条射线贯穿图片像素和实际物体上的一个点<br>
+在射线上均匀取一些采样点（sample_points）作为评估，每个点都输出颜色和密度<br>
+使用体渲染技术，对这些点的颜色和密度进行积分，合成一个像素颜色<br>
+将这个颜色和真实颜色做MSE，来训练网络</p>
+<p><code>Q</code><br>
+有监督学习？标签是什么</p>
+<p><strong>理论角度</strong><br>
+体渲染：对烟雾、胶体等非不透明刚体组成的物体进行渲染，对光路上的发光点进行积分（下面步骤是基于这个理念）<br>
+NeRF假设物体是这样一些微小粒子组成的，且这些粒子是自发光的（后续有用）</p>
+<p><code>具体步骤</code>，每个像素点和每个实体点之间连一条射线<br>
+这个射线代表从物体某些在同一直线上的自发光点发出的光线，射在对应视角图片中的一个像素点上<br>
+（射线如何确定？通过相机的位置和像素点的位置来确定的。具体来说，从相机的焦点出发，通过每个像素点构建一条射线。这些射线穿过场景并捕获沿途的光照信息。）<br>
+在射线上均匀采样一些点，假设是由这些点发光而成的光线（为什么这样采样？为了在射线上获得代表性的点，这些点可以近似射线经过的场景。均匀采样有助于模型学习不同深度处物体的光照和颜色特性，使得重建的场景更为精确和连续。）采样点位置 r(t) 计算：r(t)=o+td o：起点坐标，相机所在位置 t：采样点距离 d：单位向量<br>
+为了舍去双边缘效应，进行重采样（详细描述。减少边缘模糊或阴影错误。在初步的均匀采样后，根据初步估计的体密度（density），对那些可能对最终颜色贡献更大的区域进行更密集的采样。这种策略可以更精细地捕捉到细节和边缘。）<br>
+然后利用体渲染公式，将每个像素点-射线对上的采样点进行积分，计算出每个像素点的density和RGB值<br>
+（如何计算的？）<br>
+利用得到的像素值和真实图片的像素值作损失，自监督学习，来训练网络</p>
+<p><strong>网络结构</strong><br>
+输入采样好的像素-光线对（如何选择batchsize？）和相机内参<br>
+用这些计算出光线的参数，获得一个5D坐标（如何计算？）<br>
+8层MLP，用ReLU函数<br>
+得到 RGBσ 4D坐标<br>
+体渲染→计算像素值→计算损失、优化网络<br>
+将模型信息隐式的保存在网络中<br>
+再输入一张图片就可以得到该视角下的 RGBσ 信息，渲染为一张图片（如何渲染？）</p>
+<p>体渲染技术：模拟了光线在非均匀介质中的传播<br>
+它的目的主要是为了解决云、烟、果冻这类非刚性物体的渲染建模，可以简单理解为是为了处理密度较小的非固体的渲染。当然进一步推广到固体的渲染也说的通，当密度逐渐增大，近似为一个不透明的固体</p>
+<h2 id="whats-new">What's new?</h2>
+<h3 id="insight">Insight</h3>
+<p>以往：直接通过图片重建出一个网格/点云/体素的模型<br>
+NeRF：神经隐式的方式重建三维模型（implicit representation）</p>
+<p>显示：有明确xyz的信息，mesh、体素、点云<br>
+隐式：用神经网络来表示三维空间中的场景属性（如颜色、密度等）的方法，而不是使用传统的显式几何结构（如点云、多边形网格等）</p>
+<p>这种隐式表示的优势在于它可以非常精细地捕捉场景的细节，而不需要存储大量的几何数据。由于神经网络可以表示非常复杂的函数，这种方法可以用来重建具有高度细节和复杂几何结构的场景。<br>
+在NERF中，隐式表示允许我们通过简单的函数查询来渲染高质量的图像，而不需要知道场景的确切几何形状。这使得NERF非常适合于基于图像的三维重建任务，因为它可以处理大量的输入图像，并且能够生成连贯的三维场景表示。</p>
+<h3 id="method">Method</h3>
+<ol>
+<li>5D neural radiance fields 5D神经辐射场</li>
+<li>classical volume rendering techniques 经典体渲染技术</li>
+<li>position encoding to map each input 5D coordinate into a higher dimensional space 使用位置编码将5D坐标映射到高维空间</li>
+</ol>
+<p>输入：5D的相机位姿，输出：4D向量：RGB和不透明度α（密度）<br>
+模型结构：8层MLP<br>
+2D图片→5D向量→NeRF→4D向量→2D图片</p>
+<p>2D图片上的一个像素点为3D空间中一条射线上点之和（一个像素对应一条射线）<br>
+利用相机模型反推射线，射线表示为 r(t)=o+td</p>
+<p>在一定范围内，取一组采样点（用near和far表示光线最近点和最远点）每个采样点都有RGBA的值<br>
+射线方向上对采样点进行积分得到像素点确切的颜色值<br>
+所以NeRF渲染的是一个个点，像雾状的东西，称为体积雾</p>
+<p><strong>经典体渲染技术</strong><br>
+位置 x =（x, y, z）<br>
+体积密度 σ(x) 可以解释为光线在位置 x 处终止于一个无限小粒子的微分概率。<br>
+相机光线 r(t)=o+td 的预期颜色 C(r)，其中 tn 和 tf 是近和远的边界<br>
+T(t) 表示从 tn 到 t 沿光线的累积透射率，即光线从 tn 到 t 行进而不撞击任何其他粒子的概率<br>
+<img src="https://jeromezjl.github.io/post-images/1714616959972.png" alt="" loading="lazy"></p>
+<p><strong>位置编码</strong><br>
+采用位置编码提高图片细节质量，将图片中的高频信息体现出来</p>
+<p>将图像的像素坐标映射为相机坐标系，再从相机坐标系映射为世界坐标系下的一些点<br>
+将点输入到NeRF网络中，得到该点的RGB值和不透明度（密度）<br>
+根据体渲染公式，将点映射回像素值，称为预测值<br>
+将预测值和真实值做一个损失，可以优化网络的运行</p>
+<p>NeRF假设<br>
+物体是自发光的粒子、粒子本身有密度和颜色</p>
+<p>将物体进行稀疏表示的单个粒子的位姿，输出的是粒子的密度和颜色</p>
+<p>一个点对应一个相机位姿是一个训练数据单位，而不是以图片为单位</p>
+<h2 id="nerf的优势">NeRF的优势</h2>
+<p>NeRF（Neural Radiance Fields）提供了若干相对于以前<strong>视图合成</strong>和<strong>三维重建模型</strong>的显著优势。这些优势主要包括：</p>
+<h3 id="1-连续的场景表示">1. <strong>连续的场景表示</strong></h3>
+<ul>
+<li><strong>细节与连续性</strong>：NeRF表示场景为一个连续的、高度详细的函数，允许从任何视角生成非常平滑和连续的视图。这与传统的基于离散三维网格（如体素网格）或多边形网格的方法相比，可以生成更自然的过渡和更精细的细节。</li>
+</ul>
+<h3 id="2-处理复杂光照和材料">2. <strong>处理复杂光照和材料</strong></h3>
+<ul>
+<li><strong>视角依赖效果</strong>：NeRF能够捕捉复杂的光照效果，如高光和阴影，以及非朗伯特（非漫反射）表面的视角依赖特性，这些在传统方法中往往难以准确渲染。</li>
+</ul>
+<h3 id="3-高质量的新视角合成">3. <strong>高质量的新视角合成</strong></h3>
+<ul>
+<li><strong>逼真度</strong>：NeRF通过优化整个场景的辐射场来重建新视角，生成的图像在视觉上与真实世界的观察极为接近，特别是在合成高度逼真视图方面的表现优于许多先前技术。</li>
+</ul>
+<h3 id="4-更少的先验几何需求">4. <strong>更少的先验几何需求</strong></h3>
+<ul>
+<li><strong>自底向上的学习</strong>：与需要明确的3D模型或复杂场景几何先验的方法不同，NeRF仅依赖于输入的二维图像和相应的相机参数来学习场景的3D表示，不需要复杂的场景建模步骤。</li>
+</ul>
+<h3 id="5-可微分渲染">5. <strong>可微分渲染</strong></h3>
+<ul>
+<li><strong>端到端优化</strong>：NeRF使用可微分的体积渲染技术，这使得可以通过标准的梯度下降技术直接从图像误差中优化网络参数，实现端到端的训练。</li>
+</ul>
+<h3 id="6-存储和计算效率">6. <strong>存储和计算效率</strong></h3>
+<ul>
+<li><strong>参数化表示</strong>：虽然NeRF需要大量的计算资源进行训练和渲染，但它将整个3D场景以及相关的视角依赖特性编码在一个相对紧凑的神经网络中，这比传统的大规模3D数据结构更加存储高效。</li>
+</ul>
+<h3 id="挑战与局限">挑战与局限</h3>
+<p>尽管NeRF有诸多优势，但它也存在一些局限，如渲染速度慢（因为需要大量的网络评估来渲染每个视图）和训练成本高。此外，对于动态场景的处理也是NeRF目前的一个挑战点，尽管已有研究在尝试解决这些问题。</p>
+<p>总的来说，NeRF在视图合成和三维场景重建领域提供了一种创新的方法，通过其连续的、高度详细的场景表示能力，以及对复杂光照和材料特性的处理，显著提升了渲染的真实感和质量。</p>
+<h2 id="relative-works">Relative Works</h2>
+<p><strong>表示方式</strong><br>
+<a href="https://blog.csdn.net/awesome666/article/details/123166344?spm=1001.2101.3001.6650.2&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-123166344-blog-119849702.235%5Ev43%5Epc_blog_bottom_relevance_base8&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-123166344-blog-119849702.235%5Ev43%5Epc_blog_bottom_relevance_base8&amp;utm_relevant_index=5">3D重建几种表现形式——深度图，体素，点云，网格</a></p>
+<p>三角形网格（triangle mesh）是最常用的表示形式。这主要是因为三角形具有以下优点：</p>
+<ol>
+<li><strong>稳定性</strong>：三角形是唯一一种在任何情况下都不会变形的多边形，这意味着它们可以很好地适应复杂的形状而不失去稳定性。</li>
+<li><strong>一致性</strong>：由于所有的三角形都有三个顶点和三个内角，因此它们在计算和渲染时具有一致性，这使得算法的实现更加简单和高效。</li>
+<li><strong>灵活性</strong>：三角形可以组合成几乎任何形状，从简单的几何体到高度复杂的有机形状，都可以通过三角形网格来近似表示。</li>
+<li><strong>渲染优化</strong>：现代图形硬件和渲染管线针对三角形渲染进行了优化，因此使用三角形网格可以充分利用这些优化，提高渲染效率。</li>
+<li><strong>易于处理</strong>：在许多图形处理任务中，如碰撞检测、光线追踪和阴影计算，三角形网格比其他类型的多边形网格更容易处理。<br>
+尽管四边形网格（quadrilateral meshes）在某些情况下也有其优势，例如在需要平滑曲面的应用中，但三角形网格的通用性和易用性使得它们在大多数情况下成为首选。在实际应用中，即使是四边形网格也常常被分解成三角形来进行渲染和处理。</li>
+</ol>
+<p><strong>几种坐标系</strong><br>
+<a href="https://blog.csdn.net/qq_40918859/article/details/122271381">相机模型、参数和各个坐标系(世界坐标系、相机坐标系、归一化坐标系、图像坐标系、像素坐标系之间变换）</a><br>
+在三维重建过程中，通常会涉及多种坐标系，主要包括以下几种：</p>
+<ol>
+<li><strong>世界坐标系（World Coordinate System）</strong>：
+<ul>
+<li>世界坐标系是一个固定的坐标系，用于描述场景中物体和相机的绝对位置。</li>
+<li>它是一个三维直角坐标系，通常定义在场景的某个方便的位置和方向上。</li>
+<li>世界坐标系是进行三维重建时的参考框架，所有的物体和相机的位置都是相对于这个世界坐标系来描述的。</li>
+</ul>
+</li>
+<li><strong>相机坐标系（Camera Coordinate System）</strong>：
+<ul>
+<li>相机坐标系是以相机的光心为原点的三维直角坐标系。</li>
+<li>在这个坐标系中，X轴通常水平向右，Y轴垂直向上，Z轴与光轴重合，指向相机前方。</li>
+<li>相机的内参和外参参数用于将世界坐标系中的点转换到相机坐标系中。</li>
+</ul>
+</li>
+<li><strong>图像坐标系（Image Coordinate System）</strong>：
+<ul>
+<li>图像坐标系是二维坐标系，用于描述成像平面上的点。</li>
+<li>它通常以图像的左上角为原点，X轴向右，Y轴向下。</li>
+<li>图像坐标系中的坐标单位通常是像素。</li>
+</ul>
+</li>
+<li><strong>归一化图像坐标系（Normalized Image Coordinate System）</strong>：
+<ul>
+<li>归一化图像坐标系是图像坐标系的一种变换形式，其中每个点的坐标都除以该点的Z坐标（即相机坐标系中的深度值）。</li>
+<li>在归一化图像坐标系中，成像平面的中心通常位于坐标原点，X轴和Y轴的范围通常是[-1, 1]。</li>
+</ul>
+</li>
+<li><strong>像素坐标系（Pixel Coordinate System）</strong>：
+<ul>
+<li>像素坐标系是图像坐标系的一种特殊形式，其中坐标的原点通常位于图像的左上角，X轴向右，Y轴向下。</li>
+<li>像素坐标系的单位是像素，它直接对应于数字图像中的阵列结构。<br>
+在进行三维重建时，通常需要将这些不同的坐标系相互转换，以便从二维图像中恢复出三维信息。例如，通过相机标定可以得到相机内参，将图像坐标系中的点转换到归一化图像坐标系，然后再通过相机外参将归一化图像坐标系中的点转换到世界坐标系中进行三维重建。</li>
+</ul>
+</li>
+</ol>
+<p><strong>相机标定</strong><br>
+<a href="https://www.bilibili.com/video/BV1C54y1B7By/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">三维重建第三课：相机标定原理步骤(一）坐标系变换</a><br>
+<a href="https://www.bilibili.com/video/BV1eE411c7kr/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3d9ada7d42c971c0c3f04a22270daf33">相机标定的基本原理与经验分享</a><br>
+世界坐标系到相机坐标系：先旋转（R）再平移（T）</p>
+<h2 id="思考">思考</h2>
+<p>对于变量A和结果R，如何发现两者是否有映射关系？<br>
+本文中5D向量输入，4D的RGB+density输出，这个映射关系看似很难以想到，但是它来自于一个传统的体渲染思路。本文仅使用MLP将其转化为CV领域，便是一种创新。</p>
+<p>对于一种想达到的结果R，一个变量组A在映射F下得到的R效果不好，而另一组变量B在映射F下得到的R效果要好，这就是科研中创新的过程</p>
+<p>如何发现映射关系？站在巨人肩膀上，将其他领域应用于本领域；感性认知，加上手动验证，比如用ML方法验证，然后再投入实验。</p>
+<h2 id="英文单词">英文单词</h2>
+<p>state-of-the-art：最先进的<br>
+sparse：稀疏的<br>
+optimize：优化<br>
+spatial：空间的<br>
+rendering：渲染<br>
+continuous：连续的<br>
+map：映射<br>
+coordinate：坐标<br>
+world coordinate：世界坐标系<br>
+synthesize：合成<br>
+differentiable：可微的<br>
+density：密度（不透明度）<br>
+geometry：几何<br>
+outperform：比...做的好<br>
+referred to：被称为<br>
+corresponding：相对应的<br>
+pipeline：流程、框架<br>
+voxel grids：体素网格<br>
+infinitesimal：无穷小<br>
+particle：粒子<br>
+triangle meshes：三角网格</p>
+]]></content>
+    </entry>
+</feed>
